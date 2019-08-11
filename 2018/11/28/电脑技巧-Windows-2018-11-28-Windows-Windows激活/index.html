@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="theme-next pisces" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="[TOC] Windows 激活Windows 激活工具 https://cmwtat.cloudmoe.com/index.html  Windows 激活命令 重置Windows激活计数slmgr.vbs -rearm  安装产品密钥 替换现有密钥slmgr /ipk x-x-x-x-x  安装OEM证书slmgr.vbs -ilc x:\xxx.XRM-MS  激活Windowsslmgr.">
+<meta name="keywords" content="Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows激活">
+<meta property="og:url" content="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/index.html">
+<meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="[TOC] Windows 激活Windows 激活工具 https://cmwtat.cloudmoe.com/index.html  Windows 激活命令 重置Windows激活计数slmgr.vbs -rearm  安装产品密钥 替换现有密钥slmgr /ipk x-x-x-x-x  安装OEM证书slmgr.vbs -ilc x:\xxx.XRM-MS  激活Windowsslmgr.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-29T03:52:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Windows激活">
+<meta name="twitter:description" content="[TOC] Windows 激活Windows 激活工具 https://cmwtat.cloudmoe.com/index.html  Windows 激活命令 重置Windows激活计数slmgr.vbs -rearm  安装产品密钥 替换现有密钥slmgr /ipk x-x-x-x-x  安装OEM证书slmgr.vbs -ilc x:\xxx.XRM-MS  激活Windowsslmgr.">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Windows激活 | DNACore GitHub io</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DNACore GitHub io</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Windows激活
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-28 14:26:14" itemprop="dateCreated datePublished" datetime="2018-11-28T14:26:14+08:00">2018-11-28</time>
+            </span>
+          
+
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-29 11:52:20" itemprop="dateModified" datetime="2018-12-29T11:52:20+08:00">2018-12-29</time>
+              </span>
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>[TOC]</p>
+<h1 id="Windows-激活"><a href="#Windows-激活" class="headerlink" title="Windows 激活"></a>Windows 激活</h1><h2 id="Windows-激活工具"><a href="#Windows-激活工具" class="headerlink" title="Windows 激活工具"></a>Windows 激活工具</h2><ul>
+<li><a href="https://cmwtat.cloudmoe.com/index.html" target="_blank" rel="noopener">https://cmwtat.cloudmoe.com/index.html</a></li>
+</ul>
+<h2 id="Windows-激活命令"><a href="#Windows-激活命令" class="headerlink" title="Windows 激活命令"></a>Windows 激活命令</h2><ul>
+<li><p>重置Windows激活计数<br><code>slmgr.vbs -rearm</code></p>
+</li>
+<li><p>安装产品密钥 替换现有密钥<br><code>slmgr /ipk x-x-x-x-x</code></p>
+</li>
+<li><p>安装OEM证书<br><code>slmgr.vbs -ilc x:\xxx.XRM-MS</code></p>
+</li>
+<li><p>激活Windows<br><code>slmgr.vbs -ato</code></p>
+</li>
+<li><p>显示详细的激活信息<br>包括：系统版本、激活ID、安装ID、部分产品密钥、许可证状态、剩余 Windows 重置计数等<br><code>slmgr.vbs -dlv</code></p>
+</li>
+<li><p>显示许可证激活状态的截止日期<br><code>slmgr.vbs -xpr</code></p>
+</li>
+<li><p>查看许可证的概要信息<br><code>slmgr.vbs -dli</code></p>
+</li>
+<li><p>卸载当前产品密钥<br>重启电脑之后系统将重归未激活状态，会出现输入密钥和联网激活界面。<br><code>slmgr.vbs -upk</code></p>
+</li>
+</ul>
+<p><a href="https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit</a><br><a href="https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit</a></p>
+<h2 id="Windows-10-数字权利激活"><a href="#Windows-10-数字权利激活" class="headerlink" title="Windows 10 数字权利激活"></a>Windows 10 数字权利激活</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">右键开始-命令提示符(管理员)，输入：</span><br><span class="line">slmgr.vbs /ckms</span><br><span class="line">slmgr.vbs /upk</span><br><span class="line"></span><br><span class="line">win10专业版本数字权利激活</span><br><span class="line"> 注意只能适合全新安装的10586版本</span><br><span class="line"> 第1步</span><br><span class="line"> 选择“开始”图标按钮，然后依次选择“设置”&gt;“更新和安全”&gt;“激活”。</span><br><span class="line"> 选择“更改产品密钥”，然后输入 PW48G-MNG8W-B9978-YWBRP-76DGY</span><br><span class="line">激活不了的，点关闭</span><br><span class="line"> 第2步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289 或者 TNXR9-K3KVT-RHXXF-4HDTY-RCYDQ 或者 CKQMQ-DNPGJ-2FQGT-M3Q2W-Q68K3</span><br><span class="line"> 联网激活</span><br><span class="line"> 这个是win7 或者 win8.1 MAK，目前还有激活次数</span><br><span class="line"> 第3步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入 VK7JG-NPHTM-C97JM-9MPGT-3V66T，取得数字权利</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 数字化认可的WIN10，今后重装WIN10系统时无需输入“产品密钥”（安装时可以跳过这步），安装完成后，系统自动激活。</span><br><span class="line"> 有人说</span><br><span class="line">win10的激活机制是绑定你的电脑主板了，也就是说 只要你的主板不换 那么你的win10永远都是激活也是正版的</span><br></pre></td></tr></table></figure>
+
+<p>###怎么验证 Windows 是否已经激活：<br>    1. 最简单的是在我的电脑右键，查看属性.<br>    2. Win+R===&gt;输入 slmgr.vbs -dlv (推荐,此命令得到的信息最全)<br>    3. Win+R===&gt;输入 slmgr.vbs -dli<br>    4. Win+R===&gt;输入 slmgr.vbs -xpr<br>    5. Win+R===&gt;输入 Winver</p>
+<p>免费使用Windows7 1年</p>
+<p>即使你并非微软的官方测试员，也不需要四处寻觅Windows 7的激活密钥，除了官方提供的安装密钥之外，我们还可以通过其他的方法免费使用1年期限的Windows 7，最起码可以坚持到Windows 7正式版本的到来。</p>
+<pre><code>初始状态下，Windows 7提供了30天的试用时间，不过在即将到达这一30天的期限之前，我们可以使用“slmgr.vbs -rearm”的命令延长使用期30天，虽然官方文档中声明该命令只能重复使用3次，也说是说总共可以免费体验120天，此后将无法再次使用。其实，只要修改注册表中的一处键值，即可重复使用“slmgr.vbs -rearm”命令，请打开注册表编辑器，依次定位至“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform”，如图1所示，找到右侧窗格中的“SkipRearm”，将其键值修改为“1”，以后就可以再次使用“slmgr.vbs -rearm”的命令，这个键值总共可以修改8次，也就是说我们可以重复使用8次“slmgr.vbs -rearm”的命令，前后加起来，正好是一年的使用时间。</code></pre><p>参考资料:<a href="http://win7x.blogbus.com/logs/40854953.html" target="_blank" rel="noopener">http://win7x.blogbus.com/logs/40854953.html</a></p>
+<p>Win7激活（<a href="http://www.win7soft.com）" target="_blank" rel="noopener">www.win7soft.com）</a>:</p>
+<p>Win7软件授权管理工具slmgr.vbs使用向导</p>
+<p>当我们打算激活Vista和windows7或打算延长其试用期（rearm）的的时候，大家都会碰到到这个slmgr命令或slmgr.vbs。SLMGR是Software License Manger的简称，是WINDOWS的软件授权管理工具。SLMGR是管理系统激活和密钥. 证书的主要组件。</p>
+<p>SLMGR的所有功能都是通过slmgr.vbs提供的，采用VBScript命令行方式执行。图形界面中许多与该命令行相关的激活行为，比如系统属性等，都是通过调用slmgr.vbs脚本来执行授权操作。即使你在COMMAND下使用SLMGR命令行，其运行结果或出错信息也是以浏览器弹出窗口方式显示的，以下是slmgr的一些使用语法仅供参考，尤其在各位需要激活或遇到激活问题的时候是很有帮助的。</p>
+<p>###在哪里使用和如何使用slmgr.vbs<br>有如下几种方式进入并运行slmgr.vbs命令：</p>
+<ol>
+<li><p>COMMAND命令提示窗口下，这是一种执行方式，但需要提升管理员权限；</p>
+</li>
+<li><p>运行命令（Vista中的显示运行命令，Win+R，开始/所有程序/附件/命令提示符，任何一种）</p>
+</li>
+<li><p>开始菜单中的开始搜索框，使用这种方法需要输入slmgr的完整名称——slmgr.vbs，类似于slmgr.vbs -ato这样的格式内容。</p>
+</li>
+</ol>
+<p>最常用的SLMGR命令是slmgr.vbs -rearm延长Vista或Windows 7试用期30天。除此外，slmgr还支持很多参数命令。我们可以通过slmgr.vbs -?命令查看。也可以检验Windows Vista或Windows 7的激活状态和许可证详细信息。</p>
+<ol start="3">
+<li>SLMGR语法格式<br>基本语法：</li>
+</ol>
+<p>slmgr.vbs [MachineName [User Password]] [<option>]</option></p>
+<p>其中：</p>
+<ul>
+<li><p>MachineName ： 远程计算机名 （缺省为本机）</p>
+</li>
+<li><p>User ： 具有相应权限的计算机用户</p>
+</li>
+<li><p>Password：用户密码</p>
+</li>
+<li><p>Option：为SLMGR的参数，参下。</p>
+</li>
+</ul>
+<p>常用参数选项：</p>
+<p>-ipk &lt;产品密钥&gt;</p>
+<p>安装产品密钥（替换现有密钥）</p>
+<p>-upk</p>
+<p>卸载产品密钥</p>
+<p>-ato</p>
+<p>激活Windows</p>
+<p>-dli [激活 ID | All]</p>
+<p>显示许可证信息（默认：当前许可证）</p>
+<p>-dlv [激活 ID | All]</p>
+<p>显示详细的许可证信息（默认：当前许可证）</p>
+<p>-xpr</p>
+<p>当前许可证状态的截止日期</p>
+<p>高级参数选项：</p>
+<p>-cpky</p>
+<p>从注册表中清除产品密钥（阻止泄露引起的攻击）</p>
+<p>-ilc &lt;许可证文件路径&gt;</p>
+<p>安装许可证</p>
+<p>-rilc</p>
+<p>重新安装系统许可证文件</p>
+<p>-rearm</p>
+<p>重置计算机的授权状态</p>
+<p>-dti</p>
+<p>显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;</p>
+<p>使用电话方式提供的确认 ID 激活产品</p>
+<p>KMS相关选项：</p>
+<p>-skms <kms activation server name></kms></p>
+<p>设置KMS服务器名</p>
+<p>-skms <kms activation server port number></kms></p>
+<p>设置KMS服务器端口号</p>
+<p>-skms <kms activation server name:port number></kms></p>
+<p>设置KMS服务器名和端口号</p>
+<p>-ckms</p>
+<p>清除KMS服务器名和端口号并设为初始状态</p>
+<p>###slmgr.vbs的使用示例</p>
+<ol>
+<li>查看许可证的概要信息（假设为当前许可证；且系统在C盘，下同），则可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dli</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dli</p>
+<ol start="2">
+<li>显示许可证激活状态的截止日期，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -xpr</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -xpr</p>
+<ol start="3">
+<li>查看许可证详细信息，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dlv</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dlv</p>
+<ol start="4">
+<li>导入OEM证书方法</li>
+</ol>
+<p>运行命令下：slmgr.vbs -ilc D:\123.XRM-MS，后面为OEM证书完整路径</p>
+<ol start="5">
+<li>卸载当前产品密钥</li>
+</ol>
+<p>运行命令下：slmgr.vbs -upk，即可卸载当前产品密钥，重启计算机会出现输入密钥和联网激活界面。</p>
+<p>如果想查看Windows 7 的详细版本号，我们要运行另外一个命令Slmgr.vbs，大家在运行中输入Slmgr.vbs，可以看到此命令的用法以及各种参数。</p>
+<p>　　1. slmgr.vbs –dli</p>
+<p>　　显示：操作系统版本. 部分产品密钥. 许可证状态</p>
+<p>　　2. slmgr.vbs –dlv</p>
+<p>　　显示：最为详尽的激活信息，包括：激活ID. 安装ID. 激活截止日期</p>
+<p>　　3. slmgr.vbs –xpr</p>
+<p>　　显示：是否彻底激活</p>
+<p>　　4. slmgr.vbs –ipk</p>
+<p>　　更换WIN7序列号</p>
+<p>　　5. slmgr.vbs –ato</p>
+<p>　　激活WIN7</p>
+<p>slmgr.vbs命令大全 检验Windows7激活状态</p>
+<p>其详细参数如下：</p>
+<p>可用选项:</p>
+<p>-ipk &lt;产品密钥&gt;<br>​    安装产品密钥(替换现有密钥)</p>
+<p>-upk<br>​    卸载产品密钥</p>
+<p>-ato<br>​    激活 Windows</p>
+<p>-dli [激活 ID | All]<br>​    显示许可证信息(默认: 当前许可证)</p>
+<p>-dlv [激活 ID | All]<br>​    显示详细的许可证信息(默认: 当前许可证)</p>
+<p>-xpr<br>​    当前许可证状态的截止日期</p>
+<p>高级选项:<br>-cpky<br>​    从注册表中清除产品密钥(阻止泄露引起的攻击)</p>
+<p>-ilc &lt;许可证文件路径&gt;<br>​    安装许可证</p>
+<p>-rilc<br>​    重新安装系统许可证文件</p>
+<p>-rearm<br>​    重置计算机的授权状态</p>
+<p>-dti<br>​    显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;<br>​    使用电话方式提供的确认 ID 激活产品</p>
+<p>###重置激活<br>这是不少网友对于激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令<code>slmgr.vbs -rearm</code>的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令显示“重置计数”有何意义和作用？</p>
+<pre><code>激活Windows 7后运行`slmgr.vbs -dlv`命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令`slmgr.vbs -rearm`以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。</code></pre><p>激活 Windows 7 后运行 <code>slmgr.vbs -dlv</code> 命令显示“重置计数”有何意义和作用？</p>
+<pre><code>这是不少网友对于激活Windows 7后运行slmgr.vbs -dlv命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令`slmgr.vbs -rearm`的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行`slmgr.vbs -dlv`命令显示“重置计数”有何意义和作用？
+
+激活Windows 7后运行slmgr.vbs -dlv命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令slmgr.vbs -rearm以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。
+
+有些网友在《关于重发《打造“双重”激活（“OEM激活”和“联网激活”）的Windows 7旗舰版》的说明》一文后提问：采用两种激活方式有何意义？看过以上介绍，首先回答了实践层面的意义：掌握品牌机的两种激活方法。其次能从“自然”走向“自由”：对微软两大激活体系从理论层面加深理性思考。</code></pre><p>友情提示：</p>
+<pre><code>——通过“软改”或“硬刷”激活后，个别不能通过重置命令显示更换产品密钥选项的，可以采用slmgr.vbs -upk命令卸载目前产品密钥，重启计算机后即可出现要求输入新的密钥联网激活界面。</code></pre>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/Windows/" rel="tag"># Windows</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-WES7激活/" rel="next" title="WES7激活">
+                <i class="fa fa-chevron-left"></i> WES7激活
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/" rel="prev" title="Python的安装与卸载">
+                Python的安装与卸载 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">DNACore</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">188</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">131</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Windows-激活"><span class="nav-number">1.</span> <span class="nav-text">Windows 激活</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-激活工具"><span class="nav-number">1.1.</span> <span class="nav-text">Windows 激活工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-激活命令"><span class="nav-number">1.2.</span> <span class="nav-text">Windows 激活命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows-10-数字权利激活"><span class="nav-number">1.3.</span> <span class="nav-text">Windows 10 数字权利激活</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DNACore</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.2.0"></script>
+
+  <script src="/js/motion.js?v=7.2.0"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.2.0"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.2.0"></script>
+<script src="/js/post-details.js?v=7.2.0"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.2.0"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+
+
+<script>
+  window.livereOptions = {
+    refer: '2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/'
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+</script>
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
