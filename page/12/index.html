@@ -4,93 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
@@ -99,20 +62,17 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNACore GitHub io">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://dnacore@github.io/page/12/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -126,13 +86,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -141,7 +96,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -158,30 +113,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DNACore GitHub io</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -194,186 +139,290 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/21/学习-Shell-2019-02-21-Shell-FTP和SFTP命令/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/02/其他开发工具-2019-04-02-代码覆盖率检查CodeCoverage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/21/学习-Shell-2019-02-21-Shell-FTP和SFTP命令/" class="post-title-link" itemprop="url">Shell-FTP和SFTP命令</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/04/02/其他开发工具-2019-04-02-代码覆盖率检查CodeCoverage/" class="post-title-link" itemprop="url">代码覆盖率检查CodeCoverage</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-02-21 15:00:42" itemprop="dateCreated datePublished" datetime="2019-02-21T15:00:42+08:00">2019-02-21</time>
+              <time title="创建时间：2019-04-02 10:43:23 / 修改时间：11:06:29" itemprop="dateCreated datePublished" datetime="2019-04-02T10:43:23+08:00">2019-04-02</time>
             </span>
           
+            
 
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>代码覆盖率检查主要用到的工具是<code>gcov</code>。这个工具会随着 Xcode 一起安装。<br>具体的安装位置为：<code>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin</code>。<br>这个位置还包括了gcc编译器之类的工具。</p>
+<ul>
+<li>使用<code>gcov</code>命令生成代码覆盖率。<br>将<code>gcda``gcno``.m</code> 文件放在同一个文件夹下，运行<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcov sample.m</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>即可生成gcov文件，此文件是文本文件，可以直接用文本编辑器打开查看。</p>
+<ul>
+<li>关于<code>@property</code>的覆盖率<br>有如下代码：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property (nonatomic, strong) NSString *testStr;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">// 如果不对属性进行任何操作，覆盖率结果文件会显示@property那一行没有执行到</span><br><span class="line"></span><br><span class="line">// 对属性赋值操作可以覆盖到</span><br><span class="line">self.testStr = @&quot;abc&quot;;</span><br><span class="line"></span><br><span class="line">// 直接对属性进行赋值不会走到</span><br><span class="line">_testStr = @&quot;abc&quot;;</span><br><span class="line"></span><br><span class="line">// 读取属性会走到</span><br><span class="line">NSLog(@&quot;%@&quot;, self.testStr);</span><br><span class="line"></span><br><span class="line">// 同时读取属性和覆盖 get 方法不会走到</span><br><span class="line">NSLog(@&quot;%@&quot;, self.testStr);</span><br><span class="line">- (NSString *)testStr&#123;</span><br><span class="line">    return @&quot;1&quot;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//像这样重写 set 方法也不会走到。</span><br><span class="line">self.testStr = @&quot;1&quot;;</span><br><span class="line">NSLog(@&quot;%@&quot;, _testStr);</span><br><span class="line">- (void)setTestStr:(NSString *)testStr&#123;</span><br><span class="line">    _testStr = testStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结：关于@property，编译器自动生成的 get set 方法必须要能走到一个，不然@property覆盖不到。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/27/学习-JavaScript-2019-03-27-js中的模板字符串/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/27/学习-JavaScript-2019-03-27-js中的模板字符串/" class="post-title-link" itemprop="url">js中的模板字符串</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-27 15:10:33 / 修改时间：15:12:49" itemprop="dateCreated datePublished" datetime="2019-03-27T15:10:33+08:00">2019-03-27</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>模板字符串</p>
+<p><code>string</code> 是模板字符串，ES2015新增的符号。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">'a'</span>, y = <span class="string">'b'</span>;</span><br><span class="line"><span class="keyword">var</span> z = <span class="string">`<span class="subst">$&#123;x,y&#125;</span>`</span>; <span class="comment">//'b'</span></span><br></pre></td></tr></table></figure>
+
+<p>模板字符串里面${var}是变量的占位符。<br>x,y 逗号运算符是返回符号右边的值，这里面等于y。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/27/特殊字符/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/27/特殊字符/" class="post-title-link" itemprop="url">特殊字符</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-27 11:14:00" itemprop="dateCreated datePublished" datetime="2019-03-27T11:14:00+08:00">2019-03-27</time>
+            </span>
           
             
 
@@ -382,36 +431,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-03 15:14:04" itemprop="dateModified" datetime="2019-07-03T15:14:04+08:00">2019-07-03</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-16 13:34:38" itemprop="dateModified" datetime="2019-07-16T13:34:38+08:00">2019-07-16</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -419,144 +448,80 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <ul>
+<li><p>埃及字符</p>
+<font size="30" color="brown">
+𓁅𓁆𓁇𓁈𓁉𓀀𓀁𓀂𓀃𓀄𓀅𓀆𓀇𓀈𓀉𓀊𓀋𓀌𓀍𓀎𓀏𓀐𓀑𓀒𓀓𓀔𓀕𓀖𓀗𓀘𓀙𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀪𓀫𓀬𓀻𓀼𓀽𓀾𓀿𓁀𓁁𓁂𓁃𓁄
+</font>
+</li>
+<li><p>苹果键盘字符<br>↵⇥→←↓↑⎋⇧®©⌫⌃⌥⌘</p>
+</li>
+</ul>
 
-      
-        
-          
-            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 解压 tar</span></span><br><span class="line">tar -xvf com.jianshu.Hugo.tar -C ./com.jianshu.Hugo</span><br><span class="line"></span><br><span class="line">$ sftp somename@frs.sourceforge.net</span><br><span class="line">Connecting to frs.sourceforge.net...</span><br><span class="line">somename@frs.sourceforge.net<span class="string">'s password:</span></span><br><span class="line"><span class="string"># 切换目录</span></span><br><span class="line"><span class="string">sftp&gt; cd /home/pfs/project/filerepository/NonEncrypedInstaller</span></span><br><span class="line"><span class="string"># 建立目录</span></span><br><span class="line"><span class="string">stfp&gt; mkdir com.duokan.reader</span></span><br><span class="line"><span class="string"># 上传文件</span></span><br><span class="line"><span class="string">sftp&gt; put com.duokan.reader.ipa</span></span><br><span class="line"><span class="string">Uploading com.duokan.reader.ipa to /home/pfs/project/filerepository/NonEncrypedInstaller/com.duokan.reader.ipa</span></span><br><span class="line"><span class="string">ws 100% 1573 1.5KB/s 00:00  </span></span><br><span class="line"><span class="string">sftp&gt;</span></span><br></pre></td></tr></table></figure>
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/21/学习-ReactNative-2019-02-21-ReactNative-Link/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/26/学习-ReactNative-2019-03-26-打包过程遇到的问题以及解决方案/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/21/学习-ReactNative-2019-02-21-ReactNative-Link/" class="post-title-link" itemprop="url">ReactNative-Link</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/03/26/学习-ReactNative-2019-03-26-打包过程遇到的问题以及解决方案/" class="post-title-link" itemprop="url">打包过程遇到的问题以及解决方案</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-02-21 14:47:03 / 修改时间：14:48:22" itemprop="dateCreated datePublished" datetime="2019-02-21T14:47:03+08:00">2019-02-21</time>
+              <time title="创建时间：2019-03-26 16:09:38 / 修改时间：16:20:44" itemprop="dateCreated datePublished" datetime="2019-03-26T16:09:38+08:00">2019-03-26</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -564,145 +529,87 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <ul>
+<li><p><code>Duplicated module name: XXX</code><br>此问题一般出现在有自有 js module 包的时候，并且使用了<code>npm install</code>来安装包。<br><code>npm</code>有时并不能正确处理包之间的依赖关系。此时用<code>yarn install</code>来安装包即可。</p>
+</li>
+<li><p>node版本问题<br>react native 工程依赖于 node 。并且不同版本 RN 工程对 node 的版本要求不同。<br>当出现node版本过低的错误时，可对本机安装的 node 进行版本升级。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 升级node为最新稳定版</span></span><br><span class="line">npm install -g n</span><br><span class="line">n stable</span><br><span class="line"></span><br><span class="line"><span class="comment"># 升级node到指定版本</span></span><br><span class="line">n 0.10.26</span><br></pre></td></tr></table></figure>
 
-      
-        
-          
-            <p>如果 xcodeproj 是通过 pod 来管理的，那么 link 的时候就会把库加入到pod 里面，如果不是通过pod 来管理的，那么直接会把库加入到工程里面。</p>
+</li>
+</ul>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/21/学习-ReactNative-2019-02-21-ReactNative-添加库/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/26/电脑技巧-2019-03-26-FireFox使用技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/21/学习-ReactNative-2019-02-21-ReactNative-添加库/" class="post-title-link" itemprop="url">ReactNative-添加库</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/03/26/电脑技巧-2019-03-26-FireFox使用技巧/" class="post-title-link" itemprop="url">FireFox使用技巧</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-02-21 14:25:53 / 修改时间：15:59:57" itemprop="dateCreated datePublished" datetime="2019-02-21T14:25:53+08:00">2019-02-21</time>
+              <time title="创建时间：2019-03-26 10:51:20" itemprop="dateCreated datePublished" datetime="2019-03-26T10:51:20+08:00">2019-03-26</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-26 14:36:57" itemprop="dateModified" datetime="2019-08-26T14:36:57+08:00">2019-08-26</time>
+              </span>
             
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -710,1198 +617,497 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ul>
-<li><p>添加<code>rn-fetch-blob</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install --save rn-fetch-blob</span><br><span class="line">//需要link</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加Lottie</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i --save lottie-react-native</span><br><span class="line">react-native link lottie-ios</span><br><span class="line">react-native link lottie-react-native</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>添加 RDPImage</p>
-</li>
+          <h2 id="浏览器配置about-config"><a href="#浏览器配置about-config" class="headerlink" title="浏览器配置about:config"></a>浏览器配置<code>about:config</code></h2><ul>
+<li>ForeFox防止WebRTC泄漏IP</li>
 </ul>
 <ol>
-<li>加入 RDPImage 文件夹代码，删除 vendor 文件夹</li>
-<li>pod 中加入<code>pod &#39;FLAnimatedImage&#39;, &#39;~&gt; 1.0.12&#39;</code></li>
-<li>执行<code>pod install</code></li>
+<li><code>about:config</code></li>
+<li><code>media.peerconnection.enabled</code>设置为<code>false</code></li>
 </ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/20/Xcode与调试-2019-02-20-Xcode环境变量/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/20/Xcode与调试-2019-02-20-Xcode环境变量/" class="post-title-link" itemprop="url">Xcode环境变量</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-20 16:33:16" itemprop="dateCreated datePublished" datetime="2019-02-20T16:33:16+08:00">2019-02-20</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-22 13:44:31" itemprop="dateModified" datetime="2019-03-22T13:44:31+08:00">2019-03-22</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/20/其他开发工具-2019-02-20-vi-vim查找和替换命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/20/其他开发工具-2019-02-20-vi-vim查找和替换命令/" class="post-title-link" itemprop="url">vi/vim查找和替换命令</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-20 16:29:01 / 修改时间：16:29:38" itemprop="dateCreated datePublished" datetime="2019-02-20T16:29:01+08:00">2019-02-20</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cyberciti.biz/faq/linux-unix-vim-find-replace-text-string-words/" target="_blank" rel="noopener">https://www.cyberciti.biz/faq/linux-unix-vim-find-replace-text-string-words/</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/19/电脑技巧-Windows-2019-02-19-Windows-快速删除含有大量内容的文件夹/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/19/电脑技巧-Windows-2019-02-19-Windows-快速删除含有大量内容的文件夹/" class="post-title-link" itemprop="url">Windows-快速删除含有大量内容的文件夹</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-19 15:13:40 / 修改时间：15:14:51" itemprop="dateCreated datePublished" datetime="2019-02-19T15:13:40+08:00">2019-02-19</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">DEL</span> /F/Q/S "<span class="variable">%FOLDER%</span>" &gt; <span class="built_in">NUL</span></span><br><span class="line"><span class="built_in">RMDIR</span> /Q/S "<span class="variable">%FOLDER%</span>"</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://superuser.com/questions/76906/deleting-large-amount-of-files-in-windows-is-slow" target="_blank" rel="noopener">https://superuser.com/questions/76906/deleting-large-amount-of-files-in-windows-is-slow</a><br><a href="https://superuser.com/questions/19762/mass-deleting-files-in-windows/289399#289399" target="_blank" rel="noopener">https://superuser.com/questions/19762/mass-deleting-files-in-windows/289399#289399</a><br><a href="http://mattpilz.com/fastest-way-to-delete-large-folders-windows/" target="_blank" rel="noopener">http://mattpilz.com/fastest-way-to-delete-large-folders-windows/</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/19/HTML/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/19/HTML/" class="post-title-link" itemprop="url">HTML</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-19 11:02:40" itemprop="dateCreated datePublished" datetime="2019-02-19T11:02:40+08:00">2019-02-19</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-16 13:19:13" itemprop="dateModified" datetime="2019-07-16T13:19:13+08:00">2019-07-16</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>联通抽奖大转盘<br>每日三次机会，抽中话费直接忽略不管，抽中流量需要到手机联通营业厅软件上我的流量包里面激活才能使用！<br><a href="https://m.client.10010.com/sma-lottery/qpactivity/qingpiindex" target="_blank" rel="noopener">点击进入中国联通趣味天天摇，可得流量！</a></p>
+<p>参考：<a href="https://www.ivpn.net/knowledgebase/158/My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html" target="_blank" rel="noopener">https://www.ivpn.net/knowledgebase/158/My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html</a></p>
+<h2 id="用户配置文件"><a href="#用户配置文件" class="headerlink" title="用户配置文件"></a>用户配置文件</h2><ul>
+<li><p>从旧的配置文档中恢复重要数据<br><a href="https://support.mozilla.org/zh-CN/kb/%E4%BB%8E%E6%97%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3%E4%B8%AD%E6%81%A2%E5%A4%8D%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE" target="_blank" rel="noopener">https://support.mozilla.org/zh-CN/kb/%E4%BB%8E%E6%97%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3%E4%B8%AD%E6%81%A2%E5%A4%8D%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE</a></p>
 </li>
-<li><p>联通&amp;青岛啤酒领流量活动(2019年5月9日测试已失效)<br>领一次30M，每天可领3次。一个月共可以领10次总计300M。每个月第一天不可领。<br><a href="https://m.10010.com/queen/qingdaobeer/qdbeer.html" target="_blank" rel="noopener">点击进入联通&amp;青岛啤酒领流量活动</a></p>
+<li><p>用户配置文件储存了哪些信息？<br><a href="https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka" target="_blank" rel="noopener">https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka</a></p>
+</li>
+<li><p>新建一个用户配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firefox -CreateProfile <span class="string">"JoelUser c:\internet\joelusers-moz-profile"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用已存在的用户配置启动FireFox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup /Applications/Firefox.app/Contents/MacOS/firefox -p <span class="string">"/Users/liufengbo/Documents/个人文档/FireFoxProfileIICSUU"</span> -no-remote &gt; /dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动用户配置管理器<code>ProfileManager</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firefox -ProfileManager</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">firefox -P</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过用户配置名称来启动FireFox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firefox -P <span class="string">"profile_name"</span></span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">firefox -ProfileManager <span class="string">"profile_name"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关于<code>-no-remote</code>参数的解释<br><a href="http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile" target="_blank" rel="noopener">http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile</a></p>
 </li>
 </ul>
+<h2 id="自定义-css"><a href="#自定义-css" class="headerlink" title="自定义 css"></a>自定义 css</h2><p>css 配置文件路径 <code>[用户数据目录]/chrome/UserContent.css</code>，一说<code>[用户数据目录]/chrome/UserChrome.css</code><br>示例自定义代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@-<span class="keyword">moz</span>-<span class="keyword">document</span> domain(example.com) &#123;</span><br><span class="line">    <span class="selector-tag">img</span> &#123; <span class="attribute">opacity</span>: <span class="number">0.05</span> <span class="meta">!important</span>; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/22/学习-JavaScript-2019-03-22-cli脚手架的搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/22/学习-JavaScript-2019-03-22-cli脚手架的搭建/" class="post-title-link" itemprop="url">cli脚手架的搭建</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-22 16:46:04" itemprop="dateCreated datePublished" datetime="2019-03-22T16:46:04+08:00">2019-03-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-27 15:11:21" itemprop="dateModified" datetime="2019-03-27T15:11:21+08:00">2019-03-27</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>脚手架一般用nodejs开发</li>
+<li>脚手架环境变量<ul>
+<li><code>process.env</code></li>
+<li><code>__dirname</code></li>
+<li><code>__filename</code></li>
+</ul>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/19/学习-Shell-2019-03-19-Shell-kill结束进程命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/19/学习-Shell-2019-03-19-Shell-kill结束进程命令/" class="post-title-link" itemprop="url">Shell-kill结束进程命令</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-19 18:25:25 / 修改时间：18:27:40" itemprop="dateCreated datePublished" datetime="2019-03-19T18:25:25+08:00">2019-03-19</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>以优雅的方式结束进程<br><a href="https://www.cnblogs.com/coder2012/archive/2013/03/31/2991345.html" target="_blank" rel="noopener">https://www.cnblogs.com/coder2012/archive/2013/03/31/2991345.html</a></p>
+<p>linux kill信号列表<br><a href="https://www.cnblogs.com/the-tops/p/5604537.html" target="_blank" rel="noopener">https://www.cnblogs.com/the-tops/p/5604537.html</a></p>
+<p>SIGTERM、SIGKILL、SIGINT和SIGQUIT的区别<br><a href="https://blog.csdn.net/dai_xiangjun/article/details/41871647" target="_blank" rel="noopener">https://blog.csdn.net/dai_xiangjun/article/details/41871647</a></p>
+<p>linux kill命令参数及用法详解–linux终止进程命令<br><a href="http://www.linuxso.com/command/kill.html" target="_blank" rel="noopener">http://www.linuxso.com/command/kill.html</a></p>
+<p>Linux中ctrl-c, ctrl-z, ctrl-d 区别<br><a href="https://blog.csdn.net/mylizh/article/details/38385739" target="_blank" rel="noopener">https://blog.csdn.net/mylizh/article/details/38385739</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/18/学习-Shell-2019-03-18-Shell-dig命令显示DNS查询过程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/18/学习-Shell-2019-03-18-Shell-dig命令显示DNS查询过程/" class="post-title-link" itemprop="url">Shell-dig命令显示DNS查询过程</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-18 20:32:48 / 修改时间：20:37:52" itemprop="dateCreated datePublished" datetime="2019-03-18T20:32:48+08:00">2019-03-18</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>dig命令展示DNS查询过程</li>
+</ul>
+<blockquote>
+<p>$ dig <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a><br>;; global options: +cmd<br>;; Got answer:<br>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 41255<br>;; flags: qr rd ra; QUERY: 1, ANSWER: 3, AUTHORITY: 13, ADDITIONAL: 27</p>
+<p>;; OPT PSEUDOSECTION:<br>; EDNS: version: 0, flags:; udp: 4096<br>;; QUESTION SECTION:<br>;<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>.            IN    A</p>
+<p>;; ANSWER SECTION:<br><a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>.        110    IN    CNAME    <a href="http://www.a.shifen.com" target="_blank" rel="noopener">www.a.shifen.com</a>.<br><a href="http://www.a.shifen.com" target="_blank" rel="noopener">www.a.shifen.com</a>.    149    IN    A    220.181.111.37<br><a href="http://www.a.shifen.com" target="_blank" rel="noopener">www.a.shifen.com</a>.    149    IN    A    220.181.112.244</p>
+<p>;; AUTHORITY SECTION:<br>com.            2050    IN    NS    k.gtld-servers.net.<br>com.            2050    IN    NS    b.gtld-servers.net.</p>
+<p>;; ADDITIONAL SECTION:<br>a.gtld-servers.net.    1885    IN    A    192.5.6.30<br>b.gtld-servers.net.    1885    IN    A    192.33.14.30<br>c.gtld-servers.net.    1885    IN    A    192.26.92.30<br>d.gtld-servers.net.    580    IN    A    192.31.80.30<br>a.gtld-servers.net.    2050    IN    AAAA    2001:503:a83e::2:30<br>b.gtld-servers.net.    2050    IN    AAAA    2001:503:231d::2:30</p>
+<p>;; Query time: 32 msec<br>;; SERVER: 10.12.1.62#53(10.12.1.62)<br>;; WHEN: Mon Mar 18 20:33:33 CST 2019<br>;; MSG SIZE  rcvd: 897</p>
+</blockquote>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/18/其他开发工具-2019-03-18-CocoaPods-遇到的问题以及解决Q-A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/18/其他开发工具-2019-03-18-CocoaPods-遇到的问题以及解决Q-A/" class="post-title-link" itemprop="url">CocoaPods-遇到的问题以及解决Q&A</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-18 10:46:59 / 修改时间：10:52:00" itemprop="dateCreated datePublished" datetime="2019-03-18T10:46:59+08:00">2019-03-18</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>执行<code>pod install</code>失败<br>问题现象：<blockquote>
+<p>MacBook73:~/Documents/ProjectPersonal/SKeyUtils/Example$ pod install<br>Analyzing dependencies<br>Fetching podspec for <code>SKeyUtils</code> from <code>../</code><br>[!] CocoaPods could not find compatible versions for pod “SKeyUtils”:<br>  In Podfile:</p>
+<pre><code>SKeyUtils (from `../`)</code></pre><p>Specs satisfying the <code>SKeyUtils (from</code>../<code>)</code> dependency were found, but they required a higher minimum deployment target.</p>
+<p>[!] Automatically assigning platform <code>ios</code> with version <code>9.3</code> on target <code>SKeyUtils_Tests</code> because no platform was specified. Please specify a platform for this target in your Podfile. See <code>https://guides.cocoapods.org/syntax/podfile.html#platform</code>.</p>
+</blockquote>
+</li>
+</ul>
+<p>问题原因：<br>此处问题原因为：工程的<code>iOS Deployment Target</code>为<code>9.3</code>，而<code>SKeyUtils</code>最低支持<code>10.3</code>。将工程最低支持版本改为<code>10.3</code>解决。</p>
+<p>问题解决：<br>将工程最低支持版本改为<code>10.3</code>解决。</p>
+<p>解决结果：<br>已解决。</p>
+<p>问题评价：<br>引起这个问题的原因不止一种，下面链接将提供更多他人遇到相同问题的解决办法。<br><a href="https://stackoverflow.com/questions/48638059/could-not-find-compatible-versions-for-pod" target="_blank" rel="noopener">https://stackoverflow.com/questions/48638059/could-not-find-compatible-versions-for-pod</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/13/学习-Shell-2019-03-13-Shell-ln文件和目录链接命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/03/13/学习-Shell-2019-03-13-Shell-ln文件和目录链接命令/" class="post-title-link" itemprop="url">Shell-ln文件和目录链接命令</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-13 15:09:07" itemprop="dateCreated datePublished" datetime="2019-03-13T15:09:07+08:00">2019-03-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-23 16:16:01" itemprop="dateModified" datetime="2019-08-23T16:16:01+08:00">2019-08-23</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>软链接和硬连接的异同<br>软链接又叫符号链接，使用<code>ln</code>命令的时候加上<code>-s</code>参数，创建的链接即为软链接。不带<code>-s</code>参数创建的链接为硬连接。<br>实际使用情况发现了两者有一些不同之处：</li>
+</ul>
+<ol>
+<li>我们有一个可执行文件<code>PooFoo</code>，这个可执行文件依赖当前目录下一些其他文件。当使用软链接把这个可执行文件链接到<code>/usr/local/bin/</code>目录的时候，直接执行命令没有问题。可执行文件可以正常找到当前目录下的其他依赖文件。可是当用硬连接来链接文件的时候，可执行文件便找不到依赖了。在可执行文件中打印了一下当前的执行环境，发现执行目录变为<code>/usr/local/bin/</code>，自然是找不到依赖了。这个时候再改成软链接，马上就可以正常使用了。<br>由此，软链接更像是快捷方式。</li>
+</ol>
 <ul>
-<li>烟花<br><a href="/html/Fireworks.html">烟花效果</a></li>
-</ul>
-<ul>
-<li>WWDC 2015 Logo<br><a href="/html/WWDC%202015%20Logo.html">WWDC 2015 Logo</a></li>
-</ul>
-<ul>
-<li><p>WebGL 做的水波纹效果<br><a href="/html/WebGL%20Water.html">WebGL Water</a></p>
+<li><p>创建软链接<br>创建软链接的话，在源文件被赋予可执行权限之前和之后创建的软链接的权限是稍有不同的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s [源文件] [目标文件]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>SIMD Demo<br><a href="/html/SIMD%20Demo_%20Mandelbrot%20Animation.html">SIMD Demo</a></p>
+<li><p>创建硬链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln  [源文件] [目标文件]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>区分软链接硬链接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ls -li</span><br><span class="line"><span class="comment"># 软链接文件描述符第一位是个 l</span></span><br><span class="line">6912 lrwxrwxrwx 1 root root 46 5月   1 23:56 /usr/<span class="built_in">local</span>/bin/ffsend -&gt; /custom/ffsend/ffsend-v0.2.45-linux-x64-static</span><br><span class="line"></span><br><span class="line"><span class="comment"># 硬链接的话索引号与源文件相同</span></span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/学习-其他零散知识-2019-02-18-几个比较常用的包管理工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/学习-其他零散知识-2019-02-18-几个比较常用的包管理工具/" class="post-title-link" itemprop="url">几个比较常用的包管理工具</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-18 15:46:27" itemprop="dateCreated datePublished" datetime="2019-02-18T15:46:27+08:00">2019-02-18</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-19 17:35:07" itemprop="dateModified" datetime="2019-02-19T17:35:07+08:00">2019-02-19</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>npm</li>
-<li>yarn</li>
-<li>cocoapods</li>
-<li>homebrew</li>
-<li>apt</li>
-<li>yum</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/学习-ReactNative-2019-02-18-ReactNative-Q-A/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/学习-ReactNative-2019-02-18-ReactNative-Q-A/" class="post-title-link" itemprop="url">ReactNative Q&A</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-18 15:28:36" itemprop="dateCreated datePublished" datetime="2019-02-18T15:28:36+08:00">2019-02-18</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-18 11:28:26" itemprop="dateModified" datetime="2019-04-18T11:28:26+08:00">2019-04-18</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="React-Native-开发中遇到的问题"><a href="#React-Native-开发中遇到的问题" class="headerlink" title="React Native 开发中遇到的问题"></a>React Native 开发中遇到的问题</h1><ul>
-<li><p>Warning: Each child in an array or iterator should have a unique “key” prop.<br>Check the render method of <code>XXX</code><br><a href="https://stackoverflow.com/questions/34576332/warning-each-child-in-an-array-or-iterator-should-have-a-unique-key-prop-che" target="_blank" rel="noopener">https://stackoverflow.com/questions/34576332/warning-each-child-in-an-array-or-iterator-should-have-a-unique-key-prop-che</a></p>
-</li>
-<li><p><code>componentWillReceiveProps</code> 不调用<br><code>componentWillReceiveProps</code> 在 <code>initial rendering</code> 中不调用<br><code>componentWillReceiveProps</code> 只有在接收到不同的 <code>props</code> 时才会被调用</p>
-</li>
-<li><p>Module XXXXXXXXXXX requires main queue setup since it overrides YYYYYYYYYY</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ (BOOL)requiresMainQueueSetup&#123;</span><br><span class="line">  return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Text设置垂直居中不起作用？<br>设置 Text 的<code>llineHeight</code>试试看</p>
-</li>
-</ul>
-<h2 id="YellowBox-黄色警告"><a href="#YellowBox-黄色警告" class="headerlink" title="YellowBox 黄色警告"></a>YellowBox 黄色警告</h2><ul>
-<li><p>XXX requires main queue setup<br>在桥接的类的.m文件中添加</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">BOOL</span>)requiresMainQueueSetup</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>required dispatch_sync to load constants for XXX. This may lead to deadlocks</p>
-<pre><code class="objc"></code></pre>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/电脑技巧-Windows-2019-02-18-禁用NTFS的“文件修改时间”功能/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/18/电脑技巧-Windows-2019-02-18-禁用NTFS的“文件修改时间”功能/" class="post-title-link" itemprop="url">禁用NTFS的“文件修改时间”功能</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-18 10:26:32 / 修改时间：10:37:50" itemprop="dateCreated datePublished" datetime="2019-02-18T10:26:32+08:00">2019-02-18</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>直接通过命令修改</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior set disablelastaccess 1</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Windows 10 April 1803 及其以上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]</span><br><span class="line">&quot;NTFSDisableLastAccessUpdate&quot;=dword:80000001</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Windows 10 April 1803 以下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]</span><br><span class="line">&quot;NTFSDisableLastAccessUpdate&quot;=dword:00000001</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>参考：<a href="https://forums.guru3d.com/threads/ntfs-disable-last-access-update-file-time-stamp-windows-10-april-1803-update.421228/" target="_blank" rel="noopener">https://forums.guru3d.com/threads/ntfs-disable-last-access-update-file-time-stamp-windows-10-april-1803-update.421228/</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/11/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/page/13/">13</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/13/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
-
 
 
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1912,348 +1118,62 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">DNACore</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">188</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">131</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -2264,27 +1184,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -2296,28 +1205,19 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
 
 
 
@@ -2326,10 +1226,7 @@
 
 
 
-
-
-
-
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
@@ -2345,404 +1242,11 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
 
   
 
   
 
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

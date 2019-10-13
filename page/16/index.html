@@ -4,93 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
@@ -99,20 +62,17 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNACore GitHub io">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://dnacore@github.io/page/16/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -126,13 +86,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -141,7 +96,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -158,30 +113,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DNACore GitHub io</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -194,186 +139,201 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/Xcode与调试-2018-12-03-Xcode开发工具使用技巧/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/19/电脑技巧-Windows-2019-02-19-Windows-快速删除含有大量内容的文件夹/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/Xcode与调试-2018-12-03-Xcode开发工具使用技巧/" class="post-title-link" itemprop="url">Xcode开发工具使用技巧</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/02/19/电脑技巧-Windows-2019-02-19-Windows-快速删除含有大量内容的文件夹/" class="post-title-link" itemprop="url">Windows-快速删除含有大量内容的文件夹</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2018-12-03 18:21:08" itemprop="dateCreated datePublished" datetime="2018-12-03T18:21:08+08:00">2018-12-03</time>
+              <time title="创建时间：2019-02-19 15:13:40 / 修改时间：15:14:51" itemprop="dateCreated datePublished" datetime="2019-02-19T15:13:40+08:00">2019-02-19</time>
             </span>
           
+            
 
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">DEL</span> /F/Q/S "<span class="variable">%FOLDER%</span>" &gt; <span class="built_in">NUL</span></span><br><span class="line"><span class="built_in">RMDIR</span> /Q/S "<span class="variable">%FOLDER%</span>"</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://superuser.com/questions/76906/deleting-large-amount-of-files-in-windows-is-slow" target="_blank" rel="noopener">https://superuser.com/questions/76906/deleting-large-amount-of-files-in-windows-is-slow</a><br><a href="https://superuser.com/questions/19762/mass-deleting-files-in-windows/289399#289399" target="_blank" rel="noopener">https://superuser.com/questions/19762/mass-deleting-files-in-windows/289399#289399</a><br><a href="http://mattpilz.com/fastest-way-to-delete-large-folders-windows/" target="_blank" rel="noopener">http://mattpilz.com/fastest-way-to-delete-large-folders-windows/</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/19/HTML/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/19/HTML/" class="post-title-link" itemprop="url">HTML</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-19 11:02:40" itemprop="dateCreated datePublished" datetime="2019-02-19T11:02:40+08:00">2019-02-19</time>
+            </span>
           
             
 
@@ -382,36 +342,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-09 14:01:40" itemprop="dateModified" datetime="2019-08-09T14:01:40+08:00">2019-08-09</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-16 13:19:13" itemprop="dateModified" datetime="2019-07-16T13:19:13+08:00">2019-07-16</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -419,1627 +359,640 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="Xcode-及其相关工具下载"><a href="#Xcode-及其相关工具下载" class="headerlink" title="Xcode 及其相关工具下载"></a>Xcode 及其相关工具下载</h2><ul>
-<li><p>Xcode<br><a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">https://developer.apple.com/download/more/</a></p>
+          <ul>
+<li><p>联通抽奖大转盘<br>每日三次机会，抽中话费直接忽略不管，抽中流量需要到手机联通营业厅软件上我的流量包里面激活才能使用！<br><a href="https://m.client.10010.com/sma-lottery/qpactivity/qingpiindex" target="_blank" rel="noopener">点击进入中国联通趣味天天摇，可得流量！</a></p>
 </li>
-<li><p>Command Line Tools<br><a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">https://developer.apple.com/download/more/</a></p>
+<li><p>联通&amp;青岛啤酒领流量活动(2019年5月9日测试已失效)<br>领一次30M，每天可领3次。一个月共可以领10次总计300M。每个月第一天不可领。<br><a href="https://m.10010.com/queen/qingdaobeer/qdbeer.html" target="_blank" rel="noopener">点击进入联通&amp;青岛啤酒领流量活动</a></p>
 </li>
-<li><p>查找某种警告的代表代码<br><img src="/images/Xcode%E6%9F%A5%E6%89%BE%E8%AD%A6%E5%91%8A%E4%BB%A3%E7%A0%811.png" alt><br><img src="/images/Xcode%E6%9F%A5%E6%89%BE%E8%AD%A6%E5%91%8A%E4%BB%A3%E7%A0%812.png" alt></p>
-</li>
-</ul>
-<p>在代码中屏蔽某个警告</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span><br><span class="line">//需要屏蔽警告的代码</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/其他开发工具-2018-12-03-gem-问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/其他开发工具-2018-12-03-gem-问题/" class="post-title-link" itemprop="url">gem-问题</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-03 14:40:20" itemprop="dateCreated datePublished" datetime="2018-12-03T14:40:20+08:00">2018-12-03</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-06 19:24:25" itemprop="dateModified" datetime="2019-08-06T19:24:25+08:00">2019-08-06</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>Gem::FilePermissionError<br>问题：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ gem install metamodel --verbose</span><br><span class="line">ERROR:  While executing gem ... (Gem::FilePermissionError)</span><br><span class="line">    You don&apos;t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.</span><br><span class="line">或者</span><br><span class="line">$ sudo gem install metamodel --verbose</span><br><span class="line">ERROR:  While executing gem ... (Gem::FilePermissionError)</span><br><span class="line">    You don&apos;t have write permissions for the /usr/bin directory.</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>原因：没有权限。<br>解决：<br>方案1:<br><code>export GEM_HOME=&quot;$HOME/.gem&quot;</code><br>方案2:<br><code>sudo gem install -n /usr/local/bin metamodel -verbose</code><br>参考：<a href="https://stackoverflow.com/questions/18599889/error-while-executing-gem-gemfilepermissionerror" target="_blank" rel="noopener">https://stackoverflow.com/questions/18599889/error-while-executing-gem-gemfilepermissionerror</a><br>方案3:<br><code>gem install cocoapods --user-install</code></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/其他开发工具-2018-12-03-gem-Ruby程序包管理工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/其他开发工具-2018-12-03-gem-Ruby程序包管理工具/" class="post-title-link" itemprop="url">gem-Ruby程序包管理工具</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-03 14:40:12" itemprop="dateCreated datePublished" datetime="2018-12-03T14:40:12+08:00">2018-12-03</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-15 16:05:17" itemprop="dateModified" datetime="2019-03-15T16:05:17+08:00">2019-03-15</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[TOC]</p>
-<blockquote>
-<p>ruby 是一种语言，是某些软件包代码的执行环境。而<code>gem</code>是管理这些基于ruby程序的程序。</p>
-</blockquote>
-<h2 id="gem-命令手册"><a href="#gem-命令手册" class="headerlink" title="gem 命令手册"></a>gem 命令手册</h2><p><a href="https://guides.rubygems.org/command-reference/" target="_blank" rel="noopener">https://guides.rubygems.org/command-reference/</a></p>
-<h4 id="安装-gem"><a href="#安装-gem" class="headerlink" title="安装 gem"></a>安装 gem</h4><ul>
-<li>Mac 自带 gem</li>
-</ul>
-<h4 id="安装源管理"><a href="#安装源管理" class="headerlink" title="安装源管理"></a>安装源管理</h4><h5 id="列出安装源gem-sources-l"><a href="#列出安装源gem-sources-l" class="headerlink" title="列出安装源gem sources -l"></a>列出安装源<code>gem sources -l</code></h5><blockquote>
-<p><a href="http://gems.github.com/" target="_blank" rel="noopener">http://gems.github.com/</a><br><a href="http://rubygems.org/" target="_blank" rel="noopener">http://rubygems.org/</a><br><a href="https://gems.ruby-china.org" target="_blank" rel="noopener">https://gems.ruby-china.org</a></p>
-</blockquote>
-<h5 id="添加安装源-gem-sources-a-XXX"><a href="#添加安装源-gem-sources-a-XXX" class="headerlink" title="添加安装源 gem sources -a XXX"></a>添加安装源 <code>gem sources -a XXX</code></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="built_in">source</span> -a https://gems.ruby-china.org</span><br><span class="line">gem <span class="built_in">source</span> -a http://gems.github.com/</span><br><span class="line">gem <span class="built_in">source</span> -a http://rubygems.org/</span><br></pre></td></tr></table></figure>
-
-<h5 id="删除安装源"><a href="#删除安装源" class="headerlink" title="删除安装源"></a>删除安装源</h5><p><code>gem sources -r XXX</code><br>添加和删除安装源可以在一条命令完成 <code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></p>
-<h5 id="更新安装源缓存"><a href="#更新安装源缓存" class="headerlink" title="更新安装源缓存"></a>更新安装源缓存</h5><p><code>gem sources -u</code></p>
-<h4 id="升级-更新"><a href="#升级-更新" class="headerlink" title="升级/更新"></a>升级/更新</h4><h5 id="更新-gem-本身"><a href="#更新-gem-本身" class="headerlink" title="更新 gem 本身"></a>更新 gem 本身</h5><p><code>gem update --system</code></p>
-<h5 id="更新所有程序包"><a href="#更新所有程序包" class="headerlink" title="更新所有程序包"></a>更新所有程序包</h5><p><code>gem update</code></p>
-<h5 id="更新某一程序包"><a href="#更新某一程序包" class="headerlink" title="更新某一程序包"></a>更新某一程序包</h5><ul>
-<li>例1 <code>gem update cocoapods</code></li>
-<li>例2  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#######################################################################</span></span><br><span class="line"><span class="comment"># sigh 1.9.0 is available. You are on 1.8.0.</span></span><br><span class="line"><span class="comment"># It is recommended to use the latest version.</span></span><br><span class="line"><span class="comment"># Update using 'sudo gem update sigh'.</span></span><br><span class="line"><span class="comment">#######################################################################</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="gem-安装环境-路径"><a href="#gem-安装环境-路径" class="headerlink" title="gem 安装环境 路径"></a>gem 安装环境 路径</h4><h5 id="查看-gem-安装环境"><a href="#查看-gem-安装环境" class="headerlink" title="查看 gem 安装环境"></a>查看 gem 安装环境</h5><p><code>gem environment</code></p>
-<h5 id="查找某一安装包的安装路径"><a href="#查找某一安装包的安装路径" class="headerlink" title="查找某一安装包的安装路径"></a>查找某一安装包的安装路径</h5><ol>
-<li>执行 <code>gem environment</code><blockquote>
-<ul>
-<li>GEM PATHS:<ul>
-<li>/usr/local/lib/ruby/gems/2.3.0</li>
-<li>/Users/Encoder/.gem/ruby/2.3.0</li>
-<li>/usr/local/Cellar/ruby/2.3.0/lib/ruby/gems/2.3.0</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-</li>
-<li>根据 <code>GEM PATHS:</code> 列出的路径查找目录。</li>
-<li>所安装的程序包就在所指目录下面的 <code>gems</code> 文件夹下面。</li>
-</ol>
-<h2 id="常用-gem-包"><a href="#常用-gem-包" class="headerlink" title="常用 gem 包"></a>常用 gem 包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install cocoapods <span class="comment">#cocoapods</span></span><br></pre></td></tr></table></figure>
-
-<p>##ruby+gem常用命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ruby -v <span class="comment">#查看ruby 版本</span></span><br><span class="line">ruby -e <span class="string">''</span>require<span class="string">"watir"</span>; puts Watir::IE::VERSION<span class="string">''</span>　<span class="comment">#查看watir版本</span></span><br><span class="line"></span><br><span class="line">gem -v <span class="comment">#gem版本</span></span><br><span class="line">gem update <span class="comment">#更新所有包</span></span><br><span class="line">gem update --system <span class="comment">#更新RubyGems软件自身</span></span><br><span class="line">gem install rake <span class="comment">#安装rake,从本地或远程服务器</span></span><br><span class="line">gem install rake --remote <span class="comment">#安装rake,从远程服务器</span></span><br><span class="line">gem install watir -v(或者--version) 1.6.2<span class="comment">#指定安装版本的</span></span><br><span class="line">gem uninstall rake <span class="comment">#卸载rake包</span></span><br><span class="line">gem list d <span class="comment">#列出本地以d打头的包</span></span><br><span class="line">gem query -n <span class="string">''</span>[0-9]<span class="string">''</span> --<span class="built_in">local</span> <span class="comment">#查找本地含有数字的包</span></span><br><span class="line">gem search <span class="built_in">log</span> --both <span class="comment">#从本地和远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem search <span class="built_in">log</span> --remoter <span class="comment">#只从远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem search -r <span class="built_in">log</span> <span class="comment">#只从远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem <span class="built_in">help</span> <span class="comment">#提醒式的帮助</span></span><br><span class="line">gem <span class="built_in">help</span> install <span class="comment">#列出install命令 帮助</span></span><br><span class="line">gem <span class="built_in">help</span> examples <span class="comment">#列出gem命令使用一些例子</span></span><br><span class="line">gem build rake.gemspec <span class="comment">#把rake.gemspec编译成rake.gem</span></span><br><span class="line">gem check -v pkg/rake-0.4.0.gem <span class="comment">#检测rake是否有效</span></span><br><span class="line">gem cleanup <span class="comment">#清除所有包旧版本，保留最新版本</span></span><br><span class="line">gem contents rake <span class="comment">#显示rake包中所包含的文件</span></span><br><span class="line">gem dependency rails -v 0.10.1 <span class="comment">#列出与rails相互依赖的包</span></span><br><span class="line">gem environment <span class="comment">#查看gem的环境</span></span><br><span class="line">gem uninstall --all <span class="comment">#删除所有gem包</span></span><br><span class="line">sudo gem uninstall --all <span class="comment">#删除所有gem包</span></span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/" class="post-title-link" itemprop="url">macOS-设置系统代理</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-03 11:51:23 / 修改时间：11:52:13" itemprop="dateCreated datePublished" datetime="2018-12-03T11:51:23+08:00">2018-12-03</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>设置系统代理地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开关系统代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxystate &quot;Wi-Fi&quot; on #打开Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxystate &quot;Wi-Fi&quot; on #打开Web HTTPS代理</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/" class="post-title-link" itemprop="url">iOS通用推送</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-29 18:10:50" itemprop="dateCreated datePublished" datetime="2018-11-29T18:10:50+08:00">2018-11-29</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-21 17:45:32" itemprop="dateModified" datetime="2019-02-21T17:45:32+08:00">2019-02-21</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="iOS-通用推送"><a href="#iOS-通用推送" class="headerlink" title="iOS 通用推送"></a>iOS 通用推送</h1><p>Universal Push Notification Client SSL Certificate</p>
-<h2 id="基于-Token-的消息推送机制"><a href="#基于-Token-的消息推送机制" class="headerlink" title="基于 Token 的消息推送机制"></a>基于 Token 的消息推送机制</h2><p>Token Authentication 鉴权方式是区别于普通的证书鉴权方式的新APNs鉴权方式。<br>它相对以前的证书鉴权方式有如下特点：</p>
-<ul>
-<li>同一个账户下所有 App 无论是测试 App 还是正式版 App，都能使用同一个 key 来发推送消息，不再需要为每个 App 生成一个证书。</li>
-<li>生成的 Auth Key 不再有过期时间，无需像证书那样每年需要重新生成一次。</li>
-<li>生成过程简单，不需要繁琐、易错的证书导出操作。</li>
-<li>当服务端发送一个推送消息的时候必须携带上provider authentication token</li>
-<li>Request 和 Response 使用JSON通信</li>
-<li>APNs支持状态码和返回 error 信息</li>
 </ul>
 <ul>
-<li><p>iOS通用推送消息发送流程<br><img src="/images/iOS_Universal_Push_1.png" alt="iOS通用推送1"></p>
+<li>烟花<br><a href="/html/Fireworks.html">烟花效果</a></li>
+</ul>
+<ul>
+<li>WWDC 2015 Logo<br><a href="/html/WWDC%202015%20Logo.html">WWDC 2015 Logo</a></li>
+</ul>
+<ul>
+<li><p>WebGL 做的水波纹效果<br><a href="/html/WebGL%20Water.html">WebGL Water</a></p>
+</li>
+<li><p>SIMD Demo<br><a href="/html/SIMD%20Demo_%20Mandelbrot%20Animation.html">SIMD Demo</a></p>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/学习-其他零散知识-2019-02-18-几个比较常用的包管理工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/18/学习-其他零散知识-2019-02-18-几个比较常用的包管理工具/" class="post-title-link" itemprop="url">几个比较常用的包管理工具</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-18 15:46:27" itemprop="dateCreated datePublished" datetime="2019-02-18T15:46:27+08:00">2019-02-18</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-02-19 17:35:07" itemprop="dateModified" datetime="2019-02-19T17:35:07+08:00">2019-02-19</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>npm</li>
+<li>yarn</li>
+<li>cocoapods</li>
+<li>homebrew</li>
+<li>apt</li>
+<li>yum</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/学习-ReactNative-2019-02-18-ReactNative-Q-A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/18/学习-ReactNative-2019-02-18-ReactNative-Q-A/" class="post-title-link" itemprop="url">ReactNative Q&A</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-18 15:28:36" itemprop="dateCreated datePublished" datetime="2019-02-18T15:28:36+08:00">2019-02-18</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-04-18 11:28:26" itemprop="dateModified" datetime="2019-04-18T11:28:26+08:00">2019-04-18</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="React-Native-开发中遇到的问题"><a href="#React-Native-开发中遇到的问题" class="headerlink" title="React Native 开发中遇到的问题"></a>React Native 开发中遇到的问题</h1><ul>
+<li><p>Warning: Each child in an array or iterator should have a unique “key” prop.<br>Check the render method of <code>XXX</code><br><a href="https://stackoverflow.com/questions/34576332/warning-each-child-in-an-array-or-iterator-should-have-a-unique-key-prop-che" target="_blank" rel="noopener">https://stackoverflow.com/questions/34576332/warning-each-child-in-an-array-or-iterator-should-have-a-unique-key-prop-che</a></p>
+</li>
+<li><p><code>componentWillReceiveProps</code> 不调用<br><code>componentWillReceiveProps</code> 在 <code>initial rendering</code> 中不调用<br><code>componentWillReceiveProps</code> 只有在接收到不同的 <code>props</code> 时才会被调用</p>
+</li>
+<li><p>Module XXXXXXXXXXX requires main queue setup since it overrides YYYYYYYYYY</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ (BOOL)requiresMainQueueSetup&#123;</span><br><span class="line">  return YES;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Text设置垂直居中不起作用？<br>设置 Text 的<code>llineHeight</code>试试看</p>
+</li>
+</ul>
+<h2 id="YellowBox-黄色警告"><a href="#YellowBox-黄色警告" class="headerlink" title="YellowBox 黄色警告"></a>YellowBox 黄色警告</h2><ul>
+<li><p>XXX requires main queue setup<br>在桥接的类的.m文件中添加</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">BOOL</span>)requiresMainQueueSetup</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>required dispatch_sync to load constants for XXX. This may lead to deadlocks</p>
+<pre><code class="objc"></code></pre>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/18/电脑技巧-Windows-2019-02-18-禁用NTFS的“文件修改时间”功能/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/18/电脑技巧-Windows-2019-02-18-禁用NTFS的“文件修改时间”功能/" class="post-title-link" itemprop="url">禁用NTFS的“文件修改时间”功能</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-18 10:26:32 / 修改时间：10:37:50" itemprop="dateCreated datePublished" datetime="2019-02-18T10:26:32+08:00">2019-02-18</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>直接通过命令修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fsutil behavior set disablelastaccess 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows 10 April 1803 及其以上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]</span><br><span class="line">&quot;NTFSDisableLastAccessUpdate&quot;=dword:80000001</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Windows 10 April 1803 以下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]</span><br><span class="line">&quot;NTFSDisableLastAccessUpdate&quot;=dword:00000001</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>参考：<a href="https://forums.guru3d.com/threads/ntfs-disable-last-access-update-file-time-stamp-windows-10-april-1803-update.421228/" target="_blank" rel="noopener">https://forums.guru3d.com/threads/ntfs-disable-last-access-update-file-time-stamp-windows-10-april-1803-update.421228/</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/15/电脑技巧-Windows-2019-02-15-Windows“启动”文件夹/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/15/电脑技巧-Windows-2019-02-15-Windows“启动”文件夹/" class="post-title-link" itemprop="url">Windows“启动”文件夹</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-15 11:55:12 / 修改时间：14:56:03" itemprop="dateCreated datePublished" datetime="2019-02-15T11:55:12+08:00">2019-02-15</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Windows“启动”文件夹介绍</p>
+<p>Windows系统都有一个“启动”文件夹，把需要打开的程序的快捷方式放到“启动”文件夹里，就可以实现开机自动启动。</p>
+<p>启动”文件夹分为两种，一种是“系统启动文件夹”,另一种为“用户启动文件夹”。</p>
+<p>Win10系统“启动”文件夹的路径为： <code>X:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp</code>(注：X为Win10系统盘盘符),</p>
+<p>如果想要实现应用程序在所有的用户登录系统后都能自动启动，就把该应用程序的快捷方式放到“系统启动文件夹”里；</p>
+<p>Win10某个用户的“启动”文件夹路径为：<code>X:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</code>，</p>
+<p>如果想要实现某个应用程序只在某个用户登录系统时自动启动，那么就把该应用程序的快捷方式放到这个用户的“启动”文件夹里。</p>
+<pre><code>打开“系统启动文件夹”的命令 
+shell:Common Startup 
+或者 
+%programdata%\Microsoft\Windows\Start Menu\Programs\Startup</code></pre><p>2.打开“用户启动文件夹”的命令 </p>
+<p><code>shell:startup</code><br>在“运行”对话框中，输入以上命令，回车即可打开</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/14/手机技巧-2019-02-14-移动联通电信短信查询代码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/02/14/手机技巧-2019-02-14-移动联通电信短信查询代码/" class="post-title-link" itemprop="url">移动联通电信短信查询代码</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-02-14 10:58:07" itemprop="dateCreated datePublished" datetime="2019-02-14T10:58:07+08:00">2019-02-14</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-11 09:58:30" itemprop="dateModified" datetime="2019-07-11T09:58:30+08:00">2019-07-11</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<h2 id="联通"><a href="#联通" class="headerlink" title="联通"></a>联通</h2><ul>
+<li>查流量</li>
+</ul>
 <ol>
-<li>服务器首先连接APNs服务器，</li>
-<li>APNs服务器会返回一个APNs证书，这个证书需要服务器来校验。此时，连接已经建立，服务器可以发送基于Token的推送消息给APNs服务器。</li>
-<li>每一个推送消息必须携带 Token 才能被APNs服务器接受。</li>
-<li>APNs服务器会响应每条推送消息（状态码）。</li>
+<li><code>cxll</code>、<code>1071</code>查看手机上网流量。</li>
+<li><code>cxzll</code>查询总流量。</li>
+<li><code>TCYL</code>查询剩余流量。</li>
+<li><code>5083</code>查看流量半年包余量。</li>
+<li><code>2082</code>查看套餐余量，包括流量和话费。</li>
 </ol>
-</li>
+<ul>
+<li>查话费</li>
 </ul>
-<h2 id="创建-Token-Authentication-Key-的流程"><a href="#创建-Token-Authentication-Key-的流程" class="headerlink" title="创建 Token Authentication Key 的流程"></a>创建 Token Authentication Key 的流程</h2><h3 id="注册-App-ID"><a href="#注册-App-ID" class="headerlink" title="注册 App ID"></a>注册 App ID</h3><p>首先注册 App ID。如果你已经注册过带有推送通知 App ID，可以跳过以下步骤：</p>
 <ol>
-<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
-</li>
-<li><p>点击 <strong>Certificates, Identifiers &amp; Profiles</strong></p>
-</li>
-<li><p>选择 <strong>Identifiers</strong> 下的 <strong>App IDs</strong></p>
-</li>
-<li><p>点击右上方的加号按钮（<strong>+</strong>)</p>
-</li>
-<li><p>填写 App ID 的基本信息<br><img src="/images/iOS_Universal_Push_3.png" alt></p>
-</li>
-<li><p>选择创建 <strong>Explicit App ID</strong>，填入 App 的 <strong>Bundle ID</strong>。注意，<strong>Explicit App ID</strong> 不能包含星号（*）。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
-</li>
-<li><p>选择 App ID 需要开启的服务，此处要勾选 <strong>Push Notifications</strong>。 
-<img src="/images/iOS_Universal_Push_4.png" alt></p>
-</li>
-<li><p>点击 <strong>Continue</strong></p>
-</li>
-<li><p>确认注册信息，然后点击 <strong>Register</strong>。</p>
-</li>
-<li><p>点击 <strong>Done</strong></p>
-</li>
+<li><code>话费</code>查询话费。</li>
+<li><code>余额</code>查询余额。</li>
+<li><code>hfmx</code>查询花费明细。</li>
 </ol>
-<h3 id="开启推送通知"><a href="#开启推送通知" class="headerlink" title="开启推送通知"></a>开启推送通知</h3><p>为已有的 App ID 开启推送通知的步骤如下：</p>
-<ol>
-<li><p>选择要开启推送通知的 <strong>App ID</strong></p>
-</li>
-<li><p>勾选 <strong>Push Notifications</strong> 复选框<br><img src="/images/iOS_Universal_Push_6.png" alt></p>
-</li>
-<li><p>如果弹出警告对话框，点击 <strong>OK</strong>。</p>
-</li>
-<li><p>点击 <strong>Done</strong></p>
-</li>
-</ol>
-<h3 id="获取-Team-ID"><a href="#获取-Team-ID" class="headerlink" title="获取 Team ID"></a>获取 Team ID</h3><ol>
-<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
-</li>
-<li><p>点击 Membership<br><img src="/images/iOS_Universal_Push_2.png" alt></p>
-</li>
-<li><p>找到 <strong>Team ID</strong> 一栏，将其记下来以备后用。</p>
-</li>
-</ol>
-<h3 id="创建-Token-Authentication-Key"><a href="#创建-Token-Authentication-Key" class="headerlink" title="创建 Token Authentication Key"></a>创建 Token Authentication Key</h3><ol>
-<li>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></li>
-<li>点击 <strong>Certificates, Identifiers &amp; Profiles</strong><br><img src="/images/iOS_Universal_Push_7.png" alt></li>
-<li>选择在 <strong>Keys</strong> 栏下的 <strong>All</strong></li>
-<li>点击下图中红色边框内的加号按钮<br><img src="/images/iOS_Universal_Push_8.png" alt></li>
-<li>根据需要填写 <strong>Key Description</strong> 并<strong>勾选 APNs</strong> 后点击最下面的 <strong>Continue</strong> 按钮。<br><img src="/images/iOS_Universal_Push_9.png" alt></li>
-<li>点击 <strong>Confirm</strong> 按钮继续下一步。<br><img src="/images/iOS_Universal_Push_10.png" alt></li>
-<li>点击 <strong>Download</strong> 将生成好的 <strong>Auth Key</strong> 下载到本地(.p8文件)，并记录 <strong>Key ID</strong> 备用。<br><img src="/images/iOS_Universal_Push_11.png" alt></li>
-</ol>
-<h2 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h2><h3 id="HTTP-2请求APNs"><a href="#HTTP-2请求APNs" class="headerlink" title="HTTP/2请求APNs"></a>HTTP/2请求APNs</h3><table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>字段值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>method</td>
-<td>POST</td>
-</tr>
-<tr>
-<td>path</td>
-<td>/3/device/</td>
-</tr>
-</tbody></table>
-<p>APNs需要使用 HPACK （HTTP/2 的报头压缩），防止重复的标题键和值。APNs为HPACK维护一个小的动态表。为了避免填满了APNs HPACK表，因而必须丢弃表数据，编码headers以下列方式 — — 尤其是当发送大量的推送</p>
-<ul>
-<li>method 必须为POST</li>
-<li>path 值应编码为一个header中的一个文本字段，没有索引</li>
-<li>authorization 请求header，如果存在，应编码为一个header中的一个文本字段，没有索引</li>
-</ul>
-<p>apns-id、 apns-expiration，和 apns-collapse-id 不同的编码取决于它是否是第一次初始请求或随后的 POST 操作的一部分，如下︰<br>第一次发送请求头的时，使增量索引编码允许头名称加入动态表中<br>子请求发送头时，编码成header中的一个文本字段，没有索引</p>
-<ul>
-<li>请求头</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Header 头</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>authorization</td>
-<td>提供的发送到指定（app）主题通知的APNs验证token，token是以Base64 URL编码的JWT格式。指定为bearer,当使用证书连接的时候，这个请求头将会被忽略</td>
-</tr>
-<tr>
-<td>apns-id</td>
-<td>一个规范的的 UUID 用来标识通知。如果发送通知时发生错误，APNs 使用此值来标识通知，通知到您的服务器。 规范的格式是 32 个小写的十六进制数字，由连字符分隔为5，8-4-4-4-12。UUID一个例子如下： 123e4567-e89b-12d3-a456-42665544000 如果您省略这个头,一个新的UUID由APNs创建并且在response中返回</td>
-</tr>
-<tr>
-<td>apns-expiration</td>
-<td>通知过期时间，秒级的UTC时间戳，这个header标识通知 从何时起不再有效，可以丢弃。 如果这个值非零，APNs保存通知并且尽量至少送达一次。如果无法第一时间送达，根据需要重复尝试。 如果这个值为0，APNs认为通知立即过期，不会存储与重新推送。</td>
-</tr>
-<tr>
-<td>apns-priority</td>
-<td>通知的优先级，指定以下值:<br>   - 10–立即推送消息. 这个优先级的通知必须再目标设备上触发alert, 声音, 或者badge . 仅仅包含content-available key使用此优先级是错误的。<br>   - 5—一次性发送通知，需要考虑设备的电量。具有此优先级的通知可能分组推送并且几种爆发推送,Notifications with this priority might be grouped and delivered他们会被节流，并且在某些情况下不会送达。 如果省略这个头，APNs服务器会把优先级设置为10</td>
-</tr>
-<tr>
-<td>apns-topic</td>
-<td>远程通知的主题，通常是你App的bundle id，在开发者账号中创建的证书必须包含此bundle id 如果证书包含多个主题，这个头必须指定一个值 如果省略此头并且APNs证书不包含指定的主题，APNs服务器使用证书的Subject作为默认主题。 如果使用token代替证书，必须指定此头，提供的主题应该被在开发者账号中的team提供。即bundle id的app应该与auth key同属于一个开发者组。</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>请求体<br>body内容是将要推送的消息负载的JSON对象。body数据不必须压缩，其最大大小为 4 KB （4096 字节）。对于 (VoIP) 通知，body数据最大大小为 5 KB （5120 字节）。</p>
-</li>
-<li><p>响应头</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>apns-id</td>
-<td>apns-id从request得到， 如果request中没有此值, APNs服务器创建一个新的UUID并且在header中返回</td>
-</tr>
-<tr>
-<td>status</td>
-<td>HTTP状态码，HTTP status code</td>
-</tr>
-</tbody></table>
-<ul>
-<li>状态码</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Status code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>成功</td>
-</tr>
-<tr>
-<td>400</td>
-<td>无效请求</td>
-</tr>
-<tr>
-<td>403</td>
-<td>证书错误或者验证token错误</td>
-</tr>
-<tr>
-<td>405</td>
-<td>:method 设置错误. 只支持 POST 请求</td>
-</tr>
-<tr>
-<td>410</td>
-<td>device token不在有效与topic</td>
-</tr>
-<tr>
-<td>413</td>
-<td>负载payload太大</td>
-</tr>
-<tr>
-<td>429</td>
-<td>服务端对于同一个device token发送了太多了请求</td>
-</tr>
-<tr>
-<td>500</td>
-<td>内部服务器错误</td>
-</tr>
-<tr>
-<td>503</td>
-<td>服务器关闭,不可用</td>
-</tr>
-</tbody></table>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/" class="post-title-link" itemprop="url">Python的安装与卸载</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 17:48:12" itemprop="dateCreated datePublished" datetime="2018-11-28T17:48:12+08:00">2018-11-28</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-08 10:39:07" itemprop="dateModified" datetime="2019-03-08T10:39:07+08:00">2019-03-08</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>macOS<br><a href="https://docs.python.org/3/using/mac.html" target="_blank" rel="noopener">https://docs.python.org/3/using/mac.html</a></p>
-</li>
-<li><p>Python 可能在以下几个位置</p>
-<blockquote>
-<p>/usr/local/Cellar/Python<br>/Library/Frameworks/Python.framework<br>/usr/local/bin/</p>
-</blockquote>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/" class="post-title-link" itemprop="url">Windows激活</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 14:26:14" itemprop="dateCreated datePublished" datetime="2018-11-28T14:26:14+08:00">2018-11-28</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-12-29 11:52:20" itemprop="dateModified" datetime="2018-12-29T11:52:20+08:00">2018-12-29</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>[TOC]</p>
-<h1 id="Windows-激活"><a href="#Windows-激活" class="headerlink" title="Windows 激活"></a>Windows 激活</h1><h2 id="Windows-激活工具"><a href="#Windows-激活工具" class="headerlink" title="Windows 激活工具"></a>Windows 激活工具</h2><ul>
-<li><a href="https://cmwtat.cloudmoe.com/index.html" target="_blank" rel="noopener">https://cmwtat.cloudmoe.com/index.html</a></li>
-</ul>
-<h2 id="Windows-激活命令"><a href="#Windows-激活命令" class="headerlink" title="Windows 激活命令"></a>Windows 激活命令</h2><ul>
-<li><p>重置Windows激活计数<br><code>slmgr.vbs -rearm</code></p>
-</li>
-<li><p>安装产品密钥 替换现有密钥<br><code>slmgr /ipk x-x-x-x-x</code></p>
-</li>
-<li><p>安装OEM证书<br><code>slmgr.vbs -ilc x:\xxx.XRM-MS</code></p>
-</li>
-<li><p>激活Windows<br><code>slmgr.vbs -ato</code></p>
-</li>
-<li><p>显示详细的激活信息<br>包括：系统版本、激活ID、安装ID、部分产品密钥、许可证状态、剩余 Windows 重置计数等<br><code>slmgr.vbs -dlv</code></p>
-</li>
-<li><p>显示许可证激活状态的截止日期<br><code>slmgr.vbs -xpr</code></p>
-</li>
-<li><p>查看许可证的概要信息<br><code>slmgr.vbs -dli</code></p>
-</li>
-<li><p>卸载当前产品密钥<br>重启电脑之后系统将重归未激活状态，会出现输入密钥和联网激活界面。<br><code>slmgr.vbs -upk</code></p>
-</li>
-</ul>
-<p><a href="https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit</a><br><a href="https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit</a></p>
-<h2 id="Windows-10-数字权利激活"><a href="#Windows-10-数字权利激活" class="headerlink" title="Windows 10 数字权利激活"></a>Windows 10 数字权利激活</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">右键开始-命令提示符(管理员)，输入：</span><br><span class="line">slmgr.vbs /ckms</span><br><span class="line">slmgr.vbs /upk</span><br><span class="line"></span><br><span class="line">win10专业版本数字权利激活</span><br><span class="line"> 注意只能适合全新安装的10586版本</span><br><span class="line"> 第1步</span><br><span class="line"> 选择“开始”图标按钮，然后依次选择“设置”&gt;“更新和安全”&gt;“激活”。</span><br><span class="line"> 选择“更改产品密钥”，然后输入 PW48G-MNG8W-B9978-YWBRP-76DGY</span><br><span class="line">激活不了的，点关闭</span><br><span class="line"> 第2步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289 或者 TNXR9-K3KVT-RHXXF-4HDTY-RCYDQ 或者 CKQMQ-DNPGJ-2FQGT-M3Q2W-Q68K3</span><br><span class="line"> 联网激活</span><br><span class="line"> 这个是win7 或者 win8.1 MAK，目前还有激活次数</span><br><span class="line"> 第3步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入 VK7JG-NPHTM-C97JM-9MPGT-3V66T，取得数字权利</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 数字化认可的WIN10，今后重装WIN10系统时无需输入“产品密钥”（安装时可以跳过这步），安装完成后，系统自动激活。</span><br><span class="line"> 有人说</span><br><span class="line">win10的激活机制是绑定你的电脑主板了，也就是说 只要你的主板不换 那么你的win10永远都是激活也是正版的</span><br></pre></td></tr></table></figure>
-
-<p>###怎么验证 Windows 是否已经激活：<br>    1. 最简单的是在我的电脑右键，查看属性.<br>    2. Win+R===&gt;输入 slmgr.vbs -dlv (推荐,此命令得到的信息最全)<br>    3. Win+R===&gt;输入 slmgr.vbs -dli<br>    4. Win+R===&gt;输入 slmgr.vbs -xpr<br>    5. Win+R===&gt;输入 Winver</p>
-<p>免费使用Windows7 1年</p>
-<p>即使你并非微软的官方测试员，也不需要四处寻觅Windows 7的激活密钥，除了官方提供的安装密钥之外，我们还可以通过其他的方法免费使用1年期限的Windows 7，最起码可以坚持到Windows 7正式版本的到来。</p>
-<pre><code>初始状态下，Windows 7提供了30天的试用时间，不过在即将到达这一30天的期限之前，我们可以使用“slmgr.vbs -rearm”的命令延长使用期30天，虽然官方文档中声明该命令只能重复使用3次，也说是说总共可以免费体验120天，此后将无法再次使用。其实，只要修改注册表中的一处键值，即可重复使用“slmgr.vbs -rearm”命令，请打开注册表编辑器，依次定位至“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform”，如图1所示，找到右侧窗格中的“SkipRearm”，将其键值修改为“1”，以后就可以再次使用“slmgr.vbs -rearm”的命令，这个键值总共可以修改8次，也就是说我们可以重复使用8次“slmgr.vbs -rearm”的命令，前后加起来，正好是一年的使用时间。</code></pre><p>参考资料:<a href="http://win7x.blogbus.com/logs/40854953.html" target="_blank" rel="noopener">http://win7x.blogbus.com/logs/40854953.html</a></p>
-<p>Win7激活（<a href="http://www.win7soft.com）" target="_blank" rel="noopener">www.win7soft.com）</a>:</p>
-<p>Win7软件授权管理工具slmgr.vbs使用向导</p>
-<p>当我们打算激活Vista和windows7或打算延长其试用期（rearm）的的时候，大家都会碰到到这个slmgr命令或slmgr.vbs。SLMGR是Software License Manger的简称，是WINDOWS的软件授权管理工具。SLMGR是管理系统激活和密钥. 证书的主要组件。</p>
-<p>SLMGR的所有功能都是通过slmgr.vbs提供的，采用VBScript命令行方式执行。图形界面中许多与该命令行相关的激活行为，比如系统属性等，都是通过调用slmgr.vbs脚本来执行授权操作。即使你在COMMAND下使用SLMGR命令行，其运行结果或出错信息也是以浏览器弹出窗口方式显示的，以下是slmgr的一些使用语法仅供参考，尤其在各位需要激活或遇到激活问题的时候是很有帮助的。</p>
-<p>###在哪里使用和如何使用slmgr.vbs<br>有如下几种方式进入并运行slmgr.vbs命令：</p>
-<ol>
-<li><p>COMMAND命令提示窗口下，这是一种执行方式，但需要提升管理员权限；</p>
-</li>
-<li><p>运行命令（Vista中的显示运行命令，Win+R，开始/所有程序/附件/命令提示符，任何一种）</p>
-</li>
-<li><p>开始菜单中的开始搜索框，使用这种方法需要输入slmgr的完整名称——slmgr.vbs，类似于slmgr.vbs -ato这样的格式内容。</p>
-</li>
-</ol>
-<p>最常用的SLMGR命令是slmgr.vbs -rearm延长Vista或Windows 7试用期30天。除此外，slmgr还支持很多参数命令。我们可以通过slmgr.vbs -?命令查看。也可以检验Windows Vista或Windows 7的激活状态和许可证详细信息。</p>
-<ol start="3">
-<li>SLMGR语法格式<br>基本语法：</li>
-</ol>
-<p>slmgr.vbs [MachineName [User Password]] [<option>]</option></p>
-<p>其中：</p>
-<ul>
-<li><p>MachineName ： 远程计算机名 （缺省为本机）</p>
-</li>
-<li><p>User ： 具有相应权限的计算机用户</p>
-</li>
-<li><p>Password：用户密码</p>
-</li>
-<li><p>Option：为SLMGR的参数，参下。</p>
-</li>
-</ul>
-<p>常用参数选项：</p>
-<p>-ipk &lt;产品密钥&gt;</p>
-<p>安装产品密钥（替换现有密钥）</p>
-<p>-upk</p>
-<p>卸载产品密钥</p>
-<p>-ato</p>
-<p>激活Windows</p>
-<p>-dli [激活 ID | All]</p>
-<p>显示许可证信息（默认：当前许可证）</p>
-<p>-dlv [激活 ID | All]</p>
-<p>显示详细的许可证信息（默认：当前许可证）</p>
-<p>-xpr</p>
-<p>当前许可证状态的截止日期</p>
-<p>高级参数选项：</p>
-<p>-cpky</p>
-<p>从注册表中清除产品密钥（阻止泄露引起的攻击）</p>
-<p>-ilc &lt;许可证文件路径&gt;</p>
-<p>安装许可证</p>
-<p>-rilc</p>
-<p>重新安装系统许可证文件</p>
-<p>-rearm</p>
-<p>重置计算机的授权状态</p>
-<p>-dti</p>
-<p>显示安装 ID 以进行脱机激活</p>
-<p>-atp &lt;确认 ID&gt;</p>
-<p>使用电话方式提供的确认 ID 激活产品</p>
-<p>KMS相关选项：</p>
-<p>-skms <kms activation server name></kms></p>
-<p>设置KMS服务器名</p>
-<p>-skms <kms activation server port number></kms></p>
-<p>设置KMS服务器端口号</p>
-<p>-skms <kms activation server name:port number></kms></p>
-<p>设置KMS服务器名和端口号</p>
-<p>-ckms</p>
-<p>清除KMS服务器名和端口号并设为初始状态</p>
-<p>###slmgr.vbs的使用示例</p>
-<ol>
-<li>查看许可证的概要信息（假设为当前许可证；且系统在C盘，下同），则可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -dli</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dli</p>
-<ol start="2">
-<li>显示许可证激活状态的截止日期，也可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -xpr</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -xpr</p>
-<ol start="3">
-<li>查看许可证详细信息，也可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -dlv</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dlv</p>
-<ol start="4">
-<li>导入OEM证书方法</li>
-</ol>
-<p>运行命令下：slmgr.vbs -ilc D:\123.XRM-MS，后面为OEM证书完整路径</p>
-<ol start="5">
-<li>卸载当前产品密钥</li>
-</ol>
-<p>运行命令下：slmgr.vbs -upk，即可卸载当前产品密钥，重启计算机会出现输入密钥和联网激活界面。</p>
-<p>如果想查看Windows 7 的详细版本号，我们要运行另外一个命令Slmgr.vbs，大家在运行中输入Slmgr.vbs，可以看到此命令的用法以及各种参数。</p>
-<p>　　1. slmgr.vbs –dli</p>
-<p>　　显示：操作系统版本. 部分产品密钥. 许可证状态</p>
-<p>　　2. slmgr.vbs –dlv</p>
-<p>　　显示：最为详尽的激活信息，包括：激活ID. 安装ID. 激活截止日期</p>
-<p>　　3. slmgr.vbs –xpr</p>
-<p>　　显示：是否彻底激活</p>
-<p>　　4. slmgr.vbs –ipk</p>
-<p>　　更换WIN7序列号</p>
-<p>　　5. slmgr.vbs –ato</p>
-<p>　　激活WIN7</p>
-<p>slmgr.vbs命令大全 检验Windows7激活状态</p>
-<p>其详细参数如下：</p>
-<p>可用选项:</p>
-<p>-ipk &lt;产品密钥&gt;<br>​    安装产品密钥(替换现有密钥)</p>
-<p>-upk<br>​    卸载产品密钥</p>
-<p>-ato<br>​    激活 Windows</p>
-<p>-dli [激活 ID | All]<br>​    显示许可证信息(默认: 当前许可证)</p>
-<p>-dlv [激活 ID | All]<br>​    显示详细的许可证信息(默认: 当前许可证)</p>
-<p>-xpr<br>​    当前许可证状态的截止日期</p>
-<p>高级选项:<br>-cpky<br>​    从注册表中清除产品密钥(阻止泄露引起的攻击)</p>
-<p>-ilc &lt;许可证文件路径&gt;<br>​    安装许可证</p>
-<p>-rilc<br>​    重新安装系统许可证文件</p>
-<p>-rearm<br>​    重置计算机的授权状态</p>
-<p>-dti<br>​    显示安装 ID 以进行脱机激活</p>
-<p>-atp &lt;确认 ID&gt;<br>​    使用电话方式提供的确认 ID 激活产品</p>
-<p>###重置激活<br>这是不少网友对于激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令<code>slmgr.vbs -rearm</code>的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令显示“重置计数”有何意义和作用？</p>
-<pre><code>激活Windows 7后运行`slmgr.vbs -dlv`命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令`slmgr.vbs -rearm`以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
-
-激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。</code></pre><p>激活 Windows 7 后运行 <code>slmgr.vbs -dlv</code> 命令显示“重置计数”有何意义和作用？</p>
-<pre><code>这是不少网友对于激活Windows 7后运行slmgr.vbs -dlv命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令`slmgr.vbs -rearm`的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行`slmgr.vbs -dlv`命令显示“重置计数”有何意义和作用？
-
-激活Windows 7后运行slmgr.vbs -dlv命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令slmgr.vbs -rearm以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
-
-激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。
-
-有些网友在《关于重发《打造“双重”激活（“OEM激活”和“联网激活”）的Windows 7旗舰版》的说明》一文后提问：采用两种激活方式有何意义？看过以上介绍，首先回答了实践层面的意义：掌握品牌机的两种激活方法。其次能从“自然”走向“自由”：对微软两大激活体系从理论层面加深理性思考。</code></pre><p>友情提示：</p>
-<pre><code>——通过“软改”或“硬刷”激活后，个别不能通过重置命令显示更换产品密钥选项的，可以采用slmgr.vbs -upk命令卸载目前产品密钥，重启计算机后即可出现要求输入新的密钥联网激活界面。</code></pre>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-WES7激活/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-WES7激活/" class="post-title-link" itemprop="url">WES7激活</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 14:24:24" itemprop="dateCreated datePublished" datetime="2018-11-28T14:24:24+08:00">2018-11-28</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-02-01 22:46:29" itemprop="dateModified" datetime="2019-02-01T22:46:29+08:00">2019-02-01</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Windows-Embedded-7-嵌入版-激活"><a href="#Windows-Embedded-7-嵌入版-激活" class="headerlink" title="Windows Embedded 7 嵌入版 激活"></a>Windows Embedded 7 嵌入版 激活</h2><h3 id="WES7-激活序列号"><a href="#WES7-激活序列号" class="headerlink" title="WES7 激活序列号"></a>WES7 激活序列号</h3><p>需要在安装时输入这个序列号或者用ICS植入序列号<br><code>XGY72-BRBBT-FF8MH-2GG8H-W7KCW</code></p>
-<p>用命令安装密钥<br><code>slmgr.vbs -ipk XGY72-BRBBT-FF8MH-2GG8H-W7KCW</code></p>
-<ul>
-<li>其他激活序列号</li>
-</ul>
-<p>Windows Embedded Standard 7 Runtime (x86) - DVD (English)<br>产品密钥：<code>MPMVY-PP762-WWVBC-83RXJ-2H7RH</code> 静态激活密钥</p>
 <hr>
-<p>Windows Embedded Standard 7 Runtime (x64) - DVD (English)<br>产品密钥：<code>MPMVY-PP762-WWVBC-83RXJ-2H7RH</code> 静态激活密钥</p>
-<hr>
-<p>Windows Embedded Standard 7 Toolkit (x86) - DVD (English)<br>产品密钥：<code>7XT84-3XQFP-YMXQF-PP96H-F74DV</code> 静态激活密钥</p>
-<p>WES7官定免费使用180天，到期后如果需要再用下去，并不需要重新安装，只需要按照微软公布的正规方法：执行一下<code>slmgr.vbs /rearm</code>重置激活，就可以再使用180天，可以这样重置激活6次，这就等于可以免费使用3年。3年后，按照微软官网公布的方法，将注册表项：<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\&quot;SkipRearm&quot;=dword:00000000</code>的值更改为<code>1</code>，又可以重置激活，可以这样重复 8 次，因此，官方WES7可以免费使用 7 年。当然，重新安装一下，又可以使用7年。</p>
-<p>参考：<br><a href="http://bbs.pcbeta.com/viewthread-835562-1-1.html" target="_blank" rel="noopener">http://bbs.pcbeta.com/viewthread-835562-1-1.html</a><br><a href="http://bbs.pcbeta.com/viewthread-835562-1-1.html" target="_blank" rel="noopener">http://bbs.pcbeta.com/viewthread-835562-1-1.html</a></p>
+<h2 id="电信"><a href="#电信" class="headerlink" title="电信"></a>电信</h2><ul>
+<li>查询流量</li>
+</ul>
+<ol>
+<li>电信手机客户端——服务——客服——输入<code>查询流量</code></li>
+<li>短信发送 <code>1081</code> 到 10001 查询。</li>
+</ol>
+<ul>
+<li>查话费</li>
+</ul>
+<ol>
+<li>发送 <code>1029</code> 到 10001 查询余额。</li>
+</ol>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/26/Xcode与调试-2018-11-26-Xcode路径/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/01/电脑技巧-2019-02-01-如何知道-USB-3-0-UASP-模式已经开启了？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/26/Xcode与调试-2018-11-26-Xcode路径/" class="post-title-link" itemprop="url">Xcode路径</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/02/01/电脑技巧-2019-02-01-如何知道-USB-3-0-UASP-模式已经开启了？/" class="post-title-link" itemprop="url">如何知道 USB 3.0 UASP 模式已经开启了？</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2018-11-26 17:42:05" itemprop="dateCreated datePublished" datetime="2018-11-26T17:42:05+08:00">2018-11-26</time>
+              <time title="创建时间：2019-02-01 14:13:46 / 修改时间：14:30:33" itemprop="dateCreated datePublished" datetime="2019-02-01T14:13:46+08:00">2019-02-01</time>
             </span>
           
+            
 
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ul>
+<li><p>方法1<br>将 USB 存储设备连接到电脑上，用 Crystal Disk Info 就可以查看。<br><img src="/images/USB_UASP.png" alt></p>
+</li>
+<li><p>方法2<br><a href="https://winaero.com/blog/check-if-your-usb-3-0-device-supports-usb-attached-scsi-uas-protocol/" target="_blank" rel="noopener">https://winaero.com/blog/check-if-your-usb-3-0-device-supports-usb-attached-scsi-uas-protocol/</a></p>
+</li>
+</ul>
+<ol>
+<li>Press <code>Win</code> + <code>X</code> keys together on the keyboard and click Device Manager.</li>
+<li>Expand the “Storage Controllers” node and see if it has a “USB Attached SCSI (UAS) Mass Storage Device” listed.</li>
+<li>If not, then expand “Universal Serial Bus controllers” tree node in Device Manager.</li>
+<li>Double click on the “USB Mass Storage Device” for which you wish to check this.</li>
+<li>Go to the Driver tab and click the Driver Details button.</li>
+<li>If it says USBSTOR.sys, then it means Windows is using the older Bulk-Only Transport Protocol with your USB device. If it says UASPStor.sys, then it means UAS Protocol is in use.</li>
+</ol>
+<p>As stated earlier, UAS Protocol will be used by Windows 8 and later only if your USB 2.0/3.0 mass storage device supports it and your USB chipset/firmware support it. Windows 7 does not support UASP out-of-the-box but device manufacturer drivers can easily support it.</p>
+<p>UAS when used with USB 3.1 should be substantially faster than eSATA. In some benchmarks, even eSATA was faster than USB 3.0 with BOT. But UASP is still slower than Thunderbolt 3 or the ultrafast internal storage buses like NVM Express.</p>
+<p>Another important thing to note is like eSATA, UASP makes TRIM support possible for external SSDs but it still depends on support from all the SSD controllers and bridge chips used in the SSD besides the operating system. Although UASP enables USB drives to use the SCSI command set, SSD controllers use the SATA command set. So the OS needs to support not just UASP but the SCSI UNMAP command (counterpart to ATA TRIM) and the USB-SATA bridge chip needs to be able to translate the SCSI UNMAP command to ATA TRIM properly.</p>
+<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>运行命令<code>ioreg &gt; ~/Desktop/ioreg.txt</code><br>在结果中查看有没有<code>IOUSBMassStorageUASDriver</code>字样<br>或者直接执行<code>ioreg | grep IOUSBMassStorageUASDriver</code></p>
+<p>参考：<a href="https://discussions.apple.com/thread/6164330" target="_blank" rel="noopener">https://discussions.apple.com/thread/6164330</a></p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p><a href="https://superuser.com/questions/928741/how-can-i-check-whether-usb3-0-uasp-usb-attached-scsi-protocol-mode-is-enabled" target="_blank" rel="noopener">https://superuser.com/questions/928741/how-can-i-check-whether-usb3-0-uasp-usb-attached-scsi-protocol-mode-is-enabled</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/31/手机技巧-2019-01-31-Android-安卓使用MiXpolrer连接FTP服务器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/01/31/手机技巧-2019-01-31-Android-安卓使用MiXpolrer连接FTP服务器/" class="post-title-link" itemprop="url">Android-安卓使用MiXplorer连接FTP服务器</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-01-31 19:22:19" itemprop="dateCreated datePublished" datetime="2019-01-31T19:22:19+08:00">2019-01-31</time>
+            </span>
           
             
 
@@ -2048,36 +1001,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-15 11:50:01" itemprop="dateModified" datetime="2019-04-15T11:50:01+08:00">2019-04-15</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-02-15 17:49:12" itemprop="dateModified" datetime="2019-02-15T17:49:12+08:00">2019-02-15</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -2085,168 +1018,85 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>打开 MiXplorer 软件</p>
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>点击屏幕的左上角位置，三个横线的按钮，这个键也叫菜单键、汉堡键。<br><img src="/images/Android-MiXplorer-FTP-1.jpg" alt></p>
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在弹出的书签界面点击考右边的一个按钮。<br><img src="/images/Android-MiXplorer-FTP-2.jpg" alt></p>
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>在弹出的列表中选择“添加存储器”<br><img src="/images/Android-MiXplorer-FTP-3.jpg" alt></p>
+<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>在弹出的界面中选择<code>FTP(S,ES)</code>。因为我们要连接的是一个FTP服务器。<br><img src="/images/Android-MiXplorer-FTP-4.jpg" alt></p>
+<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>在弹出的界面填写好FTP服务器的地址、用户名和密码点击保存就可以。如果没有用户名和密码就留空，不需要填写。<br>例如：<br>FTP 地址填写<code>ftp://192.168.1.100:2121</code><br><img src="/images/Android-MiXplorer-FTP-5.jpg" alt></p>
 
-      
-        
-          
-            <h2 id="开发相关路径"><a href="#开发相关路径" class="headerlink" title="开发相关路径"></a>开发相关路径</h2><ul>
-<li><p>Xcode Developer Image<br><code>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/DeviceSupport</code></p>
-</li>
-<li><p>Provision Profile 描述文件路径<br><code>~/Library/MobileDevice/Provisioning\ Profiles/</code></p>
-</li>
-<li><p>模拟器路径<br><code>~/Library/Developer/CoreSimulator/Devices/</code></p>
-</li>
-<li><p>模拟器 KeyChain 数据库文件路径<br><code>~/Library/Developer/CoreSimulator/Devices/{SimilatoeUUID}/data/Library/Keychains/keychain-2-debug.db</code></p>
-</li>
-<li><p>Xcode 缓存、配置、编译结果文件路径<br>此路径下的内容包括 Archives、DerivedData、DocumentationCache、iOS Device Logs、iOS DeviceSupport、UserData<br><code>~/Library/Developer/Xcode/</code></p>
-</li>
-<li><p>编译缓存<br><code>~/Library/Developer/Xcode/</code></p>
-</li>
-<li><p>SDK 路径<br><code>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs</code></p>
-</li>
-</ul>
-<h2 id="其它路径"><a href="#其它路径" class="headerlink" title="其它路径"></a>其它路径</h2><ul>
-<li><p>Xcode 编辑器主题文件路径<br><code>~/Library/Developer/Xcode/UserData/FontAndColorThemes</code></p>
-</li>
-<li><p>文件模板路径<br><code>/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/File Templates</code><br>Xcode 8 之后<br><code>/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/</code></p>
-</li>
-<li><p>Xcode Code Snippet 路径<br><code>~/Library/Developer/Xcode/UserData/CodeSnippets</code></p>
-</li>
-</ul>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/26/手机技巧-2018-11-26-iPhone技巧/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/28/电脑技巧-macOS-2019-01-28-macOS-defaults命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/26/手机技巧-2018-11-26-iPhone技巧/" class="post-title-link" itemprop="url">iPhone技巧</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/01/28/电脑技巧-macOS-2019-01-28-macOS-defaults命令/" class="post-title-link" itemprop="url">macOS-defaults命令</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2018-11-26 14:22:32 / 修改时间：14:23:35" itemprop="dateCreated datePublished" datetime="2018-11-26T14:22:32+08:00">2018-11-26</time>
+              <time title="创建时间：2019-01-28 19:04:35" itemprop="dateCreated datePublished" datetime="2019-01-28T19:04:35+08:00">2019-01-28</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-04-15 10:47:43" itemprop="dateModified" datetime="2019-04-15T10:47:43+08:00">2019-04-15</time>
+              </span>
             
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -2254,74 +1104,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>defaults 命令其实修改的是<code>~/Library/Preferences/</code>目录下面的plist文件</p>
+<p>所有可能用到的 domain 和 key <a href="https://www.defaults-write.com/" target="_blank" rel="noopener">https://www.defaults-write.com/</a></p>
 
-      
-        
-          
-            <ul>
-<li>解压iOS固件需要的工具</li>
-</ul>
-<ol>
-<li><a href="https://www.theiphonewiki.com/wiki" target="_blank" rel="noopener">https://www.theiphonewiki.com/wiki</a></li>
-<li>VFDecrypt <a href="https://www.theiphonewiki.com/wiki/VFDecrypt" target="_blank" rel="noopener">https://www.theiphonewiki.com/wiki/VFDecrypt</a></li>
-<li>Firmware_Keys <a href="https://www.theiphonewiki.com/wiki/Firmware_Keys" target="_blank" rel="noopener">https://www.theiphonewiki.com/wiki/Firmware_Keys</a></li>
-</ol>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-  </section>
+  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/15/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/15/">15</a><span class="page-number current">16</span><a class="page-number" href="/page/17/">17</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/17/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
-
 
 
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -2332,348 +1147,62 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">DNACore</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">188</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">131</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -2684,27 +1213,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -2716,28 +1234,19 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
 
 
 
@@ -2746,10 +1255,7 @@
 
 
 
-
-
-
-
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
@@ -2765,404 +1271,11 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
 
   
 
   
 
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

@@ -4,93 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
@@ -99,20 +62,17 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNACore GitHub io">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://dnacore@github.io/page/19/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -126,13 +86,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -141,7 +96,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -158,30 +113,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DNACore GitHub io</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -194,503 +139,126 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/20/学习-iOS-2017-03-20-Runtime/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/04/学习-Shell-2018-12-04-Shell-find-命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/20/学习-iOS-2017-03-20-Runtime/" class="post-title-link" itemprop="url">Runtime</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2018/12/04/学习-Shell-2018-12-04-Shell-find-命令/" class="post-title-link" itemprop="url">Shell - find 命令</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-03-20 11:44:16 / 修改时间：13:19:53" itemprop="dateCreated datePublished" datetime="2017-03-20T11:44:16+08:00">2017-03-20</time>
+              <time title="创建时间：2018-12-04 15:46:35" itemprop="dateCreated datePublished" datetime="2018-12-04T15:46:35+08:00">2018-12-04</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Runtime"><a href="#Runtime" class="headerlink" title="Runtime"></a>Runtime</h1><h2 id="Runtime的数据结构"><a href="#Runtime的数据结构" class="headerlink" title="Runtime的数据结构"></a>Runtime的数据结构</h2><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> objc_class &#123;</span><br><span class="line">    Class isa  OBJC_ISA_AVAILABILITY;</span><br><span class="line"></span><br><span class="line"><span class="meta">#if !__OBJC2__</span></span><br><span class="line">    Class super_class                                        OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *name                                         OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> version                                             OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> info                                                OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">long</span> instance_size                                       OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">struct</span> objc_ivar_list *ivars                             OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">struct</span> objc_method_list **methodLists                    OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">struct</span> objc_cache *cache                                 OBJC2_UNAVAILABLE;</span><br><span class="line">    <span class="keyword">struct</span> objc_protocol_list *protocols                     OBJC2_UNAVAILABLE;</span><br><span class="line"><span class="meta">#endif</span></span><br><span class="line"></span><br><span class="line">&#125; OBJC2_UNAVAILABLE;</span><br></pre></td></tr></table></figure>
-
-<h2 id="通过-Runtime-添加属性"><a href="#通过-Runtime-添加属性" class="headerlink" title="通过 Runtime 添加属性"></a>通过 Runtime 添加属性</h2><p>一般情况下，类的 category 添加了一个 property 之后，只会生成对应的 get 和 set 方法声明，并不会生成这两个方法的实现，也不会生成对应的带下划线的方法。<br>用 Runtime 添加属性：</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//想要添加的属性</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) <span class="built_in">NSString</span> *str;</span><br><span class="line"></span><br><span class="line"><span class="comment">// seter getter 实现</span></span><br><span class="line"><span class="keyword">static</span> <span class="keyword">void</span> *strKey = &amp;strKey;<span class="comment">//需要首先创建一个唯一不变的地址，存取属性要用到这个地址</span></span><br><span class="line">-(<span class="keyword">void</span>)setStr:(<span class="built_in">NSString</span> *)str  </span><br><span class="line">&#123;  </span><br><span class="line">    objc_setAssociatedObject(<span class="keyword">self</span>, &amp;strKey, str, OBJC_ASSOCIATION_COPY);  </span><br><span class="line">&#125;  </span><br><span class="line"></span><br><span class="line">-(<span class="built_in">NSString</span> *)str  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">return</span> objc_getAssociatedObject(<span class="keyword">self</span>, &amp;strKey);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="方法说明"><a href="#方法说明" class="headerlink" title="方法说明"></a>方法说明</h2><h3 id="objc-setAssociatedObject-id-object-const-void-key-id-value-objc-AssociationPolicy-policy"><a href="#objc-setAssociatedObject-id-object-const-void-key-id-value-objc-AssociationPolicy-policy" class="headerlink" title="objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)"></a><code>objc_setAssociatedObject(id object, const void *key, id value, objc_AssociationPolicy policy)</code></h3><ul>
-<li><p><code>id object</code><br>添加属性的目标对象，传入需要添加属性的实例。</p>
-</li>
-<li><p><code>const void *key</code><br>一个指针，传入地址，</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//利用静态变量地址唯一不变的特性</span></span><br><span class="line"><span class="number">1</span>、<span class="keyword">static</span> <span class="keyword">void</span> *strKey = &amp;strKey;</span><br><span class="line"><span class="number">2</span>、<span class="keyword">static</span> <span class="built_in">NSString</span> *strKey = <span class="string">@"strKey"</span>; </span><br><span class="line"><span class="number">3</span>、<span class="keyword">static</span> <span class="keyword">char</span> strKey;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>id value</code><br>传入属性的值</p>
-</li>
-<li><p><code>objc_AssociationPolicy policy</code><br>关联策略，此处是个枚举值，与 <code>@property</code> 的修饰符有对应关系</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> OBJC_ENUM(uintptr_t, objc_AssociationPolicy) &#123;</span><br><span class="line">    OBJC_ASSOCIATION_ASSIGN = <span class="number">0</span>,           <span class="comment">/**&lt; Specifies a weak reference to the associated object. */</span></span><br><span class="line">    OBJC_ASSOCIATION_RETAIN_NONATOMIC = <span class="number">1</span>, <span class="comment">/**&lt; Specifies a strong reference to the associated object. </span></span><br><span class="line"><span class="comment">                                            *   The association is not made atomically. */</span></span><br><span class="line">    OBJC_ASSOCIATION_COPY_NONATOMIC = <span class="number">3</span>,   <span class="comment">/**&lt; Specifies that the associated object is copied. </span></span><br><span class="line"><span class="comment">                                            *   The association is not made atomically. */</span></span><br><span class="line">    OBJC_ASSOCIATION_RETAIN = <span class="number">01401</span>,       <span class="comment">/**&lt; Specifies a strong reference to the associated object.</span></span><br><span class="line"><span class="comment">                                            *   The association is made atomically. */</span></span><br><span class="line">    OBJC_ASSOCIATION_COPY = <span class="number">01403</span>          <span class="comment">/**&lt; Specifies that the associated object is copied.</span></span><br><span class="line"><span class="comment">                                            *   The association is made atomically. */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="id-objc-getAssociatedObject-id-object-const-void-key"><a href="#id-objc-getAssociatedObject-id-object-const-void-key" class="headerlink" title="id objc_getAssociatedObject(id object, const void *key)"></a><code>id objc_getAssociatedObject(id object, const void *key)</code></h3><p>获取某个关联属性的值</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/16/学习-iOS-2017-03-16-删除默认的Main-sotryboard/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/16/学习-iOS-2017-03-16-删除默认的Main-sotryboard/" class="post-title-link" itemprop="url">删除默认的Main.sotryboard</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-16 11:24:07 / 修改时间：11:25:00" itemprop="dateCreated datePublished" datetime="2017-03-16T11:24:07+08:00">2017-03-16</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="删除默认的-Main-sotryboard"><a href="#删除默认的-Main-sotryboard" class="headerlink" title="删除默认的 Main.sotryboard"></a>删除默认的 Main.sotryboard</h1><ol>
-<li>我们先删除 Xcode 自动为我们建立的 <code>Man.storyboard</code> 文件和两个 <code>ViewController</code> 类文件。<br><img src="http://ww1.sinaimg.cn/large/6148db88ly1fdoias8p09j20ei0bmq4g.jpg" alt="删除默认文件"></li>
-<li>在工程的 Target – General – Deployment Info – Main interface 里面，将其值改为空。<br><img src="http://ww3.sinaimg.cn/large/6148db88ly1fdoicnr1tgj214o0nutcb.jpg" alt="修改默认设置"></li>
-<li>建立新的默认视图<br><img src="http://ww2.sinaimg.cn/large/6148db88ly1fdoidcls7rj20eg0bu0uf.jpg" alt="建立新的默认视图"></li>
-<li>在 <code>AppDelegate</code> 里面添加代码，程序启动时将我们添加的视图设置为 UIWindow 的根视图。<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line">    <span class="comment">// Override point for customization after application launch.</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc]initWithFrame:[[<span class="built_in">UIScreen</span> mainScreen] bounds]];</span><br><span class="line">    <span class="keyword">self</span>.window.backgroundColor = [<span class="built_in">UIColor</span> whiteColor];</span><br><span class="line">    </span><br><span class="line">    MainViewController *rootVC = [[MainViewController alloc]init];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.window.rootViewController = rootVC;</span><br><span class="line">    [<span class="keyword">self</span>.window makeKeyAndVisible];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/15/其他开发工具-2017-03-15-CocoaPods/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/15/其他开发工具-2017-03-15-CocoaPods/" class="post-title-link" itemprop="url">CocoaPods使用</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-15 10:08:15" itemprop="dateCreated datePublished" datetime="2017-03-15T10:08:15+08:00">2017-03-15</time>
-            </span>
-          
-
           
             
 
@@ -699,36 +267,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-25 15:46:31" itemprop="dateModified" datetime="2019-03-25T15:46:31+08:00">2019-03-25</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-22 13:42:41" itemprop="dateModified" datetime="2019-03-22T13:42:41+08:00">2019-03-22</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -736,669 +284,72 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <p>[TOC]</p>
-<h1 id="CocoaPods"><a href="#CocoaPods" class="headerlink" title="CocoaPods"></a>CocoaPods</h1><h2 id="获取Ruby类的属性"><a href="#获取Ruby类的属性" class="headerlink" title="获取Ruby类的属性"></a>获取Ruby类的属性</h2><p><a href="https://www.jianshu.com/p/d8eb397b835e" target="_blank" rel="noopener">https://www.jianshu.com/p/d8eb397b835e</a></p>
-<h2 id="CocoaPods官方API文档"><a href="#CocoaPods官方API文档" class="headerlink" title="CocoaPods官方API文档"></a>CocoaPods官方API文档</h2><p><a href="https://www.rubydoc.info/gems/cocoapods/Pod/" target="_blank" rel="noopener">https://www.rubydoc.info/gems/cocoapods/Pod/</a></p>
-<h2 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h2><h3 id="下载包-sudo-gem-install-cocoapods"><a href="#下载包-sudo-gem-install-cocoapods" class="headerlink" title="下载包 sudo gem install cocoapods"></a>下载包 <code>sudo gem install cocoapods</code></h3><blockquote>
-<p>提示<br>查看 gem 使用的安装源 <code>gem sources -l</code><br>移除一个 gem 安装源 <code>gem sources --remove https://rubygems.org/</code><br>新增一个 gem 安装源 <code>gem sources -a http://ruby.taobao.org/</code></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装</span></span><br><span class="line">sudo gem install cocoapods -n /usr/<span class="built_in">local</span>/bin</span><br><span class="line"><span class="comment"># 安装指定版本</span></span><br><span class="line">sudo gem install cocoapods -n /usr/<span class="built_in">local</span>/bin --version 1.5.3</span><br><span class="line"><span class="comment"># 卸载</span></span><br><span class="line">sudo gem uninstall cocoapods -n /usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
-
-<h3 id="编译安装安装："><a href="#编译安装安装：" class="headerlink" title="编译安装安装："></a>编译安装安装：</h3><p><code>pod setup</code> (根据测试，此步骤可以省略)<br>执行安装命令后会向<code>~/.cocoapods/repos</code>这里拉取git内容，大概有341MB。等待一段时间之后，如果没有错误的话 CocoaPods 就安装成功了。</p>
-<blockquote>
-<p>为什么要执行<code>pod setup</code>？
-所有的项目的 <code>Podspec</code> 文件都托管在 <a href="https://github.com/CocoaPods/Specs" target="_blank" rel="noopener">https://github.com/CocoaPods/Specs</a> 第一次执行 <code>pod setup</code> 时，CocoaPods 会将这些podspec索引文件更新到本地的<code>~/.cocoapods/</code>目录下，这个索引文件比较大，有 300多M 左右，在执行一次<code>pod install</code>之后会增加到700多M。所以第一次更新时非常慢。</p>
-</blockquote>
-<h2 id="使用示例-AFNetworking"><a href="#使用示例-AFNetworking" class="headerlink" title="使用示例 AFNetworking"></a>使用示例 <code>AFNetworking</code></h2><h3 id="先搜索一下所需要的第三方库是否支持-CocoaPods-安装"><a href="#先搜索一下所需要的第三方库是否支持-CocoaPods-安装" class="headerlink" title="先搜索一下所需要的第三方库是否支持 CocoaPods 安装"></a>先搜索一下所需要的第三方库是否支持 CocoaPods 安装</h3><p><code>pod search AFNetworking</code><br>搜索结果是（部分结果，根据具体的库不同，结果而不同）</p>
-<blockquote>
-<p>-&gt; AFNetworking (3.1.0) //AFNetworking 的最新版本<br>   A delightful iOS and OS X networking framework.<br>   pod ‘AFNetworking’, ‘~&gt; 3.1.0’ //添加进配置文件的时候需要的代码</p>
+          <p><a href="https://www.cnblogs.com/johnnyliu/archive/2013/04/09/3010384.html" target="_blank" rel="noopener">https://www.cnblogs.com/johnnyliu/archive/2013/04/09/3010384.html</a></p>
 <ul>
-<li>Homepage: <a href="https://github.com/AFNetworking/AFNetworking" target="_blank" rel="noopener">https://github.com/AFNetworking/AFNetworking</a></li>
-<li>Source:   <a href="https://github.com/AFNetworking/AFNetworking.git" target="_blank" rel="noopener">https://github.com/AFNetworking/AFNetworking.git</a></li>
-<li>Versions: 3.1.0, 3.0.4, 3.0.3, 3.0.2, 3.0.1, 3.0.0, 3.0.0-beta.3,</li>
-</ul>
-<p>   3.0.0-beta.2, 3.0.0-beta.1, 2.6.3, 2.6.2, 2.6.1, 2.6.0, 2.5.4, 2.5.3, 2.5.2,<br>   2.5.1, 2.5.0, 2.4.1, 2.4.0, 2.3.1, 2.3.0, 2.2.4, 2.2.3, 2.2.2, 2.2.1, 2.2.0,<br>   2.1.0, 2.0.3, 2.0.2, 2.0.1, 2.0.0, 2.0.0-RC3, 2.0.0-RC2, 2.0.0-RC1, 1.3.4,<br>   1.3.3, 1.3.2, 1.3.1, 1.3.0, 1.2.1, 1.2.0, 1.1.0, 1.0.1, 1.0, 1.0RC3, 1.0RC2,<br>   1.0RC1, 0.10.1, 0.10.0, 0.9.2, 0.9.1, 0.9.0, 0.7.0, 0.5.1 [master repo]</p>
-<ul>
-<li>Subspecs:<ul>
-<li>AFNetworking/Serialization (3.1.0)</li>
-<li>AFNetworking/Security (3.1.0)</li>
-<li>AFNetworking/Reachability (3.1.0)</li>
-<li>AFNetworking/NSURLSession (3.1.0)</li>
-<li>AFNetworking/UIKit (3.1.0)<br>……</li>
-</ul>
+<li><p>同时查找多个符合条件的文件<br>查找结果文件名包含StrA或StrB或StrC<br>也可以用正则表达式</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name "\*StrA\*" -o -name "\*StrB\*" -o -name "\*StrC\*"</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-</blockquote>
-<h3 id="配置文件的书写"><a href="#配置文件的书写" class="headerlink" title="配置文件的书写"></a>配置文件的书写</h3><ol>
-<li><p>在 *.xcodeproj 所在的文件夹下建立 Podfile 为名，的无扩展名文本文件，文件需要的编码是 UTF-8 换行符为 UNIX 格式。<br>这里根据文档，也可以执行 <code>pod init</code> 就会在当前目录生成一个 Podfile 文件。</p>
-</li>
-<li><p>Podfile 的文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">platform :ios, &apos;7.0&apos;</span><br><span class="line">target &apos;CloudStorageHelper&apos; do</span><br><span class="line">    pod &apos;AFNetworking&apos;, &apos;~&gt; 3.1.0&apos;</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><code>platform :ios, &#39;7.0&#39;</code> 最低支持的 iOS 版本。</li>
-<li><code>target &#39;CloudStorageHelper&#39;</code> 这里是将要向哪个 Target 添加库文件。</li>
-<li><code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;</code> 需要添加的第三方依赖库和版本。</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>只在Debug模式下加入pod库<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">'SomePod'</span>, <span class="string">'~&gt; 2.0'</span>, <span class="symbol">:configurations</span> =&gt; [<span class="string">'Debug'</span>]</span><br></pre></td></tr></table></figure>
+<li><p>查找电脑上所有的 icns 文件，然后复制到指定位置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find . -name \*.icns -print0 | xargs -I&#123;&#125; -0 cp -v &#123;&#125; /tmp/icns</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p><code>pod install</code> 命令需要切换到 Podfile 所在的目录执行</p>
-<h3 id="更新依赖库"><a href="#更新依赖库" class="headerlink" title="更新依赖库"></a>更新依赖库</h3><p><code>pod update</code> 命令需要切换到 Podfile 所在的目录执行</p>
-<h3 id="降级依赖库步骤"><a href="#降级依赖库步骤" class="headerlink" title="降级依赖库步骤"></a>降级依赖库步骤</h3><ol>
-<li>修改依赖库对应的版本代码</li>
-<li>执行 <code>pod install</code> 不确定 <code>pod update</code> 是否有同样的效果</li>
-</ol>
-<h3 id="删除依赖库步骤"><a href="#删除依赖库步骤" class="headerlink" title="删除依赖库步骤"></a>删除依赖库步骤</h3><ol>
-<li>删除依赖库对应的版本代码</li>
-<li>执行 <code>pod install</code> 不确定 <code>pod update</code> 是否有同样的效果</li>
-</ol>
-<h2 id="创建-pod-库"><a href="#创建-pod-库" class="headerlink" title="创建 pod 库"></a>创建 pod 库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod lib create PodLibName</span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.garron.me/en/linux/find-copy-files-exec-xargs-bash-linux-mac-osx.html" target="_blank" rel="noopener">https://www.garron.me/en/linux/find-copy-files-exec-xargs-bash-linux-mac-osx.html</a></p>
 
-<h2 id="升级CocoaPods"><a href="#升级CocoaPods" class="headerlink" title="升级CocoaPods"></a>升级CocoaPods</h2><p>直接执行 <code>sudo gem install cocoapods</code> 或者 <code>gem update cocoapods</code></p>
-<h2 id="卸载-CocoaPods"><a href="#卸载-CocoaPods" class="headerlink" title="卸载 CocoaPods"></a>卸载 CocoaPods</h2><p>参考：<a href="http://www.cnblogs.com/wangxiaorui/p/5653095.html" target="_blank" rel="noopener">http://www.cnblogs.com/wangxiaorui/p/5653095.html</a></p>
-<h2 id="所有支持的命令"><a href="#所有支持的命令" class="headerlink" title="所有支持的命令"></a>所有支持的命令</h2><p><a href="https://guides.cocoapods.org/terminal/commands.html" target="_blank" rel="noopener">https://guides.cocoapods.org/terminal/commands.html</a></p>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/14/学习-iOS-2017-03-14-iOS-创建推送证书教程/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/04/其他开发工具-2018-12-04-openssl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/14/学习-iOS-2017-03-14-iOS-创建推送证书教程/" class="post-title-link" itemprop="url">iOS 创建推送证书教程</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2018/12/04/其他开发工具-2018-12-04-openssl/" class="post-title-link" itemprop="url">openssl</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-03-14 13:41:29 / 修改时间：13:55:31" itemprop="dateCreated datePublished" datetime="2017-03-14T13:41:29+08:00">2017-03-14</time>
+              <time title="创建时间：2018-12-04 13:54:25" itemprop="dateCreated datePublished" datetime="2018-12-04T13:54:25+08:00">2018-12-04</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="iOS-创建推送证书教程"><a href="#iOS-创建推送证书教程" class="headerlink" title="iOS 创建推送证书教程"></a>iOS 创建推送证书教程</h1><p>此教程帮助大家创建iOS设备在开发测试环境和生产环境使用的推送证书。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>每次我们向苹果申请证书，都需要生成一个证书请求文件。通过这个文件来获取我们需要的证书。</p>
-<h3 id="创建证书请求文件"><a href="#创建证书请求文件" class="headerlink" title="创建证书请求文件"></a>创建证书请求文件</h3><ol>
-<li>打开钥匙串</li>
-<li>在菜单栏的 钥匙串访问 中选中 证书助理 –&gt; 从证书颁发机构请求证书…<br><img src="http://pic.yupoo.com/picpop_v/Giii1bys/DddOs.jpg" alt="1"></li>
-<li>在弹出的窗口中，填写好你的电子邮件地址，并且一定要选中 存储到磁盘 。我们稍后会用到生成的请求文件。<br><img src="http://pic.yupoo.com/picpop_v/Giii1mP6/3Xl4n.jpg" alt="2"></li>
-<li>点击继续，提示我们选择一个存储位置，这里我们选择存储到桌面上，点存储。<br><img src="http://pic.yupoo.com/picpop_v/Giii1q3a/GJ6ma.jpg" alt="3"></li>
-<li>提示创建成功，我们可以关闭窗口了。<br><img src="http://pic.yupoo.com/picpop_v/Giii1sT7/Ku31O.jpg" alt="4"></li>
-</ol>
-<h2 id="创建-APS-证书"><a href="#创建-APS-证书" class="headerlink" title="创建 APS 证书"></a>创建 APS 证书</h2><ol>
-<li>打开开发者网站的证书页面<br> <a href="https://developer.apple.com/account/ios/certificate/" target="_blank" rel="noopener">https://developer.apple.com/account/ios/certificate/</a></li>
-<li>点击右上方的 ＋ 号开始创建证书。<br><img src="http://pic.yupoo.com/picpop_v/Giii1vJh/CjVlo.jpg" alt="5"></li>
-<li>在新页面中，有两种类型的推送证书可供我们选择。这里我们选择前面一种，也就是测试环境下的证书。<ol>
-<li>Apple Push Notifiction service SSL (Sandbox) 测试用推送证书</li>
-<li>Apple Push Notifiction service SSL (Sandbox &amp; Production) 生产环境证书<br><img src="http://pic.yupoo.com/picpop_v/GiiigsOP/rUJuu.jpg" alt="6"></li>
-</ol>
-</li>
-<li>点击 Continue 进入下一个页面，要我们选择需要针对哪个 app 来创建推送证书，推送证书不支持通用 Bundle ID。选择好你对用的 Bundle ID 点击 Continue。<br><img src="http://pic.yupoo.com/picpop_v/GiiigwNs/NozHR.jpg" alt="7"></li>
-<li>这里提示我们要创建一个 CSR 文件。我们上面意境创建过了，直接点击 Continue。<br><img src="http://pic.yupoo.com/picpop_v/GiiigKvL/13JLT6.jpg" alt="8"></li>
-<li>点击 <code>chose file...</code> 选择在上面一部分我们保存好的证书请求文件。之后点击 Continue。</li>
-<li>至此，推送证书就创建完成，点击 <code>Download</code> 下载我们创建好的证书，点击 Done 完成。双击下载的证书即可自动导入钥匙串中。<br><img src="http://pic.yupoo.com/picpop_v/GiiigOlT/hmGKV.jpg" alt="9"></li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/14/学习-iOS-2017-03-14-动态改变导航栏的颜色和透明度/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/14/学习-iOS-2017-03-14-动态改变导航栏的颜色和透明度/" class="post-title-link" itemprop="url">动态改变导航栏的颜色和透明度</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-14 11:23:04 / 修改时间：11:24:00" itemprop="dateCreated datePublished" datetime="2017-03-14T11:23:04+08:00">2017-03-14</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="动态改变导航栏的颜色和透明度"><a href="#动态改变导航栏的颜色和透明度" class="headerlink" title="动态改变导航栏的颜色和透明度"></a>动态改变导航栏的颜色和透明度</h1><p>有一些应用在我们推拉滑动列表的时候会发现导航栏随着滑动的动作改变颜色和透明度。<br>这种效果其实实现起来是比较简单的。<br>这里利用的是 UIScrollview 的代理。每当 UIScrollView 滑动的时候就会掉用<code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code>这个方法。我们只要在这个代理里面获取到 UIScrollView 的偏移量，根据偏移量来设置导航栏的颜色和透明度。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView&#123;</span><br><span class="line">    <span class="comment">//先获取y轴偏移</span></span><br><span class="line">    <span class="built_in">CGFloat</span> yOffset  = scrollView.contentOffset.y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置透明度</span></span><br><span class="line">    <span class="built_in">CGFloat</span> alpha = fabs(yOffset)/<span class="number">88.</span>f;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//设置导航栏的图片</span></span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="keyword">self</span> imageWithColor:[[<span class="built_in">UIColor</span> orangeColor]colorWithAlphaComponent:alpha]] forBarMetrics:<span class="built_in">UIBarMetricsDefault</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/08/学习-其他零散知识-2017-03-08-堆和栈的区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/08/学习-其他零散知识-2017-03-08-堆和栈的区别/" class="post-title-link" itemprop="url">堆和栈的区别</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-08 10:29:27 / 修改时间：10:34:48" itemprop="dateCreated datePublished" datetime="2017-03-08T10:29:27+08:00">2017-03-08</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h1><p>来源：未知</p>
-<h2 id="一、预备知识—程序的内存分配"><a href="#一、预备知识—程序的内存分配" class="headerlink" title="一、预备知识—程序的内存分配"></a>一、预备知识—程序的内存分配</h2><p>一个由C/C++编译的程序占用的内存分为以下几个部分 </p>
-<ol>
-<li>栈区（stack）—   由编译器自动分配释放   ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。 </li>
-<li>堆区（heap）   —   一般由程序员分配释放，   若程序员不释放，程序结束时可能由OS回收   。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表，呵呵。 </li>
-<li>全局区（静态区）（static）—，全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域，   未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。   -   程序结束后由系统释放。 </li>
-<li>文字常量区   —常量字符串就是放在这里的。   程序结束后由系统释放 </li>
-<li>程序代码区—存放函数体的二进制代码。 </li>
-</ol>
-<h2 id="二、例子程序"><a href="#二、例子程序" class="headerlink" title="二、例子程序"></a>二、例子程序</h2><p>这是一个前辈写的，非常详细</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.cpp</span></span><br><span class="line"><span class="keyword">int</span>   a   =   <span class="number">0</span>;   全局初始化区</span><br><span class="line"><span class="keyword">char</span>   *p1;   全局未初始化区</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span>   b;   栈</span><br><span class="line"><span class="keyword">char</span>   s[]   =   <span class="string">"abc"</span>;   栈</span><br><span class="line"><span class="keyword">char</span>   *p2;   栈</span><br><span class="line"><span class="keyword">char</span>   *p3   =   <span class="string">"123456"</span>;   <span class="number">123456</span>/<span class="number">0</span>在常量区，p3在栈上。</span><br><span class="line"><span class="keyword">static</span>   <span class="keyword">int</span>   c   =<span class="number">0</span>；   全局（静态）初始化区</span><br><span class="line">p1   =   (<span class="keyword">char</span>   *)<span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line">p2   =   (<span class="keyword">char</span>   *)<span class="built_in">malloc</span>(<span class="number">20</span>);</span><br><span class="line">分配得来得<span class="number">10</span>和<span class="number">20</span>字节的区域就在堆区。</span><br><span class="line"><span class="built_in">strcpy</span>(p1,   <span class="string">"123456"</span>);   <span class="number">123456</span>/<span class="number">0</span>放在常量区，编译器可能会将它与p3所指向的<span class="string">"123456"</span> </span><br><span class="line">优化成一个地方。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、堆和栈的理论知识"><a href="#三、堆和栈的理论知识" class="headerlink" title="三、堆和栈的理论知识"></a>三、堆和栈的理论知识</h2><h3 id="申请方式"><a href="#申请方式" class="headerlink" title="申请方式"></a>申请方式</h3><p>stack:<br>由系统自动分配。   例如，声明在函数中一个局部变量 <code>int   b;</code> 系统自动在栈中为b开辟空间<br>heap:<br>需要程序员自己申请，并指明大小，在c中malloc函数<br>如<code>p1   =   (char   *)malloc(10);</code><br>在C++中用new运算符<br>如<code>p2   =   new   char[10];</code><br>但是注意p1、p2本身是在栈中的。</p>
-<h3 id="申请后系统的响应"><a href="#申请后系统的响应" class="headerlink" title="申请后系统的响应"></a>申请后系统的响应</h3><p>栈：只要栈的剩余空间大于所申请空间，系统将为程序提供内存，否则将报异常提示栈溢出。<br>堆：首先应该知道操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请时，会遍历该链表，寻找第一个空间大于所申请空间的堆结点，然后将该结点从空闲结点链表中删除，并将该结点的空间分配给程序，另外，对于大多数系统，会在这块内存空间中的首地址处记录本次分配的大小，这样，代码中的delete语句才能正确的释放本内存空间。另外，由于找到的堆结点的大小不一定正好等于申请的大小，系统会自动的将多余的那部分重新放入空闲链表中。</p>
-<h3 id="申请大小的限制"><a href="#申请大小的限制" class="headerlink" title="申请大小的限制"></a>申请大小的限制</h3><p>栈：在Windows下,栈是向低地址扩展的数据结构，是一块连续的内存的区域。这句话的意思是栈顶的地址和栈的最大容量是系统预先规定好的，在WINDOWS下，栈的大小是2M（也有的说是1M，总之是一个编译时就确定的常数），如果申请的空间超过栈的剩余空间时，将提示overflow。因此，能从栈获得的空间较小。<br>堆：堆是向高地址扩展的数据结构，是不连续的内存区域。这是由于系统是用链表来存储的空闲内存地址的，自然是不连续的，而链表的遍历方向是由低地址向高地址。堆的大小受限于计算机系统中有效的虚拟内存。由此可见，堆获得的空间比较灵活，也比较大。</p>
-<h3 id="申请效率的比较："><a href="#申请效率的比较：" class="headerlink" title="申请效率的比较："></a>申请效率的比较：</h3><p>栈由系统自动分配，速度较快。但程序员是无法控制的。<br>堆是由new分配的内存，一般速度比较慢，而且容易产生内存碎片,不过用起来最方便.<br>另外，在Windows下，最好的方式是用VirtualAlloc分配内存，他不是在堆，也不是在栈是直接在进程的地址空间中保留一块内存，虽然用起来最不方便。但是速度快，也最灵活。 </p>
-<h3 id="堆和栈中的存储内容"><a href="#堆和栈中的存储内容" class="headerlink" title="堆和栈中的存储内容"></a>堆和栈中的存储内容</h3><p>栈：在函数调用时，第一个进栈的是主函数中后的下一条指令（函数调用语句的下一条可执行语句）的地址，然后是函数的各个参数，在大多数的C编译器中，参数是由右往左入栈的，然后是函数中的局部变量。注意静态变量是不入栈的。当本次函数调用结束后，局部变量先出栈，然后是参数，最后栈顶指针指向最开始存的地址，也就是主函数中的下一条指令，程序由该点继续运行。<br>堆：一般是在堆的头部用一个字节存放堆的大小。堆中的具体内容由程序员安排。</p>
-<h3 id="存取效率的比较"><a href="#存取效率的比较" class="headerlink" title="存取效率的比较"></a>存取效率的比较</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>   s1[]   =   <span class="string">"aaaaaaaaaaaaaaa"</span>;</span><br><span class="line"><span class="keyword">char</span>   *s2   =   <span class="string">"bbbbbbbbbbbbbbbbb"</span>;</span><br></pre></td></tr></table></figure>
-
-<p><code>aaaaaaaaaaa</code>是在运行时刻赋值的；<br>而<code>bbbbbbbbbbb</code>是在编译时就确定的；<br>但是，在以后的存取中，在栈上的数组比指针所指向的字符串(例如堆)快。<br>比如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>   <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span>   a   =   <span class="number">1</span>;</span><br><span class="line"><span class="keyword">char</span>   c[]   =   <span class="string">"1234567890"</span>;</span><br><span class="line"><span class="keyword">char</span>   *p   =<span class="string">"1234567890"</span>;</span><br><span class="line">a   =   c[<span class="number">1</span>];</span><br><span class="line">a   =   p[<span class="number">1</span>];</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对应的汇编代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>:   a   =   c[<span class="number">1</span>];</span><br><span class="line"><span class="number">00401067</span>   <span class="number">8</span>A   <span class="number">4</span>D   F1   mov   cl,byte   ptr   [ebp<span class="number">-0F</span>h]</span><br><span class="line"><span class="number">0040106</span>A   <span class="number">88</span>   <span class="number">4</span>D   FC   mov   byte   ptr   [ebp<span class="number">-4</span>],cl</span><br><span class="line"><span class="number">11</span>:   a   =   p[<span class="number">1</span>];</span><br><span class="line"><span class="number">0040106</span>D   <span class="number">8B</span>   <span class="number">55</span>   EC   mov   edx,dword   ptr   [ebp<span class="number">-14</span>h]</span><br><span class="line"><span class="number">00401070</span>   <span class="number">8</span>A   <span class="number">42</span>   <span class="number">01</span>   mov   al,byte   ptr   [edx+<span class="number">1</span>]</span><br><span class="line"><span class="number">00401073</span>   <span class="number">88</span>   <span class="number">45</span>   FC   mov   byte   ptr   [ebp<span class="number">-4</span>],al</span><br></pre></td></tr></table></figure>
-
-<p>第一种在读取时直接就把字符串中的元素读到寄存器cl中，而第二种则要先把指针值读到 edx中，再根据edx读取字符，显然慢了。</p>
-<h3 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h3><p>堆和栈的区别可以用如下的比喻来看出：<br>使用栈就象我们去饭馆里吃饭，只管点菜（发出申请）、付钱、和吃（使用），吃饱了就走，不必理会切菜、洗菜等准备工作和洗碗、刷锅等扫尾工作，他的好处是快捷，但是自由度小。<br>使用堆就象是自己动手做喜欢吃的菜肴，比较麻烦，但是比较符合自己的口味，而且自由度大。   (经典！)  </p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/" class="post-title-link" itemprop="url">C语言extern关键字使用</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-07 16:07:02" itemprop="dateCreated datePublished" datetime="2017-03-07T16:07:02+08:00">2017-03-07</time>
-            </span>
-          
-
           
             
 
@@ -1407,36 +358,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-08 15:16:40" itemprop="dateModified" datetime="2019-07-08T15:16:40+08:00">2019-07-08</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-28 14:49:52" itemprop="dateModified" datetime="2019-03-28T14:49:52+08:00">2019-03-28</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -1444,213 +375,80 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h1 id="C语言extern关键字使用"><a href="#C语言extern关键字使用" class="headerlink" title="C语言extern关键字使用"></a>C语言extern关键字使用</h1><p>[TOC]</p>
-<p>引用自：<a href="http://doc.chinaunix.net/CPP/201206/2248432.shtml" target="_blank" rel="noopener">http://doc.chinaunix.net/CPP/201206/2248432.shtml</a><br><a href="https://www.cnblogs.com/broglie/p/5524932.html" target="_blank" rel="noopener">https://www.cnblogs.com/broglie/p/5524932.html</a></p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>一：看到这个，说的很基础，转录于此。</p>
-<p>在C语言中，修饰符<code>extern</code>用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”.</p>
-<ol>
-<li><p><code>extern</code>修饰变量的声明。<br>举例来说，如果文件a.c需要引用b.c中变量int v,就可以在a.c中声明extern int v,然后就可以引用变量v.这里需要注意的是，被引用的变量v的链接属性必须是外链接（external）的，也就是说a.c要引用到v,不只是取决于在 a.c中声明extern int v,还取决于变量v本身是能够被引用到的。这涉及到c语言的另外一个话题–变量的作用域。能够被其他模块以extern修饰符引用到的变量通常是全局变 量。还有很重要的一点是，extern int v可以放在a.c中的任何地方，比如你可以在a.c中的函数fun定义的开头处声明extern int v,然后就可以引用到变量v了，只不过这样只能在函数fun作用域中引用v罢了，这还是变量作用域的问题。对于这一点来说，很多人使用的时候都心存顾虑。 好像extern声明只能用于文件作用域似的。</p>
+          <ul>
+<li><p>验证远程证书状态</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><code>extern</code>修饰函数声明。<br>从本质上来讲，变量和函数没有区别。函数名是指向函数二进制块开头处的指针。如果文件a.c需要引用b.c中的函数，比如在 b.c中原型是int fun（int mu），那么就可以在a.c中声明extern int fun（int mu），然后就能使用fun来做任何事情。就像变量的声明一样，extern int fun（int mu）可以放在a.c中任何地方，而不一定非要放在a.c的文件作用域的范围中。 对其他模块中函数的引用，最常用的方法是包含这些函数声明的头文件。使用extern和包含头文件来引用函数有什么区别呢？extern的引用方式比包含 头文件要简洁得多！extern的使用方法是直接了当的，想引用哪个函数就用extern声明哪个函数。这大概是KISS原则的一种体现吧！这样做的一个 明显的好处是，会加速程序的编译（确切的说是预处理）的过程，节省时间。在大型C程序编译过程中，这种差异是非常明显的。</p>
+<li><p>用指定证书测试网站</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem</span><br><span class="line"><span class="comment"># 或者</span></span><br><span class="line">openssl s_client -connect api.development.push.apple.com:443 -cert public.pem</span><br></pre></td></tr></table></figure>
+
 </li>
-<li><p>此外，<code>extern</code>修饰符可用于指示C或者C++函数的调用规范。<br>比如在C++中调用C库函数，就需要在C++程序中用extern “C”声明要引用的函数。这是给链接器用的，告诉链接器在链接的时候用C函数规范来链接。主要原因是C++和C程序编译完成后在目标代码中命名规则不同。</p>
-</li>
-</ol>
-<h2 id="深入"><a href="#深入" class="headerlink" title="深入"></a>深入</h2><p>二：了解了上面的基本原理，下面深入一下。如下：</p>
-<h3 id="用extern声明外部变量"><a href="#用extern声明外部变量" class="headerlink" title="用extern声明外部变量"></a>用extern声明外部变量</h3><p>   定义：外部变量是指在函数或者文件外部定义的全局变量。外部变量定义必须在所有的函数之外，且只能定义一次。</p>
-<h4 id="在一个文件内声明的外部变量"><a href="#在一个文件内声明的外部变量" class="headerlink" title="在一个文件内声明的外部变量"></a>在一个文件内声明的外部变量</h4><h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><p>作用域：如果在变量定义之前要使用该变量，则在用之前加extern声明变量，作用域扩展到从声明开始，到本文件结束。</p>
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p> 例子：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x,<span class="keyword">int</span> y）； <span class="comment">//函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[ ] ）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> result;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> X; <span class="comment">//外部变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> Y;  </span><br><span class="line">         </span><br><span class="line">   result = max（X,Y）；  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"the max value is %dn"</span>,result）；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> X = <span class="number">10</span>; <span class="comment">//定义外部变量  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> Y = <span class="number">20</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x, <span class="keyword">int</span> y）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> （x&gt;y ? x : y）；  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+</ul>
 
-<p> 其中，用extern声明外部变量时，类型名可以省略。例如，”extern int X;”,可以改写成”extern X;”.</p>
-<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>小结：这种用方法简单，实用性不大。</p>
-<h4 id="在多个文件中声明外部变量"><a href="#在多个文件中声明外部变量" class="headerlink" title="在多个文件中声明外部变量"></a>在多个文件中声明外部变量</h4><h5 id="作用域-1"><a href="#作用域-1" class="headerlink" title="作用域"></a>作用域</h5><p>作用域：如果整个工程由多个文件组成，在一个文件中想引用另外一个文件中已经定义的外部变量时，则只需在引用变量的文件中用extern关键字加以声明即可。可见，其作用域从一个文件扩展到多个文件了。</p>
-<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><p>文件a.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> BASE=<span class="number">2</span>; <span class="comment">//变量定义  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> exe（<span class="keyword">int</span> x）； <span class="comment">//外部函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc, <span class="keyword">char</span> *agrv[]）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> a=<span class="number">10</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"%d^%d = %dn"</span>,BASE,a,exe（a））；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">        </span><br><span class="line">  <span class="keyword">extern</span> BASE; <span class="comment">//外部变量声明  </span></span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> exe（<span class="keyword">int</span> x）  </span><br><span class="line">        </span><br><span class="line">  &#123;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> i;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> ret=<span class="number">1</span>;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">for</span>（i=<span class="number">0</span>;i&lt;x;i++）  </span><br><span class="line">        </span><br><span class="line">  &#123;  </span><br><span class="line">        </span><br><span class="line">  ret*=BASE;  </span><br><span class="line">        </span><br><span class="line">  &#125;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">return</span> ret;  </span><br><span class="line">        </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>利用gcc工具编译gcc a.c b.c –o demo,再运行。/demo,结果为2^10 = 1024.其中，在a.c文件中定义BASE=2,在b.c中引用BASE时，需要用extern关键字声明其为外部变量，否则编译会找不到该变量。</p>
-<h5 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h5><p> 小结：对于多个文件的工程，可以采用这种方法来操作。实际工程中，对于模块化的程序文件，在其文件中可以预先留好外部变量的接口，也就是只采用extern声明变量，不定义变量，也通常在模块程序的头文件中声明，在使用该模块时，只需要在使用时定义一下即可，如上述b.c文件，做好相应的函数接口，留好需要改变BASE值的声明，在需要使用该模块时，只需要在调用的文件中定义具体的值即可。<br>引用外部变量和通过函数形参值传递变量的区别：用extern引用外部变量，可以在引用的模块内修改其值，而形参值传递的变量则不能修改其值，除非是地址传递。<br> 因此，如果多个文件同时对需要应用的的变量进行同时操作，可能会修改该变量，类似于形参的地址传递，从而影响其他模块的使用，因此，要慎重使用。</p>
-<h4 id="在多个文件中声明外部结构体变量"><a href="#在多个文件中声明外部结构体变量" class="headerlink" title="在多个文件中声明外部结构体变量"></a>在多个文件中声明外部结构体变量</h4><p>前面一节中，只是适合一般变量的外部声明，但是对于声明外部结构体变量时，则有些不同，需要加以注意。</p>
-<h5 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h5><p>文件a.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"c.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class local_post=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> A_class next_post=&#123;<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[]）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"first point"</span>,local_post）；  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"second point"</span>,next_post）；  </span><br><span class="line">       </span><br><span class="line"> ret=fun（local_post,next_post）；  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">printf</span>（<span class="string">"the vector is （%d,%d,%d）n"</span>,ret.x,ret.y,ret.z）；  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">if</span> 1  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span>  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> x;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> y;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> z;  </span><br><span class="line">         </span><br><span class="line">   &#125;A_class;  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span>  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class local_post; <span class="comment">//外部结构体变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class fun（<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z）； <span class="comment">//接口函数声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class fun（A_class first,A_class next）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> ret.x=next.x-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.y=next.y-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.z=next.z-first.z;  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> （ret）；  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件c.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> print（<span class="keyword">char</span> *,A_class post）；  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p> 文件c.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> print（<span class="keyword">char</span> *str,A_class post）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"%s : （%d,%d,%d）n"</span>,str,post.x,post.y,post.z）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p> 利用gcc工具编译gcc a.c b.c c.c–o demo,再运行。/demo,结果为</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first point : （<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>）  </span><br><span class="line">  </span><br><span class="line">second point : （<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>）  </span><br><span class="line">  </span><br><span class="line">the <span class="built_in">vector</span> is （<span class="number">9</span>,<span class="number">8</span>,<span class="number">5</span>）</span><br></pre></td></tr></table></figure>
-
-<h5 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h5><p>小结：在<code>a.c</code>文件中定义全局变量<code>A_class local_post</code>结构体，并且调用b.c中的接口函数<code>A_class fun（int x,int y,int z）</code>和<code>c.c</code>中<code>int print（char *str,A_class post）</code>，在<code>b.h</code>中声明外部结构体变量<code>local_post</code>,同时，需要对其类型<code>A_class</code>进行实现，在<code>b.h</code>文件中，如果屏蔽掉<code>A_class</code>的实现，而在<code>b.h</code>以外的文件中实现，此时编译时就会出错，由于<code>c.c</code>文件中用到<code>A_class</code>定义的类型，所以需要在该文件中包含<code>b.h</code>.
-这里需要说明的是，如果调用外部结构体等多层结构体变量时，需要对这种变量进行实现，使用时，加上模块的头文件即可，否则会报错。<br>实际工程中，模块化程序文件，一般提供一个<code>.c</code>和一个<code>.h</code>文件，其中<code>.h</code>文件被<code>.c</code>文件调用，<code>.h</code>文件中实现。</p>
-<h3 id="用extern声明外部函数"><a href="#用extern声明外部函数" class="headerlink" title="用extern声明外部函数"></a>用<code>extern</code>声明外部函数</h3><ol>
-<li>定义函数时，在函数返回值类型前面加上<code>extern</code>关键字，表示此函数时外部函数，可供其他文件调用，如<code>extern int func （int x,int y）</code>，C语言规定，此时<code>extern</code>可以省略，隐形为外部函数。</li>
-<li>调用此函数时，需要用<code>extern</code>对函数作出声明。<h5 id="作用域-2"><a href="#作用域-2" class="headerlink" title="作用域"></a>作用域</h5>作用域：使用<code>extern</code>声明能够在一个文件中调用其他文件的函数，即把被调用函数的作用域扩展到本文件。C语言中规定，声明时可以省略extern.</li>
-</ol>
-<h5 id="例子-3"><a href="#例子-3" class="headerlink" title="例子"></a>例子</h5><p>文件<code>a.c</code>的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> main（）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> x=<span class="number">10</span>,y=<span class="number">5</span>;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x = 10,y = 5n"</span>）；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x + y = %dn"</span>,add（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x - y = %dn"</span>,sub（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x * y = %dn"</span>,mult（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x / y = %dn"</span>,div（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">             </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __F_H  </span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __F_H  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> add（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> sub（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> mult（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> div（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> add（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x+y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> sub（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x-y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> mult（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x*y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> div（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">if</span>(y!=<span class="number">0</span>)</span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x/y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"mult（） fail!the second para can not be zero!n "</span>）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（<span class="number">-1</span>）；  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>利用gcc工具编译<code>gcc a.c b.c –o demo</code>,再运行<code>./demo</code>,结果为</p>
-<blockquote>
-<p>x = 10,y = 5  </p>
-<p>x + y = 15  </p>
-<p>x - y = 5  </p>
-<p>x * y = 50  </p>
-<p>x / y = 2.  </p>
-</blockquote>
-<h5 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h5><p>小结：由上面简单的例子可以看出，在b.h文件中声明好b.c的函数，使用时，只需要在a.c中包含#include “b.h”头文件即可，这样就可以使用b.c的接口函数了，在实际工程中，通常也是采用这种方式，.c文件中实现函数，.h文件中声明函数借口，需要调用。c文件的函数接口时，只需包含。h头文件即可。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在实际工程中，有两种情况比较多。一是利用extern只声明外部函数，不需要传递需要外部声明的变量，一个模块化接口文件对应一个声明接口的头文件，需要调用接口函数时，只需要包含其头文件。二是利用用extern声明外部函数，同时声明需要传递的外部变量，做法和第一种情况一样，声明都放在头文件中，但是，模块文件也需要包含该头文件。另外，如果结构体等比较复杂的变量，则需要包含其定义的头文件。另外，定义的外部变量属于全局变量，其存储方式为静态存储，生存周期为整个程序的生存周期。</p>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/02/14/hello-world/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/04/电脑技巧-2018-12-04-在线接收短信平台/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2017/02/14/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2018/12/04/电脑技巧-2018-12-04-在线接收短信平台/" class="post-title-link" itemprop="url">在线接收短信平台</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2017-02-14 16:57:41" itemprop="dateCreated datePublished" datetime="2017-02-14T16:57:41+08:00">2017-02-14</time>
+              <time title="创建时间：2018-12-04 11:01:28 / 修改时间：11:03:28" itemprop="dateCreated datePublished" datetime="2018-12-04T11:01:28+08:00">2018-12-04</time>
             </span>
           
-
-          
-
-          
-
-          
             
+
             
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1658,79 +456,1043 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <ul>
+<li><p>网站</p>
+<ul>
+<li>SMSReceiveFree：<a href="https://smsreceivefree.com/" target="_blank" rel="noopener">https://smsreceivefree.com/</a> </li>
+<li>Receive SMS Online for FREE：<a href="https://www.receive-sms-online.info/" target="_blank" rel="noopener">https://www.receive-sms-online.info/</a> </li>
+<li>Receive a SMS Online：<a href="https://receive-a-sms.com/" target="_blank" rel="noopener">https://receive-a-sms.com/</a> </li>
+<li>Free SMS Numbers Online：<a href="https://smsnumbersonline.com/" target="_blank" rel="noopener">https://smsnumbersonline.com/</a> </li>
+<li>Receive SMS online for Free：<a href="https://sms-online.co/receive-free-sms" target="_blank" rel="noopener">https://sms-online.co/receive-free-sms</a> </li>
+<li>Receive-SMS：<a href="https://receive-sms.com/" target="_blank" rel="noopener">https://receive-sms.com/</a> </li>
+<li>Receive FREE SMS online：<a href="http://receivefreesms.com/" target="_blank" rel="noopener">http://receivefreesms.com/</a> </li>
+<li>RECEIVE SMS ONLINE：<a href="https://www.receivesmsonline.net/" target="_blank" rel="noopener">https://www.receivesmsonline.net/</a> </li>
+<li>Free Online Phone：<a href="https://www.freeonlinephone.org/" target="_blank" rel="noopener">https://www.freeonlinephone.org/</a> </li>
+<li>Receive SMS Online：<a href="http://receive-sms-online.com/" target="_blank" rel="noopener">http://receive-sms-online.com/</a> </li>
+<li>TextNow：<a href="https://www.textnow.com/" target="_blank" rel="noopener">https://www.textnow.com/</a> </li>
+<li>Textfree：<a href="https://www.pinger.com/text-free/" target="_blank" rel="noopener">https://www.pinger.com/text-free/</a> </li>
+<li>SELLAITE：<a href="http://sms.sellaite.com/" target="_blank" rel="noopener">http://sms.sellaite.com/</a> </li>
+<li>Twilio：<a href="https://www.twilio.com/" target="_blank" rel="noopener">https://www.twilio.com/</a> </li>
+<li>国内接码：<a href="https://www.pdflibr.com/" target="_blank" rel="noopener">https://www.pdflibr.com/</a></li>
+</ul>
+</li>
+<li><p>微信小程序</p>
+<ul>
+<li>云短信</li>
+</ul>
+</li>
+</ul>
 
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/Xcode与调试-2018-12-03-Xcode开发工具使用技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/03/Xcode与调试-2018-12-03-Xcode开发工具使用技巧/" class="post-title-link" itemprop="url">Xcode开发工具使用技巧</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-03 18:21:08" itemprop="dateCreated datePublished" datetime="2018-12-03T18:21:08+08:00">2018-12-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-19 11:04:01" itemprop="dateModified" datetime="2019-08-19T11:04:01+08:00">2019-08-19</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
 
     
-  </section>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Xcode-及其相关工具下载"><a href="#Xcode-及其相关工具下载" class="headerlink" title="Xcode 及其相关工具下载"></a>Xcode 及其相关工具下载</h2><ul>
+<li><p>Xcode<br><a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">https://developer.apple.com/download/more/</a></p>
+</li>
+<li><p>Command Line Tools<br><a href="https://developer.apple.com/download/more/" target="_blank" rel="noopener">https://developer.apple.com/download/more/</a></p>
+</li>
+<li><p>查找某种警告的代表代码<br><img src="/images/Xcode%E6%9F%A5%E6%89%BE%E8%AD%A6%E5%91%8A%E4%BB%A3%E7%A0%811.png" alt><br><img src="/images/Xcode%E6%9F%A5%E6%89%BE%E8%AD%A6%E5%91%8A%E4%BB%A3%E7%A0%812.png" alt></p>
+</li>
+</ul>
+<p>在代码中屏蔽某个警告</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#pragma clang diagnostic push</span><br><span class="line">#pragma clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span><br><span class="line">//需要屏蔽警告的代码</span><br><span class="line">#pragma clang diagnostic pop</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>“Developer tools access” 需控制另一个进程才能继续调试<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DevToolsSecurity --status <span class="comment">#查看状态</span></span><br><span class="line">DevToolsSecurity --<span class="built_in">enable</span> <span class="comment">#输入密码，修改为enable，即可用</span></span><br><span class="line">DevToolsSecurity --<span class="built_in">disable</span> <span class="comment">#输入密码，修改为disable，即关闭</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/其他开发工具-2018-12-03-gem-问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/03/其他开发工具-2018-12-03-gem-问题/" class="post-title-link" itemprop="url">gem-问题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-03 14:40:20" itemprop="dateCreated datePublished" datetime="2018-12-03T14:40:20+08:00">2018-12-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-06 19:24:25" itemprop="dateModified" datetime="2019-08-06T19:24:25+08:00">2019-08-06</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>Gem::FilePermissionError<br>问题：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ gem install metamodel --verbose</span><br><span class="line">ERROR:  While executing gem ... (Gem::FilePermissionError)</span><br><span class="line">    You don&apos;t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.</span><br><span class="line">或者</span><br><span class="line">$ sudo gem install metamodel --verbose</span><br><span class="line">ERROR:  While executing gem ... (Gem::FilePermissionError)</span><br><span class="line">    You don&apos;t have write permissions for the /usr/bin directory.</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>原因：没有权限。<br>解决：<br>方案1:<br><code>export GEM_HOME=&quot;$HOME/.gem&quot;</code><br>方案2:<br><code>sudo gem install -n /usr/local/bin metamodel -verbose</code><br>参考：<a href="https://stackoverflow.com/questions/18599889/error-while-executing-gem-gemfilepermissionerror" target="_blank" rel="noopener">https://stackoverflow.com/questions/18599889/error-while-executing-gem-gemfilepermissionerror</a><br>方案3:<br><code>gem install cocoapods --user-install</code></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/其他开发工具-2018-12-03-gem-Ruby程序包管理工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/03/其他开发工具-2018-12-03-gem-Ruby程序包管理工具/" class="post-title-link" itemprop="url">gem-Ruby程序包管理工具</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-03 14:40:12" itemprop="dateCreated datePublished" datetime="2018-12-03T14:40:12+08:00">2018-12-03</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-15 16:05:17" itemprop="dateModified" datetime="2019-03-15T16:05:17+08:00">2019-03-15</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[TOC]</p>
+<blockquote>
+<p>ruby 是一种语言，是某些软件包代码的执行环境。而<code>gem</code>是管理这些基于ruby程序的程序。</p>
+</blockquote>
+<h2 id="gem-命令手册"><a href="#gem-命令手册" class="headerlink" title="gem 命令手册"></a>gem 命令手册</h2><p><a href="https://guides.rubygems.org/command-reference/" target="_blank" rel="noopener">https://guides.rubygems.org/command-reference/</a></p>
+<h4 id="安装-gem"><a href="#安装-gem" class="headerlink" title="安装 gem"></a>安装 gem</h4><ul>
+<li>Mac 自带 gem</li>
+</ul>
+<h4 id="安装源管理"><a href="#安装源管理" class="headerlink" title="安装源管理"></a>安装源管理</h4><h5 id="列出安装源gem-sources-l"><a href="#列出安装源gem-sources-l" class="headerlink" title="列出安装源gem sources -l"></a>列出安装源<code>gem sources -l</code></h5><blockquote>
+<p><a href="http://gems.github.com/" target="_blank" rel="noopener">http://gems.github.com/</a><br><a href="http://rubygems.org/" target="_blank" rel="noopener">http://rubygems.org/</a><br><a href="https://gems.ruby-china.org" target="_blank" rel="noopener">https://gems.ruby-china.org</a></p>
+</blockquote>
+<h5 id="添加安装源-gem-sources-a-XXX"><a href="#添加安装源-gem-sources-a-XXX" class="headerlink" title="添加安装源 gem sources -a XXX"></a>添加安装源 <code>gem sources -a XXX</code></h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gem <span class="built_in">source</span> -a https://gems.ruby-china.org</span><br><span class="line">gem <span class="built_in">source</span> -a http://gems.github.com/</span><br><span class="line">gem <span class="built_in">source</span> -a http://rubygems.org/</span><br></pre></td></tr></table></figure>
+
+<h5 id="删除安装源"><a href="#删除安装源" class="headerlink" title="删除安装源"></a>删除安装源</h5><p><code>gem sources -r XXX</code><br>添加和删除安装源可以在一条命令完成 <code>gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/</code></p>
+<h5 id="更新安装源缓存"><a href="#更新安装源缓存" class="headerlink" title="更新安装源缓存"></a>更新安装源缓存</h5><p><code>gem sources -u</code></p>
+<h4 id="升级-更新"><a href="#升级-更新" class="headerlink" title="升级/更新"></a>升级/更新</h4><h5 id="更新-gem-本身"><a href="#更新-gem-本身" class="headerlink" title="更新 gem 本身"></a>更新 gem 本身</h5><p><code>gem update --system</code></p>
+<h5 id="更新所有程序包"><a href="#更新所有程序包" class="headerlink" title="更新所有程序包"></a>更新所有程序包</h5><p><code>gem update</code></p>
+<h5 id="更新某一程序包"><a href="#更新某一程序包" class="headerlink" title="更新某一程序包"></a>更新某一程序包</h5><ul>
+<li>例1 <code>gem update cocoapods</code></li>
+<li>例2  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#######################################################################</span></span><br><span class="line"><span class="comment"># sigh 1.9.0 is available. You are on 1.8.0.</span></span><br><span class="line"><span class="comment"># It is recommended to use the latest version.</span></span><br><span class="line"><span class="comment"># Update using 'sudo gem update sigh'.</span></span><br><span class="line"><span class="comment">#######################################################################</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="gem-安装环境-路径"><a href="#gem-安装环境-路径" class="headerlink" title="gem 安装环境 路径"></a>gem 安装环境 路径</h4><h5 id="查看-gem-安装环境"><a href="#查看-gem-安装环境" class="headerlink" title="查看 gem 安装环境"></a>查看 gem 安装环境</h5><p><code>gem environment</code></p>
+<h5 id="查找某一安装包的安装路径"><a href="#查找某一安装包的安装路径" class="headerlink" title="查找某一安装包的安装路径"></a>查找某一安装包的安装路径</h5><ol>
+<li>执行 <code>gem environment</code><blockquote>
+<ul>
+<li>GEM PATHS:<ul>
+<li>/usr/local/lib/ruby/gems/2.3.0</li>
+<li>/Users/Encoder/.gem/ruby/2.3.0</li>
+<li>/usr/local/Cellar/ruby/2.3.0/lib/ruby/gems/2.3.0</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+<li>根据 <code>GEM PATHS:</code> 列出的路径查找目录。</li>
+<li>所安装的程序包就在所指目录下面的 <code>gems</code> 文件夹下面。</li>
+</ol>
+<h2 id="常用-gem-包"><a href="#常用-gem-包" class="headerlink" title="常用 gem 包"></a>常用 gem 包</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gem install cocoapods <span class="comment">#cocoapods</span></span><br></pre></td></tr></table></figure>
+
+<p>##ruby+gem常用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">ruby -v <span class="comment">#查看ruby 版本</span></span><br><span class="line">ruby -e <span class="string">''</span>require<span class="string">"watir"</span>; puts Watir::IE::VERSION<span class="string">''</span>　<span class="comment">#查看watir版本</span></span><br><span class="line"></span><br><span class="line">gem -v <span class="comment">#gem版本</span></span><br><span class="line">gem update <span class="comment">#更新所有包</span></span><br><span class="line">gem update --system <span class="comment">#更新RubyGems软件自身</span></span><br><span class="line">gem install rake <span class="comment">#安装rake,从本地或远程服务器</span></span><br><span class="line">gem install rake --remote <span class="comment">#安装rake,从远程服务器</span></span><br><span class="line">gem install watir -v(或者--version) 1.6.2<span class="comment">#指定安装版本的</span></span><br><span class="line">gem uninstall rake <span class="comment">#卸载rake包</span></span><br><span class="line">gem list d <span class="comment">#列出本地以d打头的包</span></span><br><span class="line">gem query -n <span class="string">''</span>[0-9]<span class="string">''</span> --<span class="built_in">local</span> <span class="comment">#查找本地含有数字的包</span></span><br><span class="line">gem search <span class="built_in">log</span> --both <span class="comment">#从本地和远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem search <span class="built_in">log</span> --remoter <span class="comment">#只从远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem search -r <span class="built_in">log</span> <span class="comment">#只从远程服务器上查找含有log字符串的包</span></span><br><span class="line">gem <span class="built_in">help</span> <span class="comment">#提醒式的帮助</span></span><br><span class="line">gem <span class="built_in">help</span> install <span class="comment">#列出install命令 帮助</span></span><br><span class="line">gem <span class="built_in">help</span> examples <span class="comment">#列出gem命令使用一些例子</span></span><br><span class="line">gem build rake.gemspec <span class="comment">#把rake.gemspec编译成rake.gem</span></span><br><span class="line">gem check -v pkg/rake-0.4.0.gem <span class="comment">#检测rake是否有效</span></span><br><span class="line">gem cleanup <span class="comment">#清除所有包旧版本，保留最新版本</span></span><br><span class="line">gem contents rake <span class="comment">#显示rake包中所包含的文件</span></span><br><span class="line">gem dependency rails -v 0.10.1 <span class="comment">#列出与rails相互依赖的包</span></span><br><span class="line">gem environment <span class="comment">#查看gem的环境</span></span><br><span class="line">gem uninstall --all <span class="comment">#删除所有gem包</span></span><br><span class="line">sudo gem uninstall --all <span class="comment">#删除所有gem包</span></span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/" class="post-title-link" itemprop="url">macOS-设置系统代理</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-03 11:51:23 / 修改时间：11:52:13" itemprop="dateCreated datePublished" datetime="2018-12-03T11:51:23+08:00">2018-12-03</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>设置系统代理地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开关系统代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxystate &quot;Wi-Fi&quot; on #打开Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxystate &quot;Wi-Fi&quot; on #打开Web HTTPS代理</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/" class="post-title-link" itemprop="url">iOS通用推送</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-29 18:10:50" itemprop="dateCreated datePublished" datetime="2018-11-29T18:10:50+08:00">2018-11-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-02-21 17:45:32" itemprop="dateModified" datetime="2019-02-21T17:45:32+08:00">2019-02-21</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="iOS-通用推送"><a href="#iOS-通用推送" class="headerlink" title="iOS 通用推送"></a>iOS 通用推送</h1><p>Universal Push Notification Client SSL Certificate</p>
+<h2 id="基于-Token-的消息推送机制"><a href="#基于-Token-的消息推送机制" class="headerlink" title="基于 Token 的消息推送机制"></a>基于 Token 的消息推送机制</h2><p>Token Authentication 鉴权方式是区别于普通的证书鉴权方式的新APNs鉴权方式。<br>它相对以前的证书鉴权方式有如下特点：</p>
+<ul>
+<li>同一个账户下所有 App 无论是测试 App 还是正式版 App，都能使用同一个 key 来发推送消息，不再需要为每个 App 生成一个证书。</li>
+<li>生成的 Auth Key 不再有过期时间，无需像证书那样每年需要重新生成一次。</li>
+<li>生成过程简单，不需要繁琐、易错的证书导出操作。</li>
+<li>当服务端发送一个推送消息的时候必须携带上provider authentication token</li>
+<li>Request 和 Response 使用JSON通信</li>
+<li>APNs支持状态码和返回 error 信息</li>
+</ul>
+<ul>
+<li><p>iOS通用推送消息发送流程<br><img src="/images/iOS_Universal_Push_1.png" alt="iOS通用推送1"></p>
+<ol>
+<li>服务器首先连接APNs服务器，</li>
+<li>APNs服务器会返回一个APNs证书，这个证书需要服务器来校验。此时，连接已经建立，服务器可以发送基于Token的推送消息给APNs服务器。</li>
+<li>每一个推送消息必须携带 Token 才能被APNs服务器接受。</li>
+<li>APNs服务器会响应每条推送消息（状态码）。</li>
+</ol>
+</li>
+</ul>
+<h2 id="创建-Token-Authentication-Key-的流程"><a href="#创建-Token-Authentication-Key-的流程" class="headerlink" title="创建 Token Authentication Key 的流程"></a>创建 Token Authentication Key 的流程</h2><h3 id="注册-App-ID"><a href="#注册-App-ID" class="headerlink" title="注册 App ID"></a>注册 App ID</h3><p>首先注册 App ID。如果你已经注册过带有推送通知 App ID，可以跳过以下步骤：</p>
+<ol>
+<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
+</li>
+<li><p>点击 <strong>Certificates, Identifiers &amp; Profiles</strong></p>
+</li>
+<li><p>选择 <strong>Identifiers</strong> 下的 <strong>App IDs</strong></p>
+</li>
+<li><p>点击右上方的加号按钮（<strong>+</strong>)</p>
+</li>
+<li><p>填写 App ID 的基本信息<br><img src="/images/iOS_Universal_Push_3.png" alt></p>
+</li>
+<li><p>选择创建 <strong>Explicit App ID</strong>，填入 App 的 <strong>Bundle ID</strong>。注意，<strong>Explicit App ID</strong> 不能包含星号（*）。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
+</li>
+<li><p>选择 App ID 需要开启的服务，此处要勾选 <strong>Push Notifications</strong>。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
+</li>
+<li><p>点击 <strong>Continue</strong></p>
+</li>
+<li><p>确认注册信息，然后点击 <strong>Register</strong>。</p>
+</li>
+<li><p>点击 <strong>Done</strong></p>
+</li>
+</ol>
+<h3 id="开启推送通知"><a href="#开启推送通知" class="headerlink" title="开启推送通知"></a>开启推送通知</h3><p>为已有的 App ID 开启推送通知的步骤如下：</p>
+<ol>
+<li><p>选择要开启推送通知的 <strong>App ID</strong></p>
+</li>
+<li><p>勾选 <strong>Push Notifications</strong> 复选框<br><img src="/images/iOS_Universal_Push_6.png" alt></p>
+</li>
+<li><p>如果弹出警告对话框，点击 <strong>OK</strong>。</p>
+</li>
+<li><p>点击 <strong>Done</strong></p>
+</li>
+</ol>
+<h3 id="获取-Team-ID"><a href="#获取-Team-ID" class="headerlink" title="获取 Team ID"></a>获取 Team ID</h3><ol>
+<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
+</li>
+<li><p>点击 Membership<br><img src="/images/iOS_Universal_Push_2.png" alt></p>
+</li>
+<li><p>找到 <strong>Team ID</strong> 一栏，将其记下来以备后用。</p>
+</li>
+</ol>
+<h3 id="创建-Token-Authentication-Key"><a href="#创建-Token-Authentication-Key" class="headerlink" title="创建 Token Authentication Key"></a>创建 Token Authentication Key</h3><ol>
+<li>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></li>
+<li>点击 <strong>Certificates, Identifiers &amp; Profiles</strong><br><img src="/images/iOS_Universal_Push_7.png" alt></li>
+<li>选择在 <strong>Keys</strong> 栏下的 <strong>All</strong></li>
+<li>点击下图中红色边框内的加号按钮<br><img src="/images/iOS_Universal_Push_8.png" alt></li>
+<li>根据需要填写 <strong>Key Description</strong> 并<strong>勾选 APNs</strong> 后点击最下面的 <strong>Continue</strong> 按钮。<br><img src="/images/iOS_Universal_Push_9.png" alt></li>
+<li>点击 <strong>Confirm</strong> 按钮继续下一步。<br><img src="/images/iOS_Universal_Push_10.png" alt></li>
+<li>点击 <strong>Download</strong> 将生成好的 <strong>Auth Key</strong> 下载到本地(.p8文件)，并记录 <strong>Key ID</strong> 备用。<br><img src="/images/iOS_Universal_Push_11.png" alt></li>
+</ol>
+<h2 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h2><h3 id="HTTP-2请求APNs"><a href="#HTTP-2请求APNs" class="headerlink" title="HTTP/2请求APNs"></a>HTTP/2请求APNs</h3><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>字段值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>path</td>
+<td>/3/device/</td>
+</tr>
+</tbody></table>
+<p>APNs需要使用 HPACK （HTTP/2 的报头压缩），防止重复的标题键和值。APNs为HPACK维护一个小的动态表。为了避免填满了APNs HPACK表，因而必须丢弃表数据，编码headers以下列方式 — — 尤其是当发送大量的推送</p>
+<ul>
+<li>method 必须为POST</li>
+<li>path 值应编码为一个header中的一个文本字段，没有索引</li>
+<li>authorization 请求header，如果存在，应编码为一个header中的一个文本字段，没有索引</li>
+</ul>
+<p>apns-id、 apns-expiration，和 apns-collapse-id 不同的编码取决于它是否是第一次初始请求或随后的 POST 操作的一部分，如下︰<br>第一次发送请求头的时，使增量索引编码允许头名称加入动态表中<br>子请求发送头时，编码成header中的一个文本字段，没有索引</p>
+<ul>
+<li>请求头</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header 头</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>authorization</td>
+<td>提供的发送到指定（app）主题通知的APNs验证token，token是以Base64 URL编码的JWT格式。指定为bearer,当使用证书连接的时候，这个请求头将会被忽略</td>
+</tr>
+<tr>
+<td>apns-id</td>
+<td>一个规范的的 UUID 用来标识通知。如果发送通知时发生错误，APNs 使用此值来标识通知，通知到您的服务器。 规范的格式是 32 个小写的十六进制数字，由连字符分隔为5，8-4-4-4-12。UUID一个例子如下： 123e4567-e89b-12d3-a456-42665544000 如果您省略这个头,一个新的UUID由APNs创建并且在response中返回</td>
+</tr>
+<tr>
+<td>apns-expiration</td>
+<td>通知过期时间，秒级的UTC时间戳，这个header标识通知 从何时起不再有效，可以丢弃。 如果这个值非零，APNs保存通知并且尽量至少送达一次。如果无法第一时间送达，根据需要重复尝试。 如果这个值为0，APNs认为通知立即过期，不会存储与重新推送。</td>
+</tr>
+<tr>
+<td>apns-priority</td>
+<td>通知的优先级，指定以下值:<br>   - 10–立即推送消息. 这个优先级的通知必须再目标设备上触发alert, 声音, 或者badge . 仅仅包含content-available key使用此优先级是错误的。<br>   - 5—一次性发送通知，需要考虑设备的电量。具有此优先级的通知可能分组推送并且几种爆发推送,Notifications with this priority might be grouped and delivered他们会被节流，并且在某些情况下不会送达。 如果省略这个头，APNs服务器会把优先级设置为10</td>
+</tr>
+<tr>
+<td>apns-topic</td>
+<td>远程通知的主题，通常是你App的bundle id，在开发者账号中创建的证书必须包含此bundle id 如果证书包含多个主题，这个头必须指定一个值 如果省略此头并且APNs证书不包含指定的主题，APNs服务器使用证书的Subject作为默认主题。 如果使用token代替证书，必须指定此头，提供的主题应该被在开发者账号中的team提供。即bundle id的app应该与auth key同属于一个开发者组。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>请求体<br>body内容是将要推送的消息负载的JSON对象。body数据不必须压缩，其最大大小为 4 KB （4096 字节）。对于 (VoIP) 通知，body数据最大大小为 5 KB （5120 字节）。</p>
+</li>
+<li><p>响应头</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>apns-id</td>
+<td>apns-id从request得到， 如果request中没有此值, APNs服务器创建一个新的UUID并且在header中返回</td>
+</tr>
+<tr>
+<td>status</td>
+<td>HTTP状态码，HTTP status code</td>
+</tr>
+</tbody></table>
+<ul>
+<li>状态码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>400</td>
+<td>无效请求</td>
+</tr>
+<tr>
+<td>403</td>
+<td>证书错误或者验证token错误</td>
+</tr>
+<tr>
+<td>405</td>
+<td>:method 设置错误. 只支持 POST 请求</td>
+</tr>
+<tr>
+<td>410</td>
+<td>device token不在有效与topic</td>
+</tr>
+<tr>
+<td>413</td>
+<td>负载payload太大</td>
+</tr>
+<tr>
+<td>429</td>
+<td>服务端对于同一个device token发送了太多了请求</td>
+</tr>
+<tr>
+<td>500</td>
+<td>内部服务器错误</td>
+</tr>
+<tr>
+<td>503</td>
+<td>服务器关闭,不可用</td>
+</tr>
+</tbody></table>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/" class="post-title-link" itemprop="url">Python的安装与卸载</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-28 17:48:12" itemprop="dateCreated datePublished" datetime="2018-11-28T17:48:12+08:00">2018-11-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-08 10:39:07" itemprop="dateModified" datetime="2019-03-08T10:39:07+08:00">2019-03-08</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>macOS<br><a href="https://docs.python.org/3/using/mac.html" target="_blank" rel="noopener">https://docs.python.org/3/using/mac.html</a></p>
+</li>
+<li><p>Python 可能在以下几个位置</p>
+<blockquote>
+<p>/usr/local/Cellar/Python<br>/Library/Frameworks/Python.framework<br>/usr/local/bin/</p>
+</blockquote>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/" class="post-title-link" itemprop="url">Windows激活</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-28 14:26:14" itemprop="dateCreated datePublished" datetime="2018-11-28T14:26:14+08:00">2018-11-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-10 16:30:57" itemprop="dateModified" datetime="2019-09-10T16:30:57+08:00">2019-09-10</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[TOC]</p>
+<h1 id="Windows-激活"><a href="#Windows-激活" class="headerlink" title="Windows 激活"></a>Windows 激活</h1><h2 id="Windows-激活工具"><a href="#Windows-激活工具" class="headerlink" title="Windows 激活工具"></a>Windows 激活工具</h2><ul>
+<li><a href="https://cmwtat.cloudmoe.com/index.html" target="_blank" rel="noopener">https://cmwtat.cloudmoe.com/index.html</a></li>
+</ul>
+<h2 id="Windows-激活命令"><a href="#Windows-激活命令" class="headerlink" title="Windows 激活命令"></a>Windows 激活命令</h2><ul>
+<li><p>重置Windows激活计数<br><code>slmgr.vbs -rearm</code></p>
+</li>
+<li><p>安装产品密钥 替换现有密钥<br><code>slmgr /ipk x-x-x-x-x</code></p>
+</li>
+<li><p>安装OEM证书<br><code>slmgr.vbs -ilc x:\xxx.XRM-MS</code></p>
+</li>
+<li><p>激活Windows<br><code>slmgr.vbs -ato</code></p>
+</li>
+<li><p>显示详细的激活信息<br>包括：系统版本、激活ID、安装ID、部分产品密钥、许可证状态、剩余 Windows 重置计数等<br><code>slmgr.vbs -dlv</code></p>
+</li>
+<li><p>显示许可证激活状态的截止日期<br><code>slmgr.vbs -xpr</code></p>
+</li>
+<li><p>查看许可证的概要信息<br><code>slmgr.vbs -dli</code></p>
+</li>
+<li><p>卸载当前产品密钥<br>重启电脑之后系统将重归未激活状态，会出现输入密钥和联网激活界面。<br><code>slmgr.vbs -upk</code></p>
+</li>
+</ul>
+<p><a href="https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit</a><br><a href="https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit</a></p>
+<h2 id="Windows-10-数字权利激活"><a href="#Windows-10-数字权利激活" class="headerlink" title="Windows 10 数字权利激活"></a>Windows 10 数字权利激活</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">右键开始-命令提示符(管理员)，输入：</span><br><span class="line">slmgr.vbs /ckms</span><br><span class="line">slmgr.vbs /upk</span><br><span class="line"></span><br><span class="line">win10专业版本数字权利激活</span><br><span class="line"> 注意只能适合全新安装的10586版本</span><br><span class="line"> 第1步</span><br><span class="line"> 选择“开始”图标按钮，然后依次选择“设置”&gt;“更新和安全”&gt;“激活”。</span><br><span class="line"> 选择“更改产品密钥”，然后输入 PW48G-MNG8W-B9978-YWBRP-76DGY</span><br><span class="line">激活不了的，点关闭</span><br><span class="line"> 第2步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289 或者 TNXR9-K3KVT-RHXXF-4HDTY-RCYDQ 或者 CKQMQ-DNPGJ-2FQGT-M3Q2W-Q68K3</span><br><span class="line"> 联网激活</span><br><span class="line"> 这个是win7 或者 win8.1 MAK，目前还有激活次数</span><br><span class="line"> 第3步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入 VK7JG-NPHTM-C97JM-9MPGT-3V66T，取得数字权利</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 数字化认可的WIN10，今后重装WIN10系统时无需输入“产品密钥”（安装时可以跳过这步），安装完成后，系统自动激活。</span><br><span class="line"> 有人说</span><br><span class="line">win10的激活机制是绑定你的电脑主板了，也就是说 只要你的主板不换 那么你的win10永远都是激活也是正版的</span><br></pre></td></tr></table></figure>
+
+<p>###怎么验证 Windows 是否已经激活：<br>    1. 最简单的是在我的电脑右键，查看属性.<br>    2. Win+R===&gt;输入 slmgr.vbs -dlv (推荐,此命令得到的信息最全)<br>    3. Win+R===&gt;输入 slmgr.vbs -dli<br>    4. Win+R===&gt;输入 slmgr.vbs -xpr<br>    5. Win+R===&gt;输入 Winver</p>
+<p>免费使用Windows7 1年</p>
+<p>即使你并非微软的官方测试员，也不需要四处寻觅Windows 7的激活密钥，除了官方提供的安装密钥之外，我们还可以通过其他的方法免费使用1年期限的Windows 7，最起码可以坚持到Windows 7正式版本的到来。</p>
+<pre><code>初始状态下，Windows 7提供了30天的试用时间，不过在即将到达这一30天的期限之前，我们可以使用“slmgr.vbs -rearm”的命令延长使用期30天，虽然官方文档中声明该命令只能重复使用3次，也说是说总共可以免费体验120天，此后将无法再次使用。其实，只要修改注册表中的一处键值，即可重复使用“slmgr.vbs -rearm”命令，请打开注册表编辑器，依次定位至“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform”，如图1所示，找到右侧窗格中的“SkipRearm”，将其键值修改为“1”，以后就可以再次使用“slmgr.vbs -rearm”的命令，这个键值总共可以修改8次，也就是说我们可以重复使用8次“slmgr.vbs -rearm”的命令，前后加起来，正好是一年的使用时间。</code></pre><p>参考资料:<a href="http://win7x.blogbus.com/logs/40854953.html" target="_blank" rel="noopener">http://win7x.blogbus.com/logs/40854953.html</a></p>
+<p>Win7激活（<a href="http://www.win7soft.com）" target="_blank" rel="noopener">www.win7soft.com）</a>:</p>
+<p>Win7软件授权管理工具slmgr.vbs使用向导</p>
+<p>当我们打算激活Vista和windows7或打算延长其试用期（rearm）的的时候，大家都会碰到到这个slmgr命令或slmgr.vbs。SLMGR是Software License Manger的简称，是WINDOWS的软件授权管理工具。SLMGR是管理系统激活和密钥. 证书的主要组件。</p>
+<p>SLMGR的所有功能都是通过slmgr.vbs提供的，采用VBScript命令行方式执行。图形界面中许多与该命令行相关的激活行为，比如系统属性等，都是通过调用slmgr.vbs脚本来执行授权操作。即使你在COMMAND下使用SLMGR命令行，其运行结果或出错信息也是以浏览器弹出窗口方式显示的，以下是slmgr的一些使用语法仅供参考，尤其在各位需要激活或遇到激活问题的时候是很有帮助的。</p>
+<p>###在哪里使用和如何使用slmgr.vbs<br>有如下几种方式进入并运行slmgr.vbs命令：</p>
+<ol>
+<li><p>COMMAND命令提示窗口下，这是一种执行方式，但需要提升管理员权限；</p>
+</li>
+<li><p>运行命令（Vista中的显示运行命令，Win+R，开始/所有程序/附件/命令提示符，任何一种）</p>
+</li>
+<li><p>开始菜单中的开始搜索框，使用这种方法需要输入slmgr的完整名称——slmgr.vbs，类似于slmgr.vbs -ato这样的格式内容。</p>
+</li>
+</ol>
+<p>最常用的SLMGR命令是slmgr.vbs -rearm延长Vista或Windows 7试用期30天。除此外，slmgr还支持很多参数命令。我们可以通过slmgr.vbs -?命令查看。也可以检验Windows Vista或Windows 7的激活状态和许可证详细信息。</p>
+<ol start="3">
+<li>SLMGR语法格式<br>基本语法：</li>
+</ol>
+<p>slmgr.vbs [MachineName [User Password]] [<option>]</option></p>
+<p>其中：</p>
+<ul>
+<li><p>MachineName ： 远程计算机名 （缺省为本机）</p>
+</li>
+<li><p>User ： 具有相应权限的计算机用户</p>
+</li>
+<li><p>Password：用户密码</p>
+</li>
+<li><p>Option：为SLMGR的参数，参下。</p>
+</li>
+</ul>
+<p>常用参数选项：</p>
+<p>-ipk &lt;产品密钥&gt;</p>
+<p>安装产品密钥（替换现有密钥）</p>
+<p>-upk</p>
+<p>卸载产品密钥</p>
+<p>-ato</p>
+<p>激活Windows</p>
+<p>-dli [激活 ID | All]</p>
+<p>显示许可证信息（默认：当前许可证）</p>
+<p>-dlv [激活 ID | All]</p>
+<p>显示详细的许可证信息（默认：当前许可证）</p>
+<p>-xpr</p>
+<p>当前许可证状态的截止日期</p>
+<p>高级参数选项：</p>
+<p>-cpky</p>
+<p>从注册表中清除产品密钥（阻止泄露引起的攻击）</p>
+<p>-ilc &lt;许可证文件路径&gt;</p>
+<p>安装许可证</p>
+<p>-rilc</p>
+<p>重新安装系统许可证文件</p>
+<p>-rearm</p>
+<p>重置计算机的授权状态</p>
+<p>-dti</p>
+<p>显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;</p>
+<p>使用电话方式提供的确认 ID 激活产品</p>
+<p>KMS相关选项：</p>
+<p>-skms <kms activation server name></kms></p>
+<p>设置KMS服务器名</p>
+<p>-skms <kms activation server port number></kms></p>
+<p>设置KMS服务器端口号</p>
+<p>-skms <kms activation server name:port number></kms></p>
+<p>设置KMS服务器名和端口号</p>
+<p>-ckms</p>
+<p>清除KMS服务器名和端口号并设为初始状态</p>
+<p>###slmgr.vbs的使用示例</p>
+<ol>
+<li>查看许可证的概要信息（假设为当前许可证；且系统在C盘，下同），则可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dli</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dli</p>
+<ol start="2">
+<li>显示许可证激活状态的截止日期，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -xpr</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -xpr</p>
+<ol start="3">
+<li>查看许可证详细信息，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dlv</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dlv</p>
+<ol start="4">
+<li>导入OEM证书方法</li>
+</ol>
+<p>运行命令下：slmgr.vbs -ilc D:\123.XRM-MS，后面为OEM证书完整路径</p>
+<ol start="5">
+<li>卸载当前产品密钥</li>
+</ol>
+<p>运行命令下：slmgr.vbs -upk，即可卸载当前产品密钥，重启计算机会出现输入密钥和联网激活界面。</p>
+<p>如果想查看Windows 7 的详细版本号，我们要运行另外一个命令Slmgr.vbs，大家在运行中输入Slmgr.vbs，可以看到此命令的用法以及各种参数。</p>
+<p>　　1. slmgr.vbs –dli</p>
+<p>　　显示：操作系统版本. 部分产品密钥. 许可证状态</p>
+<p>　　2. slmgr.vbs –dlv</p>
+<p>　　显示：最为详尽的激活信息，包括：激活ID. 安装ID. 激活截止日期</p>
+<p>　　3. slmgr.vbs –xpr</p>
+<p>　　显示：是否彻底激活</p>
+<p>　　4. slmgr.vbs –ipk</p>
+<p>　　更换WIN7序列号</p>
+<p>　　5. slmgr.vbs –ato</p>
+<p>　　激活WIN7</p>
+<p>slmgr.vbs命令大全 检验Windows7激活状态</p>
+<p>其详细参数如下：</p>
+<p>可用选项:</p>
+<p>-ipk &lt;产品密钥&gt;<br>​    安装产品密钥(替换现有密钥)</p>
+<p>-upk<br>​    卸载产品密钥</p>
+<p>-ato<br>​    激活 Windows</p>
+<p>-dli [激活 ID | All]<br>​    显示许可证信息(默认: 当前许可证)</p>
+<p>-dlv [激活 ID | All]<br>​    显示详细的许可证信息(默认: 当前许可证)</p>
+<p>-xpr<br>​    当前许可证状态的截止日期</p>
+<p>高级选项:<br>-cpky<br>​    从注册表中清除产品密钥(阻止泄露引起的攻击)</p>
+<p>-ilc &lt;许可证文件路径&gt;<br>​    安装许可证</p>
+<p>-rilc<br>​    重新安装系统许可证文件</p>
+<p>-rearm<br>​    重置计算机的授权状态</p>
+<p>-dti<br>​    显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;<br>​    使用电话方式提供的确认 ID 激活产品</p>
+<p>###重置激活<br>这是不少网友对于激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令<code>slmgr.vbs -rearm</code>的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令显示“重置计数”有何意义和作用？</p>
+<pre><code>激活Windows 7后运行`slmgr.vbs -dlv`命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令`slmgr.vbs -rearm`以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。</code></pre><p>激活 Windows 7 后运行 <code>slmgr.vbs -dlv</code> 命令显示“重置计数”有何意义和作用？</p>
+<pre><code>这是不少网友对于激活Windows 7后运行slmgr.vbs -dlv命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令`slmgr.vbs -rearm`的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行`slmgr.vbs -dlv`命令显示“重置计数”有何意义和作用？
+
+激活Windows 7后运行slmgr.vbs -dlv命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令slmgr.vbs -rearm以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。
+
+有些网友在《关于重发《打造“双重”激活（“OEM激活”和“联网激活”）的Windows 7旗舰版》的说明》一文后提问：采用两种激活方式有何意义？看过以上介绍，首先回答了实践层面的意义：掌握品牌机的两种激活方法。其次能从“自然”走向“自由”：对微软两大激活体系从理论层面加深理性思考。</code></pre><p>友情提示：</p>
+<pre><code>——通过“软改”或“硬刷”激活后，个别不能通过重置命令显示更换产品密钥选项的，可以采用slmgr.vbs -upk命令卸载目前产品密钥，重启计算机后即可出现要求输入新的密钥联网激活界面。</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span>
+    <a class="extend prev" rel="prev" href="/page/18/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/">18</a><span class="page-number current">19</span><a class="page-number" href="/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/20/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
-
 
 
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1741,348 +1503,62 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">DNACore</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">188</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">131</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -2093,27 +1569,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -2125,28 +1590,19 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
 
 
 
@@ -2155,10 +1611,7 @@
 
 
 
-
-
-
-
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
@@ -2174,404 +1627,11 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
 
   
 
   
 
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

@@ -4,93 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
@@ -99,20 +62,17 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNACore GitHub io">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://dnacore@github.io/page/3/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -126,13 +86,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -141,7 +96,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -158,30 +113,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DNACore GitHub io</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -194,214 +139,136 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/电脑技巧-Windows-2019-07-02-Windows-CMD常用命令/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/学习-macOS开发-2019-08-23-macOS-NSWindow与程序的关闭和窗口复原/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/02/电脑技巧-Windows-2019-07-02-Windows-CMD常用命令/" class="post-title-link" itemprop="url">Windows-CMD常用命令</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/23/学习-macOS开发-2019-08-23-macOS-NSWindow与程序的关闭和窗口复原/" class="post-title-link" itemprop="url">macOS-NSWindow与程序的关闭和窗口复原</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-07-02 17:48:26 / 修改时间：17:52:01" itemprop="dateCreated datePublished" datetime="2019-07-02T17:48:26+08:00">2019-07-02</time>
+              <time title="创建时间：2019-08-23 14:06:03 / 修改时间：14:08:55" itemprop="dateCreated datePublished" datetime="2019-08-23T14:06:03+08:00">2019-08-23</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -409,448 +276,78 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h1 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h1><h2 id="一行中多条-CMD-命令"><a href="#一行中多条-CMD-命令" class="headerlink" title="一行中多条 CMD 命令"></a>一行中多条 CMD 命令</h2><pre><code>&amp;&amp; 前命令成功后继续
-&amp; 同时执行（好像是连在一起的命令是在同时执行）
-| 以前命令为后命令的参数
-|| 前命令成功则不执行后命令
-&gt;，&gt;&gt; 输出的</code></pre><h2 id="获取年月日时分秒"><a href="#获取年月日时分秒" class="headerlink" title="获取年月日时分秒"></a>获取年月日时分秒</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set yyyy=%date:~0,4%</span><br><span class="line">set mm=%date:~5,2%</span><br><span class="line">set dd=%date:~8,2%</span><br><span class="line">set hh=%time:~0,2%</span><br><span class="line">set ss=%time:~3,2%</span><br><span class="line">&quot;imagex.exe&quot; /capture &quot;.\MM&quot; .\MM.wim    &quot;%yyyy%%mm%%dd%-%hh%%ss%&quot;</span><br><span class="line">@pause</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-iOS-2019-07-02-iOS-class类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/02/学习-iOS-2019-07-02-iOS-class类/" class="post-title-link" itemprop="url">iOS-class类</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-02 17:46:13 / 修改时间：17:47:15" itemprop="dateCreated datePublished" datetime="2019-07-02T17:46:13+08:00">2019-07-02</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>类属性的声明，Xcode8之后支持</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@propeerty (<span class="keyword">class</span>) <span class="built_in">NSString</span> *aClassProperty;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-Python-2019-07-02-Python-argparse/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/02/学习-Python-2019-07-02-Python-argparse/" class="post-title-link" itemprop="url">Python-argparse</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-02 11:22:22 / 修改时间：11:30:48" itemprop="dateCreated datePublished" datetime="2019-07-02T11:22:22+08:00">2019-07-02</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    parser = argparse.ArgumentParser()</span><br><span class="line">    <span class="comment"># 可选参数可以如下调用方式 `-v some-value` 或者 `-v=some-value`</span></span><br><span class="line">    parser.add_argument(<span class="string">'-v'</span>, <span class="string">'--verbose'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定位参数调用的时候不能使用echo参数名</span></span><br><span class="line">    <span class="comment"># 例如，不能 `echo=3` 或者 `echo 3`</span></span><br><span class="line">    parser.add_argument(<span class="string">'echo'</span>,</span><br><span class="line">                        help=<span class="string">'直接打印输入的信息'</span>)</span><br><span class="line">    parser.parse_args()</span><br><span class="line"></span><br><span class="line">    print(parser.parse_args())</span><br></pre></td></tr></table></figure>
-
-<p>参数前面带<code>-</code>或者<code>--</code>是可选参数。<br>参数前面不带横杠的是定位参数。</p>
-<p>可选参数的调用形式可以使用：<code>-v=some-value</code>或者<code>-v some-value</code><br>定位参数调用时候必须传入，并且不能带参数名，参数传入顺序也有影响。</p>
-<h3 id="action-参数"><a href="#action-参数" class="headerlink" title="action 参数"></a>action 参数</h3><p>参考：<a href="https://docs.python.org/3/library/argparse.html#action" target="_blank" rel="noopener">https://docs.python.org/3/library/argparse.html#action</a></p>
-<ul>
-<li>``</li>
+          <ul>
+<li><p>点击窗口的关闭按钮后退出程序</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)applicationShouldTerminateAfterLastWindowClosed:(<span class="built_in">NSApplication</span> *)sender&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;<span class="comment">//YES-窗口程序两者都关闭，NO-只关闭窗口；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>点击关闭按钮后点击 Dock 图标复原</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="built_in">BOOL</span>)applicationShouldHandleReopen:(<span class="built_in">NSApplication</span> *)sender hasVisibleWindows:(<span class="built_in">BOOL</span>)flag</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"hasVisibleWindows:%d"</span>,flag);</span><br><span class="line"><span class="comment">//    [NSApp activateIgnoringOtherApps:NO];//取消其他程序的响应</span></span><br><span class="line">    <span class="comment">//window 属性的 releasedWhenClosed 需要保证设置为 NO</span></span><br><span class="line">    [_window makeKeyAndOrderFront:<span class="literal">nil</span>];<span class="comment">//主窗口显示自己方法一</span></span><br><span class="line"><span class="comment">//    [_window orderFront:nil];           //主窗口显示自己方法二</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>参考：<a href="https://blog.ixxoo.me/argparse.html" target="_blank" rel="noopener">https://blog.ixxoo.me/argparse.html</a></p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/学习-macOS开发-2019-08-22-macOS-NSWindowController，NSWindow，NSViewController，NSView的关系/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/" class="post-title-link" itemprop="url">Shell-ls命令</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/22/学习-macOS开发-2019-08-22-macOS-NSWindowController，NSWindow，NSViewController，NSView的关系/" class="post-title-link" itemprop="url">macOS-NSWindowController，NSWindow，NSViewController，NSView的关系</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-26 17:49:54 / 修改时间：17:53:32" itemprop="dateCreated datePublished" datetime="2019-06-26T17:49:54+08:00">2019-06-26</time>
+              <time title="创建时间：2019-08-22 17:01:16 / 修改时间：17:08:52" itemprop="dateCreated datePublished" datetime="2019-08-22T17:01:16+08:00">2019-08-22</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -858,284 +355,220 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <ul>
+<li>NSWindow</li>
+</ul>
+<p>创建好之后自带一个 window.contentView 即为 window 的显示内容<br>window.contentViewController 默认为 nil<br>设置了 window.contentViewController 之后 window.contentView 自动被设置为 contentViewController 的 view。<br>默认状态下 NSViewController 的 view 为 nil。所以给 window 设置一个默认状态的 NSViewController 之后，window 的 contentView 也就为空了。 </p>
 
-      
         
-          
-            <ul>
-<li>列出SELinux文件权限相关<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -lZ</span><br><span class="line">[root@host ~]<span class="comment"># ls -lZ</span></span><br><span class="line">-rw-r--r-- root root ?                                systemctl list-unit-files --<span class="built_in">type</span>=service</span><br></pre></td></tr></table></figure>
+      
+    </div>
 
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/学习-macOS开发-2019-08-22-macOS-创建不带任何xib文件的CocoaApp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/22/学习-macOS开发-2019-08-22-macOS-创建不带任何xib文件的CocoaApp/" class="post-title-link" itemprop="url">macOS-创建不带任何xib文件的CocoaApp</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-22 16:43:20 / 修改时间：16:48:16" itemprop="dateCreated datePublished" datetime="2019-08-22T16:43:20+08:00">2019-08-22</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现在 Xcode 创建 macOS 的 Cocoa App 默认都会创建一个 MianMenu.xib 或者 StoryBoard.xib 文件。<br>直接删除这些文件，在<code>applicationDidFinishLaunching:</code>创建自定义的 NSWIndow 并且即使在工程中配置好了，也不行。<br>经过断点发现，<code>applicationDidFinishLaunching:</code>根本没走。<br>原因是 NSApplication 的 Delegate 并没有被设置。<br>知道了原因，所以只需要在 main.m 文件中设置一下<code>NSApplication</code>的delegate就可以了。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;Cocoa/Cocoa.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    [[<span class="built_in">NSApplication</span> sharedApplication] setDelegate:[AppDelegate new]];</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">NSApplicationMain</span>(argc, argv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置好了之后，就可以在 AppDelegate 里面写自定义的 NSWindow 并且让其正常显示了。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSWindow</span> *window;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">    [<span class="keyword">self</span>.window center];</span><br><span class="line">    [<span class="keyword">self</span>.window orderFront:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(<span class="built_in">NSWindow</span> *)window&#123;</span><br><span class="line">    <span class="keyword">if</span> (!_window) &#123;</span><br><span class="line">        <span class="built_in">NSUInteger</span> style = <span class="built_in">NSWindowStyleMaskTitled</span> | <span class="built_in">NSWindowStyleMaskClosable</span> | <span class="built_in">NSWindowStyleMaskMiniaturizable</span> ;</span><br><span class="line">        _window = [[<span class="built_in">NSWindow</span> alloc]initWithContentRect:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">300</span>) styleMask:style backing:<span class="built_in">NSBackingStoreBuffered</span> defer:<span class="literal">YES</span>];</span><br><span class="line">        <span class="comment">//        _window1.contentViewController = self.firstVC;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _window;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/电脑技巧-Windows-2019-08-22-Windows-Thin-PC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/22/电脑技巧-Windows-2019-08-22-Windows-Thin-PC/" class="post-title-link" itemprop="url">Windows Thin PC</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-22 14:18:13 / 修改时间：14:20:40" itemprop="dateCreated datePublished" datetime="2019-08-22T14:18:13+08:00">2019-08-22</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><p>系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ed2k://|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4F0834A95E2|/</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>语言包</p>
 </li>
 </ul>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/20/学习-Python-2019-08-20-Python-VirtualEnv-Python虚拟环境/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/" class="post-title-link" itemprop="url">Xcode-模拟器命令</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/20/学习-Python-2019-08-20-Python-VirtualEnv-Python虚拟环境/" class="post-title-link" itemprop="url">Python-VirtualEnv-Python虚拟环境</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-26 11:16:16 / 修改时间：11:17:42" itemprop="dateCreated datePublished" datetime="2019-06-26T11:16:16+08:00">2019-06-26</time>
+              <time title="创建时间：2019-08-20 17:44:22" itemprop="dateCreated datePublished" datetime="2019-08-20T17:44:22+08:00">2019-08-20</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="xcrun-simctl"><a href="#xcrun-simctl" class="headerlink" title="xcrun simctl"></a>xcrun simctl</h2><ul>
-<li><p>获取模拟器列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>擦除模拟器数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl erase [模拟器ID,可通过获取模拟器列表命令获得]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过Finder打开模拟器文稿</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>直接将下面的代码用脚本编辑器保存为苹果脚本，可以…</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> shell script <span class="string">"</span></span><br><span class="line"><span class="string">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span></span><br><span class="line"><span class="string">"</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>删除模拟器<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl <span class="built_in">help</span> delete</span><br><span class="line">Usage: simctl delete &lt;device&gt; [... &lt;device n&gt;] | unavailable</span><br><span class="line"><span class="comment"># 删除不可用的模拟器</span></span><br><span class="line">xcrun simctl delete unavailable</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-macOS-iterm2使用技巧/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/26/学习-Shell-2019-06-26-macOS-iterm2使用技巧/" class="post-title-link" itemprop="url">macOS-iterm2使用技巧</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-26 11:12:35" itemprop="dateCreated datePublished" datetime="2019-06-26T11:12:35+08:00">2019-06-26</time>
-            </span>
-          
-
           
             
 
@@ -1144,36 +577,16 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-03 15:23:42" itemprop="dateModified" datetime="2019-07-03T15:23:42+08:00">2019-07-03</time>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-27 15:59:24" itemprop="dateModified" datetime="2019-08-27T15:59:24+08:00">2019-08-27</time>
               </span>
             
           
 
           
 
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
         </div>
       </header>
-    
 
     
     
@@ -1181,162 +594,70 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><a href="https://www.cnblogs.com/zuoruining/p/iterm2kuai-jie-jian.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuoruining/p/iterm2kuai-jie-jian.html</a></p>
-<ul>
-<li>新建 Tab： <kbd>cmd</kbd>+<kbd>t</kbd></li>
-<li>关闭 Tab： <kbd>cmd</kbd>+<kbd>w</kbd></li>
-<li>垂直分屏： <kbd>command</kbd>+<kbd>d</kbd></li>
-<li>水平分屏： <kbd>command</kbd>+<kbd>shift</kbd>+<kbd>d</kbd></li>
+          <ul>
+<li>更新 virtualenv 下的 python 版本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m myenv --upgrade ENNV_DIR</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="其他Shell通用快捷键"><a href="#其他Shell通用快捷键" class="headerlink" title="其他Shell通用快捷键"></a>其他Shell通用快捷键</h2><p><a href="/2019/07/03/学习-Shell-2019-07-03-Shell-Shell通用快捷键">Shell通用快捷键</a></p>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/电脑技巧-macOS-2019-06-26-macOS-shell常用命令/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/19/学习-iOS-2019-08-19-iOS-iOS中的权限检查及获取/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/26/电脑技巧-macOS-2019-06-26-macOS-shell常用命令/" class="post-title-link" itemprop="url">macOS-shell常用命令</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/19/学习-iOS-2019-08-19-iOS-iOS中的权限检查及获取/" class="post-title-link" itemprop="url">iOS-iOS中的权限检查及获取</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-26 11:11:29" itemprop="dateCreated datePublished" datetime="2019-06-26T11:11:29+08:00">2019-06-26</time>
+              <time title="创建时间：2019-08-19 17:17:43" itemprop="dateCreated datePublished" datetime="2019-08-19T17:17:43+08:00">2019-08-19</time>
             </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-16 15:09:48" itemprop="dateModified" datetime="2019-07-16T15:09:48+08:00">2019-07-16</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1344,173 +665,71 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ul>
-<li><p>创建 symbol link<br>创建替身，软链接，symbol link<br><code>ln(link)</code>命令<br>示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s ~/Library/Developer/Xcode/DerivedData ~/Desktop/Xcode_DerivedData</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件创建时间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -t [[CC]YY]MMDDhhmm[.SS]</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>将YYYYMMDDhhmm 要替换成期望的时间，比如 201209160330.00 //即为2012年9月16日凌晨3点30分0秒。 其中[CC]YY可以缺省前两位“世纪”<em>，只输入后两位年份，并且秒钟[.SS]也可缺省</em>。把需要修改的文件拖到 Terminal 窗口，这时文件的路径会自动补全，当然你也可以自己手动输入文件路径。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -t 201209160330.00 /Users/name/Desktop/somefile.jpg</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>修改文件修改时间<br>步骤和上面修改“创建时间”基本相同，只是把参数 -t 改成 -mt<br>// time 和 modify time</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -mt 201209160330.00 /Users/name/Desktop/somefile.jpg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示系统详细信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ioreg -w 0 -l</span><br></pre></td></tr></table></figure></li>
-</ul>
-
           
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/21/Xcode与调试-2019-06-21-Xcode-快捷键/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/19/电脑技巧-macOS-2019-08-19-macOS-连接企业认证Wi-Fi时候的证书设置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/21/Xcode与调试-2019-06-21-Xcode-快捷键/" class="post-title-link" itemprop="url">Xcode-快捷键</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/19/电脑技巧-macOS-2019-08-19-macOS-连接企业认证Wi-Fi时候的证书设置/" class="post-title-link" itemprop="url">macOS-连接企业认证Wi-Fi时候的证书设置</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-21 17:50:42" itemprop="dateCreated datePublished" datetime="2019-06-21T17:50:42+08:00">2019-06-21</time>
+              <time title="创建时间：2019-08-19 11:07:26 / 修改时间：11:09:01" itemprop="dateCreated datePublished" datetime="2019-08-19T11:07:26+08:00">2019-08-19</time>
             </span>
           
-
-          
             
 
             
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-26 11:18:36" itemprop="dateModified" datetime="2019-06-26T11:18:36+08:00">2019-06-26</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1518,162 +737,68 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p><img src="/images/%E4%BC%81%E4%B8%9A%E8%AE%A4%E8%AF%81Wi-Fi.png" alt></p>
 
-      
-        
-          
-            <ul>
-<li><p>多行选择<br><kbd>option</kbd>+<kbd>shift</kbd>+<kbd>鼠标选择</kbd></p>
-</li>
-<li><p>cmd + shift + j 在文件管理列表中定位到当前打开的文件</p>
-</li>
-<li><p>cmd + shift + o 打开文件快速跳转输入框，输入文件名即可快速跳转</p>
-</li>
-</ul>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/20/手机技巧-2019-06-20-BlueStacks-蓝叠安卓模拟器/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/15/SuperSpider/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/20/手机技巧-2019-06-20-BlueStacks-蓝叠安卓模拟器/" class="post-title-link" itemprop="url">BlueStacks-蓝叠安卓模拟器</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/15/SuperSpider/" class="post-title-link" itemprop="url">SuperSpider</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-20 20:33:39" itemprop="dateCreated datePublished" datetime="2019-06-20T20:33:39+08:00">2019-06-20</time>
+              <time title="创建时间：2019-08-15 18:03:55" itemprop="dateCreated datePublished" datetime="2019-08-15T18:03:55+08:00">2019-08-15</time>
             </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-06-21 11:13:52" itemprop="dateModified" datetime="2019-06-21T11:13:52+08:00">2019-06-21</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1681,150 +806,71 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><a href="https://bluestacks.app/bluestacks-for-mac" target="_blank" rel="noopener">https://bluestacks.app/bluestacks-for-mac</a><br><a href="https://androidemulator.org/tools/bluestacks-easy-tool/" target="_blank" rel="noopener">https://androidemulator.org/tools/bluestacks-easy-tool/</a></p>
-<h2 id="ROOT"><a href="#ROOT" class="headerlink" title="ROOT"></a>ROOT</h2><p><a href="https://bstweaker.tk/" target="_blank" rel="noopener">https://bstweaker.tk/</a></p>
-<h2 id="macOS-版本"><a href="#macOS-版本" class="headerlink" title="macOS 版本"></a>macOS 版本</h2><ul>
-<li>程序数据文件夹<br><code>~/Library/BlueStacks</code></li>
-</ul>
-<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h2><h3 id="回收磁盘空间"><a href="#回收磁盘空间" class="headerlink" title="回收磁盘空间"></a>回收磁盘空间</h3><p><a href="https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size" target="_blank" rel="noopener">https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size</a></p>
-
           
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/19/手机技巧-2019-06-19-Android-安卓手机文件路径/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/15/电脑技巧-macOS-2019-08-15-macOS-通过Shell查看系统信息/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/19/手机技巧-2019-06-19-Android-安卓手机文件路径/" class="post-title-link" itemprop="url">Android-安卓手机文件路径</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/08/15/电脑技巧-macOS-2019-08-15-macOS-通过Shell查看系统信息/" class="post-title-link" itemprop="url">macOS-通过Shell查看系统信息</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-06-19 20:16:51 / 修改时间：20:18:17" itemprop="dateCreated datePublished" datetime="2019-06-19T20:16:51+08:00">2019-06-19</time>
+              <time title="创建时间：2019-08-15 14:09:09 / 修改时间：14:09:16" itemprop="dateCreated datePublished" datetime="2019-08-15T14:09:09+08:00">2019-08-15</time>
             </span>
           
-
-          
             
 
             
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1832,84 +878,111 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <p><a href="http://teczd.com/2015/09/23/osx-get-system-info-from-command-line/" target="_blank" rel="noopener">http://teczd.com/2015/09/23/osx-get-system-info-from-command-line/</a></p>
 
-      
-        
-          
-            <h3 id="MIUI-双开应用存储位置"><a href="#MIUI-双开应用存储位置" class="headerlink" title="MIUI 双开应用存储位置"></a>MIUI 双开应用存储位置</h3><ul>
-<li><p>对应data<br><code>/data/user/999/</code></p>
-</li>
-<li><p>对应SD卡内容</p>
-</li>
-</ul>
-<p>####安装程序 提示 没有存储空间<br>因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。</p>
-<h3 id="安卓手机文件路径"><a href="#安卓手机文件路径" class="headerlink" title="安卓手机文件路径"></a>安卓手机文件路径</h3><h4 id="预装的合作伙伴的软件"><a href="#预装的合作伙伴的软件" class="headerlink" title="预装的合作伙伴的软件"></a>预装的合作伙伴的软件</h4><p><code>\data\miui</code></p>
-<p>####短信数据库路径</p>
-<p>####联系人数据库路径</p>
-<p>####黑名单列表数据库路径</p>
-<p>####被拦截电话和短信数据库路径</p>
-<p>####外置存储可更改文件权限路径<br><code>/storage_int/</code></p>
-<h3 id="铃声位置"><a href="#铃声位置" class="headerlink" title="铃声位置"></a>铃声位置</h3><ul>
-<li>MIUI<br>所有的G7音频（铃声）文件都存于<code>SD卡/MIUI/ringtong</code>下面的文件基本上都能被识别，你将铃声拷进去就可以了。而音乐文件则保存<code>SD卡/MIUI/MUSIC</code>当中。至于电话铃声/短信铃声/提醒铃声，可在相应的设置栏中自行设定，比如说你喜欢某个曲子作为来电铃声，那么你就在来电设置当中进行设置并选中它就可以了，新版的MIUI支持铃声预览，你试听觉得合适了选定就可以了，而且不必像以往的版本要用专门的播放器播放。同理短信铃声/提醒铃声也是这样设置的，</li>
-<li>其他手机<br>　　系统自带声音文件存放的位置和内容<br>　　1 、总目录：/system/media/audio<br>　　2、闹钟：/system/media/audio/alarms<br>　　3、短信通知：/system/media/audio/notificati**
-　　4、铃声：/system/media/audio/ringtones<br>　　5、系统界面声音：/system/media/audio/ui<br>　　在SD卡中自定义各种声音<br>　　1、在sd卡的根目录下建立文件夹media<br>　　2、 在media目录下建立文件夹 alarms 里面放闹钟所需的音乐文件<br>　　3、在media目录下建立文件夹 notificati** 里面放短信通知所需的音乐文件<br>　　4、 在media目录下建立文件夹 ringtones 里面放电话铃声所需的音乐文件<br>　　5 、本方法的优点是sd卡容量大，音乐文件大小不受限制，缺点，读取sd卡慢不方便还费电</li>
-</ul>
-
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/14/电脑技巧-macOS-2019-08-14-macOS-通过命令来设置macOS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/14/电脑技巧-macOS-2019-08-14-macOS-通过命令来设置macOS/" class="post-title-link" itemprop="url">macOS-通过命令来设置macOS</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-14 16:10:34 / 修改时间：16:10:43" itemprop="dateCreated datePublished" datetime="2019-08-14T16:10:34+08:00">2019-08-14</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
 
     
-  </section>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/" target="_blank" rel="noopener">https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
-
 
 
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1920,348 +993,62 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">DNACore</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">188</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">131</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -2272,27 +1059,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -2304,28 +1080,19 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
 
 
 
@@ -2334,10 +1101,7 @@
 
 
 
-
-
-
-
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
@@ -2353,404 +1117,11 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
 
   
 
   
 
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>

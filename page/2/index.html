@@ -4,93 +4,56 @@
 
 
 
-
-
-
-
-
-
-
-
-<html class="theme-next pisces" lang="zh-CN">
-<head><meta name="generator" content="Hexo 3.9.0">
+<html lang="zh-CN">
+<head>
   <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
 
-<link rel="stylesheet" href="/css/main.css?v=7.2.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.2.0">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.2.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.2.0" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
+<script id="hexo-configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '7.2.0',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
+    version: '7.4.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
-    fastclick: false,
+    mediumzoom: false,
     lazyload: false,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    pangu: false,
     algolia: {
-      applicationID: '',
+      appID: '',
       apiKey: '',
       indexName: '',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    },
+    sidebarPadding: 40
   };
 </script>
-
-
-  
-
-
-
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
@@ -99,20 +62,17 @@
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DNACore GitHub io">
-
-
-
-
-
-  
-  
   <link rel="canonical" href="https://dnacore@github.io/page/2/">
 
 
-
-<script id="page.configurations">
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
   };
 </script>
 
@@ -126,13 +86,8 @@
 
 
 
-
-
-
-
   <noscript>
   <style>
-  .use-motion .motion-element,
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -141,7 +96,7 @@
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
+  .use-motion .collection-header { opacity: initial; }
 
   .use-motion .logo,
   .use-motion .site-title,
@@ -158,30 +113,20 @@
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-container">
   <div class="site-meta">
-    
 
-    <div class="custom-logo-site-title">
+    <div>
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">DNACore GitHub io</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-    
-    
   </div>
 
   <div class="site-nav-toggle">
@@ -194,214 +139,132 @@
 </div>
 
 
-
 <nav class="site-nav">
   
-    <ul id="menu" class="menu">
+  <ul id="menu" class="menu">
+      
+      
       
         
-        
-        
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
+        <li class="menu-item menu-item-home">
       
-    
-
     
 
     <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
     
 
     <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
 
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
       
-    
-
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
     
 
     <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
 
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
 
+</div>
+<div class="search-pop-overlay"></div>
 
-
-  
-
-
-
+  </div>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
             
 
-          
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
+  <div id="posts" class="posts-expand">
+        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/15/手机技巧-2019-07-15-Android-MIUI优化/">
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/17/农民张大伯去买一斤小米/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
+      <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/15/手机技巧-2019-07-15-Android-MIUI优化/" class="post-title-link" itemprop="url">Android-MIUI优化</a>
-              
+        <h1 class="post-title" itemprop="name headline">
             
-          </h1>
-        
+            <a href="/2019/09/17/农民张大伯去买一斤小米/" class="post-title-link" itemprop="url">未命名</a>
+          
+        </h1>
 
         <div class="post-meta">
-
-          
-          
-          
-
-          
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="创建时间：2019-07-15 10:46:32 / 修改时间：10:46:47" itemprop="dateCreated datePublished" datetime="2019-07-15T10:46:32+08:00">2019-07-15</time>
+              <time title="创建时间：2019-09-17 17:00:47" itemprop="dateCreated datePublished" datetime="2019-09-17T17:00:47+08:00">2019-09-17</time>
             </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
           
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -409,1489 +272,1026 @@
     <div class="post-body" itemprop="articleBody">
 
       
+          <p>农民张大伯去买一斤小米<br>米店老板掏出一个秤，放在地上，随手拿起一把刀割破了一个米袋，米就哗哗哗的掉到秤上<br>等到秤的示数为一斤时的瞬间，老板堵住了米袋子的口子，把秤上的小米给了张大伯<br>张大伯心满意足的走在回家的路上，心中感慨老板真是个豪爽的人<br>突然，他觉得不太对劲：<br>按照$F=ma$，小米在落在秤盘上时应该会产生一个力……所以他买到的米其实不足一斤<br>第二天，张大伯将老板告上了官府。<br>张大伯把自己的想法说出来了<br>老板则表示这样做每次都没出过差错<br>县太爷听了，微微一笑：“这是误会，老板没有坑你”<br>说完，县太爷猛地取一根毛笔，蘸墨写到：<br>设秤距离抛出点的竖直高度为$h$<br>记小米的流速为$\lambda = m_{0} kg/s$<br>则在秤恰好显示1斤时，取此后一极短时间$\Delta t$<br>此时间内，与秤盘发生碰撞的小米质量设为$m$<br>则$m=\lambda ·\bullet \Delta t$<br>由动量定理，得<br>$F\Delta t=mv$<br>其中$v=\sqrt{2gh}$<br>联立得$F=\lambda \sqrt{2gh}$<br>也就是说此时秤的示数$N=F+m_{1}g$（$m1$为已经落在盘上小米的质量）<br>张大伯一听，愤怒的说：你看，我这不是损失了相当于$\frac{F}{g}=\lambda \sqrt{\frac{2h}{g} }$这么多的小米吗！<br>县太爷笑道：别忘了，现在空中还有小米呢。<br>老板一听，感到有些疑惑：啊？这么说难道是我亏了吗？<br>县太爷接着写到：<br>记张大伯所说的$\lambda \sqrt{\frac{2h}{g} } =m_{2}$<br>而此时在空中的小米质量为$m_{3}$<br>则$m_{3}=\lambda t$<br>其中$t=\sqrt{\frac{2h}{g} }$，代入发现$m_{2} =m_{3}$<br>这也就是说，你们俩一点都没有亏。<br>张大伯和米店老板听了，相视一笑，说道：经验+3，告辞。</p>
+
+        
       
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/11/IBM-Cloud-实用笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/11/IBM-Cloud-实用笔记/" class="post-title-link" itemprop="url">IBM Cloud 实用笔记</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-11 11:22:10 / 修改时间：16:17:12" itemprop="dateCreated datePublished" datetime="2019-09-11T11:22:10+08:00">2019-09-11</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+          <h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><p><a href="https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir" target="_blank" rel="noopener">https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir</a></p>
+<ul>
+<li>ssh 连接<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibmcloud cf ssh MyTest</span><br></pre></td></tr></table></figure></li>
+</ul>
+
         
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/电脑技巧-Windows-2019-09-10-Windows-Windows的KMS激活/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/10/电脑技巧-Windows-2019-09-10-Windows-Windows的KMS激活/" class="post-title-link" itemprop="url">Windows-Windows的KMS激活</a>
           
-            <table>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-10 16:30:20 / 修改时间：20:00:42" itemprop="dateCreated datePublished" datetime="2019-09-10T16:30:20+08:00">2019-09-10</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[TOC]</p>
+<h1 id="KMS-服务器激活-Windows"><a href="#KMS-服务器激活-Windows" class="headerlink" title="KMS 服务器激活 Windows"></a>KMS 服务器激活 Windows</h1><h2 id="KMS-密钥"><a href="#KMS-密钥" class="headerlink" title="KMS 密钥"></a>KMS 密钥</h2><ul>
+<li>Windows Thin PC : <code>3KQTC-D9G6K-7TQG6-6MRPC-QN22C</code></li>
+</ul>
+<h2 id="KMS-激活"><a href="#KMS-激活" class="headerlink" title="KMS 激活"></a>KMS 激活</h2><p><a href="https://moeclub.org/2018/12/02/710/?spm=70.9" target="_blank" rel="noopener">https://moeclub.org/2018/12/02/710/?spm=70.9</a></p>
+<p>激活步骤请前往: <a href="http://moeclub.org/kms" target="_blank" rel="noopener">http://moeclub.org/kms</a><br>KMS激活命令: slmgr /skms kms.moeclub.org</p>
+<h3 id="安装KMS密钥"><a href="#安装KMS密钥" class="headerlink" title="安装KMS密钥:"></a>安装KMS密钥:</h3><p>以管理员身份运行命令提示符.<br>安装密钥:<code>slmgr /ipk [密钥]</code><br>设置激活:<code>slmgr /skms kms.moeclub.org</code><br>激活产品:<code>slmgr /ato</code></p>
+<h3 id="KMS-GVLK"><a href="#KMS-GVLK" class="headerlink" title="KMS GVLK:"></a>KMS GVLK:</h3><ul>
+<li>Windows Server 2019 ARM64 : GRFBW-QNDC4-6QBHG-CCK3B-2PR88</li>
+<li>Windows Server 2019 Azure Core : FDNH6-VW9RW-BXPJ7-4XTYG-239TB</li>
+<li>Windows Server 2019 Datacenter : WMDGN-G9PQG-XVVXX-R3X43-63DFG</li>
+<li>Windows Server 2019 Essentials : WVDHN-86M7X-466P6-VHXV7-YY726</li>
+<li>Windows Server 2019 Standard : N69G4-B89J2-4G8F4-WWYCC-J464C</li>
+<li>Windows Server 2019 Datacenter (Semi-Annual Channel v.1809) : 6NMRW-2C8FM-D24W7-TQWMY-CWH2D</li>
+<li>Windows Server 2019 Standard (Semi-Annual Channel v.1809) : N2KJX-J94YW-TQVFB-DG9YT-724CC</li>
+<li>Windows Server 2019 Standard [Preview] : MFY9F-XBN2F-TYFMP-CCV49-RMYVH</li>
+<li>Windows Server 2019 Datacenter [Preview] : 6XBNX-4JQGW-QX6QG-74P76-72V67</li>
+<li>Windows 10 Enterprise LTSC 2019 : M7XTQ-FN8P6-TTKYV-9D4CC-J462D</li>
+<li>Windows 10 Enterprise LTSC 2019 N : 92NFX-8DJQP-P6BBQ-THF9C-7CG2H</li>
+<li>Windows 10 Enterprise G : YYVX9-NTFWV-6MDM3-9PT4T-4M68B</li>
+<li>Windows 10 Enterprise G N : 44RPN-FTY23-9VTTB-MP9BX-T84FV</li>
+<li>Windows 10 Enterprise 2016 LTSB : DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</li>
+<li>Windows 10 Enterprise 2016 LTSB N : QFFDN-GRT3P-VKWWX-X7T3R-8B639</li>
+<li>Windows 10 Home / Core : TX9XD-98N7V-6WMQ6-BX7FG-H8Q99</li>
+<li>Windows 10 Home / Core Country Specific : PVMJN-6DFY6-9CCP6-7BKTT-D3WVR</li>
+<li>Windows 10 Home / Core N : 3KHY7-WNT83-DGQKR-F7HPR-844BM</li>
+<li>Windows 10 Home / Core Single Language : 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH</li>
+<li>Windows 10 Education : NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</li>
+<li>Windows 10 Education N : 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</li>
+<li>Windows 10 Enterprise : NPPR9-FWDCX-D2C8J-H872K-2YT43</li>
+<li>Windows 10 Enterprise [Preview] : QNMXX-GCD3W-TCCT4-872RV-G6P4J</li>
+<li>Windows 10 Enterprise S : H76BG-QBNM7-73XY9-V6W2T-684BJ</li>
+<li>Windows 10 Enterprise 2015 LTSB : WNMTR-4C88C-JK8YV-HQ7T2-76DF9</li>
+<li>Windows 10 Enterprise 2015 LTSB N : 2F77B-TNFGY-69QQF-B8YKP-D69TJ</li>
+<li>Windows 10 Enterprise N : DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</li>
+<li>Windows 10 Enterprise S N : X4R4B-NV6WD-PKTVK-F98BH-4C2J8</li>
+<li>Windows 10 Professional Workstation : NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</li>
+<li>Windows 10 Professional Workstation N : 9FNHH-K3HBT-3W4TD-6383H-6XYWF</li>
+<li>Windows 10 Professional : W269N-WFGWX-YVC9B-4J6C9-T83GX</li>
+<li>Windows 10 Professional Education : 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</li>
+<li>Windows 10 Professional Education N : YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</li>
+<li>Windows 10 Professional N : MH37W-N47XK-V7XM9-C7227-GCQG9</li>
+<li>Windows 10 Professional [Preview] : XQHPH-N4D9W-M8P96-DPDFP-TMVPY</li>
+<li>Windows 10 Professional WMC [Pre-Release] : NKPM6-TCVPT-3HRFX-Q4H9B-QJ34Y</li>
+<li>Windows 10 Enterprise for Virtual Desktops : CPWHC-NT2C7-VYW78-DHDB2-PG3GK</li>
+<li>Windows 10 Remote Server : 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX</li>
+<li>Windows 10 S (Lean) : NBTWJ-3DR69-3C4V8-C26MC-GQ9M6</li>
+<li>Windows 10 IoT Core [Pre-Release] : 7NX88-X6YM3-9Q3YT-CCGBF-KBVQF</li>
+<li>Windows 10 Core Connected [Pre-Release] : DJMYQ-WN6HG-YJ2YX-82JDB-CWFCW</li>
+<li>Windows 10 Core Connected N [Pre-Release] : JQNT7-W63G4-WX4QX-RD9M9-6CPKM</li>
+<li>Windows 10 Core Connected Single Language [Pre-Release] : QQMNF-GPVQ6-BFXGG-GWRCX-7XKT7</li>
+<li>Windows 10 Core Connected Country Specific [Pre-Release] : FTNXM-J4RGP-MYQCV-RVM8R-TVH24</li>
+<li>Windows 10 Professional S [Pre-Release] : 3NF4D-GF9GY-63VKH-QRC3V-7QW8P</li>
+<li>Windows 10 Professional S N [Pre-Release] : KNDJ3-GVHWT-3TV4V-36K8Y-PR4PF</li>
+<li>Windows 10 Professional Student [Pre-Release] : YNXW3-HV3VB-Y83VG-KPBXM-6VH3Q</li>
+<li>Windows 10 Professional Student N [Pre-Release] : 8G9XJ-GN6PJ-GW787-MVV7G-GMR99</li>
+<li>Windows 7 Enterprise : 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</li>
+<li>Windows 7 Enterprise E : C29WB-22CC8-VJ326-GHFJW-H9DH4</li>
+<li>Windows 7 Enterprise N : YDRBP-3D83W-TY26F-D46B2-XCKRJ</li>
+<li>Windows 7 Professional : FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</li>
+<li>Windows 7 Professional E : W82YF-2Q76Y-63HXB-FGJG9-GF7QX</li>
+<li>Windows 7 Professional N : MRPKT-YTG23-K7D7T-X2JMM-QY7MG</li>
+<li>Windows 7 Embedded POSReady : YBYF6-BHCR3-JPKRB-CDW7B-F9BK4</li>
+<li>Windows 7 Embedded Standard : XGY72-BRBBT-FF8MH-2GG8H-W7KCW</li>
+<li>Windows 7 ThinPC : 73KQT-CD9G6-K7TQG-66MRP-CQ22C</li>
+<li>Windows 8 Core / Server 2012 : BN3D2-R7TKB-3YPBD-8DRP2-27GG4</li>
+<li>Windows 8 Core / Server 2012 Country Specific : 4K36P-JN4VD-GDC6V-KDT89-DYFKP</li>
+<li>Windows 8 Core / Server 2012 N : 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</li>
+<li>Windows 8 Core / Server 2012 Single Language : 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</li>
+<li>Windows 8 Professional WMC : GNBB8-YVD74-QJHX6-27H4K-8QHDG</li>
+<li>Windows 8 Embedded Industry Professional : RYXVT-BNQG7-VD29F-DBMRY-HT73M</li>
+<li>Windows 8 Embedded Industry Enterprise : NKB3R-R2F8T-3XCDP-7Q2KW-XWYQ2</li>
+<li>Windows 8 Enterprise : 32JNW-9KQ84-P47T8-D8GGY-CWCK7</li>
+<li>Windows 8 Enterprise N : JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</li>
+<li>Windows 8 Professional : NG4HW-VH26C-733KW-K6F98-J8CK4</li>
+<li>Windows 8 Professional N : XCVCF-2NXM9-723PB-MHCB7-2RYQQ</li>
+<li>Windows 8.1 Core : M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK</li>
+<li>Windows 8.1 Core ARM64 : XYTND-K6QKT-K2MRH-66RTM-43JKP</li>
+<li>Windows 8.1 Core Country Specific : NCTT7-2RGK8-WMHRF-RY7YQ-JTXG3</li>
+<li>Windows 8.1 Core N : 7B9N3-D94CG-YTVHR-QBPX3-RJP64</li>
+<li>Windows 8.1 Core Single Language : BB6NG-PQ82V-VRDPW-8XVD2-V8P66</li>
+<li>Windows 8.1 Professional Student : MX3RK-9HNGX-K3QKC-6PJ3F-W8D7B</li>
+<li>Windows 8.1 Professional Student N : TNFGH-2R6PB-8XM3K-QYHX2-J4296</li>
+<li>Windows 8.1 Professional WMC : 789NJ-TQK6T-6XTH8-J39CJ-J8D3P</li>
+<li>Windows 8.1 Core Connected : 3PY8R-QHNP9-W7XQD-G6DPH-3J2C9</li>
+<li>Windows 8.1 Core Connected Country Specific : R962J-37N87-9VVK2-WJ74P-XTMHR</li>
+<li>Windows 8.1 Core Connected N : Q6HTR-N24GM-PMJFP-69CD8-2GXKR</li>
+<li>Windows 8.1 Core Connected Single Language : KF37N-VDV38-GRRTV-XH8X6-6F3BB</li>
+<li>Windows 8.1 Enterprise : MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</li>
+<li>Windows 8.1 Enterprise N : TT4HM-HN7YT-62K67-RGRQJ-JFFXW</li>
+<li>Windows 8.1 Professional : GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</li>
+<li>Windows 8.1 Professional N : HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</li>
+<li>Windows 8.1 Embedded Industry Professional : NMMPB-38DD4-R2823-62W8D-VXKJB</li>
+<li>Windows 8.1 Embedded Industry Automotive : VHXM3-NR6FT-RY6RT-CK882-KW2CJ</li>
+<li>Windows 8.1 Embedded Industry Enterprise : FNFKF-PWTVT-9RC8H-32HB2-JB34X</li>
+<li>Windows 8.1 Enterprise [Preview] : 2MP7K-98NK8-WPVF3-Q2WDG-VMD98</li>
+<li>Windows 8.1 Professional (Blue) [Preview] : MTWNQ-CKDHJ-3HXW9-Q2PFX-WB2HQ</li>
+<li>Windows 8 Professional WMC [RC] : MY4N9-TGH34-4X4VY-8FG2T-RRDPV</li>
+<li>Windows 8.x [Preview] : MPWP3-DXNP9-BRD79-W8WFP-3YFJ6</li>
+<li>Windows Server Next HI [Preview] : 7VX4N-3VDHQ-VYGHB-JXJVP-9QB26</li>
+<li>Windows Server 2008 Web : WYR28-R7TFJ-3X2YQ-YCY4H-M249D</li>
+<li>Windows Server 2008 HPC Edition : RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</li>
+<li>Windows Server 2008 Standard : TM24T-X9RMF-VWXK6-X8JC9-BFGM2</li>
+<li>Windows Server 2008 Standard without Hyper-V : W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</li>
+<li>Windows Server 2008 Enterprise : YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</li>
+<li>Windows Server 2008 Enterprise without Hyper-V : 39BXF-X8Q23-P2WWT-38T2F-G3FPG</li>
+<li>Windows Server 2008 Datacenter : 7M67G-PC374-GR742-YH8V4-TCBY3</li>
+<li>Windows Server 2008 Datacenter without Hyper-V : 22XQ2-VRXRG-P8D42-K34TD-G3QQC</li>
+<li>Windows Server 2008 for Itanium Systems : 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</li>
+<li>Windows MultiPoint Server 2010 : 736RG-XDKJK-V34PF-BHK87-J6X3K</li>
+<li>Windows Server 2008 R2 Web : 6TPJF-RBVHG-WBW2R-86QPH-6RTM4</li>
+<li>Windows Server 2008 R2 HPC Edition : TT8MH-CG224-D3D7Q-498W2-9QCTX</li>
+<li>Windows Server 2008 R2 Standard : YC6KT-GKW9T-YTKYR-T4X34-R7VHC</li>
+<li>Windows Server 2008 R2 Enterprise : 489J6-VHDMP-X63PK-3K798-CPX3Y</li>
+<li>Windows Server 2008 R2 Datacenter : 74YFP-3QFB3-KQT8W-PMXWJ-7M648</li>
+<li>Windows Server 2008 R2 for Itanium Systems : GT63C-RJFQ3-4GMB6-BRFB9-CB83V</li>
+<li>Windows Server 2012 Datacenter : 48HP8-DN98B-MYWDG-T2DCC-8W83P</li>
+<li>Windows Server 2012 MultiPoint Premium : XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</li>
+<li>Windows Server 2012 MultiPoint Standard : HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</li>
+<li>Windows Server 2012 Standard : XC9B7-NBPP2-83J2H-RHMBY-92BT4</li>
+<li>Windows Server 2012 R2 Cloud Storage : 3NPTF-33KPT-GGBPR-YX76B-39KDD</li>
+<li>Windows Server 2012 R2 Datacenter : W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</li>
+<li>Windows Server 2012 R2 Essentials : KNC87-3J2TX-XB4WP-VCPJV-M4FWM</li>
+<li>Windows Server 2012 R2 Standard : D2N9P-3P6X9-2R39C-7RTCD-MDVJX</li>
+<li>Windows Server 2016 Azure Core : VP34G-4NPPG-79JTQ-864T4-R3MQX</li>
+<li>Windows Server 2016 Cloud Storage : QN4C6-GBJD2-FB422-GHWJK-GJG2R</li>
+<li>Windows Server 2016 Datacenter : CB7KF-BWN84-R7R2Y-793K2-8XDDG</li>
+<li>Windows Server 2016 Essentials : JCKRF-N37P4-C2D82-9YXRT-4M63B</li>
+<li>Windows Server 2016 Standard : WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</li>
+<li>Windows Server 2016 ARM64 : K9FYF-G6NCK-73M32-XMVPY-F9DRR</li>
+<li>Windows Server 2016 Datacenter (Semi-Annual Channel v.1803) : 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG</li>
+<li>Windows Server 2016 Standard (Semi-Annual Channel v.1803) : PTXN8-JFHJM-4WC78-MPCBR-9W4KR</li>
+<li>Windows Server 2016 Datacenter [Preview] : VRDD2-NVGDP-K7QG8-69BR4-TVFHB</li>
+<li>Windows Vista Business : YFKBB-PQJJV-G996G-VWGXY-2V3X8</li>
+<li>Windows Vista Business N : HMBQG-8H2RH-C77VX-27R82-VMQBT</li>
+<li>Windows Vista Enterprise : VKK3X-68KWM-X2YGT-QR4M6-4BWMV</li>
+<li>Windows Vista Enterprise N : VTC42-BM838-43QHV-84HX6-XJXKV</li>
+<li>Windows Vista Business [Preview 1] : XQYF4-QVCMY-YXQRD-9QPV8-3YP9V</li>
+<li>Windows Vista Business [Preview 2] : YVT36-YVCP2-J97GQ-7T22R-RWV8P</li>
+<li>Windows Vista Business N [Preview] : HGBJ9-RWD6M-6HDGW-6T2XD-JQ66F</li>
+<li>Windows Vista Enterprise [Preview 1] : 3JHG3-Y66GP-B7F3K-JFVX2-VBH7K</li>
+<li>Windows Vista Enterprise [Beta-2 build 5384] : MF9PG-RQK7R-26BPJ-TWFYK-RHXCM</li>
+<li>Windows Longhorn Web [Preview] : MDRCM-4WKCW-J93FF-J9Q48-M6KBB</li>
+<li>Windows Longhorn Standard : Q37JX-P3HHB-GKRH2-PDBKG-GGXPW</li>
+<li>Windows Longhorn Enterprise : 7KYMQ-R788Q-4RF69-KTWKM-92PFJ</li>
+<li>Windows Longhorn Datacenter [Preview] : HR8VD-7DHG2-48378-M9D73-28F4T</li>
+<li>Windows Longhorn for Itanium Systems [Preview] : CWV9H-PHGPW-V93WV-QBQV9-8V336</li>
+<li>Office Access 2010 : V7Y44-9T38C-R2VJK-666HK-T7DDX</li>
+<li>Office Excel 2010 : H62QG-HXVKF-PP4HP-66KMR-CW9BM</li>
+<li>Office Groove (SharePoint Workspace) 2010 : QYYW6-QP4CB-MBV6G-HYMCJ-4T3J4</li>
+<li>Office InfoPath 2010 : K96W8-67RPQ-62T9Y-J8FQJ-BT37T</li>
+<li>Office Mondo 1 2010 : YBJTT-JG6MD-V9Q7P-DBKXJ-38W9R</li>
+<li>Office Mondo 2 2010 : 7TC2V-WXF6P-TD7RT-BQRXR-B8K32</li>
+<li>Office OneNote 2010 : Q4Y4M-RHWJM-PY37F-MTKWH-D3XHX</li>
+<li>Office OutLook 2010 : 7YDC2-CWM8M-RRTJC-8MDVC-X3DWQ</li>
+<li>Office PowerPoint 2010 : RC8FX-88JRY-3PF7C-X8P67-P4VTT</li>
+<li>Office Professional Plus 2010 : VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB</li>
+<li>Office Project Professional 2010 : YGX6F-PGV49-PGW3J-9BTGG-VHKC6</li>
+<li>Office Project Standard 2010 : 4HP3K-88W3F-W2K3D-6677X-F9PGB</li>
+<li>Office Publisher 2010 : BFK7F-9MYHM-V68C7-DRQ66-83YTP</li>
+<li>Office Small Business Basics 2010 : D6QFG-VBYP2-XQHM7-J97RH-VVRCK</li>
+<li>Office Standard 2010 : V7QKV-4XVVR-XYV4D-F7DFM-8R6BM</li>
+<li>Office Visio Premium 2010 : D9DWC-HPYVV-JGF4P-BTWQB-WX8BJ</li>
+<li>Office Visio Professional 2010 : 7MCW8-VRQVK-G677T-PDJCM-Q8TCP</li>
+<li>Office Visio Standard 2010 : 767HD-QGMWX-8QTDB-9G3R2-KHFGJ</li>
+<li>Office Word 2010 : HVHB3-C6FV7-KQX9W-YQG79-CRY7T</li>
+<li>Office Starter 2010 Retail : VXHHB-W7HBD-7M342-RJ7P8-CHBD6</li>
+<li>Office SharePoint Designer (Frontpage) 2010 Retail : H48K6-FB4Y6-P83GH-9J7XG-HDKKX</li>
+<li>Office Access 2013 : NG2JY-H4JBT-HQXYP-78QH9-4JM2D</li>
+<li>Office Excel 2013 : VGPNG-Y7HQW-9RHP7-TKPV3-BG7GB</li>
+<li>Office InfoPath 2013 : DKT8B-N7VXH-D963P-Q4PHY-F8894</li>
+<li>Office Lync 2013 : 2MG3G-3BNTT-3MFW9-KDQW3-TCK7R</li>
+<li>Office Mondo 2013 : 42QTK-RN8M7-J3C4G-BBGYM-88CYV</li>
+<li>Office OneNote 2013 : TGN6P-8MMBC-37P2F-XHXXK-P34VW</li>
+<li>Office OutLook 2013 : QPN8Q-BJBTJ-334K3-93TGY-2PMBT</li>
+<li>Office PowerPoint 2013 : 4NT99-8RJFH-Q2VDH-KYG2C-4RD4F</li>
+<li>Office Professional Plus 2013 : YC7DK-G2NP3-2QQC3-J6H88-GVGXT</li>
+<li>Office Project Professional 2013 : FN8TT-7WMH6-2D4X9-M337T-2342K</li>
+<li>Office Project Standard 2013 : 6NTH3-CW976-3G3Y2-JK3TX-8QHTT</li>
+<li>Office Publisher 2013 : PN2WF-29XG2-T9HJ7-JQPJR-FCXK4</li>
+<li>Office Standard 2013 : KBKQT-2NMXY-JJWGP-M62JB-92CD4</li>
+<li>Office Visio Professional 2013 : C2FG9-N6J68-H8BTJ-BW3QX-RM3B3</li>
+<li>Office Visio Standard 2013 : J484Y-4NKBF-W2HMG-DBMJC-PGWR7</li>
+<li>Office Word 2013 : 6Q7VD-NX8JD-WJ2VH-88V73-4GBJ7</li>
+<li>Office SharePoint Workspace (Groove) 2013 : H7R7V-WPNXQ-WCYYC-76BGV-VT7GH</li>
+<li>Office SharePoint Designer (Frontpage) 2013 Retail : GYJRG-NMYMF-VGBM4-T3QD4-842DW</li>
+<li>Office Access 2013 [Pre-Release] : DJBH8-RGN7Q-836KD-DMP3M-DM9MF</li>
+<li>Office Excel 2013 [Pre-Release] : Q3BNP-3WXDT-GG8HF-24KMW-HMDBK</li>
+<li>Office SharePoint Workspace (Groove) 2013 [Pre-Release] : WVCGG-NK4FG-7XKXM-BD4WF-3C624</li>
+<li>Office InfoPath 2013 [Pre-Release] : 7KPJJ-N8TT7-CK3KR-QTV98-YPVXQ</li>
+<li>Office Lync 2013 [Pre-Release] : XNVD3-RYC7T-7R6BT-WX6CF-8BYH7</li>
+<li>Office Mondo 2013 [Pre-Release] : GCGCN-6FJRM-TR9Q3-BGMWJ-78KQV</li>
+<li>Office OneNote 2013 [Pre-Release] : VYNYX-8GPBC-7FQMD-D6B7B-7MDFD</li>
+<li>Office Outlook 2013 [Pre-Release] : X2KNB-FRRG2-WXDPH-739DM-DM9RH</li>
+<li>Office PowerPoint 2013 [Pre-Release] : B8CT8-BTNFQ-XQXBK-BFWV8-HMDFQ</li>
+<li>Office Professional Plus 2013 [Pre-Release] : PGD67-JN23K-JGVWV-KTHP4-GXR9G</li>
+<li>Office Project Professional 2013 [Pre-Release] : NFKVM-DVG7F-TYWYR-3RPHY-F872K</li>
+<li>Office Project Standard 2013 [Pre-Release] : N89QF-GGB8J-BKD28-C4V28-W4XTK</li>
+<li>Office Publisher 2013 [Pre-Release] : NB67P-J8XP4-XDK9B-V73VH-M4CKR</li>
+<li>Office Visio Professional 2013 [Pre-Release] : B3C7Q-D6NH2-2VRFW-HHWDG-FVQB6</li>
+<li>Office Visio Standard 2013 [Pre-Release] : 9MKNF-J9XQ6-JV4XB-FJQPY-43F43</li>
+<li>Office Word 2013 [Pre-Release] : JBGD4-3JNG7-JWWGV-CR6TP-DC62Q</li>
+<li>Office Access 2016 : GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</li>
+<li>Office Excel 2016 : 9C2PK-NWTVB-JMPW8-BFT28-7FTBF</li>
+<li>Office Mondo 2016 : HFTND-W9MK4-8B7MJ-B6C4G-XQBR2</li>
+<li>Office Mondo Retail 2016 : DMTCJ-KNRKX-26982-JYCKT-P7KB6</li>
+<li>Office OneNote 2016 : DR92N-9HTF2-97XKM-XW2WJ-XW3J6</li>
+<li>Office Outlook 2016 : R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</li>
+<li>Office Powerpoint 2016 : J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</li>
+<li>Office Professional Plus 2016 : XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</li>
+<li>Office Project Professional 2016 : YG9NW-3K39V-2T3HJ-93F3Q-G83KT</li>
+<li>Office Project Professional 2016 C2R [Preview] : WGT24-HCNMF-FQ7XH-6M8K7-DRTW9</li>
+<li>Office Project Standard 2016 : GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</li>
+<li>Office Project Standard 2016 C2R [Preview] : D8NRQ-JTYM3-7J2DX-646CT-6836M</li>
+<li>Office Publisher 2016 : F47MM-N3XJP-TQXJ9-BP99D-8K837</li>
+<li>Office Skype for Business 2016 : 869NQ-FJ69K-466HW-QYCP2-DDBV6</li>
+<li>Office Standard 2016 : JNRGM-WHDWX-FJJG3-K47QV-DRTFM</li>
+<li>Office Visio Professional 2016 : PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</li>
+<li>Office Visio Professional 2016 C2R [Preview] : 69WXN-MBYV6-22PQG-3WGHK-RM6XC</li>
+<li>Office Visio Standard 2016 : 7WHWN-4T7MP-G96JF-G33KR-W8GF4</li>
+<li>Office Visio Standard 2016 C2R [Preview] : NY48V-PPYYH-3F4PX-XJRKJ-W4423</li>
+<li>Office Word 2016 : WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</li>
+<li>Office Professional Plus 2019 C2R [Preview] : VQ9DP-NVHPH-T9HJC-J9PDT-KTQRG</li>
+<li>Office Project Professional 2019 C2R [Preview] : XM2V9-DN9HH-QB449-XDGKC-W2RMW</li>
+<li>Office Visio Professional 2019 C2R [Preview] : N2CG9-YD3YK-936X4-3WR82-Q3X4H</li>
+<li>Office Access 2019 : 9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</li>
+<li>Office Excel 2019 : TMJWT-YYNMB-3BKTF-644FC-RVXBD</li>
+<li>Office Outlook 2019 : 7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</li>
+<li>Office Powerpoint 2019 : RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</li>
+<li>Office Professional Plus 2019 : NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</li>
+<li>Office Project Professional 2019 : B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</li>
+<li>Office Project Standard 2019 : C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</li>
+<li>Office Publisher 2019 : G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</li>
+<li>Office Skype for Business 2019 : NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</li>
+<li>Office Standard 2019 : 6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</li>
+<li>Office Visio Professional 2019 : 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</li>
+<li>Office Visio Standard 2019 : 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</li>
+<li>Office Word 2019 : PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/Xcode与调试-2019-09-10-Xcode-all-load-ObjC-force-load三个编译选项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/10/Xcode与调试-2019-09-10-Xcode-all-load-ObjC-force-load三个编译选项/" class="post-title-link" itemprop="url">Xcode-all_load,ObjC,force_load三个编译选项</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-10 15:25:36 / 修改时间：15:26:30" itemprop="dateCreated datePublished" datetime="2019-09-10T15:25:36+08:00">2019-09-10</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>-all_load</p>
+<p>The <code>-all_load</code> flag tell the linker that it should link every object file (member) of every static library that is passed to the linker. This is a rather drastic option and can cause your executable binary to dramatically increase in size. This flag should be avoided if at all possible when using many static libraries.</p>
+<p>-ObjC<br>The <code>-ObjC</code> flag controls behavior around Objective-C code. This will tell the linker that it should look through all the object files (members) of each static library to find the object files (members) that contain any additional Objective-C runtime data. This allows developers to link object files that only contain Objective-C catagories, or any other Objective-C code that the static analysis cannot resolve as being called directly (such as creating a class using NSClassFromString()). This is the flag that is typically passed when using static libraries that contain Objective-C code. Keep in mind, this flag means that ALL Objective-C code that is passed to the linker will be added to the executable binary regardless of if it gets used or not.</p>
+<p>-force_load<br>The <code>-force_load</code> flag is very similar to the <code>-all_load</code> flag, except that it takes an argument of a path to a static library. When passed to the linker, this flag says that regardless of whatever other flags are passed to the linker, that it should link all of the object files (members) of the specific static library that is specified by the passed argument. This allows for a more controlled behavior of selectively loading all the code from one static library but not having to bloat up the executable binary with unnecessary code from other libraries.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/09/学习-Shell-2019-09-09-Shell-Shell中路径与引号的说明/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/09/学习-Shell-2019-09-09-Shell-Shell中路径与引号的说明/" class="post-title-link" itemprop="url">Shell-Shell中路径与引号的说明</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-09 16:58:40 / 修改时间：17:01:38" itemprop="dateCreated datePublished" datetime="2019-09-09T16:58:40+08:00">2019-09-09</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://stackoverflow.com/questions/33318499/should-i-use-quotes-in-environment-path-names" target="_blank" rel="noopener">https://stackoverflow.com/questions/33318499/should-i-use-quotes-in-environment-path-names</a></p>
+<p>几乎在所有情况下，都应该用引号把路径包裹起来。<br>但是，特殊情况之一是：<code>~/</code>要在引号外面，要不然不能正确转义。<br>如果一定要把路径全放在引号里面，那么就用<code>$HOME</code>吧。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/学习-Python-2019-09-05-Python-Python中对象的遍历方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/05/学习-Python-2019-09-05-Python-Python中对象的遍历方式/" class="post-title-link" itemprop="url">Python-Python中对象的遍历方式</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-05 13:51:14 / 修改时间：13:55:39" itemprop="dateCreated datePublished" datetime="2019-09-05T13:51:14+08:00">2019-09-05</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="字典遍历"><a href="#字典遍历" class="headerlink" title="字典遍历"></a>字典遍历</h2><ol>
+<li><p>直接遍历字典，是对字典的key进行遍历。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for key in dict:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历字典的 key 和 value。<br>这里的括号可以省去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.items();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历字典的 key 和 value。<br>括号可省</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.iteritems():</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历字典的 key 和 value<br>括号可省</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for k,v in zip(dict.iterkeys(),dict.itervalues()):</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><ol>
+<li><p>普通遍历方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for item in sequence:</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历索引和元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index in range(len(sequence)):</span><br><span class="line">       print index,sequence[index]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历索引和元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index, item in enumerate(sequence):</span><br><span class="line">  print index, item</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/学习-Python-2019-09-05-Python-代码中字符串的多行写法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/05/学习-Python-2019-09-05-Python-代码中字符串的多行写法/" class="post-title-link" itemprop="url">Python-代码中字符串的多行写法</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-05 13:50:09 / 修改时间：13:50:34" itemprop="dateCreated datePublished" datetime="2019-09-05T13:50:09+08:00">2019-09-05</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>用<code>\</code>来拼接多个字符串<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hex_str: str = <span class="string">'1d5e4a52723a36386262543a4e35ba6737'</span> \</span><br><span class="line">               <span class="string">'bb353aa7391c3b6759030c0b070808551a'</span> \</span><br><span class="line">               <span class="string">'0a040a0d150e5c5e0c4f560b015217530e'</span> \</span><br><span class="line">               <span class="string">'525108060d0e505d5806ac3bc9cfc599c8'</span> \</span><br><span class="line">               <span class="string">'cccbc5ca399a65c7c59dcbc5c9cfc59936'</span> \</span><br><span class="line">               <span class="string">'9b353a85398865803bd435fa37823bae36'</span> \</span><br><span class="line">               <span class="string">'8535ea34d03dbc393a82353ade313a9636'</span> \</span><br><span class="line">               <span class="string">'33cc3b35ba3864'</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/04/学习-macOS开发-2019-09-04-macOS开发-NSViewController/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/04/学习-macOS开发-2019-09-04-macOS开发-NSViewController/" class="post-title-link" itemprop="url">macOS开发-NSViewController</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-04 14:12:42 / 修改时间：14:18:43" itemprop="dateCreated datePublished" datetime="2019-09-04T14:12:42+08:00">2019-09-04</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>NSViewController创建好后并不会自动创建 NSView<br>NSView创建过程中会调用<code>-(void)loadView</code>这个方法。就在这个方法里，我们需要自己创建 view，然后赋值给 self.view。</p>
+</li>
+<li><p>NSView 也不会自动创建 layer 。设置 <code>view.wantsLayer = YES</code> 之后，会自动创建一个 layer。</p>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/29/其他开发工具-2019-08-29-CocoaPods-更新官方pod库版本/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/29/其他开发工具-2019-08-29-CocoaPods-更新官方pod库版本/" class="post-title-link" itemprop="url">CocoaPods-更新官方pod库版本</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-29 18:09:52" itemprop="dateCreated datePublished" datetime="2019-08-29T18:09:52+08:00">2019-08-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-05 14:10:56" itemprop="dateModified" datetime="2019-09-05T14:10:56+08:00">2019-09-05</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>修改<code>podspec</code>文件，更新好对应的<code>s.version</code>版本号。</p>
+</li>
+<li><p>将库文件上传到对应的代码仓库，打好tag。</p>
+</li>
+<li><p>进入项目目录，清缓存，校验<code>podspec</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清除 pod 缓存</span></span><br><span class="line">pod cache clean --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 校验</span></span><br><span class="line">pod lib lint XXXXX.podspec</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到官方索引仓库</span></span><br><span class="line">pod trunk push XXXXX.podspec</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果提示<code>You need to register a session first.</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 报错</span><br><span class="line">[!] You need to register a session first.</span><br><span class="line"></span><br><span class="line">// 重新注册一下，然后CocoaPods会发送一封邮件到你的邮箱，按照提示打开一个连接激活就ok拉，最后再重复前面步骤，提交到CocoaPods官方仓库</span><br><span class="line">pod trunk register 邮箱 <span class="string">'名字'</span> --description=<span class="string">'description'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布成功后执行<code>pod repo update</code>更新本地索引库。</p>
+</li>
+<li><p>执行<code>pod search XXXX</code>，看看是否已经是最新版本。</p>
+</li>
+<li><p>撤回版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 撤回 XXXXX 库的 1.2.2 版本</span></span><br><span class="line">pod trunk delete XXXXX(pod库名字) 1.2.2</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>附录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">pod tunk session <span class="comment"># 操作相关命令</span></span><br><span class="line">Usage:</span><br><span class="line"></span><br><span class="line">    $ pod trunk COMMAND</span><br><span class="line"></span><br><span class="line">      Interact with the CocoaPods API (e.g. publishing new specs)</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">    + add-owner      Add an owner to a pod</span><br><span class="line">    + delete         Deletes a version of a pod.</span><br><span class="line">    + deprecate      Deprecates a pod.</span><br><span class="line">    + info           Returns information about a Pod.</span><br><span class="line">    + me             Display information about your sessions</span><br><span class="line">    + push           Publish a podspec</span><br><span class="line">    + register       Manage sessions</span><br><span class="line">    + remove-owner   Remove an owner from a pod</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">    --silent         Show nothing</span><br><span class="line">    --verbose        Show more debugging information</span><br><span class="line">    --no-ansi        Show output without ANSI codes</span><br><span class="line">    --<span class="built_in">help</span>           Show <span class="built_in">help</span> banner of specified <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/编译器的宏/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/23/编译器的宏/" class="post-title-link" itemprop="url">编译器的宏</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-23 15:46:30 / 修改时间：15:49:28" itemprop="dateCreated datePublished" datetime="2019-08-23T15:46:30+08:00">2019-08-23</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table>
 <thead>
 <tr>
-<th>Bundle ID</th>
-<th>是否能安全禁用</th>
-<th>应用作用</th>
-<th></th>
-<th></th>
+<th>宏</th>
+<th>说明</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>com.miui.analytics</td>
-<td>是</td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>FILE</strong></td>
+<td>文件名</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>LINE</strong></td>
+<td>行号</td>
 </tr>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td><strong>FUNCTION</strong></td>
+<td>函数名</td>
+</tr>
+<tr>
+<td><strong>DATE</strong></td>
+<td>日期</td>
+</tr>
+<tr>
+<td><strong>TIME</strong></td>
+<td>时间</td>
 </tr>
 </tbody></table>
 
-          
         
       
     </div>
 
     
-
     
     
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
   </div>
   
   
   
   </article>
 
-
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/08/其他开发工具-2019-07-08-gitignore/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/08/其他开发工具-2019-07-08-gitignore/" class="post-title-link" itemprop="url">gitignore</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-08 15:24:30 / 修改时间：15:25:52" itemprop="dateCreated datePublished" datetime="2019-07-08T15:24:30+08:00">2019-07-08</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>需要另外添加的git忽略规则</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> files on macOS</span></span><br><span class="line">.DS_Store</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/08/学习-iOS-2019-07-08-iOS-iOS中方法的可变参数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/08/学习-iOS-2019-07-08-iOS-iOS中方法的可变参数/" class="post-title-link" itemprop="url">iOS-iOS中方法的可变参数</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-08 14:26:46" itemprop="dateCreated datePublished" datetime="2019-07-08T14:26:46+08:00">2019-07-08</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-09 15:34:06" itemprop="dateModified" datetime="2019-07-09T15:34:06+08:00">2019-07-09</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://www.cnblogs.com/mkai/p/6889877.html" target="_blank" rel="noopener">https://www.cnblogs.com/mkai/p/6889877.html</a><br><a href="https://juejin.im/post/5a31cb5451882559e225a928" target="_blank" rel="noopener">https://juejin.im/post/5a31cb5451882559e225a928</a><br><a href="https://www.jianshu.com/p/31333b4ef579" target="_blank" rel="noopener">https://www.jianshu.com/p/31333b4ef579</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/08/学习-iOS-2019-07-08-iOS-NSString/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/08/学习-iOS-2019-07-08-iOS-NSString/" class="post-title-link" itemprop="url">iOS-NSString</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-08 10:42:18 / 修改时间：10:42:36" itemprop="dateCreated datePublished" datetime="2019-07-08T10:42:18+08:00">2019-07-08</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="NSString-的编码转换"><a href="#NSString-的编码转换" class="headerlink" title="NSString 的编码转换"></a>NSString 的编码转换</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//转为 UTF-8 编码</span><br><span class="line">[str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];</span><br><span class="line">//将字符串以 UTF-8 规则解码</span><br><span class="line">[str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];</span><br><span class="line">//</span><br><span class="line">[str stringByRemovingPercentEncoding]</span><br><span class="line">//</span><br><span class="line">NSString * encodedString = (NSString *)CFURLCreateStringByAddingPercentEscapes( kCFAllocatorDefault, (CFStringRef)str, NULL, NULL,  kCFStringEncodingUTF8 );</span><br><span class="line">//不知道这种方法是否正确</span><br><span class="line">NSString *unicodeStr = [NSString stringWithCString:[str UTF8String] encoding:NSUnicodeStringEncoding];</span><br></pre></td></tr></table></figure>
-
-<h4 id="NSString-文件路径相关方法"><a href="#NSString-文件路径相关方法" class="headerlink" title="NSString 文件路径相关方法"></a>NSString 文件路径相关方法</h4><ol>
-<li>pathComponents 路径转数组</li>
-<li>lastPathComponent 路径转数组后最后一个元素，详情查看 SDK 文档</li>
-<li>stringByDeletingLastPathComponent</li>
-<li>stringByAppendingPathComponent:</li>
-<li>pathExtension</li>
-</ol>
-<h4 id="NSSring-字符字节长度"><a href="#NSSring-字符字节长度" class="headerlink" title="NSSring 字符字节长度"></a>NSSring 字符字节长度</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (int)convertToInt:(NSString*)strtemp</span><br><span class="line">&#123;</span><br><span class="line">    int strlength = 0;</span><br><span class="line">    char* p = (char*)[strtemp cStringUsingEncoding:NSUnicodeStringEncoding];</span><br><span class="line">    for (int i=0 ; i&lt;[strtemp lengthOfBytesUsingEncoding:NSUnicodeStringEncoding] ;i++) &#123;</span><br><span class="line">        if (*p) &#123;</span><br><span class="line">            p++;</span><br><span class="line">            strlength++;</span><br><span class="line">        &#125;</span><br><span class="line">        else &#123;</span><br><span class="line">            p++;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br><span class="line">    return strlength;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>####Category</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">@interface NSString (MKNetworkKitAdditions)</span><br><span class="line">- (NSString *) md5;//字符串的md5</span><br><span class="line">+ (NSString*) uniqueString;</span><br><span class="line">- (NSString*) mk_urlEncodedString;//字符串urlEncode编码</span><br><span class="line">- (NSString*) urlDecodedString;//字符串urlEncode解码</span><br><span class="line">@end</span><br><span class="line">#import &quot;NSString+MKNetworkKitAdditions.h&quot;</span><br><span class="line">#import &lt;CommonCrypto/CommonDigest.h&gt;</span><br><span class="line">@implementation NSString (MKNetworkKitAdditions)</span><br><span class="line">- (NSString *) md5</span><br><span class="line">&#123;</span><br><span class="line">    const char *cStr = [self UTF8String];</span><br><span class="line">    unsigned char result[16];</span><br><span class="line">    CC_MD5( cStr, (unsigned int) strlen(cStr), result);</span><br><span class="line">    return [NSString stringWithFormat:</span><br><span class="line">            @&quot;%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x&quot;,</span><br><span class="line">            result[0], result[1], result[2], result[3],</span><br><span class="line">            result[4], result[5], result[6], result[7],</span><br><span class="line">            result[8], result[9], result[10], result[11],</span><br><span class="line">            result[12], result[13], result[14], result[15]</span><br><span class="line">            ];     </span><br><span class="line">&#125;</span><br><span class="line">+ (NSString*) uniqueString</span><br><span class="line">&#123;</span><br><span class="line">    CFUUIDRef    uuidObj = CFUUIDCreate(nil);</span><br><span class="line">    NSString    *uuidString = (__bridge_transfer NSString*)CFUUIDCreateString(nil, uuidObj);</span><br><span class="line">    CFRelease(uuidObj);</span><br><span class="line">    return uuidString;</span><br><span class="line">&#125;</span><br><span class="line">- (NSString*) mk_urlEncodedString &#123; // mk_ prefix prevents a clash with a private api</span><br><span class="line"> </span><br><span class="line">    CFStringRef encodedCFString = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,</span><br><span class="line">                                                                        (__bridge CFStringRef) self,</span><br><span class="line">                                                                        nil,</span><br><span class="line">                                                                        CFSTR(&quot;?!@#$^&amp;%*+,:;=&apos;\&quot;`&lt;&gt;()[]&#123;&#125;/\\| &quot;),</span><br><span class="line">                                                                        kCFStringEncodingUTF8);</span><br><span class="line"> </span><br><span class="line">    NSString *encodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) encodedCFString];   </span><br><span class="line">    if(!encodedString)</span><br><span class="line">        encodedString = @&quot;&quot;;   </span><br><span class="line"> </span><br><span class="line">    return encodedString;</span><br><span class="line">&#125;</span><br><span class="line">- (NSString*) urlDecodedString &#123;</span><br><span class="line">    CFStringRef decodedCFString = CFURLCreateStringByReplacingPercentEscapesUsingEncoding(kCFAllocatorDefault,</span><br><span class="line">                                                                                          (__bridge CFStringRef) self,</span><br><span class="line">                                                                                          CFSTR(&quot;&quot;),</span><br><span class="line">                                                                                          kCFStringEncodingUTF8);</span><br><span class="line"> </span><br><span class="line">    // We need to replace &quot;+&quot; with &quot; &quot; because the CF method above doesn&apos;t do it</span><br><span class="line">    NSString *decodedString = [[NSString alloc] initWithString:(__bridge_transfer NSString*) decodedCFString];   </span><br><span class="line">    return (!decodedString) ? @&quot;&quot; : [decodedString stringByReplacingOccurrencesOfString:@&quot;+&quot; withString:@&quot; &quot;];</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br></pre></td></tr></table></figure>
-
-<p>####URLEncode URLDecode</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//NSString+URL.h</span><br><span class="line">@interface NSString (URL)</span><br><span class="line">- (NSString *)URLEncodedString;</span><br><span class="line">@end</span><br><span class="line">//NSString+URL.m</span><br><span class="line">#import &quot;NSString+URL.h&quot;</span><br><span class="line">@implementation NSString (URL)</span><br><span class="line">- (NSString *)URLEncodedString</span><br><span class="line">&#123;</span><br><span class="line">    NSString *encodedString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,</span><br><span class="line">                                            (CFStringRef)self,</span><br><span class="line">                                            NULL,</span><br><span class="line">                                            (CFStringRef)@&quot;!$&amp;&apos;()*+,-./:;=?@_~%#[]&quot;,</span><br><span class="line">                                            kCFStringEncodingUTF8));</span><br><span class="line">    return encodedString;</span><br><span class="line">&#125;</span><br><span class="line">@end</span><br><span class="line">/****************************************************/</span><br><span class="line">//URLDEcode</span><br><span class="line">-(NSString *)decodeString:(NSString*)encodedString</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    //NSString *decodedString = [encodedString stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding ];</span><br><span class="line"></span><br><span class="line">    NSString *decodedString  = (__bridge_transfer NSString *)CFURLCreateStringByReplacingPercentEscapesUsingEncoding(NULL,</span><br><span class="line">                                                                                                                     (__bridge CFStringRef)encodedString,</span><br><span class="line">                                                                                                                     CFSTR(&quot;&quot;),</span><br><span class="line">                                                                                                                     CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding));</span><br><span class="line">    return decodedString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/08/学习-iOS-2019-07-08-iOS-RSA加密/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/08/学习-iOS-2019-07-08-iOS-RSA加密/" class="post-title-link" itemprop="url">iOS-RSA加密</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-08 10:39:50 / 修改时间：10:40:11" itemprop="dateCreated datePublished" datetime="2019-07-08T10:39:50+08:00">2019-07-08</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li>有用的：<a href="http://stackoverflow.com/questions/10222524/rsa-implementations-in-objective-c" target="_blank" rel="noopener">http://stackoverflow.com/questions/10222524/rsa-implementations-in-objective-c</a></li>
-<li><a href="https://developer.apple.com/library/ios/samplecode/CryptoExercise/Introduction/Intro.html" target="_blank" rel="noopener">https://developer.apple.com/library/ios/samplecode/CryptoExercise/Introduction/Intro.html</a></li>
-<li>通过终端生成RSA密钥对<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#先输入 openssl回车</span><br><span class="line">genrsa -out rsa_private_key.pem 512</span><br><span class="line">rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<ul>
-<li><p>rsa默认生成的publicKey没有头部信息，好像一般情况下服务器只能处理有头部信息的key，下面方法可以添加头部信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">unsigned char byte[]=&#123;0x30, 0x5c, 0x30, 0x0d, 0x06, 0x09, 0x2a, 0x86, 0x48, 0x86, 0xf7, 0x0d, 0x01, 0x01,</span><br><span class="line">            0x01, 0x05, 0x00, 0x03,0x4b,0x00&#125;;</span><br><span class="line">NSMutableData *da=[NSMutableData dataWithBytes:(const void *)byte length:20];</span><br><span class="line">[da appendData:rsa.publicKeyBits];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>SecKeyRef转换为NSData，要记住，相同的Identifier只能有一个key，所以在添加key之前最好根据Identifier移除一下可能有的key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">- (NSData *)getPublicKeyBitsFromKey:(SecKeyRef)givenKey &#123;</span><br><span class="line">    </span><br><span class="line">    static const uint8_t publicKeyIdentifier[] = &quot;pbk&quot;;//正确设置publicKeyIdentifier很重要</span><br><span class="line">    NSData *publicTag = [[NSData alloc] initWithBytes:publicKeyIdentifier length:sizeof(publicKeyIdentifier)];</span><br><span class="line">    </span><br><span class="line">    OSStatus sanityCheck = noErr;</span><br><span class="line">    NSData * publicKeyBits = nil;</span><br><span class="line">    </span><br><span class="line">    NSMutableDictionary * queryPublicKey = [[NSMutableDictionary alloc] init];</span><br><span class="line">    [queryPublicKey setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];</span><br><span class="line">    [queryPublicKey setObject:publicTag forKey:(__bridge id)kSecAttrApplicationTag];</span><br><span class="line">    [queryPublicKey setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];</span><br><span class="line">    </span><br><span class="line">    // Temporarily add key to the Keychain, return as data:</span><br><span class="line">    NSMutableDictionary * attributes = [queryPublicKey mutableCopy];</span><br><span class="line">    [attributes setObject:(__bridge id)givenKey forKey:(__bridge id)kSecValueRef];</span><br><span class="line">    [attributes setObject:@YES forKey:(__bridge id)kSecReturnData];</span><br><span class="line">    CFTypeRef result;</span><br><span class="line">    sanityCheck = SecItemAdd((__bridge CFDictionaryRef) attributes, &amp;result);</span><br><span class="line">    if (sanityCheck == errSecSuccess) &#123;</span><br><span class="line">        publicKeyBits = CFBridgingRelease(result);</span><br><span class="line">        </span><br><span class="line">        // Remove from Keychain again:</span><br><span class="line">        (void)SecItemDelete((__bridge CFDictionaryRef) queryPublicKey);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return publicKeyBits;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>NSData转换为SecKeyRef，要记住，相同的Identifier只能有一个key，所以在添加key之前最好根据Identifier移除一下可能有的key</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">+ (SecKeyRef)addPublicKey:(NSString *)keyName keyBits:(NSData *)publicKey</span><br><span class="line">&#123;</span><br><span class="line">    OSStatus sanityCheck = noErr;</span><br><span class="line">    SecKeyRef peerKeyRef = NULL;</span><br><span class="line">    CFTypeRef persistPeer = NULL;</span><br><span class="line">    NSAssert( keyName != nil, @&quot;Key name parameter is nil.&quot; );</span><br><span class="line">    NSAssert( publicKey != nil, @&quot;Public key parameter is nil.&quot; );</span><br><span class="line">    </span><br><span class="line">    NSData * keyTag = [[NSData alloc] initWithBytes:(const void *)[keyName UTF8String] length:[keyName length]];</span><br><span class="line">/*这里根据string生成keyTag还有一种方法</span><br><span class="line">const UInt8 publicKeyIdentifier[] = &quot;MeetingPublicKey&quot;;//Uint8类型的数组</span><br><span class="line">publicTag = [[NSData alloc] initWithBytes:publicKeyIdentifier length:sizeof(publicKeyIdentifier)];</span><br><span class="line">*/</span><br><span class="line">    NSMutableDictionary * peerPublicKeyAttr = [[NSMutableDictionary alloc] init];</span><br><span class="line">    </span><br><span class="line">    [peerPublicKeyAttr setObject:(__bridge id)kSecClassKey forKey:(__bridge id)kSecClass];//必需：未知</span><br><span class="line">    [peerPublicKeyAttr setObject:(__bridge id)kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];//必需：未知</span><br><span class="line">    [peerPublicKeyAttr setObject:keyTag forKey:(__bridge id)kSecAttrApplicationTag];//必需：是 keyTag</span><br><span class="line">    [peerPublicKeyAttr setObject:publicKey forKey:(__bridge id)kSecValueData];//必需：是</span><br><span class="line">    [peerPublicKeyAttr setObject:[NSNumber numberWithUnsignedInteger:512] forKey:(__bridge id)kSecAttrKeySizeInBits];//必需：否 默认好像是2024</span><br><span class="line">    sanityCheck = SecItemAdd((__bridge CFDictionaryRef) peerPublicKeyAttr, (CFTypeRef *)&amp;persistPeer);</span><br><span class="line">    </span><br><span class="line">    //    LOGGING_FACILITY1( sanityCheck == noErr || sanityCheck == errSecDuplicateItem, @&quot;Problem adding the app public key to the keychain, OSStatus == %ld.&quot;, sanityCheck );</span><br><span class="line">    </span><br><span class="line">    if (persistPeer)</span><br><span class="line">    &#123;</span><br><span class="line">        peerKeyRef = [SecKeyWrapper getKeyRefWithPersistentKeyRef:persistPeer];</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">    &#123;</span><br><span class="line">        [peerPublicKeyAttr removeObjectForKey:(__bridge id)kSecValueData];</span><br><span class="line">        [peerPublicKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(__bridge id)kSecReturnRef];</span><br><span class="line">        // Let&apos;s retry a different way.</span><br><span class="line">        sanityCheck = SecItemCopyMatching((__bridge CFDictionaryRef) peerPublicKeyAttr, (CFTypeRef *)&amp;peerKeyRef);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //    LOGGING_FACILITY1( sanityCheck == noErr &amp;&amp; peerKeyRef != NULL, @&quot;Problem acquiring reference to the public key, OSStatus == %ld.&quot;, sanityCheck );</span><br><span class="line">    </span><br><span class="line">    if (persistPeer)</span><br><span class="line">        CFRelease(persistPeer);</span><br><span class="line">    return peerKeyRef;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>SecKeyGetBlockSize</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//这个返回的是 Block Size 的字节数，例如一个密钥的Block Size 是512bits 那么这个方法返回的就是 64 也就是说有64个字节 也就是64*8=512 bits</span><br><span class="line">size_t SecKeyGetBlockSize(SecKeyRef key)</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/08/学习-iOS-2019-07-08-iOS-CoreText/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/08/学习-iOS-2019-07-08-iOS-CoreText/" class="post-title-link" itemprop="url">iOS-CoreText</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-08 10:38:58 / 修改时间：10:39:24" itemprop="dateCreated datePublished" datetime="2019-07-08T10:38:58+08:00">2019-07-08</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://blog.csdn.net/qq_31810357/article/details/52346738" target="_blank" rel="noopener">https://blog.csdn.net/qq_31810357/article/details/52346738</a><br><a href="https://www.jianshu.com/p/6db3289fb05d" target="_blank" rel="noopener">https://www.jianshu.com/p/6db3289fb05d</a><br><a href="https://www.cnblogs.com/tmacforever/p/4692545.html" target="_blank" rel="noopener">https://www.cnblogs.com/tmacforever/p/4692545.html</a><br><a href="https://blog.csdn.net/xiaoxiaobukuang/article/details/52461528" target="_blank" rel="noopener">https://blog.csdn.net/xiaoxiaobukuang/article/details/52461528</a><br><a href="https://yiweifen.com/html/news/WaiYu/106789.html" target="_blank" rel="noopener">https://yiweifen.com/html/news/WaiYu/106789.html</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">-(void)drawTextInRect:(CGRect)rect&#123;</span><br><span class="line">    </span><br><span class="line">    // 获取当前上下文</span><br><span class="line">    CGContextRef context = UIGraphicsGetCurrentContext();</span><br><span class="line">    </span><br><span class="line">    // 翻转坐标系</span><br><span class="line">    CGContextSetTextMatrix(context, CGAffineTransformIdentity);</span><br><span class="line">    CGContextTranslateCTM(context, 0, self.bounds.size.height);</span><br><span class="line">    CGContextScaleCTM(context, 1.0, -1.0);</span><br><span class="line">    </span><br><span class="line">    // 绘制路径</span><br><span class="line">    CGMutablePathRef path = CGPathCreateMutable();</span><br><span class="line">    CGPathAddRect(path, NULL, self.bounds);</span><br><span class="line">    </span><br><span class="line">    // 创建绘制的字符串和CTFrame</span><br><span class="line">    NSAttributedString *attString = self.attributedText;</span><br><span class="line">    CTFramesetterRef framesetter =</span><br><span class="line">    CTFramesetterCreateWithAttributedString((CFAttributedStringRef)attString);</span><br><span class="line">    CTFrameRef frame =</span><br><span class="line">    CTFramesetterCreateFrame(framesetter,</span><br><span class="line">                             CFRangeMake(0, [attString length]), path, NULL);</span><br><span class="line">    </span><br><span class="line">    CFArrayRef lines = CTFrameGetLines(frame);</span><br><span class="line">    CFIndex lineCount = CFArrayGetCount(lines);</span><br><span class="line">    </span><br><span class="line">//    CGFloat currentLine = 0;</span><br><span class="line">//    for (NSInteger i = 0; i &lt; lineCount; i ++) &#123;</span><br><span class="line">//        CTLineRef line = (__bridge CTLineRef)arrLines[i];</span><br><span class="line">//        CGRect lineFrame = CTLineGetImageBounds(line, context);</span><br><span class="line">//        NSLog(@&quot;line------%@&quot;,NSStringFromCGRect(lineFrame));</span><br><span class="line">//        currentLine += lineFrame.size.height;</span><br><span class="line">//</span><br><span class="line">//        [HEXACOLOR(0xFFE921, 0.78) set];</span><br><span class="line">//        UIBezierPath *bLine = [UIBezierPath bezierPathWithRect:CGRectMake(0, currentLine - 8, lineFrame.size.width, 8)];</span><br><span class="line">//        [bLine fill];</span><br><span class="line">//        CGContextAddPath(context, bLine.CGPath);</span><br><span class="line">//</span><br><span class="line">//    &#125;</span><br><span class="line">    </span><br><span class="line">    //获取CTLine的原点坐标</span><br><span class="line">    CGPoint lineOrigins[lineCount];</span><br><span class="line">    CTFrameGetLineOrigins(frame, CFRangeMake(0, 0), lineOrigins);</span><br><span class="line">    for (int i = 0; i &lt; lineCount; i++)&#123;</span><br><span class="line">        CGPoint point = lineOrigins[i];</span><br><span class="line">        NSLog(@&quot;point.y = %f&quot;,point.y);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for (CFIndex i = 0; i &lt; lineCount; i ++) &#123;</span><br><span class="line">        // 遍历每一行CTLine</span><br><span class="line">        CTLineRef line = CFArrayGetValueAtIndex(lines, i);</span><br><span class="line">        </span><br><span class="line">        CGFloat lineAscent;</span><br><span class="line">        CGFloat lineDescent;</span><br><span class="line">        CGFloat lineLeading; // 行距</span><br><span class="line">        // 该函数除了会设置好ascent,descent,leading之外，还会返回这行的宽度</span><br><span class="line">        CTLineGetTypographicBounds(line, &amp;lineAscent, &amp;lineDescent, &amp;lineLeading);</span><br><span class="line">        NSLog(@&quot;lineAscent = %f&quot;,lineAscent);</span><br><span class="line">        NSLog(@&quot;lineDescent = %f&quot;,lineDescent);</span><br><span class="line">        NSLog(@&quot;lineLeading = %f&quot;,lineLeading);</span><br><span class="line">        NSLog(@&quot;=============================&quot;);</span><br><span class="line">        [HEXACOLOR(0xFFE921, 0.78) set];</span><br><span class="line">        CGRect lineFrame = CTLineGetImageBounds(line, context);</span><br><span class="line">        UIBezierPath *bLine = [UIBezierPath bezierPathWithRect:CGRectMake(0, lineOrigins[i].y -4 , lineFrame.size.width, 8)];</span><br><span class="line">        [bLine fill];</span><br><span class="line">        CGContextAddPath(context, bLine.CGPath);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    // 绘制</span><br><span class="line">    CTFrameDraw(frame, context);</span><br><span class="line">    </span><br><span class="line">    // 释放内存</span><br><span class="line">    CFRelease(frame);</span><br><span class="line">    CFRelease(path);</span><br><span class="line">    CFRelease(framesetter);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/05/学习-iOS-2019-07-05-iOS-Universal-Link-通用链接/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/05/学习-iOS-2019-07-05-iOS-Universal-Link-通用链接/" class="post-title-link" itemprop="url">iOS-Universal Link 通用链接</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-05 17:49:39 / 修改时间：17:50:21" itemprop="dateCreated datePublished" datetime="2019-07-05T17:49:39+08:00">2019-07-05</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><a href="https://strivingboy.github.io/blog/2015/09/27/ios9/" target="_blank" rel="noopener">https://strivingboy.github.io/blog/2015/09/27/ios9/</a><br><a href="https://stackoverflow.com/questions/49421203/how-can-i-disable-the-open-in-app-banner-on-ios-safari-for-pages-that-support" target="_blank" rel="noopener">https://stackoverflow.com/questions/49421203/how-can-i-disable-the-open-in-app-banner-on-ios-safari-for-pages-that-support</a><br><a href="https://github.com/nordnet/cordova-universal-links-plugin/issues/2" target="_blank" rel="noopener">https://github.com/nordnet/cordova-universal-links-plugin/issues/2</a><br><a href="https://www.google.com/search?client=firefox-b-d&amp;q=Safari+open+in+app+banner" target="_blank" rel="noopener">https://www.google.com/search?client=firefox-b-d&amp;q=Safari+open+in+app+banner</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/05/牛客网-解题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/05/牛客网-解题/" class="post-title-link" itemprop="url">牛客网-解题</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-05 10:57:35" itemprop="dateCreated datePublished" datetime="2019-07-05T10:57:35+08:00">2019-07-05</time>
-            </span>
-          
-
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-07-08 18:58:58" itemprop="dateModified" datetime="2019-07-08T18:58:58+08:00">2019-07-08</time>
-              </span>
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>在一个二维数组中（每个一维数组的长度相同），每一行都按照从左到右递增的顺序排序，每一列都按照从上到下递增的顺序排序。请完成一个函数，输入这样的一个二维数组和一个整数，判断数组中是否含有该整数。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">Find</span><span class="params">(<span class="keyword">int</span> target, <span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; <span class="built_in">array</span>)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> length = <span class="built_in">array</span>.size();</span><br><span class="line">        <span class="keyword">int</span> length2 = <span class="built_in">array</span>[<span class="number">0</span>].size();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; tmpArr = <span class="built_in">array</span>[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; length2; j++) &#123;</span><br><span class="line">                <span class="keyword">int</span> tmp = tmpArr[j];</span><br><span class="line">                <span class="keyword">if</span> (target == tmp) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span> (target &lt; tmp) &#123;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后的字符串为We%20Are%20Happy。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">replaceSpace</span><span class="params">(<span class="keyword">char</span> *str,<span class="keyword">int</span> length)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> blankCount = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">                blankCount += <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = length <span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span> (str[i] == <span class="string">' '</span>) &#123;</span><br><span class="line">                blankCount -=<span class="number">1</span>;</span><br><span class="line">                str[i + blankCount * <span class="number">2</span>] = <span class="string">'%'</span>;</span><br><span class="line">                str[i + blankCount * <span class="number">2</span> + <span class="number">1</span>] = <span class="string">'2'</span>;</span><br><span class="line">                str[i + blankCount * <span class="number">2</span> + <span class="number">2</span>] = <span class="string">'0'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                str[i + blankCount * <span class="number">2</span>] = str[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入一个链表，按链表值从尾到头的顺序返回一个ArrayList。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">*  struct ListNode &#123;</span></span><br><span class="line"><span class="comment">*        int val;</span></span><br><span class="line"><span class="comment">*        struct ListNode *next;</span></span><br><span class="line"><span class="comment">*        ListNode(int x) :</span></span><br><span class="line"><span class="comment">*              val(x), next(NULL) &#123;</span></span><br><span class="line"><span class="comment">*        &#125;</span></span><br><span class="line"><span class="comment">*  &#125;;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; printListFromTailToHead(ListNode* head) &#123;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; arrayList;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> arrayList;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">do</span> &#123;</span><br><span class="line">            arrayList.push_back(head-&gt;val);</span><br><span class="line">        &#125; <span class="keyword">while</span> ((head = head-&gt;next));</span><br><span class="line">        reverse(arrayList.begin(), arrayList.end());</span><br><span class="line">        <span class="keyword">return</span> arrayList;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>输入某二叉树的前序遍历和中序遍历的结果，请重建出该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如输入前序遍历序列{1,2,4,7,3,5,6,8}和中序遍历序列{4,7,2,1,5,3,8,6}，则重建二叉树并返回。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">TreeNode</span> &#123;</span></span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">     TreeNode *left;</span><br><span class="line">     TreeNode *right;</span><br><span class="line">     TreeNode(<span class="keyword">int</span> x) : val(x), left(<span class="literal">NULL</span>), right(<span class="literal">NULL</span>) &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">TreeNode* <span class="title">reConstructBinaryTree</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; pre,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; vin)</span> </span>&#123;</span><br><span class="line">        TreeNode *node = <span class="keyword">new</span> TreeNode(pre[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">int</span> rootIndexInVin = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i =<span class="number">0</span>; i&lt;vin.size(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (node-&gt;val == vin[i]) rootIndexInVin = i;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; leftVin;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; leftPre;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; rightVin;</span><br><span class="line">        <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; rightPre;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; rootIndexInVin; i++) &#123;</span><br><span class="line">            leftVin.push_back(vin[i]);</span><br><span class="line">            leftPre.push_back(pre[i + <span class="number">1</span>]);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = rootIndexInVin + <span class="number">1</span>; i &lt; vin.size(); i++) &#123;</span><br><span class="line">            rightVin.push_back(vin[i]);</span><br><span class="line">            rightPre.push_back(pre[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (leftPre.size() != <span class="number">0</span> &amp;&amp; leftVin.size() != <span class="number">0</span>) &#123;</span><br><span class="line">            node-&gt;left = reConstructBinaryTree(leftPre, leftVin);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (rightPre.size() != <span class="number">0</span> &amp;&amp; rightVin.size() != <span class="number">0</span>) &#123;</span><br><span class="line">            node-&gt;right = reConstructBinaryTree(rightPre, rightVin);</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> node;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用两个栈来实现一个队列，完成队列的Push和Pop操作。 队列中的元素为int类型。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> node)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (stack2.size()) &#123;</span><br><span class="line">            <span class="keyword">int</span> value = stack2.top();</span><br><span class="line">            stack2.pop();</span><br><span class="line">            stack1.push(value);</span><br><span class="line">        &#125;</span><br><span class="line">        stack1.push(node);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (stack1.size()) &#123;</span><br><span class="line">            <span class="keyword">int</span> value = stack1.top();</span><br><span class="line">            stack1.pop();</span><br><span class="line">            stack2.push(value);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> value = stack2.top();</span><br><span class="line">        stack2.pop();</span><br><span class="line">        <span class="keyword">return</span> value;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack1;</span><br><span class="line">    <span class="built_in">stack</span>&lt;<span class="keyword">int</span>&gt; stack2;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/03/学习-Shell-2019-07-03-Shell-Shell通用快捷键/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/03/学习-Shell-2019-07-03-Shell-Shell通用快捷键/" class="post-title-link" itemprop="url">Shell-Shell通用快捷键</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-03 15:12:42 / 修改时间：15:13:09" itemprop="dateCreated datePublished" datetime="2019-07-03T15:12:42+08:00">2019-07-03</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Shell-通用快捷键"><a href="#Shell-通用快捷键" class="headerlink" title="Shell 通用快捷键"></a>Shell 通用快捷键</h2><ul>
-<li>登出会话：<kbd>Ctrl</kbd>+<kbd>a</kbd>+<kbd>d</kbd></li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-CMD和PowerShell-2019-07-02-Windows-CMD常用命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/07/02/学习-CMD和PowerShell-2019-07-02-Windows-CMD常用命令/" class="post-title-link" itemprop="url">Windows-CMD常用命令</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-
-          
-          
-          
-
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-02 17:48:26 / 修改时间：17:52:01" itemprop="dateCreated datePublished" datetime="2019-07-02T17:48:26+08:00">2019-07-02</time>
-            </span>
-          
-
-          
-            
-
-            
-          
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          <br>
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h1><h2 id="一行中多条-CMD-命令"><a href="#一行中多条-CMD-命令" class="headerlink" title="一行中多条 CMD 命令"></a>一行中多条 CMD 命令</h2><pre><code>&amp;&amp; 前命令成功后继续
-&amp; 同时执行（好像是连在一起的命令是在同时执行）
-| 以前命令为后命令的参数
-|| 前命令成功则不执行后命令
-&gt;，&gt;&gt; 输出的</code></pre><h2 id="获取年月日时分秒"><a href="#获取年月日时分秒" class="headerlink" title="获取年月日时分秒"></a>获取年月日时分秒</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set yyyy=%date:~0,4%</span><br><span class="line">set mm=%date:~5,2%</span><br><span class="line">set dd=%date:~8,2%</span><br><span class="line">set hh=%time:~0,2%</span><br><span class="line">set ss=%time:~3,2%</span><br><span class="line">&quot;imagex.exe&quot; /capture &quot;.\MM&quot; .\MM.wim    &quot;%yyyy%%mm%%dd%-%hh%%ss%&quot;</span><br><span class="line">@pause</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
-
 
 
           </div>
           
 
         </div>
-        
           
   
   <div class="sidebar-toggle">
@@ -1902,348 +1302,62 @@
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
+  <aside class="sidebar">
     <div class="sidebar-inner">
 
-      
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
 
-      
-
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">DNACore</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">188</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">131</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
       </div>
+      <!--/noindex-->
 
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
       
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
 
-      
+
+
+      </div>
 
     </div>
   </aside>
-  
+  <div id="sidebar-dimmer"></div>
 
 
-        
       </div>
     </main>
 
@@ -2254,27 +1368,16 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
-
-  
-
-  
 </div>
-
-
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-
-
-
   <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.2.0</div>
-
-
-
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
 
         
+
+
+
+
 
 
 
@@ -2286,28 +1389,19 @@
         
       </div>
     </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-    
-
-    
   </div>
 
   
 
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
+
+  <script src="/lib/anime.min.js?v=3.1.0"></script>
+<script src="/js/utils.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js?v=7.4.0"></script>
+<script src="/js/next-boot.js?v=7.4.0"></script>
+
+
+
+  
 
 
 
@@ -2316,10 +1410,7 @@
 
 
 
-
-
-
-
+  <script src="/js/local-search.js?v=7.4.0"></script>
 
 
 
@@ -2335,404 +1426,11 @@
 
 
   
-  <script src="/lib/jquery/index.js?v=3.4.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
-  
-
-
-  <script src="/js/utils.js?v=7.2.0"></script>
-
-  <script src="/js/motion.js?v=7.2.0"></script>
-
-
-
-  
-  
-
-
-  <script src="/js/affix.js?v=7.2.0"></script>
-
-  <script src="/js/schemes/pisces.js?v=7.2.0"></script>
-
-
 
   
 
   
 
-
-  <script src="/js/next-boot.js?v=7.2.0"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
 </body>
 </html>
