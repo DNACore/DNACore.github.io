@@ -228,6 +228,328 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/03/Xcode与调试-2019-06-03-Instruments-只显示内存地址不显示方法名问题解决办法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/06/03/Xcode与调试-2019-06-03-Instruments-只显示内存地址不显示方法名问题解决办法/" class="post-title-link" itemprop="url">Instruments-只显示内存地址不显示方法名问题解决办法</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-03 15:31:54 / 修改时间：15:42:58" itemprop="dateCreated datePublished" datetime="2019-06-03T15:31:54+08:00">2019-06-03</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>需要工程生成 dSYM 文件，Instruments 才能正常地根据内存地址找到方法名。<br>默认情况下，debug 模式是不生成 dSYM 文件的。稍作修改即可。</p>
+</li>
+<li><p>Instruments 寻找 dSYM 文件，依赖的是系统的 Spotlight，如果将 dSYM 文件所在的路径排除在了 Spotlight 索引之外，那么 Instruments 也是不能寻找到的。<br>针对这中原因引起的问题，有两个解决办法：</p>
+<ol>
+<li>手动设置 dSYM 文件的位置<br> 先运行 Instruments ，正常捕获一下程序，再点击停止。选择 File -&gt; Symbols…<br> <img src="/images/Instruments-MemAdrressMethodName1.png" alt="选择Symbols…"><br> 在对应的窗口中，手动设置 dSYM 文件的位置，重新运行即可。<br> <img src="/images/Instruments-MemAdrressMethodName2.png" alt="重新设置dSYM位置"></li>
+<li>设置Instruments 搜索 dSYM 文件的路径<br> <img src="/images/Instruments-MemAdrressMethodName3.png" alt="重新设置dSYM搜索路径"></li>
+</ol>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit基本概念梳理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit基本概念梳理/" class="post-title-link" itemprop="url">iOS-ARKit基本概念梳理</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-30 17:22:19 / 修改时间：17:45:51" itemprop="dateCreated datePublished" datetime="2019-05-30T17:22:19+08:00">2019-05-30</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="ARKit-基本概念梳理"><a href="#ARKit-基本概念梳理" class="headerlink" title="ARKit 基本概念梳理"></a>ARKit 基本概念梳理</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>这些概念没有在网上找到明确的说法，都是我自己实验得出来的。</p>
+<ul>
+<li>坐标原点</li>
+</ul>
+<p>默认坐标原点，即(0, 0, 0)的位置是屏幕中心。<br>x 轴方向向右<br>y 轴方向向上<br>z 轴方向向后</p>
+<p>设置一个node的位置，其实是设置它中心点的位置。<br>SCNText 类型的node，锚点为左下角。<br>SCNBox 锚点为中心<br>SCNNPlane 锚点为中心</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit使用指南/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit使用指南/" class="post-title-link" itemprop="url">iOS-ARKit使用指南</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-30 17:22:05 / 修改时间：17:31:04" itemprop="dateCreated datePublished" datetime="2019-05-30T17:22:05+08:00">2019-05-30</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/25/电脑技巧-macOS-2019-05-25-macOS-launchctl启动项管理工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/05/25/电脑技巧-macOS-2019-05-25-macOS-launchctl启动项管理工具/" class="post-title-link" itemprop="url">macOS-launchctl启动项管理工具</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-25 15:22:42" itemprop="dateCreated datePublished" datetime="2019-05-25T15:22:42+08:00">2019-05-25</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-09 15:29:17" itemprop="dateModified" datetime="2019-08-09T15:29:17+08:00">2019-08-09</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>打印当前用户禁用的启动项</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl <span class="built_in">print</span>-disabled <span class="string">"user/<span class="variable">$(id -u)</span>"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动一个启动项</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl kickstart -p <span class="string">"user/<span class="variable">$(id -u)</span>"</span>/org.whatpulse.ChmodBPF</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>其它： service-name service-target 区别<br><a href="https://apple.stackexchange.com/questions/166397/what-is-the-difference-between-a-service-name-and-a-service-target" target="_blank" rel="noopener">https://apple.stackexchange.com/questions/166397/what-is-the-difference-between-a-service-name-and-a-service-target</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/24/Xcode与调试-2019-05-24-Xcode-缓存清理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -757,316 +1079,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/学习-Shell-2019-05-21-Shell-du文件及文件夹大小统计命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/学习-Shell-2019-05-21-Shell-du文件及文件夹大小统计命令/" class="post-title-link" itemprop="url">Shell-du文件及文件夹大小统计命令</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 15:04:01 / 修改时间：15:05:01" itemprop="dateCreated datePublished" datetime="2019-05-21T15:04:01+08:00">2019-05-21</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="https://www.cnblogs.com/peida/archive/2012/12/10/2810755.html" target="_blank" rel="noopener">https://www.cnblogs.com/peida/archive/2012/12/10/2810755.html</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/学习-iOS-2019-05-21-iOS-UIApplication/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/学习-iOS-2019-05-21-iOS-UIApplication/" class="post-title-link" itemprop="url">iOS-UIApplication</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 13:32:38 / 修改时间：13:33:48" itemprop="dateCreated datePublished" datetime="2019-05-21T13:32:38+08:00">2019-05-21</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>调起Safari打开链接<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>]];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/其他开发工具-2019-05-09-Rust/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/09/其他开发工具-2019-05-09-Rust/" class="post-title-link" itemprop="url">Rust</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-09 16:52:02 / 修改时间：16:53:04" itemprop="dateCreated datePublished" datetime="2019-05-09T16:52:02+08:00">2019-05-09</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>安装<br>rust安装，因为被墙的原因，在国内几乎很难安装，需要通过代理安装。但是rustup却很容易，一般在linux下，通过官方指定的下列语句，基本可以安装rustup。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSf https://sh.rustup.rs | sh</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/学习-iOS-2019-05-09-iOS-NSHTTPCookie/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/09/学习-iOS-2019-05-09-iOS-NSHTTPCookie/" class="post-title-link" itemprop="url">iOS-NSHTTPCookie</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-09 16:50:20" itemprop="dateCreated datePublished" datetime="2019-05-09T16:50:20+08:00">2019-05-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-21 15:31:13" itemprop="dateModified" datetime="2019-05-21T15:31:13+08:00">2019-05-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>默认情况下 cookie 有效期是程序运行的生命周期，程序结束运行之后，cookie便失效了。可以将 cookie 的有效期设置为<code>[NSDate distantFuture]</code>，来使 cookie 永不过期。<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[cookieProperties setObject:[<span class="built_in">NSDate</span> distantFuture] forKey:<span class="built_in">NSHTTPCookieExpires</span>];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1116,7 +1128,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1129,7 +1141,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-count">144</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

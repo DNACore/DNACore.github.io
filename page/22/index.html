@@ -228,6 +228,414 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/16/学习-Shell-2018-10-16-Shell-SSH技巧/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/10/16/学习-Shell-2018-10-16-Shell-SSH技巧/" class="post-title-link" itemprop="url">SSH技巧</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-16 19:26:19" itemprop="dateCreated datePublished" datetime="2018-10-16T19:26:19+08:00">2018-10-16</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-30 10:37:06" itemprop="dateModified" datetime="2019-07-30T10:37:06+08:00">2019-07-30</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h1><p>其他参考资源：<br><a href="https://blog.csdn.net/pipisorry/article/details/52269785" target="_blank" rel="noopener">https://blog.csdn.net/pipisorry/article/details/52269785</a></p>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li><p>SSH相关的命令<br>ssh-add<br>ssh-keygen</p>
+</li>
+<li><p>SSH相关的配置文件<br>config<br>known_hosts</p>
+</li>
+</ul>
+<h2 id="ssh-add-命令"><a href="#ssh-add-命令" class="headerlink" title="ssh-add 命令"></a>ssh-add 命令</h2><p>所有命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">usage: ssh-add [options] [file ...]</span><br><span class="line">Options:</span><br><span class="line">  -l          List fingerprints of all identities.</span><br><span class="line">  -E hash     Specify hash algorithm used for fingerprints.</span><br><span class="line">  -L          List public key parameters of all identities.</span><br><span class="line">  -k          Load only keys and not certificates.</span><br><span class="line">  -c          Require confirmation to sign using identities</span><br><span class="line">  -t life     Set lifetime (in seconds) when adding identities.</span><br><span class="line">  -d          Delete identity.</span><br><span class="line">  -D          Delete all identities.</span><br><span class="line">  -x          Lock agent.</span><br><span class="line">  -X          Unlock agent.</span><br><span class="line">  -s pkcs11   Add keys from PKCS#11 provider.</span><br><span class="line">  -e pkcs11   Remove keys provided by PKCS#11 provider.</span><br><span class="line">  -A          Add all identities stored in your keychain.</span><br><span class="line">  -K          Store passphrases in your keychain.</span><br><span class="line">              With -d, remove passphrases from your keychain.</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ssh-add -K [rsa_pub]<br>将公钥文件添加到KeyChain，由KeyChain进行管理</li>
+</ul>
+<h2 id="ssh-keygen-命令"><a href="#ssh-keygen-命令" class="headerlink" title="ssh-keygen 命令"></a>ssh-keygen 命令</h2><ul>
+<li>查看密钥的指纹信息 fingerprint<br><code>ssh-keygen -lf ~/.ssh/id_rsa.pub</code><br>或者<br><code>ssh-keygen -E md5 -lf &lt;fileName&gt;</code><br>参考：<a href="https://stackoverflow.com/questions/9607295/how-do-i-find-my-rsa-key-fingerprint" target="_blank" rel="noopener">https://stackoverflow.com/questions/9607295/how-do-i-find-my-rsa-key-fingerprint</a></li>
+</ul>
+<h2 id="ssh-命令"><a href="#ssh-命令" class="headerlink" title="ssh 命令"></a>ssh 命令</h2><ul>
+<li><p>测试配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T [Host_Name]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>debug模式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -vT [Host_Name]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>测试本地<code>sshd_config</code>配置<code>sudo sshd -t</code></p>
+</li>
+<li><p>重启<code>sshd</code>服务<code>sudo service ssh restart</code></p>
+</li>
+<li><p>压缩ssh协议传输以适应低带宽：<code>ssh -C</code></p>
+</li>
+</ul>
+<h2 id="ssh-keygen-生成证书"><a href="#ssh-keygen-生成证书" class="headerlink" title="ssh-keygen 生成证书"></a>ssh-keygen 生成证书</h2><p><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key" target="_blank" rel="noopener">https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key</a></p>
+<ol>
+<li><p>输入如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+<h2 id="config-配置文件"><a href="#config-配置文件" class="headerlink" title="config 配置文件"></a>config 配置文件</h2><h3 id="ssh-同一个git域名使用多个证书"><a href="#ssh-同一个git域名使用多个证书" class="headerlink" title="ssh 同一个git域名使用多个证书"></a>ssh 同一个git域名使用多个证书</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#git@GitHub_AirIO</span><br><span class="line"># git is username</span><br><span class="line"># GitHub_AirIO is the host name</span><br><span class="line">Host GitHub_AirIO</span><br><span class="line">    HostName github.com</span><br><span class="line">    #Port 22 默认端口号是22</span><br><span class="line">    IdentityFile ~/.ssh/id_rsa_AirIO</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明：</strong>配置文件里面<code>Host</code>指的是git托管网站域名的别名，因为我们可能在一台电脑上有多个同一个域名下的git账户，这个时候就要用<code>Host</code>来区分这些账户。<br>相对应的，git仓库里面配置的git地址也要用别名，当对远程git仓库进行操作的时候，git程序会查找config配置文件里面别名对应的host。<br>举个例子，一下全部是使用ssh来管理git的情况：<br>默认情况下，我们的git地址是类似于<code>git@github.com:AirIO/AirIO.github.io.git</code>这样的地址格式，解析的时候它会从<code>github.com</code>域名下查找路径为<code>AirIO/AirIO.github.io.git</code>的仓库，然后使用SSH配置的密钥来操作仓库。<br>但是SSH针对一个域名只能绑定一个密钥对。如果我在github上又有另外一个账号MyGitHub2该怎么办？github上的密钥对已经配置成AirIO的了。<br>这个时候config文件就有个别名的概念，我们可以按照如下规则来配置config文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Host GitHubAccount_1</span><br><span class="line">    HostName github.com</span><br><span class="line">    IdentityFile ~/.ssh/GitHubAccount_1_Key</span><br><span class="line"></span><br><span class="line">Host GitHubAccount_2</span><br><span class="line">    HostName github.com</span><br><span class="line">    IdentityFile ~/.ssh/GitHubAccount_2_Key</span><br></pre></td></tr></table></figure>
+
+<p>相对应的，我们git仓库的配置文件(注意，不是SSH的config配置文件)里面的git仓库地址也要小小做一下修改：<br><code>git@github.com:AirIO/AirIO.github.io.git</code><br>改为<br><code>git@GitHubAccount_1:AirIO/AirIO.github.io.git</code></p>
+<p><code>git@github.com:MyGitHub2/MyGitHub2.git</code><br>改为<br><code>git@GitHubAccount_2:MyGitHub2/MyGitHub2.git</code><br>这样修改之后，当git再更新远程仓库的时候，会查找每个账户对应的SSH密钥。最终访问的域名还是<code>github.com</code></p>
+<p>当执行<code>ssh -T git@GitHub_AirIO</code>的时候，会从config文件里面查找Host为<code>GitHub_AirIO</code>的配置，而不是去查找Host为<code>git@GitHub_AirIO</code>的配置，因为git是用户名（默认情况下用户名都为git而不是git网站上自己账户的用户名）,<code>GitHub_AirIO</code>才是 Host。这一点一定要注意.</p>
+<h3 id="使-ssh-命令通过代理"><a href="#使-ssh-命令通过代理" class="headerlink" title="使 ssh 命令通过代理"></a>使 ssh 命令通过代理</h3><p>只需将下面的配置，添加到 <del>/.ssh/config 中即可（</del> 在 Windows 中为 C:/User/当前用户 的文件夹），如果没有这个文件，请先新建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ProxyCommand connect -S 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li><p>编辑<code>~/.ssh/config</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Host remhost</span><br><span class="line">  HostName              my.host.com</span><br><span class="line">  User                  myuser</span><br><span class="line">  ProxyCommand          nc -v -X 5 -x proxy-ip:1080 %h %p 2&gt; ssh-err.log</span><br><span class="line">  ServerAliveInterval   120</span><br><span class="line">  ForwardX11            yes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>直接通过命令行设置当前会话的代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh USER@FINAL_DEST -o &quot;ProxyCommand=nc -X connect -x PROXYHOST:PROXYPORT %h %p&quot;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>参考：<a href="https://stackoverflow.com/questions/19161960/connect-with-ssh-through-a-proxy" target="_blank" rel="noopener">https://stackoverflow.com/questions/19161960/connect-with-ssh-through-a-proxy</a></p>
+<h3 id="设置-ssh-的加密策略"><a href="#设置-ssh-的加密策略" class="headerlink" title="设置 ssh 的加密策略"></a>设置 ssh 的加密策略</h3><p>参考： <a href="https://blog.gtwang.org/linux/sshd-disable-arcfour-cipher-tutorial/" target="_blank" rel="noopener">https://blog.gtwang.org/linux/sshd-disable-arcfour-cipher-tutorial/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 排除 arcfour</span></span><br><span class="line">Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc</span><br></pre></td></tr></table></figure>
+
+<h2 id="known-hosts-配置文件"><a href="#known-hosts-配置文件" class="headerlink" title="known_hosts 配置文件"></a>known_hosts 配置文件</h2><p>known_hosts 用作客户端对服务器的校验，以确认客户端连接到了正常的服务器。</p>
+<h2 id="ssh-密钥文件权限"><a href="#ssh-密钥文件权限" class="headerlink" title="ssh 密钥文件权限"></a>ssh 密钥文件权限</h2><p>有时候提示如下</p>
+<blockquote>
+<p>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>@ WARNING: UNPROTECTED PRIVATE KEY FILE! @<br>@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@<br>Permissions 0777 for ‘<em>’ are too open.<br>It is required that your private key files are NOT accessible by others.<br>This private key will be ignored.<br>Load key “</em>”: bad permissions<br>Permission denied (publickey).</p>
+</blockquote>
+<p>问题原因：有可能是备份恢复文件或者其他操作修改了文件权限。<br>解决步骤：执行如下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 将权限修改为 400 或者 600(推荐)</span></span><br><span class="line">chmod 600 ./id-rsa</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/15/学习-iOS-2018-10-15-AppStore和iTunesConnect问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/10/15/学习-iOS-2018-10-15-AppStore和iTunesConnect问题/" class="post-title-link" itemprop="url">AppStore和iTunesConnect问题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-15 13:50:32" itemprop="dateCreated datePublished" datetime="2018-10-15T13:50:32+08:00">2018-10-15</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-11-09 14:14:21" itemprop="dateModified" datetime="2018-11-09T14:14:21+08:00">2018-11-09</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>Invalid Swift Support - The SwiftSupport folder is missing<br>情景：用打包机打包之后上传到 iTC 不一会儿苹果就发邮件提示此错误。<br>排查：偶然用自己电脑打包，发现生成的ipa包比在打包机上生成的包大很多，把两个包解压对比下，发现自己电脑上f打出来的包有 SwiftSupport 文件夹，而打包机上打出来的包没有。<br>接着自己用命令打包，按照打包机上的archive进行打包，发现本机上打出来的包是有 SwiftSupport 文件夹的，难道是导出时候的问题？<br>接着，又执行了下打包机上的导出包exportArchive命令，发现导出的包也是正常的。除了<code>-exportOptionsPlist</code>这个参数不同外，其余参数都是相通的，那么很可能问题就是出在这个 plist 配置文件上。<br>原因：<br>解决：<br>结果：</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/09/27/Xcode与调试-2018-09-27-Xcoed运行时警告/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/09/27/Xcode与调试-2018-09-27-Xcoed运行时警告/" class="post-title-link" itemprop="url">Xcoed运行时警告</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-09-27 16:05:59" itemprop="dateCreated datePublished" datetime="2018-09-27T16:05:59+08:00">2018-09-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-05-09 16:55:55" itemprop="dateModified" datetime="2019-05-09T16:55:55+08:00">2019-05-09</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Xcode-运行时警告"><a href="#Xcode-运行时警告" class="headerlink" title="Xcode 运行时警告"></a>Xcode 运行时警告</h1><ul>
+<li><code>Class AAA is implemented in both BBB and CCC. One of the two will be used. Which one is undefined.</code><br>原因：同一个类的实现有两个，系统只会选择一个。实现分别在 <code>BBB</code> 和 <code>CCC</code> 里面。<br>解决：找到这两个实现，删除其中一个即可。更多的情况是，一份实现是以 <code>.m</code> 文件存在的，另一份实现是以静态库存在的。<br>参考： <a href="https://stackoverflow.com/questions/30581884/class-is-implemented-in-both-one-of-the-two-will-be-used" target="_blank" rel="noopener">https://stackoverflow.com/questions/30581884/class-is-implemented-in-both-one-of-the-two-will-be-used</a></li>
+</ul>
+<h2 id="dyld-Library-not-loaded"><a href="#dyld-Library-not-loaded" class="headerlink" title="dyld: Library not loaded"></a><code>dyld: Library not loaded</code></h2><p><strong>问题描述：</strong><br>@rpath/Charts.framework/Charts<br>Referenced from: /var/containers/Bundle/Application/FEFF646B-5902-4015-B159-C141EB0E8DC0/test.app/test<br>Reason: image not found<br><strong>解决：</strong><br>在 TARGETS —&gt; General —&gt; Embedded Binaries 下，点击 + 按钮，选择 Charts.framework就可以解决问题</p>
+<ul>
+<li><p><code>A valid provisioning profile for this executable was not found for debug mode</code><br>看看设备的时间是否正确。<br>参考：<a href="https://stackoverflow.com/questions/4167466/a-valid-provisioning-profile-for-this-executable-was-not-found-for-debug-mode" target="_blank" rel="noopener">https://stackoverflow.com/questions/4167466/a-valid-provisioning-profile-for-this-executable-was-not-found-for-debug-mode</a></p>
+</li>
+<li><p>问题 <code>Error Domain=WebKitErrorDomain Code=101 &quot;The URL can’t be shown&quot;</code><br>问题描述：</p>
+<blockquote>
+<p>Printing description of error:<br>Error Domain=WebKitErrorDomain Code=101 “The URL can’t be shown” UserInfo={NSErrorFailingURLStringKey=hhrdkscheme://showTitleBar?show=1, NSLocalizedDescription=The URL can’t be shown, NSErrorFailingURLKey=hhrdkscheme://showTitleBar?show=1}</p>
+</blockquote>
+</li>
+</ul>
+<p>问题原因：有不能加载的url，比如说协议不正确。例如：加载了app的自定义协议。<br>解决办法：处理不能加载的协议<code>shouldStartLoadWithRequest:</code>返回个<code>NO</code>.<br>解决结果：问题解决。</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/05/16/手机技巧-2017-05-16-安卓手机使用指导/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2017/05/16/手机技巧-2017-05-16-安卓手机使用指导/" class="post-title-link" itemprop="url">安卓手机使用指导</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-05-16 14:46:47 / 修改时间：14:47:37" itemprop="dateCreated datePublished" datetime="2017-05-16T14:46:47+08:00">2017-05-16</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="手机的使用"><a href="#手机的使用" class="headerlink" title="手机的使用"></a>手机的使用</h1><p>[TOC]</p>
+<h2 id="上网"><a href="#上网" class="headerlink" title="上网"></a>上网</h2><p>可以用来上网的软件</p>
+<ul>
+<li>Chrome 又叫谷歌浏览器<br>图标： <img src="http://image.coolapk.com/apk_logo/2015/0319/12202_1426725560_477.png" alt="Chrome浏览器"></li>
+<li>X浏览器<br>图标：<img src="http://image.coolapk.com/apk_logo/2015/0804/12202_1438676029_0151.png" alt="X浏览器"></li>
+</ul>
+<h2 id="听音乐"><a href="#听音乐" class="headerlink" title="听音乐"></a>听音乐</h2><ul>
+<li>网易云音乐</li>
+</ul>
+<h2 id="管理手机"><a href="#管理手机" class="headerlink" title="管理手机"></a>管理手机</h2><h3 id="管理手机上的软件"><a href="#管理手机上的软件" class="headerlink" title="管理手机上的软件"></a>管理手机上的软件</h3><ul>
+<li>酷安<br>图标：<img src="http://image.coolapk.com/apk_logo/2016/0108/12202_1452248424_4592.png" alt="enter image description here"></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/05/16/学习-iOS-2017-05-16-iOS-找到某个view对应的ViewController/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -779,426 +1187,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/14/学习-iOS-2017-03-14-iOS-创建推送证书教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/03/14/学习-iOS-2017-03-14-iOS-创建推送证书教程/" class="post-title-link" itemprop="url">iOS 创建推送证书教程</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-14 13:41:29 / 修改时间：13:55:31" itemprop="dateCreated datePublished" datetime="2017-03-14T13:41:29+08:00">2017-03-14</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="iOS-创建推送证书教程"><a href="#iOS-创建推送证书教程" class="headerlink" title="iOS 创建推送证书教程"></a>iOS 创建推送证书教程</h1><p>此教程帮助大家创建iOS设备在开发测试环境和生产环境使用的推送证书。</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>每次我们向苹果申请证书，都需要生成一个证书请求文件。通过这个文件来获取我们需要的证书。</p>
-<h3 id="创建证书请求文件"><a href="#创建证书请求文件" class="headerlink" title="创建证书请求文件"></a>创建证书请求文件</h3><ol>
-<li>打开钥匙串</li>
-<li>在菜单栏的 钥匙串访问 中选中 证书助理 –&gt; 从证书颁发机构请求证书…<br><img src="http://pic.yupoo.com/picpop_v/Giii1bys/DddOs.jpg" alt="1"></li>
-<li>在弹出的窗口中，填写好你的电子邮件地址，并且一定要选中 存储到磁盘 。我们稍后会用到生成的请求文件。<br><img src="http://pic.yupoo.com/picpop_v/Giii1mP6/3Xl4n.jpg" alt="2"></li>
-<li>点击继续，提示我们选择一个存储位置，这里我们选择存储到桌面上，点存储。<br><img src="http://pic.yupoo.com/picpop_v/Giii1q3a/GJ6ma.jpg" alt="3"></li>
-<li>提示创建成功，我们可以关闭窗口了。<br><img src="http://pic.yupoo.com/picpop_v/Giii1sT7/Ku31O.jpg" alt="4"></li>
-</ol>
-<h2 id="创建-APS-证书"><a href="#创建-APS-证书" class="headerlink" title="创建 APS 证书"></a>创建 APS 证书</h2><ol>
-<li>打开开发者网站的证书页面<br> <a href="https://developer.apple.com/account/ios/certificate/" target="_blank" rel="noopener">https://developer.apple.com/account/ios/certificate/</a></li>
-<li>点击右上方的 ＋ 号开始创建证书。<br><img src="http://pic.yupoo.com/picpop_v/Giii1vJh/CjVlo.jpg" alt="5"></li>
-<li>在新页面中，有两种类型的推送证书可供我们选择。这里我们选择前面一种，也就是测试环境下的证书。<ol>
-<li>Apple Push Notifiction service SSL (Sandbox) 测试用推送证书</li>
-<li>Apple Push Notifiction service SSL (Sandbox &amp; Production) 生产环境证书<br><img src="http://pic.yupoo.com/picpop_v/GiiigsOP/rUJuu.jpg" alt="6"></li>
-</ol>
-</li>
-<li>点击 Continue 进入下一个页面，要我们选择需要针对哪个 app 来创建推送证书，推送证书不支持通用 Bundle ID。选择好你对用的 Bundle ID 点击 Continue。<br><img src="http://pic.yupoo.com/picpop_v/GiiigwNs/NozHR.jpg" alt="7"></li>
-<li>这里提示我们要创建一个 CSR 文件。我们上面意境创建过了，直接点击 Continue。<br><img src="http://pic.yupoo.com/picpop_v/GiiigKvL/13JLT6.jpg" alt="8"></li>
-<li>点击 <code>chose file...</code> 选择在上面一部分我们保存好的证书请求文件。之后点击 Continue。</li>
-<li>至此，推送证书就创建完成，点击 <code>Download</code> 下载我们创建好的证书，点击 Done 完成。双击下载的证书即可自动导入钥匙串中。<br><img src="http://pic.yupoo.com/picpop_v/GiiigOlT/hmGKV.jpg" alt="9"></li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/14/学习-iOS-2017-03-14-动态改变导航栏的颜色和透明度/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/03/14/学习-iOS-2017-03-14-动态改变导航栏的颜色和透明度/" class="post-title-link" itemprop="url">动态改变导航栏的颜色和透明度</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-14 11:23:04 / 修改时间：11:24:00" itemprop="dateCreated datePublished" datetime="2017-03-14T11:23:04+08:00">2017-03-14</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="动态改变导航栏的颜色和透明度"><a href="#动态改变导航栏的颜色和透明度" class="headerlink" title="动态改变导航栏的颜色和透明度"></a>动态改变导航栏的颜色和透明度</h1><p>有一些应用在我们推拉滑动列表的时候会发现导航栏随着滑动的动作改变颜色和透明度。<br>这种效果其实实现起来是比较简单的。<br>这里利用的是 UIScrollview 的代理。每当 UIScrollView 滑动的时候就会掉用<code>- (void)scrollViewDidScroll:(UIScrollView *)scrollView</code>这个方法。我们只要在这个代理里面获取到 UIScrollView 的偏移量，根据偏移量来设置导航栏的颜色和透明度。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)scrollViewDidScroll:(<span class="built_in">UIScrollView</span> *)scrollView&#123;</span><br><span class="line">    <span class="comment">//先获取y轴偏移</span></span><br><span class="line">    <span class="built_in">CGFloat</span> yOffset  = scrollView.contentOffset.y;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//设置透明度</span></span><br><span class="line">    <span class="built_in">CGFloat</span> alpha = fabs(yOffset)/<span class="number">88.</span>f;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//设置导航栏的图片</span></span><br><span class="line">    [<span class="keyword">self</span>.navigationController.navigationBar setBackgroundImage:[<span class="keyword">self</span> imageWithColor:[[<span class="built_in">UIColor</span> orangeColor]colorWithAlphaComponent:alpha]] forBarMetrics:<span class="built_in">UIBarMetricsDefault</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/08/学习-其他零散知识-2017-03-08-堆和栈的区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/03/08/学习-其他零散知识-2017-03-08-堆和栈的区别/" class="post-title-link" itemprop="url">堆和栈的区别</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-08 10:29:27 / 修改时间：10:34:48" itemprop="dateCreated datePublished" datetime="2017-03-08T10:29:27+08:00">2017-03-08</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="堆和栈的区别"><a href="#堆和栈的区别" class="headerlink" title="堆和栈的区别"></a>堆和栈的区别</h1><p>来源：未知</p>
-<h2 id="一、预备知识—程序的内存分配"><a href="#一、预备知识—程序的内存分配" class="headerlink" title="一、预备知识—程序的内存分配"></a>一、预备知识—程序的内存分配</h2><p>一个由C/C++编译的程序占用的内存分为以下几个部分 </p>
-<ol>
-<li>栈区（stack）—   由编译器自动分配释放   ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。 </li>
-<li>堆区（heap）   —   一般由程序员分配释放，   若程序员不释放，程序结束时可能由OS回收   。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表，呵呵。 </li>
-<li>全局区（静态区）（static）—，全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域，   未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。   -   程序结束后由系统释放。 </li>
-<li>文字常量区   —常量字符串就是放在这里的。   程序结束后由系统释放 </li>
-<li>程序代码区—存放函数体的二进制代码。 </li>
-</ol>
-<h2 id="二、例子程序"><a href="#二、例子程序" class="headerlink" title="二、例子程序"></a>二、例子程序</h2><p>这是一个前辈写的，非常详细</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//main.cpp</span></span><br><span class="line"><span class="keyword">int</span>   a   =   <span class="number">0</span>;   全局初始化区</span><br><span class="line"><span class="keyword">char</span>   *p1;   全局未初始化区</span><br><span class="line">main()</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">int</span>   b;   栈</span><br><span class="line"><span class="keyword">char</span>   s[]   =   <span class="string">"abc"</span>;   栈</span><br><span class="line"><span class="keyword">char</span>   *p2;   栈</span><br><span class="line"><span class="keyword">char</span>   *p3   =   <span class="string">"123456"</span>;   <span class="number">123456</span>/<span class="number">0</span>在常量区，p3在栈上。</span><br><span class="line"><span class="keyword">static</span>   <span class="keyword">int</span>   c   =<span class="number">0</span>；   全局（静态）初始化区</span><br><span class="line">p1   =   (<span class="keyword">char</span>   *)<span class="built_in">malloc</span>(<span class="number">10</span>);</span><br><span class="line">p2   =   (<span class="keyword">char</span>   *)<span class="built_in">malloc</span>(<span class="number">20</span>);</span><br><span class="line">分配得来得<span class="number">10</span>和<span class="number">20</span>字节的区域就在堆区。</span><br><span class="line"><span class="built_in">strcpy</span>(p1,   <span class="string">"123456"</span>);   <span class="number">123456</span>/<span class="number">0</span>放在常量区，编译器可能会将它与p3所指向的<span class="string">"123456"</span> </span><br><span class="line">优化成一个地方。</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="三、堆和栈的理论知识"><a href="#三、堆和栈的理论知识" class="headerlink" title="三、堆和栈的理论知识"></a>三、堆和栈的理论知识</h2><h3 id="申请方式"><a href="#申请方式" class="headerlink" title="申请方式"></a>申请方式</h3><p>stack:<br>由系统自动分配。   例如，声明在函数中一个局部变量 <code>int   b;</code> 系统自动在栈中为b开辟空间<br>heap:<br>需要程序员自己申请，并指明大小，在c中malloc函数<br>如<code>p1   =   (char   *)malloc(10);</code><br>在C++中用new运算符<br>如<code>p2   =   new   char[10];</code><br>但是注意p1、p2本身是在栈中的。</p>
-<h3 id="申请后系统的响应"><a href="#申请后系统的响应" class="headerlink" title="申请后系统的响应"></a>申请后系统的响应</h3><p>栈：只要栈的剩余空间大于所申请空间，系统将为程序提供内存，否则将报异常提示栈溢出。<br>堆：首先应该知道操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请时，会遍历该链表，寻找第一个空间大于所申请空间的堆结点，然后将该结点从空闲结点链表中删除，并将该结点的空间分配给程序，另外，对于大多数系统，会在这块内存空间中的首地址处记录本次分配的大小，这样，代码中的delete语句才能正确的释放本内存空间。另外，由于找到的堆结点的大小不一定正好等于申请的大小，系统会自动的将多余的那部分重新放入空闲链表中。</p>
-<h3 id="申请大小的限制"><a href="#申请大小的限制" class="headerlink" title="申请大小的限制"></a>申请大小的限制</h3><p>栈：在Windows下,栈是向低地址扩展的数据结构，是一块连续的内存的区域。这句话的意思是栈顶的地址和栈的最大容量是系统预先规定好的，在WINDOWS下，栈的大小是2M（也有的说是1M，总之是一个编译时就确定的常数），如果申请的空间超过栈的剩余空间时，将提示overflow。因此，能从栈获得的空间较小。<br>堆：堆是向高地址扩展的数据结构，是不连续的内存区域。这是由于系统是用链表来存储的空闲内存地址的，自然是不连续的，而链表的遍历方向是由低地址向高地址。堆的大小受限于计算机系统中有效的虚拟内存。由此可见，堆获得的空间比较灵活，也比较大。</p>
-<h3 id="申请效率的比较："><a href="#申请效率的比较：" class="headerlink" title="申请效率的比较："></a>申请效率的比较：</h3><p>栈由系统自动分配，速度较快。但程序员是无法控制的。<br>堆是由new分配的内存，一般速度比较慢，而且容易产生内存碎片,不过用起来最方便.<br>另外，在Windows下，最好的方式是用VirtualAlloc分配内存，他不是在堆，也不是在栈是直接在进程的地址空间中保留一块内存，虽然用起来最不方便。但是速度快，也最灵活。 </p>
-<h3 id="堆和栈中的存储内容"><a href="#堆和栈中的存储内容" class="headerlink" title="堆和栈中的存储内容"></a>堆和栈中的存储内容</h3><p>栈：在函数调用时，第一个进栈的是主函数中后的下一条指令（函数调用语句的下一条可执行语句）的地址，然后是函数的各个参数，在大多数的C编译器中，参数是由右往左入栈的，然后是函数中的局部变量。注意静态变量是不入栈的。当本次函数调用结束后，局部变量先出栈，然后是参数，最后栈顶指针指向最开始存的地址，也就是主函数中的下一条指令，程序由该点继续运行。<br>堆：一般是在堆的头部用一个字节存放堆的大小。堆中的具体内容由程序员安排。</p>
-<h3 id="存取效率的比较"><a href="#存取效率的比较" class="headerlink" title="存取效率的比较"></a>存取效率的比较</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span>   s1[]   =   <span class="string">"aaaaaaaaaaaaaaa"</span>;</span><br><span class="line"><span class="keyword">char</span>   *s2   =   <span class="string">"bbbbbbbbbbbbbbbbb"</span>;</span><br></pre></td></tr></table></figure>
-
-<p><code>aaaaaaaaaaa</code>是在运行时刻赋值的；<br>而<code>bbbbbbbbbbb</code>是在编译时就确定的；<br>但是，在以后的存取中，在栈上的数组比指针所指向的字符串(例如堆)快。<br>比如：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span></span></span><br><span class="line"><span class="function"><span class="keyword">void</span>   <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">char</span>   a   =   <span class="number">1</span>;</span><br><span class="line"><span class="keyword">char</span>   c[]   =   <span class="string">"1234567890"</span>;</span><br><span class="line"><span class="keyword">char</span>   *p   =<span class="string">"1234567890"</span>;</span><br><span class="line">a   =   c[<span class="number">1</span>];</span><br><span class="line">a   =   p[<span class="number">1</span>];</span><br><span class="line"><span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对应的汇编代码</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span>:   a   =   c[<span class="number">1</span>];</span><br><span class="line"><span class="number">00401067</span>   <span class="number">8</span>A   <span class="number">4</span>D   F1   mov   cl,byte   ptr   [ebp<span class="number">-0F</span>h]</span><br><span class="line"><span class="number">0040106</span>A   <span class="number">88</span>   <span class="number">4</span>D   FC   mov   byte   ptr   [ebp<span class="number">-4</span>],cl</span><br><span class="line"><span class="number">11</span>:   a   =   p[<span class="number">1</span>];</span><br><span class="line"><span class="number">0040106</span>D   <span class="number">8B</span>   <span class="number">55</span>   EC   mov   edx,dword   ptr   [ebp<span class="number">-14</span>h]</span><br><span class="line"><span class="number">00401070</span>   <span class="number">8</span>A   <span class="number">42</span>   <span class="number">01</span>   mov   al,byte   ptr   [edx+<span class="number">1</span>]</span><br><span class="line"><span class="number">00401073</span>   <span class="number">88</span>   <span class="number">45</span>   FC   mov   byte   ptr   [ebp<span class="number">-4</span>],al</span><br></pre></td></tr></table></figure>
-
-<p>第一种在读取时直接就把字符串中的元素读到寄存器cl中，而第二种则要先把指针值读到 edx中，再根据edx读取字符，显然慢了。</p>
-<h3 id="小结："><a href="#小结：" class="headerlink" title="小结："></a>小结：</h3><p>堆和栈的区别可以用如下的比喻来看出：<br>使用栈就象我们去饭馆里吃饭，只管点菜（发出申请）、付钱、和吃（使用），吃饱了就走，不必理会切菜、洗菜等准备工作和洗碗、刷锅等扫尾工作，他的好处是快捷，但是自由度小。<br>使用堆就象是自己动手做喜欢吃的菜肴，比较麻烦，但是比较符合自己的口味，而且自由度大。   (经典！)  </p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/" class="post-title-link" itemprop="url">C语言extern关键字使用</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2017-03-07 16:07:02" itemprop="dateCreated datePublished" datetime="2017-03-07T16:07:02+08:00">2017-03-07</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-08 15:16:40" itemprop="dateModified" datetime="2019-07-08T15:16:40+08:00">2019-07-08</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="C语言extern关键字使用"><a href="#C语言extern关键字使用" class="headerlink" title="C语言extern关键字使用"></a>C语言extern关键字使用</h1><p>[TOC]</p>
-<p>引用自：<a href="http://doc.chinaunix.net/CPP/201206/2248432.shtml" target="_blank" rel="noopener">http://doc.chinaunix.net/CPP/201206/2248432.shtml</a><br><a href="https://www.cnblogs.com/broglie/p/5524932.html" target="_blank" rel="noopener">https://www.cnblogs.com/broglie/p/5524932.html</a></p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>一：看到这个，说的很基础，转录于此。</p>
-<p>在C语言中，修饰符<code>extern</code>用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”.</p>
-<ol>
-<li><p><code>extern</code>修饰变量的声明。<br>举例来说，如果文件a.c需要引用b.c中变量int v,就可以在a.c中声明extern int v,然后就可以引用变量v.这里需要注意的是，被引用的变量v的链接属性必须是外链接（external）的，也就是说a.c要引用到v,不只是取决于在 a.c中声明extern int v,还取决于变量v本身是能够被引用到的。这涉及到c语言的另外一个话题–变量的作用域。能够被其他模块以extern修饰符引用到的变量通常是全局变 量。还有很重要的一点是，extern int v可以放在a.c中的任何地方，比如你可以在a.c中的函数fun定义的开头处声明extern int v,然后就可以引用到变量v了，只不过这样只能在函数fun作用域中引用v罢了，这还是变量作用域的问题。对于这一点来说，很多人使用的时候都心存顾虑。 好像extern声明只能用于文件作用域似的。</p>
-</li>
-<li><p><code>extern</code>修饰函数声明。<br>从本质上来讲，变量和函数没有区别。函数名是指向函数二进制块开头处的指针。如果文件a.c需要引用b.c中的函数，比如在 b.c中原型是int fun（int mu），那么就可以在a.c中声明extern int fun（int mu），然后就能使用fun来做任何事情。就像变量的声明一样，extern int fun（int mu）可以放在a.c中任何地方，而不一定非要放在a.c的文件作用域的范围中。 对其他模块中函数的引用，最常用的方法是包含这些函数声明的头文件。使用extern和包含头文件来引用函数有什么区别呢？extern的引用方式比包含 头文件要简洁得多！extern的使用方法是直接了当的，想引用哪个函数就用extern声明哪个函数。这大概是KISS原则的一种体现吧！这样做的一个 明显的好处是，会加速程序的编译（确切的说是预处理）的过程，节省时间。在大型C程序编译过程中，这种差异是非常明显的。</p>
-</li>
-<li><p>此外，<code>extern</code>修饰符可用于指示C或者C++函数的调用规范。<br>比如在C++中调用C库函数，就需要在C++程序中用extern “C”声明要引用的函数。这是给链接器用的，告诉链接器在链接的时候用C函数规范来链接。主要原因是C++和C程序编译完成后在目标代码中命名规则不同。</p>
-</li>
-</ol>
-<h2 id="深入"><a href="#深入" class="headerlink" title="深入"></a>深入</h2><p>二：了解了上面的基本原理，下面深入一下。如下：</p>
-<h3 id="用extern声明外部变量"><a href="#用extern声明外部变量" class="headerlink" title="用extern声明外部变量"></a>用extern声明外部变量</h3><p>   定义：外部变量是指在函数或者文件外部定义的全局变量。外部变量定义必须在所有的函数之外，且只能定义一次。</p>
-<h4 id="在一个文件内声明的外部变量"><a href="#在一个文件内声明的外部变量" class="headerlink" title="在一个文件内声明的外部变量"></a>在一个文件内声明的外部变量</h4><h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><p>作用域：如果在变量定义之前要使用该变量，则在用之前加extern声明变量，作用域扩展到从声明开始，到本文件结束。</p>
-<h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p> 例子：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x,<span class="keyword">int</span> y）； <span class="comment">//函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[ ] ）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> result;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> X; <span class="comment">//外部变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> Y;  </span><br><span class="line">         </span><br><span class="line">   result = max（X,Y）；  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"the max value is %dn"</span>,result）；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> X = <span class="number">10</span>; <span class="comment">//定义外部变量  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> Y = <span class="number">20</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x, <span class="keyword">int</span> y）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> （x&gt;y ? x : y）；  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p> 其中，用extern声明外部变量时，类型名可以省略。例如，”extern int X;”,可以改写成”extern X;”.</p>
-<h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>小结：这种用方法简单，实用性不大。</p>
-<h4 id="在多个文件中声明外部变量"><a href="#在多个文件中声明外部变量" class="headerlink" title="在多个文件中声明外部变量"></a>在多个文件中声明外部变量</h4><h5 id="作用域-1"><a href="#作用域-1" class="headerlink" title="作用域"></a>作用域</h5><p>作用域：如果整个工程由多个文件组成，在一个文件中想引用另外一个文件中已经定义的外部变量时，则只需在引用变量的文件中用extern关键字加以声明即可。可见，其作用域从一个文件扩展到多个文件了。</p>
-<h5 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h5><p>文件a.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> BASE=<span class="number">2</span>; <span class="comment">//变量定义  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> exe（<span class="keyword">int</span> x）； <span class="comment">//外部函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc, <span class="keyword">char</span> *agrv[]）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> a=<span class="number">10</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"%d^%d = %dn"</span>,BASE,a,exe（a））；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">        </span><br><span class="line">  <span class="keyword">extern</span> BASE; <span class="comment">//外部变量声明  </span></span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> exe（<span class="keyword">int</span> x）  </span><br><span class="line">        </span><br><span class="line">  &#123;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> i;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">int</span> ret=<span class="number">1</span>;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">for</span>（i=<span class="number">0</span>;i&lt;x;i++）  </span><br><span class="line">        </span><br><span class="line">  &#123;  </span><br><span class="line">        </span><br><span class="line">  ret*=BASE;  </span><br><span class="line">        </span><br><span class="line">  &#125;  </span><br><span class="line">        </span><br><span class="line">  <span class="keyword">return</span> ret;  </span><br><span class="line">        </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-
-<p>利用gcc工具编译gcc a.c b.c –o demo,再运行。/demo,结果为2^10 = 1024.其中，在a.c文件中定义BASE=2,在b.c中引用BASE时，需要用extern关键字声明其为外部变量，否则编译会找不到该变量。</p>
-<h5 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h5><p> 小结：对于多个文件的工程，可以采用这种方法来操作。实际工程中，对于模块化的程序文件，在其文件中可以预先留好外部变量的接口，也就是只采用extern声明变量，不定义变量，也通常在模块程序的头文件中声明，在使用该模块时，只需要在使用时定义一下即可，如上述b.c文件，做好相应的函数接口，留好需要改变BASE值的声明，在需要使用该模块时，只需要在调用的文件中定义具体的值即可。<br>引用外部变量和通过函数形参值传递变量的区别：用extern引用外部变量，可以在引用的模块内修改其值，而形参值传递的变量则不能修改其值，除非是地址传递。<br> 因此，如果多个文件同时对需要应用的的变量进行同时操作，可能会修改该变量，类似于形参的地址传递，从而影响其他模块的使用，因此，要慎重使用。</p>
-<h4 id="在多个文件中声明外部结构体变量"><a href="#在多个文件中声明外部结构体变量" class="headerlink" title="在多个文件中声明外部结构体变量"></a>在多个文件中声明外部结构体变量</h4><p>前面一节中，只是适合一般变量的外部声明，但是对于声明外部结构体变量时，则有些不同，需要加以注意。</p>
-<h5 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h5><p>文件a.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"c.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class local_post=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> A_class next_post=&#123;<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[]）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"first point"</span>,local_post）；  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"second point"</span>,next_post）；  </span><br><span class="line">       </span><br><span class="line"> ret=fun（local_post,next_post）；  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">printf</span>（<span class="string">"the vector is （%d,%d,%d）n"</span>,ret.x,ret.y,ret.z）；  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">if</span> 1  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span>  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> x;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> y;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> z;  </span><br><span class="line">         </span><br><span class="line">   &#125;A_class;  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span>  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class local_post; <span class="comment">//外部结构体变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class fun（<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z）； <span class="comment">//接口函数声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class fun（A_class first,A_class next）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> ret.x=next.x-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.y=next.y-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.z=next.z-first.z;  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> （ret）；  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件c.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> print（<span class="keyword">char</span> *,A_class post）；  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p> 文件c.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> print（<span class="keyword">char</span> *str,A_class post）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"%s : （%d,%d,%d）n"</span>,str,post.x,post.y,post.z）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p> 利用gcc工具编译gcc a.c b.c c.c–o demo,再运行。/demo,结果为</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first point : （<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>）  </span><br><span class="line">  </span><br><span class="line">second point : （<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>）  </span><br><span class="line">  </span><br><span class="line">the <span class="built_in">vector</span> is （<span class="number">9</span>,<span class="number">8</span>,<span class="number">5</span>）</span><br></pre></td></tr></table></figure>
-
-<h5 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h5><p>小结：在<code>a.c</code>文件中定义全局变量<code>A_class local_post</code>结构体，并且调用b.c中的接口函数<code>A_class fun（int x,int y,int z）</code>和<code>c.c</code>中<code>int print（char *str,A_class post）</code>，在<code>b.h</code>中声明外部结构体变量<code>local_post</code>,同时，需要对其类型<code>A_class</code>进行实现，在<code>b.h</code>文件中，如果屏蔽掉<code>A_class</code>的实现，而在<code>b.h</code>以外的文件中实现，此时编译时就会出错，由于<code>c.c</code>文件中用到<code>A_class</code>定义的类型，所以需要在该文件中包含<code>b.h</code>.<br>这里需要说明的是，如果调用外部结构体等多层结构体变量时，需要对这种变量进行实现，使用时，加上模块的头文件即可，否则会报错。<br>实际工程中，模块化程序文件，一般提供一个<code>.c</code>和一个<code>.h</code>文件，其中<code>.h</code>文件被<code>.c</code>文件调用，<code>.h</code>文件中实现。</p>
-<h3 id="用extern声明外部函数"><a href="#用extern声明外部函数" class="headerlink" title="用extern声明外部函数"></a>用<code>extern</code>声明外部函数</h3><ol>
-<li>定义函数时，在函数返回值类型前面加上<code>extern</code>关键字，表示此函数时外部函数，可供其他文件调用，如<code>extern int func （int x,int y）</code>，C语言规定，此时<code>extern</code>可以省略，隐形为外部函数。</li>
-<li>调用此函数时，需要用<code>extern</code>对函数作出声明。<h5 id="作用域-2"><a href="#作用域-2" class="headerlink" title="作用域"></a>作用域</h5>作用域：使用<code>extern</code>声明能够在一个文件中调用其他文件的函数，即把被调用函数的作用域扩展到本文件。C语言中规定，声明时可以省略extern.</li>
-</ol>
-<h5 id="例子-3"><a href="#例子-3" class="headerlink" title="例子"></a>例子</h5><p>文件<code>a.c</code>的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> main（）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> x=<span class="number">10</span>,y=<span class="number">5</span>;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x = 10,y = 5n"</span>）；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x + y = %dn"</span>,add（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x - y = %dn"</span>,sub（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x * y = %dn"</span>,mult（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"x / y = %dn"</span>,div（x,y））；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">             </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>文件b.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __F_H  </span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> __F_H  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> add（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> sub（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> mult（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">int</span> div（<span class="keyword">int</span> x,<span class="keyword">int</span> y）；  </span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
-
-<p>文件b.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> add（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x+y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> sub（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x-y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> mult（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x*y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> div（<span class="keyword">int</span> x,<span class="keyword">int</span> y）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">if</span>(y!=<span class="number">0</span>)</span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（x/y）；  </span><br><span class="line">      </span><br><span class="line">&#125;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"mult（） fail!the second para can not be zero!n "</span>）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span>（<span class="number">-1</span>）；  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>利用gcc工具编译<code>gcc a.c b.c –o demo</code>,再运行<code>./demo</code>,结果为</p>
-<blockquote>
-<p>x = 10,y = 5  </p>
-<p>x + y = 15  </p>
-<p>x - y = 5  </p>
-<p>x * y = 50  </p>
-<p>x / y = 2.  </p>
-</blockquote>
-<h5 id="小结-3"><a href="#小结-3" class="headerlink" title="小结"></a>小结</h5><p>小结：由上面简单的例子可以看出，在b.h文件中声明好b.c的函数，使用时，只需要在a.c中包含#include “b.h”头文件即可，这样就可以使用b.c的接口函数了，在实际工程中，通常也是采用这种方式，.c文件中实现函数，.h文件中声明函数借口，需要调用。c文件的函数接口时，只需包含。h头文件即可。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在实际工程中，有两种情况比较多。一是利用extern只声明外部函数，不需要传递需要外部声明的变量，一个模块化接口文件对应一个声明接口的头文件，需要调用接口函数时，只需要包含其头文件。二是利用用extern声明外部函数，同时声明需要传递的外部变量，做法和第一种情况一样，声明都放在头文件中，但是，模块文件也需要包含该头文件。另外，如果结构体等比较复杂的变量，则需要包含其定义的头文件。另外，定义的外部变量属于全局变量，其存储方式为静态存储，生存周期为整个程序的生存周期。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1248,7 +1236,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1261,7 +1249,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-count">144</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

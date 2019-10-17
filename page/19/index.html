@@ -228,6 +228,543 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/11/学习-Shell-2018-12-11-Shell-iptables/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/11/学习-Shell-2018-12-11-Shell-iptables/" class="post-title-link" itemprop="url">Shell-iptables</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-11 14:47:17" itemprop="dateCreated datePublished" datetime="2018-12-11T14:47:17+08:00">2018-12-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-22 13:42:57" itemprop="dateModified" datetime="2019-03-22T13:42:57+08:00">2019-03-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a href="http://man.linuxde.net/iptables" target="_blank" rel="noopener">http://man.linuxde.net/iptables</a><br><a href="https://www.cnblogs.com/zclzhao/p/5081590.html" target="_blank" rel="noopener">https://www.cnblogs.com/zclzhao/p/5081590.html</a><br><a href="http://blog.51cto.com/ailixing/38543" target="_blank" rel="noopener">http://blog.51cto.com/ailixing/38543</a><br><a href="https://www.linuxprobe.com/chapter-08.html" target="_blank" rel="noopener">https://www.linuxprobe.com/chapter-08.html</a><br><a href="http://blog.51cto.com/xiaogongju/2087254" target="_blank" rel="noopener">http://blog.51cto.com/xiaogongju/2087254</a><br><a href="https://blog.csdn.net/reyleon/article/details/12976341" target="_blank" rel="noopener">https://blog.csdn.net/reyleon/article/details/12976341</a><br><a href="http://www.zsythink.net/archives/1199" target="_blank" rel="noopener">http://www.zsythink.net/archives/1199</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 正在使用的规则</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 2121 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p udp --dport 2121 -j ACCEPT</span><br><span class="line">iptables -A INPUT -p tcp --dport 31802 -j ACCEPT</span><br><span class="line">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</span><br><span class="line">iptables -P INPUT DROP</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置默认规则 &amp; 添加规则<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">iptables -P INPUT DROP <span class="comment"># `-P` 设置默认规则,不参与规则匹配顺序检索</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 443 -j ACCEPT <span class="comment"># 允许443端口</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 31802 -j ACCEPT <span class="comment"># ssh 端口</span></span><br><span class="line">iptables -A INPUT -p tcp --dport 2121 -j ACCEPT <span class="comment"># tcp proxy 端口</span></span><br><span class="line">iptables -A INPUT -p udp --dport 2121 -j ACCEPT <span class="comment"># udp proxy 端口</span></span><br><span class="line">iptables -A INPUT -p icmp -j ACCEPT <span class="comment"># 允许ping命令</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>未开放的端口，用<code>nmap</code>扫描的话，端口状态是<code>closed</code>；</li>
+</ul>
+<h2 id="命令概览"><a href="#命令概览" class="headerlink" title="命令概览"></a>命令概览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-I <span class="comment"># 插入规则，默认插入到头部</span></span><br><span class="line">-A <span class="comment"># 追加规则，追加到规则末尾</span></span><br><span class="line">-D <span class="comment"># 删除规则</span></span><br><span class="line">-R <span class="comment"># 替换规则</span></span><br><span class="line">-L <span class="comment"># 显示所选链的所有规则</span></span><br><span class="line">-F <span class="comment"># 清空所选链</span></span><br><span class="line">service iptables save <span class="comment"># 保存规则，否则重启会失效</span></span><br><span class="line">iptables-save <span class="comment"># 备份规则，需要额外参数，例如备份文件路径</span></span><br><span class="line">iptables-restore <span class="comment"># 恢复规则，需要额外参数，例如备份文件路径</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-s(<span class="built_in">source</span>)//数据包的发送源</span><br><span class="line">-p(protocol)//协议</span><br><span class="line">--dport(端口)</span><br><span class="line">-j 规则执行的操作</span><br></pre></td></tr></table></figure>
+
+<h3 id="列出规则，主要开关-L"><a href="#列出规则，主要开关-L" class="headerlink" title="列出规则，主要开关-L"></a>列出规则，主要开关<code>-L</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iptables -L -n -v</span><br><span class="line"></span><br><span class="line"><span class="comment"># `--line-numbers` 显示规则列表的时候加上规则序号，</span></span><br><span class="line"><span class="comment"># `-n` IP地址用数字形式表示</span></span><br><span class="line">iptables -L -n --line-numbers</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>删除规则，编号从1开始</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -D INPUT 1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清空规则</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -F</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存规则</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables-save</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>重启 iptables</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables restart</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>允许已建立的或相关连的通行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</span><br><span class="line">iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>允许所有本机向外的访问</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A OUTPUT -j ACCEPT</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>??</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/10/学习-Shell-2018-12-10-Bash-Shell-使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/10/学习-Shell-2018-12-10-Bash-Shell-使用/" class="post-title-link" itemprop="url">Bash Shell 使用</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-10 10:44:55" itemprop="dateCreated datePublished" datetime="2018-12-10T10:44:55+08:00">2018-12-10</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-12 11:11:45" itemprop="dateModified" datetime="2019-10-12T11:11:45+08:00">2019-10-12</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="一些好的教程"><a href="#一些好的教程" class="headerlink" title="一些好的教程"></a>一些好的教程</h2><p><a href="http://c.biancheng.net/view/1114.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1114.html</a></p>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><a href="2019/07/03/学习-Shell-2019-07-03-Shell-Shell通用快捷键">Shell通用快捷键</a></p>
+<h2 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">- shell 中的$0 $1 $* $@ $# $$ $? $() $(())</span><br><span class="line">$0: 脚本本身文件名称</span><br><span class="line">$1: 命令行第一个参数，$2为第二个，以此类推</span><br><span class="line">$*: 所有参数列表</span><br><span class="line">$@: 所有参数列表</span><br><span class="line">$#: 参数个数</span><br><span class="line">$$: 脚本运行时的PID</span><br><span class="line">$?: 脚本退出码</span><br><span class="line"></span><br><span class="line">∗与@的区别</span><br><span class="line"></span><br><span class="line">当命令行为test.sh 1 2 3</span><br><span class="line">&quot;$*“表示&quot;1 2 3”</span><br><span class="line">&quot;$@“表示&quot;1” “2” “3”</span><br><span class="line">二者没有被引号括起来时是一样的都为&quot;1 2 3&quot;，只有当被引号括起来后才表现出差异</span><br><span class="line"></span><br><span class="line">$()  等同于： ··（反引号）：运行一段命令</span><br><span class="line">$(()) 进行数字运算 </span><br><span class="line"></span><br><span class="line"># a=3;b=2;c=5</span><br><span class="line"># echo $((a+b*c))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>显示一些路径，具体作用未知</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man hier</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Shell 脚本中调用另外的脚本<br><code>fork</code> <code>exec</code> <code>source</code><br><a href="https://blog.csdn.net/simple_the_best/article/details/76285429" target="_blank" rel="noopener">https://blog.csdn.net/simple_the_best/article/details/76285429</a></p>
+</li>
+<li><p>Shell 中各种括号，小括号，中括号，大括号的作用<br>shell中各种括号的作用()、(())、[]、[[]]、{}、${}、``、$()、$(())<br>{}花括号把变量括起来是为了界定变量边界<br><a href="https://www.cnblogs.com/hanggegege/p/5928870.html" target="_blank" rel="noopener">https://www.cnblogs.com/hanggegege/p/5928870.html</a><br><a href="https://blog.csdn.net/taiyang1987912/article/details/39551385" target="_blank" rel="noopener">https://blog.csdn.net/taiyang1987912/article/details/39551385</a><br><a href="https://www.cnblogs.com/chengd/p/7803664.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengd/p/7803664.html</a></p>
+</li>
+<li><p>获取当前脚本所在的目录<br>pwd是一个命令，PWD是一个环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">basedir=`<span class="built_in">cd</span> $(dirname <span class="variable">$0</span>); <span class="built_in">pwd</span> -P`</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$basedir</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>参考：<a href="https://www.cnblogs.com/FlyFive/p/3640267.html" target="_blank" rel="noopener">https://www.cnblogs.com/FlyFive/p/3640267.html</a></p>
+<ul>
+<li><p>获取脚本所在目录的绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"<span class="variable">$(dirname $(readlink -f "$0")</span>)"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示所有定义的别名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示所有环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">env</span><br><span class="line"><span class="built_in">export</span> <span class="comment"># 显示 export 的变量</span></span><br><span class="line"><span class="built_in">alias</span> <span class="comment"># 显示 alias 的变量</span></span><br><span class="line"><span class="built_in">set</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>脚本的环境变量<br><code>$$</code>Shell本身的PID（ProcessID）<br><code>$!</code>Shell最后运行的后台Process的PID<br><code>$?</code>最后运行的命令的结束代码（返回值）<br><code>$-</code>使用Set命令设定的Flag一览<br><code>$*</code>所有参数列表。如<code>$*</code>用<code>&quot;</code>括起来的情况、以<code>$1 $2 … $n</code>的形式输出所有参数。<br><code>$@</code>所有参数列表。如<code>$@</code>用<code>&quot;</code>括起来的情况、以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。<br><code>$#</code>添加到Shell的参数个数<br><code>$0</code>Shell本身的文件名<br><code>$1～$n</code>添加到Shell的各参数值。$1是第1参数、$2是第2参数…。第10个参数要用<code>${10}</code>取值。<br><code>PWD</code>:大写<code>PWD</code>是一个环境变量，表示当前工作目录。小写<code>pwd</code>是一个命令。<br><code>OLDPWD</code>:一个环境变量，表示上一个工作目录。<br>参考：<br>linux中shell变量$#,$@,$0,$1,$2的含义解释<br><a href="https://www.cnblogs.com/fhefh/archive/2011/04/15/2017613.html" target="_blank" rel="noopener">https://www.cnblogs.com/fhefh/archive/2011/04/15/2017613.html</a></p>
+</li>
+<li><p>Bash默认的环境变量</p>
+<ol>
+<li><p>BASH ：记录当前bash shell的路径。<br>举例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost awK]<span class="comment"># echo $BASH</span></span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>BASH_SUBSHELL  ：记录当前子shell的层次。BASH_SUBSHELL是从0开始计数的整数。</p>
+</li>
+<li><p>BASH_VERSINFO  ：是一个数组包含六个元素，这六个元素显示bash的版本信息。</p>
+</li>
+<li><p>BASH_VERSION  ：显示shell版本的信息。</p>
+</li>
+<li><p>DIRSTACK  ：记录了栈顶的目录值，初值为空。</p>
+</li>
+<li><p>GLOBLGNORE ：是由冒号分割的模式列表，表示通配时忽略的文件名集合。</p>
+</li>
+<li><p>GROUPS   ：记录当前用户所属的组。</p>
+</li>
+<li><p>HOME ：记录当前用户的家目录，由/etc/passwd的倒数第二个域决定。</p>
+</li>
+<li><p>HOSTNAME  ：记录主机名。</p>
+</li>
+<li><p>HOSTTYPE和MACHTYPE ：都是记录系统的硬件架构。</p>
+</li>
+<li><p>IFS  ：用于设置指定shell域分隔符，默认情况下为空格。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost awK]<span class="comment"># export IFS=:</span></span><br><span class="line">[root@localhost awK]<span class="comment"># echo $PATH</span></span><br><span class="line">/usr/<span class="built_in">local</span>/sbin /usr/<span class="built_in">local</span>/bin /sbin /bin/usr/sbin /usr/bin /root/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>OLDPWD   ：记录旧的工作目录。</p>
+</li>
+<li><p>OSTYPE  ：记录操作系统类型。</p>
+</li>
+<li><p>PATH  ：环境变量，显示当前PATH环境变量的内容。</p>
+</li>
+<li><p>PPID ：是创建当前进程的进程号，即当前进程的父进程号</p>
+</li>
+<li><p>PS1  ：提示符变量，用于设置提示符格式，用于设置一级shell提示符环境变量。</p>
+</li>
+<li><p>PS2  ：用于设置二级shell提示符环境变量。</p>
+</li>
+<li><p>PWD ：记录当前路径</p>
+</li>
+<li><p>REPLY  ：REPLY变量与read和select有关。</p>
+</li>
+<li><p>SECONDS：记录脚本从开始到结束耗费的时间。</p>
+</li>
+<li><p>SHELL ：显示当前所用的shell</p>
+</li>
+<li><p>SHELLOPTS  ：记录了处于“开”状态的shell选项列表，它只是一个只读变量。</p>
+</li>
+<li><p>SHLVL   ：记录了bash嵌套的层次，一般来说，我们启动第一个Shell时。  $SHLVL=1。如果在这个Shell中执行脚本，脚本中的$SHLVL=2 。</p>
+</li>
+<li><p>TMOUT  ：用来设置脚本过期的时间，比如TMOUT=3，表示该脚本3秒后过期。</p>
+</li>
+<li><p>UID : 已登用户的ID</p>
+</li>
+<li><p>USER ：显示当前用户名字</p>
+</li>
+</ol>
+</li>
+<li><p>Shell脚本实现检测进程是否正在运行<br><a href="https://www.jb51.net/article/59973.htm" target="_blank" rel="noopener">https://www.jb51.net/article/59973.htm</a><br><a href="https://unix.stackexchange.com/questions/295585/check-for-process-and-kill-if-running" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/295585/check-for-process-and-kill-if-running</a></p>
+</li>
+<li><p>既可以在控制台打印，又可以同时保存到文件</p>
+<ol>
+<li><p>直接覆盖日志文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tee ./ls.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>向文件中追加</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tee -a ./ls.log</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>一次执行多条命令</p>
+<ol>
+<li><p>每个命令之间用<code>;</code>隔开<br>说明：各命令的执行给果，不会影响其它命令的执行。换句话说，各个命令都会执行，但不保证每个命令都执行成功。</p>
+</li>
+<li><p>每个命令之间用<code>&amp;&amp;</code>隔开<br>说明：若前面的命令执行成功，才会去执行后面的命令。这样可以保证所有的命令执行完毕后，执行过程都是成功的。</p>
+</li>
+<li><p>每个命令之间用<code>||</code>隔开<br>说明：<code>||</code>是或的意思，只有前面的命令执行失败后才去执行下一条命令，直到执行成功一条命令为止。</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>清除历史纪录<br><code>history -c</code><br>历史命令的记录是保存在本地文件的，具体位置为：<code>~/.bash_sessions/</code><br><code>~/.bash_history</code><br>在bash shell命令行状态下，执行 HISTSIZE=0 </p>
+</li>
+<li><p>显示当前用户的环境变量<br><code>echo $PATH</code></p>
+</li>
+</ul>
+<h2 id="Bash-Profile-环境变量配置文件"><a href="#Bash-Profile-环境变量配置文件" class="headerlink" title="Bash Profile 环境变量配置文件"></a>Bash Profile 环境变量配置文件</h2><ul>
+<li>针对当前用户的profile配置文件<br>位置1: <code>~/.bash_profile</code></li>
+</ul>
+<h2 id="自定义终端样式"><a href="#自定义终端样式" class="headerlink" title="自定义终端样式"></a>自定义终端样式</h2><p>对自带终端以及第三方终端都有效果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Set CLICOLOR if you want Ansi Colors in iTerm2</span><br><span class="line">export CLICOLOR=1</span><br><span class="line"></span><br><span class="line"># Set colors to match iTerm2 Terminal Colors</span><br><span class="line">export TERM=xterm-256color</span><br><span class="line"></span><br><span class="line"># sets up thecolor scheme for list export </span><br><span class="line">export LSCOLORS=GxFxCxDxBxegedabagaced</span><br><span class="line"></span><br><span class="line">#sets up theprompt color (currently a green similar to linux terminal) </span><br><span class="line">export PS1=&apos;\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ &apos;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义命令别名"><a href="#自定义命令别名" class="headerlink" title="自定义命令别名"></a>自定义命令别名</h2><p>这里主要是用到了 alias 命令。<br>Linux中，需要在<code>bashrc</code>文件中配置。<br>macOS中，需要在<code>.bash_profile</code>文件中配置。<br>具体的添加方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> [别名]=<span class="string">'[指令名称]'</span></span><br><span class="line"><span class="comment"># 例如</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -Alh'</span></span><br><span class="line"><span class="built_in">alias</span> hc=<span class="string">'history -c'</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完之后在终端执行<code>source .bash_profile</code>来重载该配置文件。<br>执行<code>alias</code>来打印当前的 alias 项目。<br>参考：<br><a href="https://www.cnblogs.com/shockerli/p/mac-cmd-alias.html" target="_blank" rel="noopener">https://www.cnblogs.com/shockerli/p/mac-cmd-alias.html</a><br><a href="http://man.linuxde.net/alias" target="_blank" rel="noopener">http://man.linuxde.net/alias</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/07/学习-其他零散知识-2018-12-07-正则表达式-Regular-Expression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/07/学习-其他零散知识-2018-12-07-正则表达式-Regular-Expression/" class="post-title-link" itemprop="url">正则表达式 Regular Expression</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-07 14:33:13" itemprop="dateCreated datePublished" datetime="2018-12-07T14:33:13+08:00">2018-12-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-01 19:54:06" itemprop="dateModified" datetime="2019-07-01T19:54:06+08:00">2019-07-01</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="正则表达式关键字"><a href="#正则表达式关键字" class="headerlink" title="正则表达式关键字"></a>正则表达式关键字</h2><p>如果需要查找的字符是以下关键字，需要进行转义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">字符    说明</span><br><span class="line">^      匹配输入字符串的开始位置。要匹配 &quot;^&quot; 字符本身，请使用 &quot;\^&quot;</span><br><span class="line">$      匹配输入字符串的结尾位置。要匹配 &quot;$&quot; 字符本身，请使用 &quot;\$&quot;</span><br><span class="line">( )    标记一个子表达式的开始和结束位置。要匹配小括号，请使用 &quot;\(&quot; 和 &quot;\)&quot;</span><br><span class="line">[ ]    用来自定义能够匹配 &apos;多种字符&apos; 的表达式。要匹配中括号，请使用 &quot;\[&quot; 和 &quot;\]&quot;</span><br><span class="line">&#123; &#125;    修饰匹配次数的符号。要匹配大括号，请使用 &quot;\&#123;&quot; 和 &quot;\&#125;&quot;</span><br><span class="line">.      匹配除了换行符（\n）以外的任意一个字符。要匹配小数点本身，请使用 &quot;\.&quot;</span><br><span class="line">?      修饰匹配次数为 0 次或 1 次。要匹配 &quot;?&quot; 字符本身，请使用 &quot;\?&quot;</span><br><span class="line">+      修饰匹配次数为至少 1 次。要匹配 &quot;+&quot; 字符本身，请使用 &quot;\+&quot;</span><br><span class="line">*      修饰匹配次数为 0 次或任意次。要匹配 &quot;*&quot; 字符本身，请使用 &quot;\*&quot;</span><br><span class="line">|      左右两边表达式之间 &quot;或&quot; 关系。匹配 &quot;|&quot; 本身，请使用 &quot;\|&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="正则表达式的关键字"><a href="#正则表达式的关键字" class="headerlink" title="正则表达式的关键字"></a>正则表达式的关键字</h2><p><a href="http://wilson00471.blog.163.com/blog/static/17386420720101032235174/" target="_blank" rel="noopener">http://wilson00471.blog.163.com/blog/static/17386420720101032235174/</a></p>
+<h2 id="正则表达式收集"><a href="#正则表达式收集" class="headerlink" title="正则表达式收集"></a>正则表达式收集</h2><ul>
+<li><p>匹配11位手机号<br><code>(?&lt;!\d)[1][34578][0-9]{9}(?!\d)</code></p>
+</li>
+<li><p>替换从网页上复制过来的文本的带有一个空格的空行<br>搜索：<code>\r\n \r\n</code><br>替换：<code>\r\n\r\n</code></p>
+</li>
+<li><p>匹配字符串里面最后一个空格<br><code>\s(?=\S+$)</code></p>
+</li>
+<li><p>示例：判断字符串是否以 XXT: 开头</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NSPredicate *predicate=[NSPredicate predicateWithFormat:@&quot;SELF MATCHES %@&quot;,@&quot;XXT+:[^\\s]*&quot;];</span><br><span class="line">if (![predicate evaluateWithObject:symbol.data]) &#123;</span><br><span class="line">    NSLog(@&quot;不是以[XXT:]开头&quot;);</span><br><span class="line">&#125;</span><br><span class="line">else&#123;</span><br><span class="line">NSLog(@&quot;是以[XXT:]开头&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>匹配IP<br><code>^(?:(?:1[0-9][0-9]\.)|(?:2[0-4][0-9]\.)|(?:25[0-5]\.)|(?:[1-9][0-9]\.)|(?:[0-9]\.)){3}(?:(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5])|(?:[1-9][0-9])|(?:[0-9]))$</code></p>
+</li>
+<li><p><code>\b\b</code>和<code>^$</code>的区别<br><code>\b\b</code>匹配的是单词，<code>^$</code> 匹配的是字符串。字符串里面是有可能包含空格的。<br>比如说：<strong><code>空格iOS空格</code></strong>。<code>\biOS\b</code> 就可以匹配。但是<code>^iOS$</code>就不行。必须是<code>^空格iOS空格$</code>才可以。<br>自己实际测试一下体会一下。</p>
+</li>
+<li><p>复制或者替换匹配的结果，EditPlus测试通过。<br>比如说我想把 ABC 形式的字符串替换成 MMABCNN形式的，也就是把原来的字符串进行简单的修改。如下方法可行：<br>查找字符串：<code>ABC</code><br>替换字符串：<code>MM\0NN</code></p>
+</li>
+</ul>
+<p><strong>即<code>\0</code>代表了上一步查找到的字符串。</strong><br>也可参考如下的办法：<a href="https://www.zhihu.com/question/29486704/answer/60187613" target="_blank" rel="noopener">https://www.zhihu.com/question/29486704/answer/60187613</a></p>
+<h2 id="正则表达式入门教程"><a href="#正则表达式入门教程" class="headerlink" title="正则表达式入门教程"></a>正则表达式入门教程</h2><ul>
+<li><a href="http://deerchao.net/tutorials/regex/regex.htm#lookaround" target="_blank" rel="noopener">http://deerchao.net/tutorials/regex/regex.htm#lookaround</a></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/07/学习-Python-2018-12-07-CentOS上安装Python/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/07/学习-Python-2018-12-07-CentOS上安装Python/" class="post-title-link" itemprop="url">CentOS上安装Python</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-07 10:58:38" itemprop="dateCreated datePublished" datetime="2018-12-07T10:58:38+08:00">2018-12-07</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-02-22 17:55:44" itemprop="dateModified" datetime="2019-02-22T17:55:44+08:00">2019-02-22</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安装-Python-3-7"><a href="#安装-Python-3-7" class="headerlink" title="安装 Python 3.7"></a>安装 Python 3.7</h2><p>  参考：<br>  <a href="https://www.cnblogs.com/zhanglong8681/p/8421512.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhanglong8681/p/8421512.html</a><br>  <a href="https://tecadmin.net/install-python-3-7-on-centos/" target="_blank" rel="noopener">https://tecadmin.net/install-python-3-7-on-centos/</a><br>  <a href="https://www.xiaoz.me/archives/10619" target="_blank" rel="noopener">https://www.xiaoz.me/archives/10619</a></p>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 更新所有 yum 包</span></span><br><span class="line"><span class="comment"># 下载依赖</span></span><br><span class="line">yum install gcc openssl-devel bzip2-devel</span><br><span class="line"><span class="comment"># 临时关闭 iptables 否则某些 python 测试可能无法通过</span></span><br><span class="line">service iptables status</span><br><span class="line">service iptables stop</span><br><span class="line"><span class="comment"># 启动 iptables</span></span><br><span class="line">service iptables start</span><br><span class="line"><span class="comment"># 关于防火墙更多参考https://www.cnblogs.com/zhangzhibin/p/6231870.html</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="升级-openssl"><a href="#升级-openssl" class="headerlink" title="升级 openssl"></a>升级 openssl</h2><p><a href="https://blog.51cto.com/13544424/2149473" target="_blank" rel="noopener">https://blog.51cto.com/13544424/2149473</a></p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><ol>
+<li><p>下载安装包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>解压安装包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvzf Python-3.7.2.tgz</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加 makefile 的配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/python --<span class="built_in">enable</span>-optimizations [--with-openssl=/usr/<span class="built_in">local</span>/openssl]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译源码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>链接Python3</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /usr/bin/python3</span><br><span class="line">ln -s /usr/python/bin/python3 /usr/bin/python3</span><br><span class="line">rm -rf /usr/bin/pip3</span><br><span class="line">ln -s /usr/python/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>清理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清理编译生成的文件</span></span><br><span class="line">make clean</span><br><span class="line"><span class="comment"># 清理所有生成的文件</span></span><br><span class="line">make distclean</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/04/学习-Shell-2018-12-04-Shell-find-命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -805,682 +1342,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/" class="post-title-link" itemprop="url">macOS-设置系统代理</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-12-03 11:51:23 / 修改时间：11:52:13" itemprop="dateCreated datePublished" datetime="2018-12-03T11:51:23+08:00">2018-12-03</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>设置系统代理地址</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>开关系统代理</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxystate &quot;Wi-Fi&quot; on #打开Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxystate &quot;Wi-Fi&quot; on #打开Web HTTPS代理</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/" class="post-title-link" itemprop="url">iOS通用推送</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-29 18:10:50" itemprop="dateCreated datePublished" datetime="2018-11-29T18:10:50+08:00">2018-11-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-02-21 17:45:32" itemprop="dateModified" datetime="2019-02-21T17:45:32+08:00">2019-02-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="iOS-通用推送"><a href="#iOS-通用推送" class="headerlink" title="iOS 通用推送"></a>iOS 通用推送</h1><p>Universal Push Notification Client SSL Certificate</p>
-<h2 id="基于-Token-的消息推送机制"><a href="#基于-Token-的消息推送机制" class="headerlink" title="基于 Token 的消息推送机制"></a>基于 Token 的消息推送机制</h2><p>Token Authentication 鉴权方式是区别于普通的证书鉴权方式的新APNs鉴权方式。<br>它相对以前的证书鉴权方式有如下特点：</p>
-<ul>
-<li>同一个账户下所有 App 无论是测试 App 还是正式版 App，都能使用同一个 key 来发推送消息，不再需要为每个 App 生成一个证书。</li>
-<li>生成的 Auth Key 不再有过期时间，无需像证书那样每年需要重新生成一次。</li>
-<li>生成过程简单，不需要繁琐、易错的证书导出操作。</li>
-<li>当服务端发送一个推送消息的时候必须携带上provider authentication token</li>
-<li>Request 和 Response 使用JSON通信</li>
-<li>APNs支持状态码和返回 error 信息</li>
-</ul>
-<ul>
-<li><p>iOS通用推送消息发送流程<br><img src="/images/iOS_Universal_Push_1.png" alt="iOS通用推送1"></p>
-<ol>
-<li>服务器首先连接APNs服务器，</li>
-<li>APNs服务器会返回一个APNs证书，这个证书需要服务器来校验。此时，连接已经建立，服务器可以发送基于Token的推送消息给APNs服务器。</li>
-<li>每一个推送消息必须携带 Token 才能被APNs服务器接受。</li>
-<li>APNs服务器会响应每条推送消息（状态码）。</li>
-</ol>
-</li>
-</ul>
-<h2 id="创建-Token-Authentication-Key-的流程"><a href="#创建-Token-Authentication-Key-的流程" class="headerlink" title="创建 Token Authentication Key 的流程"></a>创建 Token Authentication Key 的流程</h2><h3 id="注册-App-ID"><a href="#注册-App-ID" class="headerlink" title="注册 App ID"></a>注册 App ID</h3><p>首先注册 App ID。如果你已经注册过带有推送通知 App ID，可以跳过以下步骤：</p>
-<ol>
-<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
-</li>
-<li><p>点击 <strong>Certificates, Identifiers &amp; Profiles</strong></p>
-</li>
-<li><p>选择 <strong>Identifiers</strong> 下的 <strong>App IDs</strong></p>
-</li>
-<li><p>点击右上方的加号按钮（<strong>+</strong>)</p>
-</li>
-<li><p>填写 App ID 的基本信息<br><img src="/images/iOS_Universal_Push_3.png" alt></p>
-</li>
-<li><p>选择创建 <strong>Explicit App ID</strong>，填入 App 的 <strong>Bundle ID</strong>。注意，<strong>Explicit App ID</strong> 不能包含星号（*）。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
-</li>
-<li><p>选择 App ID 需要开启的服务，此处要勾选 <strong>Push Notifications</strong>。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
-</li>
-<li><p>点击 <strong>Continue</strong></p>
-</li>
-<li><p>确认注册信息，然后点击 <strong>Register</strong>。</p>
-</li>
-<li><p>点击 <strong>Done</strong></p>
-</li>
-</ol>
-<h3 id="开启推送通知"><a href="#开启推送通知" class="headerlink" title="开启推送通知"></a>开启推送通知</h3><p>为已有的 App ID 开启推送通知的步骤如下：</p>
-<ol>
-<li><p>选择要开启推送通知的 <strong>App ID</strong></p>
-</li>
-<li><p>勾选 <strong>Push Notifications</strong> 复选框<br><img src="/images/iOS_Universal_Push_6.png" alt></p>
-</li>
-<li><p>如果弹出警告对话框，点击 <strong>OK</strong>。</p>
-</li>
-<li><p>点击 <strong>Done</strong></p>
-</li>
-</ol>
-<h3 id="获取-Team-ID"><a href="#获取-Team-ID" class="headerlink" title="获取 Team ID"></a>获取 Team ID</h3><ol>
-<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
-</li>
-<li><p>点击 Membership<br><img src="/images/iOS_Universal_Push_2.png" alt></p>
-</li>
-<li><p>找到 <strong>Team ID</strong> 一栏，将其记下来以备后用。</p>
-</li>
-</ol>
-<h3 id="创建-Token-Authentication-Key"><a href="#创建-Token-Authentication-Key" class="headerlink" title="创建 Token Authentication Key"></a>创建 Token Authentication Key</h3><ol>
-<li>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></li>
-<li>点击 <strong>Certificates, Identifiers &amp; Profiles</strong><br><img src="/images/iOS_Universal_Push_7.png" alt></li>
-<li>选择在 <strong>Keys</strong> 栏下的 <strong>All</strong></li>
-<li>点击下图中红色边框内的加号按钮<br><img src="/images/iOS_Universal_Push_8.png" alt></li>
-<li>根据需要填写 <strong>Key Description</strong> 并<strong>勾选 APNs</strong> 后点击最下面的 <strong>Continue</strong> 按钮。<br><img src="/images/iOS_Universal_Push_9.png" alt></li>
-<li>点击 <strong>Confirm</strong> 按钮继续下一步。<br><img src="/images/iOS_Universal_Push_10.png" alt></li>
-<li>点击 <strong>Download</strong> 将生成好的 <strong>Auth Key</strong> 下载到本地(.p8文件)，并记录 <strong>Key ID</strong> 备用。<br><img src="/images/iOS_Universal_Push_11.png" alt></li>
-</ol>
-<h2 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h2><h3 id="HTTP-2请求APNs"><a href="#HTTP-2请求APNs" class="headerlink" title="HTTP/2请求APNs"></a>HTTP/2请求APNs</h3><table>
-<thead>
-<tr>
-<th>字段名</th>
-<th>字段值</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>method</td>
-<td>POST</td>
-</tr>
-<tr>
-<td>path</td>
-<td>/3/device/</td>
-</tr>
-</tbody></table>
-<p>APNs需要使用 HPACK （HTTP/2 的报头压缩），防止重复的标题键和值。APNs为HPACK维护一个小的动态表。为了避免填满了APNs HPACK表，因而必须丢弃表数据，编码headers以下列方式 — — 尤其是当发送大量的推送</p>
-<ul>
-<li>method 必须为POST</li>
-<li>path 值应编码为一个header中的一个文本字段，没有索引</li>
-<li>authorization 请求header，如果存在，应编码为一个header中的一个文本字段，没有索引</li>
-</ul>
-<p>apns-id、 apns-expiration，和 apns-collapse-id 不同的编码取决于它是否是第一次初始请求或随后的 POST 操作的一部分，如下︰<br>第一次发送请求头的时，使增量索引编码允许头名称加入动态表中<br>子请求发送头时，编码成header中的一个文本字段，没有索引</p>
-<ul>
-<li>请求头</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Header 头</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>authorization</td>
-<td>提供的发送到指定（app）主题通知的APNs验证token，token是以Base64 URL编码的JWT格式。指定为bearer,当使用证书连接的时候，这个请求头将会被忽略</td>
-</tr>
-<tr>
-<td>apns-id</td>
-<td>一个规范的的 UUID 用来标识通知。如果发送通知时发生错误，APNs 使用此值来标识通知，通知到您的服务器。 规范的格式是 32 个小写的十六进制数字，由连字符分隔为5，8-4-4-4-12。UUID一个例子如下： 123e4567-e89b-12d3-a456-42665544000 如果您省略这个头,一个新的UUID由APNs创建并且在response中返回</td>
-</tr>
-<tr>
-<td>apns-expiration</td>
-<td>通知过期时间，秒级的UTC时间戳，这个header标识通知 从何时起不再有效，可以丢弃。 如果这个值非零，APNs保存通知并且尽量至少送达一次。如果无法第一时间送达，根据需要重复尝试。 如果这个值为0，APNs认为通知立即过期，不会存储与重新推送。</td>
-</tr>
-<tr>
-<td>apns-priority</td>
-<td>通知的优先级，指定以下值:<br>   - 10–立即推送消息. 这个优先级的通知必须再目标设备上触发alert, 声音, 或者badge . 仅仅包含content-available key使用此优先级是错误的。<br>   - 5—一次性发送通知，需要考虑设备的电量。具有此优先级的通知可能分组推送并且几种爆发推送,Notifications with this priority might be grouped and delivered他们会被节流，并且在某些情况下不会送达。 如果省略这个头，APNs服务器会把优先级设置为10</td>
-</tr>
-<tr>
-<td>apns-topic</td>
-<td>远程通知的主题，通常是你App的bundle id，在开发者账号中创建的证书必须包含此bundle id 如果证书包含多个主题，这个头必须指定一个值 如果省略此头并且APNs证书不包含指定的主题，APNs服务器使用证书的Subject作为默认主题。 如果使用token代替证书，必须指定此头，提供的主题应该被在开发者账号中的team提供。即bundle id的app应该与auth key同属于一个开发者组。</td>
-</tr>
-</tbody></table>
-<ul>
-<li><p>请求体<br>body内容是将要推送的消息负载的JSON对象。body数据不必须压缩，其最大大小为 4 KB （4096 字节）。对于 (VoIP) 通知，body数据最大大小为 5 KB （5120 字节）。</p>
-</li>
-<li><p>响应头</p>
-</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Header</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>apns-id</td>
-<td>apns-id从request得到， 如果request中没有此值, APNs服务器创建一个新的UUID并且在header中返回</td>
-</tr>
-<tr>
-<td>status</td>
-<td>HTTP状态码，HTTP status code</td>
-</tr>
-</tbody></table>
-<ul>
-<li>状态码</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Status code</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>成功</td>
-</tr>
-<tr>
-<td>400</td>
-<td>无效请求</td>
-</tr>
-<tr>
-<td>403</td>
-<td>证书错误或者验证token错误</td>
-</tr>
-<tr>
-<td>405</td>
-<td>:method 设置错误. 只支持 POST 请求</td>
-</tr>
-<tr>
-<td>410</td>
-<td>device token不在有效与topic</td>
-</tr>
-<tr>
-<td>413</td>
-<td>负载payload太大</td>
-</tr>
-<tr>
-<td>429</td>
-<td>服务端对于同一个device token发送了太多了请求</td>
-</tr>
-<tr>
-<td>500</td>
-<td>内部服务器错误</td>
-</tr>
-<tr>
-<td>503</td>
-<td>服务器关闭,不可用</td>
-</tr>
-</tbody></table>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/" class="post-title-link" itemprop="url">Python的安装与卸载</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 17:48:12" itemprop="dateCreated datePublished" datetime="2018-11-28T17:48:12+08:00">2018-11-28</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-03-08 10:39:07" itemprop="dateModified" datetime="2019-03-08T10:39:07+08:00">2019-03-08</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>macOS<br><a href="https://docs.python.org/3/using/mac.html" target="_blank" rel="noopener">https://docs.python.org/3/using/mac.html</a></p>
-</li>
-<li><p>Python 可能在以下几个位置</p>
-<blockquote>
-<p>/usr/local/Cellar/Python<br>/Library/Frameworks/Python.framework<br>/usr/local/bin/</p>
-</blockquote>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/" class="post-title-link" itemprop="url">Windows激活</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-28 14:26:14" itemprop="dateCreated datePublished" datetime="2018-11-28T14:26:14+08:00">2018-11-28</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-10 16:30:57" itemprop="dateModified" datetime="2019-09-10T16:30:57+08:00">2019-09-10</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>[TOC]</p>
-<h1 id="Windows-激活"><a href="#Windows-激活" class="headerlink" title="Windows 激活"></a>Windows 激活</h1><h2 id="Windows-激活工具"><a href="#Windows-激活工具" class="headerlink" title="Windows 激活工具"></a>Windows 激活工具</h2><ul>
-<li><a href="https://cmwtat.cloudmoe.com/index.html" target="_blank" rel="noopener">https://cmwtat.cloudmoe.com/index.html</a></li>
-</ul>
-<h2 id="Windows-激活命令"><a href="#Windows-激活命令" class="headerlink" title="Windows 激活命令"></a>Windows 激活命令</h2><ul>
-<li><p>重置Windows激活计数<br><code>slmgr.vbs -rearm</code></p>
-</li>
-<li><p>安装产品密钥 替换现有密钥<br><code>slmgr /ipk x-x-x-x-x</code></p>
-</li>
-<li><p>安装OEM证书<br><code>slmgr.vbs -ilc x:\xxx.XRM-MS</code></p>
-</li>
-<li><p>激活Windows<br><code>slmgr.vbs -ato</code></p>
-</li>
-<li><p>显示详细的激活信息<br>包括：系统版本、激活ID、安装ID、部分产品密钥、许可证状态、剩余 Windows 重置计数等<br><code>slmgr.vbs -dlv</code></p>
-</li>
-<li><p>显示许可证激活状态的截止日期<br><code>slmgr.vbs -xpr</code></p>
-</li>
-<li><p>查看许可证的概要信息<br><code>slmgr.vbs -dli</code></p>
-</li>
-<li><p>卸载当前产品密钥<br>重启电脑之后系统将重归未激活状态，会出现输入密钥和联网激活界面。<br><code>slmgr.vbs -upk</code></p>
-</li>
-</ul>
-<p><a href="https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit</a><br><a href="https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit</a></p>
-<h2 id="Windows-10-数字权利激活"><a href="#Windows-10-数字权利激活" class="headerlink" title="Windows 10 数字权利激活"></a>Windows 10 数字权利激活</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">右键开始-命令提示符(管理员)，输入：</span><br><span class="line">slmgr.vbs /ckms</span><br><span class="line">slmgr.vbs /upk</span><br><span class="line"></span><br><span class="line">win10专业版本数字权利激活</span><br><span class="line"> 注意只能适合全新安装的10586版本</span><br><span class="line"> 第1步</span><br><span class="line"> 选择“开始”图标按钮，然后依次选择“设置”&gt;“更新和安全”&gt;“激活”。</span><br><span class="line"> 选择“更改产品密钥”，然后输入 PW48G-MNG8W-B9978-YWBRP-76DGY</span><br><span class="line">激活不了的，点关闭</span><br><span class="line"> 第2步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289 或者 TNXR9-K3KVT-RHXXF-4HDTY-RCYDQ 或者 CKQMQ-DNPGJ-2FQGT-M3Q2W-Q68K3</span><br><span class="line"> 联网激活</span><br><span class="line"> 这个是win7 或者 win8.1 MAK，目前还有激活次数</span><br><span class="line"> 第3步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入 VK7JG-NPHTM-C97JM-9MPGT-3V66T，取得数字权利</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 数字化认可的WIN10，今后重装WIN10系统时无需输入“产品密钥”（安装时可以跳过这步），安装完成后，系统自动激活。</span><br><span class="line"> 有人说</span><br><span class="line">win10的激活机制是绑定你的电脑主板了，也就是说 只要你的主板不换 那么你的win10永远都是激活也是正版的</span><br></pre></td></tr></table></figure>
-
-<p>###怎么验证 Windows 是否已经激活：<br>    1. 最简单的是在我的电脑右键，查看属性.<br>    2. Win+R===&gt;输入 slmgr.vbs -dlv (推荐,此命令得到的信息最全)<br>    3. Win+R===&gt;输入 slmgr.vbs -dli<br>    4. Win+R===&gt;输入 slmgr.vbs -xpr<br>    5. Win+R===&gt;输入 Winver</p>
-<p>免费使用Windows7 1年</p>
-<p>即使你并非微软的官方测试员，也不需要四处寻觅Windows 7的激活密钥，除了官方提供的安装密钥之外，我们还可以通过其他的方法免费使用1年期限的Windows 7，最起码可以坚持到Windows 7正式版本的到来。</p>
-<pre><code>初始状态下，Windows 7提供了30天的试用时间，不过在即将到达这一30天的期限之前，我们可以使用“slmgr.vbs -rearm”的命令延长使用期30天，虽然官方文档中声明该命令只能重复使用3次，也说是说总共可以免费体验120天，此后将无法再次使用。其实，只要修改注册表中的一处键值，即可重复使用“slmgr.vbs -rearm”命令，请打开注册表编辑器，依次定位至“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform”，如图1所示，找到右侧窗格中的“SkipRearm”，将其键值修改为“1”，以后就可以再次使用“slmgr.vbs -rearm”的命令，这个键值总共可以修改8次，也就是说我们可以重复使用8次“slmgr.vbs -rearm”的命令，前后加起来，正好是一年的使用时间。</code></pre><p>参考资料:<a href="http://win7x.blogbus.com/logs/40854953.html" target="_blank" rel="noopener">http://win7x.blogbus.com/logs/40854953.html</a></p>
-<p>Win7激活（<a href="http://www.win7soft.com）" target="_blank" rel="noopener">www.win7soft.com）</a>:</p>
-<p>Win7软件授权管理工具slmgr.vbs使用向导</p>
-<p>当我们打算激活Vista和windows7或打算延长其试用期（rearm）的的时候，大家都会碰到到这个slmgr命令或slmgr.vbs。SLMGR是Software License Manger的简称，是WINDOWS的软件授权管理工具。SLMGR是管理系统激活和密钥. 证书的主要组件。</p>
-<p>SLMGR的所有功能都是通过slmgr.vbs提供的，采用VBScript命令行方式执行。图形界面中许多与该命令行相关的激活行为，比如系统属性等，都是通过调用slmgr.vbs脚本来执行授权操作。即使你在COMMAND下使用SLMGR命令行，其运行结果或出错信息也是以浏览器弹出窗口方式显示的，以下是slmgr的一些使用语法仅供参考，尤其在各位需要激活或遇到激活问题的时候是很有帮助的。</p>
-<p>###在哪里使用和如何使用slmgr.vbs<br>有如下几种方式进入并运行slmgr.vbs命令：</p>
-<ol>
-<li><p>COMMAND命令提示窗口下，这是一种执行方式，但需要提升管理员权限；</p>
-</li>
-<li><p>运行命令（Vista中的显示运行命令，Win+R，开始/所有程序/附件/命令提示符，任何一种）</p>
-</li>
-<li><p>开始菜单中的开始搜索框，使用这种方法需要输入slmgr的完整名称——slmgr.vbs，类似于slmgr.vbs -ato这样的格式内容。</p>
-</li>
-</ol>
-<p>最常用的SLMGR命令是slmgr.vbs -rearm延长Vista或Windows 7试用期30天。除此外，slmgr还支持很多参数命令。我们可以通过slmgr.vbs -?命令查看。也可以检验Windows Vista或Windows 7的激活状态和许可证详细信息。</p>
-<ol start="3">
-<li>SLMGR语法格式<br>基本语法：</li>
-</ol>
-<p>slmgr.vbs [MachineName [User Password]] [<option>]</option></p>
-<p>其中：</p>
-<ul>
-<li><p>MachineName ： 远程计算机名 （缺省为本机）</p>
-</li>
-<li><p>User ： 具有相应权限的计算机用户</p>
-</li>
-<li><p>Password：用户密码</p>
-</li>
-<li><p>Option：为SLMGR的参数，参下。</p>
-</li>
-</ul>
-<p>常用参数选项：</p>
-<p>-ipk &lt;产品密钥&gt;</p>
-<p>安装产品密钥（替换现有密钥）</p>
-<p>-upk</p>
-<p>卸载产品密钥</p>
-<p>-ato</p>
-<p>激活Windows</p>
-<p>-dli [激活 ID | All]</p>
-<p>显示许可证信息（默认：当前许可证）</p>
-<p>-dlv [激活 ID | All]</p>
-<p>显示详细的许可证信息（默认：当前许可证）</p>
-<p>-xpr</p>
-<p>当前许可证状态的截止日期</p>
-<p>高级参数选项：</p>
-<p>-cpky</p>
-<p>从注册表中清除产品密钥（阻止泄露引起的攻击）</p>
-<p>-ilc &lt;许可证文件路径&gt;</p>
-<p>安装许可证</p>
-<p>-rilc</p>
-<p>重新安装系统许可证文件</p>
-<p>-rearm</p>
-<p>重置计算机的授权状态</p>
-<p>-dti</p>
-<p>显示安装 ID 以进行脱机激活</p>
-<p>-atp &lt;确认 ID&gt;</p>
-<p>使用电话方式提供的确认 ID 激活产品</p>
-<p>KMS相关选项：</p>
-<p>-skms <kms activation server name></kms></p>
-<p>设置KMS服务器名</p>
-<p>-skms <kms activation server port number></kms></p>
-<p>设置KMS服务器端口号</p>
-<p>-skms <kms activation server name:port number></kms></p>
-<p>设置KMS服务器名和端口号</p>
-<p>-ckms</p>
-<p>清除KMS服务器名和端口号并设为初始状态</p>
-<p>###slmgr.vbs的使用示例</p>
-<ol>
-<li>查看许可证的概要信息（假设为当前许可证；且系统在C盘，下同），则可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -dli</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dli</p>
-<ol start="2">
-<li>显示许可证激活状态的截止日期，也可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -xpr</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -xpr</p>
-<ol start="3">
-<li>查看许可证详细信息，也可通过以下两种方式查看。</li>
-</ol>
-<p>运行命令下：slmgr.vbs -dlv</p>
-<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dlv</p>
-<ol start="4">
-<li>导入OEM证书方法</li>
-</ol>
-<p>运行命令下：slmgr.vbs -ilc D:\123.XRM-MS，后面为OEM证书完整路径</p>
-<ol start="5">
-<li>卸载当前产品密钥</li>
-</ol>
-<p>运行命令下：slmgr.vbs -upk，即可卸载当前产品密钥，重启计算机会出现输入密钥和联网激活界面。</p>
-<p>如果想查看Windows 7 的详细版本号，我们要运行另外一个命令Slmgr.vbs，大家在运行中输入Slmgr.vbs，可以看到此命令的用法以及各种参数。</p>
-<p>　　1. slmgr.vbs –dli</p>
-<p>　　显示：操作系统版本. 部分产品密钥. 许可证状态</p>
-<p>　　2. slmgr.vbs –dlv</p>
-<p>　　显示：最为详尽的激活信息，包括：激活ID. 安装ID. 激活截止日期</p>
-<p>　　3. slmgr.vbs –xpr</p>
-<p>　　显示：是否彻底激活</p>
-<p>　　4. slmgr.vbs –ipk</p>
-<p>　　更换WIN7序列号</p>
-<p>　　5. slmgr.vbs –ato</p>
-<p>　　激活WIN7</p>
-<p>slmgr.vbs命令大全 检验Windows7激活状态</p>
-<p>其详细参数如下：</p>
-<p>可用选项:</p>
-<p>-ipk &lt;产品密钥&gt;<br>​    安装产品密钥(替换现有密钥)</p>
-<p>-upk<br>​    卸载产品密钥</p>
-<p>-ato<br>​    激活 Windows</p>
-<p>-dli [激活 ID | All]<br>​    显示许可证信息(默认: 当前许可证)</p>
-<p>-dlv [激活 ID | All]<br>​    显示详细的许可证信息(默认: 当前许可证)</p>
-<p>-xpr<br>​    当前许可证状态的截止日期</p>
-<p>高级选项:<br>-cpky<br>​    从注册表中清除产品密钥(阻止泄露引起的攻击)</p>
-<p>-ilc &lt;许可证文件路径&gt;<br>​    安装许可证</p>
-<p>-rilc<br>​    重新安装系统许可证文件</p>
-<p>-rearm<br>​    重置计算机的授权状态</p>
-<p>-dti<br>​    显示安装 ID 以进行脱机激活</p>
-<p>-atp &lt;确认 ID&gt;<br>​    使用电话方式提供的确认 ID 激活产品</p>
-<p>###重置激活<br>这是不少网友对于激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令<code>slmgr.vbs -rearm</code>的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令显示“重置计数”有何意义和作用？</p>
-<pre><code>激活Windows 7后运行`slmgr.vbs -dlv`命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令`slmgr.vbs -rearm`以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
-
-激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。</code></pre><p>激活 Windows 7 后运行 <code>slmgr.vbs -dlv</code> 命令显示“重置计数”有何意义和作用？</p>
-<pre><code>这是不少网友对于激活Windows 7后运行slmgr.vbs -dlv命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令`slmgr.vbs -rearm`的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行`slmgr.vbs -dlv`命令显示“重置计数”有何意义和作用？
-
-激活Windows 7后运行slmgr.vbs -dlv命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令slmgr.vbs -rearm以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
-
-激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。
-
-有些网友在《关于重发《打造“双重”激活（“OEM激活”和“联网激活”）的Windows 7旗舰版》的说明》一文后提问：采用两种激活方式有何意义？看过以上介绍，首先回答了实践层面的意义：掌握品牌机的两种激活方法。其次能从“自然”走向“自由”：对微软两大激活体系从理论层面加深理性思考。</code></pre><p>友情提示：</p>
-<pre><code>——通过“软改”或“硬刷”激活后，个别不能通过重置命令显示更换产品密钥选项的，可以采用slmgr.vbs -upk命令卸载目前产品密钥，重启计算机后即可出现要求输入新的密钥联网激活界面。</code></pre>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1530,7 +1391,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1543,7 +1404,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-count">144</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

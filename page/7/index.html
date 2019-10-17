@@ -228,6 +228,327 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-iOS-2019-07-02-iOS-class类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/07/02/学习-iOS-2019-07-02-iOS-class类/" class="post-title-link" itemprop="url">iOS-class类</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-02 17:46:13 / 修改时间：17:47:15" itemprop="dateCreated datePublished" datetime="2019-07-02T17:46:13+08:00">2019-07-02</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>类属性的声明，Xcode8之后支持</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@propeerty (<span class="keyword">class</span>) <span class="built_in">NSString</span> *aClassProperty;</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-Python-2019-07-02-Python-argparse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/07/02/学习-Python-2019-07-02-Python-argparse/" class="post-title-link" itemprop="url">Python-argparse</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-07-02 11:22:22 / 修改时间：11:30:48" itemprop="dateCreated datePublished" datetime="2019-07-02T11:22:22+08:00">2019-07-02</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    parser = argparse.ArgumentParser()</span><br><span class="line">    <span class="comment"># 可选参数可以如下调用方式 `-v some-value` 或者 `-v=some-value`</span></span><br><span class="line">    parser.add_argument(<span class="string">'-v'</span>, <span class="string">'--verbose'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定位参数调用的时候不能使用echo参数名</span></span><br><span class="line">    <span class="comment"># 例如，不能 `echo=3` 或者 `echo 3`</span></span><br><span class="line">    parser.add_argument(<span class="string">'echo'</span>,</span><br><span class="line">                        help=<span class="string">'直接打印输入的信息'</span>)</span><br><span class="line">    parser.parse_args()</span><br><span class="line"></span><br><span class="line">    print(parser.parse_args())</span><br></pre></td></tr></table></figure>
+
+<p>参数前面带<code>-</code>或者<code>--</code>是可选参数。<br>参数前面不带横杠的是定位参数。</p>
+<p>可选参数的调用形式可以使用：<code>-v=some-value</code>或者<code>-v some-value</code><br>定位参数调用时候必须传入，并且不能带参数名，参数传入顺序也有影响。</p>
+<h3 id="action-参数"><a href="#action-参数" class="headerlink" title="action 参数"></a>action 参数</h3><p>参考：<a href="https://docs.python.org/3/library/argparse.html#action" target="_blank" rel="noopener">https://docs.python.org/3/library/argparse.html#action</a></p>
+<ul>
+<li>``</li>
+</ul>
+<p>参考：<a href="https://blog.ixxoo.me/argparse.html" target="_blank" rel="noopener">https://blog.ixxoo.me/argparse.html</a></p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/" class="post-title-link" itemprop="url">Shell-ls命令</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 17:49:54 / 修改时间：17:53:32" itemprop="dateCreated datePublished" datetime="2019-06-26T17:49:54+08:00">2019-06-26</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>列出SELinux文件权限相关<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -lZ</span><br><span class="line">[root@host ~]<span class="comment"># ls -lZ</span></span><br><span class="line">-rw-r--r-- root root ?                                systemctl list-unit-files --<span class="built_in">type</span>=service</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/" class="post-title-link" itemprop="url">Xcode-模拟器命令</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-26 11:16:16 / 修改时间：11:17:42" itemprop="dateCreated datePublished" datetime="2019-06-26T11:16:16+08:00">2019-06-26</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="xcrun-simctl"><a href="#xcrun-simctl" class="headerlink" title="xcrun simctl"></a>xcrun simctl</h2><ul>
+<li><p>获取模拟器列表</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>擦除模拟器数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl erase [模拟器ID,可通过获取模拟器列表命令获得]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过Finder打开模拟器文稿</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>直接将下面的代码用脚本编辑器保存为苹果脚本，可以…</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> shell script <span class="string">"</span></span><br><span class="line"><span class="string">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span></span><br><span class="line"><span class="string">"</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除模拟器<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl <span class="built_in">help</span> delete</span><br><span class="line">Usage: simctl delete &lt;device&gt; [... &lt;device n&gt;] | unavailable</span><br><span class="line"><span class="comment"># 删除不可用的模拟器</span></span><br><span class="line">xcrun simctl delete unavailable</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-macOS-iterm2使用技巧/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -618,11 +939,19 @@
                 
               
 
-              <time title="创建时间：2019-06-19 20:16:51 / 修改时间：20:18:17" itemprop="dateCreated datePublished" datetime="2019-06-19T20:16:51+08:00">2019-06-19</time>
+              <time title="创建时间：2019-06-19 20:16:51" itemprop="dateCreated datePublished" datetime="2019-06-19T20:16:51+08:00">2019-06-19</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-16 18:44:27" itemprop="dateModified" datetime="2019-10-16T18:44:27+08:00">2019-10-16</time>
+              </span>
             
           
 
@@ -638,18 +967,14 @@
 
       
           <h3 id="MIUI-双开应用存储位置"><a href="#MIUI-双开应用存储位置" class="headerlink" title="MIUI 双开应用存储位置"></a>MIUI 双开应用存储位置</h3><ul>
-<li><p>对应data<br><code>/data/user/999/</code></p>
-</li>
-<li><p>对应SD卡内容</p>
-</li>
+<li>应用双开数据存储 <code>/storage/emulated/999</code></li>
+<li>应用双开程序存储 <code>/data/user/999</code></li>
+<li>对应data <code>/data/user/999/</code></li>
+<li>对应SD卡内容</li>
 </ul>
-<p>####安装程序 提示 没有存储空间<br>因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。</p>
+<h4 id="安装程序-提示-没有存储空间"><a href="#安装程序-提示-没有存储空间" class="headerlink" title="安装程序 提示 没有存储空间"></a>安装程序 提示 没有存储空间</h4><p>因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。</p>
 <h3 id="安卓手机文件路径"><a href="#安卓手机文件路径" class="headerlink" title="安卓手机文件路径"></a>安卓手机文件路径</h3><h4 id="预装的合作伙伴的软件"><a href="#预装的合作伙伴的软件" class="headerlink" title="预装的合作伙伴的软件"></a>预装的合作伙伴的软件</h4><p><code>\data\miui</code></p>
-<p>####短信数据库路径</p>
-<p>####联系人数据库路径</p>
-<p>####黑名单列表数据库路径</p>
-<p>####被拦截电话和短信数据库路径</p>
-<p>####外置存储可更改文件权限路径<br><code>/storage_int/</code></p>
+<h4 id="短信数据库路径"><a href="#短信数据库路径" class="headerlink" title="短信数据库路径"></a>短信数据库路径</h4><h4 id="联系人数据库路径"><a href="#联系人数据库路径" class="headerlink" title="联系人数据库路径"></a>联系人数据库路径</h4><h4 id="黑名单列表数据库路径"><a href="#黑名单列表数据库路径" class="headerlink" title="黑名单列表数据库路径"></a>黑名单列表数据库路径</h4><h4 id="被拦截电话和短信数据库路径"><a href="#被拦截电话和短信数据库路径" class="headerlink" title="被拦截电话和短信数据库路径"></a>被拦截电话和短信数据库路径</h4><h4 id="外置存储可更改文件权限路径"><a href="#外置存储可更改文件权限路径" class="headerlink" title="外置存储可更改文件权限路径"></a>外置存储可更改文件权限路径</h4><p><code>/storage_int/</code></p>
 <h3 id="铃声位置"><a href="#铃声位置" class="headerlink" title="铃声位置"></a>铃声位置</h3><ul>
 <li>MIUI<br>所有的G7音频（铃声）文件都存于<code>SD卡/MIUI/ringtong</code>下面的文件基本上都能被识别，你将铃声拷进去就可以了。而音乐文件则保存<code>SD卡/MIUI/MUSIC</code>当中。至于电话铃声/短信铃声/提醒铃声，可在相应的设置栏中自行设定，比如说你喜欢某个曲子作为来电铃声，那么你就在来电设置当中进行设置并选中它就可以了，新版的MIUI支持铃声预览，你试听觉得合适了选定就可以了，而且不必像以往的版本要用专门的播放器播放。同理短信铃声/提醒铃声也是这样设置的，</li>
 <li>其他手机<br>　　系统自带声音文件存放的位置和内容<br>　　1 、总目录：/system/media/audio<br>　　2、闹钟：/system/media/audio/alarms<br>　　3、短信通知：/system/media/audio/notificati**<br>　　4、铃声：/system/media/audio/ringtones<br>　　5、系统界面声音：/system/media/audio/ui<br>　　在SD卡中自定义各种声音<br>　　1、在sd卡的根目录下建立文件夹media<br>　　2、 在media目录下建立文件夹 alarms 里面放闹钟所需的音乐文件<br>　　3、在media目录下建立文件夹 notificati** 里面放短信通知所需的音乐文件<br>　　4、 在media目录下建立文件夹 ringtones 里面放电话铃声所需的音乐文件<br>　　5 、本方法的优点是sd卡容量大，音乐文件大小不受限制，缺点，读取sd卡慢不方便还费电</li>
@@ -750,330 +1075,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/10/学习-Python-2019-06-10-Python-requests常用代码片段/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/10/学习-Python-2019-06-10-Python-requests常用代码片段/" class="post-title-link" itemprop="url">Python-requests常用代码片段</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-10 20:30:40" itemprop="dateCreated datePublished" datetime="2019-06-10T20:30:40+08:00">2019-06-10</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-26 16:18:09" itemprop="dateModified" datetime="2019-09-26T16:18:09+08:00">2019-09-26</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>设置 UA</li>
-</ul>
-<p><strong>注意：实测过程中 header 的 key 大小写不敏感，也就是说 <code>User-Agent</code>和<code>user-agent</code>是一样的。</strong></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">original_headers = session.headers</span><br><span class="line">original_headers[<span class="string">'User-Agent'</span>] = <span class="string">'Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362'</span></span><br><span class="line">session.headers = original_headers</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>设置 Proxy<br>注意：设置Proxy有时候会不可用，注意看是否在系统中设置了代理。<br>代理的地址可以是<code>127.0.0.1:8080</code>也可以是带有协议的<code>http://127.0.0.1:8080</code><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_proxy</span><span class="params">(self, proxy)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> proxy <span class="keyword">is</span> <span class="literal">None</span>:</span><br><span class="line">        self.session.proxies.clear()</span><br><span class="line">        self.logger.info(<span class="string">'已清空代理'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.session.proxies.update(&#123;<span class="string">'http'</span>: proxy, <span class="string">'https'</span>: proxy&#125;)</span><br><span class="line">        self.logger.info(<span class="string">f'已设置代理为 <span class="subst">&#123;proxy&#125;</span>'</span>)</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: A case-insensitive dictionary of headers to be sent on each</span></span><br><span class="line">    <span class="comment">#: :class:`Request &lt;Request&gt;` sent from this</span></span><br><span class="line">    <span class="comment">#: :class:`Session &lt;Session&gt;`.</span></span><br><span class="line">    self.headers = default_headers()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Default Authentication tuple or object to attach to</span></span><br><span class="line">    <span class="comment">#: :class:`Request &lt;Request&gt;`.</span></span><br><span class="line">    self.auth = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Dictionary mapping protocol or protocol and host to the URL of the proxy</span></span><br><span class="line">    <span class="comment">#: (e.g. &#123;'http': 'foo.bar:3128', 'http://host.name': 'foo.bar:4012'&#125;) to</span></span><br><span class="line">    <span class="comment">#: be used on each :class:`Request &lt;Request&gt;`.</span></span><br><span class="line">    self.proxies = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Event-handling hooks.</span></span><br><span class="line">    self.hooks = default_hooks()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Dictionary of querystring data to attach to each</span></span><br><span class="line">    <span class="comment">#: :class:`Request &lt;Request&gt;`. The dictionary values may be lists for</span></span><br><span class="line">    <span class="comment">#: representing multivalued query parameters.</span></span><br><span class="line">    self.params = &#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Stream response content default.</span></span><br><span class="line">    self.stream = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: SSL Verification default.</span></span><br><span class="line">    self.verify = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: SSL client certificate default, if String, path to ssl client</span></span><br><span class="line">    <span class="comment">#: cert file (.pem). If Tuple, ('cert', 'key') pair.</span></span><br><span class="line">    self.cert = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Maximum number of redirects allowed. If the request exceeds this</span></span><br><span class="line">    <span class="comment">#: limit, a :class:`TooManyRedirects` exception is raised.</span></span><br><span class="line">    <span class="comment">#: This defaults to requests.models.DEFAULT_REDIRECT_LIMIT, which is</span></span><br><span class="line">    <span class="comment">#: 30.</span></span><br><span class="line">    self.max_redirects = DEFAULT_REDIRECT_LIMIT</span><br><span class="line"></span><br><span class="line">    <span class="comment">#: Trust environment settings for proxy configuration, default</span></span><br><span class="line">    <span class="comment">#: authentication and similar.</span></span><br><span class="line">    self.trust_env = <span class="literal">True</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#: A CookieJar containing all currently outstanding cookies set on this</span></span><br><span class="line">    <span class="comment">#: session. By default it is a</span></span><br><span class="line">    <span class="comment">#: :class:`RequestsCookieJar &lt;requests.cookies.RequestsCookieJar&gt;`, but</span></span><br><span class="line">    <span class="comment">#: may be any other ``cookielib.CookieJar`` compatible object.</span></span><br><span class="line">    self.cookies = cookiejar_from_dict(&#123;&#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Default connection adapters.</span></span><br><span class="line">    self.adapters = OrderedDict()</span><br><span class="line">    self.mount(<span class="string">'https://'</span>, HTTPAdapter())</span><br><span class="line">    self.mount(<span class="string">'http://'</span>, HTTPAdapter())</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">HTTPAdapter</span><span class="params">(BaseAdapter)</span>:</span></span><br><span class="line">    <span class="string">"""The built-in HTTP Adapter for urllib3.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Provides a general-case interface for Requests sessions to contact HTTP and</span></span><br><span class="line"><span class="string">    HTTPS urls by implementing the Transport Adapter interface. This class will</span></span><br><span class="line"><span class="string">    usually be created by the :class:`Session &lt;Session&gt;` class under the</span></span><br><span class="line"><span class="string">    covers.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    :param pool_connections: The number of urllib3 connection pools to cache.</span></span><br><span class="line"><span class="string">    :param pool_maxsize: The maximum number of connections to save in the pool.</span></span><br><span class="line"><span class="string">    :param max_retries: The maximum number of retries each connection</span></span><br><span class="line"><span class="string">        should attempt. Note, this applies only to failed DNS lookups, socket</span></span><br><span class="line"><span class="string">        connections and connection timeouts, never to requests where data has</span></span><br><span class="line"><span class="string">        made it to the server. By default, Requests does not retry failed</span></span><br><span class="line"><span class="string">        connections. If you need granular control over the conditions under</span></span><br><span class="line"><span class="string">        which we retry a request, import urllib3's ``Retry`` class and pass</span></span><br><span class="line"><span class="string">        that instead.</span></span><br><span class="line"><span class="string">    :param pool_block: Whether the connection pool should block for connections.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Usage::</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">      &gt;&gt;&gt; import requests</span></span><br><span class="line"><span class="string">      &gt;&gt;&gt; s = requests.Session()</span></span><br><span class="line"><span class="string">      &gt;&gt;&gt; a = requests.adapters.HTTPAdapter(max_retries=3)</span></span><br><span class="line"><span class="string">      &gt;&gt;&gt; s.mount('http://', a)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    __attrs__ = [<span class="string">'max_retries'</span>, <span class="string">'config'</span>, <span class="string">'_pool_connections'</span>, <span class="string">'_pool_maxsize'</span>,</span><br><span class="line">                 <span class="string">'_pool_block'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, pool_connections=DEFAULT_POOLSIZE,</span></span></span><br><span class="line"><span class="function"><span class="params">                 pool_maxsize=DEFAULT_POOLSIZE, max_retries=DEFAULT_RETRIES,</span></span></span><br><span class="line"><span class="function"><span class="params">                 pool_block=DEFAULT_POOLBLOCK)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> max_retries == DEFAULT_RETRIES:</span><br><span class="line">            self.max_retries = Retry(<span class="number">0</span>, read=<span class="literal">False</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            self.max_retries = Retry.from_int(max_retries)</span><br><span class="line">        self.config = &#123;&#125;</span><br><span class="line">        self.proxy_manager = &#123;&#125;</span><br><span class="line"></span><br><span class="line">        super(HTTPAdapter, self).__init__()</span><br><span class="line"></span><br><span class="line">        self._pool_connections = pool_connections</span><br><span class="line">        self._pool_maxsize = pool_maxsize</span><br><span class="line">        self._pool_block = pool_block</span><br><span class="line"></span><br><span class="line">        self.init_poolmanager(pool_connections, pool_maxsize, block=pool_block)</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/10/电脑技巧-2019-06-10-常用浏览器UA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/10/电脑技巧-2019-06-10-常用浏览器UA/" class="post-title-link" itemprop="url">常用浏览器UA</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-10 20:26:12 / 修改时间：20:27:32" itemprop="dateCreated datePublished" datetime="2019-06-10T20:26:12+08:00">2019-06-10</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>Edge<br><code>Mozilla/5.0 (Windows NT 10.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.18362</code></p>
-</li>
-<li><p>FireFox on macOS<br><code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:67.0) Gecko/20100101 Firefox/67.0</code></p>
-</li>
-<li><p>Safari<br><code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Safari/605.1.15</code></p>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/10/学习-iOS-2019-06-10-iOS-Cookie/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/10/学习-iOS-2019-06-10-iOS-Cookie/" class="post-title-link" itemprop="url">iOS-Cookie</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-10 19:23:45 / 修改时间：19:24:17" itemprop="dateCreated datePublished" datetime="2019-06-10T19:23:45+08:00">2019-06-10</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>NSHTTPCookie 支持的属性<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSHTTPCookieComment</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieCommentURL</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieDiscard</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieDomain</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieExpires</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieMaximumAge</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieName</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieOriginURL</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookiePath</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookiePort</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieSecure</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieValue</span>;</span><br><span class="line"><span class="built_in">NSHTTPCookieVersion</span>;</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/10/学习-iOS-2019-06-10-iOS-Framework加载自己的图片等资源/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/10/学习-iOS-2019-06-10-iOS-Framework加载自己的图片等资源/" class="post-title-link" itemprop="url">iOS-Framework加载自己的图片等资源</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-10 17:02:54 / 修改时间：17:09:43" itemprop="dateCreated datePublished" datetime="2019-06-10T17:02:54+08:00">2019-06-10</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>关键是找到自己的资源路径<br>除了[NSBundle mainBundle]这个用法还有<br>[NSBundle bundleForClass:[self class]]这个用法，可以找到framework 所在的路径</p>
-<p>从 bundle 中加载资源的标准流程</p>
-<ol>
-<li>先要找到bundle路径，通过这个路径再构造一个NSBundle对象</li>
-<li>利用构造出来的NSBundle对象再去加载需要的资源<br>参考：<a href="https://yq.aliyun.com/articles/312072" target="_blank" rel="noopener">https://yq.aliyun.com/articles/312072</a><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置文件路径</span></span><br><span class="line">    <span class="built_in">NSString</span> *bundlePath = [[<span class="built_in">NSBundle</span> mainBundle] pathForResource:<span class="string">@"SourcesBundle"</span> ofType:<span class="string">@"bundle"</span>];</span><br><span class="line">    <span class="built_in">NSBundle</span> *resourceBundle = [<span class="built_in">NSBundle</span> bundleWithPath:bundlePath];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加载 nib 文件</span></span><br><span class="line">    <span class="built_in">UINib</span> *nib = [<span class="built_in">UINib</span> nibWithNibName:<span class="string">@"BundleDemo"</span> bundle:resourceBundle];</span><br><span class="line">    <span class="built_in">NSArray</span> *viewObjs = [nib instantiateWithOwner:<span class="literal">nil</span> options:<span class="literal">nil</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 获取 xib 文件</span></span><br><span class="line">    <span class="built_in">UIView</span> *view = viewObjs.lastObject;</span><br><span class="line"></span><br><span class="line">    view.frame = <span class="built_in">CGRectMake</span>(<span class="number">20</span>, <span class="number">50</span>, <span class="keyword">self</span>.view.bounds.size.width - <span class="number">40</span>, <span class="keyword">self</span>.view.bounds.size.width - <span class="number">40</span>);</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:view];</span><br></pre></td></tr></table></figure></li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1123,7 +1124,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1136,7 +1137,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-count">144</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

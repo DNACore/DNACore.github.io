@@ -228,6 +228,682 @@
   
   
   <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/12/03/电脑技巧-macOS-2018-12-03-macOS-设置系统代理/" class="post-title-link" itemprop="url">macOS-设置系统代理</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-03 11:51:23 / 修改时间：11:52:13" itemprop="dateCreated datePublished" datetime="2018-12-03T11:51:23+08:00">2018-12-03</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>设置系统代理地址</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>开关系统代理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo networksetup -setwebproxystate &quot;Wi-Fi&quot; on #打开Web HTTP代理</span><br><span class="line">sudo networksetup -setsecurewebproxystate &quot;Wi-Fi&quot; on #打开Web HTTPS代理</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/29/学习-iOS-2018-11-29-iOS通用推送/" class="post-title-link" itemprop="url">iOS通用推送</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-29 18:10:50" itemprop="dateCreated datePublished" datetime="2018-11-29T18:10:50+08:00">2018-11-29</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-02-21 17:45:32" itemprop="dateModified" datetime="2019-02-21T17:45:32+08:00">2019-02-21</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="iOS-通用推送"><a href="#iOS-通用推送" class="headerlink" title="iOS 通用推送"></a>iOS 通用推送</h1><p>Universal Push Notification Client SSL Certificate</p>
+<h2 id="基于-Token-的消息推送机制"><a href="#基于-Token-的消息推送机制" class="headerlink" title="基于 Token 的消息推送机制"></a>基于 Token 的消息推送机制</h2><p>Token Authentication 鉴权方式是区别于普通的证书鉴权方式的新APNs鉴权方式。<br>它相对以前的证书鉴权方式有如下特点：</p>
+<ul>
+<li>同一个账户下所有 App 无论是测试 App 还是正式版 App，都能使用同一个 key 来发推送消息，不再需要为每个 App 生成一个证书。</li>
+<li>生成的 Auth Key 不再有过期时间，无需像证书那样每年需要重新生成一次。</li>
+<li>生成过程简单，不需要繁琐、易错的证书导出操作。</li>
+<li>当服务端发送一个推送消息的时候必须携带上provider authentication token</li>
+<li>Request 和 Response 使用JSON通信</li>
+<li>APNs支持状态码和返回 error 信息</li>
+</ul>
+<ul>
+<li><p>iOS通用推送消息发送流程<br><img src="/images/iOS_Universal_Push_1.png" alt="iOS通用推送1"></p>
+<ol>
+<li>服务器首先连接APNs服务器，</li>
+<li>APNs服务器会返回一个APNs证书，这个证书需要服务器来校验。此时，连接已经建立，服务器可以发送基于Token的推送消息给APNs服务器。</li>
+<li>每一个推送消息必须携带 Token 才能被APNs服务器接受。</li>
+<li>APNs服务器会响应每条推送消息（状态码）。</li>
+</ol>
+</li>
+</ul>
+<h2 id="创建-Token-Authentication-Key-的流程"><a href="#创建-Token-Authentication-Key-的流程" class="headerlink" title="创建 Token Authentication Key 的流程"></a>创建 Token Authentication Key 的流程</h2><h3 id="注册-App-ID"><a href="#注册-App-ID" class="headerlink" title="注册 App ID"></a>注册 App ID</h3><p>首先注册 App ID。如果你已经注册过带有推送通知 App ID，可以跳过以下步骤：</p>
+<ol>
+<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
+</li>
+<li><p>点击 <strong>Certificates, Identifiers &amp; Profiles</strong></p>
+</li>
+<li><p>选择 <strong>Identifiers</strong> 下的 <strong>App IDs</strong></p>
+</li>
+<li><p>点击右上方的加号按钮（<strong>+</strong>)</p>
+</li>
+<li><p>填写 App ID 的基本信息<br><img src="/images/iOS_Universal_Push_3.png" alt></p>
+</li>
+<li><p>选择创建 <strong>Explicit App ID</strong>，填入 App 的 <strong>Bundle ID</strong>。注意，<strong>Explicit App ID</strong> 不能包含星号（*）。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
+</li>
+<li><p>选择 App ID 需要开启的服务，此处要勾选 <strong>Push Notifications</strong>。<br><img src="/images/iOS_Universal_Push_4.png" alt></p>
+</li>
+<li><p>点击 <strong>Continue</strong></p>
+</li>
+<li><p>确认注册信息，然后点击 <strong>Register</strong>。</p>
+</li>
+<li><p>点击 <strong>Done</strong></p>
+</li>
+</ol>
+<h3 id="开启推送通知"><a href="#开启推送通知" class="headerlink" title="开启推送通知"></a>开启推送通知</h3><p>为已有的 App ID 开启推送通知的步骤如下：</p>
+<ol>
+<li><p>选择要开启推送通知的 <strong>App ID</strong></p>
+</li>
+<li><p>勾选 <strong>Push Notifications</strong> 复选框<br><img src="/images/iOS_Universal_Push_6.png" alt></p>
+</li>
+<li><p>如果弹出警告对话框，点击 <strong>OK</strong>。</p>
+</li>
+<li><p>点击 <strong>Done</strong></p>
+</li>
+</ol>
+<h3 id="获取-Team-ID"><a href="#获取-Team-ID" class="headerlink" title="获取 Team ID"></a>获取 Team ID</h3><ol>
+<li><p>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></p>
+</li>
+<li><p>点击 Membership<br><img src="/images/iOS_Universal_Push_2.png" alt></p>
+</li>
+<li><p>找到 <strong>Team ID</strong> 一栏，将其记下来以备后用。</p>
+</li>
+</ol>
+<h3 id="创建-Token-Authentication-Key"><a href="#创建-Token-Authentication-Key" class="headerlink" title="创建 Token Authentication Key"></a>创建 Token Authentication Key</h3><ol>
+<li>打开<a href="https://developer.apple.com/" target="_blank" rel="noopener">Apple Developer Center</a></li>
+<li>点击 <strong>Certificates, Identifiers &amp; Profiles</strong><br><img src="/images/iOS_Universal_Push_7.png" alt></li>
+<li>选择在 <strong>Keys</strong> 栏下的 <strong>All</strong></li>
+<li>点击下图中红色边框内的加号按钮<br><img src="/images/iOS_Universal_Push_8.png" alt></li>
+<li>根据需要填写 <strong>Key Description</strong> 并<strong>勾选 APNs</strong> 后点击最下面的 <strong>Continue</strong> 按钮。<br><img src="/images/iOS_Universal_Push_9.png" alt></li>
+<li>点击 <strong>Confirm</strong> 按钮继续下一步。<br><img src="/images/iOS_Universal_Push_10.png" alt></li>
+<li>点击 <strong>Download</strong> 将生成好的 <strong>Auth Key</strong> 下载到本地(.p8文件)，并记录 <strong>Key ID</strong> 备用。<br><img src="/images/iOS_Universal_Push_11.png" alt></li>
+</ol>
+<h2 id="协议说明"><a href="#协议说明" class="headerlink" title="协议说明"></a>协议说明</h2><h3 id="HTTP-2请求APNs"><a href="#HTTP-2请求APNs" class="headerlink" title="HTTP/2请求APNs"></a>HTTP/2请求APNs</h3><table>
+<thead>
+<tr>
+<th>字段名</th>
+<th>字段值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>method</td>
+<td>POST</td>
+</tr>
+<tr>
+<td>path</td>
+<td>/3/device/</td>
+</tr>
+</tbody></table>
+<p>APNs需要使用 HPACK （HTTP/2 的报头压缩），防止重复的标题键和值。APNs为HPACK维护一个小的动态表。为了避免填满了APNs HPACK表，因而必须丢弃表数据，编码headers以下列方式 — — 尤其是当发送大量的推送</p>
+<ul>
+<li>method 必须为POST</li>
+<li>path 值应编码为一个header中的一个文本字段，没有索引</li>
+<li>authorization 请求header，如果存在，应编码为一个header中的一个文本字段，没有索引</li>
+</ul>
+<p>apns-id、 apns-expiration，和 apns-collapse-id 不同的编码取决于它是否是第一次初始请求或随后的 POST 操作的一部分，如下︰<br>第一次发送请求头的时，使增量索引编码允许头名称加入动态表中<br>子请求发送头时，编码成header中的一个文本字段，没有索引</p>
+<ul>
+<li>请求头</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header 头</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>authorization</td>
+<td>提供的发送到指定（app）主题通知的APNs验证token，token是以Base64 URL编码的JWT格式。指定为bearer,当使用证书连接的时候，这个请求头将会被忽略</td>
+</tr>
+<tr>
+<td>apns-id</td>
+<td>一个规范的的 UUID 用来标识通知。如果发送通知时发生错误，APNs 使用此值来标识通知，通知到您的服务器。 规范的格式是 32 个小写的十六进制数字，由连字符分隔为5，8-4-4-4-12。UUID一个例子如下： 123e4567-e89b-12d3-a456-42665544000 如果您省略这个头,一个新的UUID由APNs创建并且在response中返回</td>
+</tr>
+<tr>
+<td>apns-expiration</td>
+<td>通知过期时间，秒级的UTC时间戳，这个header标识通知 从何时起不再有效，可以丢弃。 如果这个值非零，APNs保存通知并且尽量至少送达一次。如果无法第一时间送达，根据需要重复尝试。 如果这个值为0，APNs认为通知立即过期，不会存储与重新推送。</td>
+</tr>
+<tr>
+<td>apns-priority</td>
+<td>通知的优先级，指定以下值:<br>   - 10–立即推送消息. 这个优先级的通知必须再目标设备上触发alert, 声音, 或者badge . 仅仅包含content-available key使用此优先级是错误的。<br>   - 5—一次性发送通知，需要考虑设备的电量。具有此优先级的通知可能分组推送并且几种爆发推送,Notifications with this priority might be grouped and delivered他们会被节流，并且在某些情况下不会送达。 如果省略这个头，APNs服务器会把优先级设置为10</td>
+</tr>
+<tr>
+<td>apns-topic</td>
+<td>远程通知的主题，通常是你App的bundle id，在开发者账号中创建的证书必须包含此bundle id 如果证书包含多个主题，这个头必须指定一个值 如果省略此头并且APNs证书不包含指定的主题，APNs服务器使用证书的Subject作为默认主题。 如果使用token代替证书，必须指定此头，提供的主题应该被在开发者账号中的team提供。即bundle id的app应该与auth key同属于一个开发者组。</td>
+</tr>
+</tbody></table>
+<ul>
+<li><p>请求体<br>body内容是将要推送的消息负载的JSON对象。body数据不必须压缩，其最大大小为 4 KB （4096 字节）。对于 (VoIP) 通知，body数据最大大小为 5 KB （5120 字节）。</p>
+</li>
+<li><p>响应头</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Header</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>apns-id</td>
+<td>apns-id从request得到， 如果request中没有此值, APNs服务器创建一个新的UUID并且在header中返回</td>
+</tr>
+<tr>
+<td>status</td>
+<td>HTTP状态码，HTTP status code</td>
+</tr>
+</tbody></table>
+<ul>
+<li>状态码</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Status code</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>200</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>400</td>
+<td>无效请求</td>
+</tr>
+<tr>
+<td>403</td>
+<td>证书错误或者验证token错误</td>
+</tr>
+<tr>
+<td>405</td>
+<td>:method 设置错误. 只支持 POST 请求</td>
+</tr>
+<tr>
+<td>410</td>
+<td>device token不在有效与topic</td>
+</tr>
+<tr>
+<td>413</td>
+<td>负载payload太大</td>
+</tr>
+<tr>
+<td>429</td>
+<td>服务端对于同一个device token发送了太多了请求</td>
+</tr>
+<tr>
+<td>500</td>
+<td>内部服务器错误</td>
+</tr>
+<tr>
+<td>503</td>
+<td>服务器关闭,不可用</td>
+</tr>
+</tbody></table>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/28/学习-Python-2018-11-28-Python的安装与卸载/" class="post-title-link" itemprop="url">Python的安装与卸载</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-28 17:48:12" itemprop="dateCreated datePublished" datetime="2018-11-28T17:48:12+08:00">2018-11-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-03-08 10:39:07" itemprop="dateModified" datetime="2019-03-08T10:39:07+08:00">2019-03-08</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>macOS<br><a href="https://docs.python.org/3/using/mac.html" target="_blank" rel="noopener">https://docs.python.org/3/using/mac.html</a></p>
+</li>
+<li><p>Python 可能在以下几个位置</p>
+<blockquote>
+<p>/usr/local/Cellar/Python<br>/Library/Frameworks/Python.framework<br>/usr/local/bin/</p>
+</blockquote>
+</li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-Windows激活/" class="post-title-link" itemprop="url">Windows激活</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-28 14:26:14" itemprop="dateCreated datePublished" datetime="2018-11-28T14:26:14+08:00">2018-11-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-10 16:30:57" itemprop="dateModified" datetime="2019-09-10T16:30:57+08:00">2019-09-10</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[TOC]</p>
+<h1 id="Windows-激活"><a href="#Windows-激活" class="headerlink" title="Windows 激活"></a>Windows 激活</h1><h2 id="Windows-激活工具"><a href="#Windows-激活工具" class="headerlink" title="Windows 激活工具"></a>Windows 激活工具</h2><ul>
+<li><a href="https://cmwtat.cloudmoe.com/index.html" target="_blank" rel="noopener">https://cmwtat.cloudmoe.com/index.html</a></li>
+</ul>
+<h2 id="Windows-激活命令"><a href="#Windows-激活命令" class="headerlink" title="Windows 激活命令"></a>Windows 激活命令</h2><ul>
+<li><p>重置Windows激活计数<br><code>slmgr.vbs -rearm</code></p>
+</li>
+<li><p>安装产品密钥 替换现有密钥<br><code>slmgr /ipk x-x-x-x-x</code></p>
+</li>
+<li><p>安装OEM证书<br><code>slmgr.vbs -ilc x:\xxx.XRM-MS</code></p>
+</li>
+<li><p>激活Windows<br><code>slmgr.vbs -ato</code></p>
+</li>
+<li><p>显示详细的激活信息<br>包括：系统版本、激活ID、安装ID、部分产品密钥、许可证状态、剩余 Windows 重置计数等<br><code>slmgr.vbs -dlv</code></p>
+</li>
+<li><p>显示许可证激活状态的截止日期<br><code>slmgr.vbs -xpr</code></p>
+</li>
+<li><p>查看许可证的概要信息<br><code>slmgr.vbs -dli</code></p>
+</li>
+<li><p>卸载当前产品密钥<br>重启电脑之后系统将重归未激活状态，会出现输入密钥和联网激活界面。<br><code>slmgr.vbs -upk</code></p>
+</li>
+</ul>
+<p><a href="https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1KM4Q3N2p9eKvrn71jtPBk_EEjU0VuYhXqjNBAYc-BP4/edit</a><br><a href="https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit" target="_blank" rel="noopener">https://docs.google.com/document/d/1EN1Psx9EN9bOzChnSs_PiYfY7aYoya2QLtPGPogzCp0/edit</a></p>
+<h2 id="Windows-10-数字权利激活"><a href="#Windows-10-数字权利激活" class="headerlink" title="Windows 10 数字权利激活"></a>Windows 10 数字权利激活</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">右键开始-命令提示符(管理员)，输入：</span><br><span class="line">slmgr.vbs /ckms</span><br><span class="line">slmgr.vbs /upk</span><br><span class="line"></span><br><span class="line">win10专业版本数字权利激活</span><br><span class="line"> 注意只能适合全新安装的10586版本</span><br><span class="line"> 第1步</span><br><span class="line"> 选择“开始”图标按钮，然后依次选择“设置”&gt;“更新和安全”&gt;“激活”。</span><br><span class="line"> 选择“更改产品密钥”，然后输入 PW48G-MNG8W-B9978-YWBRP-76DGY</span><br><span class="line">激活不了的，点关闭</span><br><span class="line"> 第2步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入RHTBY-VWY6D-QJRJ9-JGQ3X-Q2289 或者 TNXR9-K3KVT-RHXXF-4HDTY-RCYDQ 或者 CKQMQ-DNPGJ-2FQGT-M3Q2W-Q68K3</span><br><span class="line"> 联网激活</span><br><span class="line"> 这个是win7 或者 win8.1 MAK，目前还有激活次数</span><br><span class="line"> 第3步</span><br><span class="line"> 更改产品密钥</span><br><span class="line"> 输入 VK7JG-NPHTM-C97JM-9MPGT-3V66T，取得数字权利</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> 数字化认可的WIN10，今后重装WIN10系统时无需输入“产品密钥”（安装时可以跳过这步），安装完成后，系统自动激活。</span><br><span class="line"> 有人说</span><br><span class="line">win10的激活机制是绑定你的电脑主板了，也就是说 只要你的主板不换 那么你的win10永远都是激活也是正版的</span><br></pre></td></tr></table></figure>
+
+<p>###怎么验证 Windows 是否已经激活：<br>    1. 最简单的是在我的电脑右键，查看属性.<br>    2. Win+R===&gt;输入 slmgr.vbs -dlv (推荐,此命令得到的信息最全)<br>    3. Win+R===&gt;输入 slmgr.vbs -dli<br>    4. Win+R===&gt;输入 slmgr.vbs -xpr<br>    5. Win+R===&gt;输入 Winver</p>
+<p>免费使用Windows7 1年</p>
+<p>即使你并非微软的官方测试员，也不需要四处寻觅Windows 7的激活密钥，除了官方提供的安装密钥之外，我们还可以通过其他的方法免费使用1年期限的Windows 7，最起码可以坚持到Windows 7正式版本的到来。</p>
+<pre><code>初始状态下，Windows 7提供了30天的试用时间，不过在即将到达这一30天的期限之前，我们可以使用“slmgr.vbs -rearm”的命令延长使用期30天，虽然官方文档中声明该命令只能重复使用3次，也说是说总共可以免费体验120天，此后将无法再次使用。其实，只要修改注册表中的一处键值，即可重复使用“slmgr.vbs -rearm”命令，请打开注册表编辑器，依次定位至“HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform”，如图1所示，找到右侧窗格中的“SkipRearm”，将其键值修改为“1”，以后就可以再次使用“slmgr.vbs -rearm”的命令，这个键值总共可以修改8次，也就是说我们可以重复使用8次“slmgr.vbs -rearm”的命令，前后加起来，正好是一年的使用时间。</code></pre><p>参考资料:<a href="http://win7x.blogbus.com/logs/40854953.html" target="_blank" rel="noopener">http://win7x.blogbus.com/logs/40854953.html</a></p>
+<p>Win7激活（<a href="http://www.win7soft.com）" target="_blank" rel="noopener">www.win7soft.com）</a>:</p>
+<p>Win7软件授权管理工具slmgr.vbs使用向导</p>
+<p>当我们打算激活Vista和windows7或打算延长其试用期（rearm）的的时候，大家都会碰到到这个slmgr命令或slmgr.vbs。SLMGR是Software License Manger的简称，是WINDOWS的软件授权管理工具。SLMGR是管理系统激活和密钥. 证书的主要组件。</p>
+<p>SLMGR的所有功能都是通过slmgr.vbs提供的，采用VBScript命令行方式执行。图形界面中许多与该命令行相关的激活行为，比如系统属性等，都是通过调用slmgr.vbs脚本来执行授权操作。即使你在COMMAND下使用SLMGR命令行，其运行结果或出错信息也是以浏览器弹出窗口方式显示的，以下是slmgr的一些使用语法仅供参考，尤其在各位需要激活或遇到激活问题的时候是很有帮助的。</p>
+<p>###在哪里使用和如何使用slmgr.vbs<br>有如下几种方式进入并运行slmgr.vbs命令：</p>
+<ol>
+<li><p>COMMAND命令提示窗口下，这是一种执行方式，但需要提升管理员权限；</p>
+</li>
+<li><p>运行命令（Vista中的显示运行命令，Win+R，开始/所有程序/附件/命令提示符，任何一种）</p>
+</li>
+<li><p>开始菜单中的开始搜索框，使用这种方法需要输入slmgr的完整名称——slmgr.vbs，类似于slmgr.vbs -ato这样的格式内容。</p>
+</li>
+</ol>
+<p>最常用的SLMGR命令是slmgr.vbs -rearm延长Vista或Windows 7试用期30天。除此外，slmgr还支持很多参数命令。我们可以通过slmgr.vbs -?命令查看。也可以检验Windows Vista或Windows 7的激活状态和许可证详细信息。</p>
+<ol start="3">
+<li>SLMGR语法格式<br>基本语法：</li>
+</ol>
+<p>slmgr.vbs [MachineName [User Password]] [<option>]</option></p>
+<p>其中：</p>
+<ul>
+<li><p>MachineName ： 远程计算机名 （缺省为本机）</p>
+</li>
+<li><p>User ： 具有相应权限的计算机用户</p>
+</li>
+<li><p>Password：用户密码</p>
+</li>
+<li><p>Option：为SLMGR的参数，参下。</p>
+</li>
+</ul>
+<p>常用参数选项：</p>
+<p>-ipk &lt;产品密钥&gt;</p>
+<p>安装产品密钥（替换现有密钥）</p>
+<p>-upk</p>
+<p>卸载产品密钥</p>
+<p>-ato</p>
+<p>激活Windows</p>
+<p>-dli [激活 ID | All]</p>
+<p>显示许可证信息（默认：当前许可证）</p>
+<p>-dlv [激活 ID | All]</p>
+<p>显示详细的许可证信息（默认：当前许可证）</p>
+<p>-xpr</p>
+<p>当前许可证状态的截止日期</p>
+<p>高级参数选项：</p>
+<p>-cpky</p>
+<p>从注册表中清除产品密钥（阻止泄露引起的攻击）</p>
+<p>-ilc &lt;许可证文件路径&gt;</p>
+<p>安装许可证</p>
+<p>-rilc</p>
+<p>重新安装系统许可证文件</p>
+<p>-rearm</p>
+<p>重置计算机的授权状态</p>
+<p>-dti</p>
+<p>显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;</p>
+<p>使用电话方式提供的确认 ID 激活产品</p>
+<p>KMS相关选项：</p>
+<p>-skms <kms activation server name></kms></p>
+<p>设置KMS服务器名</p>
+<p>-skms <kms activation server port number></kms></p>
+<p>设置KMS服务器端口号</p>
+<p>-skms <kms activation server name:port number></kms></p>
+<p>设置KMS服务器名和端口号</p>
+<p>-ckms</p>
+<p>清除KMS服务器名和端口号并设为初始状态</p>
+<p>###slmgr.vbs的使用示例</p>
+<ol>
+<li>查看许可证的概要信息（假设为当前许可证；且系统在C盘，下同），则可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dli</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dli</p>
+<ol start="2">
+<li>显示许可证激活状态的截止日期，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -xpr</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -xpr</p>
+<ol start="3">
+<li>查看许可证详细信息，也可通过以下两种方式查看。</li>
+</ol>
+<p>运行命令下：slmgr.vbs -dlv</p>
+<p>命令提示符命令下：cscript C:\windows\system32\slmgr.vbs -dlv</p>
+<ol start="4">
+<li>导入OEM证书方法</li>
+</ol>
+<p>运行命令下：slmgr.vbs -ilc D:\123.XRM-MS，后面为OEM证书完整路径</p>
+<ol start="5">
+<li>卸载当前产品密钥</li>
+</ol>
+<p>运行命令下：slmgr.vbs -upk，即可卸载当前产品密钥，重启计算机会出现输入密钥和联网激活界面。</p>
+<p>如果想查看Windows 7 的详细版本号，我们要运行另外一个命令Slmgr.vbs，大家在运行中输入Slmgr.vbs，可以看到此命令的用法以及各种参数。</p>
+<p>　　1. slmgr.vbs –dli</p>
+<p>　　显示：操作系统版本. 部分产品密钥. 许可证状态</p>
+<p>　　2. slmgr.vbs –dlv</p>
+<p>　　显示：最为详尽的激活信息，包括：激活ID. 安装ID. 激活截止日期</p>
+<p>　　3. slmgr.vbs –xpr</p>
+<p>　　显示：是否彻底激活</p>
+<p>　　4. slmgr.vbs –ipk</p>
+<p>　　更换WIN7序列号</p>
+<p>　　5. slmgr.vbs –ato</p>
+<p>　　激活WIN7</p>
+<p>slmgr.vbs命令大全 检验Windows7激活状态</p>
+<p>其详细参数如下：</p>
+<p>可用选项:</p>
+<p>-ipk &lt;产品密钥&gt;<br>​    安装产品密钥(替换现有密钥)</p>
+<p>-upk<br>​    卸载产品密钥</p>
+<p>-ato<br>​    激活 Windows</p>
+<p>-dli [激活 ID | All]<br>​    显示许可证信息(默认: 当前许可证)</p>
+<p>-dlv [激活 ID | All]<br>​    显示详细的许可证信息(默认: 当前许可证)</p>
+<p>-xpr<br>​    当前许可证状态的截止日期</p>
+<p>高级选项:<br>-cpky<br>​    从注册表中清除产品密钥(阻止泄露引起的攻击)</p>
+<p>-ilc &lt;许可证文件路径&gt;<br>​    安装许可证</p>
+<p>-rilc<br>​    重新安装系统许可证文件</p>
+<p>-rearm<br>​    重置计算机的授权状态</p>
+<p>-dti<br>​    显示安装 ID 以进行脱机激活</p>
+<p>-atp &lt;确认 ID&gt;<br>​    使用电话方式提供的确认 ID 激活产品</p>
+<p>###重置激活<br>这是不少网友对于激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令<code>slmgr.vbs -rearm</code>的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行<code>slmgr.vbs -dlv</code>命令显示“重置计数”有何意义和作用？</p>
+<pre><code>激活Windows 7后运行`slmgr.vbs -dlv`命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令`slmgr.vbs -rearm`以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。</code></pre><p>激活 Windows 7 后运行 <code>slmgr.vbs -dlv</code> 命令显示“重置计数”有何意义和作用？</p>
+<pre><code>这是不少网友对于激活Windows 7后运行slmgr.vbs -dlv命令为何显示“重置计数”的留言提问。在回答这个问题之前，有必要首先弄清运行重置命令`slmgr.vbs -rearm`的意义所在：微软对于Windows 7的默认试用期为30天，在尚未激活的情况下允许使用三次重置命令，免费使用30 + 30 X 3 = 120天。下面，具体回答：激活Windows 7后运行`slmgr.vbs -dlv`命令显示“重置计数”有何意义和作用？
+
+激活Windows 7后运行slmgr.vbs -dlv命令显示的“重置计数”，即：尚可运行重置命令的剩余次数。剩余次数取决于：是否运行过重置命令slmgr.vbs -rearm以及运行过几次(0-3次)？ 从来没有运行过重置命令的，显示为“重置计数：3”；以前运行过重置命令的，则运行一次就会核减一次直至为“0”。
+
+激活Windows 7后仍然保留“重置计数”，不仅是一个运行重置命令的“历史纪录”，而且是为换用联网激活方式的一种过渡。绝大多数预装Windows 7品牌机在采用“OEM”激活的同时，都给用户提供了一个备用联网激活密钥。而采用“OEM”激活没有更换产品密钥选项，运行重置命令就能解决这个问题。
+
+有些网友在《关于重发《打造“双重”激活（“OEM激活”和“联网激活”）的Windows 7旗舰版》的说明》一文后提问：采用两种激活方式有何意义？看过以上介绍，首先回答了实践层面的意义：掌握品牌机的两种激活方法。其次能从“自然”走向“自由”：对微软两大激活体系从理论层面加深理性思考。</code></pre><p>友情提示：</p>
+<pre><code>——通过“软改”或“硬刷”激活后，个别不能通过重置命令显示更换产品密钥选项的，可以采用slmgr.vbs -upk命令卸载目前产品密钥，重启计算机后即可出现要求输入新的密钥联网激活界面。</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+        <article itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block home">
     <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/28/电脑技巧-Windows-2018-11-28-Windows-WES7激活/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -777,374 +1453,6 @@
   </article>
 
     
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/16/学习-iOS-2018-11-16-iOS访问相机、相册/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/16/学习-iOS-2018-11-16-iOS访问相机、相册/" class="post-title-link" itemprop="url">iOS访问相机、相册</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-16 11:00:28 / 修改时间：11:08:00" itemprop="dateCreated datePublished" datetime="2018-11-16T11:00:28+08:00">2018-11-16</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="iOS访问相机、相册"><a href="#iOS访问相机、相册" class="headerlink" title="iOS访问相机、相册"></a>iOS访问相机、相册</h1><ul>
-<li>iOS 9.0 之后使用 PHPhotoLibrary<br>检测访问权限<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/16/学习-iOS-2018-11-16-ARkit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/16/学习-iOS-2018-11-16-ARkit/" class="post-title-link" itemprop="url">ARkit</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-16 10:53:51 / 修改时间：10:57:29" itemprop="dateCreated datePublished" datetime="2018-11-16T10:53:51+08:00">2018-11-16</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="ARkit"><a href="#ARkit" class="headerlink" title="ARkit"></a>ARkit</h1><ul>
-<li>对ARSCNView进行截图<br><code>ARSCNView</code>继承自<code>SCNView</code>，后者自带一个截图方法<code>- (UIImage *)snapshot</code>。<br>参考：<a href="https://stackoverflow.com/questions/49049992/screenshot-of-arscnview" target="_blank" rel="noopener">https://stackoverflow.com/questions/49049992/screenshot-of-arscnview</a></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/15/电脑技巧-2018-11-15-transfer-sh文件分享/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/15/电脑技巧-2018-11-15-transfer-sh文件分享/" class="post-title-link" itemprop="url">transfer.sh文件分享</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-15 11:03:20" itemprop="dateCreated datePublished" datetime="2018-11-15T11:03:20+08:00">2018-11-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-21 13:37:41" itemprop="dateModified" datetime="2019-05-21T13:37:41+08:00">2019-05-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="transfer-sh文件分享"><a href="#transfer-sh文件分享" class="headerlink" title="transfer.sh文件分享"></a>transfer.sh文件分享</h1><ul>
-<li><p>用命令行上传一个文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --upload-file SceneDetector_Final-1.zip https://transfer.sh/SceneDetector_Final-1.zip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用命令行上传一个文件，并且显示上传进度</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --progress-bar --upload-file SceneDetector_Final-1.zip https://transfer.sh/SceneDetector_Final-1.zip | tee /dev/null</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷上传</p>
-</li>
-</ul>
-<ol>
-<li><p>将下面代码复制到<code>~/.bash_profile</code>或者<code>~/.bashrc</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># transfer.sh</span></span><br><span class="line"><span class="function"><span class="title">transfer</span></span>() &#123; <span class="keyword">if</span> [ <span class="variable">$#</span> -eq 0 ]; <span class="keyword">then</span> <span class="built_in">echo</span> -e <span class="string">"No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"</span>; <span class="built_in">return</span> 1; <span class="keyword">fi</span></span><br><span class="line">tmpfile=$( mktemp -t transferXXX ); <span class="keyword">if</span> tty -s; <span class="keyword">then</span> basefile=$(basename <span class="string">"<span class="variable">$1</span>"</span> | sed -e <span class="string">'s/[^a-zA-Z0-9._-]/-/g'</span>); curl --progress-bar --upload-file <span class="string">"<span class="variable">$1</span>"</span> <span class="string">"https://transfer.sh/<span class="variable">$basefile</span>"</span> &gt;&gt; <span class="variable">$tmpfile</span>; <span class="keyword">else</span> curl --progress-bar --upload-file <span class="string">"-"</span> <span class="string">"https://transfer.sh/<span class="variable">$1</span>"</span> &gt;&gt; <span class="variable">$tmpfile</span> ; <span class="keyword">fi</span>; cat <span class="variable">$tmpfile</span>; rm -f <span class="variable">$tmpfile</span>; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷命令上传<br>执行<code>source ~/.bash_profile</code>重载配置。<br>以后上传文件可以直接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transfer hello.txt</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><ul>
-<li>用<code>curl</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl https://transfer.sh/66nb8/hello.txt -o hello.txt</span><br><span class="line">curl -O https://transfer.sh/66nb8/hello.txt</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="加密上传下载"><a href="#加密上传下载" class="headerlink" title="加密上传下载"></a>加密上传下载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Encrypt files with password using gpg</span></span><br><span class="line">$ cat /tmp/hello.txt|gpg -ac -o-|curl -X PUT —upload-file “-“ https://transfer.sh/test.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Download and decrypt</span></span><br><span class="line">$ curl https://transfer.sh/1lDau/test.txt|gpg -o- &gt; /tmp/hello.txt</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/09/电脑技巧-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/09/电脑技巧-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-安装/" class="post-title-link" itemprop="url">WES 7 - Windows Embedded Standard 7 SP1 安装</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-09 17:47:15" itemprop="dateCreated datePublished" datetime="2018-11-09T17:47:15+08:00">2018-11-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-10 16:28:29" itemprop="dateModified" datetime="2019-09-10T16:28:29+08:00">2019-09-10</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="WES-7"><a href="#WES-7" class="headerlink" title="WES 7"></a>WES 7</h1><h2 id="WES-7-安装"><a href="#WES-7-安装" class="headerlink" title="WES 7 安装"></a>WES 7 安装</h2><p><a href="https://lvtao.net/server/windows7-wes7.html" target="_blank" rel="noopener">https://lvtao.net/server/windows7-wes7.html</a></p>
-<h2 id="WES-7-安装-MTP-驱动"><a href="#WES-7-安装-MTP-驱动" class="headerlink" title="WES 7 安装 MTP 驱动"></a>WES 7 安装 MTP 驱动</h2><ol>
-<li>从原始安装镜像中提取<code>WinEmb-INF-wpdmtp.cab</code>程序包，放入<code>MTPDriver</code>文件夹中。</li>
-<li>以管理员身份打开 cmd 命令行，切换到<code>MTPDriver</code>文件夹。</li>
-<li>执行<code>DISM /online /add-package /packagepath:.</code>，命令行最后的点号表示需要添加的程序包就在当前目录下。</li>
-<li>待程序执行完成之后重启电脑即可。</li>
-</ol>
-<h2 id="安装语言包"><a href="#安装语言包" class="headerlink" title="安装语言包"></a>安装语言包</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism /online /add-package /packagepath:</span><br></pre></td></tr></table></figure>
-
-<h2 id="WES-7-下载"><a href="#WES-7-下载" class="headerlink" title="WES 7 下载"></a>WES 7 下载</h2><p>Windows Embedded Standard 7 SP1 官方下载页面：<br><a href="http://www.microsoft.com/download/en/details.aspx?id=11887" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=11887</a><br>官方WES 7 SP1语言包下载（可独立下载各种多国语言包）：<br>x32: <a href="http://www.microsoft.com/download/en/details.aspx?id=26215" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=26215</a><br>x64: <a href="http://www.microsoft.com/download/en/details.aspx?id=26216" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=26216</a><br><a href="http://bbs.pcbeta.com/viewthread-834347-1-1.html" target="_blank" rel="noopener">http://bbs.pcbeta.com/viewthread-834347-1-1.html</a></p>
-<ul>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part01.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part01.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part01.exe</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part1.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part1.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part1.exe</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part2.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part2.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part2.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part3.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part3.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part3.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part4.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part4.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part4.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part5.rar    Click here    455.2 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part5.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part5.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part1.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part1.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part1.exe</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part2.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part2.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part2.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part3.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part3.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part3.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part4.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part4.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part4.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part5.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part5.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part5.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part6.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part6.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part6.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part7.rar    Click here    100.2 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part7.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part7.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part02.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part02.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part02.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part03.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part03.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part03.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part04.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part04.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part04.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part05.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part05.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part05.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part06.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part06.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part06.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part07.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part07.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part07.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part08.rar    Click here    297.1 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part08.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part08.rar</a></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </div>
 
   
@@ -1194,7 +1502,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">221</span>
+          <span class="site-state-item-count">225</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1207,7 +1515,7 @@
             <a href="/tags/">
           
         
-        <span class="site-state-item-count">142</span>
+        <span class="site-state-item-count">144</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

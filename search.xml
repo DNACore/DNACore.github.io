@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[树莓派-树莓派设置静态IP和DNS]]></title>
+    <url>%2F2019%2F10%2F17%2F%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-17-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E5%92%8CDNS%2F</url>
+    <content type="text"><![CDATA[需要编辑/etc/dhcpcd.conf文件 1sudo nano 修改如下 1234interface eth0static ip_address=192.168.1.177/24static routers=192.168.1.1static domain_name_servers=114.114.114.114 8.8.8.8 8.8.4.4 重启网络服务 1sudo service network restart 查看当前网络信息 1ifconfig -a]]></content>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>RaspberryPi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[树莓派-树莓派替换清华源]]></title>
+    <url>%2F2019%2F10%2F17%2F%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-17-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9B%BF%E6%8D%A2%E6%B8%85%E5%8D%8E%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[树莓派清华源主页：https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/ 123sudo echo -e "deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib\ndeb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib\n" &gt; /etc/apt/sources.listsudo echo -e "deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui" &gt; /etc/apt/sources.list.d/raspi.listsudo apt-get update]]></content>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>RaspberryPi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[树莓派-官方刷系统教程]]></title>
+    <url>%2F2019%2F10%2F14%2F%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-14-%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%AE%98%E6%96%B9%E5%88%B7%E7%B3%BB%E7%BB%9F%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[https://www.raspberrypi.org/documentation/installation/installing-images/mac.md]]></content>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>RaspberryPi</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[树莓派-安装Pixel桌面环境]]></title>
+    <url>%2F2019%2F10%2F14%2F%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-14-%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%AE%89%E8%A3%85Pixel%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%2F</url>
+    <content type="text"><![CDATA[https://diyprojects.io/install-pixel-desktop-raspbian-stretch-lite-10-essential-software-raspberry-pi-3/]]></content>
+      <tags>
+        <tag>树莓派</tag>
+        <tag>RaspberryPi</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Shell-常用脚本代码片段]]></title>
     <url>%2F2019%2F10%2F12%2F%E5%AD%A6%E4%B9%A0-Shell-2019-10-12-Shell-%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5%2F</url>
     <content type="text"><![CDATA[当前脚本信息12345678910111213141516echo -----环境信息 开始-----file_dir=$( cd $(dirname $0) PWD)dir_name="$&#123;file_dir##*/&#125;"echo 当前脚本目录：$&#123;file_dir&#125;echo 当前工作目录：$&#123;PWD&#125;echo 所在目录名称：$&#123;dir_name&#125;echo -----环境信息 结束-----echo '切换目录到：'$&#123;file_dir&#125;cd $&#123;file_dir&#125;echo '当前工作目录：'$&#123;PWD&#125;]]></content>
@@ -439,7 +475,7 @@
   <entry>
     <title><![CDATA[Android-安卓手机文件路径]]></title>
     <url>%2F2019%2F06%2F19%2F%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-06-19-Android-%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%2F</url>
-    <content type="text"><![CDATA[MIUI 双开应用存储位置 对应data/data/user/999/ 对应SD卡内容 ####安装程序 提示 没有存储空间因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。 安卓手机文件路径预装的合作伙伴的软件\data\miui ####短信数据库路径 ####联系人数据库路径 ####黑名单列表数据库路径 ####被拦截电话和短信数据库路径 ####外置存储可更改文件权限路径/storage_int/ 铃声位置 MIUI所有的G7音频（铃声）文件都存于SD卡/MIUI/ringtong下面的文件基本上都能被识别，你将铃声拷进去就可以了。而音乐文件则保存SD卡/MIUI/MUSIC当中。至于电话铃声/短信铃声/提醒铃声，可在相应的设置栏中自行设定，比如说你喜欢某个曲子作为来电铃声，那么你就在来电设置当中进行设置并选中它就可以了，新版的MIUI支持铃声预览，你试听觉得合适了选定就可以了，而且不必像以往的版本要用专门的播放器播放。同理短信铃声/提醒铃声也是这样设置的， 其他手机 系统自带声音文件存放的位置和内容 1 、总目录：/system/media/audio 2、闹钟：/system/media/audio/alarms 3、短信通知：/system/media/audio/notificati** 4、铃声：/system/media/audio/ringtones 5、系统界面声音：/system/media/audio/ui 在SD卡中自定义各种声音 1、在sd卡的根目录下建立文件夹media 2、 在media目录下建立文件夹 alarms 里面放闹钟所需的音乐文件 3、在media目录下建立文件夹 notificati** 里面放短信通知所需的音乐文件 4、 在media目录下建立文件夹 ringtones 里面放电话铃声所需的音乐文件 5 、本方法的优点是sd卡容量大，音乐文件大小不受限制，缺点，读取sd卡慢不方便还费电]]></content>
+    <content type="text"><![CDATA[MIUI 双开应用存储位置 应用双开数据存储 /storage/emulated/999 应用双开程序存储 /data/user/999 对应data /data/user/999/ 对应SD卡内容 安装程序 提示 没有存储空间因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。 安卓手机文件路径预装的合作伙伴的软件\data\miui 短信数据库路径联系人数据库路径黑名单列表数据库路径被拦截电话和短信数据库路径外置存储可更改文件权限路径/storage_int/ 铃声位置 MIUI所有的G7音频（铃声）文件都存于SD卡/MIUI/ringtong下面的文件基本上都能被识别，你将铃声拷进去就可以了。而音乐文件则保存SD卡/MIUI/MUSIC当中。至于电话铃声/短信铃声/提醒铃声，可在相应的设置栏中自行设定，比如说你喜欢某个曲子作为来电铃声，那么你就在来电设置当中进行设置并选中它就可以了，新版的MIUI支持铃声预览，你试听觉得合适了选定就可以了，而且不必像以往的版本要用专门的播放器播放。同理短信铃声/提醒铃声也是这样设置的， 其他手机 系统自带声音文件存放的位置和内容 1 、总目录：/system/media/audio 2、闹钟：/system/media/audio/alarms 3、短信通知：/system/media/audio/notificati** 4、铃声：/system/media/audio/ringtones 5、系统界面声音：/system/media/audio/ui 在SD卡中自定义各种声音 1、在sd卡的根目录下建立文件夹media 2、 在media目录下建立文件夹 alarms 里面放闹钟所需的音乐文件 3、在media目录下建立文件夹 notificati** 里面放短信通知所需的音乐文件 4、 在media目录下建立文件夹 ringtones 里面放电话铃声所需的音乐文件 5 、本方法的优点是sd卡容量大，音乐文件大小不受限制，缺点，读取sd卡慢不方便还费电]]></content>
   </entry>
   <entry>
     <title><![CDATA[macOS-不同Wi-Fi用不同的网络IP与DNS等配置]]></title>
@@ -675,8 +711,8 @@
     <url>%2F2019%2F04%2F18%2F%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-04-18-Transmission-%E5%AE%89%E5%8D%93%E4%B8%8A%E4%BD%BF%E7%94%A8Transmission%2F</url>
     <content type="text"><![CDATA[背景近十几年，由于迅雷、百度云之类中心化下载工具的兴起，以及整体网络速度的提高，让传统下载黯然失色。网民们不但可以使用迅雷、百度云的预先下载的内容，甚至可以直接在线观看视频。相对于普通人来说，传统下载方式的确是没落了。但是，这些中心化的下载方式有一个弊端就是：提供下载服务的人可以任意控制我们的整个下载过程。想想限速、屏蔽、删资源。这个时候传统的下载方式的优势就显露出来了。其中更以BT、PT这种去中心化的下载方式为甚。这篇文章就是建立在这个基础之上写出来的。为的是让大家的手中多一张牌，不至于被大厂绑架。不是让大家回归传统，而是让大家多个选择。现在很多人手里估计都有闲置的安卓手机，这篇文章也是基于安卓手机的。步骤稍有繁琐，但是一步一步按照教程来，应该是没有问题的。如果有问题，请通知我，我会第一时间回答疑问、作出修改。 前期准备Termux 虚拟终端安卓上使用Transmission是通过借助 Termux 这个软件环境实现的。Termux是安卓上一款强大的虚拟终端软件，可以安装很多Linux上的软件包。其中就包括Transmission。 安装 👉点此下载 Termux 安装包，像正常 APP 一样安装好就好。 打开 Termux 等待软件初始化完成。有可能连着WI-FI初始化时间会很长，这个时候换到手机网络一般几分钟就初始化好了。不怎么费流量。 配置 换一个更快的源，复制这两条命令，然后长按 Termux 的主界面，选择Paste粘贴之后，回车运行。 12sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux stable main@' $PREFIX/etc/apt/sources.listpkg up 获得存储权限 12# 输入如下命令，并回车运行，如果提示 Termux 要访问视频照片啥啥的，一定要点击允许。termux-setup-storage Termux的后台运行Termux毕竟只是个安卓App，受限于系统的电源管理，有可能会在后台被系统强制结束。还好有两条命令可以缓解这个现象。注意：强烈建议先把Termux软件移出系统的限制名单，比如说权限限制、电池优化限制等等。毕竟根据我目前的使用体验，这个App非常老实。 1234# 打开唤醒锁，可以让 Termux 在后台悠然运行termux-wake-lock# 关闭唤醒锁，Termux 可能会被系统强制结束termux-wake-unlock 安装 wget现在我们需要安装一个完整版的wget。安装也很简单，执行完命令之后等待完成即可： 1pkg i wget Transmission部分安装一条命令搞定 1pkg i transmission 配置我们现顺序执行下下面两条命令，这样 Transmission 就会自动生成一个配置文件： 12transmission-daemontransmission-remote --exit 设置RPC访问权限此步骤稍微有点复杂，请严格按照描述的去做。或者往下翻，直接运行我提供的命令 方法一：用vim 修改配置 安装 vim 编辑器 1pkg i vim 执行下面的命令（复制-粘贴-回车） 1vim $HOME/.config/transmission-daemon/settings.json 此时界面应该换了一个样子，界面上应该有个白色的小方块，那就是光标，只不过它不会闪烁。我们只能按虚拟键盘上的左右来移动这个白色的小方块。耐心点，我们需要找一段代码： 1"rpc-whitelist": "127.0.0.1" 接着，我们继续移动小方块，让小方块把最后一个双引号框起来，就像这样： 然后我们按键盘上的i键，此时屏幕左下角应该变成这个样子： 出现了这个字样，说明我们能在屏幕上输入字符了，我们输入如下字符,192.168.*.*。注意，一开始应该输入一个英文状态的逗号。现在，它看起来应该是这个样子： 接着，我们按虚拟键盘上的ESC键，此时，左下角变成了这个样子，对，--INSEERT--字样消失了： 这个时候操作起键盘来，直接输入冒号，和英文x，就像这样： 然后回车，搞定！这个时候发现界面退出了。如果没有提示错误，说明修改成功了。 方法二：运行命令上面的步骤的确比较复杂，可以直接执行下面的命令。为了安全起见，下面三条命令需要按步骤并且一个一个地执行。 123cd $HOME/.config/transmission-daemonrm -f settings.jsonwget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/settings.json 运行与结束运行运行1transmission-daemon 结束运行1transmission-remote --exit 通过浏览器访问 Transmission 的界面确保 Transmission 已经运行起来了。在局域网中任何一台电脑或者手机的浏览器里面输入http://[你手机的局域网IP]:9091，回车。即可打开Transmission的界面。 更改为 web control 皮肤Transmission自带的皮肤实在是太精简了，我们平时使用BT/PT一般需要了解更多的信息，这个时候自带的网页皮肤就不能满足我们的需求了。但是，Transmission 支持自定义网页版皮肤。 停止 Transmission1transmission-remote --exit 下载皮肤1wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh 修改脚本如果嫌修改麻烦请直接下载我修改好的。 受限于Android手机权限， Termux 并不是一个完全的Linux环境，所以我们需要对脚本进行稍稍修改。很简单！ 123TMP_FOLDER="/tmp/tr-web-control"# 改为TMP_FOLDER=$PREFIX"/tmp/tr-web-control" 或者直接下载我修改好的。 1wget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/install-tr-control-for-termux.sh 执行安装运行安装脚本 1bash install-tr-control-cn.sh $PREFIX/share/transmission 如果提示无法确认当前是否为 root 用户，可能无法进行安装操作。是否继续？直接输入y然后回车，让它继续安装即可。 最后安装好后再次打开浏览器应该是这个样子： 添加下载任务自己在浏览器界面找找，我lay了，要休息一下。 其它 用 ssh 管理这部分笔者就不详细说了，有兴趣自己百度看看，摆脱安卓手机虚拟键盘的烦恼大半就靠它了。]]></content>
       <tags>
-        <tag>Transmission</tag>
         <tag>Android</tag>
+        <tag>Transmission</tag>
         <tag>Termux</tag>
       </tags>
   </entry>
@@ -787,8 +823,8 @@
     <url>%2F2019%2F04%2F04%2F%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-04-04-Yarn-%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8%2F</url>
     <content type="text"><![CDATA[文档https://yarn.org.cn/doc/index.htmlhttps://yarn.bootcss.com/docs/ Yarn 的目录 包缓存位置~/Library/Caches/Yarn]]></content>
       <tags>
-        <tag>Yarn</tag>
         <tag>npm</tag>
+        <tag>Yarn</tag>
       </tags>
   </entry>
   <entry>
@@ -1008,8 +1044,8 @@
     <url>%2F2019%2F03%2F04%2F%E5%AD%A6%E4%B9%A0-iOS-2019-03-04-iOS-%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%87%BA%E7%8E%B0%E8%BD%AC%E7%A7%BB%E7%AC%A6%E5%8F%B7%2F</url>
     <content type="text"><![CDATA[123456789#ifndef REGEXP# define _regexp_stringify(x) #x# define _regexp_stringify2(x) _regexp_stringify(x)# define _regexp(...) (&#123; const char *str = _regexp_stringify2(# __VA_ARGS__); const size_t length = strlen(str); [[NSString alloc] initWithBytes:str + 1 length:length - 2 encoding:NSUTF8StringEncoding]; &#125;)# define REGEXP(...) [NSRegularExpression regularExpressionWithPattern:_regexp(__VA_ARGS__) options:0 error:NULL]#endifNSNSRegularExpression *reg = REGEXP(^1\d&#123;10&#125;$);]]></content>
       <tags>
-        <tag>ios</tag>
         <tag>正则表达式</tag>
+        <tag>ios</tag>
       </tags>
   </entry>
   <entry>
@@ -1718,8 +1754,8 @@
     <url>%2F2017%2F03%2F08%2F%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-08-%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
     <content type="text"><![CDATA[堆和栈的区别来源：未知 一、预备知识—程序的内存分配一个由C/C++编译的程序占用的内存分为以下几个部分 栈区（stack）— 由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。 堆区（heap） — 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收 。注意它与数据结构中的堆是两回事，分配方式倒是类似于链表，呵呵。 全局区（静态区）（static）—，全局变量和静态变量的存储是放在一块的，初始化的全局变量和静态变量在一块区域， 未初始化的全局变量和未初始化的静态变量在相邻的另一块区域。 - 程序结束后由系统释放。 文字常量区 —常量字符串就是放在这里的。 程序结束后由系统释放 程序代码区—存放函数体的二进制代码。 二、例子程序这是一个前辈写的，非常详细 12345678910111213141516//main.cppint a = 0; 全局初始化区char *p1; 全局未初始化区main()&#123;int b; 栈char s[] = "abc"; 栈char *p2; 栈char *p3 = "123456"; 123456/0在常量区，p3在栈上。static int c =0； 全局（静态）初始化区p1 = (char *)malloc(10);p2 = (char *)malloc(20);分配得来得10和20字节的区域就在堆区。strcpy(p1, "123456"); 123456/0放在常量区，编译器可能会将它与p3所指向的"123456" 优化成一个地方。&#125; 三、堆和栈的理论知识申请方式stack:由系统自动分配。 例如，声明在函数中一个局部变量 int b; 系统自动在栈中为b开辟空间heap:需要程序员自己申请，并指明大小，在c中malloc函数如p1 = (char *)malloc(10);在C++中用new运算符如p2 = new char[10];但是注意p1、p2本身是在栈中的。 申请后系统的响应栈：只要栈的剩余空间大于所申请空间，系统将为程序提供内存，否则将报异常提示栈溢出。堆：首先应该知道操作系统有一个记录空闲内存地址的链表，当系统收到程序的申请时，会遍历该链表，寻找第一个空间大于所申请空间的堆结点，然后将该结点从空闲结点链表中删除，并将该结点的空间分配给程序，另外，对于大多数系统，会在这块内存空间中的首地址处记录本次分配的大小，这样，代码中的delete语句才能正确的释放本内存空间。另外，由于找到的堆结点的大小不一定正好等于申请的大小，系统会自动的将多余的那部分重新放入空闲链表中。 申请大小的限制栈：在Windows下,栈是向低地址扩展的数据结构，是一块连续的内存的区域。这句话的意思是栈顶的地址和栈的最大容量是系统预先规定好的，在WINDOWS下，栈的大小是2M（也有的说是1M，总之是一个编译时就确定的常数），如果申请的空间超过栈的剩余空间时，将提示overflow。因此，能从栈获得的空间较小。堆：堆是向高地址扩展的数据结构，是不连续的内存区域。这是由于系统是用链表来存储的空闲内存地址的，自然是不连续的，而链表的遍历方向是由低地址向高地址。堆的大小受限于计算机系统中有效的虚拟内存。由此可见，堆获得的空间比较灵活，也比较大。 申请效率的比较：栈由系统自动分配，速度较快。但程序员是无法控制的。堆是由new分配的内存，一般速度比较慢，而且容易产生内存碎片,不过用起来最方便.另外，在Windows下，最好的方式是用VirtualAlloc分配内存，他不是在堆，也不是在栈是直接在进程的地址空间中保留一块内存，虽然用起来最不方便。但是速度快，也最灵活。 堆和栈中的存储内容栈：在函数调用时，第一个进栈的是主函数中后的下一条指令（函数调用语句的下一条可执行语句）的地址，然后是函数的各个参数，在大多数的C编译器中，参数是由右往左入栈的，然后是函数中的局部变量。注意静态变量是不入栈的。当本次函数调用结束后，局部变量先出栈，然后是参数，最后栈顶指针指向最开始存的地址，也就是主函数中的下一条指令，程序由该点继续运行。堆：一般是在堆的头部用一个字节存放堆的大小。堆中的具体内容由程序员安排。 存取效率的比较12char s1[] = "aaaaaaaaaaaaaaa";char *s2 = "bbbbbbbbbbbbbbbbb"; aaaaaaaaaaa是在运行时刻赋值的；而bbbbbbbbbbb是在编译时就确定的；但是，在以后的存取中，在栈上的数组比指针所指向的字符串(例如堆)快。比如： 12345678910#includevoid main()&#123;char a = 1;char c[] = "1234567890";char *p ="1234567890";a = c[1];a = p[1];return;&#125; 对应的汇编代码 123456710: a = c[1];00401067 8A 4D F1 mov cl,byte ptr [ebp-0Fh]0040106A 88 4D FC mov byte ptr [ebp-4],cl11: a = p[1];0040106D 8B 55 EC mov edx,dword ptr [ebp-14h]00401070 8A 42 01 mov al,byte ptr [edx+1]00401073 88 45 FC mov byte ptr [ebp-4],al 第一种在读取时直接就把字符串中的元素读到寄存器cl中，而第二种则要先把指针值读到 edx中，再根据edx读取字符，显然慢了。 小结：堆和栈的区别可以用如下的比喻来看出：使用栈就象我们去饭馆里吃饭，只管点菜（发出申请）、付钱、和吃（使用），吃饱了就走，不必理会切菜、洗菜等准备工作和洗碗、刷锅等扫尾工作，他的好处是快捷，但是自由度小。使用堆就象是自己动手做喜欢吃的菜肴，比较麻烦，但是比较符合自己的口味，而且自由度大。 (经典！)]]></content>
       <tags>
-        <tag>编程语言</tag>
         <tag>基础知识</tag>
+        <tag>编程语言</tag>
       </tags>
   </entry>
   <entry>
@@ -1727,8 +1763,8 @@
     <url>%2F2017%2F03%2F07%2F%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-07-ExternUsage%2F</url>
     <content type="text"><![CDATA[C语言extern关键字使用[TOC] 引用自：http://doc.chinaunix.net/CPP/201206/2248432.shtmlhttps://www.cnblogs.com/broglie/p/5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”. extern修饰变量的声明。举例来说，如果文件a.c需要引用b.c中变量int v,就可以在a.c中声明extern int v,然后就可以引用变量v.这里需要注意的是，被引用的变量v的链接属性必须是外链接（external）的，也就是说a.c要引用到v,不只是取决于在 a.c中声明extern int v,还取决于变量v本身是能够被引用到的。这涉及到c语言的另外一个话题–变量的作用域。能够被其他模块以extern修饰符引用到的变量通常是全局变 量。还有很重要的一点是，extern int v可以放在a.c中的任何地方，比如你可以在a.c中的函数fun定义的开头处声明extern int v,然后就可以引用到变量v了，只不过这样只能在函数fun作用域中引用v罢了，这还是变量作用域的问题。对于这一点来说，很多人使用的时候都心存顾虑。 好像extern声明只能用于文件作用域似的。 extern修饰函数声明。从本质上来讲，变量和函数没有区别。函数名是指向函数二进制块开头处的指针。如果文件a.c需要引用b.c中的函数，比如在 b.c中原型是int fun（int mu），那么就可以在a.c中声明extern int fun（int mu），然后就能使用fun来做任何事情。就像变量的声明一样，extern int fun（int mu）可以放在a.c中任何地方，而不一定非要放在a.c的文件作用域的范围中。 对其他模块中函数的引用，最常用的方法是包含这些函数声明的头文件。使用extern和包含头文件来引用函数有什么区别呢？extern的引用方式比包含 头文件要简洁得多！extern的使用方法是直接了当的，想引用哪个函数就用extern声明哪个函数。这大概是KISS原则的一种体现吧！这样做的一个 明显的好处是，会加速程序的编译（确切的说是预处理）的过程，节省时间。在大型C程序编译过程中，这种差异是非常明显的。 此外，extern修饰符可用于指示C或者C++函数的调用规范。比如在C++中调用C库函数，就需要在C++程序中用extern “C”声明要引用的函数。这是给链接器用的，告诉链接器在链接的时候用C函数规范来链接。主要原因是C++和C程序编译完成后在目标代码中命名规则不同。 深入二：了解了上面的基本原理，下面深入一下。如下： 用extern声明外部变量 定义：外部变量是指在函数或者文件外部定义的全局变量。外部变量定义必须在所有的函数之外，且只能定义一次。 在一个文件内声明的外部变量作用域作用域：如果在变量定义之前要使用该变量，则在用之前加extern声明变量，作用域扩展到从声明开始，到本文件结束。 例子 例子： 123456789101112131415161718192021222324252627282930313233#include &lt;stdio.h&gt; int max（int x,int y）； //函数提前声明 int main（int argc,char *argv[ ] ） &#123; int result; extern int X; //外部变量声明 extern int Y; result = max（X,Y）； printf（"the max value is %dn",result）； return 0; &#125; int X = 10; //定义外部变量 int Y = 20; int max（int x, int y） &#123; return （x&gt;y ? x : y）； &#125; 其中，用extern声明外部变量时，类型名可以省略。例如，”extern int X;”,可以改写成”extern X;”. 小结小结：这种用方法简单，实用性不大。 在多个文件中声明外部变量作用域作用域：如果整个工程由多个文件组成，在一个文件中想引用另外一个文件中已经定义的外部变量时，则只需在引用变量的文件中用extern关键字加以声明即可。可见，其作用域从一个文件扩展到多个文件了。 例子文件a.c的内容： 1234567891011121314151617#include &lt;stdio.h&gt; int BASE=2; //变量定义 int exe（int x）； //外部函数提前声明 int main（int argc, char *agrv[]） &#123; int a=10; printf（"%d^%d = %dn",BASE,a,exe（a））； return 0; &#125; 文件b.c的内容： 1234567891011121314151617181920212223#include &lt;stdio.h&gt; extern BASE; //外部变量声明 int exe（int x） &#123; int i; int ret=1; for（i=0;i&lt;x;i++） &#123; ret*=BASE; &#125; return ret; &#125; 利用gcc工具编译gcc a.c b.c –o demo,再运行。/demo,结果为2^10 = 1024.其中，在a.c文件中定义BASE=2,在b.c中引用BASE时，需要用extern关键字声明其为外部变量，否则编译会找不到该变量。 小结 小结：对于多个文件的工程，可以采用这种方法来操作。实际工程中，对于模块化的程序文件，在其文件中可以预先留好外部变量的接口，也就是只采用extern声明变量，不定义变量，也通常在模块程序的头文件中声明，在使用该模块时，只需要在使用时定义一下即可，如上述b.c文件，做好相应的函数接口，留好需要改变BASE值的声明，在需要使用该模块时，只需要在调用的文件中定义具体的值即可。引用外部变量和通过函数形参值传递变量的区别：用extern引用外部变量，可以在引用的模块内修改其值，而形参值传递的变量则不能修改其值，除非是地址传递。 因此，如果多个文件同时对需要应用的的变量进行同时操作，可能会修改该变量，类似于形参的地址传递，从而影响其他模块的使用，因此，要慎重使用。 在多个文件中声明外部结构体变量前面一节中，只是适合一般变量的外部声明，但是对于声明外部结构体变量时，则有些不同，需要加以注意。 例子文件a.c的内容： 123456789101112131415161718192021222324252627#include &lt;stdio.h&gt; #include "b.h" #include "c.h" A_class local_post=&#123;1,2,3&#125;; //全局变量 A_class next_post=&#123;10,9,8&#125;; //全局变量 int main（int argc,char *argv[]） &#123; A_class ret; print（"first point",local_post）； print（"second point",next_post）； ret=fun（local_post,next_post）； printf（"the vector is （%d,%d,%d）n",ret.x,ret.y,ret.z）； return 0; &#125; 文件b.h的内容： 1234567891011121314151617181920212223#ifndef __B_H #define __B_H #if 1 typedef struct&#123; int x; int y; int z; &#125;A_class; #endif extern A_class local_post; //外部结构体变量声明 extern A_class fun（int x,int y,int z）； //接口函数声明 #endif 文件b.c的内容： 12345678910111213141516171819#include &lt;stdio.h&gt; #include "b.h" A_class fun（A_class first,A_class next） &#123; A_class ret; ret.x=next.x-first.x; ret.y=next.y-first.x; ret.z=next.z-first.z; return （ret）； &#125; 文件c.h的内容： 1234567#ifndef __C_H #define __C_H extern int print（char *,A_class post）； #endif 文件c.c的内容： 12345678910111213#include &lt;stdio.h&gt; #include "b.h" int print（char *str,A_class post） &#123; printf（"%s : （%d,%d,%d）n",str,post.x,post.y,post.z）； return 0; &#125; 利用gcc工具编译gcc a.c b.c c.c–o demo,再运行。/demo,结果为 12345first point : （1,2,3） second point : （10,9,8） the vector is （9,8,5） 小结小结：在a.c文件中定义全局变量A_class local_post结构体，并且调用b.c中的接口函数A_class fun（int x,int y,int z）和c.c中int print（char *str,A_class post），在b.h中声明外部结构体变量local_post,同时，需要对其类型A_class进行实现，在b.h文件中，如果屏蔽掉A_class的实现，而在b.h以外的文件中实现，此时编译时就会出错，由于c.c文件中用到A_class定义的类型，所以需要在该文件中包含b.h.这里需要说明的是，如果调用外部结构体等多层结构体变量时，需要对这种变量进行实现，使用时，加上模块的头文件即可，否则会报错。实际工程中，模块化程序文件，一般提供一个.c和一个.h文件，其中.h文件被.c文件调用，.h文件中实现。 用extern声明外部函数 定义函数时，在函数返回值类型前面加上extern关键字，表示此函数时外部函数，可供其他文件调用，如extern int func （int x,int y），C语言规定，此时extern可以省略，隐形为外部函数。 调用此函数时，需要用extern对函数作出声明。作用域作用域：使用extern声明能够在一个文件中调用其他文件的函数，即把被调用函数的作用域扩展到本文件。C语言中规定，声明时可以省略extern. 例子文件a.c的内容： 1234567891011121314151617181920212223#include &lt;stdio.h&gt; #include "b.h" int main（） &#123; int x=10,y=5; printf（"x = 10,y = 5n"）； printf（"x + y = %dn",add（x,y））； printf（"x - y = %dn",sub（x,y））； printf（"x * y = %dn",mult（x,y））； printf（"x / y = %dn",div（x,y））； return 0; &#125; 文件b.h的内容： 1234567891011121314#ifndef __F_H #define __F_H extern int add（int x,int y）； extern int sub（int x,int y）； extern int mult（int x,int y）； extern int div（int x,int y）； #endif 文件b.c的内容： 12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;stdio.h&gt; int add（int x,int y） &#123; return（x+y）； &#125; int sub（int x,int y） &#123; return（x-y）； &#125; int mult（int x,int y） &#123; return（x*y）； &#125; int div（int x,int y） &#123; if(y!=0) &#123; return（x/y）； &#125; printf（"mult（） fail!the second para can not be zero!n "）； return（-1）； &#125; 利用gcc工具编译gcc a.c b.c –o demo,再运行./demo,结果为 x = 10,y = 5 x + y = 15 x - y = 5 x * y = 50 x / y = 2. 小结小结：由上面简单的例子可以看出，在b.h文件中声明好b.c的函数，使用时，只需要在a.c中包含#include “b.h”头文件即可，这样就可以使用b.c的接口函数了，在实际工程中，通常也是采用这种方式，.c文件中实现函数，.h文件中声明函数借口，需要调用。c文件的函数接口时，只需包含。h头文件即可。 总结在实际工程中，有两种情况比较多。一是利用extern只声明外部函数，不需要传递需要外部声明的变量，一个模块化接口文件对应一个声明接口的头文件，需要调用接口函数时，只需要包含其头文件。二是利用用extern声明外部函数，同时声明需要传递的外部变量，做法和第一种情况一样，声明都放在头文件中，但是，模块文件也需要包含该头文件。另外，如果结构体等比较复杂的变量，则需要包含其定义的头文件。另外，定义的外部变量属于全局变量，其存储方式为静态存储，生存周期为整个程序的生存周期。]]></content>
       <tags>
-        <tag>extern</tag>
         <tag>编程语言</tag>
+        <tag>extern</tag>
       </tags>
   </entry>
   <entry>
