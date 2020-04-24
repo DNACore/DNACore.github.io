@@ -1,95 +1,58 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="GitGit 下载安装 Git For Windowshttps://git-scm.com/download/win  git 常用命令汇总1234567git checkout pro //切换到 pro 分支git pull origin developer //从远程的 developer 分支拉取到当前分支git branch //查看分支git checkout developer /">
-<meta name="keywords" content="Git">
+  <meta name="description" content="GitGit 下载安装 Git For Windowshttps:&#x2F;&#x2F;git-scm.com&#x2F;download&#x2F;win  git 常用命令汇总1234567git checkout pro &#x2F;&#x2F;切换到 pro 分支git pull origin developer &#x2F;&#x2F;从远程的 developer 分支拉取到当前分支git branch &#x2F;&amp;#x2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git">
-<meta property="og:url" content="https://dnacore@github.io/2018/11/08/其他开发工具-2018-11-08-Git/index.html">
+<meta property="og:url" content="https://dnacore@github.io/2018/11/08/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2018-11-08-Git/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="GitGit 下载安装 Git For Windowshttps://git-scm.com/download/win  git 常用命令汇总1234567git checkout pro //切换到 pro 分支git pull origin developer //从远程的 developer 分支拉取到当前分支git branch //查看分支git checkout developer /">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="GitGit 下载安装 Git For Windowshttps:&#x2F;&#x2F;git-scm.com&#x2F;download&#x2F;win  git 常用命令汇总1234567git checkout pro &#x2F;&#x2F;切换到 pro 分支git pull origin developer &#x2F;&#x2F;从远程的 developer 分支拉取到当前分支git branch &#x2F;&amp;#x2">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://segmentfault.com/img/bVdOio">
 <meta property="og:image" content="https://segmentfault.com/img/bVdQ2u">
 <meta property="og:image" content="https://segmentfault.com/img/bVdQ4m">
 <meta property="og:image" content="https://sfault-image.b0.upaiyun.com/660/117/660117451-5463b10575723">
-<meta property="og:updated_time" content="2019-08-21T02:57:36.708Z">
+<meta property="article:published_time" content="2018-11-08T08:41:20.000Z">
+<meta property="article:modified_time" content="2020-04-20T10:19:07.490Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git">
-<meta name="twitter:description" content="GitGit 下载安装 Git For Windowshttps://git-scm.com/download/win  git 常用命令汇总1234567git checkout pro //切换到 pro 分支git pull origin developer //从远程的 developer 分支拉取到当前分支git branch //查看分支git checkout developer /">
 <meta name="twitter:image" content="https://segmentfault.com/img/bVdOio">
-  <link rel="canonical" href="https://dnacore@github.io/2018/11/08/其他开发工具-2018-11-08-Git/">
+
+<link rel="canonical" href="https://dnacore@github.io/2018/11/08/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2018-11-08-Git/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>Git | DNACore GitHub io</title>
   
-
-
 
 
 
@@ -108,7 +71,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -122,99 +84,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -225,63 +177,50 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
             
 
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
+    
   
   
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/08/其他开发工具-2018-11-08-Git/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/08/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2018-11-08-Git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Git
-
-          
+        <h1 class="post-title" itemprop="name headline">
+          Git
         </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2018-11-08 16:41:20" itemprop="dateCreated datePublished" datetime="2018-11-08T16:41:20+08:00">2018-11-08</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-21 10:57:36" itemprop="dateModified" datetime="2019-08-21T10:57:36+08:00">2019-08-21</time>
+                <time title="修改时间：2020-04-20 18:19:07" itemprop="dateModified" datetime="2020-04-20T18:19:07+08:00">2020-04-20</time>
               </span>
-            
-          
 
           
 
@@ -297,18 +236,17 @@
         <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git-下载安装"><a href="#Git-下载安装" class="headerlink" title="Git 下载安装"></a>Git 下载安装</h2><ul>
 <li>Git For Windows<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></li>
 </ul>
-<h2 id="git-常用命令汇总"><a href="#git-常用命令汇总" class="headerlink" title="git 常用命令汇总"></a>git 常用命令汇总</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout pro //切换到 pro 分支</span><br><span class="line">git pull origin developer //从远程的 developer 分支拉取到当前分支</span><br><span class="line"></span><br><span class="line">git branch //查看分支</span><br><span class="line">git checkout developer //切换到 developer 分支</span><br><span class="line">git reset --hard //重置到最近的提交</span><br><span class="line">git clean -df //删除多余文件和文件夹</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init //直接在当前目录初始化一个 git 仓库</span><br></pre></td></tr></table></figure>
+<h2 id="git-常用命令汇总"><a href="#git-常用命令汇总" class="headerlink" title="git 常用命令汇总"></a>git 常用命令汇总</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout pro &#x2F;&#x2F;切换到 pro 分支</span><br><span class="line">git pull origin developer &#x2F;&#x2F;从远程的 developer 分支拉取到当前分支</span><br><span class="line"></span><br><span class="line">git branch &#x2F;&#x2F;查看分支</span><br><span class="line">git checkout developer &#x2F;&#x2F;切换到 developer 分支</span><br><span class="line">git reset --hard &#x2F;&#x2F;重置到最近的提交</span><br><span class="line">git clean -df &#x2F;&#x2F;删除多余文件和文件夹</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init &#x2F;&#x2F;直接在当前目录初始化一个 git 仓库</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>将本地已有工程上传到远程仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin https://gitlab.com/IceKey/RSSReader.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure>
+<li>将本地已有工程上传到远程仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin https:&#x2F;&#x2F;gitlab.com&#x2F;IceKey&#x2F;RSSReader.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
 <h2 id="比较好的-GIT-教程"><a href="#比较好的-GIT-教程" class="headerlink" title="比较好的 GIT 教程"></a>比较好的 GIT 教程</h2><p><a href="https://www.cnblogs.com/mliudong/archive/2013/04/08/3007303.html" target="_blank" rel="noopener">https://www.cnblogs.com/mliudong/archive/2013/04/08/3007303.html</a><br><a href="https://www.cnblogs.com/irocker/p/git-reset.html" target="_blank" rel="noopener">https://www.cnblogs.com/irocker/p/git-reset.html</a><br><a href="http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx" target="_blank" rel="noopener">http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx</a></p>
 <h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>从远程克隆仓库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 目标文件夹</span><br><span class="line">//将开始从目标文件夹建立git仓库。</span><br><span class="line">git clone https://xxxx.git</span><br><span class="line"></span><br><span class="line">//此种方法，目标文件夹本身即为仓库，与上面的目录位置稍有不同</span><br><span class="line">git clone https://xxxx.git ~/Documents/目标文件夹</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 目标文件夹</span><br><span class="line">&#x2F;&#x2F;将开始从目标文件夹建立git仓库。</span><br><span class="line">git clone https:&#x2F;&#x2F;xxxx.git</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;此种方法，目标文件夹本身即为仓库，与上面的目录位置稍有不同</span><br><span class="line">git clone https:&#x2F;&#x2F;xxxx.git ~&#x2F;Documents&#x2F;目标文件夹</span><br></pre></td></tr></table></figure>
 
 <h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><p>参考：<a href="http://hubingforever.blog.163.com/blog/static/1710405792012314218512/" target="_blank" rel="noopener">http://hubingforever.blog.163.com/blog/static/1710405792012314218512/</a></p>
 <ul>
@@ -351,18 +289,32 @@
 </ul>
 <h2 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h2><ul>
 <li>已经将某些文件添加到版本控制，如何取消追踪这些文件？<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对于单个文件</span></span><br><span class="line">git rm --cached -- podfile.lock</span><br><span class="line"><span class="comment">#对于整个文件夹 两个横杠代表允许操作文件名以减号开头的文件</span></span><br><span class="line">git rm -r --cached -- Pods/</span><br></pre></td></tr></table></figure>
-
-</li>
+最后，一定要编辑<code>.gitignore</code>并提交。</li>
 </ul>
-<p>最后，一定要编辑<code>.gitignore</code>并提交。</p>
 <h2 id="git-update-index-忽略已跟踪文件的改动"><a href="#git-update-index-忽略已跟踪文件的改动" class="headerlink" title="git update-index 忽略已跟踪文件的改动"></a>git update-index 忽略已跟踪文件的改动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#忽略已跟踪文件的改动</span></span><br><span class="line">git update-index --assume-unchanged file_path</span><br><span class="line"><span class="comment">#恢复跟踪文件改动</span></span><br><span class="line">git update-index --no-assume-unchanged file_path</span><br></pre></td></tr></table></figure>
 
 <h2 id="git-ls-tree-git仓库文件操作"><a href="#git-ls-tree-git仓库文件操作" class="headerlink" title="git ls-tree git仓库文件操作"></a>git ls-tree git仓库文件操作</h2><ul>
 <li>列出已跟踪文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只显示名字</span></span><br><span class="line">git ls-tree -r master --name-only</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示完整路径</span></span><br><span class="line">git ls-tree -r master</span><br></pre></td></tr></table></figure>
 
+
 </li>
 </ul>
 <h2 id="Git-使用技巧"><a href="#Git-使用技巧" class="headerlink" title="Git 使用技巧"></a>Git 使用技巧</h2><ul>
+<li><p>git 提示冲突<br>git pull -&gt; 用变基代替合并 -&gt; 提示冲突 -&gt; 解决冲突文件（不必提交） -&gt; 继续变基 -&gt; 成功</p>
+</li>
+<li><p>修改未入库的历史提交？</p>
+</li>
+</ul>
+<ol>
+<li>交互式变基</li>
+<li>在需要修改的提交前打勾</li>
+<li>此时 HEAD 会指向这个需要修改的提交</li>
+<li>直接修改代码，不要提交或者 ament 修改的代码</li>
+<li>选择继续变基，如果变基时间过长，直接在终端执行<code>git rebase --continue</code></li>
+<li>变基成功</li>
+<li>重新提交到 gerrit 远程，全程不需要手动 commit 或者 ament</li>
+</ol>
+<ul>
 <li>取消对某个文件的监视<blockquote>
 <p>利用.gitignore过滤文件，如编译过程中的中间文件，等等，这些文件不需要被追踪管理。</p>
 </blockquote>
@@ -370,20 +322,13 @@
 </ul>
 <p><strong>现象：</strong><br> 在.gitignore添加file1文件，以过滤该文件，但是通过git status查看仍显示file1文件的状态。<br><strong>原因：</strong><br> 在git库中已存在了这个文件，之前push提交过该文件。<br> .gitignore文件只对还没有加入版本管理的文件起作用，如果之前已经用git把这些文件纳入了版本库，就不起作用了<br><strong>解决：</strong><br> 需要在git库中删除该文件，并更新。<br> 然后再次git status查看状态，file1文件不再显示状态。</p>
 <ol>
-<li><p>在git库中删除该文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached ProjectFolder.xcodeproj/project.xcworkspace/xcuserdata/myUserName.xcuserdatad/UserInterfaceState.xcuserstate</span><br><span class="line">git commit -m "Removed file that shouldn't be tracked"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在.gitignor文件中添加这个文件名，已测试可以达到效果</p>
-</li>
+<li>在git库中删除该文件<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached ProjectFolder.xcodeproj/project.xcworkspace/xcuserdata/myUserName.xcuserdatad/UserInterfaceState.xcuserstate</span><br><span class="line">git commit -m "Removed file that shouldn't be tracked"</span><br></pre></td></tr></table></figure></li>
+<li>在.gitignor文件中添加这个文件名，已测试可以达到效果</li>
 </ol>
 <ul>
-<li><p>为单一GIT仓库设置用户信息：</p>
-<ul>
-<li><p>在工程目录的 .git 文件夹里面config添加如下字段即可。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = YOUR-NAME</span><br><span class="line">    email = YOUR-EMAIL-ADDRESS</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用命令行操作</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
+<li>为单一GIT仓库设置用户信息：<ul>
+<li>在工程目录的 .git 文件夹里面config添加如下字段即可。<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = YOUR-NAME</span><br><span class="line">    email = YOUR-EMAIL-ADDRESS</span><br></pre></td></tr></table></figure></li>
+<li>用命令行操作<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
@@ -405,10 +350,9 @@
 </ol>
 <ul>
 <li>快速删除所有历史记录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">1. Checkout</span><br><span class="line"></span><br><span class="line">   git checkout --orphan latest_branch</span><br><span class="line"></span><br><span class="line">2. Add all the files</span><br><span class="line"></span><br><span class="line">   git add -A</span><br><span class="line"></span><br><span class="line">3. Commit the changes</span><br><span class="line"></span><br><span class="line">   git commit -am &quot;commit message&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4. Delete the branch</span><br><span class="line"></span><br><span class="line">   git branch -D master</span><br><span class="line"></span><br><span class="line">5.Rename the current branch to master</span><br><span class="line"></span><br><span class="line">   git branch -m master</span><br><span class="line"></span><br><span class="line">6.Finally, force update your repository</span><br><span class="line"></span><br><span class="line">   git push -f origin master</span><br></pre></td></tr></table></figure>
-
-</li>
+<h2 id="GitHhub-HPPTS-切换为-SSH"><a href="#GitHhub-HPPTS-切换为-SSH" class="headerlink" title="GitHhub HPPTS 切换为 SSH"></a>GitHhub HPPTS 切换为 SSH</h2></li>
 </ul>
-<h2 id="GitHhub-HPPTS-切换为-SSH"><a href="#GitHhub-HPPTS-切换为-SSH" class="headerlink" title="GitHhub HPPTS 切换为 SSH"></a>GitHhub HPPTS 切换为 SSH</h2><ol>
+<ol>
 <li><a href="https://help.github.com/articles/changing-a-remote-s-url/" target="_blank" rel="noopener">https://help.github.com/articles/changing-a-remote-s-url/</a></li>
 <li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key" target="_blank" rel="noopener">https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key</a></li>
 </ol>
@@ -420,12 +364,11 @@
 <p>如果是为了永久记住对应的私钥是哪个，我们不能依赖 ssh-agent 服务。能依赖什么则取决于以下哪些方案适合你的使用场景。</p>
 <h5 id="使用某种安全的秘钥管理机制"><a href="#使用某种安全的秘钥管理机制" class="headerlink" title="使用某种安全的秘钥管理机制"></a>使用某种安全的秘钥管理机制</h5><p>你没有在问题里描述你所使用的操作系统，所以我以我日常使用的 Mac OS X 为例。Mac 系统内置了一个 Keychain 的服务及其管理程序，可以方便的帮你管理各种秘钥，其中包括 ssh 秘钥。ssh-add 默认将制定的秘钥添加在当前运行的 ssh-agent 服务中，但是你可以改变这个默认行为让它添加到 keychain 服务中，让 Mac 来帮你记住、管理并保障这些秘钥的安全性。</p>
 <p>你所要做的就是执行下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -K [path/to/your/ssh-key]</span><br></pre></td></tr></table></figure>
-
-<p>之后，其他的程序请求 ssh 秘钥的时候，会通过 Keychain 服务来请求。下面的截图里你可以看到我当前的机器上 Keychain 为我管理的有关 ssh 的秘钥，这其中包括我自己生成的四个，以及 Github Client App 自己使用的一个——前者几个都是供 ssh 相关的命令所使用，而后者则指明了仅供 Github.app 这个应用程序使用。 另外，它们都是 login keychains 也就是只有当前用户登录之后才会生效的，换了用户或是未登录状态是不能使用的，这就是 Keychain 服务所帮你做的事情。<br><img src="https://segmentfault.com/img/bVdOio" alt></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -K [path&#x2F;to&#x2F;your&#x2F;ssh-key]</span><br></pre></td></tr></table></figure>
+<p>之后，其他的程序请求 ssh 秘钥的时候，会通过 Keychain 服务来请求。下面的截图里你可以看到我当前的机器上 Keychain 为我管理的有关 ssh 的秘钥，这其中包括我自己生成的四个，以及 Github Client App 自己使用的一个——前者几个都是供 ssh 相关的命令所使用，而后者则指明了仅供 Github.app 这个应用程序使用。 另外，它们都是 login keychains 也就是只有当前用户登录之后才会生效的，换了用户或是未登录状态是不能使用的，这就是 Keychain 服务所帮你做的事情。<br><img src="https://segmentfault.com/img/bVdOio" alt=""></p>
 <h5 id="如何使用多个-ssh-秘钥并对应不同的应用程序？"><a href="#如何使用多个-ssh-秘钥并对应不同的应用程序？" class="headerlink" title="如何使用多个 ssh 秘钥并对应不同的应用程序？"></a>如何使用多个 ssh 秘钥并对应不同的应用程序？</h5><p>这个问题也是我没有完全吃透的，按照某些资料描述，做了以上的工作之后，应用程序应该能够自动匹配适用的 ssh 秘钥了。但是在我学习的过程中也遇到过非得手动指定的情况（那个时候我还不了解 Keychain 的作用，都是手动去 ssh-add 的），于是另外一种机制可以帮你解决这个问题，即 ssh config。</p>
 <p>一言蔽之，ssh config 就是一个配置文件，描述不同的秘钥对应的设置——包括主机名、用户名、访问策略等等。</p>
-<p>以下我截取了本地配置的两个片段：<br><img src="https://segmentfault.com/img/bVdQ2u" alt><br><img src="https://segmentfault.com/img/bVdQ4m" alt></p>
+<p>以下我截取了本地配置的两个片段：<br><img src="https://segmentfault.com/img/bVdQ2u" alt=""><br><img src="https://segmentfault.com/img/bVdQ4m" alt=""></p>
 <p>这两段配置分别对应 Github 和 Coding 这两个服务所使用的秘钥。第一行的 Host 只是一个名字，第三行的 Hostname 才是对应的真实地址，但是两者最好保持一致，这样不用在脑袋里转换。</p>
 <p>用这样的配置，当我 <code>git clone https://github.com/user/repo</code> 的时候，<code>id_rsa</code> 秘钥会被使用，当我 <code>git clone https://coding.net/user/repo</code> 的时候，很显然 <code>nightire</code> 秘钥会被使用。</p>
 <p>当然，此配置不局限于 Git，所有底层使用 SSH 的应用和命令都会遵照配置文件的指示来找到对应的私钥。</p>
@@ -433,7 +376,7 @@
 <blockquote>
 <p>关于 Host 和 Hostname 的对应关系，如果 Hostname 是域名则最好保持一致。但是这里有两个诀窍：</p>
 <ol>
-<li>如果同一域名下有两个不同的配置怎么办？<br>以 Github 为例，如果我有两个账户，一个个人的，一个组织的，并且要使用不同的秘钥，那么我可以这么写：<br><img src="https://sfault-image.b0.upaiyun.com/660/117/660117451-5463b10575723" alt><br>这里 Host 后面对应的是 Github 的两个用户名，也就是 github.com/nightire 和 github.com/very-geek</li>
+<li>如果同一域名下有两个不同的配置怎么办？<br>以 Github 为例，如果我有两个账户，一个个人的，一个组织的，并且要使用不同的秘钥，那么我可以这么写：<br><img src="https://sfault-image.b0.upaiyun.com/660/117/660117451-5463b10575723" alt=""><br>这里 Host 后面对应的是 Github 的两个用户名，也就是 github.com/nightire 和 github.com/very-geek</li>
 <li>如果域名是数字 IP，是否可以简化呢？<br>Host 可以帮助你把对应的 IP 变成好记的名字。比如说我在公司内部配置了 Git Server（基于 gitolite 或 Gitlab 或任何工具），正常的访问地址是：<code>git://xxx.xxx.xxx.xxx:repo.git</code>，如下的配置则可以帮你把它简化成：<code>git.visionet:repo.git</code><br>非常有用。</li>
 </ol>
 </blockquote>
@@ -460,81 +403,76 @@
     
     
     
-        
-      
 
       <footer class="post-footer">
-          
-            
-          
           <div class="post-tags">
-            
               <a href="/tags/Git/" rel="tag"># Git</a>
-            
           </div>
-        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2018/11/01/学习-ReactNative-2018-11-01-ReactNative-for-iOS/" rel="next" title="ReactNative for iOS">
-                  <i class="fa fa-chevron-left"></i> ReactNative for iOS
-                </a>
-              
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2018/11/09/电脑技巧-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-安装/" rel="prev" title="WES 7 - Windows Embedded Standard 7 SP1 安装">
-                  WES 7 - Windows Embedded Standard 7 SP1 安装 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
         
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/11/01/%E5%AD%A6%E4%B9%A0-ReactNative-2018-11-01-ReactNative-for-iOS/" rel="prev" title="ReactNative for iOS">
+      <i class="fa fa-chevron-left"></i> ReactNative for iOS
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/11/09/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-%E5%AE%89%E8%A3%85/" rel="next" title="WES 7 - Windows Embedded Standard 7 SP1 安装">
+      WES 7 - Windows Embedded Standard 7 SP1 安装 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-  </div>
 
 
           </div>
           
     
-    
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
   </div>
   
-  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -548,7 +486,6 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">1.</span> <span class="nav-text">Git</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-下载安装"><span class="nav-number">1.1.</span> <span class="nav-text">Git 下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-常用命令汇总"><span class="nav-number">1.2.</span> <span class="nav-text">git 常用命令汇总</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#比较好的-GIT-教程"><span class="nav-number">1.3.</span> <span class="nav-text">比较好的 GIT 教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-clone"><span class="nav-number">1.4.</span> <span class="nav-text">git clone</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-commit"><span class="nav-number">1.5.</span> <span class="nav-text">git commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-config"><span class="nav-number">1.6.</span> <span class="nav-text">git config</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#config-文件的三个位置"><span class="nav-number">1.6.1.</span> <span class="nav-text">config 文件的三个位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看全局GIT设置信息"><span class="nav-number">1.6.2.</span> <span class="nav-text">查看全局GIT设置信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-config-配置命令"><span class="nav-number">1.6.3.</span> <span class="nav-text">git config 配置命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-branch-分支"><span class="nav-number">1.7.</span> <span class="nav-text">git branch 分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-stash"><span class="nav-number">1.8.</span> <span class="nav-text">git stash</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-remote"><span class="nav-number">1.9.</span> <span class="nav-text">git remote</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加或者更换-remote-url"><span class="nav-number">1.9.1.</span> <span class="nav-text">添加或者更换 remote url</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-rebase"><span class="nav-number">1.10.</span> <span class="nav-text">git rebase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-rm"><span class="nav-number">1.11.</span> <span class="nav-text">git rm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-update-index-忽略已跟踪文件的改动"><span class="nav-number">1.12.</span> <span class="nav-text">git update-index 忽略已跟踪文件的改动</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-ls-tree-git仓库文件操作"><span class="nav-number">1.13.</span> <span class="nav-text">git ls-tree git仓库文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-使用技巧"><span class="nav-number">1.14.</span> <span class="nav-text">Git 使用技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-常见问题"><span class="nav-number">1.15.</span> <span class="nav-text">git 常见问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHhub-HPPTS-切换为-SSH"><span class="nav-number">1.16.</span> <span class="nav-text">GitHhub HPPTS 切换为 SSH</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题：是否必须每次添加ssh-add"><span class="nav-number">1.16.0.1.</span> <span class="nav-text">问题：是否必须每次添加ssh-add</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#使用某种安全的秘钥管理机制"><span class="nav-number">1.16.0.1.1.</span> <span class="nav-text">使用某种安全的秘钥管理机制</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何使用多个-ssh-秘钥并对应不同的应用程序？"><span class="nav-number">1.16.0.1.2.</span> <span class="nav-text">如何使用多个 ssh 秘钥并对应不同的应用程序？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#有没有简单点的办法？"><span class="nav-number">1.16.0.1.3.</span> <span class="nav-text">有没有简单点的办法？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#不同-git-使用不同的-ssh-密钥"><span class="nav-number">1.16.0.1.4.</span> <span class="nav-text">不同 git 使用不同的 ssh 密钥</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#错误解决"><span class="nav-number">1.16.0.1.5.</span> <span class="nav-text">错误解决</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">1.17.</span> <span class="nav-text">Q&amp;A</span></a></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
@@ -557,30 +494,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -594,17 +524,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -615,56 +551,50 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
 <script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
   window.livereOptions = {
     refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
@@ -676,6 +606,7 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
+});
 </script>
 
 </body>

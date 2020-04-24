@@ -1,90 +1,54 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="C语言extern关键字使用[TOC] 引用自：http://doc.chinaunix.net/CPP/201206/2248432.shtmlhttps://www.cnblogs.com/broglie/p/5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”.  ex">
-<meta name="keywords" content="编程语言,extern">
+  <meta name="description" content="C语言extern关键字使用[TOC] 引用自：http:&#x2F;&#x2F;doc.chinaunix.net&#x2F;CPP&#x2F;201206&#x2F;2248432.shtmlhttps:&#x2F;&#x2F;www.cnblogs.com&#x2F;broglie&#x2F;p&#x2F;5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量&#x2F;函数是在别处定义的，要在此处引用”.  ex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言extern关键字使用">
-<meta property="og:url" content="https://dnacore@github.io/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/index.html">
+<meta property="og:url" content="https://dnacore@github.io/2017/03/07/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-07-ExternUsage/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="C语言extern关键字使用[TOC] 引用自：http://doc.chinaunix.net/CPP/201206/2248432.shtmlhttps://www.cnblogs.com/broglie/p/5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”.  ex">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-07-08T07:16:40.000Z">
+<meta property="og:description" content="C语言extern关键字使用[TOC] 引用自：http:&#x2F;&#x2F;doc.chinaunix.net&#x2F;CPP&#x2F;201206&#x2F;2248432.shtmlhttps:&#x2F;&#x2F;www.cnblogs.com&#x2F;broglie&#x2F;p&#x2F;5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量&#x2F;函数是在别处定义的，要在此处引用”.  ex">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-03-07T08:07:02.000Z">
+<meta property="article:modified_time" content="2019-07-08T07:16:40.000Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="extern">
+<meta property="article:tag" content="编程语言">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="C语言extern关键字使用">
-<meta name="twitter:description" content="C语言extern关键字使用[TOC] 引用自：http://doc.chinaunix.net/CPP/201206/2248432.shtmlhttps://www.cnblogs.com/broglie/p/5524932.html 说明一：看到这个，说的很基础，转录于此。 在C语言中，修饰符extern用在变量或者函数的声明前，用来说明”此变量/函数是在别处定义的，要在此处引用”.  ex">
-  <link rel="canonical" href="https://dnacore@github.io/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/">
+
+<link rel="canonical" href="https://dnacore@github.io/2017/03/07/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-07-ExternUsage/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>C语言extern关键字使用 | DNACore GitHub io</title>
   
-
-
 
 
 
@@ -103,7 +67,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -117,99 +80,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -220,63 +173,50 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
             
 
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
+    
   
   
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/07/学习-其他零散知识-2017-03-07-ExternUsage/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/07/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-07-ExternUsage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">C语言extern关键字使用
-
-          
+        <h1 class="post-title" itemprop="name headline">
+          C语言extern关键字使用
         </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2017-03-07 16:07:02" itemprop="dateCreated datePublished" datetime="2017-03-07T16:07:02+08:00">2017-03-07</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2019-07-08 15:16:40" itemprop="dateModified" datetime="2019-07-08T15:16:40+08:00">2019-07-08</time>
               </span>
-            
-          
 
           
 
@@ -305,7 +245,7 @@
 <h3 id="用extern声明外部变量"><a href="#用extern声明外部变量" class="headerlink" title="用extern声明外部变量"></a>用extern声明外部变量</h3><p>   定义：外部变量是指在函数或者文件外部定义的全局变量。外部变量定义必须在所有的函数之外，且只能定义一次。</p>
 <h4 id="在一个文件内声明的外部变量"><a href="#在一个文件内声明的外部变量" class="headerlink" title="在一个文件内声明的外部变量"></a>在一个文件内声明的外部变量</h4><h5 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h5><p>作用域：如果在变量定义之前要使用该变量，则在用之前加extern声明变量，作用域扩展到从声明开始，到本文件结束。</p>
 <h5 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h5><p> 例子：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x,<span class="keyword">int</span> y）； <span class="comment">//函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[ ] ）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> result;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> X; <span class="comment">//外部变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> Y;  </span><br><span class="line">         </span><br><span class="line">   result = max（X,Y）；  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"the max value is %dn"</span>,result）；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> X = <span class="number">10</span>; <span class="comment">//定义外部变量  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> Y = <span class="number">20</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> max（<span class="keyword">int</span> x, <span class="keyword">int</span> y）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> （x&gt;y ? x : y）；  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> <span class="built_in">max</span>（<span class="keyword">int</span> x,<span class="keyword">int</span> y）； <span class="comment">//函数提前声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[ ] ）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> result;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> X; <span class="comment">//外部变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> Y;  </span><br><span class="line">         </span><br><span class="line">   result = <span class="built_in">max</span>（X,Y）；  </span><br><span class="line">         </span><br><span class="line">   <span class="built_in">printf</span>（<span class="string">"the max value is %dn"</span>,result）；  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">         </span><br><span class="line">   &#125;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> X = <span class="number">10</span>; <span class="comment">//定义外部变量  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> Y = <span class="number">20</span>;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> <span class="built_in">max</span>（<span class="keyword">int</span> x, <span class="keyword">int</span> y）  </span><br><span class="line">         </span><br><span class="line">   &#123;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">return</span> （x&gt;y ? x : y）；  </span><br><span class="line">         </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
 <p> 其中，用extern声明外部变量时，类型名可以省略。例如，”extern int X;”,可以改写成”extern X;”.</p>
 <h5 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h5><p>小结：这种用方法简单，实用性不大。</p>
@@ -320,7 +260,7 @@
 <h5 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h5><p> 小结：对于多个文件的工程，可以采用这种方法来操作。实际工程中，对于模块化的程序文件，在其文件中可以预先留好外部变量的接口，也就是只采用extern声明变量，不定义变量，也通常在模块程序的头文件中声明，在使用该模块时，只需要在使用时定义一下即可，如上述b.c文件，做好相应的函数接口，留好需要改变BASE值的声明，在需要使用该模块时，只需要在调用的文件中定义具体的值即可。<br>引用外部变量和通过函数形参值传递变量的区别：用extern引用外部变量，可以在引用的模块内修改其值，而形参值传递的变量则不能修改其值，除非是地址传递。<br> 因此，如果多个文件同时对需要应用的的变量进行同时操作，可能会修改该变量，类似于形参的地址传递，从而影响其他模块的使用，因此，要慎重使用。</p>
 <h4 id="在多个文件中声明外部结构体变量"><a href="#在多个文件中声明外部结构体变量" class="headerlink" title="在多个文件中声明外部结构体变量"></a>在多个文件中声明外部结构体变量</h4><p>前面一节中，只是适合一般变量的外部声明，但是对于声明外部结构体变量时，则有些不同，需要加以注意。</p>
 <h5 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h5><p>文件a.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"c.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class local_post=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> A_class next_post=&#123;<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[]）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"first point"</span>,local_post）；  </span><br><span class="line">       </span><br><span class="line"> print（<span class="string">"second point"</span>,next_post）；  </span><br><span class="line">       </span><br><span class="line"> ret=fun（local_post,next_post）；  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">printf</span>（<span class="string">"the vector is （%d,%d,%d）n"</span>,ret.x,ret.y,ret.z）；  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"c.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class local_post=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> A_class next_post=&#123;<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>&#125;; <span class="comment">//全局变量  </span></span><br><span class="line">       </span><br><span class="line"> <span class="keyword">int</span> main（<span class="keyword">int</span> argc,<span class="keyword">char</span> *argv[]）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">print</span>（<span class="string">"first point"</span>,local_post）；  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">print</span>（<span class="string">"second point"</span>,next_post）；  </span><br><span class="line">       </span><br><span class="line"> ret=fun（local_post,next_post）；  </span><br><span class="line">       </span><br><span class="line"> <span class="built_in">printf</span>（<span class="string">"the vector is （%d,%d,%d）n"</span>,ret.x,ret.y,ret.z）；  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>文件b.h的内容：</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __B_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">if</span> 1  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span>  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> x;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> y;  </span><br><span class="line">         </span><br><span class="line">   <span class="keyword">int</span> z;  </span><br><span class="line">         </span><br><span class="line">   &#125;A_class;  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span>  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class local_post; <span class="comment">//外部结构体变量声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> A_class fun（<span class="keyword">int</span> x,<span class="keyword">int</span> y,<span class="keyword">int</span> z）； <span class="comment">//接口函数声明  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
@@ -329,14 +269,13 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">       </span><br><span class="line"> <span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">       </span><br><span class="line"> A_class fun（A_class first,A_class next）  </span><br><span class="line">       </span><br><span class="line"> &#123;  </span><br><span class="line">       </span><br><span class="line"> A_class ret;  </span><br><span class="line">       </span><br><span class="line"> ret.x=next.x-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.y=next.y-first.x;  </span><br><span class="line">       </span><br><span class="line"> ret.z=next.z-first.z;  </span><br><span class="line">       </span><br><span class="line"> <span class="keyword">return</span> （ret）；  </span><br><span class="line">       </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>文件c.h的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> print（<span class="keyword">char</span> *,A_class post）；  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">define</span> __C_H  </span></span><br><span class="line">         </span><br><span class="line">   <span class="keyword">extern</span> <span class="keyword">int</span> <span class="built_in">print</span>（<span class="keyword">char</span> *,A_class post）；  </span><br><span class="line">         </span><br><span class="line">   <span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
 
 <p> 文件c.c的内容：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> print（<span class="keyword">char</span> *str,A_class post）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"%s : （%d,%d,%d）n"</span>,str,post.x,post.y,post.z）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;  </span></span></span><br><span class="line">      </span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"b.h"</span>  </span></span><br><span class="line">      </span><br><span class="line"><span class="keyword">int</span> <span class="built_in">print</span>（<span class="keyword">char</span> *str,A_class post）  </span><br><span class="line">      </span><br><span class="line">&#123;  </span><br><span class="line">      </span><br><span class="line"><span class="built_in">printf</span>（<span class="string">"%s : （%d,%d,%d）n"</span>,str,post.x,post.y,post.z）；  </span><br><span class="line">      </span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p> 利用gcc工具编译gcc a.c b.c c.c–o demo,再运行。/demo,结果为</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first point : （<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>）  </span><br><span class="line">  </span><br><span class="line">second point : （<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>）  </span><br><span class="line">  </span><br><span class="line">the <span class="built_in">vector</span> is （<span class="number">9</span>,<span class="number">8</span>,<span class="number">5</span>）</span><br></pre></td></tr></table></figure>
-
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">first <span class="built_in">point</span> : （<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>）  </span><br><span class="line">  </span><br><span class="line">second <span class="built_in">point</span> : （<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>）  </span><br><span class="line">  </span><br><span class="line">the <span class="built_in">vector</span> is （<span class="number">9</span>,<span class="number">8</span>,<span class="number">5</span>）</span><br></pre></td></tr></table></figure>
 <h5 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h5><p>小结：在<code>a.c</code>文件中定义全局变量<code>A_class local_post</code>结构体，并且调用b.c中的接口函数<code>A_class fun（int x,int y,int z）</code>和<code>c.c</code>中<code>int print（char *str,A_class post）</code>，在<code>b.h</code>中声明外部结构体变量<code>local_post</code>,同时，需要对其类型<code>A_class</code>进行实现，在<code>b.h</code>文件中，如果屏蔽掉<code>A_class</code>的实现，而在<code>b.h</code>以外的文件中实现，此时编译时就会出错，由于<code>c.c</code>文件中用到<code>A_class</code>定义的类型，所以需要在该文件中包含<code>b.h</code>.<br>这里需要说明的是，如果调用外部结构体等多层结构体变量时，需要对这种变量进行实现，使用时，加上模块的头文件即可，否则会报错。<br>实际工程中，模块化程序文件，一般提供一个<code>.c</code>和一个<code>.h</code>文件，其中<code>.h</code>文件被<code>.c</code>文件调用，<code>.h</code>文件中实现。</p>
 <h3 id="用extern声明外部函数"><a href="#用extern声明外部函数" class="headerlink" title="用extern声明外部函数"></a>用<code>extern</code>声明外部函数</h3><ol>
 <li>定义函数时，在函数返回值类型前面加上<code>extern</code>关键字，表示此函数时外部函数，可供其他文件调用，如<code>extern int func （int x,int y）</code>，C语言规定，此时<code>extern</code>可以省略，隐形为外部函数。</li>
@@ -367,83 +306,77 @@
     
     
     
-        
-      
 
       <footer class="post-footer">
-          
-            
-          
           <div class="post-tags">
-            
-              <a href="/tags/编程语言/" rel="tag"># 编程语言</a>
-            
               <a href="/tags/extern/" rel="tag"># extern</a>
-            
+              <a href="/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/" rel="tag"># 编程语言</a>
           </div>
-        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2017/02/14/hello-world/" rel="next" title="Hello World">
-                  <i class="fa fa-chevron-left"></i> Hello World
-                </a>
-              
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2017/03/08/学习-其他零散知识-2017-03-08-堆和栈的区别/" rel="prev" title="堆和栈的区别">
-                  堆和栈的区别 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
         
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/02/14/%E5%AD%A6%E4%B9%A0-Hexo%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/03/08/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2017-03-08-%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E5%8C%BA%E5%88%AB/" rel="next" title="堆和栈的区别">
+      堆和栈的区别 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-  </div>
 
 
           </div>
           
     
-    
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
   </div>
   
-  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -457,7 +390,6 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C语言extern关键字使用"><span class="nav-number">1.</span> <span class="nav-text">C语言extern关键字使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#说明"><span class="nav-number">1.1.</span> <span class="nav-text">说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#深入"><span class="nav-number">1.2.</span> <span class="nav-text">深入</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#用extern声明外部变量"><span class="nav-number">1.2.1.</span> <span class="nav-text">用extern声明外部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在一个文件内声明的外部变量"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">在一个文件内声明的外部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域"><span class="nav-number">1.2.1.1.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例子"><span class="nav-number">1.2.1.1.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结"><span class="nav-number">1.2.1.1.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在多个文件中声明外部变量"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">在多个文件中声明外部变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域-1"><span class="nav-number">1.2.1.2.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例子-1"><span class="nav-number">1.2.1.2.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结-1"><span class="nav-number">1.2.1.2.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在多个文件中声明外部结构体变量"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">在多个文件中声明外部结构体变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#例子-2"><span class="nav-number">1.2.1.3.1.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结-2"><span class="nav-number">1.2.1.3.2.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用extern声明外部函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">用extern声明外部函数</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#作用域-2"><span class="nav-number">1.2.2.0.1.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#例子-3"><span class="nav-number">1.2.2.0.2.</span> <span class="nav-text">例子</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#小结-3"><span class="nav-number">1.2.2.0.3.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
@@ -466,30 +398,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -503,17 +428,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -524,56 +455,50 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
 <script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
   window.livereOptions = {
     refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
@@ -585,6 +510,7 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
+});
 </script>
 
 </body>

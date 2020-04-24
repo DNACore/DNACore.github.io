@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/10/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/10/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/10/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,55 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/学习-Shell-2019-05-21-Shell-du文件及文件夹大小统计命令/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/%E5%AD%A6%E4%B9%A0-Python-2019-09-05-Python-%E4%BB%A3%E7%A0%81%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%A4%9A%E8%A1%8C%E5%86%99%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/学习-Shell-2019-05-21-Shell-du文件及文件夹大小统计命令/" class="post-title-link" itemprop="url">Shell-du文件及文件夹大小统计命令</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/09/05/%E5%AD%A6%E4%B9%A0-Python-2019-09-05-Python-%E4%BB%A3%E7%A0%81%E4%B8%AD%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%A4%9A%E8%A1%8C%E5%86%99%E6%B3%95/" class="post-title-link" itemprop="url">Python-代码中字符串的多行写法</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-05-21 15:04:01 / 修改时间：15:05:01" itemprop="dateCreated datePublished" datetime="2019-05-21T15:04:01+08:00">2019-05-21</time>
+              <time title="创建时间：2019-09-05 13:50:09 / 修改时间：13:50:34" itemprop="dateCreated datePublished" datetime="2019-09-05T13:50:09+08:00">2019-09-05</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -276,654 +217,165 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://www.cnblogs.com/peida/archive/2012/12/10/2810755.html" target="_blank" rel="noopener">https://www.cnblogs.com/peida/archive/2012/12/10/2810755.html</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/学习-iOS-2019-05-21-iOS-UIApplication/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/学习-iOS-2019-05-21-iOS-UIApplication/" class="post-title-link" itemprop="url">iOS-UIApplication</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 13:32:38 / 修改时间：13:33:48" itemprop="dateCreated datePublished" datetime="2019-05-21T13:32:38+08:00">2019-05-21</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>调起Safari打开链接<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[<span class="built_in">UIApplication</span> sharedApplication] openURL:[<span class="built_in">NSURL</span> URLWithString:<span class="string">@""</span>]];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/其他开发工具-2019-05-09-Rust/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/09/其他开发工具-2019-05-09-Rust/" class="post-title-link" itemprop="url">Rust</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-09 16:52:02 / 修改时间：16:53:04" itemprop="dateCreated datePublished" datetime="2019-05-09T16:52:02+08:00">2019-05-09</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>安装<br>rust安装，因为被墙的原因，在国内几乎很难安装，需要通过代理安装。但是rustup却很容易，一般在linux下，通过官方指定的下列语句，基本可以安装rustup。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSf https://sh.rustup.rs | sh</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/学习-iOS-2019-05-09-iOS-NSHTTPCookie/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/09/学习-iOS-2019-05-09-iOS-NSHTTPCookie/" class="post-title-link" itemprop="url">iOS-NSHTTPCookie</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-09 16:50:20" itemprop="dateCreated datePublished" datetime="2019-05-09T16:50:20+08:00">2019-05-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-21 15:31:13" itemprop="dateModified" datetime="2019-05-21T15:31:13+08:00">2019-05-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>默认情况下 cookie 有效期是程序运行的生命周期，程序结束运行之后，cookie便失效了。可以将 cookie 的有效期设置为<code>[NSDate distantFuture]</code>，来使 cookie 永不过期。<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[cookieProperties setObject:[<span class="built_in">NSDate</span> distantFuture] forKey:<span class="built_in">NSHTTPCookieExpires</span>];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/29/学习-Shell-2019-04-29-Shell-chmod权限管理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/29/学习-Shell-2019-04-29-Shell-chmod权限管理/" class="post-title-link" itemprop="url">Shell-chmod权限管理</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-29 11:11:21 / 修改时间：11:12:05" itemprop="dateCreated datePublished" datetime="2019-04-29T11:11:21+08:00">2019-04-29</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>为某一用户添加某个文件的读写权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /bin/chmod +a <span class="string">'user:[User_Name]:allow write'</span> /etc/hosts</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/23/Xcode与调试-2019-04-23-Xcode-xcodebuild编译打包/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/23/Xcode与调试-2019-04-23-Xcode-xcodebuild编译打包/" class="post-title-link" itemprop="url">Xcode-xcodebuild编译打包</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-23 17:06:03" itemprop="dateCreated datePublished" datetime="2019-04-23T17:06:03+08:00">2019-04-23</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-12 11:38:24" itemprop="dateModified" datetime="2019-10-12T11:38:24+08:00">2019-10-12</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>各项 Build Settings 的解释<br><a href="https://help.apple.com/xcode/mac/current/#/itcaec37c2a6" target="_blank" rel="noopener">https://help.apple.com/xcode/mac/current/#/itcaec37c2a6</a></p>
-</li>
-<li><p>使用 Legacy Build System</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加参数</span></span><br><span class="line">-UseModernBuildSystem=NO</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>指定 xcodebuild 的编译中间文件生成的目录<br><a href="https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild" target="_blank" rel="noopener">https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild</a></p>
-</li>
-<li><p>查看默认情况下的编译配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -showBuildSettings</span><br><span class="line">xcodebuild -showBuildSettings -target &lt;target&gt; -configuration &lt;configuration&gt; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体某一target的buildsettings，另外还可添加其他参数来查看最终buildsetting的样子</span></span><br><span class="line">xcodebuild -showBuildSettings -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=NO</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="示例编译、打包命令"><a href="#示例编译、打包命令" class="headerlink" title="示例编译、打包命令"></a>示例编译、打包命令</h2><ul>
-<li><p>示例打包命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成archive</span></span><br><span class="line">xcodebuild archive -workspace CreditCardPartner.xcworkspace -scheme CreditCardPartner -configuration Release -archivePath ~/Desktop/CreditCardpartner.xcarchive CODE_SIGN_IDENTITY=<span class="string">"iPhone Developer: Dequan Liu (S42FY95JQG)"</span> PROVISIONING_PROFILE=<span class="string">"Xiaorongbao_B_DEV"</span> | tee ~/Desktop/archive.log</span><br><span class="line"><span class="comment"># 导出成ipa</span></span><br><span class="line">xcodebuild -exportArchive -archivePath ~/Desktop/CreditCardpartner.xcarchive -exportPath ~/Desktop/CreditCardpartnerExport -exportOptionsPlist ~/Downloads/Debug.plist | tee ~/Desktop/export.log</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>示例：SDK打包</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Example/Pods</span><br><span class="line"><span class="comment"># AI 编译</span></span><br><span class="line"><span class="comment">## 编译真机</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=9.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 非 AI 版本编译</span></span><br><span class="line"><span class="comment">## 编译真机 -sdk iphoneos</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode </span><br><span class="line"><span class="comment">## 编译模拟器 -sdk iphonesimulator</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release -sdk iphonesimulator ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode </span><br><span class="line"></span><br><span class="line"><span class="comment"># ------------ #</span></span><br><span class="line"><span class="comment"># 编译模拟器 完整模拟器架构：ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64'</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ARCHS=<span class="string">'x86_64'</span> VALID_ARCHS=<span class="string">'x86_64'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>完整打包命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Documents/Project/抓取/RDPCrawlerSDK/Example/Pods &amp;&amp; rm -rf ../build &amp;&amp; xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode &amp;&amp; xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release -sdk iphonesimulator ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode &amp;&amp; rm -f RDPCrawlerSDK &amp;&amp; lipo -create ../build/Release-iphoneos/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK ../build/Release-iphonesimulator/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK -o RDPCrawlerSDK &amp;&amp; open .</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/22/学习-ReactNative-2019-04-22-ReactNative-原生桥接/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/22/学习-ReactNative-2019-04-22-ReactNative-原生桥接/" class="post-title-link" itemprop="url">ReactNative-原生桥接</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-22 16:35:27" itemprop="dateCreated datePublished" datetime="2019-04-22T16:35:27+08:00">2019-04-22</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/18/手机技巧-2019-04-18-Transmission-安卓上使用Transmission/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/18/手机技巧-2019-04-18-Transmission-安卓上使用Transmission/" class="post-title-link" itemprop="url">Transmission-安卓上使用Transmission</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-04-18 13:20:09" itemprop="dateCreated datePublished" datetime="2019-04-18T13:20:09+08:00">2019-04-18</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-20 17:15:59" itemprop="dateModified" datetime="2019-08-20T17:15:59+08:00">2019-08-20</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>近十几年，由于迅雷、百度云之类中心化下载工具的兴起，以及整体网络速度的提高，让传统下载黯然失色。<br>网民们不但可以使用迅雷、百度云的预先下载的内容，甚至可以直接在线观看视频。<br>相对于普通人来说，传统下载方式的确是没落了。但是，这些中心化的下载方式有一个弊端就是：提供下载服务的人可以任意控制我们的整个下载过程。想想限速、屏蔽、删资源。<br>这个时候传统的下载方式的优势就显露出来了。其中更以BT、PT这种去中心化的下载方式为甚。<br>这篇文章就是建立在这个基础之上写出来的。<br>为的是让大家的手中多一张牌，不至于被大厂绑架。不是让大家回归传统，而是让大家多个选择。<br>现在很多人手里估计都有闲置的安卓手机，这篇文章也是基于安卓手机的。步骤稍有繁琐，但是一步一步按照教程来，应该是没有问题的。<br>如果有问题，请通知我，我会第一时间回答疑问、作出修改。</p>
-<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="Termux-虚拟终端"><a href="#Termux-虚拟终端" class="headerlink" title="Termux 虚拟终端"></a>Termux 虚拟终端</h3><p>安卓上使用Transmission是通过借助 Termux 这个软件环境实现的。<br>Termux是安卓上一款强大的虚拟终端软件，可以安装很多Linux上的软件包。其中就包括Transmission。</p>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
-<li>👉<a href="https://f-droid.org/repo/com.termux_73.apk" target="_blank" rel="noopener">点此下载</a> Termux 安装包，像正常 APP 一样安装好就好。</li>
-<li>打开 Termux 等待软件初始化完成。有可能连着WI-FI初始化时间会很长，这个时候换到手机网络一般几分钟就初始化好了。不怎么费流量。</li>
+          <ol>
+<li>用<code>\</code>来拼接多个字符串<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hex_str: str = <span class="string">'1d5e4a52723a36386262543a4e35ba6737'</span> \</span><br><span class="line">               <span class="string">'bb353aa7391c3b6759030c0b070808551a'</span> \</span><br><span class="line">               <span class="string">'0a040a0d150e5c5e0c4f560b015217530e'</span> \</span><br><span class="line">               <span class="string">'525108060d0e505d5806ac3bc9cfc599c8'</span> \</span><br><span class="line">               <span class="string">'cccbc5ca399a65c7c59dcbc5c9cfc59936'</span> \</span><br><span class="line">               <span class="string">'9b353a85398865803bd435fa37823bae36'</span> \</span><br><span class="line">               <span class="string">'8535ea34d03dbc393a82353ade313a9636'</span> \</span><br><span class="line">               <span class="string">'33cc3b35ba3864'</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ol>
-<li><p>换一个更快的源，复制这两条命令，然后长按 Termux 的主界面，选择<code>Paste</code>粘贴之后，回车运行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">pkg up</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/04/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-09-04-macOS%E5%BC%80%E5%8F%91-NSViewController/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/04/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-09-04-macOS%E5%BC%80%E5%8F%91-NSViewController/" class="post-title-link" itemprop="url">macOS开发-NSViewController</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-04 14:12:42" itemprop="dateCreated datePublished" datetime="2019-09-04T14:12:42+08:00">2019-09-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-28 16:51:23" itemprop="dateModified" datetime="2019-10-28T16:51:23+08:00">2019-10-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>NSViewController创建好后并不会自动创建 NSView<br>NSView创建过程中会调用<code>-(void)loadView</code>这个方法。就在这个方法里，我们需要自己创建 view，然后赋值给 <code>self.view</code>。</p>
 </li>
-<li><p>获得存储权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入如下命令，并回车运行，如果提示 Termux 要访问视频照片啥啥的，一定要点击允许。</span></span><br><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure>
+<li><p>NSView 也不会自动创建 layer 。设置 <code>view.wantsLayer = YES</code> 之后，会自动创建一个 layer。</p>
 </li>
-<li><p>Termux的后台运行<br>Termux毕竟只是个安卓App，受限于系统的电源管理，有可能会在后台被系统强制结束。还好有两条命令可以缓解这个现象。<strong>注意：强烈建议先把Termux软件移出系统的限制名单，比如说权限限制、电池优化限制等等。毕竟根据我目前的使用体验，这个App非常老实。</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开唤醒锁，可以让 Termux 在后台悠然运行</span></span><br><span class="line">termux-wake-lock</span><br><span class="line"><span class="comment"># 关闭唤醒锁，Termux 可能会被系统强制结束</span></span><br><span class="line">termux-wake-unlock</span><br></pre></td></tr></table></figure>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/29/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-08-29-CocoaPods-%E6%9B%B4%E6%96%B0%E5%AE%98%E6%96%B9pod%E5%BA%93%E7%89%88%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/29/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-08-29-CocoaPods-%E6%9B%B4%E6%96%B0%E5%AE%98%E6%96%B9pod%E5%BA%93%E7%89%88%E6%9C%AC/" class="post-title-link" itemprop="url">CocoaPods-更新官方pod库版本</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-29 18:09:52" itemprop="dateCreated datePublished" datetime="2019-08-29T18:09:52+08:00">2019-08-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-09-05 14:10:56" itemprop="dateModified" datetime="2019-09-05T14:10:56+08:00">2019-09-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>修改<code>podspec</code>文件，更新好对应的<code>s.version</code>版本号。</p>
 </li>
-<li><p>安装 wget<br>现在我们需要安装一个完整版的<code>wget</code>。安装也很简单，执行完命令之后等待完成即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i wget</span><br></pre></td></tr></table></figure>
+<li><p>将库文件上传到对应的代码仓库，打好tag。</p>
+</li>
+<li><p>进入项目目录，清缓存，校验<code>podspec</code>文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清除 pod 缓存</span></span><br><span class="line">pod cache clean --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 校验</span></span><br><span class="line">pod lib lint XXXXX.podspec</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到官方索引仓库</span></span><br><span class="line">pod trunk push XXXXX.podspec</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如果提示<code>You need to register a session first.</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 报错</span><br><span class="line">[!] You need to register a session first.</span><br><span class="line"></span><br><span class="line">// 重新注册一下，然后CocoaPods会发送一封邮件到你的邮箱，按照提示打开一个连接激活就ok拉，最后再重复前面步骤，提交到CocoaPods官方仓库</span><br><span class="line">pod trunk register 邮箱 <span class="string">'名字'</span> --description=<span class="string">'description'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发布成功后执行<code>pod repo update</code>更新本地索引库。</p>
+</li>
+<li><p>执行<code>pod search XXXX</code>，看看是否已经是最新版本。</p>
+</li>
+<li><p>撤回版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 撤回 XXXXX 库的 1.2.2 版本</span></span><br><span class="line">pod trunk delete XXXXX(pod库名字) 1.2.2</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h2 id="Transmission部分"><a href="#Transmission部分" class="headerlink" title="Transmission部分"></a>Transmission部分</h2><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>一条命令搞定</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i transmission</span><br></pre></td></tr></table></figure>
-
-<h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><p>我们现顺序执行下下面两条命令，这样 Transmission 就会自动生成一个配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transmission-daemon</span><br><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="设置RPC访问权限"><a href="#设置RPC访问权限" class="headerlink" title="设置RPC访问权限"></a>设置RPC访问权限</h3><p>此步骤稍微有点复杂，请严格按照描述的去做。<font color="red"><strong>或者往下翻，直接运行我提供的命令</strong></font></p>
-<h4 id="方法一：用vim-修改配置"><a href="#方法一：用vim-修改配置" class="headerlink" title="方法一：用vim 修改配置"></a>方法一：用vim 修改配置</h4><ol>
-<li><p>安装 vim 编辑器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i vim</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>执行下面的命令（复制-粘贴-回车）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$HOME</span>/.config/transmission-daemon/settings.json</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>此时界面应该换了一个样子，界面上应该有个白色的小方块，那就是光标，只不过它不会闪烁。<br>我们只能按虚拟键盘上的左右来移动这个白色的小方块。耐心点，我们需要找一段代码：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"rpc-whitelist"</span>: <span class="string">"127.0.0.1"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>接着，我们继续移动小方块，让小方块把最后一个双引号框起来，就像这样：<br><img src="/images/TransmissinInTermux/TransmissionInTermux1.png" alt></p>
-</li>
-<li><p>然后我们按键盘上的<kbd>i</kbd>键，此时屏幕左下角应该变成这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux2.png" alt></p>
-</li>
-<li><p>出现了这个字样，说明我们能在屏幕上输入字符了，我们输入如下字符<code>,192.168.*.*</code>。注意，一开始应该输入一个英文状态的逗号。现在，它看起来应该是这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux3.png" alt></p>
-</li>
-<li><p>接着，我们按虚拟键盘上的<kbd>ESC</kbd>键，此时，左下角变成了这个样子，对，<code>--INSEERT--</code>字样消失了：<br><img src="/images/TransmissinInTermux/TransmissionInTermux4.png" alt></p>
-</li>
-<li><p>这个时候操作起键盘来，直接输入冒号，和英文x，就像这样：<br><img src="/images/TransmissinInTermux/TransmissionInTermux5.png" alt></p>
-</li>
-<li><p>然后回车，搞定！这个时候发现界面退出了。如果没有提示错误，说明修改成功了。</p>
-</li>
-</ol>
-<h4 id="方法二：运行命令"><a href="#方法二：运行命令" class="headerlink" title="方法二：运行命令"></a>方法二：运行命令</h4><p><font color="red">上面的步骤的确比较复杂，可以直接执行下面的命令。</font><br>为了安全起见，下面三条命令需要按步骤并且一个一个地执行。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$HOME</span>/.config/transmission-daemon</span><br><span class="line">rm -f settings.json</span><br><span class="line">wget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/settings.json</span><br></pre></td></tr></table></figure>
-
-<h2 id="运行与结束运行"><a href="#运行与结束运行" class="headerlink" title="运行与结束运行"></a>运行与结束运行</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-daemon</span><br></pre></td></tr></table></figure>
-
-<h3 id="结束运行"><a href="#结束运行" class="headerlink" title="结束运行"></a>结束运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="通过浏览器访问-Transmission-的界面"><a href="#通过浏览器访问-Transmission-的界面" class="headerlink" title="通过浏览器访问 Transmission 的界面"></a>通过浏览器访问 Transmission 的界面</h2><p>确保 Transmission 已经运行起来了。<br>在局域网中任何一台电脑或者手机的浏览器里面输入<code>http://[你手机的局域网IP]:9091</code>，回车。即可打开Transmission的界面。<br><img src="/images/TransmissinInTermux/TransmissionInTermux6.png" alt></p>
-<h2 id="更改为-web-control-皮肤"><a href="#更改为-web-control-皮肤" class="headerlink" title="更改为 web control 皮肤"></a>更改为 web control 皮肤</h2><p>Transmission自带的皮肤实在是太精简了，我们平时使用BT/PT一般需要了解更多的信息，这个时候自带的网页皮肤就不能满足我们的需求了。但是，Transmission 支持自定义网页版皮肤。</p>
-<h3 id="停止-Transmission"><a href="#停止-Transmission" class="headerlink" title="停止 Transmission"></a>停止 Transmission</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="下载皮肤"><a href="#下载皮肤" class="headerlink" title="下载皮肤"></a>下载皮肤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改脚本"><a href="#修改脚本" class="headerlink" title="修改脚本"></a>修改脚本</h3><p><strong>如果嫌修改麻烦请直接下载我修改好的。</strong></p>
-<p>受限于Android手机权限， Termux 并不是一个完全的Linux环境，所以我们需要对脚本进行稍稍修改。很简单！</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TMP_FOLDER=<span class="string">"/tmp/tr-web-control"</span></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line">TMP_FOLDER=<span class="variable">$PREFIX</span><span class="string">"/tmp/tr-web-control"</span></span><br></pre></td></tr></table></figure>
-
-<p>或者直接下载我修改好的。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/install-tr-control-for-termux.sh</span><br></pre></td></tr></table></figure>
-
-<h3 id="执行安装"><a href="#执行安装" class="headerlink" title="执行安装"></a>执行安装</h3><p>运行安装脚本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash install-tr-control-cn.sh <span class="variable">$PREFIX</span>/share/transmission</span><br></pre></td></tr></table></figure>
-
-<p>如果提示<code>无法确认当前是否为 root 用户，可能无法进行安装操作。是否继续？</code>直接输入<code>y</code>然后回车，让它继续安装即可。</p>
-<p>最后安装好后再次打开浏览器应该是这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux7.png" alt></p>
-<h2 id="添加下载任务"><a href="#添加下载任务" class="headerlink" title="添加下载任务"></a>添加下载任务</h2><p>自己在浏览器界面找找，我lay了，要休息一下。</p>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
-<li>用 ssh 管理<br>这部分笔者就不详细说了，有兴趣自己百度看看，摆脱安卓手机虚拟键盘的烦恼大半就靠它了。</li>
-</ul>
-
-        
+<p>附录：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">pod tunk session <span class="comment"># 操作相关命令</span></span><br><span class="line">Usage:</span><br><span class="line"></span><br><span class="line">    $ pod trunk COMMAND</span><br><span class="line"></span><br><span class="line">      Interact with the CocoaPods API (e.g. publishing new specs)</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">    + add-owner      Add an owner to a pod</span><br><span class="line">    + delete         Deletes a version of a pod.</span><br><span class="line">    + deprecate      Deprecates a pod.</span><br><span class="line">    + info           Returns information about a Pod.</span><br><span class="line">    + me             Display information about your sessions</span><br><span class="line">    + push           Publish a podspec</span><br><span class="line">    + register       Manage sessions</span><br><span class="line">    + remove-owner   Remove an owner from a pod</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">    --silent         Show nothing</span><br><span class="line">    --verbose        Show more debugging information</span><br><span class="line">    --no-ansi        Show output without ANSI codes</span><br><span class="line">    --<span class="built_in">help</span>           Show <span class="built_in">help</span> banner of specified <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -931,57 +383,130 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/16/学习-Python-2019-04-16-Python教程汇总/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-08-23-%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%AE%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/16/学习-Python-2019-04-16-Python教程汇总/" class="post-title-link" itemprop="url">Python教程汇总</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/08/23/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-08-23-%E7%BC%96%E8%AF%91%E5%99%A8%E7%9A%84%E5%AE%8F/" class="post-title-link" itemprop="url">编译器的宏</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-04-16 20:59:04 / 修改时间：21:01:16" itemprop="dateCreated datePublished" datetime="2019-04-16T20:59:04+08:00">2019-04-16</time>
+              <time title="创建时间：2019-08-23 15:46:30 / 修改时间：15:49:28" itemprop="dateCreated datePublished" datetime="2019-08-23T15:46:30+08:00">2019-08-23</time>
             </span>
-          
-            
 
-            
           
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <table>
+<thead>
+<tr>
+<th>宏</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>FILE</strong></td>
+<td>文件名</td>
+</tr>
+<tr>
+<td><strong>LINE</strong></td>
+<td>行号</td>
+</tr>
+<tr>
+<td><strong>FUNCTION</strong></td>
+<td>函数名</td>
+</tr>
+<tr>
+<td><strong>DATE</strong></td>
+<td>日期</td>
+</tr>
+<tr>
+<td><strong>TIME</strong></td>
+<td>时间</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-23-macOS-NSWindow%E4%B8%8E%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%B3%E9%97%AD%E5%92%8C%E7%AA%97%E5%8F%A3%E5%A4%8D%E5%8E%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/23/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-23-macOS-NSWindow%E4%B8%8E%E7%A8%8B%E5%BA%8F%E7%9A%84%E5%85%B3%E9%97%AD%E5%92%8C%E7%AA%97%E5%8F%A3%E5%A4%8D%E5%8E%9F/" class="post-title-link" itemprop="url">macOS-NSWindow与程序的关闭和窗口复原</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-08-23 14:06:03 / 修改时间：14:08:55" itemprop="dateCreated datePublished" datetime="2019-08-23T14:06:03+08:00">2019-08-23</time>
+            </span>
 
           
 
@@ -995,11 +520,13 @@
 
       
           <ul>
-<li><a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">https://python3-cookbook.readthedocs.io/zh_CN/latest/</a></li>
-<li><a href="https://learnku.com/python" target="_blank" rel="noopener">https://learnku.com/python</a></li>
+<li><p>点击窗口的关闭按钮后退出程序</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)applicationShouldTerminateAfterLastWindowClosed:(<span class="built_in">NSApplication</span> *)sender&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;<span class="comment">//YES-窗口程序两者都关闭，NO-只关闭窗口；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>点击关闭按钮后点击 Dock 图标复原</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="built_in">BOOL</span>)applicationShouldHandleReopen:(<span class="built_in">NSApplication</span> *)sender hasVisibleWindows:(<span class="built_in">BOOL</span>)flag</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"hasVisibleWindows:%d"</span>,flag);</span><br><span class="line"><span class="comment">//    [NSApp activateIgnoringOtherApps:NO];//取消其他程序的响应</span></span><br><span class="line">    <span class="comment">//window 属性的 releasedWhenClosed 需要保证设置为 NO</span></span><br><span class="line">    [_window makeKeyAndOrderFront:<span class="literal">nil</span>];<span class="comment">//主窗口显示自己方法一</span></span><br><span class="line"><span class="comment">//    [_window orderFront:nil];           //主窗口显示自己方法二</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -1007,57 +534,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/15/其他开发工具-2019-04-15-Homebrew-brew-macOS包管理工具/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-22-macOS-NSWindowController%EF%BC%8CNSWindow%EF%BC%8CNSViewController%EF%BC%8CNSView%E7%9A%84%E5%85%B3%E7%B3%BB/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/04/15/其他开发工具-2019-04-15-Homebrew-brew-macOS包管理工具/" class="post-title-link" itemprop="url">Homebrew-brew-macOS包管理工具</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/08/22/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-22-macOS-NSWindowController%EF%BC%8CNSWindow%EF%BC%8CNSViewController%EF%BC%8CNSView%E7%9A%84%E5%85%B3%E7%B3%BB/" class="post-title-link" itemprop="url">macOS-NSWindowController，NSWindow，NSViewController，NSView的关系</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-04-15 11:20:46 / 修改时间：11:26:59" itemprop="dateCreated datePublished" datetime="2019-04-15T11:20:46+08:00">2019-04-15</time>
+              <time title="创建时间：2019-08-22 17:01:16 / 修改时间：17:08:52" itemprop="dateCreated datePublished" datetime="2019-08-22T17:01:16+08:00">2019-08-22</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -1070,9 +584,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>macOS的包管理工具<br>主页：<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">https://brew.sh/index_zh-cn</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br><span class="line"><span class="comment"># 同时在终端显示安装日志并且将安装日志保存在文件中</span></span><br><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span> | tee ~/Desktop/Homebrew安装日志.<span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-        
+          <ul>
+<li>NSWindow</li>
+</ul>
+<p>创建好之后自带一个 window.contentView 即为 window 的显示内容<br>window.contentViewController 默认为 nil<br>设置了 window.contentViewController 之后 window.contentView 自动被设置为 contentViewController 的 view。<br>默认状态下 NSViewController 的 view 为 nil。所以给 window 设置一个默认状态的 NSViewController 之后，window 的 contentView 也就为空了。 </p>
+
       
     </div>
 
@@ -1080,36 +596,317 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-22-macOS-%E5%88%9B%E5%BB%BA%E4%B8%8D%E5%B8%A6%E4%BB%BB%E4%BD%95xib%E6%96%87%E4%BB%B6%E7%9A%84CocoaApp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/22/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-08-22-macOS-%E5%88%9B%E5%BB%BA%E4%B8%8D%E5%B8%A6%E4%BB%BB%E4%BD%95xib%E6%96%87%E4%BB%B6%E7%9A%84CocoaApp/" class="post-title-link" itemprop="url">macOS-创建不带任何xib文件的CocoaApp</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-08-22 16:43:20 / 修改时间：16:48:16" itemprop="dateCreated datePublished" datetime="2019-08-22T16:43:20+08:00">2019-08-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
-  </div>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>现在 Xcode 创建 macOS 的 Cocoa App 默认都会创建一个 MianMenu.xib 或者 StoryBoard.xib 文件。<br>直接删除这些文件，在<code>applicationDidFinishLaunching:</code>创建自定义的 NSWIndow 并且即使在工程中配置好了，也不行。<br>经过断点发现，<code>applicationDidFinishLaunching:</code>根本没走。<br>原因是 NSApplication 的 Delegate 并没有被设置。<br>知道了原因，所以只需要在 main.m 文件中设置一下<code>NSApplication</code>的delegate就可以了。代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;Cocoa/Cocoa.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    [[<span class="built_in">NSApplication</span> sharedApplication] setDelegate:[AppDelegate new]];</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">NSApplicationMain</span>(argc, argv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置好了之后，就可以在 AppDelegate 里面写自定义的 NSWindow 并且让其正常显示了。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSWindow</span> *window;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">    [<span class="keyword">self</span>.window center];</span><br><span class="line">    [<span class="keyword">self</span>.window orderFront:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(<span class="built_in">NSWindow</span> *)window&#123;</span><br><span class="line">    <span class="keyword">if</span> (!_window) &#123;</span><br><span class="line">        <span class="built_in">NSUInteger</span> style = <span class="built_in">NSWindowStyleMaskTitled</span> | <span class="built_in">NSWindowStyleMaskClosable</span> | <span class="built_in">NSWindowStyleMaskMiniaturizable</span> ;</span><br><span class="line">        _window = [[<span class="built_in">NSWindow</span> alloc]initWithContentRect:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">300</span>) styleMask:style backing:<span class="built_in">NSBackingStoreBuffered</span> defer:<span class="literal">YES</span>];</span><br><span class="line">        <span class="comment">//        _window1.contentViewController = self.firstVC;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _window;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-08-22-Windows-Thin-PC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-08-22-Windows-Thin-PC/" class="post-title-link" itemprop="url">Windows Thin PC</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-08-22 14:18:13 / 修改时间：14:20:40" itemprop="dateCreated datePublished" datetime="2019-08-22T14:18:13+08:00">2019-08-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li><p>系统</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ed2k:&#x2F;&#x2F;|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4F0834A95E2|&#x2F;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>语言包</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/20/%E5%AD%A6%E4%B9%A0-Python-2019-08-20-Python-VirtualEnv%E4%B8%8Evenv-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/20/%E5%AD%A6%E4%B9%A0-Python-2019-08-20-Python-VirtualEnv%E4%B8%8Evenv-Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/" class="post-title-link" itemprop="url">Python-VirtualEnv-Python虚拟环境</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-20 17:44:22" itemprop="dateCreated datePublished" datetime="2019-08-20T17:44:22+08:00">2019-08-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-10 11:40:11" itemprop="dateModified" datetime="2020-04-10T11:40:11+08:00">2020-04-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Python虚拟环境-VirtualEnv-与-venv"><a href="#Python虚拟环境-VirtualEnv-与-venv" class="headerlink" title="Python虚拟环境 VirtualEnv 与 venv"></a>Python虚拟环境 VirtualEnv 与 venv</h1><h2 id="VirtualEnv"><a href="#VirtualEnv" class="headerlink" title="VirtualEnv"></a>VirtualEnv</h2><ul>
+<li><p>建立虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录建立 venv 文件夹，里面保存虚拟环境信息</span></span><br><span class="line">virtualenv venv</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新 virtualenv 下的 python 版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">virtualenv --clear venv</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="venv"><a href="#venv" class="headerlink" title="venv"></a>venv</h2><ul>
+<li><p>建立虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在当前目录建立 venv 文件夹，里面保存虚拟环境信息</span></span><br><span class="line">python3 -m venv ./venv</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新 venv 下的 python 版本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m venv --upgrade ENNV_DIR</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/19/%E5%AD%A6%E4%B9%A0-iOS-2019-08-19-iOS-iOS%E4%B8%AD%E7%9A%84%E6%9D%83%E9%99%90%E6%A3%80%E6%9F%A5%E5%8F%8A%E8%8E%B7%E5%8F%96/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/08/19/%E5%AD%A6%E4%B9%A0-iOS-2019-08-19-iOS-iOS%E4%B8%AD%E7%9A%84%E6%9D%83%E9%99%90%E6%A3%80%E6%9F%A5%E5%8F%8A%E8%8E%B7%E5%8F%96/" class="post-title-link" itemprop="url">iOS-iOS中的权限检查及获取</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-08-19 17:17:43" itemprop="dateCreated datePublished" datetime="2019-08-19T17:17:43+08:00">2019-08-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/9/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/11/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1134,30 +931,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1171,17 +961,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1192,50 +988,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

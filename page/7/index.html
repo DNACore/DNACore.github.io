@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/7/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/7/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/7/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,55 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-iOS-2019-07-02-iOS-class类/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/28/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-10-28-macOS%E5%BC%80%E5%8F%91-NSView/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/02/学习-iOS-2019-07-02-iOS-class类/" class="post-title-link" itemprop="url">iOS-class类</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/10/28/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-10-28-macOS%E5%BC%80%E5%8F%91-NSView/" class="post-title-link" itemprop="url">macOS开发-NSView</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-07-02 17:46:13 / 修改时间：17:47:15" itemprop="dateCreated datePublished" datetime="2019-07-02T17:46:13+08:00">2019-07-02</time>
+              <time title="创建时间：2019-10-28 16:57:20 / 修改时间：16:58:49" itemprop="dateCreated datePublished" datetime="2019-10-28T16:57:20+08:00">2019-10-28</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -276,9 +217,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>类属性的声明，Xcode8之后支持</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@propeerty (<span class="keyword">class</span>) <span class="built_in">NSString</span> *aClassProperty;</span><br></pre></td></tr></table></figure>
-        
+          <p>NSView 默认不创建layer，需要设置<code>view.wantsLayer = YES</code>来自动创建。</p>
+<p>设置 NSView 的背景色<code>view.layer.backgorundColor = [NSColor redColor];</code>。</p>
+
       
     </div>
 
@@ -286,57 +227,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/02/学习-Python-2019-07-02-Python-argparse/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/28/%E5%AD%A6%E4%B9%A0-Shell-2019-10-28-Shell-%E5%9F%BA%E7%A1%80-%E5%BF%AB%E6%8D%B7%E9%94%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/02/学习-Python-2019-07-02-Python-argparse/" class="post-title-link" itemprop="url">Python-argparse</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/10/28/%E5%AD%A6%E4%B9%A0-Shell-2019-10-28-Shell-%E5%9F%BA%E7%A1%80-%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title-link" itemprop="url">Shell-基础-快捷键</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-07-02 11:22:22 / 修改时间：11:30:48" itemprop="dateCreated datePublished" datetime="2019-07-02T11:22:22+08:00">2019-07-02</time>
+              <time title="创建时间：2019-10-28 15:15:25" itemprop="dateCreated datePublished" datetime="2019-10-28T15:15:25+08:00">2019-10-28</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-02 11:15:34" itemprop="dateModified" datetime="2019-12-02T11:15:34+08:00">2019-12-02</time>
+              </span>
 
           
 
@@ -349,17 +283,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    parser = argparse.ArgumentParser()</span><br><span class="line">    <span class="comment"># 可选参数可以如下调用方式 `-v some-value` 或者 `-v=some-value`</span></span><br><span class="line">    parser.add_argument(<span class="string">'-v'</span>, <span class="string">'--verbose'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 定位参数调用的时候不能使用echo参数名</span></span><br><span class="line">    <span class="comment"># 例如，不能 `echo=3` 或者 `echo 3`</span></span><br><span class="line">    parser.add_argument(<span class="string">'echo'</span>,</span><br><span class="line">                        help=<span class="string">'直接打印输入的信息'</span>)</span><br><span class="line">    parser.parse_args()</span><br><span class="line"></span><br><span class="line">    print(parser.parse_args())</span><br></pre></td></tr></table></figure>
-
-<p>参数前面带<code>-</code>或者<code>--</code>是可选参数。<br>参数前面不带横杠的是定位参数。</p>
-<p>可选参数的调用形式可以使用：<code>-v=some-value</code>或者<code>-v some-value</code><br>定位参数调用时候必须传入，并且不能带参数名，参数传入顺序也有影响。</p>
-<h3 id="action-参数"><a href="#action-参数" class="headerlink" title="action 参数"></a>action 参数</h3><p>参考：<a href="https://docs.python.org/3/library/argparse.html#action" target="_blank" rel="noopener">https://docs.python.org/3/library/argparse.html#action</a></p>
-<ul>
-<li>``</li>
+          <h2 id="Shell-通用快捷键"><a href="#Shell-通用快捷键" class="headerlink" title="Shell 通用快捷键"></a>Shell 通用快捷键</h2><ul>
+<li>登出会话：<kbd>Ctrl</kbd>+<kbd>a</kbd>+<kbd>d</kbd></li>
 </ul>
-<p>参考：<a href="https://blog.ixxoo.me/argparse.html" target="_blank" rel="noopener">https://blog.ixxoo.me/argparse.html</a></p>
-
-        
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">history 显示命令历史列表</span><br><span class="line"></span><br><span class="line">↑(Ctrl+p) 显示上一条命令</span><br><span class="line"></span><br><span class="line">↓(Ctrl+n) 显示下一条命令</span><br><span class="line"></span><br><span class="line">!num 执行命令历史列表的第num条命令</span><br><span class="line"></span><br><span class="line">!! 执行上一条命令</span><br><span class="line"></span><br><span class="line">!?string? 执行含有string字符串的最新命令</span><br><span class="line"></span><br><span class="line">Ctrl+r 然后输入若干字符，开始向上搜索包含该字符的命令，继续按Ctrl+r，搜索上一条匹配的命令</span><br><span class="line"></span><br><span class="line">Ctrl+s 与Ctrl+r类似,只是正向检索</span><br><span class="line"></span><br><span class="line">Alt+&lt; 历史列表第一项</span><br><span class="line"></span><br><span class="line">Alt+&gt; 历史列表最后一项</span><br><span class="line"></span><br><span class="line">Ctrl+f 光标向前移动一个字符,相当与-&gt;</span><br><span class="line"></span><br><span class="line">Ctrl+b 光标向后移动一个字符,相当与&lt;-</span><br><span class="line"></span><br><span class="line">Alt+f 光标向前移动一个单词</span><br><span class="line"></span><br><span class="line">Alt+b 光标向后移动一个单词</span><br><span class="line"></span><br><span class="line">ls !$ 执行命令ls，并以上一条命令的参数为其参数</span><br><span class="line"></span><br><span class="line">Ctrl+a 移动到当前行的开头</span><br><span class="line"></span><br><span class="line">Ctrl+e 移动到当前行的结尾</span><br><span class="line"></span><br><span class="line">Esc+b 移动到当前单词的开头</span><br><span class="line"></span><br><span class="line">Esc+f 移动到当前单词的结尾</span><br><span class="line"></span><br><span class="line">Ctrl+l 清屏</span><br><span class="line"></span><br><span class="line">Ctrl+u 剪切命令行中光标所在处之前的所有字符（不包括自身）</span><br><span class="line"></span><br><span class="line">Ctrl+k 剪切命令行中光标所在处之后的所有字符（包括自身）</span><br><span class="line"></span><br><span class="line">Ctrl+d 删除光标所在处字符</span><br><span class="line"></span><br><span class="line">Ctrl+h 删除光标所在处前一个字符</span><br><span class="line"></span><br><span class="line">Ctrl+y 粘贴刚才所删除的字符</span><br><span class="line"></span><br><span class="line">Ctrl+w 剪切光标所在处之前的一个词（以空格、标点等为分隔符）</span><br><span class="line"></span><br><span class="line">Alt+d 剪切光标之后的词</span><br><span class="line"></span><br><span class="line">Esc+w 删除光标所在处之前的字符至其单词尾（以空格、标点等为分隔符）</span><br><span class="line"></span><br><span class="line">Ctrl+t 颠倒光标所在处及其之前的字符位置，并将光标移动到下一个字符</span><br><span class="line"></span><br><span class="line">Alt+t 交换当前与以前单词的位置</span><br><span class="line"></span><br><span class="line">Alt+u 把当前词转化为大写</span><br><span class="line"></span><br><span class="line">Alt+l 把当前词转化为小写</span><br><span class="line"></span><br><span class="line">Alt+c 把当前词汇变成首字符大写</span><br><span class="line"></span><br><span class="line">Ctrl+v 插入特殊字符,如Ctrl+v+Tab加入Tab字符键</span><br><span class="line"></span><br><span class="line">Esc+t 颠倒光标所在处及其相邻单词的位置</span><br><span class="line"></span><br><span class="line">Ctrl+c 删除整行</span><br><span class="line"></span><br><span class="line">Ctrl+(x u) 按住Ctrl的同时再先后按x和u，撤销刚才的操作</span><br><span class="line"></span><br><span class="line">Ctrl+s 挂起当前shell</span><br><span class="line"></span><br><span class="line">Ctrl+q 重新启用挂起的shell</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -367,57 +294,396 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/28/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-10-28-macOS-hdiutil%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/26/学习-Shell-2019-06-26-Shell-ls命令/" class="post-title-link" itemprop="url">Shell-ls命令</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/10/28/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-10-28-macOS-hdiutil%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">macOS-hdiutil创建磁盘镜像文件</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-06-26 17:49:54 / 修改时间：17:53:32" itemprop="dateCreated datePublished" datetime="2019-06-26T17:49:54+08:00">2019-06-26</time>
+              <time title="创建时间：2019-10-28 13:37:34" itemprop="dateCreated datePublished" datetime="2019-10-28T13:37:34+08:00">2019-10-28</time>
             </span>
-          
-            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-27 16:56:45" itemprop="dateModified" datetime="2020-03-27T16:56:45+08:00">2020-03-27</time>
+              </span>
 
-            
           
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hdiutil create -size 120g\</span><br><span class="line"> -layout GPTSPUD\</span><br><span class="line"> -fs APFS\</span><br><span class="line"> -volname <span class="string">"Instagram"</span>\</span><br><span class="line"> -<span class="built_in">type</span> SPARSEBUNDLE\</span><br><span class="line"> -nospotlight\</span><br><span class="line"> -verbose\</span><br><span class="line"> -imagekey sparse-band-size=65536\</span><br><span class="line"> ./Instagram.sparsebundle</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>-imagekey sparse-band-size</code><br>以512字节大小为单位</p>
+</li>
+<li><p><code>-type</code><br>可选的有：UDIF|SPARSE|SPARSEBUNDLE</p>
+</li>
+<li><p><code>-fs</code></p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/28/%E5%AD%A6%E4%B9%A0-Python-2019-10-28-Python-%E5%9C%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%AD%E6%B7%BB%E5%8A%A0sys-path/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/28/%E5%AD%A6%E4%B9%A0-Python-2019-10-28-Python-%E5%9C%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E4%B8%AD%E6%B7%BB%E5%8A%A0sys-path/" class="post-title-link" itemprop="url">Python-在环境变量中添加sys.path</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-10-28 11:10:48 / 修改时间：11:12:03" itemprop="dateCreated datePublished" datetime="2019-10-28T11:10:48+08:00">2019-10-28</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>很多时候我们在命令行中执行Python代码，需要修改Python的 sys.path 环境变量，可通过如下方式修改</p>
+<ul>
+<li>*nix<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PYTHONPATH=<span class="variable">$PYTHONPATH</span>:/home/dev/custom_path</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/24/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-10-24-macOS-macOS%E4%B8%AD%E7%9A%84osascript%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/24/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-10-24-macOS-macOS%E4%B8%AD%E7%9A%84osascript%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">macOS-macOS中的osascript命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-24 16:23:32" itemprop="dateCreated datePublished" datetime="2019-10-24T16:23:32+08:00">2019-10-24</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-29 10:27:35" itemprop="dateModified" datetime="2019-10-29T10:27:35+08:00">2019-10-29</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.jianshu.com/p/d42dff738d70" target="_blank" rel="noopener">https://www.jianshu.com/p/d42dff738d70</a></p>
+<ul>
+<li>通过命令行发送系统通知<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">osascript -e <span class="string">'display notification "通知内容" with title "标题" subtitle "子标题" sound name "Submarine"'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>音效文件在这 <code>/System/Library/Sounds</code> 或 <code>~/Library/Sounds</code>。</li>
+<li>显示对话框 alert和确认  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">osascript -e <span class="string">'display alert "Hello World!" message "longer text can be added in the message field and it will be all shown on the pop-up alert."'</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-23-Linux-apt%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-23-Linux-apt%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">Linux-apt包管理工具</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-23 18:49:13" itemprop="dateCreated datePublished" datetime="2019-10-23T18:49:13+08:00">2019-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-28 00:19:53" itemprop="dateModified" datetime="2019-12-28T00:19:53+08:00">2019-12-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="update"><a href="#update" class="headerlink" title="update"></a>update</h2><p>update 是同步 /etc/apt/sources.list 和 /etc/apt/sources.list.d 中列出的源的索引，这样才能获取到最新的软件包。</p>
+<h2 id="upgrade"><a href="#upgrade" class="headerlink" title="upgrade"></a>upgrade</h2><p>upgrade 是升级已安装的所有软件包，升级之后的版本就是本地索引里的，因此，在执行 upgrade 之前一定要执行 update, 这样才能是最新的。</p>
+<h2 id="显示软件源列表"><a href="#显示软件源列表" class="headerlink" title="显示软件源列表"></a>显示软件源列表</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep <span class="string">'^[^#]'</span> /etc/apt/sources.list&#123;,.d/*&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="unstable-testing-stable"><a href="#unstable-testing-stable" class="headerlink" title="unstable, testing, stable"></a>unstable, testing, stable</h2><p><a href="https://unix.stackexchange.com/questions/451968/how-to-revert-debian-from-testing-to-stable" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/451968/how-to-revert-debian-from-testing-to-stable</a></p>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt list --upgradable</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-23-Linux-%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E5%B7%A5%E5%85%B7crontab%E4%B8%8E%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1cronjob/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-23-Linux-%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1%E5%B7%A5%E5%85%B7crontab%E4%B8%8E%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1cronjob/" class="post-title-link" itemprop="url">Linux-计划任务工具crontab与计划任务cronjob</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-10-23 16:08:55" itemprop="dateCreated datePublished" datetime="2019-10-23T16:08:55+08:00">2019-10-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-03-11 16:37:57" itemprop="dateModified" datetime="2020-03-11T16:37:57+08:00">2020-03-11</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>参考：<a href="https://www.cnblogs.com/ftl1012/p/crontab.html" target="_blank" rel="noopener">https://www.cnblogs.com/ftl1012/p/crontab.html</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">crontab -l <span class="comment"># 列出任务</span></span><br><span class="line">crontab -l &gt; <span class="variable">$HOME</span>/crontab.bak <span class="comment"># 备份任务</span></span><br><span class="line">/var/spool/cron/&lt;username&gt; &lt; <span class="variable">$HOME</span>/crontab.bak <span class="comment"># 恢复备份</span></span><br><span class="line">crontab <span class="variable">$HOME</span>/crontab.bak <span class="comment"># 恢复备份</span></span><br><span class="line">crontab -e <span class="comment"># 编辑定时任务</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>crontab 任务执行异常会向<code>/var/spool/mail/&lt;username&gt;</code>发送邮件<br><code>&lt;username&gt;</code>可以通过<code>whoami</code>命令获得。</p>
+</li>
+<li><p>修改 crontab 的编辑器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> EDITOR=<span class="string">"/usr/bin/nano"</span> ; crontab -e</span><br><span class="line"></span><br><span class="line"><span class="comment"># 直接设置默认编辑器</span></span><br><span class="line">select-editor</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-23-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2019-10-23-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%9F%BA%E7%A1%80%E8%AE%BE%E7%BD%AE/" class="post-title-link" itemprop="url">树莓派-树莓派基础设置</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-10-23 15:20:34 / 修改时间：15:21:06" itemprop="dateCreated datePublished" datetime="2019-10-23T15:20:34+08:00">2019-10-23</time>
+            </span>
 
           
 
@@ -431,12 +697,13 @@
 
       
           <ul>
-<li>列出SELinux文件权限相关<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -lZ</span><br><span class="line">[root@host ~]<span class="comment"># ls -lZ</span></span><br><span class="line">-rw-r--r-- root root ?                                systemctl list-unit-files --<span class="built_in">type</span>=service</span><br></pre></td></tr></table></figure>
-
+<li><p>显示时间信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">timedatectl</span><br><span class="line">date</span><br></pre></td></tr></table></figure>
 </li>
+<li><p>设置时区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure tzdata</span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -444,57 +711,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-22-Linux-%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/26/Xcode与调试-2019-06-26-Xcode-模拟器命令/" class="post-title-link" itemprop="url">Xcode-模拟器命令</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/10/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-22-Linux-%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">Linux-将本地文件写入远程文件</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-06-26 11:16:16 / 修改时间：11:17:42" itemprop="dateCreated datePublished" datetime="2019-06-26T11:16:16+08:00">2019-06-26</time>
+              <time title="创建时间：2019-10-22 20:08:36 / 修改时间：20:09:17" itemprop="dateCreated datePublished" datetime="2019-10-22T20:08:36+08:00">2019-10-22</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -507,26 +761,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="xcrun-simctl"><a href="#xcrun-simctl" class="headerlink" title="xcrun simctl"></a>xcrun simctl</h2><ul>
-<li><p>获取模拟器列表</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl list</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>擦除模拟器数据</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl erase [模拟器ID,可通过获取模拟器列表命令获得]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>通过Finder打开模拟器文稿</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>直接将下面的代码用脚本编辑器保存为苹果脚本，可以…</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> shell script <span class="string">"</span></span><br><span class="line"><span class="string">open `xcrun simctl get_app_container booted com.Encoder.SuperSpider data` -a Finder</span></span><br><span class="line"><span class="string">"</span></span><br></pre></td></tr></table></figure>
-
+          <p>服务器之间最好ssh免密码登录，如果不是免密码登录，每次写入都要手敲密码。</p>
 <ul>
-<li>删除模拟器<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl <span class="built_in">help</span> delete</span><br><span class="line">Usage: simctl delete &lt;device&gt; [... &lt;device n&gt;] | unavailable</span><br><span class="line"><span class="comment"># 删除不可用的模拟器</span></span><br><span class="line">xcrun simctl delete unavailable</span><br></pre></td></tr></table></figure></li>
+<li><p>将本地的test.log文件的内容写入到远程服务器test1.log文件中。<br>脚本内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!bin/bash</span></span><br><span class="line">ssh root@192.168.30.1 <span class="string">'cat /opt/test.log &gt;&gt; /opt/test1.log'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将远程服务器test1.log文件中的内容写入到本地的test.log文件中。<br>脚本内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!bin/bash</span></span><br><span class="line">ssh root@192.168.30.1 <span class="string">'cat /opt/test.log'</span> &gt;&gt; /opt/test1.log</span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -534,65 +777,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/学习-Shell-2019-06-26-macOS-iterm2使用技巧/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/10/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-22-Linux%E5%B0%86%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%86%99%E5%85%A5%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%AD/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/26/学习-Shell-2019-06-26-macOS-iterm2使用技巧/" class="post-title-link" itemprop="url">macOS-iterm2使用技巧</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/10/22/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-10-22-Linux%E5%B0%86%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%86%99%E5%85%A5%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%AD/" class="post-title-link" itemprop="url">Linux将一个文件内容写入到另一个文件中</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-06-26 11:12:35" itemprop="dateCreated datePublished" datetime="2019-06-26T11:12:35+08:00">2019-06-26</time>
+              <time title="创建时间：2019-10-22 14:21:54 / 修改时间：14:24:09" itemprop="dateCreated datePublished" datetime="2019-10-22T14:21:54+08:00">2019-10-22</time>
             </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-03 15:23:42" itemprop="dateModified" datetime="2019-07-03T15:23:42+08:00">2019-07-03</time>
-              </span>
-            
-          
 
           
 
@@ -605,16 +827,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><a href="https://www.cnblogs.com/zuoruining/p/iterm2kuai-jie-jian.html" target="_blank" rel="noopener">https://www.cnblogs.com/zuoruining/p/iterm2kuai-jie-jian.html</a></p>
-<ul>
-<li>新建 Tab： <kbd>cmd</kbd>+<kbd>t</kbd></li>
-<li>关闭 Tab： <kbd>cmd</kbd>+<kbd>w</kbd></li>
-<li>垂直分屏： <kbd>command</kbd>+<kbd>d</kbd></li>
-<li>水平分屏： <kbd>command</kbd>+<kbd>shift</kbd>+<kbd>d</kbd></li>
-</ul>
-<h2 id="其他Shell通用快捷键"><a href="#其他Shell通用快捷键" class="headerlink" title="其他Shell通用快捷键"></a>其他Shell通用快捷键</h2><p><a href="/2019/07/03/学习-Shell-2019-07-03-Shell-Shell通用快捷键">Shell通用快捷键</a></p>
-
-        
+          <ol>
+<li><p>用 cat 命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新建/覆盖原有文件内容</span></span><br><span class="line">car some.txt &gt; another.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 追加内容</span></span><br><span class="line">car some.txt &gt;&gt; another.txt</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用 vim 命令</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim another.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># 执行 vim 指令</span></span><br><span class="line">: r some.txt</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -622,479 +842,53 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/26/电脑技巧-macOS-2019-06-26-macOS-shell常用命令/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/26/电脑技巧-macOS-2019-06-26-macOS-shell常用命令/" class="post-title-link" itemprop="url">macOS-shell常用命令</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-26 11:11:29" itemprop="dateCreated datePublished" datetime="2019-06-26T11:11:29+08:00">2019-06-26</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-16 15:09:48" itemprop="dateModified" datetime="2019-07-16T15:09:48+08:00">2019-07-16</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>创建 symbol link<br>创建替身，软链接，symbol link<br><code>ln(link)</code>命令<br>示例：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s ~/Library/Developer/Xcode/DerivedData ~/Desktop/Xcode_DerivedData</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件创建时间</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -t [[CC]YY]MMDDhhmm[.SS]</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>将YYYYMMDDhhmm 要替换成期望的时间，比如 201209160330.00 //即为2012年9月16日凌晨3点30分0秒。 其中[CC]YY可以缺省前两位“世纪”<em>，只输入后两位年份，并且秒钟[.SS]也可缺省</em>。把需要修改的文件拖到 Terminal 窗口，这时文件的路径会自动补全，当然你也可以自己手动输入文件路径。<br>例如：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -t 201209160330.00 /Users/name/Desktop/somefile.jpg</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>修改文件修改时间<br>步骤和上面修改“创建时间”基本相同，只是把参数 -t 改成 -mt<br>// time 和 modify time</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch -mt 201209160330.00 /Users/name/Desktop/somefile.jpg</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>显示系统详细信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ioreg -w 0 -l</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/21/Xcode与调试-2019-06-21-Xcode-快捷键/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/21/Xcode与调试-2019-06-21-Xcode-快捷键/" class="post-title-link" itemprop="url">Xcode-快捷键</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-21 17:50:42" itemprop="dateCreated datePublished" datetime="2019-06-21T17:50:42+08:00">2019-06-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-06-26 11:18:36" itemprop="dateModified" datetime="2019-06-26T11:18:36+08:00">2019-06-26</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>多行选择<br><kbd>option</kbd>+<kbd>shift</kbd>+<kbd>鼠标选择</kbd></p>
-</li>
-<li><p>cmd + shift + j 在文件管理列表中定位到当前打开的文件</p>
-</li>
-<li><p>cmd + shift + o 打开文件快速跳转输入框，输入文件名即可快速跳转</p>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/20/手机技巧-2019-06-20-BlueStacks-蓝叠安卓模拟器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/20/手机技巧-2019-06-20-BlueStacks-蓝叠安卓模拟器/" class="post-title-link" itemprop="url">BlueStacks-蓝叠安卓模拟器</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-20 20:33:39" itemprop="dateCreated datePublished" datetime="2019-06-20T20:33:39+08:00">2019-06-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-06-21 11:13:52" itemprop="dateModified" datetime="2019-06-21T11:13:52+08:00">2019-06-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h2><p><a href="https://bluestacks.app/bluestacks-for-mac" target="_blank" rel="noopener">https://bluestacks.app/bluestacks-for-mac</a><br><a href="https://androidemulator.org/tools/bluestacks-easy-tool/" target="_blank" rel="noopener">https://androidemulator.org/tools/bluestacks-easy-tool/</a></p>
-<h2 id="ROOT"><a href="#ROOT" class="headerlink" title="ROOT"></a>ROOT</h2><p><a href="https://bstweaker.tk/" target="_blank" rel="noopener">https://bstweaker.tk/</a></p>
-<h2 id="macOS-版本"><a href="#macOS-版本" class="headerlink" title="macOS 版本"></a>macOS 版本</h2><ul>
-<li>程序数据文件夹<br><code>~/Library/BlueStacks</code></li>
-</ul>
-<h2 id="使用技巧"><a href="#使用技巧" class="headerlink" title="使用技巧"></a>使用技巧</h2><h3 id="回收磁盘空间"><a href="#回收磁盘空间" class="headerlink" title="回收磁盘空间"></a>回收磁盘空间</h3><p><a href="https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size" target="_blank" rel="noopener">https://superuser.com/questions/529149/how-to-compact-virtualboxs-vdi-file-size</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/19/手机技巧-2019-06-19-Android-安卓手机文件路径/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/19/手机技巧-2019-06-19-Android-安卓手机文件路径/" class="post-title-link" itemprop="url">Android-安卓手机文件路径</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-19 20:16:51" itemprop="dateCreated datePublished" datetime="2019-06-19T20:16:51+08:00">2019-06-19</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-16 18:44:27" itemprop="dateModified" datetime="2019-10-16T18:44:27+08:00">2019-10-16</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="MIUI-双开应用存储位置"><a href="#MIUI-双开应用存储位置" class="headerlink" title="MIUI 双开应用存储位置"></a>MIUI 双开应用存储位置</h3><ul>
-<li>应用双开数据存储 <code>/storage/emulated/999</code></li>
-<li>应用双开程序存储 <code>/data/user/999</code></li>
-<li>对应data <code>/data/user/999/</code></li>
-<li>对应SD卡内容</li>
-</ul>
-<h4 id="安装程序-提示-没有存储空间"><a href="#安装程序-提示-没有存储空间" class="headerlink" title="安装程序 提示 没有存储空间"></a>安装程序 提示 没有存储空间</h4><p>因为删除程序时候没有移除对应的 odex 文件，打开幸运破解器，会自动移除多余的 odex 文件。</p>
-<h3 id="安卓手机文件路径"><a href="#安卓手机文件路径" class="headerlink" title="安卓手机文件路径"></a>安卓手机文件路径</h3><h4 id="预装的合作伙伴的软件"><a href="#预装的合作伙伴的软件" class="headerlink" title="预装的合作伙伴的软件"></a>预装的合作伙伴的软件</h4><p><code>\data\miui</code></p>
-<h4 id="短信数据库路径"><a href="#短信数据库路径" class="headerlink" title="短信数据库路径"></a>短信数据库路径</h4><h4 id="联系人数据库路径"><a href="#联系人数据库路径" class="headerlink" title="联系人数据库路径"></a>联系人数据库路径</h4><h4 id="黑名单列表数据库路径"><a href="#黑名单列表数据库路径" class="headerlink" title="黑名单列表数据库路径"></a>黑名单列表数据库路径</h4><h4 id="被拦截电话和短信数据库路径"><a href="#被拦截电话和短信数据库路径" class="headerlink" title="被拦截电话和短信数据库路径"></a>被拦截电话和短信数据库路径</h4><h4 id="外置存储可更改文件权限路径"><a href="#外置存储可更改文件权限路径" class="headerlink" title="外置存储可更改文件权限路径"></a>外置存储可更改文件权限路径</h4><p><code>/storage_int/</code></p>
-<h3 id="铃声位置"><a href="#铃声位置" class="headerlink" title="铃声位置"></a>铃声位置</h3><ul>
-<li>MIUI<br>所有的G7音频（铃声）文件都存于<code>SD卡/MIUI/ringtong</code>下面的文件基本上都能被识别，你将铃声拷进去就可以了。而音乐文件则保存<code>SD卡/MIUI/MUSIC</code>当中。至于电话铃声/短信铃声/提醒铃声，可在相应的设置栏中自行设定，比如说你喜欢某个曲子作为来电铃声，那么你就在来电设置当中进行设置并选中它就可以了，新版的MIUI支持铃声预览，你试听觉得合适了选定就可以了，而且不必像以往的版本要用专门的播放器播放。同理短信铃声/提醒铃声也是这样设置的，</li>
-<li>其他手机<br>　　系统自带声音文件存放的位置和内容<br>　　1 、总目录：/system/media/audio<br>　　2、闹钟：/system/media/audio/alarms<br>　　3、短信通知：/system/media/audio/notificati**<br>　　4、铃声：/system/media/audio/ringtones<br>　　5、系统界面声音：/system/media/audio/ui<br>　　在SD卡中自定义各种声音<br>　　1、在sd卡的根目录下建立文件夹media<br>　　2、 在media目录下建立文件夹 alarms 里面放闹钟所需的音乐文件<br>　　3、在media目录下建立文件夹 notificati** 里面放短信通知所需的音乐文件<br>　　4、 在media目录下建立文件夹 ringtones 里面放电话铃声所需的音乐文件<br>　　5 、本方法的优点是sd卡容量大，音乐文件大小不受限制，缺点，读取sd卡慢不方便还费电</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/17/电脑技巧-macOS-2019-06-17-macOS-不同Wi-Fi用不同的网络IP与DNS等配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/17/电脑技巧-macOS-2019-06-17-macOS-不同Wi-Fi用不同的网络IP与DNS等配置/" class="post-title-link" itemprop="url">macOS-不同Wi-Fi用不同的网络IP与DNS等配置</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-17 10:27:29 / 修改时间：10:28:29" itemprop="dateCreated datePublished" datetime="2019-06-17T10:27:29+08:00">2019-06-17</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>需要用到网络设置里面的<code>位置</code>功能</li>
-<li>新建一个位置</li>
-<li>通过命令切换位置<code>networksetup -switchlocation School</code></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/8/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1119,30 +913,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1156,17 +943,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1177,50 +970,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

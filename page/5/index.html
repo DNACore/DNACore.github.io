@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/5/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/5/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/5/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,309 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/30/学习-Shell-2019-07-30-使用nscurl测试服务器是否支持Apple-ATS/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/27/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-27-Linux-%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/30/学习-Shell-2019-07-30-使用nscurl测试服务器是否支持Apple-ATS/" class="post-title-link" itemprop="url">使用nscurl测试服务器是否支持Apple ATS</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/11/27/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-27-Linux-%E8%AE%BE%E7%BD%AE%E6%97%B6%E5%8C%BA/" class="post-title-link" itemprop="url">Linux-设置时区</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-07-30 10:41:33 / 修改时间：10:42:30" itemprop="dateCreated datePublished" datetime="2019-07-30T10:41:33+08:00">2019-07-30</time>
+              <time title="创建时间：2019-11-27 14:38:44 / 修改时间：14:39:51" itemprop="dateCreated datePublished" datetime="2019-11-27T14:38:44+08:00">2019-11-27</time>
             </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>执行命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nscurl --ats-diagnostics --verbose https://www.baidu.com</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/29/学习-Shell-2019-07-29-Shell-路径操作/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/29/学习-Shell-2019-07-29-Shell-路径操作/" class="post-title-link" itemprop="url">Shell-路径操作</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 14:12:35 / 修改时间：14:14:59" itemprop="dateCreated datePublished" datetime="2019-07-29T14:12:35+08:00">2019-07-29</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="获取文件名"><a href="#获取文件名" class="headerlink" title="获取文件名"></a>获取文件名</h2><p>假设给定的路径名为：<code>/tmp/csdn/zhengyi/test/zhengyi.txt</code></p>
-<ul>
-<li><p>awk解法<br>用“/”做分隔符，然后打印出最后的那一部分。实现代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resFile=`<span class="built_in">echo</span> /tmp/csdn/zhengyi/<span class="built_in">test</span>/adb.log | awk -F <span class="string">"/"</span> <span class="string">'&#123;print $NF&#125;'</span>`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>官方解法(basename)<br>Bash Shell本身提供了basename 命令，可以直接获取路径名最后的文件名，实现代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resFile=`basename /tmp/csdn/zhengyi/<span class="built_in">test</span>/adb.log`</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="获取目录名"><a href="#获取目录名" class="headerlink" title="获取目录名"></a>获取目录名</h2><ul>
-<li><p>官方解法(dirname)<br>Bash Shell本身提供了dirname命令，特别方便，可以直接获取路径对应的目录名，实现代码如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dirPath=`dirname /tmp/csdn/zhengyi/<span class="built_in">test</span>/adb.log`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>awk解法<br>可以灵活的使用分隔符，混合正则表达式：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dirPath=`<span class="built_in">echo</span> /tmp/csdn/zhengyi/<span class="built_in">test</span>/adb.log | awk -F <span class="string">'/[^/]*$'</span> <span class="string">'&#123;print $1&#125;'</span>`</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>awk+for循环的方法：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> /tmp/csdn/zhengyi/<span class="built_in">test</span>/adb.log | awk <span class="string">'BEGIN&#123;res=""; FS="/";&#125;&#123; for(i=2;i&lt;=NF-1;i++) res=(res"/"$i);&#125; END&#123;print res&#125;'</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>参考：<a href="https://www.ctolib.com/topics-97914.html" target="_blank" rel="noopener">https://www.ctolib.com/topics-97914.html</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/29/学习-Shell-2019-07-29-Shell-脚本中变量不带引号、单引号、双引号、反引号的区别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/29/学习-Shell-2019-07-29-Shell-脚本中变量不带引号、单引号、双引号、反引号的区别/" class="post-title-link" itemprop="url">Shell-脚本中变量不带引号、单引号、双引号、反引号的区别</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-29 13:44:11" itemprop="dateCreated datePublished" datetime="2019-07-29T13:44:11+08:00">2019-07-29</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-23 15:16:40" itemprop="dateModified" datetime="2019-09-23T15:16:40+08:00">2019-09-23</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>shell 中单引号引起来的内容始终被识别为字符串，双引号引起来的内容里面可以有变量。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'$HOME'</span> // <span class="variable">$HOME</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"<span class="variable">$HOME</span>"</span> // [user<span class="string">'s home dir]</span></span><br></pre></td></tr></table></figure>
-
-<p>shell 脚本中双引号、单引号、反引号的区别，其他命令<br><a href="https://blog.csdn.net/kuangdoushi/article/details/79295481" target="_blank" rel="noopener">https://blog.csdn.net/kuangdoushi/article/details/79295481</a></p>
-<p>shell 脚本 关于字符串的那些事~ 单引号、双引号、不使用引号等等<br><a href="https://blog.csdn.net/qq_36748278/article/details/82776137" target="_blank" rel="noopener">https://blog.csdn.net/qq_36748278/article/details/82776137</a></p>
-<p>shell中定义变量用双引号和单引号以及不用引号的区别<br><a href="https://www.cnblogs.com/lonecloud/p/9066199.html" target="_blank" rel="noopener">https://www.cnblogs.com/lonecloud/p/9066199.html</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/24/其他开发工具-2019-07-24-Git-gerrit的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/24/其他开发工具-2019-07-24-Git-gerrit的使用/" class="post-title-link" itemprop="url">Git-gerrit的使用</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-24 16:16:39 / 修改时间：16:53:25" itemprop="dateCreated datePublished" datetime="2019-07-24T16:16:39+08:00">2019-07-24</time>
-            </span>
-          
-            
-
-            
-          
 
           
 
@@ -531,10 +218,13 @@
 
       
           <ul>
-<li><code>no new changes</code><br>解决：重新合并分支<br>例如，当前在 v1.0 分支，要把 v0.9 合并过来，执行<code>git merge v0.9 --no-ff</code></li>
+<li><p>设置时区命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tzselect</span><br><span class="line"></span><br><span class="line">timedatectl</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>参考<br><a href="https://www.cnblogs.com/xiaojianblogs/p/8949932.html" target="_blank" rel="noopener">https://www.cnblogs.com/xiaojianblogs/p/8949932.html</a></p>
+</li>
 </ul>
 
-        
       
     </div>
 
@@ -542,210 +232,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/22/学习-Python-2019-07-22-Python-PEP8编码规范/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/26/%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-11-26-Android-%E5%AE%89%E5%8D%93%E7%B3%BB%E7%BB%9F%E6%8C%87%E4%BB%A4%E4%BB%A3%E7%A0%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/22/学习-Python-2019-07-22-Python-PEP8编码规范/" class="post-title-link" itemprop="url">Python-PEP8编码规范</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/11/26/%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-11-26-Android-%E5%AE%89%E5%8D%93%E7%B3%BB%E7%BB%9F%E6%8C%87%E4%BB%A4%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">Android-安卓系统指令代码</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-07-22 14:58:39 / 修改时间：14:58:53" itemprop="dateCreated datePublished" datetime="2019-07-22T14:58:39+08:00">2019-07-22</time>
+              <time title="创建时间：2019-11-26 16:06:42 / 修改时间：16:07:14" itemprop="dateCreated datePublished" datetime="2019-11-26T16:06:42+08:00">2019-11-26</time>
             </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>PEP8 规范</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推荐</span></span><br><span class="line"><span class="keyword">if</span> foo <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 不推荐</span></span><br><span class="line"><span class="keyword">if</span> foo != <span class="literal">None</span></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> foo <span class="keyword">is</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/19/电脑技巧-macOS-2019-07-19-macOS-提示“已损坏，打不开。-您应该将它移到废纸篓。”/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/19/电脑技巧-macOS-2019-07-19-macOS-提示“已损坏，打不开。-您应该将它移到废纸篓。”/" class="post-title-link" itemprop="url">macOS-提示“已损坏，打不开。 您应该将它移到废纸篓。”</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-19 16:03:17 / 修改时间：16:04:03" itemprop="dateCreated datePublished" datetime="2019-07-19T16:03:17+08:00">2019-07-19</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br><span class="line"></span><br><span class="line">xattr -r -d com.apple.quarantine [App_path]</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/18/学习-Python-2019-07-18-Python-logging日志模块/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/18/学习-Python-2019-07-18-Python-logging日志模块/" class="post-title-link" itemprop="url">Python-logging日志模块</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-07-18 16:20:30" itemprop="dateCreated datePublished" datetime="2019-07-18T16:20:30+08:00">2019-07-18</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-19 10:43:19" itemprop="dateModified" datetime="2019-07-19T10:43:19+08:00">2019-07-19</time>
-              </span>
-            
-          
 
           
 
@@ -759,17 +283,204 @@
 
       
           <ul>
-<li>常用日志格式<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">logging.basicConfig(level=logging.INFO,</span><br><span class="line">                    format=<span class="string">'%(asctime)s - %(message)s'</span>)</span><br></pre></td></tr></table></figure>
+<li><code>*#*#64663#*#*</code> 硬件测试程序</li>
+</ul>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/22/%E5%AD%A6%E4%B9%A0-Shell-2019-11-22-Shell-%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9Cpushd%E5%92%8Cpopd/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/22/%E5%AD%A6%E4%B9%A0-Shell-2019-11-22-Shell-%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E6%93%8D%E4%BD%9Cpushd%E5%92%8Cpopd/" class="post-title-link" itemprop="url">Shell-工作目录操作pushd和popd</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-22 19:22:18" itemprop="dateCreated datePublished" datetime="2019-11-22T19:22:18+08:00">2019-11-22</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-30 16:24:47" itemprop="dateModified" datetime="2019-12-30T16:24:47+08:00">2019-12-30</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.jianshu.com/p/53cccae3c443" target="_blank" rel="noopener">https://www.jianshu.com/p/53cccae3c443</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/14/%E5%AD%A6%E4%B9%A0-iOS-2019-11-14-iOS-DEBUG%E7%BA%A6%E6%9D%9Fconstraints/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/14/%E5%AD%A6%E4%B9%A0-iOS-2019-11-14-iOS-DEBUG%E7%BA%A6%E6%9D%9Fconstraints/" class="post-title-link" itemprop="url">iOS-DEBUG约束constraints</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-14 17:10:36 / 修改时间：17:13:11" itemprop="dateCreated datePublished" datetime="2019-11-14T17:10:36+08:00">2019-11-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>添加一个 Symbolic Breakpoint<br>Symbol设置为<code>UIViewAlertForUnsatisfiableConstraints</code><br><img src="/images/iOS-DEBUG%E7%BA%A6%E6%9D%9Fconstraints-1.png" alt="添加一个 Symbolic Breakpoint添加一个 Symbolic Breakpoint"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/13/%E5%AD%A6%E4%B9%A0-Shell-2019-11-13-Shell-%E7%9B%AE%E5%BD%95%E4%BB%A5%E5%8F%8A%E6%96%87%E4%BB%B6%E7%9A%84%E9%81%8D%E5%8E%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/13/%E5%AD%A6%E4%B9%A0-Shell-2019-11-13-Shell-%E7%9B%AE%E5%BD%95%E4%BB%A5%E5%8F%8A%E6%96%87%E4%BB%B6%E7%9A%84%E9%81%8D%E5%8E%86/" class="post-title-link" itemprop="url">Shell-目录以及文件的遍历</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-11-13 15:56:27" itemprop="dateCreated datePublished" datetime="2019-11-13T15:56:27+08:00">2019-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-11-14 11:25:46" itemprop="dateModified" datetime="2019-11-14T11:25:46+08:00">2019-11-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>调用<code>.sh</code>脚本，后面跟文件路径作为参数<br>遍历传入的每个文件，可以正常处理带空格的文件路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> 参数个数<span class="variable">$#</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> <span class="string">"<span class="variable">$@</span>"</span>; <span class="keyword">do</span> <span class="comment"># 此处不加引号遍历会出错</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$file</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> [ -n <span class="string">"<span class="variable">$&#123;1&#125;</span>"</span> ]; <span class="keyword">do</span></span><br><span class="line">    file_path=<span class="string">"<span class="variable">$&#123;1&#125;</span>"</span></span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$file_path</span></span><br><span class="line">    <span class="comment">#Do some works on "$&#123;file_path&#125;"</span></span><br><span class="line">    <span class="built_in">shift</span> 1</span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> logging</span><br><span class="line">logging.basicConfig(level=logging.DEBUG,</span><br><span class="line">                    format=<span class="string">"%(asctime)s %(name)s %(levelname)s %(message)s"</span>,</span><br><span class="line">                    datefmt = <span class="string">'%Y-%m-%d  %H:%M:%S %a'</span>    <span class="comment">#注意月份和天数不要搞乱了，这里的格式化符与time模块相同</span></span><br><span class="line">                    )</span><br><span class="line">logging.debug(<span class="string">"msg1"</span>)</span><br><span class="line">logging.info(<span class="string">"msg2"</span>)</span><br><span class="line">logging.warning(<span class="string">"msg3"</span>)</span><br><span class="line">logging.error(<span class="string">"msg4"</span>)</span><br><span class="line">logging.critical(<span class="string">"msg5"</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>彩色输出<br><a href="https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output" target="_blank" rel="noopener">https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output</a></li>
+<li><p>遍历目录文件以及子目录文件，可正常遍历带空格的路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">walkIntoDir</span></span>() &#123;</span><br><span class="line">    <span class="keyword">for</span> element <span class="keyword">in</span> $(ls <span class="string">"$*"</span> | tr <span class="string">" "</span> <span class="string">"\?"</span>); <span class="keyword">do</span></span><br><span class="line">        element=$(tr <span class="string">"\?"</span> <span class="string">" "</span> &lt;&lt;&lt;<span class="variable">$element</span>)</span><br><span class="line">        dir_or_file=<span class="string">"<span class="variable">$1</span>"</span>/<span class="string">"<span class="variable">$element</span>"</span></span><br><span class="line">        <span class="keyword">if</span> [ -d <span class="string">"<span class="variable">$dir_or_file</span>"</span> ]; <span class="keyword">then</span></span><br><span class="line">            walkIntoDir <span class="string">"<span class="variable">$dir_or_file</span>"</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="comment">#do something</span></span><br><span class="line">            <span class="built_in">echo</span> <span class="string">"<span class="variable">$dir_or_file</span>"</span></span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">    <span class="keyword">done</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">root_dir=<span class="variable">$1</span></span><br><span class="line">walkIntoDir <span class="variable">$root_dir</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -777,57 +488,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/17/学习-iOS-2019-07-17-iOS与macOS中的文件系统编程/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/11/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-11-Linux-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4-service/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/17/学习-iOS-2019-07-17-iOS与macOS中的文件系统编程/" class="post-title-link" itemprop="url">iOS与macOS中的文件系统编程</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/11/11/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-11-Linux-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4-service/" class="post-title-link" itemprop="url">Linux-服务管理命令-service</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-07-17 14:01:50 / 修改时间：14:01:57" itemprop="dateCreated datePublished" datetime="2019-07-17T14:01:50+08:00">2019-07-17</time>
+              <time title="创建时间：2019-11-11 19:37:44" itemprop="dateCreated datePublished" datetime="2019-11-11T19:37:44+08:00">2019-11-11</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-30 16:27:37" itemprop="dateModified" datetime="2019-12-30T16:27:37+08:00">2019-12-30</time>
+              </span>
 
           
 
@@ -840,9 +544,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html" target="_blank" rel="noopener">https://developer.apple.com/library/archive/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html</a></p>
-
-        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service iptables stop</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -850,57 +552,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/17/学习-Swift-2019-07-17-Swift学习笔记/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/11/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-11-Linux-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4-systemctl/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/17/学习-Swift-2019-07-17-Swift学习笔记/" class="post-title-link" itemprop="url">Swift学习笔记</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/11/11/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-11-11-Linux-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86%E5%91%BD%E4%BB%A4-systemctl/" class="post-title-link" itemprop="url">Linux-服务管理命令-systemctl</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-07-17 10:44:35 / 修改时间：10:44:48" itemprop="dateCreated datePublished" datetime="2019-07-17T10:44:35+08:00">2019-07-17</time>
+              <time title="创建时间：2019-11-11 19:37:38" itemprop="dateCreated datePublished" datetime="2019-11-11T19:37:38+08:00">2019-11-11</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-30 16:27:57" itemprop="dateModified" datetime="2019-12-30T16:27:57+08:00">2019-12-30</time>
+              </span>
 
           
 
@@ -913,14 +608,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>willSet didSet 有了属性观察器，必须要给这个属性设置一个初始值<br>计算属性，有 setter 必须也要有 getter，并且 setter getter 与 willSet didSet 互斥。<br>只读的计算属性可以只有getter</p>
-<p>你不能给继承而来的常量存储属性或者只读的计算属性添加属性观察器。这些属性的值不能被设置，所以提供 willSet 或 didSet 实现作为重写的一部分也是不合适的。<br>也要注意你不能为同一个属性同时提供重写的setter和重写的属性观察器。如果你想要监听属性值的改变，并且你已经为那个属性提供了一个自定义的setter，那么你从自定义的setter里就可以监听任意值的改变。</p>
-<p>所有类的存储属性——包括从它的父类继承的所有属性——都必须在初始化期间分配初始值。</p>
-<p>类在属性没有默认值，并且不是可选值的情况下，必须要有初始化器。<br>结构体属性可以没有默认值，也不必有默认初始化器。</p>
-<p>通过添加 AnyObject 关键字到协议的继承列表，你就可以限制协议只能被类类型采纳（并且不是结构体或者枚举）。</p>
-<p>所有类的存储属性——包括从它的父类继承的所有属性——都必须在初始化期间分配初始值。</p>
-
-        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop iptables</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -928,57 +616,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/07/15/手机技巧-2019-07-15-Android-MIUI优化/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/07/%E5%AD%A6%E4%B9%A0-iOS-2019-11-07-iOS-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E16%E8%BF%9B%E5%88%B6%E5%AD%97%E8%8A%82%E7%A0%81%E4%BA%92%E8%BD%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/07/15/手机技巧-2019-07-15-Android-MIUI优化/" class="post-title-link" itemprop="url">Android-MIUI优化</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/11/07/%E5%AD%A6%E4%B9%A0-iOS-2019-11-07-iOS-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8E16%E8%BF%9B%E5%88%B6%E5%AD%97%E8%8A%82%E7%A0%81%E4%BA%92%E8%BD%AC/" class="post-title-link" itemprop="url">iOS-字符串与16进制字节码互转</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-07-15 10:46:32 / 修改时间：10:46:47" itemprop="dateCreated datePublished" datetime="2019-07-15T10:46:32+08:00">2019-07-15</time>
+              <time title="创建时间：2019-11-07 14:07:35 / 修改时间：14:09:33" itemprop="dateCreated datePublished" datetime="2019-11-07T14:07:35+08:00">2019-11-07</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -991,40 +666,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
-<thead>
-<tr>
-<th>Bundle ID</th>
-<th>是否能安全禁用</th>
-<th>应用作用</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>com.miui.analytics</td>
-<td>是</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
+          <ul>
+<li>16进制字节码转换为NSString字符串<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%02x"</span>, <span class="number">0x11</span>]);</span><br><span class="line"><span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%02x"</span>, <span class="number">11</span>]);</span><br><span class="line"><span class="comment">// 0b</span></span><br></pre></td></tr></table></figure></li>
+</ul>
 
-        
       
     </div>
 
@@ -1032,36 +677,171 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/06/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-11-06-macOS%E5%BC%80%E5%8F%91-NSView%E8%AE%BE%E7%BD%AE%E9%98%B4%E5%BD%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/06/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-11-06-macOS%E5%BC%80%E5%8F%91-NSView%E8%AE%BE%E7%BD%AE%E9%98%B4%E5%BD%B1/" class="post-title-link" itemprop="url">macOS开发-NSView设置阴影</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-06 16:52:55 / 修改时间：16:56:15" itemprop="dateCreated datePublished" datetime="2019-11-06T16:52:55+08:00">2019-11-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
-  </div>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>macOS中设置NSView的阴影不像UIView那样直接设置layer的属性就可以。<br>macOS中需要创建一个<code>NSShadow</code>对象，然后赋值给<code>nsView.shadow</code>才可以。<br>另外，每改变一次<code>NSShadow</code>对象的属性，都需要重新赋值给<code>nsView.shadow</code>，否则更改可能不生效。<br>示例代码如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">NSShadow</span> *nsShadow = [<span class="built_in">NSShadow</span> new];</span><br><span class="line">nsShadow.shadowColor = [<span class="built_in">NSColor</span> colorWithHexString:<span class="string">@"#123456"</span>];</span><br><span class="line">nsShadow.shadowBlurRadius = <span class="number">10</span>;</span><br><span class="line">[<span class="keyword">self</span>.view setShadow:<span class="keyword">self</span>.nsShadow];</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/11/06/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-11-06-macOS%E5%BC%80%E5%8F%91-macOS%E7%9A%84%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/11/06/%E5%AD%A6%E4%B9%A0-macOS%E5%BC%80%E5%8F%91-2019-11-06-macOS%E5%BC%80%E5%8F%91-macOS%E7%9A%84%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86/" class="post-title-link" itemprop="url">macOS开发-macOS的电源管理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-11-06 10:41:05 / 修改时间：10:41:18" itemprop="dateCreated datePublished" datetime="2019-11-06T10:41:05+08:00">2019-11-06</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://justinyan.me/post/3961" target="_blank" rel="noopener">https://justinyan.me/post/3961</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1086,30 +866,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1123,17 +896,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1144,50 +923,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

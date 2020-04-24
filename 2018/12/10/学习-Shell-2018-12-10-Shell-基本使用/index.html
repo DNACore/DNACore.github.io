@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="[TOC] 一些好的教程http:&#x2F;&#x2F;c.biancheng.net&#x2F;view&#x2F;1114.html  shell 结构化命令之跳转 https:&#x2F;&#x2F;blog.csdn.net&#x2F;u011436666&#x2F;article&#x2F;details&#x2F;73480207  快捷键Shell通用快捷键 一些技巧 显示一些路径，具体作用未知 1man hier Shell 脚本中调用另外的脚本fork exec source">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell-基本使用">
+<meta property="og:url" content="https://dnacore@github.io/2018/12/10/%E5%AD%A6%E4%B9%A0-Shell-2018-12-10-Shell-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="[TOC] 一些好的教程http:&#x2F;&#x2F;c.biancheng.net&#x2F;view&#x2F;1114.html  shell 结构化命令之跳转 https:&#x2F;&#x2F;blog.csdn.net&#x2F;u011436666&#x2F;article&#x2F;details&#x2F;73480207  快捷键Shell通用快捷键 一些技巧 显示一些路径，具体作用未知 1man hier Shell 脚本中调用另外的脚本fork exec source">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2018-12-10T02:44:55.000Z">
+<meta property="article:modified_time" content="2019-12-02T03:24:10.764Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="Shell">
+<meta property="article:tag" content="Bash">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://dnacore@github.io/2018/12/10/%E5%AD%A6%E4%B9%A0-Shell-2018-12-10-Shell-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Shell-基本使用 | DNACore GitHub io</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/12/10/%E5%AD%A6%E4%B9%A0-Shell-2018-12-10-Shell-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Shell-基本使用
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-12-10 10:44:55" itemprop="dateCreated datePublished" datetime="2018-12-10T10:44:55+08:00">2018-12-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-02 11:24:10" itemprop="dateModified" datetime="2019-12-02T11:24:10+08:00">2019-12-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>[TOC]</p>
+<h2 id="一些好的教程"><a href="#一些好的教程" class="headerlink" title="一些好的教程"></a>一些好的教程</h2><p><a href="http://c.biancheng.net/view/1114.html" target="_blank" rel="noopener">http://c.biancheng.net/view/1114.html</a></p>
+<ul>
+<li>shell 结构化命令之跳转 <a href="https://blog.csdn.net/u011436666/article/details/73480207" target="_blank" rel="noopener">https://blog.csdn.net/u011436666/article/details/73480207</a></li>
+</ul>
+<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p><a href="/2019/10/28/学习-Shell-2019-10-28-Shell-基础-快捷键">Shell通用快捷键</a></p>
+<h2 id="一些技巧"><a href="#一些技巧" class="headerlink" title="一些技巧"></a>一些技巧</h2><ul>
+<li><p>显示一些路径，具体作用未知</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man hier</span><br></pre></td></tr></table></figure></li>
+<li><p>Shell 脚本中调用另外的脚本<br><code>fork</code> <code>exec</code> <code>source</code><br><a href="https://blog.csdn.net/simple_the_best/article/details/76285429" target="_blank" rel="noopener">https://blog.csdn.net/simple_the_best/article/details/76285429</a></p>
+</li>
+<li><p>Shell 中各种括号，小括号，中括号，大括号的作用<br>shell中各种括号的作用()、(())、[]、[[]]、{}、${}、``、$()、$(())<br>{}花括号把变量括起来是为了界定变量边界<br><a href="https://www.cnblogs.com/hanggegege/p/5928870.html" target="_blank" rel="noopener">https://www.cnblogs.com/hanggegege/p/5928870.html</a><br><a href="https://blog.csdn.net/taiyang1987912/article/details/39551385" target="_blank" rel="noopener">https://blog.csdn.net/taiyang1987912/article/details/39551385</a><br><a href="https://www.cnblogs.com/chengd/p/7803664.html" target="_blank" rel="noopener">https://www.cnblogs.com/chengd/p/7803664.html</a></p>
+</li>
+<li><p>获取当前脚本所在的目录<br>pwd是一个命令，PWD是一个环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">basedir=`<span class="built_in">cd</span> $(dirname <span class="variable">$0</span>); <span class="built_in">pwd</span> -P`</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$basedir</span></span><br></pre></td></tr></table></figure>
+<p>参考：<a href="https://www.cnblogs.com/FlyFive/p/3640267.html" target="_blank" rel="noopener">https://www.cnblogs.com/FlyFive/p/3640267.html</a></p>
+</li>
+<li><p>获取脚本所在目录的绝对路径</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"<span class="variable">$(dirname $(readlink -f "$0")</span>)"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Shell脚本实现检测进程是否正在运行<br><a href="https://www.jb51.net/article/59973.htm" target="_blank" rel="noopener">https://www.jb51.net/article/59973.htm</a><br><a href="https://unix.stackexchange.com/questions/295585/check-for-process-and-kill-if-running" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/295585/check-for-process-and-kill-if-running</a></p>
+</li>
+<li><p>既可以在控制台打印，又可以同时保存到文件</p>
+<ol>
+<li>直接覆盖日志文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tee ./ls.log</span><br></pre></td></tr></table></figure></li>
+<li>向文件中追加<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l | tee -a ./ls.log</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>一次执行多条命令</p>
+<ol>
+<li><p>每个命令之间用<code>;</code>隔开<br>说明：各命令的执行给果，不会影响其它命令的执行。换句话说，各个命令都会执行，但不保证每个命令都执行成功。</p>
+</li>
+<li><p>每个命令之间用<code>&amp;&amp;</code>隔开<br>说明：若前面的命令执行成功，才会去执行后面的命令。这样可以保证所有的命令执行完毕后，执行过程都是成功的。</p>
+</li>
+<li><p>每个命令之间用<code>||</code>隔开<br>说明：<code>||</code>是或的意思，只有前面的命令执行失败后才去执行下一条命令，直到执行成功一条命令为止。</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li>清除历史纪录<br><code>history -c</code><br>历史命令的记录是保存在本地文件的，具体位置为：<code>~/.bash_sessions/</code><br><code>~/.bash_history</code><br>在bash shell命令行状态下，执行 HISTSIZE=0 </li>
+</ul>
+<h2 id="Bash-Profile-配置文件"><a href="#Bash-Profile-配置文件" class="headerlink" title="Bash Profile 配置文件"></a>Bash Profile 配置文件</h2><ul>
+<li>针对当前用户的profile配置文件<br>位置1: <code>~/.bash_profile</code></li>
+</ul>
+<h2 id="自定义终端样式"><a href="#自定义终端样式" class="headerlink" title="自定义终端样式"></a>自定义终端样式</h2><p>对自带终端以及第三方终端都有效果</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set CLICOLOR if you want Ansi Colors in iTerm2</span></span><br><span class="line"><span class="built_in">export</span> CLICOLOR=1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Set colors to match iTerm2 Terminal Colors</span></span><br><span class="line"><span class="built_in">export</span> TERM=xterm-256color</span><br><span class="line"></span><br><span class="line"><span class="comment"># sets up thecolor scheme for list export </span></span><br><span class="line"><span class="built_in">export</span> LSCOLORS=GxFxCxDxBxegedabagaced</span><br><span class="line"></span><br><span class="line"><span class="comment">#sets up theprompt color (currently a green similar to linux terminal) </span></span><br><span class="line"><span class="built_in">export</span> PS1=<span class="string">'\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="【重新整理】别名和环境变量"><a href="#【重新整理】别名和环境变量" class="headerlink" title="【重新整理】别名和环境变量"></a>【重新整理】别名和环境变量</h2><ul>
+<li><p>显示所有定义的别名</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示所有环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">env</span><br><span class="line"><span class="built_in">export</span> <span class="comment"># 显示 export 的变量</span></span><br><span class="line"><span class="built_in">alias</span> <span class="comment"># 显示 alias 的变量</span></span><br><span class="line"><span class="built_in">set</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>显示当前用户的路径变量<br><code>echo $PATH</code></p>
+</li>
+</ul>
+<h3 id="自定义命令别名"><a href="#自定义命令别名" class="headerlink" title="自定义命令别名"></a>自定义命令别名</h3><p>这里主要是用到了 alias 命令。<br>Linux中，需要在<code>bashrc</code>文件中配置。<br>macOS中，需要在<code>.bash_profile</code>文件中配置。<br>具体的添加方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> [别名]=<span class="string">'[指令名称]'</span></span><br><span class="line"><span class="comment"># 例如</span></span><br><span class="line"><span class="built_in">alias</span> ll=<span class="string">'ls -Alh'</span></span><br><span class="line"><span class="built_in">alias</span> hc=<span class="string">'history -c'</span></span><br></pre></td></tr></table></figure>
+<p>修改完之后在终端执行<code>source .bash_profile</code>来重载该配置文件。<br>执行<code>alias</code>来打印当前的 alias 项目。<br>参考：<br><a href="https://www.cnblogs.com/shockerli/p/mac-cmd-alias.html" target="_blank" rel="noopener">https://www.cnblogs.com/shockerli/p/mac-cmd-alias.html</a><br><a href="http://man.linuxde.net/alias" target="_blank" rel="noopener">http://man.linuxde.net/alias</a></p>
+<h3 id="脚本中的变量"><a href="#脚本中的变量" class="headerlink" title="脚本中的变量"></a>脚本中的变量</h3><ul>
+<li><p>脚本的环境变量<br><code>$$</code>Shell本身的PID（ProcessID）<br><code>$!</code>Shell最后运行的后台Process的PID<br><code>$?</code>最后运行的命令的结束代码（返回值）<br><code>$-</code>使用Set命令设定的Flag一览<br><code>$*</code>所有参数列表。如<code>$*</code>用<code>&quot;</code>括起来的情况、以<code>$1 $2 … $n</code>的形式输出所有参数。<br><code>$@</code>所有参数列表。如<code>$@</code>用<code>&quot;</code>括起来的情况、以<code>&quot;$1&quot; &quot;$2&quot; … &quot;$n&quot;</code>的形式输出所有参数。<br><code>$#</code>添加到Shell的参数个数<br><code>$0</code>Shell本身的文件名<br><code>$1～$n</code>添加到Shell的各参数值。$1是第1参数、$2是第2参数…。第10个参数要用<code>${10}</code>取值。<br><code>PWD</code>:大写<code>PWD</code>是一个环境变量，表示当前工作目录。小写<code>pwd</code>是一个命令。<br><code>OLDPWD</code>:一个环境变量，表示上一个工作目录。<br>参考：<br>linux中shell变量<code>$#</code>,<code>$@</code>,<code>$0</code>,<code>$1</code>,<code>$2</code>的含义解释<br><a href="https://www.cnblogs.com/fhefh/archive/2011/04/15/2017613.html" target="_blank" rel="noopener">https://www.cnblogs.com/fhefh/archive/2011/04/15/2017613.html</a></p>
+</li>
+<li><p>Bash默认的环境变量</p>
+<ol>
+<li>BASH ：记录当前bash shell的路径。<br>举例：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost awK]<span class="comment"># echo $BASH</span></span><br><span class="line">/bin/bash</span><br></pre></td></tr></table></figure></li>
+<li>BASH_SUBSHELL  ：记录当前子shell的层次。BASH_SUBSHELL是从0开始计数的整数。</li>
+<li>BASH_VERSINFO  ：是一个数组包含六个元素，这六个元素显示bash的版本信息。</li>
+<li>BASH_VERSION  ：显示shell版本的信息。</li>
+<li>DIRSTACK  ：记录了栈顶的目录值，初值为空。</li>
+<li>GLOBLGNORE ：是由冒号分割的模式列表，表示通配时忽略的文件名集合。</li>
+<li>GROUPS   ：记录当前用户所属的组。</li>
+<li>HOME ：记录当前用户的家目录，由/etc/passwd的倒数第二个域决定。</li>
+<li>HOSTNAME  ：记录主机名。</li>
+<li>HOSTTYPE和MACHTYPE ：都是记录系统的硬件架构。</li>
+<li>IFS  ：用于设置指定shell域分隔符，默认情况下为空格。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost awK]<span class="comment"># export IFS=:</span></span><br><span class="line">[root@localhost awK]<span class="comment"># echo $PATH</span></span><br><span class="line">/usr/<span class="built_in">local</span>/sbin /usr/<span class="built_in">local</span>/bin /sbin /bin/usr/sbin /usr/bin /root/bin</span><br></pre></td></tr></table></figure></li>
+<li>OLDPWD   ：记录旧的工作目录。</li>
+<li>OSTYPE  ：记录操作系统类型。</li>
+<li>PATH  ：环境变量，显示当前PATH环境变量的内容。</li>
+<li>PPID ：是创建当前进程的进程号，即当前进程的父进程号</li>
+<li>PS1  ：提示符变量，用于设置提示符格式，用于设置一级shell提示符环境变量。</li>
+<li>PS2  ：用于设置二级shell提示符环境变量。</li>
+<li>PWD ：记录当前路径</li>
+<li>REPLY  ：REPLY变量与read和select有关。</li>
+<li>SECONDS：记录脚本从开始到结束耗费的时间。</li>
+<li>SHELL ：显示当前所用的shell</li>
+<li>SHELLOPTS  ：记录了处于“开”状态的shell选项列表，它只是一个只读变量。</li>
+<li>SHLVL   ：记录了bash嵌套的层次，一般来说，我们启动第一个Shell时。  $SHLVL=1。如果在这个Shell中执行脚本，脚本中的$SHLVL=2 。</li>
+<li>TMOUT  ：用来设置脚本过期的时间，比如TMOUT=3，表示该脚本3秒后过期。</li>
+<li>UID : 已登用户的ID</li>
+<li>USER ：显示当前用户名字</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">- shell 中的$0 $1 $* $@ $# $$ $? $() $(())</span><br><span class="line">$0: 脚本本身文件名称</span><br><span class="line">$1: 命令行第一个参数，$2为第二个，以此类推</span><br><span class="line">$*: 所有参数列表</span><br><span class="line">$@: 所有参数列表</span><br><span class="line">$#: 参数个数</span><br><span class="line">$$: 脚本运行时的PID</span><br><span class="line">$?: 脚本退出码</span><br><span class="line"></span><br><span class="line">∗与@的区别</span><br><span class="line"></span><br><span class="line">当命令行为test.sh 1 2 3</span><br><span class="line">&quot;$*“表示&quot;1 2 3”</span><br><span class="line">&quot;$@“表示&quot;1” “2” “3”</span><br><span class="line">二者没有被引号括起来时是一样的都为&quot;1 2 3&quot;，只有当被引号括起来后才表现出差异</span><br><span class="line"></span><br><span class="line">$()  等同于： ··（反引号）：运行一段命令</span><br><span class="line">$(()) 进行数字运算 </span><br><span class="line"></span><br><span class="line"># a&#x3D;3;b&#x3D;2;c&#x3D;5</span><br><span class="line"># echo $((a+b*c))</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Shell/" rel="tag"># Shell</a>
+              <a href="/tags/Bash/" rel="tag"># Bash</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/12/07/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2018-12-07-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F-Regular-Expression/" rel="prev" title="正则表达式 Regular Expression">
+      <i class="fa fa-chevron-left"></i> 正则表达式 Regular Expression
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2018/12/11/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2018-12-11-Linux-iptables/" rel="next" title="Linux-iptables">
+      Linux-iptables <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些好的教程"><span class="nav-number">1.</span> <span class="nav-text">一些好的教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键"><span class="nav-number">2.</span> <span class="nav-text">快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些技巧"><span class="nav-number">3.</span> <span class="nav-text">一些技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bash-Profile-配置文件"><span class="nav-number">4.</span> <span class="nav-text">Bash Profile 配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义终端样式"><span class="nav-number">5.</span> <span class="nav-text">自定义终端样式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#【重新整理】别名和环境变量"><span class="nav-number">6.</span> <span class="nav-text">【重新整理】别名和环境变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义命令别名"><span class="nav-number">6.1.</span> <span class="nav-text">自定义命令别名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#脚本中的变量"><span class="nav-number">6.2.</span> <span class="nav-text">脚本中的变量</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">293</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DNACore</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+</body>
+</html>

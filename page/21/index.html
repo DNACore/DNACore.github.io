@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/21/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/21/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/21/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,803 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/16/学习-iOS-2018-11-16-iOS访问相机、相册/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/05/%E5%AD%A6%E4%B9%A0-Shell-2019-03-05-Shell-yum%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/16/学习-iOS-2018-11-16-iOS访问相机、相册/" class="post-title-link" itemprop="url">iOS访问相机、相册</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/03/05/%E5%AD%A6%E4%B9%A0-Shell-2019-03-05-Shell-yum%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">Shell-yum包管理工具</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2018-11-16 11:00:28 / 修改时间：11:08:00" itemprop="dateCreated datePublished" datetime="2018-11-16T11:00:28+08:00">2018-11-16</time>
+              <time title="创建时间：2019-03-05 17:05:02 / 修改时间：17:05:44" itemprop="dateCreated datePublished" datetime="2019-03-05T17:05:02+08:00">2019-03-05</time>
             </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="iOS访问相机、相册"><a href="#iOS访问相机、相册" class="headerlink" title="iOS访问相机、相册"></a>iOS访问相机、相册</h1><ul>
-<li>iOS 9.0 之后使用 PHPhotoLibrary<br>检测访问权限<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/16/学习-iOS-2018-11-16-ARkit/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/16/学习-iOS-2018-11-16-ARkit/" class="post-title-link" itemprop="url">ARkit</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-16 10:53:51 / 修改时间：10:57:29" itemprop="dateCreated datePublished" datetime="2018-11-16T10:53:51+08:00">2018-11-16</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="ARkit"><a href="#ARkit" class="headerlink" title="ARkit"></a>ARkit</h1><ul>
-<li>对ARSCNView进行截图<br><code>ARSCNView</code>继承自<code>SCNView</code>，后者自带一个截图方法<code>- (UIImage *)snapshot</code>。<br>参考：<a href="https://stackoverflow.com/questions/49049992/screenshot-of-arscnview" target="_blank" rel="noopener">https://stackoverflow.com/questions/49049992/screenshot-of-arscnview</a></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/15/电脑技巧-2018-11-15-transfer-sh文件分享/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/15/电脑技巧-2018-11-15-transfer-sh文件分享/" class="post-title-link" itemprop="url">transfer.sh文件分享</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-15 11:03:20" itemprop="dateCreated datePublished" datetime="2018-11-15T11:03:20+08:00">2018-11-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-21 13:37:41" itemprop="dateModified" datetime="2019-05-21T13:37:41+08:00">2019-05-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="transfer-sh文件分享"><a href="#transfer-sh文件分享" class="headerlink" title="transfer.sh文件分享"></a>transfer.sh文件分享</h1><ul>
-<li><p>用命令行上传一个文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --upload-file SceneDetector_Final-1.zip https://transfer.sh/SceneDetector_Final-1.zip</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用命令行上传一个文件，并且显示上传进度</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --progress-bar --upload-file SceneDetector_Final-1.zip https://transfer.sh/SceneDetector_Final-1.zip | tee /dev/null</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷上传</p>
-</li>
-</ul>
-<ol>
-<li><p>将下面代码复制到<code>~/.bash_profile</code>或者<code>~/.bashrc</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># transfer.sh</span></span><br><span class="line"><span class="function"><span class="title">transfer</span></span>() &#123; <span class="keyword">if</span> [ <span class="variable">$#</span> -eq 0 ]; <span class="keyword">then</span> <span class="built_in">echo</span> -e <span class="string">"No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"</span>; <span class="built_in">return</span> 1; <span class="keyword">fi</span></span><br><span class="line">tmpfile=$( mktemp -t transferXXX ); <span class="keyword">if</span> tty -s; <span class="keyword">then</span> basefile=$(basename <span class="string">"<span class="variable">$1</span>"</span> | sed -e <span class="string">'s/[^a-zA-Z0-9._-]/-/g'</span>); curl --progress-bar --upload-file <span class="string">"<span class="variable">$1</span>"</span> <span class="string">"https://transfer.sh/<span class="variable">$basefile</span>"</span> &gt;&gt; <span class="variable">$tmpfile</span>; <span class="keyword">else</span> curl --progress-bar --upload-file <span class="string">"-"</span> <span class="string">"https://transfer.sh/<span class="variable">$1</span>"</span> &gt;&gt; <span class="variable">$tmpfile</span> ; <span class="keyword">fi</span>; cat <span class="variable">$tmpfile</span>; rm -f <span class="variable">$tmpfile</span>; &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>快捷命令上传<br>执行<code>source ~/.bash_profile</code>重载配置。<br>以后上传文件可以直接</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transfer hello.txt</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h2 id="下载文件"><a href="#下载文件" class="headerlink" title="下载文件"></a>下载文件</h2><ul>
-<li>用<code>curl</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl https://transfer.sh/66nb8/hello.txt -o hello.txt</span><br><span class="line">curl -O https://transfer.sh/66nb8/hello.txt</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="加密上传下载"><a href="#加密上传下载" class="headerlink" title="加密上传下载"></a>加密上传下载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Encrypt files with password using gpg</span></span><br><span class="line">$ cat /tmp/hello.txt|gpg -ac -o-|curl -X PUT —upload-file “-“ https://transfer.sh/test.txt</span><br><span class="line"></span><br><span class="line"><span class="comment"># Download and decrypt</span></span><br><span class="line">$ curl https://transfer.sh/1lDau/test.txt|gpg -o- &gt; /tmp/hello.txt</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/09/电脑技巧-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-安装/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/09/电脑技巧-Windows-2018-11-09-WES-7-Windows-Embedded-Standard-7-SP1-安装/" class="post-title-link" itemprop="url">WES 7 - Windows Embedded Standard 7 SP1 安装</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-09 17:47:15" itemprop="dateCreated datePublished" datetime="2018-11-09T17:47:15+08:00">2018-11-09</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-10 16:28:29" itemprop="dateModified" datetime="2019-09-10T16:28:29+08:00">2019-09-10</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="WES-7"><a href="#WES-7" class="headerlink" title="WES 7"></a>WES 7</h1><h2 id="WES-7-安装"><a href="#WES-7-安装" class="headerlink" title="WES 7 安装"></a>WES 7 安装</h2><p><a href="https://lvtao.net/server/windows7-wes7.html" target="_blank" rel="noopener">https://lvtao.net/server/windows7-wes7.html</a></p>
-<h2 id="WES-7-安装-MTP-驱动"><a href="#WES-7-安装-MTP-驱动" class="headerlink" title="WES 7 安装 MTP 驱动"></a>WES 7 安装 MTP 驱动</h2><ol>
-<li>从原始安装镜像中提取<code>WinEmb-INF-wpdmtp.cab</code>程序包，放入<code>MTPDriver</code>文件夹中。</li>
-<li>以管理员身份打开 cmd 命令行，切换到<code>MTPDriver</code>文件夹。</li>
-<li>执行<code>DISM /online /add-package /packagepath:.</code>，命令行最后的点号表示需要添加的程序包就在当前目录下。</li>
-<li>待程序执行完成之后重启电脑即可。</li>
-</ol>
-<h2 id="安装语言包"><a href="#安装语言包" class="headerlink" title="安装语言包"></a>安装语言包</h2><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dism /online /add-package /packagepath:</span><br></pre></td></tr></table></figure>
-
-<h2 id="WES-7-下载"><a href="#WES-7-下载" class="headerlink" title="WES 7 下载"></a>WES 7 下载</h2><p>Windows Embedded Standard 7 SP1 官方下载页面：<br><a href="http://www.microsoft.com/download/en/details.aspx?id=11887" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=11887</a><br>官方WES 7 SP1语言包下载（可独立下载各种多国语言包）：<br>x32: <a href="http://www.microsoft.com/download/en/details.aspx?id=26215" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=26215</a><br>x64: <a href="http://www.microsoft.com/download/en/details.aspx?id=26216" target="_blank" rel="noopener">http://www.microsoft.com/download/en/details.aspx?id=26216</a><br><a href="http://bbs.pcbeta.com/viewthread-834347-1-1.html" target="_blank" rel="noopener">http://bbs.pcbeta.com/viewthread-834347-1-1.html</a></p>
-<ul>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part01.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part01.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part01.exe</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part1.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part1.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part1.exe</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part2.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part2.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part2.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part3.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part3.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part3.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part4.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part4.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part4.rar</a></li>
-<li>Standard_7SP1_32bit\Standard 7 SP1 32bit IBW.part5.rar    Click here    455.2 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part5.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_32bit/Standard%207%20SP1%2032bit%20IBW.part5.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part1.exe    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part1.exe" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part1.exe</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part2.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part2.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part2.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part3.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part3.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part3.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part4.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part4.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part4.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part5.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part5.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part5.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part6.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part6.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part6.rar</a></li>
-<li>Standard_7SP1_64bit\Standard 7 SP1 64bit IBW.part7.rar    Click here    100.2 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part7.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_64bit/Standard%207%20SP1%2064bit%20IBW.part7.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part02.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part02.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part02.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part03.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part03.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part03.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part04.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part04.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part04.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part05.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part05.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part05.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part06.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part06.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part06.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part07.rar    Click here    476.8 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part07.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part07.rar</a></li>
-<li>Standard_7SP1_Toolkit\Standard 7 SP1 Toolkit.part08.rar    Click here    297.1 MB<br>  <a href="http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part08.rar" target="_blank" rel="noopener">http://download.microsoft.com/download/1/B/5/1B5FDE63-DA91-4A22-A320-91E002DE1326/Standard_7SP1_Toolkit/Standard%207%20SP1%20Toolkit.part08.rar</a></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/08/其他开发工具-2018-11-08-Git/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/08/其他开发工具-2018-11-08-Git/" class="post-title-link" itemprop="url">Git</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-08 16:41:20" itemprop="dateCreated datePublished" datetime="2018-11-08T16:41:20+08:00">2018-11-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-21 10:57:36" itemprop="dateModified" datetime="2019-08-21T10:57:36+08:00">2019-08-21</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h1><h2 id="Git-下载安装"><a href="#Git-下载安装" class="headerlink" title="Git 下载安装"></a>Git 下载安装</h2><ul>
-<li>Git For Windows<br><a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></li>
-</ul>
-<h2 id="git-常用命令汇总"><a href="#git-常用命令汇总" class="headerlink" title="git 常用命令汇总"></a>git 常用命令汇总</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git checkout pro //切换到 pro 分支</span><br><span class="line">git pull origin developer //从远程的 developer 分支拉取到当前分支</span><br><span class="line"></span><br><span class="line">git branch //查看分支</span><br><span class="line">git checkout developer //切换到 developer 分支</span><br><span class="line">git reset --hard //重置到最近的提交</span><br><span class="line">git clean -df //删除多余文件和文件夹</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init //直接在当前目录初始化一个 git 仓库</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>将本地已有工程上传到远程仓库<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd existing_repo</span><br><span class="line">git remote rename origin old-origin</span><br><span class="line">git remote add origin https://gitlab.com/IceKey/RSSReader.git</span><br><span class="line">git push -u origin --all</span><br><span class="line">git push -u origin --tags</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="比较好的-GIT-教程"><a href="#比较好的-GIT-教程" class="headerlink" title="比较好的 GIT 教程"></a>比较好的 GIT 教程</h2><p><a href="https://www.cnblogs.com/mliudong/archive/2013/04/08/3007303.html" target="_blank" rel="noopener">https://www.cnblogs.com/mliudong/archive/2013/04/08/3007303.html</a><br><a href="https://www.cnblogs.com/irocker/p/git-reset.html" target="_blank" rel="noopener">https://www.cnblogs.com/irocker/p/git-reset.html</a><br><a href="http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx" target="_blank" rel="noopener">http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx</a></p>
-<h2 id="git-clone"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone</h2><p>从远程克隆仓库。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd 目标文件夹</span><br><span class="line">//将开始从目标文件夹建立git仓库。</span><br><span class="line">git clone https://xxxx.git</span><br><span class="line"></span><br><span class="line">//此种方法，目标文件夹本身即为仓库，与上面的目录位置稍有不同</span><br><span class="line">git clone https://xxxx.git ~/Documents/目标文件夹</span><br></pre></td></tr></table></figure>
-
-<h2 id="git-commit"><a href="#git-commit" class="headerlink" title="git commit"></a>git commit</h2><p>参考：<a href="http://hubingforever.blog.163.com/blog/static/1710405792012314218512/" target="_blank" rel="noopener">http://hubingforever.blog.163.com/blog/static/1710405792012314218512/</a></p>
-<ul>
-<li>git commit  -m “提交的描述信息”<br>如果我们这里不用-m参数的话，git将调到一个文本编译器（通常是vim）来让你输入提交的描述信息<br>可能一天下来，你对工作树中的许多文档都进行了更新（文档添加、修改、删除），但是我忘记了它们的名字，此时若将所做的全部更新添加到索引中，比较轻省的做法就是：</li>
-<li>git commit -a -m “提交的描述信息”<br>git commit 命令的-a 选项可只将所有被修改或者已删除的且已经被git管理的文档提交倒仓库中。如果只是修改或者删除了已被Git 管理的文档，是没必要使用git add 命令的。<br>git add .命令除了能够判断出当前目录（包括其子目录）所有被修改或者已删除的文档，还能判断用户所添加的新文档，并将其信息追加到索引中。</li>
-</ul>
-<h2 id="git-config"><a href="#git-config" class="headerlink" title="git config"></a>git config</h2><p>git 的配置文件，有三个位置。</p>
-<h3 id="config-文件的三个位置"><a href="#config-文件的三个位置" class="headerlink" title="config 文件的三个位置"></a>config 文件的三个位置</h3><p>这三个位置优先级从高到低，前面的设置会覆盖后面的设置：</p>
-<ol>
-<li>位于git目录的config文件 (也就是 <code>.git/config</code>)<br>磨人编辑的是此处的 config 文件，当然，也可以加上<code>--local</code>参数，他们都是指的此处的 config 文件。</li>
-<li>位于<code>~/.gitconfig</code>也就是当前用户的 config 文件。<br><code>--global</code>命令编辑的就是此处的 config 文件。</li>
-<li>位于<code>/etc/gitconfig</code>，当前设备的 config 文件。<br><code>--system</code>命令编辑的就是此处的 config 文件。</li>
-</ol>
-<h3 id="查看全局GIT设置信息"><a href="#查看全局GIT设置信息" class="headerlink" title="查看全局GIT设置信息"></a>查看全局GIT设置信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
-
-<h3 id="git-config-配置命令"><a href="#git-config-配置命令" class="headerlink" title="git config 配置命令"></a>git config 配置命令</h3><p>设置全局用户名 <code>git config --global user.name “YourName”</code><br>设置全局用户邮箱 <code>git config --global user.email “YouEmailAddress”</code><br>设置当前电脑账户用户名 <code>git config --local user.name “YourName”</code><br>设置当前电脑账户邮箱 <code>git config --local user.email “YouEmailAddress”</code><br>设置当前仓库用户名 <code>git config user.name “YourName”</code><br>设置当前仓库邮箱 <code>git config user.email “YouEmailAddress”</code></p>
-<h2 id="git-branch-分支"><a href="#git-branch-分支" class="headerlink" title="git branch 分支"></a>git branch 分支</h2><ul>
-<li>列出所有分支<br><code>git branch -a</code> 远程分支会用不同颜色标出</li>
-<li>列出远程分支<br><code>git branch -r</code> 仅列出远程分支</li>
-<li>删除本地分支<br><code>git branch -d &lt;branchName&gt;</code> 删除本地分支</li>
-<li>删除远程分支<br><code>git push origin --delete &lt;BranchName&gt;</code> 删除远程分支并且立即应用到远程<br>参考：<a href="http://zengrong.net/post/1746.htm" target="_blank" rel="noopener">http://zengrong.net/post/1746.htm</a></li>
-<li>将本地分支推送到远程并且跟踪<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin &lt;BranchName&gt;</span><br><span class="line"><span class="comment">## 例如</span></span><br><span class="line">git push -u origin HHR-DaiNiZhuan-v1.0.0</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="git-stash"><a href="#git-stash" class="headerlink" title="git stash"></a>git stash</h2><ul>
-<li><a href="http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx" target="_blank" rel="noopener">http://www.cppblog.com/deercoder/archive/2011/11/13/160007.aspx</a></li>
-<li><a href="http://www.01happy.com/git-resolve-conflicts/" target="_blank" rel="noopener">http://www.01happy.com/git-resolve-conflicts/</a></li>
-</ul>
-<h2 id="git-remote"><a href="#git-remote" class="headerlink" title="git remote"></a>git remote</h2><h3 id="添加或者更换-remote-url"><a href="#添加或者更换-remote-url" class="headerlink" title="添加或者更换 remote url"></a>添加或者更换 remote url</h3><p>将本地仓库上传到远程<br>参考：<a href="https://help.github.com/articles/changing-a-remote-s-url/" target="_blank" rel="noopener">https://help.github.com/articles/changing-a-remote-s-url/</a></p>
-<ul>
-<li>查看远程 url <code>git remote -v</code></li>
-<li>添加远程仓库(如果仓库已经有远程仓库可以省略) <code>git remote add origin https://gitlab.com/IceKey/SuperSpider.git</code></li>
-<li>设置或者更换远程 url <code>git remote set-url https://gitlab.com/IceKey/SuperSpider.git</code></li>
-<li>添加其他远程仓库 <code>git remote add originOther https://gitlab.com/IceKey2/SuperSpider.git</code></li>
-<li>设置上传分支 <code>git push --set-upstream origin master</code></li>
-</ul>
-<h2 id="git-rebase"><a href="#git-rebase" class="headerlink" title="git rebase"></a>git rebase</h2><ul>
-<li><code>reword</code> 修改某些 commit 的 commit message<br>注：修改最开始的第一个commit 可执行<code>git rebase -i --root</code></li>
-</ul>
-<h2 id="git-rm"><a href="#git-rm" class="headerlink" title="git rm"></a>git rm</h2><ul>
-<li>已经将某些文件添加到版本控制，如何取消追踪这些文件？<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#对于单个文件</span></span><br><span class="line">git rm --cached -- podfile.lock</span><br><span class="line"><span class="comment">#对于整个文件夹 两个横杠代表允许操作文件名以减号开头的文件</span></span><br><span class="line">git rm -r --cached -- Pods/</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>最后，一定要编辑<code>.gitignore</code>并提交。</p>
-<h2 id="git-update-index-忽略已跟踪文件的改动"><a href="#git-update-index-忽略已跟踪文件的改动" class="headerlink" title="git update-index 忽略已跟踪文件的改动"></a>git update-index 忽略已跟踪文件的改动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#忽略已跟踪文件的改动</span></span><br><span class="line">git update-index --assume-unchanged file_path</span><br><span class="line"><span class="comment">#恢复跟踪文件改动</span></span><br><span class="line">git update-index --no-assume-unchanged file_path</span><br></pre></td></tr></table></figure>
-
-<h2 id="git-ls-tree-git仓库文件操作"><a href="#git-ls-tree-git仓库文件操作" class="headerlink" title="git ls-tree git仓库文件操作"></a>git ls-tree git仓库文件操作</h2><ul>
-<li>列出已跟踪文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 只显示名字</span></span><br><span class="line">git ls-tree -r master --name-only</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示完整路径</span></span><br><span class="line">git ls-tree -r master</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="Git-使用技巧"><a href="#Git-使用技巧" class="headerlink" title="Git 使用技巧"></a>Git 使用技巧</h2><ul>
-<li>取消对某个文件的监视<blockquote>
-<p>利用.gitignore过滤文件，如编译过程中的中间文件，等等，这些文件不需要被追踪管理。</p>
-</blockquote>
-</li>
-</ul>
-<p><strong>现象：</strong><br> 在.gitignore添加file1文件，以过滤该文件，但是通过git status查看仍显示file1文件的状态。<br><strong>原因：</strong><br> 在git库中已存在了这个文件，之前push提交过该文件。<br> .gitignore文件只对还没有加入版本管理的文件起作用，如果之前已经用git把这些文件纳入了版本库，就不起作用了<br><strong>解决：</strong><br> 需要在git库中删除该文件，并更新。<br> 然后再次git status查看状态，file1文件不再显示状态。</p>
-<ol>
-<li><p>在git库中删除该文件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached ProjectFolder.xcodeproj/project.xcworkspace/xcuserdata/myUserName.xcuserdatad/UserInterfaceState.xcuserstate</span><br><span class="line">git commit -m "Removed file that shouldn't be tracked"</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在.gitignor文件中添加这个文件名，已测试可以达到效果</p>
-</li>
-</ol>
-<ul>
-<li><p>为单一GIT仓库设置用户信息：</p>
-<ul>
-<li><p>在工程目录的 .git 文件夹里面config添加如下字段即可。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">    name = YOUR-NAME</span><br><span class="line">    email = YOUR-EMAIL-ADDRESS</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>用命令行操作</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"> </span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="git-常见问题"><a href="#git-常见问题" class="headerlink" title="git 常见问题"></a>git 常见问题</h2><ul>
-<li>提示 fatal: Authentication failed for<br>解决步骤：</li>
-</ul>
-<ol>
-<li>设置 git config file 中的 username 和 email</li>
-<li>再次执行 <code>git push</code> 就会提示输入密码</li>
-</ol>
-<ul>
-<li>本地看不到远程建立的分支</li>
-</ul>
-<ol>
-<li><code>git ls-remote origin</code></li>
-<li><code>git fetch</code><br>这样远程的分支就会被更新到本地了。<br>参考：<a href="http://www.guanggua.com/question/12762922-git-cannot-see-new-remote-branch.html" target="_blank" rel="noopener">http://www.guanggua.com/question/12762922-git-cannot-see-new-remote-branch.html</a></li>
-</ol>
-<ul>
-<li>快速删除所有历史记录<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">1. Checkout</span><br><span class="line"></span><br><span class="line">   git checkout --orphan latest_branch</span><br><span class="line"></span><br><span class="line">2. Add all the files</span><br><span class="line"></span><br><span class="line">   git add -A</span><br><span class="line"></span><br><span class="line">3. Commit the changes</span><br><span class="line"></span><br><span class="line">   git commit -am &quot;commit message&quot;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">4. Delete the branch</span><br><span class="line"></span><br><span class="line">   git branch -D master</span><br><span class="line"></span><br><span class="line">5.Rename the current branch to master</span><br><span class="line"></span><br><span class="line">   git branch -m master</span><br><span class="line"></span><br><span class="line">6.Finally, force update your repository</span><br><span class="line"></span><br><span class="line">   git push -f origin master</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="GitHhub-HPPTS-切换为-SSH"><a href="#GitHhub-HPPTS-切换为-SSH" class="headerlink" title="GitHhub HPPTS 切换为 SSH"></a>GitHhub HPPTS 切换为 SSH</h2><ol>
-<li><a href="https://help.github.com/articles/changing-a-remote-s-url/" target="_blank" rel="noopener">https://help.github.com/articles/changing-a-remote-s-url/</a></li>
-<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key" target="_blank" rel="noopener">https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key</a></li>
-</ol>
-<h4 id="问题：是否必须每次添加ssh-add"><a href="#问题：是否必须每次添加ssh-add" class="headerlink" title="问题：是否必须每次添加ssh-add"></a>问题：是否必须每次添加ssh-add</h4><p>参考：<a href="http://blog.csdn.net/wiki_su/article/details/50247551" target="_blank" rel="noopener">http://blog.csdn.net/wiki_su/article/details/50247551</a><br>参考：<a href="https://segmentfault.com/q/1010000000835302/a-1020000000883441" target="_blank" rel="noopener">https://segmentfault.com/q/1010000000835302/a-1020000000883441</a><br>回答：</p>
-<p>首先我得说和 ssh 相关的一切机制的确比较复杂，很容易让人晕头转向，如果你想彻底掌握这个知识体系就必须系统的学习一下相关的知识。所以 first thing first，我推荐一本书给你，不妨抽时间把它一劳永逸了：</p>
-<p><a href="http://book.douban.com/subject/2299605/" target="_blank" rel="noopener">SSH, The Secure Shell</a>，这本书的第一版有中文的。</p>
-<p>接着说你的这个特定的问题。</p>
-<p>你首先得了解一件事：ssh-add 这个命令不是用来永久性的记住你所使用的私钥的。实际上，它的作用只是把你指定的私钥添加到 ssh-agent 所管理的一个 session 当中。而 ssh-agent 是一个用于存储私钥的临时性的 session 服务，也就是说当你重启之后，ssh-agent 服务也就重置了。</p>
-<p>如果是为了永久记住对应的私钥是哪个，我们不能依赖 ssh-agent 服务。能依赖什么则取决于以下哪些方案适合你的使用场景。</p>
-<h5 id="使用某种安全的秘钥管理机制"><a href="#使用某种安全的秘钥管理机制" class="headerlink" title="使用某种安全的秘钥管理机制"></a>使用某种安全的秘钥管理机制</h5><p>你没有在问题里描述你所使用的操作系统，所以我以我日常使用的 Mac OS X 为例。Mac 系统内置了一个 Keychain 的服务及其管理程序，可以方便的帮你管理各种秘钥，其中包括 ssh 秘钥。ssh-add 默认将制定的秘钥添加在当前运行的 ssh-agent 服务中，但是你可以改变这个默认行为让它添加到 keychain 服务中，让 Mac 来帮你记住、管理并保障这些秘钥的安全性。</p>
-<p>你所要做的就是执行下面的命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add -K [path/to/your/ssh-key]</span><br></pre></td></tr></table></figure>
-
-<p>之后，其他的程序请求 ssh 秘钥的时候，会通过 Keychain 服务来请求。下面的截图里你可以看到我当前的机器上 Keychain 为我管理的有关 ssh 的秘钥，这其中包括我自己生成的四个，以及 Github Client App 自己使用的一个——前者几个都是供 ssh 相关的命令所使用，而后者则指明了仅供 Github.app 这个应用程序使用。 另外，它们都是 login keychains 也就是只有当前用户登录之后才会生效的，换了用户或是未登录状态是不能使用的，这就是 Keychain 服务所帮你做的事情。<br><img src="https://segmentfault.com/img/bVdOio" alt></p>
-<h5 id="如何使用多个-ssh-秘钥并对应不同的应用程序？"><a href="#如何使用多个-ssh-秘钥并对应不同的应用程序？" class="headerlink" title="如何使用多个 ssh 秘钥并对应不同的应用程序？"></a>如何使用多个 ssh 秘钥并对应不同的应用程序？</h5><p>这个问题也是我没有完全吃透的，按照某些资料描述，做了以上的工作之后，应用程序应该能够自动匹配适用的 ssh 秘钥了。但是在我学习的过程中也遇到过非得手动指定的情况（那个时候我还不了解 Keychain 的作用，都是手动去 ssh-add 的），于是另外一种机制可以帮你解决这个问题，即 ssh config。</p>
-<p>一言蔽之，ssh config 就是一个配置文件，描述不同的秘钥对应的设置——包括主机名、用户名、访问策略等等。</p>
-<p>以下我截取了本地配置的两个片段：<br><img src="https://segmentfault.com/img/bVdQ2u" alt><br><img src="https://segmentfault.com/img/bVdQ4m" alt></p>
-<p>这两段配置分别对应 Github 和 Coding 这两个服务所使用的秘钥。第一行的 Host 只是一个名字，第三行的 Hostname 才是对应的真实地址，但是两者最好保持一致，这样不用在脑袋里转换。</p>
-<p>用这样的配置，当我 <code>git clone https://github.com/user/repo</code> 的时候，<code>id_rsa</code> 秘钥会被使用，当我 <code>git clone https://coding.net/user/repo</code> 的时候，很显然 <code>nightire</code> 秘钥会被使用。</p>
-<p>当然，此配置不局限于 Git，所有底层使用 SSH 的应用和命令都会遵照配置文件的指示来找到对应的私钥。</p>
-<p>回到本节开始的话题，我相信有了 Keychain 做管理应该是不需要这个配置文件的，但是我还没有机会去做测试。目前的环境一切正常，等到我换新机器重新配置环境的时候我会试一试看。</p>
-<blockquote>
-<p>关于 Host 和 Hostname 的对应关系，如果 Hostname 是域名则最好保持一致。但是这里有两个诀窍：</p>
-<ol>
-<li>如果同一域名下有两个不同的配置怎么办？<br>以 Github 为例，如果我有两个账户，一个个人的，一个组织的，并且要使用不同的秘钥，那么我可以这么写：<br><img src="https://sfault-image.b0.upaiyun.com/660/117/660117451-5463b10575723" alt><br>这里 Host 后面对应的是 Github 的两个用户名，也就是 github.com/nightire 和 github.com/very-geek</li>
-<li>如果域名是数字 IP，是否可以简化呢？<br>Host 可以帮助你把对应的 IP 变成好记的名字。比如说我在公司内部配置了 Git Server（基于 gitolite 或 Gitlab 或任何工具），正常的访问地址是：<code>git://xxx.xxx.xxx.xxx:repo.git</code>，如下的配置则可以帮你把它简化成：<code>git.visionet:repo.git</code><br>非常有用。</li>
-</ol>
-</blockquote>
-<h5 id="有没有简单点的办法？"><a href="#有没有简单点的办法？" class="headerlink" title="有没有简单点的办法？"></a>有没有简单点的办法？</h5><p>有。如果 ssh-add 已经可以满足你的要求（除了启动以后还要再来一遍以外），那么你完全可以用脚本自动化这件事。简单地把你输入的 ssh-add 命令的内容写进 <code>.bashrc</code> 或 <code>.bash_profile</code>（或其他任何你使用的 shell 环境配置文件）中去，这样只要你打开终端，就等于自动做了这件事情。</p>
-<p>不过如我之前所说，这个机制是依赖 ssh-agent 服务的，并且只能在终端下有效。而用 Keychain 机制的话，是整个系统内都有效的（包括不依赖终端的应用程序）并且无需开启 ssh-agent 服务。</p>
-<p>最后 Keychain 服务不是只有 Mac 才有的，我刚才搜索了一下，Windows 和 各种 Linux 都有对应的机制，不过我没用过，只能以 Mac 为例了。了解了这些概念，相信你可以自己查得到具体的方法。</p>
-<h5 id="不同-git-使用不同的-ssh-密钥"><a href="#不同-git-使用不同的-ssh-密钥" class="headerlink" title="不同 git 使用不同的 ssh 密钥"></a>不同 git 使用不同的 ssh 密钥</h5><p><a href="http://blog.csdn.net/wangpingfang/article/details/53117087" target="_blank" rel="noopener">http://blog.csdn.net/wangpingfang/article/details/53117087</a></p>
-<h5 id="错误解决"><a href="#错误解决" class="headerlink" title="错误解决"></a>错误解决</h5><p>测试ssh是否可以正常连接<br><code>ssh -T [A_Host]</code><br>显示测试的debug信息来帮助排查问题<br><code>ssh -vT [A_Host]</code></p>
-<ul>
-<li>Error: Permission denied (publickey)<br><a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="noopener">https://help.github.com/articles/error-permission-denied-publickey/</a></li>
-</ul>
-<h2 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h2><ul>
-<li><code>Warning: Permanently added &#39;gitee.com,120.55.226.24&#39; (ECDSA) to the list of known hosts.</code><br>ssh-agent把域名以及对应的证书信息保存到了本地，对应的文件为<code>~/.ssh/known_hosts</code></li>
-</ul>
-<ul>
-<li><p>提示 Swap file “*.swp” already exists<br>原因：使用vim编辑文件实际是先copy一份临时文件并映射到内存给你编辑， 编辑的是临时文件， 当执行：w后才保存临时文件到原文件，执行：q后才删除临时文件。<br>每次启动检索式否有临时文件， 有则询问如何处理，就会出现如上情景。<br>解决：直接删除 swp 文件即可。</p>
-</li>
-<li><p><code>fatal: pathspec &#39;RInsurance/Pods/lottie-ios/Lottie&#39; did not match any files</code><br>这里<code>Lottie</code>是个空文件夹，这种文件夹是不会被git跟踪的，所以git版本库中没有这个文件夹，导致了从版本库中删除路径发生了错误。<br>网上的解决办法，未尝试：<code>git clean –fd</code>，移除未跟踪的文件夹。</p>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/11/01/学习-ReactNative-2018-11-01-ReactNative-for-iOS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/11/01/学习-ReactNative-2018-11-01-ReactNative-for-iOS/" class="post-title-link" itemprop="url">ReactNative for iOS</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-01 14:27:30" itemprop="dateCreated datePublished" datetime="2018-11-01T14:27:30+08:00">2018-11-01</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2018-11-15 10:53:50" itemprop="dateModified" datetime="2018-11-15T10:53:50+08:00">2018-11-15</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="工程的建立"><a href="#工程的建立" class="headerlink" title="工程的建立"></a>工程的建立</h2><ul>
-<li><p>建立最新版本的 rn 项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native init MyProject</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>建立指定 rn 版本的项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native init MyProject --version 0.55.4</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="添加各种第三方库"><a href="#添加各种第三方库" class="headerlink" title="添加各种第三方库"></a>添加各种第三方库</h2><ul>
-<li>添加 Lottie<br>项目地址：<a href="https://github.com/react-community/lottie-react-native" target="_blank" rel="noopener">https://github.com/react-community/lottie-react-native</a><br>执行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm i --save lottie-react-native</span><br><span class="line">react-native link lottie-ios</span><br><span class="line">react-native link lottie-react-native</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>执行完成之后在<code>General</code>中的<code>Embedded Binaried</code>中添加<code>Lottie.framework</code></p>
-<ul>
-<li>添加 PushNotificationIOS<br>参考：<a href="https://facebook.github.io/react-native/docs/pushnotificationios.html#content" target="_blank" rel="noopener">https://facebook.github.io/react-native/docs/pushnotificationios.html#content</a></li>
-</ul>
-<ol>
-<li><p>Add the following to your Project: <code>node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open node_modules/react-native/Libraries/PushNotificationIOS/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>Add the following to <code>Link Binary With Libraries</code>: <code>libRCTPushNotification.a</code></p>
-</li>
-<li><p>Build Phases 中必须添加的第三方库</p>
-<blockquote>
-<p>libRNDefaultPreference.a<br>libRNFetchBlob.a<br>libBVLinearGradient.a<br>libRNDeviceInfo.a<br>libLottieReactNative.a<br>libLottie.a</p>
-</blockquote>
-</li>
-</ol>
-<h2 id="针对项目中出现的问题"><a href="#针对项目中出现的问题" class="headerlink" title="针对项目中出现的问题"></a>针对项目中出现的问题</h2><ol>
-<li><p>需要删除工程中 SDWebImage 多余的文件引用。</p>
-</li>
-<li><p><code>Header Search Paths</code> 添加`”$(SRCROOT)/RARTools/DevelopPack/RDPImage/Vendor/SDWebImage/SDWebImage”</p>
-</li>
-<li><p>缺少 Lottie.h SDWebImage.h 的头文件<br>Build Phases -&gt; 添加 -&gt; 重命名为 Embed Frameworks -&gt; 添加 Lottie.framework 和 SDWebImage.framework</p>
-</li>
-<li><p><code>Cycle in dependencies between targets &#39;Lottie_iOS&#39; and &#39;LottieReactNative&#39;</code><br>解决：<a href="https://github.com/react-community/lottie-react-native/issues/385" target="_blank" rel="noopener">https://github.com/react-community/lottie-react-native/issues/385</a></p>
-</li>
-<li><p><code>Error: Couldn&#39;t find preset &quot;module:metro-react-native-babel-preset&quot;</code><br>解决办法：</p>
-<ol>
-<li><code>npm i metro-react-native-babel-preset --save-dev</code></li>
-<li>修改<code>.babelrc</code>文件<br>将其中的<code>&quot;presets&quot;: [&quot;module:metro-react-native-babel-preset&quot;]</code>修改为<code>&quot;presets&quot;: [&quot;react-native&quot;]</code></li>
-</ol>
-</li>
-</ol>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
-<li><p>链接图片目录</p>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s ./ios/RARTools/assets/Img ./Img</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/31/Xcode与调试-2018-10-31-Xcode编译时问题/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/10/31/Xcode与调试-2018-10-31-Xcode编译时问题/" class="post-title-link" itemprop="url">Xcode编译时问题</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-31 17:36:35" itemprop="dateCreated datePublished" datetime="2018-10-31T17:36:35+08:00">2018-10-31</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-04 17:38:36" itemprop="dateModified" datetime="2019-09-04T17:38:36+08:00">2019-09-04</time>
-              </span>
-            
-          
 
           
 
@@ -1025,56 +218,9 @@
 
       
           <ul>
-<li><p>This block declaration is not a prototype<br>关于 block 的声明与实现语法在Xcode 9中好像有改变。<br>以下为修改示例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- (void)exportAsynchronouslyWithCompletionHandler:(void (^)())handler;</span><br><span class="line">//改为</span><br><span class="line">//block无参数的时候要传一个void形参</span><br><span class="line">- (void)exportAsynchronouslyWithCompletionHandler:(void (^)(void))handler;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>Block implicitly retains &#39;self&#39;; explicitly mention &#39;self&#39; to indicate this is intended behavior</code><br>即使不会造成循环引用的block，在引用属性的时候也会有这个警告。<br>可以在 Build Settings 里面设置 <code>CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = NO</code>，或者在编译的时候加上<code>-Wimplicit-retain-self</code>参数来屏蔽这个警告。<br>解释：在我们使用 <code>_iVar</code> 实例变量的时候，编译器会自动帮我们替换为 <code>self-&gt;_iVar</code>，当我们在block中使用<code>_iVar</code>的时候，block就会捕获self了。这个警告就是告诉开发者编译器到底做了什么的。<br>参考：<a href="https://stackoverflow.com/questions/21577711/block-implicitly-retains-self-explicitly-mention-self-to-indicate-this-is-i" target="_blank" rel="noopener">https://stackoverflow.com/questions/21577711/block-implicitly-retains-self-explicitly-mention-self-to-indicate-this-is-i</a></p>
-</li>
+<li>升级所有程序包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y update</span><br></pre></td></tr></table></figure></li>
 </ul>
-<ul>
-<li><p>react native 项目编译时报错</p>
-<blockquote>
-<p>error: Build input file cannot be found: ‘/Users/username/Documents/Project/HouseGuard/node_modules/react-native/third-party/double-conversion-1.1.6/src/bignum.cc’<br>:-1: Build input file cannot be found: ‘/Users/username/Documents/Project/HouseGuard/node_modules/react-native/third-party/double-conversion-1.1.6/src/strtod.cc’<br>:-1: Build input file cannot be found: ‘/Users/username/Documents/Project/HouseGuard/node_modules/react-native/third-party/double-conversion-1.1.6/src/strtod.cc’<br>:-1: Build input file cannot be found: ‘/Users/username/Documents/Project/HouseGuard/node_modules/react-native/third-party/double-conversion-1.1.6/src/bignum-dtoa.cc’<br>:-1: Build input file cannot be found: ‘/Users/username/Documents/Project/HouseGuard/node_modules/react-native/third-party/double-conversion-1.1.6/src/fixed-dtoa.cc’</p>
-</blockquote>
-</li>
-</ul>
-<p>解决方案</p>
-<ul>
-<li><p>针对 rn 0.56 及其以上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ReactNativeProjectDir</span><br><span class="line"><span class="built_in">cd</span> node_modules/react-native/scripts &amp;&amp; ./ios-install-third-party.sh &amp;&amp; <span class="built_in">cd</span> ../../../</span><br><span class="line"><span class="built_in">cd</span> node_modules/react-native/third-party/glog-0.3.5/ &amp;&amp; ../../scripts/ios-configure-glog.sh</span><br><span class="line"><span class="built_in">cd</span> ../../../../</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>针对 rn 0.55.4</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ReactNativeProjectDir</span><br><span class="line"><span class="built_in">cd</span> node_modules/react-native &amp;&amp; ./scripts/ios-install-third-party.sh &amp;&amp; <span class="built_in">cd</span> ../../</span><br><span class="line"><span class="built_in">cd</span> node_modules/react-native/third-party/glog-0.3.4/ &amp;&amp; ../../scripts/ios-configure-glog.sh</span><br><span class="line"><span class="built_in">cd</span> ../../../../</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<p>参考：<a href="https://yq.aliyun.com/articles/658513?spm=0.11153940.0.0.436218b4Fytv3u" target="_blank" rel="noopener">https://yq.aliyun.com/articles/658513?spm=0.11153940.0.0.436218b4Fytv3u</a></p>
-<ul>
-<li>Undefined symbols for architecture …<blockquote>
-<p>Undefined symbols for architecture x86_64:<br>“_res_9_ninit”, referenced from: +[UIDevice(RHardware) getDNSAddressesStr] in UIDevice+RHardware.o<br>ld: symbol(s) not found for architecture x86_64<br>clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
-</blockquote>
-</li>
-</ul>
-<p>解决：<br>Tagets -&gt; Bulid Phases -&gt; Link Binary With Libraries + libresolv.tbd</p>
-<ul>
-<li><p><code>Build input file cannot be found: &#39;libfishhook.a&#39;</code><br><img src="/images/QQ20181113-103705.png" alt><br>解决：<a href="https://github.com/facebook/react-native/issues/19569" target="_blank" rel="noopener">https://github.com/facebook/react-native/issues/19569</a></p>
-</li>
-<li><p><code>unable to find utility &quot;simctl&quot;</code><br>在 Xcode -&gt; Preferences -&gt; Locations -&gt; Command Line Tools 设置好就行。</p>
-</li>
-<li><p><code>ProvidentFund has conflicting provisioning settings.</code></p>
-<ul>
-<li><p>问题现象：在一个老项目中打开了 Xcode 的自动签名设置，此时提示<code>ProvidentFund has conflicting provisioning settings.</code></p>
-<blockquote>
-<p>ProvidentFund is automatically signed, but provisioning profile 35db89b9-1a37-4291-bf45-2045d0632369 has been manually specified. Set the provisioning profile value to “Automatic” in the build settings editor, or switch to manual signing in the project editor.</p>
-</blockquote>
-<p>查看 Build Settings 中 的Sign 部分发现的确是 Atomic<br><img src="/images/2018-10-31-Xcode%E7%BC%96%E8%AF%91%E6%97%B6%E9%97%AE%E9%A2%98/2018-10-31-Xcode%E7%BC%96%E8%AF%91%E6%97%B6%E9%97%AE%E9%A2%98-ProvisionProfileStatus.png" alt></p>
-</li>
-</ul>
-</li>
-</ul>
-<p>问题分析：自动签名设置和手动签名设置冲突了。<br>解决方案：Build Settings 中搜索 <code>PROVISIONING_PROFILE</code>，把所有搜到的结果全部删除。<br>    <img src="/images/2018-10-31-Xcode%E7%BC%96%E8%AF%91%E6%97%B6%E9%97%AE%E9%A2%98/2018-10-31-Xcode%E7%BC%96%E8%AF%91%E6%97%B6%E9%97%AE%E9%A2%98-ProvisionProfileSetting.png" alt><br>解决结果：问题解决<br>评论：参考：<a href="https://stackoverflow.com/questions/42885122/xcode-has-conflicting-provisioning-settings" target="_blank" rel="noopener">https://stackoverflow.com/questions/42885122/xcode-has-conflicting-provisioning-settings</a></p>
-
-        
       
     </div>
 
@@ -1082,259 +228,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/31/学习-Shell-2018-10-31-Shell-tar打包解包命令/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/05/%E5%AD%A6%E4%B9%A0-Shell-2019-03-05-Shell-wget%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/10/31/学习-Shell-2018-10-31-Shell-tar打包解包命令/" class="post-title-link" itemprop="url">Shell-tar打包解包命令</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/03/05/%E5%AD%A6%E4%B9%A0-Shell-2019-03-05-Shell-wget%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Shell-wget命令</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2018-10-31 10:48:46" itemprop="dateCreated datePublished" datetime="2018-10-31T10:48:46+08:00">2018-10-31</time>
+              <time title="创建时间：2019-03-05 17:04:00 / 修改时间：17:04:24" itemprop="dateCreated datePublished" datetime="2019-03-05T17:04:00+08:00">2019-03-05</time>
             </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-04-15 13:45:09" itemprop="dateModified" datetime="2019-04-15T13:45:09+08:00">2019-04-15</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><a href="http://man.linuxde.net/tar" target="_blank" rel="noopener">http://man.linuxde.net/tar</a></p>
-<ul>
-<li><p>常用命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 压缩：</span></span><br><span class="line">tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称</span><br><span class="line"><span class="comment"># 查询：</span></span><br><span class="line">tar -jtv -f filename.tar.bz2</span><br><span class="line"><span class="comment"># 解压缩：</span></span><br><span class="line">tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>测试 <code>*.tar</code> 文件完整性</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -tf /root/archive.tar</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="打包文件"><a href="#打包文件" class="headerlink" title="打包文件"></a>打包文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf log.tar log2012.log    <span class="comment"># 仅打包，不压缩！ </span></span><br><span class="line">tar -zcvf log.tar.gz log2012.log   <span class="comment"># 打包后，以 gzip 压缩 </span></span><br><span class="line">tar -jcvf log.tar.bz2 log2012.log  <span class="comment"># 打包后，以 bzip2 压缩</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>打包后不保存全路径<br><code>-C</code>后面跟需要打包的路径，意为指定tar工作的目录，最后的<code>.</code>表示打包当前目录。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tar -cjf site1.tar.bz2 -C /var/www/site1 .</span><br><span class="line"><span class="comment"># 例如打包 Xcode 的 iOS SDK</span></span><br><span class="line">tar -zcvf iPhoneOS.sdk.tar.gz -C /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk .</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tar解压到指定文件夹</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf com.jianshu.Hugo.tar -C ./com.jianshu.Hugo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>打包 Hexo 博客文件夹并且排除node_modules文件夹<br><code>--exclude</code>选项必须要在前面</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar --exclude node_modules -zcvf XXX.github.io.tar.gz XXX.github.io</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更多示例</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打包解包 gzip 压缩的 tar 文件</span></span><br><span class="line">tar -zcvf log.tar.gz log2012.log   <span class="comment"># 打包后，以 gzip 压缩</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/23/学习-Python-2018-10-23-Python中int，str，bytes，bytearray的相互转换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/10/23/学习-Python-2018-10-23-Python中int，str，bytes，bytearray的相互转换/" class="post-title-link" itemprop="url">Python中int，str，bytes，bytearray的相互转换</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-23 15:57:01" itemprop="dateCreated datePublished" datetime="2018-10-23T15:57:01+08:00">2018-10-23</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-02-22 17:43:00" itemprop="dateModified" datetime="2019-02-22T17:43:00+08:00">2019-02-22</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="int-转-bytes"><a href="#int-转-bytes" class="headerlink" title="int 转 bytes"></a>int 转 bytes</h2><ul>
-<li><p>hex(10)</p>
-<blockquote>
-<blockquote>
-<p>0xa</p>
-</blockquote>
-</blockquote>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2018/10/18/Java-JRE-JDK/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2018/10/18/Java-JRE-JDK/" class="post-title-link" itemprop="url">Java,JRE,JDK</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-18 16:27:26" itemprop="dateCreated datePublished" datetime="2018-10-18T16:27:26+08:00">2018-10-18</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-13 10:56:41" itemprop="dateModified" datetime="2019-08-13T10:56:41+08:00">2019-08-13</time>
-              </span>
-            
-          
 
           
 
@@ -1348,13 +279,9 @@
 
       
           <ul>
-<li><p>卸载 Java<br><a href="https://java.com/en/download/help/mac_uninstall_java.xml" target="_blank" rel="noopener">https://java.com/en/download/help/mac_uninstall_java.xml</a></p>
-</li>
-<li><p>卸载 JDK<br><code>sudo rm -rf /Library/Java/JavaVirtualMachines/jdkmajor.minor.macro[_update].jdk</code><br><a href="https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html#A1096903" target="_blank" rel="noopener">https://docs.oracle.com/javase/8/docs/technotes/guides/install/mac_jdk.html#A1096903</a></p>
-</li>
+<li>wget 可以下载整个网站</li>
 </ul>
 
-        
       
     </div>
 
@@ -1362,36 +289,662 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/05/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-03-05-npm%E5%92%8Cnodejs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/05/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-03-05-npm%E5%92%8Cnodejs/" class="post-title-link" itemprop="url">npm和nodejs</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-03-05 17:02:35" itemprop="dateCreated datePublished" datetime="2019-03-05T17:02:35+08:00">2019-03-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-07-05 15:22:07" itemprop="dateModified" datetime="2019-07-05T15:22:07+08:00">2019-07-05</time>
+              </span>
+
+          
+
+        </div>
+      </header>
 
     
-  </div>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h2><p><a href="/2019/04/04/其他开发工具-2019-04-04-Yarn-包管理器/">查看yarn包管理工具</a></p>
+<h2 id="Windows-安装-node-js-绿色版"><a href="#Windows-安装-node-js-绿色版" class="headerlink" title="Windows 安装 node.js 绿色版"></a>Windows 安装 node.js 绿色版</h2><ol>
+<li><p>下载好绿色版压缩包<br><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">https://nodejs.org/en/download/</a></p>
+</li>
+<li><p>将压缩包所有文件解压到某个文件夹内</p>
+</li>
+<li><p>在系统属性的环境变量里填入上一步解压到的文件夹路径。</p>
+</li>
+<li><p>直接打开 cmd 输入 npm 看看是否有响应。</p>
+</li>
+</ol>
+<h3 id="与绿色版-node-js-有关的路径和文件"><a href="#与绿色版-node-js-有关的路径和文件" class="headerlink" title="与绿色版 node.js 有关的路径和文件"></a>与绿色版 node.js 有关的路径和文件</h3><ul>
+<li><p>缓存：<br><code>%APPDATA%\npm-cache\</code></p>
+</li>
+<li><p>配置文件路径<br><code>&quot;C:\Users\[用户名]\.npmrc&quot;</code></p>
+</li>
+</ul>
+<h2 id="npm使用"><a href="#npm使用" class="headerlink" title="npm使用"></a>npm使用</h2><ul>
+<li>设置下载镜像</li>
+</ul>
+<ol>
+<li><p>通过命令设置<br>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</li>
+<li><p>编辑 .npmrc<br>registry = <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
+</li>
+</ol>
+<ul>
+<li><p>npm 源管理工具 – nrm</p>
+</li>
+<li><p>npm 配置文件管理<br><a href="https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html" target="_blank" rel="noopener">https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html</a></p>
+</li>
+<li><p>npm 设置网络代理<br><a href="https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html" target="_blank" rel="noopener">https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html</a></p>
+</li>
+</ul>
+<h2 id="npm-更新"><a href="#npm-更新" class="headerlink" title="npm 更新"></a>npm 更新</h2><ul>
+<li><p>更新 npm 到最新版本<br>npm i npm@latest -g<br>或者<br>npm install -g npm</p>
+</li>
+<li><p>更新 npm 到指定版本<br>npm -g install <a href="mailto:npm@5.6.0">npm@5.6.0</a></p>
+</li>
+<li><p>npm 源管理工具 nrm </p>
+</li>
+<li><p>nrm ls 列出源</p>
+</li>
+<li><p>nrm use XXX 使用源</p>
+</li>
+</ul>
+<h3 id="第三方包管理更新"><a href="#第三方包管理更新" class="headerlink" title="第三方包管理更新"></a>第三方包管理更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装 npm-check</span></span><br><span class="line">npm i npm-check</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查更新</span></span><br><span class="line">npm-check</span><br><span class="line"></span><br><span class="line"><span class="comment"># 交互式更新</span></span><br><span class="line">npm-check -u</span><br></pre></td></tr></table></figure>
+
+<h2 id="npm-缓存相关"><a href="#npm-缓存相关" class="headerlink" title="npm 缓存相关"></a>npm 缓存相关</h2><ul>
+<li><code>npm cache verify</code> 校验缓存</li>
+<li><code>npm cache clean --force</code> 强制清空缓存</li>
+<li><code>npm install --cache /tmp/empty-cache</code> 指定临时缓存目录</li>
+</ul>
+<h2 id="npm-start-命令"><a href="#npm-start-命令" class="headerlink" title="npm start 命令"></a>npm start 命令</h2><p>执行此命令后会运行<code>package.json</code>脚本中的<code>scripts/start</code>代码，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "start": "node node_modules/react-native/local-cli/cli.js start",</span><br><span class="line">  "test": "jest"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="清空-React-Native-缓存"><a href="#清空-React-Native-缓存" class="headerlink" title="清空 React Native 缓存"></a>清空 React Native 缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm start -- --reset-cache</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/03/04/%E5%AD%A6%E4%B9%A0-iOS-2019-03-04-iOS-%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%87%BA%E7%8E%B0%E8%BD%AC%E7%A7%BB%E7%AC%A6%E5%8F%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/03/04/%E5%AD%A6%E4%B9%A0-iOS-2019-03-04-iOS-%E9%81%BF%E5%85%8D%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%87%BA%E7%8E%B0%E8%BD%AC%E7%A7%BB%E7%AC%A6%E5%8F%B7/" class="post-title-link" itemprop="url">iOS-避免正则表达式出现转移符号</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-03-04 10:35:59 / 修改时间：10:37:07" itemprop="dateCreated datePublished" datetime="2019-03-04T10:35:59+08:00">2019-03-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#ifndef REGEXP</span><br><span class="line"># define _regexp_stringify(x)       #x</span><br><span class="line"># define _regexp_stringify2(x)      _regexp_stringify(x)</span><br><span class="line"># define _regexp(...)               (&#123; const char *str &#x3D; _regexp_stringify2(# __VA_ARGS__); const size_t length &#x3D; strlen(str); [[NSString alloc] initWithBytes:str + 1 length:length - 2 encoding:NSUTF8StringEncoding]; &#125;)</span><br><span class="line"># define REGEXP(...)                [NSRegularExpression regularExpressionWithPattern:_regexp(__VA_ARGS__) options:0 error:NULL]</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">NSNSRegularExpression *reg &#x3D; REGEXP(^1\d&#123;10&#125;$);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/27/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-02-27-glob%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/27/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-02-27-glob%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84%E5%8C%B9%E9%85%8D%E8%A7%84%E5%88%99/" class="post-title-link" itemprop="url">glob文件路径匹配规则</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-02-27 20:40:18 / 修改时间：20:58:23" itemprop="dateCreated datePublished" datetime="2019-02-27T20:40:18+08:00">2019-02-27</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><a href="https://www.jianshu.com/p/91eb8d81da64" target="_blank" rel="noopener">https://www.jianshu.com/p/91eb8d81da64</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/27/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-02-27-CocoaPods-%E5%8D%95%E7%8B%AC%E4%BF%AE%E6%94%B9Debug%E6%88%96%E8%80%85Release%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84Build-Settings/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/27/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-02-27-CocoaPods-%E5%8D%95%E7%8B%AC%E4%BF%AE%E6%94%B9Debug%E6%88%96%E8%80%85Release%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84Build-Settings/" class="post-title-link" itemprop="url">CocoaPods-单独修改Debug或者Release模式下的Build Settings</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-27 11:17:18" itemprop="dateCreated datePublished" datetime="2019-02-27T11:17:18+08:00">2019-02-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-04-03 16:27:20" itemprop="dateModified" datetime="2019-04-03T16:27:20+08:00">2019-04-03</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>最近开发的时候遇到了一个问题，某些pod库在不同编译模式下所需要的编译选项或者 BuildSettings 不同，比如说 Release 模式下<code>GCC_GENERATE_TEST_COVERAGE_FILES</code>为<code>NO</code>，但是 Debug 模式下为<code>YES</code>。<br>我们不可能每次<code>pod install</code>完成之后手动去修改。<br>其实修改Podfile就可以达到想要的目的。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">post_install <span class="keyword">do</span> <span class="params">|installer|</span></span><br><span class="line">      installer.pods_project.targets.each <span class="keyword">do</span> <span class="params">|target|</span></span><br><span class="line">          target.build_configurations.each <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">              <span class="keyword">if</span> (target.name == <span class="string">'APAddressBook'</span> <span class="params">||</span> target.name == <span class="string">'CocoaLumberjack'</span>)</span><br><span class="line">                  <span class="keyword">if</span> (config.name == <span class="string">'Debug'</span>)</span><br><span class="line">                    config.build_settings[<span class="string">'GCC_GENERATE_TEST_COVERAGE_FILES'</span>] = <span class="string">'YES'</span></span><br><span class="line">                    config.build_settings[<span class="string">'GCC_INSTRUMENT_PROGRAM_FLOW_ARCS'</span>] = <span class="string">'YES'</span></span><br><span class="line">                <span class="keyword">end</span></span><br><span class="line">              <span class="keyword">end</span></span><br><span class="line">          <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>如果主工程有多个BuildConfiguration，并且把主工程对应的BuildSettings -&gt; Preprosessor Macros 加入<code>DEBUG=1</code>，对于加入的pod库是不会起作用的。也就是说使用这个BuildConfiguration，只有主功程能进行debug调试，而加入的第三方库不能。需要对pod库进行单独设置。或者直接修改Podfiles，来执行脚本进行安装时自动设置。下面是脚本。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">post_install <span class="keyword">do</span> <span class="params">|installer_representation|</span></span><br><span class="line">    installer_representation.pods_project.targets.each <span class="keyword">do</span> <span class="params">|target|</span></span><br><span class="line">        target.build_configurations.each <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">            <span class="keyword">if</span> config.name != <span class="string">'Release'</span></span><br><span class="line">                config.build_settings[<span class="string">'GCC_PREPROCESSOR_DEFINITIONS'</span>] <span class="params">||</span>= [<span class="string">'$(inherited)'</span>, <span class="string">'DEBUG=1'</span>]</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>关闭Pod库的编译优化</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">post_install <span class="keyword">do</span> <span class="params">|installer|</span></span><br><span class="line">    installer.pods_project.targets.each <span class="keyword">do</span> <span class="params">|target|</span></span><br><span class="line">        target.build_configurations.each <span class="keyword">do</span> <span class="params">|config|</span></span><br><span class="line">                <span class="keyword">if</span> (config.name == <span class="string">'Debug'</span>)</span><br><span class="line">                    config.build_settings[<span class="string">'GCC_OPTIMIZATION_LEVEL'</span>] = <span class="string">'0'</span></span><br><span class="line">                <span class="keyword">end</span></span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>禁止生成 dSYM 文件</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">config.build_settings[<span class="string">'DEBUG_INFORMATION_FORMAT'</span>] = <span class="string">'dwarf'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>如果要复制debug模式下的环境，推荐加上如下设置</strong></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Code Coverage Start</span></span><br><span class="line">config.build_settings[<span class="string">'GCC_GENERATE_TEST_COVERAGE_FILES'</span>] = <span class="string">'YES'</span></span><br><span class="line">config.build_settings[<span class="string">'GCC_INSTRUMENT_PROGRAM_FLOW_ARCS'</span>] = <span class="string">'YES'</span></span><br><span class="line"><span class="comment"># Code Coverage End</span></span><br><span class="line"></span><br><span class="line">config.build_settings[<span class="string">'GCC_PREPROCESSOR_DEFINITIONS'</span>] <span class="params">||</span>= [<span class="string">'$(inherited)'</span>, <span class="string">'DEBUG=1'</span>]</span><br><span class="line">config.build_settings[<span class="string">'GCC_OPTIMIZATION_LEVEL'</span>] = <span class="string">'0'</span></span><br><span class="line">config.build_settings[<span class="string">'DEBUG_INFORMATION_FORMAT'</span>] = <span class="string">'dwarf'</span></span><br><span class="line">config.build_settings[<span class="string">'VALIDATE_PRODUCT'</span>] = <span class="string">'NO'</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/25/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-02-25-Windows7%E5%9C%A8%E5%AE%89%E5%85%A8%E7%A7%BB%E9%99%A4USB%E8%AE%BE%E5%A4%87%E5%90%8E%E8%87%AA%E5%8A%A8%E5%88%87%E6%96%AD%E5%85%B6%E7%94%B5%E6%BA%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/25/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-02-25-Windows7%E5%9C%A8%E5%AE%89%E5%85%A8%E7%A7%BB%E9%99%A4USB%E8%AE%BE%E5%A4%87%E5%90%8E%E8%87%AA%E5%8A%A8%E5%88%87%E6%96%AD%E5%85%B6%E7%94%B5%E6%BA%90/" class="post-title-link" itemprop="url">Windows7在安全移除USB设备后自动切断其电源</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-02-25 14:30:40 / 修改时间：14:38:19" itemprop="dateCreated datePublished" datetime="2019-02-25T14:30:40+08:00">2019-02-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>定位到如下注册表位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub</span><br></pre></td></tr></table></figure></li>
+<li>在<code>usbhub</code>里面新建一个键值项<code>hubg</code></li>
+<li>Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty right pane and select New &gt;&gt; DWORD (32-bit) Value.</li>
+<li>Now open up the new DWORD and change the value data to 1 – Hexadecimal. You can do this by double-clicking the DWORD or right-click it and selecting Modify. Click OK to save and exit.</li>
+</ol>
+<p>参考：<br><a href="https://www.groovypost.com/howto/windows-safely-remove-usb-devices-power-off/" target="_blank" rel="noopener">https://www.groovypost.com/howto/windows-safely-remove-usb-devices-power-off/</a><br><a href="https://support.microsoft.com/zh-cn/help/2401954/usb-port-remains-active-for-disabled-or-safely-removed-usb-device" target="_blank" rel="noopener">https://support.microsoft.com/zh-cn/help/2401954/usb-port-remains-active-for-disabled-or-safely-removed-usb-device</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/25/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-02-25-smartmontools-%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/25/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-02-25-smartmontools-%E7%A1%AC%E7%9B%98%E4%BF%A1%E6%81%AF%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">smartmontools-硬盘S.M.A.R.T信息工具</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-02-25 11:28:16" itemprop="dateCreated datePublished" datetime="2019-02-25T11:28:16+08:00">2019-02-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-14 14:53:49" itemprop="dateModified" datetime="2020-01-14T14:53:49+08:00">2020-01-14</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
+<li>Windows</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
+<li><p>扫描所有设备</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smartctl --scan</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>APM参数管理</p>
+</li>
+</ul>
+<ol>
+<li><p>读取APM参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smartctl -g apm disk0</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置APM</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smartctl -s apm off disk0</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li>更新数据库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数</span></span><br><span class="line"><span class="comment"># 安装 gpg 命令： brew install gpg</span></span><br><span class="line">update-smart-drivedb --no-verify</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+<h2 id="查看硬盘SMART信息"><a href="#查看硬盘SMART信息" class="headerlink" title="查看硬盘SMART信息"></a>查看硬盘SMART信息</h2><ol>
+<li><p>找出电脑中都有哪些磁盘设备<br>参考：<a href="/2019/04/04/电脑技巧-macOS-2019-04-04-macOS-列出所有已挂在的磁盘和分区信息">macOS磁盘设备列表</a></p>
+</li>
+<li><p>列出 disk0 的磁盘信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smartctl -a disk0</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/25/%E5%AD%A6%E4%B9%A0-CMD%E5%92%8CPowerShell-2019-02-25-Windows-CMD-dir%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/25/%E5%AD%A6%E4%B9%A0-CMD%E5%92%8CPowerShell-2019-02-25-Windows-CMD-dir%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Windows-CMD-dir命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-02-25 10:21:39 / 修改时间：10:26:21" itemprop="dateCreated datePublished" datetime="2019-02-25T10:21:39+08:00">2019-02-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li>列出文件夹内所有内容  <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir /ad /s /b f:\</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>/ad</code></li>
+<li><code>/s</code>:显示子文件夹</li>
+<li><code>/b</code>:</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/25/%E5%AD%A6%E4%B9%A0-CMD%E5%92%8CPowerShell-2019-02-25-Windows-CMD-echo%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/02/25/%E5%AD%A6%E4%B9%A0-CMD%E5%92%8CPowerShell-2019-02-25-Windows-CMD-echo%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Windows-CMD-echo命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-02-25 10:13:25 / 修改时间：10:32:02" itemprop="dateCreated datePublished" datetime="2019-02-25T10:13:25+08:00">2019-02-25</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><code>echo.</code><br>输出空行，即相当于输入一个回车<br>值得注意的是命令行中的“．”要紧跟在ECHO后面中间不能有空格，否则<code>.</code>将被当作提示信息输出到屏幕。另外<code>.</code>可以用<code>，：；”／[/]＋</code>等任一符号替代。<br>在下面的例子中<code>ECHO.</code>输出的回车，经DOS管道转向作为<code>TIME</code>命令的输入，即相当于在TIME命令执行后给出一个回车。所以执行时系统会在显示当前时间后，自动返回到DOS提示符状态：<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:&gt;ECHO.|TIME</span><br></pre></td></tr></table></figure>
+ECHO命令输出空行的另一个应用实例是：将<code>ECHO.</code>加在自动批处理文件中，使原本在屏幕下方显示的提示画面，出现在屏幕上方。</li>
+</ul>
+<p>参考：<a href="https://blog.csdn.net/guyue35/article/details/49530845" target="_blank" rel="noopener">https://blog.csdn.net/guyue35/article/details/49530845</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/20/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/20/">20</a><span class="page-number current">21</span><a class="page-number" href="/page/22/">22</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/22/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1416,30 +969,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1453,17 +999,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1474,50 +1026,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

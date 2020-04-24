@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/3/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/3/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/3/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,55 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/学习-Python-2019-09-05-Python-代码中字符串的多行写法/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/03/%E5%AD%A6%E4%B9%A0-iOS-2020-01-03-iOS-HEX-16%E8%BF%9B%E5%88%B6%E4%B8%8ENSString%E4%BA%92%E8%BD%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/05/学习-Python-2019-09-05-Python-代码中字符串的多行写法/" class="post-title-link" itemprop="url">Python-代码中字符串的多行写法</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/03/%E5%AD%A6%E4%B9%A0-iOS-2020-01-03-iOS-HEX-16%E8%BF%9B%E5%88%B6%E4%B8%8ENSString%E4%BA%92%E8%BD%AC/" class="post-title-link" itemprop="url">iOS-HEX 16进制与NSString互转</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-09-05 13:50:09 / 修改时间：13:50:34" itemprop="dateCreated datePublished" datetime="2019-09-05T13:50:09+08:00">2019-09-05</time>
+              <time title="创建时间：2020-01-03 18:45:37 / 修改时间：18:48:13" itemprop="dateCreated datePublished" datetime="2020-01-03T18:45:37+08:00">2020-01-03</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -276,11 +217,302 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li>用<code>\</code>来拼接多个字符串<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">hex_str: str = <span class="string">'1d5e4a52723a36386262543a4e35ba6737'</span> \</span><br><span class="line">               <span class="string">'bb353aa7391c3b6759030c0b070808551a'</span> \</span><br><span class="line">               <span class="string">'0a040a0d150e5c5e0c4f560b015217530e'</span> \</span><br><span class="line">               <span class="string">'525108060d0e505d5806ac3bc9cfc599c8'</span> \</span><br><span class="line">               <span class="string">'cccbc5ca399a65c7c59dcbc5c9cfc59936'</span> \</span><br><span class="line">               <span class="string">'9b353a85398865803bd435fa37823bae36'</span> \</span><br><span class="line">               <span class="string">'8535ea34d03dbc393a82353ade313a9636'</span> \</span><br><span class="line">               <span class="string">'33cc3b35ba3864'</span></span><br></pre></td></tr></table></figure></li>
+          <ul>
+<li><p>16进制转NSData</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSData</span> *)convertHexStrToData:(<span class="built_in">NSString</span> *)str</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (!str || [str length] == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">NSMutableData</span> *hexData = [[<span class="built_in">NSMutableData</span> alloc] initWithCapacity:<span class="number">20</span>];</span><br><span class="line">    <span class="built_in">NSRange</span> range;</span><br><span class="line">    <span class="keyword">if</span> ([str length] % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">        range = <span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">2</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        range = <span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = range.location; i &lt; [str length]; i += <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">int</span> anInt;</span><br><span class="line">        <span class="built_in">NSString</span> *hexCharStr = [str substringWithRange:range];</span><br><span class="line">        <span class="built_in">NSScanner</span> *scanner = [[<span class="built_in">NSScanner</span> alloc] initWithString:hexCharStr];</span><br><span class="line">        </span><br><span class="line">        [scanner scanHexInt:&amp;anInt];</span><br><span class="line">        <span class="built_in">NSData</span> *entity = [[<span class="built_in">NSData</span> alloc] initWithBytes:&amp;anInt length:<span class="number">1</span>];</span><br><span class="line">        [hexData appendData:entity];</span><br><span class="line">        </span><br><span class="line">        range.location += range.length;</span><br><span class="line">        range.length = <span class="number">2</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hexData;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>hex 16 进制转换成NSString表示</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)convertDataToHexStr:(<span class="built_in">NSData</span> *)data</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (!data || [data length] == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">@""</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">NSMutableString</span> *string = [[<span class="built_in">NSMutableString</span> alloc] initWithCapacity:[data length]];</span><br><span class="line">    </span><br><span class="line">    [data enumerateByteRangesUsingBlock:^(<span class="keyword">const</span> <span class="keyword">void</span> *bytes, <span class="built_in">NSRange</span> byteRange, <span class="built_in">BOOL</span> *stop) &#123;</span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">char</span> *dataBytes = (<span class="keyword">unsigned</span> <span class="keyword">char</span>*)bytes;</span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">NSInteger</span> i = <span class="number">0</span>; i &lt; byteRange.length; i++) &#123;</span><br><span class="line">            <span class="built_in">NSString</span> *hexStr = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%x"</span>, (dataBytes[i]) &amp; <span class="number">0xff</span>];</span><br><span class="line">            <span class="keyword">if</span> ([hexStr length] == <span class="number">2</span>) &#123;</span><br><span class="line">                [string appendString:hexStr];</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                [string appendFormat:<span class="string">@"0%@"</span>, hexStr];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;];</span><br><span class="line">    <span class="keyword">return</span> string;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>普通字符串转换为十六进制的。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)hexStringFromString:(<span class="built_in">NSString</span> *)string&#123;</span><br><span class="line">    <span class="built_in">NSData</span> *myD = [string dataUsingEncoding:<span class="built_in">NSUTF8StringEncoding</span>];</span><br><span class="line">    Byte *bytes = (Byte *)[myD bytes];</span><br><span class="line">    <span class="comment">//下面是Byte 转换为16进制。</span></span><br><span class="line">    <span class="built_in">NSString</span> *hexStr=<span class="string">@""</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;[myD length];i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *newHexStr = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%x"</span>,bytes[i]&amp;<span class="number">0xff</span>];<span class="comment">///16进制数</span></span><br><span class="line">        <span class="keyword">if</span>([newHexStr length]==<span class="number">1</span>)</span><br><span class="line">            hexStr = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@0%@"</span>,hexStr,newHexStr];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            hexStr = [<span class="built_in">NSString</span> stringWithFormat:<span class="string">@"%@%@"</span>,hexStr,newHexStr];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> hexStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>十六进制转换为普通字符串的。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">NSString</span> *)stringFromHexString:(<span class="built_in">NSString</span> *)hexString &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">char</span> *myBuffer = (<span class="keyword">char</span> *)malloc((<span class="keyword">int</span>)[hexString length] / <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">    bzero(myBuffer, [hexString length] / <span class="number">2</span> + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; [hexString length] - <span class="number">1</span>; i += <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">unsigned</span> <span class="keyword">int</span> anInt;</span><br><span class="line">        <span class="built_in">NSString</span> * hexCharStr = [hexString substringWithRange:<span class="built_in">NSMakeRange</span>(i, <span class="number">2</span>)];</span><br><span class="line">        <span class="built_in">NSScanner</span> * scanner = [[<span class="built_in">NSScanner</span> alloc] initWithString:hexCharStr];</span><br><span class="line">        [scanner scanHexInt:&amp;anInt];</span><br><span class="line">        myBuffer[i / <span class="number">2</span>] = (<span class="keyword">char</span>)anInt;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">NSString</span> *unicodeString = [<span class="built_in">NSString</span> stringWithCString:myBuffer encoding:<span class="number">4</span>];</span><br><span class="line">    <span class="keyword">return</span> unicodeString;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/03/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2020-01-03-http%E5%8D%8F%E8%AE%AE%E4%B8%ADget%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB%E4%BB%A5%E5%8F%8A%E8%81%94%E7%B3%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2020-01-03-http%E5%8D%8F%E8%AE%AE%E4%B8%ADget%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB%E4%BB%A5%E5%8F%8A%E8%81%94%E7%B3%BB/" class="post-title-link" itemprop="url">http协议中get和post的区别以及联系</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 14:51:59 / 修改时间：14:52:30" itemprop="dateCreated datePublished" datetime="2020-01-03T14:51:59+08:00">2020-01-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="get-和-post"><a href="#get-和-post" class="headerlink" title="get 和 post"></a>get 和 post</h1><h2 id="get"><a href="#get" class="headerlink" title="get"></a>get</h2><blockquote>
+<p>get 是通过URL提交数据，因此GET可提交的数据量就跟URL所能达到的最大长度有直接关系。很多文章都说GET方式提交的数据最多只能是1024字节，而实际上，URL不存在参数上限的问题，HTTP协议规范也没有对URL长度进行限制。这个限制是特定的浏览器及服务器对它的限制。IE对URL长度的限制是2083字节(2K+35字节)。对于其他浏览器，如FireFox，Netscape等，则没有长度限制，这个时候其限制取决于服务器的操作系统。即如果url太长，服务器可能会因为安全方面的设置从而拒绝请求或者发生不完整的数据请求。</p>
+</blockquote>
+<h2 id="post"><a href="#post" class="headerlink" title="post"></a>post</h2><blockquote>
+<p>post 理论上讲是没有大小限制的，HTTP协议规范也没有进行大小限制，但实际上post所能传递的数据量大小取决于服务器的设置和内存大小。因为我们一般post的数据量很少超过MB的，所以我们很少能感觉的到post的数据量限制，但实际中如果你上传文件的过程中可能会发现这样一个问题，即上传个头比较大的文件到服务器时候，可能上传不上去，以php语言来说，查原因的时候你也许会看到有说PHP上传文件涉及到的参数PHP默认的上传有限定，一般这个值是2MB，更改这个值需要更改php.conf的post_max_size这个值。这就很明白的说明了这个问题了。</p>
+</blockquote>
+<ul>
+<li>GET提交的数据会在地址栏显示出来，而POST提交，地址栏不会改变。</li>
+<li>GET请求能够被缓存, POST请求不能被缓存下来。</li>
+<li>GET请求会保存在浏览器的浏览记录中，POST请求不会保存在浏览器浏览记录中</li>
+<li>GET提交时，传输数据就会受到URL长度限制，POST由于不是通过URL传值，理论上书不受限。</li>
+<li>POST的安全性要比GET的安全性</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/03/%E5%AD%A6%E4%B9%A0-iOS-2020-01-03-iOS-FMDB%E7%9A%84%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/%E5%AD%A6%E4%B9%A0-iOS-2020-01-03-iOS-FMDB%E7%9A%84%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">iOS-FMDB的使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 14:48:10 / 修改时间：14:48:38" itemprop="dateCreated datePublished" datetime="2020-01-03T14:48:10+08:00">2020-01-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="FMDB"><a href="#FMDB" class="headerlink" title="FMDB"></a>FMDB</h1><h2 id="多线程"><a href="#多线程" class="headerlink" title="多线程"></a>多线程</h2><p>多线程操作数据库时要使用<code>FMDatabaseQueue</code><br>任何时候都不应该用一个<code>&lt;FMDatabase&gt;</code>单例去操作数据库。推荐的方式是，每个线程都新建一个<code>&lt;FMDatabase&gt;</code>数据库对象。反正不要跨线程共享一个数据库对象就对了。更不能在不同线程同一时间共享一个数据库对象。<br>下面展示下多线程操作数据库的方法：<br>创建一个数据库队列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FMDatabaseQueue *queue &#x3D; [FMDatabaseQueue databaseQueueWithPath:aPath];</span><br></pre></td></tr></table></figure>
+<p>普通方法操作数据库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[queue inDatabase:^(FMDatabase *db) &#123;</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:1]];</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:2]];</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:3]];</span><br><span class="line"></span><br><span class="line">    FMResultSet *rs &#x3D; [db executeQuery:@&quot;select * from foo&quot;];</span><br><span class="line">    while ([rs next]) &#123;</span><br><span class="line">        &#x2F;&#x2F;…</span><br><span class="line">    &#125;</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p>用事务处理方式操作数据库，大量操作时性能很高。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[queue inTransaction:^(FMDatabase *db, BOOL *rollback) &#123;</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:1]];</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:2]];</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:3]];</span><br><span class="line"></span><br><span class="line">    if (whoopsSomethingWrongHappened) &#123;</span><br><span class="line">        *rollback &#x3D; YES;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    &#x2F;&#x2F; etc…</span><br><span class="line">    [db executeUpdate:@&quot;INSERT INTO myTable VALUES (?)&quot;, [NSNumber numberWithInt:4]];</span><br><span class="line">&#125;];</span><br></pre></td></tr></table></figure>
+<p> <code>FMDatabaseQueue</code> will run the blocks on a serialized queue (hence the name of the class).  So if you call <code>FMDatabaseQueue</code>‘s methods from multiple threads at the same time, they will be executed in the order they are received.  This way queries and updates won’t step on each other’s toes, and every one is happy.</p>
+<h2 id="事务处理-Transaction"><a href="#事务处理-Transaction" class="headerlink" title="事务处理 Transaction"></a>事务处理 Transaction</h2><h3 id="多线程中的事务处理"><a href="#多线程中的事务处理" class="headerlink" title="多线程中的事务处理"></a>多线程中的事务处理</h3><p>在前面一部分有提到。</p>
+<h3 id="单线程数据库中的事务处理"><a href="#单线程数据库中的事务处理" class="headerlink" title="单线程数据库中的事务处理"></a>单线程数据库中的事务处理</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[_dataBase open];</span><br><span class="line">[_dataBase beginTransaction];</span><br><span class="line">...</span><br><span class="line">[_dataBase commit];</span><br><span class="line">[_dataBase close];</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/03/%E5%AD%A6%E4%B9%A0-Python-2020-01-03-Python-%E6%8E%A8%E5%AF%BC%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/03/%E5%AD%A6%E4%B9%A0-Python-2020-01-03-Python-%E6%8E%A8%E5%AF%BC%E5%BC%8F/" class="post-title-link" itemprop="url">Python-推导式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-03 14:45:39 / 修改时间：14:46:00" itemprop="dateCreated datePublished" datetime="2020-01-03T14:45:39+08:00">2020-01-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="列表推导式"><a href="#列表推导式" class="headerlink" title="列表推导式"></a>列表推导式</h2><ul>
+<li><p>最简单的列表推导式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vec &#x3D; [2, 4, 6]</span><br><span class="line">a &#x3D; [x*3 for x in vec]</span><br><span class="line">print(a)</span><br><span class="line"># [6, 12, 18]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>其他形式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vec &#x3D; [2, 4, 6]</span><br><span class="line">a &#x3D; [[x, x**2] for x in vec]</span><br><span class="line">print(a)</span><br><span class="line"># [[2, 4], [4, 16], [6, 36]]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>遍历两个变量<br>可以看出，先循环遍历的是后面的语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vecx &#x3D; [2, 4, 6]</span><br><span class="line">vecy &#x3D; [3, 5, 7]</span><br><span class="line">a &#x3D; [x*y for x in vecx for y in vecy]</span><br><span class="line">print(a)</span><br><span class="line"># [6, 10, 14, 12, 20, 28, 18, 30, 42]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>嵌套列表的解析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">matrix &#x3D; [[1, 2, 3, 4],</span><br><span class="line">          [5, 6, 7, 8],</span><br><span class="line">          [9, 10, 11, 12]]</span><br><span class="line">a &#x3D; [[row[i] for row in matrix] for i in range(4)]</span><br><span class="line">print(a)</span><br><span class="line"># [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]</span><br></pre></td></tr></table></figure>
+<p>可以看出执顺序：for语句从外往内，从右往左开始执行，中括号从里往外执行。中括号循环顺序比for语句循环顺序要高。</p>
+</li>
+</ul>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p><code>[x for x in range(10)]</code>创建的是一个list对象<br><code>(x for x in range(10))</code>创建的是一个generator对象而不是一个tuple对象。</p>
+<h2 id="集合-set-推导式"><a href="#集合-set-推导式" class="headerlink" title="集合(set)推导式"></a>集合(set)推导式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &#123;x for x in &#39;abracadabra&#39; if x not in &#39;abc&#39;&#125;</span><br><span class="line">print(a)</span><br><span class="line"># &#123;&#39;r&#39;, &#39;d&#39;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a &#x3D; &#123;x: x**2 for x in (2, 4, 6)&#125;</span><br><span class="line">print(a)</span><br><span class="line"># &#123;2: 4, 4: 16, 6: 36&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/02/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-02-%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%BC%80%E5%90%AFssh%E8%BF%9E%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/02/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-02-%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%BC%80%E5%90%AFssh%E8%BF%9E%E6%8E%A5/" class="post-title-link" itemprop="url">树莓派-开启ssh连接</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-02 15:25:09 / 修改时间：15:29:17" itemprop="dateCreated datePublished" datetime="2020-01-02T15:25:09+08:00">2020-01-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>默认情况下树莓派的sshd服务是关闭的，我们需要手动开启。</p>
+<h2 id="无GUI界面开启sshd服务"><a href="#无GUI界面开启sshd服务" class="headerlink" title="无GUI界面开启sshd服务"></a>无GUI界面开启sshd服务</h2><ol>
+<li>在树莓派的TF卡bootf分区根目录建立一个名为<code>ssh</code>的空白文件。</li>
+<li>将TF卡重新插入树莓派，开机。则sshd服务自动开启。</li>
 </ol>
+<h2 id="GUI界面开启-sshd-服务"><a href="#GUI界面开启-sshd-服务" class="headerlink" title="GUI界面开启 sshd 服务"></a>GUI界面开启 sshd 服务</h2><h2 id="通过-ssh-连接树莓派"><a href="#通过-ssh-连接树莓派" class="headerlink" title="通过 ssh 连接树莓派"></a>通过 ssh 连接树莓派</h2><p>树莓派默认的用户名和密码是<code>pi</code>和<code>raspberry</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh pi@192.168.1.2</span><br></pre></td></tr></table></figure>
 
-        
+<p>修改密码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 执行passwd命令修改密码</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -288,57 +520,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/04/学习-macOS开发-2019-09-04-macOS开发-NSViewController/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/02/%E9%81%B5%E5%BE%AAACME%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%BD%91%E7%AB%99%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7acme-sh%E4%BD%BF%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/04/学习-macOS开发-2019-09-04-macOS开发-NSViewController/" class="post-title-link" itemprop="url">macOS开发-NSViewController</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/02/%E9%81%B5%E5%BE%AAACME%E5%8D%8F%E8%AE%AE%E7%9A%84%E7%BD%91%E7%AB%99%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE%E5%B7%A5%E5%85%B7acme-sh%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">遵循ACME协议的网站证书配置工具acme.sh使用</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-09-04 14:12:42 / 修改时间：14:18:43" itemprop="dateCreated datePublished" datetime="2019-09-04T14:12:42+08:00">2019-09-04</time>
+              <time title="创建时间：2020-01-02 11:13:06 / 修改时间：13:45:38" itemprop="dateCreated datePublished" datetime="2020-01-02T11:13:06+08:00">2020-01-02</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -351,14 +570,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li><p>NSViewController创建好后并不会自动创建 NSView<br>NSView创建过程中会调用<code>-(void)loadView</code>这个方法。就在这个方法里，我们需要自己创建 view，然后赋值给 self.view。</p>
-</li>
-<li><p>NSView 也不会自动创建 layer 。设置 <code>view.wantsLayer = YES</code> 之后，会自动创建一个 layer。</p>
-</li>
+          <h1 id="acme-sh-使用"><a href="#acme-sh-使用" class="headerlink" title="acme.sh 使用"></a>acme.sh 使用</h1><h2 id="github-页面"><a href="#github-页面" class="headerlink" title="github 页面"></a>github 页面</h2><p><a href="https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E" target="_blank" rel="noopener">https://github.com/Neilpang/acme.sh/wiki/%E8%AF%B4%E6%98%8E</a></p>
+<p>acme.sh 证书获取和更新需要用到 80 端口，所以在此过程中需要确保80端口是通的。</p>
+<ul>
+<li>更新证书之前关闭iptables，更新完成后再打开<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">acme.sh  --issue -d example.com  --standalone\</span><br><span class="line"> --pre-hook <span class="string">"sudo iptables -I INPUT -p tcp --dport 80 -j ACCEPT"</span>\</span><br><span class="line"> --post-hook <span class="string">"sudo iptables -D INPUT -p tcp --dport 80 -j ACCEPT"</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -366,65 +583,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/29/其他开发工具-2019-08-29-CocoaPods-更新官方pod库版本/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/12/20/%E5%AD%A6%E4%B9%A0-Shell-2019-12-20-Shelll-%E5%88%A4%E6%96%AD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/29/其他开发工具-2019-08-29-CocoaPods-更新官方pod库版本/" class="post-title-link" itemprop="url">CocoaPods-更新官方pod库版本</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/12/20/%E5%AD%A6%E4%B9%A0-Shell-2019-12-20-Shelll-%E5%88%A4%E6%96%AD%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8/" class="post-title-link" itemprop="url">Shelll-判断环境变量是否存在</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-08-29 18:09:52" itemprop="dateCreated datePublished" datetime="2019-08-29T18:09:52+08:00">2019-08-29</time>
+              <time title="创建时间：2019-12-20 19:22:21 / 修改时间：19:22:55" itemprop="dateCreated datePublished" datetime="2019-12-20T19:22:21+08:00">2019-12-20</time>
             </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-05 14:10:56" itemprop="dateModified" datetime="2019-09-05T14:10:56+08:00">2019-09-05</time>
-              </span>
-            
-          
 
           
 
@@ -437,29 +633,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li><p>修改<code>podspec</code>文件，更新好对应的<code>s.version</code>版本号。</p>
-</li>
-<li><p>将库文件上传到对应的代码仓库，打好tag。</p>
-</li>
-<li><p>进入项目目录，清缓存，校验<code>podspec</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 清除 pod 缓存</span></span><br><span class="line">pod cache clean --all</span><br><span class="line"></span><br><span class="line"><span class="comment"># 校验</span></span><br><span class="line">pod lib lint XXXXX.podspec</span><br><span class="line"></span><br><span class="line"><span class="comment"># 提交到官方索引仓库</span></span><br><span class="line">pod trunk push XXXXX.podspec</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>如果提示<code>You need to register a session first.</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 报错</span><br><span class="line">[!] You need to register a session first.</span><br><span class="line"></span><br><span class="line">// 重新注册一下，然后CocoaPods会发送一封邮件到你的邮箱，按照提示打开一个连接激活就ok拉，最后再重复前面步骤，提交到CocoaPods官方仓库</span><br><span class="line">pod trunk register 邮箱 <span class="string">'名字'</span> --description=<span class="string">'description'</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>发布成功后执行<code>pod repo update</code>更新本地索引库。</p>
-</li>
-<li><p>执行<code>pod search XXXX</code>，看看是否已经是最新版本。</p>
-</li>
-<li><p>撤回版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 撤回 XXXXX 库的 1.2.2 版本</span></span><br><span class="line">pod trunk delete XXXXX(pod库名字) 1.2.2</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>附录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">pod tunk session <span class="comment"># 操作相关命令</span></span><br><span class="line">Usage:</span><br><span class="line"></span><br><span class="line">    $ pod trunk COMMAND</span><br><span class="line"></span><br><span class="line">      Interact with the CocoaPods API (e.g. publishing new specs)</span><br><span class="line"></span><br><span class="line">Commands:</span><br><span class="line"></span><br><span class="line">    + add-owner      Add an owner to a pod</span><br><span class="line">    + delete         Deletes a version of a pod.</span><br><span class="line">    + deprecate      Deprecates a pod.</span><br><span class="line">    + info           Returns information about a Pod.</span><br><span class="line">    + me             Display information about your sessions</span><br><span class="line">    + push           Publish a podspec</span><br><span class="line">    + register       Manage sessions</span><br><span class="line">    + remove-owner   Remove an owner from a pod</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line"></span><br><span class="line">    --silent         Show nothing</span><br><span class="line">    --verbose        Show more debugging information</span><br><span class="line">    --no-ansi        Show output without ANSI codes</span><br><span class="line">    --<span class="built_in">help</span>           Show <span class="built_in">help</span> banner of specified <span class="built_in">command</span></span><br></pre></td></tr></table></figure>
-        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="comment"># emptyEnviroment.sh</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$ORACLE_HOME</span> ];<span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"ORACLE_HOME = <span class="variable">$ORACLE_HOME</span>"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"ORACLE IS NOT EXISTS"</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$JAVA_HOME</span> ];<span class="keyword">then</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"not exists"</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">	<span class="built_in">echo</span> <span class="string">"JAVA_HOME = <span class="variable">$JAVA_HOME</span>"</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -467,57 +641,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/编译器的宏/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/12/19/%E5%AD%A6%E4%B9%A0-Shell-2019-12-19-Shell-if%E8%AF%AD%E5%8F%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/23/编译器的宏/" class="post-title-link" itemprop="url">编译器的宏</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/12/19/%E5%AD%A6%E4%B9%A0-Shell-2019-12-19-Shell-if%E8%AF%AD%E5%8F%A5/" class="post-title-link" itemprop="url">Shell-if语句</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-08-23 15:46:30 / 修改时间：15:49:28" itemprop="dateCreated datePublished" datetime="2019-08-23T15:46:30+08:00">2019-08-23</time>
+              <time title="创建时间：2019-12-19 14:43:11 / 修改时间：14:43:39" itemprop="dateCreated datePublished" datetime="2019-12-19T14:43:11+08:00">2019-12-19</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -530,36 +691,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <table>
-<thead>
-<tr>
-<th>宏</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>FILE</strong></td>
-<td>文件名</td>
-</tr>
-<tr>
-<td><strong>LINE</strong></td>
-<td>行号</td>
-</tr>
-<tr>
-<td><strong>FUNCTION</strong></td>
-<td>函数名</td>
-</tr>
-<tr>
-<td><strong>DATE</strong></td>
-<td>日期</td>
-</tr>
-<tr>
-<td><strong>TIME</strong></td>
-<td>时间</td>
-</tr>
-</tbody></table>
-
-        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-e filename <span class="comment"># 如果 filename存在，则为真 </span></span><br><span class="line">-d filename <span class="comment"># 如果 filename为目录，则为真 </span></span><br><span class="line">-f filename <span class="comment"># 如果 filename为常规文件，则为真 </span></span><br><span class="line">-L filename <span class="comment"># 如果 filename为符号链接，则为真 </span></span><br><span class="line">-r filename <span class="comment"># 如果 filename可读，则为真 </span></span><br><span class="line">-w filename <span class="comment"># 如果 filename可写，则为真 </span></span><br><span class="line">-x filename <span class="comment"># 如果 filename可执行，则为真 </span></span><br><span class="line">-s filename <span class="comment"># 如果文件长度不为0，则为真 </span></span><br><span class="line">-h filename <span class="comment"># 如果文件是软链接，则为真</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -567,57 +699,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/23/学习-macOS开发-2019-08-23-macOS-NSWindow与程序的关闭和窗口复原/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/12/17/%E5%AD%A6%E4%B9%A0-Shell-2019-12-17-Shell-%E5%91%BD%E4%BB%A4%E4%B8%AD%E5%8F%8C%E6%A8%AA%E6%9D%A0-%E7%9A%84%E4%BD%9C%E7%94%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/23/学习-macOS开发-2019-08-23-macOS-NSWindow与程序的关闭和窗口复原/" class="post-title-link" itemprop="url">macOS-NSWindow与程序的关闭和窗口复原</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/12/17/%E5%AD%A6%E4%B9%A0-Shell-2019-12-17-Shell-%E5%91%BD%E4%BB%A4%E4%B8%AD%E5%8F%8C%E6%A8%AA%E6%9D%A0-%E7%9A%84%E4%BD%9C%E7%94%A8/" class="post-title-link" itemprop="url">Shell-命令中双横杠--的作用</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-08-23 14:06:03 / 修改时间：14:08:55" itemprop="dateCreated datePublished" datetime="2019-08-23T14:06:03+08:00">2019-08-23</time>
+              <time title="创建时间：2019-12-17 15:41:10 / 修改时间：15:42:07" itemprop="dateCreated datePublished" datetime="2019-12-17T15:41:10+08:00">2019-12-17</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -630,15 +749,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li><p>点击窗口的关闭按钮后退出程序</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="built_in">BOOL</span>)applicationShouldTerminateAfterLastWindowClosed:(<span class="built_in">NSApplication</span> *)sender&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;<span class="comment">//YES-窗口程序两者都关闭，NO-只关闭窗口；</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>点击关闭按钮后点击 Dock 图标复原</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="built_in">BOOL</span>)applicationShouldHandleReopen:(<span class="built_in">NSApplication</span> *)sender hasVisibleWindows:(<span class="built_in">BOOL</span>)flag</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"hasVisibleWindows:%d"</span>,flag);</span><br><span class="line"><span class="comment">//    [NSApp activateIgnoringOtherApps:NO];//取消其他程序的响应</span></span><br><span class="line">    <span class="comment">//window 属性的 releasedWhenClosed 需要保证设置为 NO</span></span><br><span class="line">    [_window makeKeyAndOrderFront:<span class="literal">nil</span>];<span class="comment">//主窗口显示自己方法一</span></span><br><span class="line"><span class="comment">//    [_window orderFront:nil];           //主窗口显示自己方法二</span></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
+          <p>unix/linux下各种命令的参数，都是以 - （后面跟单字符参数，比如 -r） 或者 – （后面紧跟多字符参数, 比如 –recursive）来表示。 在所有参数后面，是文件名。大多情况下（文件名第一个字符非 -），这样是没有任何问题的，但是如果文件名第一个字符是 - 时 （比如 -myfile)， 命令就无法区分此时 -myfile 到底是文件名还是参数名。此时解决方法就是用 – 来表示命令参数结束了， 后面哪怕是以 - 开头的， 也被当成文件名处理。<br>比如 rm -r – -mydir 就会递归的（-r)删除 -mydir 这个目录</p>
+<p>文件系统出现一个文件 -C.html 如何删除/新建？<br>rm – “-C.html”</p>
+<p>touch – -demo.sh 可以创建</p>
+<p>我的测试:</p>
+<p>如果文件名字是乱码,则可以用tab键补全</p>
+<p>复制: cp – “-old.html”  new.html</p>
+<p>移动等命令也应该是这种方式处理</p>
+<p>文件名可以不加双引号,但是要删除的文件名有空格哪就得需要双引号了</p>
+<p>2014年5月25日 13:16:36</p>
+<p>文件名中间含有减号,也可以用这个方法删除</p>
 
-        
       
     </div>
 
@@ -646,57 +767,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/学习-macOS开发-2019-08-22-macOS-NSWindowController，NSWindow，NSViewController，NSView的关系/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/12/17/%E5%AD%A6%E4%B9%A0-Shell-2019-12-17-Shell-date%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/22/学习-macOS开发-2019-08-22-macOS-NSWindowController，NSWindow，NSViewController，NSView的关系/" class="post-title-link" itemprop="url">macOS-NSWindowController，NSWindow，NSViewController，NSView的关系</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/12/17/%E5%AD%A6%E4%B9%A0-Shell-2019-12-17-Shell-date%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Shell-date时间日期命令</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-08-22 17:01:16 / 修改时间：17:08:52" itemprop="dateCreated datePublished" datetime="2019-08-22T17:01:16+08:00">2019-08-22</time>
+              <time title="创建时间：2019-12-17 11:06:18 / 修改时间：11:07:26" itemprop="dateCreated datePublished" datetime="2019-12-17T11:06:18+08:00">2019-12-17</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -709,12 +817,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li>NSWindow</li>
-</ul>
-<p>创建好之后自带一个 window.contentView 即为 window 的显示内容<br>window.contentViewController 默认为 nil<br>设置了 window.contentViewController 之后 window.contentView 自动被设置为 contentViewController 的 view。<br>默认状态下 NSViewController 的 view 为 nil。所以给 window 设置一个默认状态的 NSViewController 之后，window 的 contentView 也就为空了。 </p>
-
-        
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cur_date=<span class="string">"`date +%Y-%m-%d`"</span>  </span><br><span class="line">cur_dateTime=<span class="string">"`date +%Y-%m-%d,%H:%m:%s`"</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -722,342 +825,53 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/学习-macOS开发-2019-08-22-macOS-创建不带任何xib文件的CocoaApp/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/22/学习-macOS开发-2019-08-22-macOS-创建不带任何xib文件的CocoaApp/" class="post-title-link" itemprop="url">macOS-创建不带任何xib文件的CocoaApp</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-22 16:43:20 / 修改时间：16:48:16" itemprop="dateCreated datePublished" datetime="2019-08-22T16:43:20+08:00">2019-08-22</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>现在 Xcode 创建 macOS 的 Cocoa App 默认都会创建一个 MianMenu.xib 或者 StoryBoard.xib 文件。<br>直接删除这些文件，在<code>applicationDidFinishLaunching:</code>创建自定义的 NSWIndow 并且即使在工程中配置好了，也不行。<br>经过断点发现，<code>applicationDidFinishLaunching:</code>根本没走。<br>原因是 NSApplication 的 Delegate 并没有被设置。<br>知道了原因，所以只需要在 main.m 文件中设置一下<code>NSApplication</code>的delegate就可以了。代码如下：</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#import <span class="meta-string">&lt;Cocoa/Cocoa.h&gt;</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"AppDelegate.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[]) &#123;</span><br><span class="line">    [[<span class="built_in">NSApplication</span> sharedApplication] setDelegate:[AppDelegate new]];</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">NSApplicationMain</span>(argc, argv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>设置好了之后，就可以在 AppDelegate 里面写自定义的 NSWindow 并且让其正常显示了。</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSWindow</span> *window;</span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)applicationDidFinishLaunching:(<span class="built_in">NSNotification</span> *)aNotification &#123;</span><br><span class="line">    [<span class="keyword">self</span>.window center];</span><br><span class="line">    [<span class="keyword">self</span>.window orderFront:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">-(<span class="built_in">NSWindow</span> *)window&#123;</span><br><span class="line">    <span class="keyword">if</span> (!_window) &#123;</span><br><span class="line">        <span class="built_in">NSUInteger</span> style = <span class="built_in">NSWindowStyleMaskTitled</span> | <span class="built_in">NSWindowStyleMaskClosable</span> | <span class="built_in">NSWindowStyleMaskMiniaturizable</span> ;</span><br><span class="line">        _window = [[<span class="built_in">NSWindow</span> alloc]initWithContentRect:<span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">300</span>) styleMask:style backing:<span class="built_in">NSBackingStoreBuffered</span> defer:<span class="literal">YES</span>];</span><br><span class="line">        <span class="comment">//        _window1.contentViewController = self.firstVC;</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> _window;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/22/电脑技巧-Windows-2019-08-22-Windows-Thin-PC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/22/电脑技巧-Windows-2019-08-22-Windows-Thin-PC/" class="post-title-link" itemprop="url">Windows Thin PC</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-22 14:18:13 / 修改时间：14:20:40" itemprop="dateCreated datePublished" datetime="2019-08-22T14:18:13+08:00">2019-08-22</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><ul>
-<li><p>系统</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ed2k://|file|en_windows_thin_pc_x86_697681.iso|1576980480|2D0E6A048EB3F314F556B4F0834A95E2|/</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>语言包</p>
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/20/学习-Python-2019-08-20-Python-VirtualEnv-Python虚拟环境/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/20/学习-Python-2019-08-20-Python-VirtualEnv-Python虚拟环境/" class="post-title-link" itemprop="url">Python-VirtualEnv-Python虚拟环境</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-20 17:44:22" itemprop="dateCreated datePublished" datetime="2019-08-20T17:44:22+08:00">2019-08-20</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-27 15:59:24" itemprop="dateModified" datetime="2019-08-27T15:59:24+08:00">2019-08-27</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>更新 virtualenv 下的 python 版本<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 -m myenv --upgrade ENNV_DIR</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/19/学习-iOS-2019-08-19-iOS-iOS中的权限检查及获取/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/19/学习-iOS-2019-08-19-iOS-iOS中的权限检查及获取/" class="post-title-link" itemprop="url">iOS-iOS中的权限检查及获取</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-19 17:17:43" itemprop="dateCreated datePublished" datetime="2019-08-19T17:17:43+08:00">2019-08-19</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1082,30 +896,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1119,17 +926,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1140,50 +953,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

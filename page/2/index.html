@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/2/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/2/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/2/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,55 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/电脑技巧-Windows-2019-09-23-Windows-将Windows启动到审计模式/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/02/22/%E5%AD%A6%E4%B9%A0-Hexo%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-2020-02-22-Hexo-Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/电脑技巧-Windows-2019-09-23-Windows-将Windows启动到审计模式/" class="post-title-link" itemprop="url">Windows-将Windows启动到审计模式</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/02/22/%E5%AD%A6%E4%B9%A0-Hexo%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-2020-02-22-Hexo-Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Hexo常用命令</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-09-23 19:45:19 / 修改时间：19:45:54" itemprop="dateCreated datePublished" datetime="2019-09-23T19:45:19+08:00">2019-09-23</time>
+              <time title="创建时间：2020-02-22 15:50:59 / 修改时间：17:26:21" itemprop="dateCreated datePublished" datetime="2020-02-22T15:50:59+08:00">2020-02-22</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -276,9 +217,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-windows-to-audit-mode-or-oobe" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-windows-to-audit-mode-or-oobe</a></p>
+          <h1 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h1><p>[TOC]</p>
+<h2 id="1-hexo-init"><a href="#1-hexo-init" class="headerlink" title="1. hexo init"></a>1. hexo init</h2><p><code>hexo init</code> 命令用于初始化本地文件夹为网站的根目录</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>folder</code> 可选参数，用以指定初始化目录的路径，若无指定则默认为当前目录</li>
+</ul>
+<h2 id="2-hexo-new"><a href="#2-hexo-new" class="headerlink" title="2. hexo new"></a>2. hexo new</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new` 命令用于新建文章，一般可以简写为 `hexo n</span><br><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>layout</code> 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定</li>
+<li><code>title</code> 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围</li>
+</ul>
+<h2 id="3、hexo-generate"><a href="#3、hexo-generate" class="headerlink" title="3、hexo generate"></a>3、hexo generate</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate` 命令用于生成静态文件，一般可以简写为 `hexo g</span><br><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-d</code> 选项，指定生成后部署，与 <code>hexo d -g</code> 等价<br>详细信息请参考：<a href="https://hexo.io/docs/generating" target="_blank" rel="noopener">https://hexo.io/docs/generating</a></li>
+</ul>
+<h2 id="4-hexo-server"><a href="#4-hexo-server" class="headerlink" title="4. hexo server"></a>4. hexo server</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo server` 命令用于启动本地服务器，一般可以简写为 `hexo s</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-p</code> 选项，指定服务器端口，默认为 4000</li>
+<li><code>-i</code> 选项，指定服务器 IP 地址，默认为 0.0.0.0</li>
+<li><code>-s</code> 选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视</li>
+</ul>
+<p><strong>说明</strong> ：运行服务器前需要安装<code>hexo-server</code>插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>详细信息请参考：<a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">https://hexo.io/docs/server.html</a></p>
+<h2 id="5-hexo-deploy"><a href="#5-hexo-deploy" class="headerlink" title="5. hexo deploy"></a>5. hexo deploy</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy` 命令用于部署网站，一般可以简写为 `hexo d</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>-g</code> 选项，指定生成后部署，与 <code>hexo g -d</code> 等价</li>
+</ul>
+<p><strong>说明</strong> ：部署前需要修改 _config.yml 配置文件，下面以 git 为例进行说明</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">    <span class="attr">repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br><span class="line">    <span class="attr">message:</span> <span class="string">自定义提交消息，默认为Site</span> <span class="attr">updated:</span> <span class="string">&#123;&#123;</span> <span class="string">now('YYYY-MM-DD</span> <span class="string">HH:mm:ss')</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
-        
+<p>详细信息请参考：<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></p>
+<h2 id="6-hexo-clean"><a href="#6-hexo-clean" class="headerlink" title="6. hexo clean"></a>6. hexo clean</h2><p><code>hexo clean</code> 命令用于清理缓存文件，是一个比较常用的命令<br><strong>网站显示异常时可尝试此操作</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="7-Option"><a href="#7-Option" class="headerlink" title="7. Option"></a>7. Option</h2><h3 id="（1）hexo-–safe"><a href="#（1）hexo-–safe" class="headerlink" title="（1）hexo –safe"></a>（1）hexo –safe</h3><p><code>hexo --safe</code> 表示安全模式，用于禁用加载插件和脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></table></figure>
+
+<p><strong>安装新插件时遇到问题可尝试此操作</strong></p>
+<h3 id="（2）hexo-–debug"><a href="#（2）hexo-–debug" class="headerlink" title="（2）hexo –debug"></a>（2）hexo –debug</h3><p><code>hexo --debug</code> 表示调试模式，用于将消息详细记录到终端和 <code>debug.log</code> 文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></table></figure>
+
+<h3 id="（3）hexo-–silent"><a href="#（3）hexo-–silent" class="headerlink" title="（3）hexo –silent"></a>（3）hexo –silent</h3><p><code>hexo --silent</code> 表示静默模式，用于静默输出到终端</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --silent</span><br></pre></td></tr></table></figure>
+
+<p>【参考资料】</p>
+<ul>
+<li><a href="https://hexo.io/docs/commands" target="_blank" rel="noopener">https://hexo.io/docs/commands</a></li>
+</ul>
+
       
     </div>
 
@@ -286,65 +276,326 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/学习-SQLite3-2019-09-23-SQLite-提升SQLite性能/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/02/20/%E5%AD%A6%E4%B9%A0-Hexo%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-2020-02-20-Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/学习-SQLite3-2019-09-23-SQLite-提升SQLite性能/" class="post-title-link" itemprop="url">SQLite-提升SQLite性能</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/02/20/%E5%AD%A6%E4%B9%A0-Hexo%E5%8D%9A%E5%AE%A2%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-2020-02-20-Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" class="post-title-link" itemprop="url">Hexo-在Next主题首页插入全站音乐播放器</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-02-20 15:39:26 / 修改时间：16:44:40" itemprop="dateCreated datePublished" datetime="2020-02-20T15:39:26+08:00">2020-02-20</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="在Next主题首页插入全站音乐播放器"><a href="#在Next主题首页插入全站音乐播放器" class="headerlink" title="在Next主题首页插入全站音乐播放器"></a>在Next主题首页插入全站音乐播放器</h1><p>[TOC]</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><code>APlayer</code>是一个很好用的Hexo博客音乐播放器，可是网上的教程都是在讲如何用<code>APlayer</code>将音乐插入到某个单独的文章中。<br>这篇文章就讲讲怎么将<code>APlaye</code>播放器插入到Hexo博客的首页，作为全站可用的播放器。</p>
+<h2 id="添加-APlayer-代码到主题资源中"><a href="#添加-APlayer-代码到主题资源中" class="headerlink" title="添加 APlayer 代码到主题资源中"></a>添加 APlayer 代码到主题资源中</h2><ol>
+<li><p>从 GitHub 上下载 <code>APlayer</code> 代码<br> 移步至此，<a href="https://github.com/MoePlayer/APlayer" target="_blank" rel="noopener">https://github.com/MoePlayer/APlayer</a><br> 点击<code>Clone or download</code>，在弹出的菜单中选择<code>Download ZIP</code>。<br> 选择好下载位置。</p>
+<p> <img src="/images/2020-02-20-Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8-01.png" alt="下载APlayer源码"></p>
+</li>
+<li><p>解压刚刚下载到的<code>APlayer-master.zip</code>文件。将里面的<code>dist</code>文件夹放到主题目录中<code>source</code>目录下，例如：<code>themes/next/source/</code>。</p>
+</li>
+</ol>
+<h2 id="修改主题代码"><a href="#修改主题代码" class="headerlink" title="修改主题代码"></a>修改主题代码</h2><ol>
+<li><p>打开<code>themes\next\layout\_layout.swig</code>文件，将</p>
+ <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/dist/APlayer.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"aplayer"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/APlayer.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"/dist/music.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p> 添加到<code>&lt;body itemscope ...&gt;</code>后面就行，即在<code>&lt;body&gt;&lt;/body&gt;</code>里面。<br> 修改完成后保存。</p>
+<p> 如图：<br> <img src="/images/2020-02-20-Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/Hexo-%E5%9C%A8Next%E4%B8%BB%E9%A2%98%E9%A6%96%E9%A1%B5%E6%8F%92%E5%85%A5%E5%85%A8%E7%AB%99%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8-02.png" alt="修改_layout.swig文件"></p>
+</li>
+<li><p>在<code>themes\next\source\dist\</code>目录下新建文件<code>music.js</code>。<br> 打开<code>music.js</code>文件，添加如下内容并保存：</p>
+ <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ap = <span class="keyword">new</span> APlayer(&#123;</span><br><span class="line">    container: <span class="built_in">document</span>.getElementById(<span class="string">'aplayer'</span>),</span><br><span class="line">    fixed: <span class="literal">true</span>,</span><br><span class="line">    autoplay: <span class="literal">false</span>,</span><br><span class="line">    audio: [</span><br><span class="line">      &#123;</span><br><span class="line">        name: <span class="string">"【第一首歌歌曲名称】"</span>,</span><br><span class="line">        artist: <span class="string">'【第一首歌歌手】'</span>,</span><br><span class="line">        url: <span class="string">'【第一首歌歌曲链接】'</span>,</span><br><span class="line">        cover: <span class="string">'【第一首歌歌曲封面】'</span>,</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h3 id="APlayer-文档查看"><a href="#APlayer-文档查看" class="headerlink" title="APlayer 文档查看"></a>APlayer 文档查看</h3><ul>
+<li><a href="https://aplayer.js.org/#/zh-Hans/" target="_blank" rel="noopener">https://aplayer.js.org/#/zh-Hans/</a></li>
+</ul>
+<h2 id="查看效果"><a href="#查看效果" class="headerlink" title="查看效果"></a>查看效果</h2><p>重新生成站点文件</p>
+<ul>
+<li>Windows <code>hexo clean; hexo g, hexo d</code></li>
+<li>Linux &amp; macOS <code>hexo clean &amp;&amp; hexo g, hexo d</code></li>
+</ul>
+<p>按<kbd>Ctrl</kbd>+<kbd>F5</kbd>强制刷新站点，查看效果。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/21/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-21-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AEconfig-txt/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/21/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-21-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%90%AF%E5%8A%A8%E9%85%8D%E7%BD%AEconfig-txt/" class="post-title-link" itemprop="url">树莓派-树莓派启动配置config.txt</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-21 19:22:24 / 修改时间：19:24:53" itemprop="dateCreated datePublished" datetime="2020-01-21T19:22:24+08:00">2020-01-21</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>编辑文件``</p>
+<ul>
+<li>彻底关闭 WiFi，添加到最后<br><code>dtoverlay=disable-wifi</code></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/21/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-21-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/21/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-2020-01-21-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">树莓派-树莓派常用命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-09-23 17:35:03" itemprop="dateCreated datePublished" datetime="2019-09-23T17:35:03+08:00">2019-09-23</time>
+              <time title="创建时间：2020-01-21 19:22:13" itemprop="dateCreated datePublished" datetime="2020-01-21T19:22:13+08:00">2020-01-21</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-12 16:45:38" itemprop="dateModified" datetime="2019-10-12T16:45:38+08:00">2019-10-12</time>
+                <time title="修改时间：2020-04-23 10:28:53" itemprop="dateModified" datetime="2020-04-23T10:28:53+08:00">2020-04-23</time>
               </span>
-            
+
           
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo reboot <span class="comment"># 重启</span></span><br><span class="line">shutdown -r now <span class="comment"># 重启</span></span><br><span class="line"></span><br><span class="line">sudo poweroff <span class="comment"># 关机</span></span><br><span class="line">sudo init 0</span><br><span class="line">sudo halt</span><br><span class="line">sudo shutdown -h now</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看树莓派温度<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">watch -n 1 cat /sys/class/thermal/thermal_zone0/temp</span><br><span class="line">watch -n 1 <span class="string">"vcgencmd measure_temp"</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/19/%E5%AD%A6%E4%B9%A0-Shell-2020-01-19-Shell-%E8%AF%BB%E5%86%99ini%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/19/%E5%AD%A6%E4%B9%A0-Shell-2020-01-19-Shell-%E8%AF%BB%E5%86%99ini%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/" class="post-title-link" itemprop="url">Shell-读写ini配置文件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-19 17:26:01 / 修改时间：17:26:32" itemprop="dateCreated datePublished" datetime="2020-01-19T17:26:01+08:00">2020-01-19</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">readIni</span></span>() &#123;</span><br><span class="line">    file=<span class="variable">$1</span>;section=<span class="variable">$2</span>;item=<span class="variable">$3</span>;</span><br><span class="line">    val=$(awk -F <span class="string">'='</span> <span class="string">'/\['</span><span class="variable">$&#123;section&#125;</span><span class="string">'\]/&#123;a=1&#125; (a==1 &amp;&amp; "'</span><span class="variable">$&#123;item&#125;</span><span class="string">'"==$1)&#123;a=0;print $2&#125;'</span> <span class="variable">$&#123;file&#125;</span>) </span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$&#123;val&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">writeIni</span></span>() &#123;</span><br><span class="line">    file=<span class="variable">$1</span>;section=<span class="variable">$2</span>;item=<span class="variable">$3</span>;val=<span class="variable">$4</span></span><br><span class="line">	<span class="built_in">test</span> -f <span class="string">"<span class="variable">$1</span>"</span> &amp;&amp; <span class="built_in">test</span> ! -z <span class="string">"<span class="variable">$2</span>"</span> &amp;&amp; <span class="built_in">test</span> ! -z <span class="string">"<span class="variable">$3</span>"</span> &amp;&amp; <span class="built_in">test</span> ! -z <span class="string">"<span class="variable">$4</span>"</span></span><br><span class="line">	<span class="keyword">if</span> [ $? -eq 0 ]; <span class="keyword">then</span></span><br><span class="line">		awk -F <span class="string">'='</span> <span class="string">'/\['</span><span class="variable">$&#123;section&#125;</span><span class="string">'\]/&#123;a=1&#125; (a==1 &amp;&amp; "'</span><span class="variable">$&#123;item&#125;</span><span class="string">'"==$1)&#123;gsub($2,"\"'</span><span class="variable">$&#123;val&#125;</span><span class="string">'\"");a=0&#125; &#123;print $0&#125; &#123;close("'</span><span class="variable">$&#123;file&#125;</span><span class="string">'")&#125;'</span> <span class="variable">$&#123;file&#125;</span> 1&lt;&gt;<span class="variable">$&#123;file&#125;</span></span><br><span class="line">	<span class="keyword">fi</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">readIniSections</span></span>() &#123;</span><br><span class="line">    file=<span class="variable">$1</span>;</span><br><span class="line">    val=$(awk <span class="string">'/\[/&#123;printf("%s ",$1)&#125;'</span> <span class="variable">$&#123;file&#125;</span> | sed <span class="string">'s/\[//g'</span> | sed <span class="string">'s/\]//g'</span>)</span><br><span class="line">    <span class="built_in">echo</span> <span class="variable">$&#123;val&#125;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/16/%E5%AD%A6%E4%B9%A0-Shell-2020-01-16-Shell-grep%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/16/%E5%AD%A6%E4%B9%A0-Shell-2020-01-16-Shell-grep%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">Shell-grep命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-01-16 17:33:47" itemprop="dateCreated datePublished" datetime="2020-01-16T17:33:47+08:00">2020-01-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-20 10:41:26" itemprop="dateModified" datetime="2020-01-20T10:41:26+08:00">2020-01-20</time>
+              </span>
 
           
 
@@ -358,17 +609,10 @@
 
       
           <ul>
-<li><p>关于 SQLite 的 PRAGMA<br><a href="https://www.runoob.com/sqlite/sqlite-pragma.html" target="_blank" rel="noopener">https://www.runoob.com/sqlite/sqlite-pragma.html</a></p>
-</li>
-<li><p>关闭磁盘同步</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.execute('<span class="keyword">PRAGMA</span> <span class="keyword">synchronous</span> = <span class="keyword">OFF</span><span class="string">')</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>db-journal</code>文件</p>
-</li>
+<li>grep 查找文件内容</li>
 </ul>
-<p><a href="http://www.voidcn.com/article/p-kapmgjej-nw.html" target="_blank" rel="noopener">http://www.voidcn.com/article/p-kapmgjej-nw.html</a></p>
+<p>```bash<br>grep -n </p>
 
-        
       
     </div>
 
@@ -376,129 +620,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/学习-Shell-2019-09-23-Shell-通过命令查看某个进程是否正在运行/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/08/%E5%AD%A6%E4%B9%A0-Dart%E5%92%8CFlutter-2020-01-08-Flutter-Flutter%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/学习-Shell-2019-09-23-Shell-通过命令查看某个进程是否正在运行/" class="post-title-link" itemprop="url">Shell-通过命令查看某个进程是否正在运行</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/08/%E5%AD%A6%E4%B9%A0-Dart%E5%92%8CFlutter-2020-01-08-Flutter-Flutter%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">Flutter-Flutter开发笔记</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-09-23 15:20:06 / 修改时间：15:20:37" itemprop="dateCreated datePublished" datetime="2019-09-23T15:20:06+08:00">2019-09-23</time>
+              <time title="创建时间：2020-01-08 18:40:38 / 修改时间：18:41:28" itemprop="dateCreated datePublished" datetime="2020-01-08T18:40:38+08:00">2020-01-08</time>
             </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">states</span></span>() &#123;</span><br><span class="line">    process_name=transmission-daemon</span><br><span class="line">    process_id=$(ps -ef | grep <span class="variable">$process_name</span> | grep -v grep | grep -v <span class="variable">$0</span> | awk <span class="string">'&#123;print $2&#125;'</span>)</span><br><span class="line">    <span class="comment"># process_id2=$(ps -ef | grep $process_name | grep -v grep | awk '&#123;print $2&#125;')</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$process_id</span>"</span> == <span class="string">""</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;process_name&#125;</span> 没有在运行"</span></span><br><span class="line">        <span class="built_in">exit</span> 0</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;process_name&#125;</span>(<span class="variable">$&#123;process_id&#125;</span>) 正在运行..."</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/学习-SQLite3-2019-09-23-SQLite使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/23/学习-SQLite3-2019-09-23-SQLite使用/" class="post-title-link" itemprop="url">SQLite使用</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-23 11:29:47 / 修改时间：17:44:57" itemprop="dateCreated datePublished" datetime="2019-09-23T11:29:47+08:00">2019-09-23</time>
-            </span>
-          
-            
-
-            
-          
 
           
 
@@ -512,32 +671,9 @@
 
       
           <ul>
-<li><p>获取数据库中所有的表</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">type</span>,<span class="keyword">name</span>,<span class="keyword">sql</span>,tbl_name,<span class="string">'0'</span> <span class="keyword">AS</span> temp <span class="keyword">FROM</span> sqlite_master <span class="keyword">UNION</span> <span class="keyword">SELECT</span> <span class="keyword">type</span>,<span class="keyword">name</span>,<span class="keyword">sql</span>,tbl_name,<span class="string">'1'</span> <span class="keyword">AS</span> temp <span class="keyword">FROM</span> sqlite_temp_master;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>SQLite中的语法糖</p>
-<ul>
-<li><p>CREATE TABLE IF NOT EXISTS<br>  如果不存在table表则建立，否则忽略。</p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> <span class="string">"table-name"</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>INSERT OR REPLACE<br>  如果不存在则插入，如果存在则替换</p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> <span class="keyword">table</span>-<span class="keyword">name</span> (<span class="keyword">column</span>-<span class="keyword">name</span>,...) <span class="keyword">VALUES</span> (<span class="keyword">column</span>-<span class="keyword">value</span>,...)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>INSERT OR IGNORE<br>  如果不存在则插入，如果存在则忽略</p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> <span class="keyword">table</span>-<span class="keyword">name</span> (<span class="keyword">column</span>-<span class="keyword">name</span>,...) <span class="keyword">VALUES</span> (<span class="keyword">column</span>-<span class="keyword">value</span>,...)</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>packages 位置<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Flutter_Location]&#x2F;packages</span><br></pre></td></tr></table></figure></li>
 </ul>
-</li>
-</ul>
-<h2 id="SQLite3-FMDB"><a href="#SQLite3-FMDB" class="headerlink" title="SQLite3/FMDB"></a>SQLite3/FMDB</h2><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> members (uid <span class="built_in">INTEGER</span> PRIMARY <span class="keyword">KEY</span>,<span class="keyword">account</span> <span class="built_in">TEXT</span> <span class="keyword">UNIQUE</span>, <span class="keyword">password</span> <span class="built_in">TEXT</span>, utype <span class="built_in">TEXT</span>, nickname <span class="built_in">TEXT</span>, sjhm <span class="built_in">TEXT</span>, xbm <span class="built_in">TEXT</span>)</span><br></pre></td></tr></table></figure>
 
-<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> UserInfo (uid,<span class="keyword">account</span>,<span class="keyword">password</span>,utype,nickname,sjhm,xbm) <span class="keyword">VALUES</span> (?,?,?,?,?,?,?)<span class="string">",[Util getCurrentUserInfo].uid,[Util getCurrentUserInfo].account,[Util getCurrentUserInfo].password,[Util getCurrentUserInfo].utype,[Util getCurrentUserInfo].nickname,[Util getCurrentUserInfo].sjhm,[Util getCurrentUserInfo].xbm]</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查询数据："><a href="#查询数据：" class="headerlink" title="查询数据："></a>查询数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-(void)readDB</span><br><span class="line">&#123;</span><br><span class="line">    NSString *readMenberTableData=@&quot;SELECT * FROM menbers&quot;;</span><br><span class="line">    sqlite3_stmt *stmt = NULL;//stmt保存的时查询结果</span><br><span class="line">    if (sqlite3_prepare_v2(db, [readMenberTableData UTF8String], -1, &amp;stmt, nil) == SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        while (sqlite3_step(stmt))//循环遍历查询结果</span><br><span class="line">        &#123;</span><br><span class="line">            userName.text=[NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];</span><br><span class="line">            password.text=[NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];</span><br><span class="line">        &#125;</span><br><span class="line">        sqlite3_finalize(stmt);//清除查询结果</span><br><span class="line">    &#125;</span><br><span class="line">    sqlite3_close(db);//关闭数据库</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">//聊天列表</span><br><span class="line">    NSString *CreateChatListTable=@&quot;CREATE TABLE IF NOT EXISTS ChatListTable(id INTEGER PRIMARY KEY AUTOINCREMENT,message_id INTEGER UNIQUE,title TEXT,body TEXT,time TEXT,fromWho TEXT)”;</span><br><span class="line">[self execSql:CreateChatListTable];</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">//数据库文件路径(全局的)</span><br><span class="line">-(NSString *)dbPath</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *path=NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);</span><br><span class="line">    NSString *documentsDir=[path objectAtIndex:0];</span><br><span class="line">    [NSFileManager.defaultManager createDirectoryAtPath:documentsDir withIntermediateDirectories:YES attributes:nil error:nil];</span><br><span class="line">    NSString *pathDependOnUsername=[NSString stringWithFormat:@&quot;%@.sqlite&quot;,userName.text];</span><br><span class="line">    paths=[documentsDir stringByAppendingPathComponent:pathDependOnUsername];</span><br><span class="line">    NSLog(@&quot;路径是：%@&quot;,paths);</span><br><span class="line">    return paths;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">//打开或创建数据库</span><br><span class="line">- (void)openDB</span><br><span class="line">&#123;</span><br><span class="line">    if (sqlite3_open([[self dbPath] UTF8String], &amp;db) != SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        sqlite3_close(db);</span><br><span class="line">        NSAssert(0, @&quot;数据库创建或打开失败。&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">//数据库执行语句</span><br><span class="line">-(void)execSql:(NSString *)sql</span><br><span class="line">&#123;</span><br><span class="line">    char *err;</span><br><span class="line">    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &amp;err) != SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        sqlite3_close(db);</span><br><span class="line">        NSLog(@&quot;数据库操作数据失败!信息：%s&quot;,err);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
       
     </div>
 
@@ -545,202 +681,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/17/农民张大伯去买一斤小米/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/08/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-08-Android%E5%BC%80%E5%8F%91-Android-Studio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/17/农民张大伯去买一斤小米/" class="post-title-link" itemprop="url">未命名</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/08/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-08-Android%E5%BC%80%E5%8F%91-Android-Studio/" class="post-title-link" itemprop="url">Android开发-Android Studio</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-09-17 17:00:47" itemprop="dateCreated datePublished" datetime="2019-09-17T17:00:47+08:00">2019-09-17</time>
+              <time title="创建时间：2020-01-08 15:22:57" itemprop="dateCreated datePublished" datetime="2020-01-08T15:22:57+08:00">2020-01-08</time>
             </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>农民张大伯去买一斤小米<br>米店老板掏出一个秤，放在地上，随手拿起一把刀割破了一个米袋，米就哗哗哗的掉到秤上<br>等到秤的示数为一斤时的瞬间，老板堵住了米袋子的口子，把秤上的小米给了张大伯<br>张大伯心满意足的走在回家的路上，心中感慨老板真是个豪爽的人<br>突然，他觉得不太对劲：<br>按照$F=ma$，小米在落在秤盘上时应该会产生一个力……所以他买到的米其实不足一斤<br>第二天，张大伯将老板告上了官府。<br>张大伯把自己的想法说出来了<br>老板则表示这样做每次都没出过差错<br>县太爷听了，微微一笑：“这是误会，老板没有坑你”<br>说完，县太爷猛地取一根毛笔，蘸墨写到：<br>设秤距离抛出点的竖直高度为$h$<br>记小米的流速为$\lambda = m_{0} kg/s$<br>则在秤恰好显示1斤时，取此后一极短时间$\Delta t$<br>此时间内，与秤盘发生碰撞的小米质量设为$m$<br>则$m=\lambda ·\bullet \Delta t$<br>由动量定理，得<br>$F\Delta t=mv$<br>其中$v=\sqrt{2gh}$<br>联立得$F=\lambda \sqrt{2gh}$<br>也就是说此时秤的示数$N=F+m_{1}g$（$m1$为已经落在盘上小米的质量）<br>张大伯一听，愤怒的说：你看，我这不是损失了相当于$\frac{F}{g}=\lambda \sqrt{\frac{2h}{g} }$这么多的小米吗！<br>县太爷笑道：别忘了，现在空中还有小米呢。<br>老板一听，感到有些疑惑：啊？这么说难道是我亏了吗？<br>县太爷接着写到：<br>记张大伯所说的$\lambda \sqrt{\frac{2h}{g} } =m_{2}$<br>而此时在空中的小米质量为$m_{3}$<br>则$m_{3}=\lambda t$<br>其中$t=\sqrt{\frac{2h}{g} }$，代入发现$m_{2} =m_{3}$<br>这也就是说，你们俩一点都没有亏。<br>张大伯和米店老板听了，相视一笑，说道：经验+3，告辞。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/11/IBM-Cloud-实用笔记/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/11/IBM-Cloud-实用笔记/" class="post-title-link" itemprop="url">IBM Cloud 实用笔记</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-21 11:25:51" itemprop="dateModified" datetime="2020-04-21T11:25:51+08:00">2020-04-21</time>
               </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-11 11:22:10 / 修改时间：16:17:12" itemprop="dateCreated datePublished" datetime="2019-09-11T11:22:10+08:00">2019-09-11</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><p><a href="https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir" target="_blank" rel="noopener">https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir</a></p>
-<ul>
-<li>ssh 连接<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibmcloud cf ssh MyTest</span><br></pre></td></tr></table></figure></li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/电脑技巧-Windows-2019-09-10-Windows-Windows的KMS激活/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/10/电脑技巧-Windows-2019-09-10-Windows-Windows的KMS激活/" class="post-title-link" itemprop="url">Windows-Windows的KMS激活</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-10 16:30:20 / 修改时间：20:00:42" itemprop="dateCreated datePublished" datetime="2019-09-10T16:30:20+08:00">2019-09-10</time>
-            </span>
-          
-            
-
-            
-          
 
           
 
@@ -754,246 +738,22 @@
 
       
           <p>[TOC]</p>
-<h1 id="KMS-服务器激活-Windows"><a href="#KMS-服务器激活-Windows" class="headerlink" title="KMS 服务器激活 Windows"></a>KMS 服务器激活 Windows</h1><h2 id="KMS-密钥"><a href="#KMS-密钥" class="headerlink" title="KMS 密钥"></a>KMS 密钥</h2><ul>
-<li>Windows Thin PC : <code>3KQTC-D9G6K-7TQG6-6MRPC-QN22C</code></li>
-</ul>
-<h2 id="KMS-激活"><a href="#KMS-激活" class="headerlink" title="KMS 激活"></a>KMS 激活</h2><p><a href="https://moeclub.org/2018/12/02/710/?spm=70.9" target="_blank" rel="noopener">https://moeclub.org/2018/12/02/710/?spm=70.9</a></p>
-<p>激活步骤请前往: <a href="http://moeclub.org/kms" target="_blank" rel="noopener">http://moeclub.org/kms</a><br>KMS激活命令: slmgr /skms kms.moeclub.org</p>
-<h3 id="安装KMS密钥"><a href="#安装KMS密钥" class="headerlink" title="安装KMS密钥:"></a>安装KMS密钥:</h3><p>以管理员身份运行命令提示符.<br>安装密钥:<code>slmgr /ipk [密钥]</code><br>设置激活:<code>slmgr /skms kms.moeclub.org</code><br>激活产品:<code>slmgr /ato</code></p>
-<h3 id="KMS-GVLK"><a href="#KMS-GVLK" class="headerlink" title="KMS GVLK:"></a>KMS GVLK:</h3><ul>
-<li>Windows Server 2019 ARM64 : GRFBW-QNDC4-6QBHG-CCK3B-2PR88</li>
-<li>Windows Server 2019 Azure Core : FDNH6-VW9RW-BXPJ7-4XTYG-239TB</li>
-<li>Windows Server 2019 Datacenter : WMDGN-G9PQG-XVVXX-R3X43-63DFG</li>
-<li>Windows Server 2019 Essentials : WVDHN-86M7X-466P6-VHXV7-YY726</li>
-<li>Windows Server 2019 Standard : N69G4-B89J2-4G8F4-WWYCC-J464C</li>
-<li>Windows Server 2019 Datacenter (Semi-Annual Channel v.1809) : 6NMRW-2C8FM-D24W7-TQWMY-CWH2D</li>
-<li>Windows Server 2019 Standard (Semi-Annual Channel v.1809) : N2KJX-J94YW-TQVFB-DG9YT-724CC</li>
-<li>Windows Server 2019 Standard [Preview] : MFY9F-XBN2F-TYFMP-CCV49-RMYVH</li>
-<li>Windows Server 2019 Datacenter [Preview] : 6XBNX-4JQGW-QX6QG-74P76-72V67</li>
-<li>Windows 10 Enterprise LTSC 2019 : M7XTQ-FN8P6-TTKYV-9D4CC-J462D</li>
-<li>Windows 10 Enterprise LTSC 2019 N : 92NFX-8DJQP-P6BBQ-THF9C-7CG2H</li>
-<li>Windows 10 Enterprise G : YYVX9-NTFWV-6MDM3-9PT4T-4M68B</li>
-<li>Windows 10 Enterprise G N : 44RPN-FTY23-9VTTB-MP9BX-T84FV</li>
-<li>Windows 10 Enterprise 2016 LTSB : DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</li>
-<li>Windows 10 Enterprise 2016 LTSB N : QFFDN-GRT3P-VKWWX-X7T3R-8B639</li>
-<li>Windows 10 Home / Core : TX9XD-98N7V-6WMQ6-BX7FG-H8Q99</li>
-<li>Windows 10 Home / Core Country Specific : PVMJN-6DFY6-9CCP6-7BKTT-D3WVR</li>
-<li>Windows 10 Home / Core N : 3KHY7-WNT83-DGQKR-F7HPR-844BM</li>
-<li>Windows 10 Home / Core Single Language : 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH</li>
-<li>Windows 10 Education : NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</li>
-<li>Windows 10 Education N : 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</li>
-<li>Windows 10 Enterprise : NPPR9-FWDCX-D2C8J-H872K-2YT43</li>
-<li>Windows 10 Enterprise [Preview] : QNMXX-GCD3W-TCCT4-872RV-G6P4J</li>
-<li>Windows 10 Enterprise S : H76BG-QBNM7-73XY9-V6W2T-684BJ</li>
-<li>Windows 10 Enterprise 2015 LTSB : WNMTR-4C88C-JK8YV-HQ7T2-76DF9</li>
-<li>Windows 10 Enterprise 2015 LTSB N : 2F77B-TNFGY-69QQF-B8YKP-D69TJ</li>
-<li>Windows 10 Enterprise N : DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</li>
-<li>Windows 10 Enterprise S N : X4R4B-NV6WD-PKTVK-F98BH-4C2J8</li>
-<li>Windows 10 Professional Workstation : NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</li>
-<li>Windows 10 Professional Workstation N : 9FNHH-K3HBT-3W4TD-6383H-6XYWF</li>
-<li>Windows 10 Professional : W269N-WFGWX-YVC9B-4J6C9-T83GX</li>
-<li>Windows 10 Professional Education : 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</li>
-<li>Windows 10 Professional Education N : YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</li>
-<li>Windows 10 Professional N : MH37W-N47XK-V7XM9-C7227-GCQG9</li>
-<li>Windows 10 Professional [Preview] : XQHPH-N4D9W-M8P96-DPDFP-TMVPY</li>
-<li>Windows 10 Professional WMC [Pre-Release] : NKPM6-TCVPT-3HRFX-Q4H9B-QJ34Y</li>
-<li>Windows 10 Enterprise for Virtual Desktops : CPWHC-NT2C7-VYW78-DHDB2-PG3GK</li>
-<li>Windows 10 Remote Server : 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX</li>
-<li>Windows 10 S (Lean) : NBTWJ-3DR69-3C4V8-C26MC-GQ9M6</li>
-<li>Windows 10 IoT Core [Pre-Release] : 7NX88-X6YM3-9Q3YT-CCGBF-KBVQF</li>
-<li>Windows 10 Core Connected [Pre-Release] : DJMYQ-WN6HG-YJ2YX-82JDB-CWFCW</li>
-<li>Windows 10 Core Connected N [Pre-Release] : JQNT7-W63G4-WX4QX-RD9M9-6CPKM</li>
-<li>Windows 10 Core Connected Single Language [Pre-Release] : QQMNF-GPVQ6-BFXGG-GWRCX-7XKT7</li>
-<li>Windows 10 Core Connected Country Specific [Pre-Release] : FTNXM-J4RGP-MYQCV-RVM8R-TVH24</li>
-<li>Windows 10 Professional S [Pre-Release] : 3NF4D-GF9GY-63VKH-QRC3V-7QW8P</li>
-<li>Windows 10 Professional S N [Pre-Release] : KNDJ3-GVHWT-3TV4V-36K8Y-PR4PF</li>
-<li>Windows 10 Professional Student [Pre-Release] : YNXW3-HV3VB-Y83VG-KPBXM-6VH3Q</li>
-<li>Windows 10 Professional Student N [Pre-Release] : 8G9XJ-GN6PJ-GW787-MVV7G-GMR99</li>
-<li>Windows 7 Enterprise : 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</li>
-<li>Windows 7 Enterprise E : C29WB-22CC8-VJ326-GHFJW-H9DH4</li>
-<li>Windows 7 Enterprise N : YDRBP-3D83W-TY26F-D46B2-XCKRJ</li>
-<li>Windows 7 Professional : FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</li>
-<li>Windows 7 Professional E : W82YF-2Q76Y-63HXB-FGJG9-GF7QX</li>
-<li>Windows 7 Professional N : MRPKT-YTG23-K7D7T-X2JMM-QY7MG</li>
-<li>Windows 7 Embedded POSReady : YBYF6-BHCR3-JPKRB-CDW7B-F9BK4</li>
-<li>Windows 7 Embedded Standard : XGY72-BRBBT-FF8MH-2GG8H-W7KCW</li>
-<li>Windows 7 ThinPC : 73KQT-CD9G6-K7TQG-66MRP-CQ22C</li>
-<li>Windows 8 Core / Server 2012 : BN3D2-R7TKB-3YPBD-8DRP2-27GG4</li>
-<li>Windows 8 Core / Server 2012 Country Specific : 4K36P-JN4VD-GDC6V-KDT89-DYFKP</li>
-<li>Windows 8 Core / Server 2012 N : 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</li>
-<li>Windows 8 Core / Server 2012 Single Language : 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</li>
-<li>Windows 8 Professional WMC : GNBB8-YVD74-QJHX6-27H4K-8QHDG</li>
-<li>Windows 8 Embedded Industry Professional : RYXVT-BNQG7-VD29F-DBMRY-HT73M</li>
-<li>Windows 8 Embedded Industry Enterprise : NKB3R-R2F8T-3XCDP-7Q2KW-XWYQ2</li>
-<li>Windows 8 Enterprise : 32JNW-9KQ84-P47T8-D8GGY-CWCK7</li>
-<li>Windows 8 Enterprise N : JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</li>
-<li>Windows 8 Professional : NG4HW-VH26C-733KW-K6F98-J8CK4</li>
-<li>Windows 8 Professional N : XCVCF-2NXM9-723PB-MHCB7-2RYQQ</li>
-<li>Windows 8.1 Core : M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK</li>
-<li>Windows 8.1 Core ARM64 : XYTND-K6QKT-K2MRH-66RTM-43JKP</li>
-<li>Windows 8.1 Core Country Specific : NCTT7-2RGK8-WMHRF-RY7YQ-JTXG3</li>
-<li>Windows 8.1 Core N : 7B9N3-D94CG-YTVHR-QBPX3-RJP64</li>
-<li>Windows 8.1 Core Single Language : BB6NG-PQ82V-VRDPW-8XVD2-V8P66</li>
-<li>Windows 8.1 Professional Student : MX3RK-9HNGX-K3QKC-6PJ3F-W8D7B</li>
-<li>Windows 8.1 Professional Student N : TNFGH-2R6PB-8XM3K-QYHX2-J4296</li>
-<li>Windows 8.1 Professional WMC : 789NJ-TQK6T-6XTH8-J39CJ-J8D3P</li>
-<li>Windows 8.1 Core Connected : 3PY8R-QHNP9-W7XQD-G6DPH-3J2C9</li>
-<li>Windows 8.1 Core Connected Country Specific : R962J-37N87-9VVK2-WJ74P-XTMHR</li>
-<li>Windows 8.1 Core Connected N : Q6HTR-N24GM-PMJFP-69CD8-2GXKR</li>
-<li>Windows 8.1 Core Connected Single Language : KF37N-VDV38-GRRTV-XH8X6-6F3BB</li>
-<li>Windows 8.1 Enterprise : MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</li>
-<li>Windows 8.1 Enterprise N : TT4HM-HN7YT-62K67-RGRQJ-JFFXW</li>
-<li>Windows 8.1 Professional : GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</li>
-<li>Windows 8.1 Professional N : HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</li>
-<li>Windows 8.1 Embedded Industry Professional : NMMPB-38DD4-R2823-62W8D-VXKJB</li>
-<li>Windows 8.1 Embedded Industry Automotive : VHXM3-NR6FT-RY6RT-CK882-KW2CJ</li>
-<li>Windows 8.1 Embedded Industry Enterprise : FNFKF-PWTVT-9RC8H-32HB2-JB34X</li>
-<li>Windows 8.1 Enterprise [Preview] : 2MP7K-98NK8-WPVF3-Q2WDG-VMD98</li>
-<li>Windows 8.1 Professional (Blue) [Preview] : MTWNQ-CKDHJ-3HXW9-Q2PFX-WB2HQ</li>
-<li>Windows 8 Professional WMC [RC] : MY4N9-TGH34-4X4VY-8FG2T-RRDPV</li>
-<li>Windows 8.x [Preview] : MPWP3-DXNP9-BRD79-W8WFP-3YFJ6</li>
-<li>Windows Server Next HI [Preview] : 7VX4N-3VDHQ-VYGHB-JXJVP-9QB26</li>
-<li>Windows Server 2008 Web : WYR28-R7TFJ-3X2YQ-YCY4H-M249D</li>
-<li>Windows Server 2008 HPC Edition : RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</li>
-<li>Windows Server 2008 Standard : TM24T-X9RMF-VWXK6-X8JC9-BFGM2</li>
-<li>Windows Server 2008 Standard without Hyper-V : W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</li>
-<li>Windows Server 2008 Enterprise : YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</li>
-<li>Windows Server 2008 Enterprise without Hyper-V : 39BXF-X8Q23-P2WWT-38T2F-G3FPG</li>
-<li>Windows Server 2008 Datacenter : 7M67G-PC374-GR742-YH8V4-TCBY3</li>
-<li>Windows Server 2008 Datacenter without Hyper-V : 22XQ2-VRXRG-P8D42-K34TD-G3QQC</li>
-<li>Windows Server 2008 for Itanium Systems : 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</li>
-<li>Windows MultiPoint Server 2010 : 736RG-XDKJK-V34PF-BHK87-J6X3K</li>
-<li>Windows Server 2008 R2 Web : 6TPJF-RBVHG-WBW2R-86QPH-6RTM4</li>
-<li>Windows Server 2008 R2 HPC Edition : TT8MH-CG224-D3D7Q-498W2-9QCTX</li>
-<li>Windows Server 2008 R2 Standard : YC6KT-GKW9T-YTKYR-T4X34-R7VHC</li>
-<li>Windows Server 2008 R2 Enterprise : 489J6-VHDMP-X63PK-3K798-CPX3Y</li>
-<li>Windows Server 2008 R2 Datacenter : 74YFP-3QFB3-KQT8W-PMXWJ-7M648</li>
-<li>Windows Server 2008 R2 for Itanium Systems : GT63C-RJFQ3-4GMB6-BRFB9-CB83V</li>
-<li>Windows Server 2012 Datacenter : 48HP8-DN98B-MYWDG-T2DCC-8W83P</li>
-<li>Windows Server 2012 MultiPoint Premium : XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</li>
-<li>Windows Server 2012 MultiPoint Standard : HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</li>
-<li>Windows Server 2012 Standard : XC9B7-NBPP2-83J2H-RHMBY-92BT4</li>
-<li>Windows Server 2012 R2 Cloud Storage : 3NPTF-33KPT-GGBPR-YX76B-39KDD</li>
-<li>Windows Server 2012 R2 Datacenter : W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</li>
-<li>Windows Server 2012 R2 Essentials : KNC87-3J2TX-XB4WP-VCPJV-M4FWM</li>
-<li>Windows Server 2012 R2 Standard : D2N9P-3P6X9-2R39C-7RTCD-MDVJX</li>
-<li>Windows Server 2016 Azure Core : VP34G-4NPPG-79JTQ-864T4-R3MQX</li>
-<li>Windows Server 2016 Cloud Storage : QN4C6-GBJD2-FB422-GHWJK-GJG2R</li>
-<li>Windows Server 2016 Datacenter : CB7KF-BWN84-R7R2Y-793K2-8XDDG</li>
-<li>Windows Server 2016 Essentials : JCKRF-N37P4-C2D82-9YXRT-4M63B</li>
-<li>Windows Server 2016 Standard : WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</li>
-<li>Windows Server 2016 ARM64 : K9FYF-G6NCK-73M32-XMVPY-F9DRR</li>
-<li>Windows Server 2016 Datacenter (Semi-Annual Channel v.1803) : 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG</li>
-<li>Windows Server 2016 Standard (Semi-Annual Channel v.1803) : PTXN8-JFHJM-4WC78-MPCBR-9W4KR</li>
-<li>Windows Server 2016 Datacenter [Preview] : VRDD2-NVGDP-K7QG8-69BR4-TVFHB</li>
-<li>Windows Vista Business : YFKBB-PQJJV-G996G-VWGXY-2V3X8</li>
-<li>Windows Vista Business N : HMBQG-8H2RH-C77VX-27R82-VMQBT</li>
-<li>Windows Vista Enterprise : VKK3X-68KWM-X2YGT-QR4M6-4BWMV</li>
-<li>Windows Vista Enterprise N : VTC42-BM838-43QHV-84HX6-XJXKV</li>
-<li>Windows Vista Business [Preview 1] : XQYF4-QVCMY-YXQRD-9QPV8-3YP9V</li>
-<li>Windows Vista Business [Preview 2] : YVT36-YVCP2-J97GQ-7T22R-RWV8P</li>
-<li>Windows Vista Business N [Preview] : HGBJ9-RWD6M-6HDGW-6T2XD-JQ66F</li>
-<li>Windows Vista Enterprise [Preview 1] : 3JHG3-Y66GP-B7F3K-JFVX2-VBH7K</li>
-<li>Windows Vista Enterprise [Beta-2 build 5384] : MF9PG-RQK7R-26BPJ-TWFYK-RHXCM</li>
-<li>Windows Longhorn Web [Preview] : MDRCM-4WKCW-J93FF-J9Q48-M6KBB</li>
-<li>Windows Longhorn Standard : Q37JX-P3HHB-GKRH2-PDBKG-GGXPW</li>
-<li>Windows Longhorn Enterprise : 7KYMQ-R788Q-4RF69-KTWKM-92PFJ</li>
-<li>Windows Longhorn Datacenter [Preview] : HR8VD-7DHG2-48378-M9D73-28F4T</li>
-<li>Windows Longhorn for Itanium Systems [Preview] : CWV9H-PHGPW-V93WV-QBQV9-8V336</li>
-<li>Office Access 2010 : V7Y44-9T38C-R2VJK-666HK-T7DDX</li>
-<li>Office Excel 2010 : H62QG-HXVKF-PP4HP-66KMR-CW9BM</li>
-<li>Office Groove (SharePoint Workspace) 2010 : QYYW6-QP4CB-MBV6G-HYMCJ-4T3J4</li>
-<li>Office InfoPath 2010 : K96W8-67RPQ-62T9Y-J8FQJ-BT37T</li>
-<li>Office Mondo 1 2010 : YBJTT-JG6MD-V9Q7P-DBKXJ-38W9R</li>
-<li>Office Mondo 2 2010 : 7TC2V-WXF6P-TD7RT-BQRXR-B8K32</li>
-<li>Office OneNote 2010 : Q4Y4M-RHWJM-PY37F-MTKWH-D3XHX</li>
-<li>Office OutLook 2010 : 7YDC2-CWM8M-RRTJC-8MDVC-X3DWQ</li>
-<li>Office PowerPoint 2010 : RC8FX-88JRY-3PF7C-X8P67-P4VTT</li>
-<li>Office Professional Plus 2010 : VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB</li>
-<li>Office Project Professional 2010 : YGX6F-PGV49-PGW3J-9BTGG-VHKC6</li>
-<li>Office Project Standard 2010 : 4HP3K-88W3F-W2K3D-6677X-F9PGB</li>
-<li>Office Publisher 2010 : BFK7F-9MYHM-V68C7-DRQ66-83YTP</li>
-<li>Office Small Business Basics 2010 : D6QFG-VBYP2-XQHM7-J97RH-VVRCK</li>
-<li>Office Standard 2010 : V7QKV-4XVVR-XYV4D-F7DFM-8R6BM</li>
-<li>Office Visio Premium 2010 : D9DWC-HPYVV-JGF4P-BTWQB-WX8BJ</li>
-<li>Office Visio Professional 2010 : 7MCW8-VRQVK-G677T-PDJCM-Q8TCP</li>
-<li>Office Visio Standard 2010 : 767HD-QGMWX-8QTDB-9G3R2-KHFGJ</li>
-<li>Office Word 2010 : HVHB3-C6FV7-KQX9W-YQG79-CRY7T</li>
-<li>Office Starter 2010 Retail : VXHHB-W7HBD-7M342-RJ7P8-CHBD6</li>
-<li>Office SharePoint Designer (Frontpage) 2010 Retail : H48K6-FB4Y6-P83GH-9J7XG-HDKKX</li>
-<li>Office Access 2013 : NG2JY-H4JBT-HQXYP-78QH9-4JM2D</li>
-<li>Office Excel 2013 : VGPNG-Y7HQW-9RHP7-TKPV3-BG7GB</li>
-<li>Office InfoPath 2013 : DKT8B-N7VXH-D963P-Q4PHY-F8894</li>
-<li>Office Lync 2013 : 2MG3G-3BNTT-3MFW9-KDQW3-TCK7R</li>
-<li>Office Mondo 2013 : 42QTK-RN8M7-J3C4G-BBGYM-88CYV</li>
-<li>Office OneNote 2013 : TGN6P-8MMBC-37P2F-XHXXK-P34VW</li>
-<li>Office OutLook 2013 : QPN8Q-BJBTJ-334K3-93TGY-2PMBT</li>
-<li>Office PowerPoint 2013 : 4NT99-8RJFH-Q2VDH-KYG2C-4RD4F</li>
-<li>Office Professional Plus 2013 : YC7DK-G2NP3-2QQC3-J6H88-GVGXT</li>
-<li>Office Project Professional 2013 : FN8TT-7WMH6-2D4X9-M337T-2342K</li>
-<li>Office Project Standard 2013 : 6NTH3-CW976-3G3Y2-JK3TX-8QHTT</li>
-<li>Office Publisher 2013 : PN2WF-29XG2-T9HJ7-JQPJR-FCXK4</li>
-<li>Office Standard 2013 : KBKQT-2NMXY-JJWGP-M62JB-92CD4</li>
-<li>Office Visio Professional 2013 : C2FG9-N6J68-H8BTJ-BW3QX-RM3B3</li>
-<li>Office Visio Standard 2013 : J484Y-4NKBF-W2HMG-DBMJC-PGWR7</li>
-<li>Office Word 2013 : 6Q7VD-NX8JD-WJ2VH-88V73-4GBJ7</li>
-<li>Office SharePoint Workspace (Groove) 2013 : H7R7V-WPNXQ-WCYYC-76BGV-VT7GH</li>
-<li>Office SharePoint Designer (Frontpage) 2013 Retail : GYJRG-NMYMF-VGBM4-T3QD4-842DW</li>
-<li>Office Access 2013 [Pre-Release] : DJBH8-RGN7Q-836KD-DMP3M-DM9MF</li>
-<li>Office Excel 2013 [Pre-Release] : Q3BNP-3WXDT-GG8HF-24KMW-HMDBK</li>
-<li>Office SharePoint Workspace (Groove) 2013 [Pre-Release] : WVCGG-NK4FG-7XKXM-BD4WF-3C624</li>
-<li>Office InfoPath 2013 [Pre-Release] : 7KPJJ-N8TT7-CK3KR-QTV98-YPVXQ</li>
-<li>Office Lync 2013 [Pre-Release] : XNVD3-RYC7T-7R6BT-WX6CF-8BYH7</li>
-<li>Office Mondo 2013 [Pre-Release] : GCGCN-6FJRM-TR9Q3-BGMWJ-78KQV</li>
-<li>Office OneNote 2013 [Pre-Release] : VYNYX-8GPBC-7FQMD-D6B7B-7MDFD</li>
-<li>Office Outlook 2013 [Pre-Release] : X2KNB-FRRG2-WXDPH-739DM-DM9RH</li>
-<li>Office PowerPoint 2013 [Pre-Release] : B8CT8-BTNFQ-XQXBK-BFWV8-HMDFQ</li>
-<li>Office Professional Plus 2013 [Pre-Release] : PGD67-JN23K-JGVWV-KTHP4-GXR9G</li>
-<li>Office Project Professional 2013 [Pre-Release] : NFKVM-DVG7F-TYWYR-3RPHY-F872K</li>
-<li>Office Project Standard 2013 [Pre-Release] : N89QF-GGB8J-BKD28-C4V28-W4XTK</li>
-<li>Office Publisher 2013 [Pre-Release] : NB67P-J8XP4-XDK9B-V73VH-M4CKR</li>
-<li>Office Visio Professional 2013 [Pre-Release] : B3C7Q-D6NH2-2VRFW-HHWDG-FVQB6</li>
-<li>Office Visio Standard 2013 [Pre-Release] : 9MKNF-J9XQ6-JV4XB-FJQPY-43F43</li>
-<li>Office Word 2013 [Pre-Release] : JBGD4-3JNG7-JWWGV-CR6TP-DC62Q</li>
-<li>Office Access 2016 : GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</li>
-<li>Office Excel 2016 : 9C2PK-NWTVB-JMPW8-BFT28-7FTBF</li>
-<li>Office Mondo 2016 : HFTND-W9MK4-8B7MJ-B6C4G-XQBR2</li>
-<li>Office Mondo Retail 2016 : DMTCJ-KNRKX-26982-JYCKT-P7KB6</li>
-<li>Office OneNote 2016 : DR92N-9HTF2-97XKM-XW2WJ-XW3J6</li>
-<li>Office Outlook 2016 : R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</li>
-<li>Office Powerpoint 2016 : J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</li>
-<li>Office Professional Plus 2016 : XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</li>
-<li>Office Project Professional 2016 : YG9NW-3K39V-2T3HJ-93F3Q-G83KT</li>
-<li>Office Project Professional 2016 C2R [Preview] : WGT24-HCNMF-FQ7XH-6M8K7-DRTW9</li>
-<li>Office Project Standard 2016 : GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</li>
-<li>Office Project Standard 2016 C2R [Preview] : D8NRQ-JTYM3-7J2DX-646CT-6836M</li>
-<li>Office Publisher 2016 : F47MM-N3XJP-TQXJ9-BP99D-8K837</li>
-<li>Office Skype for Business 2016 : 869NQ-FJ69K-466HW-QYCP2-DDBV6</li>
-<li>Office Standard 2016 : JNRGM-WHDWX-FJJG3-K47QV-DRTFM</li>
-<li>Office Visio Professional 2016 : PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</li>
-<li>Office Visio Professional 2016 C2R [Preview] : 69WXN-MBYV6-22PQG-3WGHK-RM6XC</li>
-<li>Office Visio Standard 2016 : 7WHWN-4T7MP-G96JF-G33KR-W8GF4</li>
-<li>Office Visio Standard 2016 C2R [Preview] : NY48V-PPYYH-3F4PX-XJRKJ-W4423</li>
-<li>Office Word 2016 : WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</li>
-<li>Office Professional Plus 2019 C2R [Preview] : VQ9DP-NVHPH-T9HJC-J9PDT-KTQRG</li>
-<li>Office Project Professional 2019 C2R [Preview] : XM2V9-DN9HH-QB449-XDGKC-W2RMW</li>
-<li>Office Visio Professional 2019 C2R [Preview] : N2CG9-YD3YK-936X4-3WR82-Q3X4H</li>
-<li>Office Access 2019 : 9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</li>
-<li>Office Excel 2019 : TMJWT-YYNMB-3BKTF-644FC-RVXBD</li>
-<li>Office Outlook 2019 : 7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</li>
-<li>Office Powerpoint 2019 : RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</li>
-<li>Office Professional Plus 2019 : NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</li>
-<li>Office Project Professional 2019 : B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</li>
-<li>Office Project Standard 2019 : C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</li>
-<li>Office Publisher 2019 : G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</li>
-<li>Office Skype for Business 2019 : NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</li>
-<li>Office Standard 2019 : 6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</li>
-<li>Office Visio Professional 2019 : 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</li>
-<li>Office Visio Standard 2019 : 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</li>
-<li>Office Word 2019 : PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</li>
+<h2 id="Android-Studio-组件路径"><a href="#Android-Studio-组件路径" class="headerlink" title="Android Studio 组件路径"></a>Android Studio 组件路径</h2><ul>
+<li><p>Android Studio 缓存路径</p>
+<blockquote>
+<p>~/Library/Caches/AndroidStudio3.6<br>~/Library/Application Support/AndroidStudio3.6<br>~/Library/Preferences/AndroidStudio3.6<br>~/Library/Preferences/AndroidStudio3.6/options/androidStudioFirstRun.xml</p>
+</blockquote>
+</li>
+<li><p>工具包路径安装在<br><code>~/Library/Android</code></p>
+</li>
+<li><p>Android SDK 安装在<br><code>~/Library/Android/sdk</code></p>
+</li>
+<li><p>gradle 路径<br><code>~/.gradle</code></p>
+</li>
+<li><p>dart server<br><code>~/.dartServer</code></p>
+</li>
 </ul>
 
-        
       
     </div>
 
@@ -1001,57 +761,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/Xcode与调试-2019-09-10-Xcode-all-load-ObjC-force-load三个编译选项/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/06/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-06-Android%E5%BC%80%E5%8F%91-%E5%AE%89%E8%A3%85Android-SDK/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/10/Xcode与调试-2019-09-10-Xcode-all-load-ObjC-force-load三个编译选项/" class="post-title-link" itemprop="url">Xcode-all_load,ObjC,force_load三个编译选项</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/06/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-06-Android%E5%BC%80%E5%8F%91-%E5%AE%89%E8%A3%85Android-SDK/" class="post-title-link" itemprop="url">Android开发-安装Android SDK</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-09-10 15:25:36 / 修改时间：15:26:30" itemprop="dateCreated datePublished" datetime="2019-09-10T15:25:36+08:00">2019-09-10</time>
+              <time title="创建时间：2020-01-06 15:15:24 / 修改时间：15:17:24" itemprop="dateCreated datePublished" datetime="2020-01-06T15:15:24+08:00">2020-01-06</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -1064,12 +811,10 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>-all_load</p>
-<p>The <code>-all_load</code> flag tell the linker that it should link every object file (member) of every static library that is passed to the linker. This is a rather drastic option and can cause your executable binary to dramatically increase in size. This flag should be avoided if at all possible when using many static libraries.</p>
-<p>-ObjC<br>The <code>-ObjC</code> flag controls behavior around Objective-C code. This will tell the linker that it should look through all the object files (members) of each static library to find the object files (members) that contain any additional Objective-C runtime data. This allows developers to link object files that only contain Objective-C catagories, or any other Objective-C code that the static analysis cannot resolve as being called directly (such as creating a class using NSClassFromString()). This is the flag that is typically passed when using static libraries that contain Objective-C code. Keep in mind, this flag means that ALL Objective-C code that is passed to the linker will be added to the executable binary regardless of if it gets used or not.</p>
-<p>-force_load<br>The <code>-force_load</code> flag is very similar to the <code>-all_load</code> flag, except that it takes an argument of a path to a static library. When passed to the linker, this flag says that regardless of whatever other flags are passed to the linker, that it should link all of the object files (members) of the specific static library that is specified by the passed argument. This allows for a more controlled behavior of selectively loading all the code from one static library but not having to bloat up the executable binary with unnecessary code from other libraries.</p>
+          <ul>
+<li>使用 homebrew 安装<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">brew cast install android-sdk</span><br><span class="line"></span><br><span class="line">~$ brew cask install android-sdk</span><br><span class="line">==&gt; Tapping homebrew/cask</span><br><span class="line">Cloning into <span class="string">'/usr/local/Homebrew/Library/Taps/homebrew/homebrew-cask'</span>...</span><br><span class="line">remote: Enumerating objects: 3616, <span class="keyword">done</span>.</span><br><span class="line">remote: Counting objects: 100% (3616/3616), <span class="keyword">done</span>.</span><br><span class="line">remote: Compressing objects: 100% (3608/3608), <span class="keyword">done</span>.</span><br><span class="line">remote: Total 3616 (delta 25), reused 541 (delta 6), pack-reused 0</span><br><span class="line">Receiving objects: 100% (3616/3616), 1.21 MiB | 361.00 KiB/s, <span class="keyword">done</span>.</span><br><span class="line">Resolving deltas: 100% (25/25), <span class="keyword">done</span>.</span><br><span class="line">Tapped 1 <span class="built_in">command</span> and 3504 casks (3,621 files, 3.9MB).</span><br><span class="line">==&gt; Caveats</span><br><span class="line">You can control android sdk packages via the sdkmanager <span class="built_in">command</span>.</span><br><span class="line">You may want to add to your profile:</span><br><span class="line"></span><br><span class="line">  <span class="string">'export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"'</span></span><br><span class="line"></span><br><span class="line">android-sdk requires Java 8. You can install it with:</span><br><span class="line">  brew cask install homebrew/cask-versions/adoptopenjdk8</span><br><span class="line"></span><br><span class="line">==&gt; Downloading https://dl.google.com/android/repository/sdk-tools-darwin-4333796.zip</span><br><span class="line"><span class="comment">######################################################################## 100.0%</span></span><br><span class="line">==&gt; Verifying SHA-256 checksum <span class="keyword">for</span> Cask <span class="string">'android-sdk'</span>.</span><br><span class="line">==&gt; Installing Cask android-sdk</span><br><span class="line">==&gt; Linking Binary <span class="string">'android'</span> to <span class="string">'/usr/local/bin/android'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'archquery'</span> to <span class="string">'/usr/local/bin/archquery'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'avdmanager'</span> to <span class="string">'/usr/local/bin/avdmanager'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'jobb'</span> to <span class="string">'/usr/local/bin/jobb'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'lint'</span> to <span class="string">'/usr/local/bin/lint'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'monkeyrunner'</span> to <span class="string">'/usr/local/bin/monkeyrunner'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'screenshot2'</span> to <span class="string">'/usr/local/bin/screenshot2'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'sdkmanager'</span> to <span class="string">'/usr/local/bin/sdkmanager'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'uiautomatorviewer'</span> to <span class="string">'/usr/local/bin/uiautomatorviewer'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'emulator'</span> to <span class="string">'/usr/local/bin/emulator'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'emulator-check'</span> to <span class="string">'/usr/local/bin/emulator-check'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'mksdcard'</span> to <span class="string">'/usr/local/bin/mksdcard'</span>.</span><br><span class="line">==&gt; Linking Binary <span class="string">'monitor'</span> to <span class="string">'/usr/local/bin/monitor'</span>.</span><br><span class="line">🍺  android-sdk was successfully installed!</span><br></pre></td></tr></table></figure></li>
+</ul>
 
-        
       
     </div>
 
@@ -1077,57 +822,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/09/学习-Shell-2019-09-09-Shell-Shell中路径与引号的说明/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2020/01/06/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-06-Android%E5%BC%80%E5%8F%91-macOS%E5%AE%89%E8%A3%85JDK/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/09/学习-Shell-2019-09-09-Shell-Shell中路径与引号的说明/" class="post-title-link" itemprop="url">Shell-Shell中路径与引号的说明</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2020/01/06/%E5%AD%A6%E4%B9%A0-Android%E5%BC%80%E5%8F%91-2020-01-06-Android%E5%BC%80%E5%8F%91-macOS%E5%AE%89%E8%A3%85JDK/" class="post-title-link" itemprop="url">Android开发-macOS安装JDK</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-09-09 16:58:40 / 修改时间：17:01:38" itemprop="dateCreated datePublished" datetime="2019-09-09T16:58:40+08:00">2019-09-09</time>
+              <time title="创建时间：2020-01-06 11:39:17" itemprop="dateCreated datePublished" datetime="2020-01-06T11:39:17+08:00">2020-01-06</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-20 16:25:14" itemprop="dateModified" datetime="2020-04-20T16:25:14+08:00">2020-04-20</time>
+              </span>
 
           
 
@@ -1140,107 +878,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="https://stackoverflow.com/questions/33318499/should-i-use-quotes-in-environment-path-names" target="_blank" rel="noopener">https://stackoverflow.com/questions/33318499/should-i-use-quotes-in-environment-path-names</a></p>
-<p>几乎在所有情况下，都应该用引号把路径包裹起来。<br>但是，特殊情况之一是：<code>~/</code>要在引号外面，要不然不能正确转义。<br>如果一定要把路径全放在引号里面，那么就用<code>$HOME</code>吧。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/学习-Python-2019-09-05-Python-Python中对象的遍历方式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/05/学习-Python-2019-09-05-Python-Python中对象的遍历方式/" class="post-title-link" itemprop="url">Python-Python中对象的遍历方式</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-05 13:51:14 / 修改时间：13:55:39" itemprop="dateCreated datePublished" datetime="2019-09-05T13:51:14+08:00">2019-09-05</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="字典遍历"><a href="#字典遍历" class="headerlink" title="字典遍历"></a>字典遍历</h2><ol>
-<li><p>直接遍历字典，是对字典的key进行遍历。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for key in dict:</span><br></pre></td></tr></table></figure>
+          <h2 id="使用-Open-JDK"><a href="#使用-Open-JDK" class="headerlink" title="使用 Open JDK"></a>使用 Open JDK</h2><blockquote>
+<p>Intellij IDE 下载的 OpenJDK 保存目录在<code>~/Library/Java/JavaVirtualMachines/openjdk-14.0.1</code>。</p>
+</blockquote>
+<ol>
+<li><p>Open JDK 官网(未安装成功)<br><a href="https://openjdk.java.net/" target="_blank" rel="noopener">https://openjdk.java.net/</a><br>最新版地址 <a href="https://jdk.java.net/13" target="_blank" rel="noopener">https://jdk.java.net/13</a></p>
 </li>
-<li><p>同时遍历字典的 key 和 value。<br>这里的括号可以省去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.items();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同时遍历字典的 key 和 value。<br>括号可省</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.iteritems():</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同时遍历字典的 key 和 value<br>括号可省</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for k,v in zip(dict.iterkeys(),dict.itervalues()):</span><br></pre></td></tr></table></figure>
+<li><p>下载解压后，根据实际路径配置如下环境变量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># JDK</span></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=~/Documents/Project/AndroidTools.bundle/jdk-13.0.1.jdk/Contents/Home</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> CLASSPAHT=.:<span class="variable">$JAVA_HOME</span>/lib/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><ol>
-<li><p>普通遍历方式</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for item in sequence:</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同时遍历索引和元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index in range(len(sequence)):</span><br><span class="line">       print index,sequence[index]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>同时遍历索引和元素</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index, item in enumerate(sequence):</span><br><span class="line">  print index, item</span><br></pre></td></tr></table></figure></li>
+<h2 id="使用-Oracle-JDK"><a href="#使用-Oracle-JDK" class="headerlink" title="使用 Oracle JDK"></a>使用 Oracle JDK</h2><ol>
+<li>Oracle JDK 一键安装包下载：<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="noopener">https://www.oracle.com/technetwork/java/javase/downloads/index.html</a></li>
 </ol>
+<p>P.S. Oracle JDK v.s. Open JDK <a href="https://www.cnblogs.com/bluestorm/p/8965656.html" target="_blank" rel="noopener">https://www.cnblogs.com/bluestorm/p/8965656.html</a></p>
+<ol start="2">
+<li>配置<code>JAVA_HOME</code><br>a. 执行<code>echo $JAVA_HOME</code>，如果没有输出内容，则说明还需要配置。<br>b. 执行<code>/usr/libexec/java_home -V</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Matching Java Virtual Machines (1):</span><br><span class="line">    13.0.1, x86_64:	<span class="string">"Java SE 13.0.1"</span>	/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home</span><br><span class="line"></span><br><span class="line">/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home</span><br></pre></td></tr></table></figure>
+c. 根据上一步打印的内容，修改<code>.bash_profile</code><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home</span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$JAVA_HOME</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> CLASS_PATH=<span class="variable">$JAVA_HOME</span>/lib</span><br></pre></td></tr></table></figure>
 
-        
+
+</li>
+</ol>
+<h2 id="Java-软件包卸载工具"><a href="#Java-软件包卸载工具" class="headerlink" title="Java 软件包卸载工具"></a>Java 软件包卸载工具</h2><p><a href="https://www.java.com/en/download/uninstalltool.jsp" target="_blank" rel="noopener">https://www.java.com/en/download/uninstalltool.jsp</a></p>
+<ul>
+<li>手动卸载 Oracle JDK<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin</span><br><span class="line">sudo rm -fr /Library/PreferencesPanes/JavaControlPanel.prefpane</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找当前版本</span></span><br><span class="line">ls /Library/Java/JavaVirtualMachines/</span><br><span class="line">jdk-9.0.1.jdk</span><br><span class="line"></span><br><span class="line">sudo rm -rf /Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk</span><br></pre></td></tr></table></figure></li>
+</ul>
+
       
     </div>
 
@@ -1248,36 +912,53 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1302,30 +983,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1339,17 +1013,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1360,50 +1040,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

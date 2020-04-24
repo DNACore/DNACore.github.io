@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/17/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/17/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/17/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,504 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/14/手机技巧-2019-02-14-移动联通电信短信查询代码/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-05-09-Rust/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/02/14/手机技巧-2019-02-14-移动联通电信短信查询代码/" class="post-title-link" itemprop="url">移动联通电信短信查询代码</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/05/09/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-05-09-Rust/" class="post-title-link" itemprop="url">Rust</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-02-14 10:58:07" itemprop="dateCreated datePublished" datetime="2019-02-14T10:58:07+08:00">2019-02-14</time>
+              <time title="创建时间：2019-05-09 16:52:02 / 修改时间：16:53:04" itemprop="dateCreated datePublished" datetime="2019-05-09T16:52:02+08:00">2019-05-09</time>
             </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-11 09:58:30" itemprop="dateModified" datetime="2019-07-11T09:58:30+08:00">2019-07-11</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h2 id="联通"><a href="#联通" class="headerlink" title="联通"></a>联通</h2><ul>
-<li>查流量</li>
-</ul>
-<ol>
-<li><code>cxll</code>、<code>1071</code>查看手机上网流量。</li>
-<li><code>cxzll</code>查询总流量。</li>
-<li><code>TCYL</code>查询剩余流量。</li>
-<li><code>5083</code>查看流量半年包余量。</li>
-<li><code>2082</code>查看套餐余量，包括流量和话费。</li>
-</ol>
-<ul>
-<li>查话费</li>
-</ul>
-<ol>
-<li><code>话费</code>查询话费。</li>
-<li><code>余额</code>查询余额。</li>
-<li><code>hfmx</code>查询花费明细。</li>
-</ol>
-<hr>
-<h2 id="电信"><a href="#电信" class="headerlink" title="电信"></a>电信</h2><ul>
-<li>查询流量</li>
-</ul>
-<ol>
-<li>电信手机客户端——服务——客服——输入<code>查询流量</code></li>
-<li>短信发送 <code>1081</code> 到 10001 查询。</li>
-</ol>
-<ul>
-<li>查话费</li>
-</ul>
-<ol>
-<li>发送 <code>1029</code> 到 10001 查询余额。</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/02/01/电脑技巧-2019-02-01-如何知道-USB-3-0-UASP-模式已经开启了？/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/02/01/电脑技巧-2019-02-01-如何知道-USB-3-0-UASP-模式已经开启了？/" class="post-title-link" itemprop="url">如何知道 USB 3.0 UASP 模式已经开启了？</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-01 14:13:46 / 修改时间：14:30:33" itemprop="dateCreated datePublished" datetime="2019-02-01T14:13:46+08:00">2019-02-01</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h2><ul>
-<li><p>方法1<br>将 USB 存储设备连接到电脑上，用 Crystal Disk Info 就可以查看。<br><img src="/images/USB_UASP.png" alt></p>
-</li>
-<li><p>方法2<br><a href="https://winaero.com/blog/check-if-your-usb-3-0-device-supports-usb-attached-scsi-uas-protocol/" target="_blank" rel="noopener">https://winaero.com/blog/check-if-your-usb-3-0-device-supports-usb-attached-scsi-uas-protocol/</a></p>
-</li>
-</ul>
-<ol>
-<li>Press <code>Win</code> + <code>X</code> keys together on the keyboard and click Device Manager.</li>
-<li>Expand the “Storage Controllers” node and see if it has a “USB Attached SCSI (UAS) Mass Storage Device” listed.</li>
-<li>If not, then expand “Universal Serial Bus controllers” tree node in Device Manager.</li>
-<li>Double click on the “USB Mass Storage Device” for which you wish to check this.</li>
-<li>Go to the Driver tab and click the Driver Details button.</li>
-<li>If it says USBSTOR.sys, then it means Windows is using the older Bulk-Only Transport Protocol with your USB device. If it says UASPStor.sys, then it means UAS Protocol is in use.</li>
-</ol>
-<p>As stated earlier, UAS Protocol will be used by Windows 8 and later only if your USB 2.0/3.0 mass storage device supports it and your USB chipset/firmware support it. Windows 7 does not support UASP out-of-the-box but device manufacturer drivers can easily support it.</p>
-<p>UAS when used with USB 3.1 should be substantially faster than eSATA. In some benchmarks, even eSATA was faster than USB 3.0 with BOT. But UASP is still slower than Thunderbolt 3 or the ultrafast internal storage buses like NVM Express.</p>
-<p>Another important thing to note is like eSATA, UASP makes TRIM support possible for external SSDs but it still depends on support from all the SSD controllers and bridge chips used in the SSD besides the operating system. Although UASP enables USB drives to use the SCSI command set, SSD controllers use the SATA command set. So the OS needs to support not just UASP but the SCSI UNMAP command (counterpart to ATA TRIM) and the USB-SATA bridge chip needs to be able to translate the SCSI UNMAP command to ATA TRIM properly.</p>
-<h2 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h2><p>运行命令<code>ioreg &gt; ~/Desktop/ioreg.txt</code><br>在结果中查看有没有<code>IOUSBMassStorageUASDriver</code>字样<br>或者直接执行<code>ioreg | grep IOUSBMassStorageUASDriver</code></p>
-<p>参考：<a href="https://discussions.apple.com/thread/6164330" target="_blank" rel="noopener">https://discussions.apple.com/thread/6164330</a></p>
-<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><p><a href="https://superuser.com/questions/928741/how-can-i-check-whether-usb3-0-uasp-usb-attached-scsi-protocol-mode-is-enabled" target="_blank" rel="noopener">https://superuser.com/questions/928741/how-can-i-check-whether-usb3-0-uasp-usb-attached-scsi-protocol-mode-is-enabled</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/31/手机技巧-2019-01-31-Android-安卓使用MiXpolrer连接FTP服务器/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/31/手机技巧-2019-01-31-Android-安卓使用MiXpolrer连接FTP服务器/" class="post-title-link" itemprop="url">Android-安卓使用MiXplorer连接FTP服务器</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-31 19:22:19" itemprop="dateCreated datePublished" datetime="2019-01-31T19:22:19+08:00">2019-01-31</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-02-15 17:49:12" itemprop="dateModified" datetime="2019-02-15T17:49:12+08:00">2019-02-15</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>打开 MiXplorer 软件</p>
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>点击屏幕的左上角位置，三个横线的按钮，这个键也叫菜单键、汉堡键。<br><img src="/images/Android-MiXplorer-FTP-1.jpg" alt></p>
-<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><p>在弹出的书签界面点击考右边的一个按钮。<br><img src="/images/Android-MiXplorer-FTP-2.jpg" alt></p>
-<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><p>在弹出的列表中选择“添加存储器”<br><img src="/images/Android-MiXplorer-FTP-3.jpg" alt></p>
-<h3 id="第六步"><a href="#第六步" class="headerlink" title="第六步"></a>第六步</h3><p>在弹出的界面中选择<code>FTP(S,ES)</code>。因为我们要连接的是一个FTP服务器。<br><img src="/images/Android-MiXplorer-FTP-4.jpg" alt></p>
-<h3 id="第七步"><a href="#第七步" class="headerlink" title="第七步"></a>第七步</h3><p>在弹出的界面填写好FTP服务器的地址、用户名和密码点击保存就可以。如果没有用户名和密码就留空，不需要填写。<br>例如：<br>FTP 地址填写<code>ftp://192.168.1.100:2121</code><br><img src="/images/Android-MiXplorer-FTP-5.jpg" alt></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/28/电脑技巧-macOS-2019-01-28-macOS-defaults命令/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/28/电脑技巧-macOS-2019-01-28-macOS-defaults命令/" class="post-title-link" itemprop="url">macOS-defaults命令</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-28 19:04:35" itemprop="dateCreated datePublished" datetime="2019-01-28T19:04:35+08:00">2019-01-28</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-04-15 10:47:43" itemprop="dateModified" datetime="2019-04-15T10:47:43+08:00">2019-04-15</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>defaults 命令其实修改的是<code>~/Library/Preferences/</code>目录下面的plist文件</p>
-<p>所有可能用到的 domain 和 key <a href="https://www.defaults-write.com/" target="_blank" rel="noopener">https://www.defaults-write.com/</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/24/学习-iOS-2019-01-24-iOS-通知的注册/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/24/学习-iOS-2019-01-24-iOS-通知的注册/" class="post-title-link" itemprop="url">iOS-通知的注册</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-24 16:18:33" itemprop="dateCreated datePublished" datetime="2019-01-24T16:18:33+08:00">2019-01-24</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/23/电脑技巧-macOS-2019-01-23-macOS-压缩sparseimage镜像/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/23/电脑技巧-macOS-2019-01-23-macOS-压缩sparseimage镜像/" class="post-title-link" itemprop="url">macOS-压缩sparseimage镜像</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-23 20:49:04" itemprop="dateCreated datePublished" datetime="2019-01-23T20:49:04+08:00">2019-01-23</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-04-01 20:24:08" itemprop="dateModified" datetime="2019-04-01T20:24:08+08:00">2019-04-01</time>
-              </span>
-            
-          
 
           
 
@@ -726,16 +218,9 @@
 
       
           <ul>
-<li>运行命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdiutil compact ～/Desktop/a.spraseimage</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>安装<br>rust安装，因为被墙的原因，在国内几乎很难安装，需要通过代理安装。但是rustup却很容易，一般在linux下，通过官方指定的下列语句，基本可以安装rustup。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -sSf https://sh.rustup.rs | sh</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>如果提示<code>hdiutil: compact failed - 功能未实现</code>或者<code>hdiutil: compact failed - 功能未实现</code>可能是当前正在使用电池供电，此时需要执行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdiutil compact -batteryallowed ～/Desktop/a.spraseimage</span><br></pre></td></tr></table></figure>
 
-<p>参考：<br><a href="https://superuser.com/questions/275148/shrink-a-sparseimage" target="_blank" rel="noopener">https://superuser.com/questions/275148/shrink-a-sparseimage</a><br><a href="https://apple.stackexchange.com/questions/132147/hdiutil-compact-failed-function-not-implemented" target="_blank" rel="noopener">https://apple.stackexchange.com/questions/132147/hdiutil-compact-failed-function-not-implemented</a></p>
-
-        
       
     </div>
 
@@ -743,140 +228,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/23/电脑技巧-Windows-2019-01-23-Windows-CLSID/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/09/%E5%AD%A6%E4%B9%A0-iOS-2019-05-09-iOS-NSHTTPCookie/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/23/电脑技巧-Windows-2019-01-23-Windows-CLSID/" class="post-title-link" itemprop="url">Windows-CLSID</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/05/09/%E5%AD%A6%E4%B9%A0-iOS-2019-05-09-iOS-NSHTTPCookie/" class="post-title-link" itemprop="url">iOS-NSHTTPCookie</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-01-23 11:29:17 / 修改时间：11:31:08" itemprop="dateCreated datePublished" datetime="2019-01-23T11:29:17+08:00">2019-01-23</time>
+              <time title="创建时间：2019-05-09 16:50:20" itemprop="dateCreated datePublished" datetime="2019-05-09T16:50:20+08:00">2019-05-09</time>
             </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>后面的 GUID 为 Windows 内置的 clsid</p>
-<p>所有设置.{ED7BA470-8E54-465E-825C-99712043E01C}<br>回收站.{645ff040-5081-101b-9f08-00aa002f954e}<br>拨号网络.{992CFFA0-F557-101A-88EC-00DD010CCC48}<br>打印机.{2227a280-3aea-1069-a2de-08002b30309d}<br>控制面板.{21ec2020-3aea-1069-a2dd-08002b30309d}<br>网上邻居.{208D2C60-3AEA-1069-A2D7-08002B30309D}<br>图标clsid=windowsmedia 文件名.{00020c01-0000-0000-c000-000000000046}<br>无关联文件 文件名.{00021401-0000-0000-c000-000000000046}<br>BMP文件 文件名.{d3e34b21-9d75-101a-8c3d-00aa001a1652}<br>HTML文件 文件名.{25336920-03f9-11cf-8fd0-00aa00686f13}<br>媒体剪辑文件 文件名.{00022601-0000-0000-c000-000000000046}<br>打印机 文件名.{2227a280-3aea-1069-A2de-08002b30309d}<br>控制面板 文件名.{21ec2020-3aea-1069-A2dd-08002b30309d}<br>网上邻居 文件名.{208d2c60-3aea-1069-A2d7-08002b30309d}<br>拨号网络 文件名.{992cffa0-F557-101a-88ec-00dd010ccc48}<br>计划任务 文件名.{D6277990-4c6a-11cf-8d87-00aa0060f5bf}<br>回收站 文件名.{645ff040-5081-101b-9f08-00aa002f954e}<br>Web文件夹 文件名.{Bdeadf00-C265-11d0-Bced-00a0c90ab50f}<br>历史记录 文件名.{Ff393560-C2a7-11cf-Bff4-444553540000}<br>收藏夹 文件名.{1a9ba3a0-143a-11cf-8350-444553540000}<br>预订文件夹 文件名.{F5175861-2688-11d0-9c5e-00aa00a45957}<br>ActiveX高速缓存文件夹文件名.{88c6c381-2e85-11d0-94de-444553540000}<br>excel.{00020810-0000-0000-C000-000000000046}<br>word.{00020900-0000-0000-C000-000000000046}<br>media.{00022603-0000-0000-C000-000000000046}<br>CAB.{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}<br>搜索-计算机{1f4de370-d627-11d1-ba4f-00a0c91eedba}<br>mht.{3050F3D9-98B5-11CF-BB82-00AA00BDCE0B}<br>mshta.{3050f4d8-98B5-11CF-BB82-00AA00BDCE0B}<br>我的文档.{450D8FBA-AD25-11D0-98A8-0800361B1103}<br>XML.{48123bc4-99d9-11d1-a6b3-00c04fd91555}<br>回收站(满).{5ef4af3a-f726-11d0-b8a2-00c04fc309a4}<br>回收站.{645FF040-5081-101B-9F08-00AA002F954E}<br>ftp_folder.{63da6ec0-2e98-11cf-8d82-444553540000}<br>网络和拨号连接.{7007ACC7-3202-11D1-AAD2-00805FC1270E}<br>写字板文档.{73FDDC80-AEA9-101A-98A7-00AA00374959}<br>Temporary Offline Files Cleaner.{750fdf0f-2a26-11d1-a3ea-080036587f03}<br>用户和密码.{7A9D77BD-5403-11d2-8785-2E0420524153}<br>Internet 临时文件.{7BD29E00-76C1-11CF-9DD0-00A0C9034933}<br>已下载的程序文件的清除程序.{8369AB20-56C9-11D0-94E8-00AA0059CE02}<br>公文包.{85BBD920-42A0-1069-A2E4-08002B30309D}<br>ActiveX 高速缓存文件夹.{88C6C381-2E85-11D0-94DE-444553540000}<br>mail.{9E56BE60-C50F-11CF-9A2C-00A0C90A90CE}<br>历史记录.{FF393560-C2A7-11CF-BFF4-444553540000}<br>目录.{fe1290f0-cfbd-11cf-a330-00aa00c16e65}<br>Internet Explorer.{FBF23B42-E3F0-101B-8488-00AA003E56F8}<br>Snapshot File.{FACB5ED2-7F99-11D0-ADE2-00A0C90DC8D9}<br>预订文件夹.{F5175861-2688-11d0-9C5E-00AA00A45957}<br>MyDocs Drop Target.{ECF03A32-103D-11d2-854D-006008059367}<br>Policy Package.{ecabaebd-7f19-11d2-978E-0000f8757e2a}<br>搜索结果.{e17d4fc0-5564-11d1-83f2-00a0c90dc849}<br>添加网上邻居.{D4480A50-BA28-11d1-8E75-00C04FA31A86}<br>Paint.{D3E34B21-9D75-101A-8C3D-00AA001A1652}<br>管理工具.{D20EA4E1-3957-11d2-A40B-0C5020524153}<br>字体.{D20EA4E1-3957-11d2-A40B-0C5020524152}<br>Web Folders.{BDEADF00-C265-11d0-BCED-00A0C90AB50F}<br>DocFind Command.{B005E690-678D-11d1-B758-00A0C90564FE}<br>脱机文件夹.{AFDB1F70-2A4C-11d2-9039-00C04F8EEB3E}</p>
-<p>添加网络位置.{D4480A50-BA28-11d1-8E75-00C04FA31A86}<br>管理工具.{D20EA4E1-3957-11d2-A40B-0C5020524153}<br>所有控制面板项.{21EC2020-3AEA-1069-A2DD-08002B30309D}<br>所有设置.{5ED4F38C-D3FF-4D61-B506-6820320AEBFE}<br>所有任务.{ED7BA470-8E54-465E-825C-99712043E01C}<br>应用.{4234d49b-0245-4df3-b780-3893943456e1}<br>AppSuggestedLocations.{c57a6066-66a3-4d91-9eb9-41532179f0a5}<br>ActiveX缓存文件夹.{88C6C381-2E85-11D0-94DE-444553540000}<br>自动播放.{9C60DE1E-E5FC-40f4-A487-460851A8D915}<br>备份和还原（Windows7）.{B98A2BEA-7D42-4558-8BD1-832F41BAC6FD}<br>BitLocker驱动器加密.{D9EF8727-CAC2-4e60-809E-86F80A666C91}<br>蓝牙设备.{28803F59-3A75-4058-995F-4EE5503B023C}<br>Briefcase.{85BBD920-42A0-1069-A2E4-08002B30309D}<br>Cabinet Shell文件夹.{0CD7A5C0-9F37-11CE-AE65-08002B2E1262}<br>CLSID_AppInstanceFolder.{64693913-1c21-4f30-a98f-4e52906d3b56}<br>CLSID_DBFolder.{b2952b16-0e07-4e5a-b993-58c52cb94cae}<br>CLSID_DBFolderBoth.{1bef2128-2f96-4500-ba7c-098dc0049cb2}<br>CLSID_SearchHome.{9343812e-1c37-4a49-a12e-4b2d810d956b}<br>CLSID_StartMenuCommandingProviderFolder.{a00ee528-ebd9-48b8-944a-8942113d46ac}<br>CLSID_StartMenuLauncherProviderFolder.{98F275B4-4FFF-11E0-89E2-7B86DFD72085}<br>CLSID_StartMenuPathCompleteProviderFolder.{e345f35f-9397-435c-8f95-4e922c26259e}<br>CLSID_StartMenuProviderFolder.{daf95313-e44d-46af-be1b-cbacea2c3065}<br>命令文件夹.{437ff9c0-a07f-4fa0-af80-84b6c6440a16}<br>Common Places FS Folder.{d34a6ca6-62c2-4c34-8a7c-14709c1ad938}<br>CompressedFolder.{E88DCCE0-B7B3-11d1-A9F0-00AA0060FA31}<br>连接到.{38A98528-6CBF-4CA9-8DC0-B1E1D10F7B1B}<br>控制面板.{26EE0668-A00A-44D7-9371-BEB064C98683}<br>控制面板.{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}<br>凭据管理器.{1206F5F1-0569-412C-8FEC-3204630DFB70}<br>默认程序.{17cd9488-1228-4b2f-88ce-4298e93e0966}<br>Delegate folder that appears in Computer.{b155bdf8-02f0-451e-9a26-ae317cfd7779}<br>Delegate folder that appears in Users Files Folder.{DFFACDC5-679F-4156-8947-C5C76BC0B67F}<br>桌面.{00021400-0000-0000-C000-000000000046}<br>设备中心初始化.{C2B136E2-D50E-405C-8784-363C582BF43E}<br>DevicePairingFolder Initialization.{AEE2420F-D50E-405C-8784-363C582BF45A}<br>设备和打印机.{A8A91A66-3A7D-4424-8D24-04E180695C7A}<br>显示.{C555438B-3C23-4769-A71F-B6D3D9B6053A}<br>DLNA Content Directory Data Source.{D2035EDF-75CB-4EF1-95A7-410D9EE17170}<br>DXP.{8FD8B88D-30E1-4F25-AC2B-553D3D65F0EA}<br>轻松使用设置中心.{D555645E-D4F8-4c29-A827-D93C859C4F2A}<br>E-mail.{2559a1f5-21d7-11d4-bdaf-00c04f60b9f0}<br>增强存储数据源.{9113A02D-00A3-46B9-BC5F-9C04DADDD5D7}<br>Explorer Browser Results Folder.{418c8b64-5463-461d-88e0-75e2afa3c6fa}<br>收藏夹.{323CA680-C24D-4099-B94D-446DD2D7249E}<br>文件备份目录.{877ca5ac-cb41-4842-9c69-9136e42d47e2}<br>文件夹选项.{6DFD7C5C-2451-11d3-A299-00C04F8EF6AF}<br>文件历史记录.{F6B6E965-E9B2-444B-9286-10C9152EDBC5}<br>FileHistoryDataSource.{2F6CE85C-F9EE-43CA-90C7-8A9BD53A2467}<br>文件夹快捷方式.{0AFACED1-E828-11D1-9187-B532F1E9575D}<br>字体设置.{93412589-74D4-4E4E-AD0E-E0CB621440FD}<br>字体.{BD84B380-8CA2-1069-AB1D-08000948F534}<br>Frequent folders.{3936E9E4-D92C-4EEE-A85A-BC16D5EA0819}<br>Fusion Cache.{1D2680C9-0E2A-469d-B787-065558BC7D43}<br>游戏.{ED228FDF-9EA8-4870-83b1-96b02CFE0D52}<br>获得程序.{15eae92e-f17a-4431-9f28-805e482dafd4}<br>历史.{FF393560-C2A7-11CF-BFF4-444553540000}<br>Homegroup.{6785BFAC-9D2D-4be5-B7E2-59937E8FB80A}<br>HomeGroup.{67CA7650-96E6-4FDD-BB43-A8E774F73A57}<br>Homegroup.{B4FB3F98-C1EA-428d-A78A-D1F5659CBA93}<br>IE History and Feeds Shell Data Source for Windows Search.{11016101-E366-4D22-BC06-4ADA335C892B}<br>IE RSS Feeds Folder.{9a096bb5-9dc3-4d1c-8526-c3cbf991ea4e}<br>已安装更新.{d450a8a1-9568-45c7-9c0e-b4f9fb4537bd}<br>语言.{BF782CC9-5A52-4A17-806C-2A894FFEEAC5}<br>LayoutFolder.{328B0346-7EAF-4BBE-A479-7CB88A095F5B}<br>库.{031E4825-7B94-4dc3-B131-E946B44C8DD5}<br>Libraries delegate folder that appears in Users Files Folder.{896664F7-12E1-490f-8782-C0835AFD98FC}<br>库文件夹.{a5a3563a-5755-4a6f-854e-afa3230b199f}<br>Location Folder.{267cf8a9-f4e3-41e6-95b1-af881be130ff}<br>管理无线网络.{1FA9085F-25A2-489B-85D4-86326EEDCD87}<br>媒体服务器.{289AF617-1CC3-42A6-926C-E6A863F0E3BA}<br>Microsoft FTP Folder.{63da6ec0-2e98-11cf-8d82-444553540000}<br>Microsoft Office Outlook.{89D83576-6BD1-4c86-9454-BEB04E94C819}<br>我的文档.{450D8FBA-AD25-11D0-98A8-0800361B1103}<br>网络.{208D2C60-3AEA-1069-A2D7-08002B30309D}<br>网络.{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}<br>网络和共享中心.{8E908FC9-BECC-40f6-915B-F4CA0E70D03D}<br>网络连接.{7007ACC7-3202-11D1-AAD2-00805FC1270E}<br>网络连接.{992CFFA0-F557-101A-88EC-00DD010CCC48}<br>通知区域图标.{05d7b0f4-2121-4eff-bf6b-ed3f69b894d9}<br>离线文件.{BD7A2E7B-21CB-41b2-A086-B309680C6B7E}<br>离线文件夹.{AFDB1F70-2A4C-11d2-9039-00C04F8EEB3E}<br>OneDrive.{018D5C66-4533-4307-9B53-224DE2ED1FE6}<br>个性化.{ED834ED6-4B5A-4bfe-8F11-A626DCB6A921}<br>照片.{45e8e0e8-7ae9-41ad-a9e8-594972716684}<br>可移动设备.{35786D3C-B075-49b9-88DD-029876E11C01}<br>电源选项.{025A5937-A6BE-4686-A844-36FE4BEC8B6D}<br>Previous Versions.{9DB7A13C-F208-4981-8353-73CC61AE2783}<br>Previous Versions Results Delegate Folder.{a3c3d402-e56c-4033-95f7-4885e80b0111}<br>Previous Versions Results Folder.{f8c2ab3b-17bc-41da-9758-339d7dbf2d88}<br>打印机.{2227A280-3AEA-1069-A2DE-08002B30309D}<br>打印机.{863aa9fd-42df-457b-8e4d-0de1b8015c60}<br>printhood delegate folder.{ed50fc29-b964-48a9-afb3-15ebb9b97f36}<br>程序和功能.{7b81be6a-ce2b-4676-a29e-eb907a5126c5}<br>公用.{4336a54d-038b-4685-ab02-99bb52d3fb8b}<br>最近的文件夹.{22877a6d-37a1-461a-91b0-dbda5aaebc99}<br>Recent Items Instance Folder.{4564b25e-30cd-4787-82ba-39e73a750b14}<br>恢复.{9FE63AFD-59CF-4419-9775-ABCC3849F861}<br>回收站.{645FF040-5081-101B-9F08-00AA002F954E}<br>远程桌面连接.{241D7C96-F8BF-4F85-B01F-E2B043341A4B}<br>可移动设备.{F5FB2C77-0E2F-4A16-A381-3E560C68BC83}<br>可移移除储设备.{a6482830-08eb-41e2-84c1-73920c2badb9}<br>Results Folder.{2965e715-eb66-4719-b53f-1672673bbefa}<br>运行.{2559a1f3-21d7-11d4-bdaf-00c04f60b9f0}<br>搜索.{04731B67-D933-450a-90E6-4ACD2E9408FE}<br>搜索.{2559a1f0-21d7-11d4-bdaf-00c04f60b9f0}<br>Search Connector Folder.{72b36e70-8700-42d6-a7f7-c9ab3323ee51}<br>安全和维护.{BB64F8A7-BEE7-4E1A-AB8D-7D8273F7FDB6}<br>设定程序访问和计算机的默认值.{2559a1f7-21d7-11d4-bdaf-00c04f60b9f0}<br>Shell DocObject Viewer.{E7E4BC40-E76A-11CE-A9BB-00AA004AE837}<br>Shell File System Folder.{0E5AAE11-A475-4c5b-AB00-C66DE400274E}<br>Shell File System Folder.{F3364BA0-65B9-11CE-A9BA-00AA004AE837}<br>显示桌面.{3080F90D-D7AD-11D9-BD98-0000947B0257}<br>语音识别.{58E3C745-D971-4081-9034-86E34B30836A}<br>开始菜单.{48e7caab-b918-4e58-a94d-505519c795dc}<br>存储空间.{F942C606-0914-47AB-BE56-1321B8035096}<br>StreamBackedFolder.{EDC978D6-4D53-4b2f-A265-5805674BE568}<br>Subscription Folder.{F5175861-2688-11d0-9C5E-00AA00A45957}<br>窗口间切换.{3080F90E-D7AD-11D9-BD98-0000947B0257}<br>同步中心.{9C73F5E5-7AE7-4E32-A8E8-8D23B85255BF}<br>Sync Center Conflict Delegate Folder.{E413D040-6788-4C22-957E-175D1C513A34}<br>Sync Center Conflict Folder.{289978AC-A101-4341-A817-21EBA7FD046D}<br>Sync Results Delegate Folder.{BC48B32F-5910-47F5-8570-5074A8A5636A}<br>Sync Results Folder.{71D99464-3B6B-475C-B241-E15883207529}<br>Sync Setup Delegate Folder.{F1390A9A-A3F4-4E5D-9C5F-98F3BD8D935C}<br>Sync Setup Folder.{2E9E59C0-B437-4981-A647-9C34B9B90891}<br>系统.{BB06C0E4-D293-4f75-8A90-CB05B6477EEE}<br>系统还原.{3f6bc534-dfa1-4ab4-ae54-ef25a74e0107}<br>任务栏设置.{0DF44EAA-FF21-4412-828E-260A8728E7F1}<br>临时Internet文件.{7BD29E00-76C1-11CF-9DD0-00A0C9034933}<br>临时Internet文件.{7BD29E01-76C1-11CF-9DD0-00A0C9034933}<br>The Internet.{871C5380-42A0-1069-A2EA-08002B30309D}<br>设备.{5b934b42-522b-4c34-bbfe-37a3ef7b9c90}<br>此电脑.{20D04FE0-3AEA-1069-A2D8-08002B30309D}<br>此电脑.{5E5F29CE-E0A8-49D3-AF32-7A7BDC173478}<br>疑难解答.{C58C4893-3BE0-4B45-ABB5-A63E4B8C8651}<br>用户账户.{60632754-c523-4b62-b45c-4172da012619}<br>用户账户.{7A9D77BD-5403-11d2-8785-2E0420524153}<br>User Pinned.{1f3427c8-5c10-4210-aa03-2ee45287d668}<br>UsersFiles.{59031a47-3f72-44a7-89c5-5595fe6b30ee}<br>Windows Defender.{D8559EB9-20C0-410E-BEDA-7ED416AECC2A}<br>Windows功能.{67718415-c450-4f3c-bf8a-b487642dc39b}<br>Windows防火墙.{4026492F-2F69-46B8-B9BF-5654FC07E423}<br>Windows移动中心.{5ea4f148-308c-46d7-98a9-49041b1dd468}<br>Windows 安全.{2559a1f2-21d7-11d4-bdaf-00c04f60b9f0}<br>工作文件夹.{ECDB0924-4208-451E-8EE0-373C0956DE16}<br>WWan Shell Folder.{87630419-6216-4ff8-a1f0-143562d16d5c}</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/22/学习-Python-2019-01-22-Python-错误以及解决/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/22/学习-Python-2019-01-22-Python-错误以及解决/" class="post-title-link" itemprop="url">Python错误以及解决</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-01-22 16:45:33" itemprop="dateCreated datePublished" datetime="2019-01-22T16:45:33+08:00">2019-01-22</time>
-            </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-26 16:03:26" itemprop="dateModified" datetime="2019-09-26T16:03:26+08:00">2019-09-26</time>
+                <time title="修改时间：2019-05-21 15:31:13" itemprop="dateModified" datetime="2019-05-21T15:31:13+08:00">2019-05-21</time>
               </span>
-            
-          
 
           
 
@@ -889,11 +284,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="编辑时"><a href="#编辑时" class="headerlink" title="编辑时"></a>编辑时</h2><ul>
-<li><code>&#39;return&#39; outside of function</code><br>原因： <code>return</code>语句必须包含在函数体内，如果我们直接在<code>if &#39;__main__&#39; == __name__:</code> return 就会提示这个错误。<br>解决：<br>如果要想在<code>if &#39;__main__&#39; == __name__:</code>中达到return的效果，可以使用<code>quit()</code>或者<code>exit()</code>来替代。<br>结果：<br>问题解决。</li>
+          <ul>
+<li>默认情况下 cookie 有效期是程序运行的生命周期，程序结束运行之后，cookie便失效了。可以将 cookie 的有效期设置为<code>[NSDate distantFuture]</code>，来使 cookie 永不过期。<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[cookieProperties setObject:[<span class="built_in">NSDate</span> distantFuture] forKey:<span class="built_in">NSHTTPCookieExpires</span>];</span><br></pre></td></tr></table></figure>
+
+</li>
 </ul>
-<h2 id="运行时"><a href="#运行时" class="headerlink" title="运行时"></a>运行时</h2>
-        
+
       
     </div>
 
@@ -901,65 +297,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/22/电脑技巧-Windows-2019-01-22-Windows-软件推荐/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/29/%E5%AD%A6%E4%B9%A0-Shell-2019-04-29-Shell-chmod-chown-chgrp/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/22/电脑技巧-Windows-2019-01-22-Windows-软件推荐/" class="post-title-link" itemprop="url">Windows-软件推荐</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/04/29/%E5%AD%A6%E4%B9%A0-Shell-2019-04-29-Shell-chmod-chown-chgrp/" class="post-title-link" itemprop="url">Shell-chmod,chown,chgrp</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-01-22 15:19:30" itemprop="dateCreated datePublished" datetime="2019-01-22T15:19:30+08:00">2019-01-22</time>
+              <time title="创建时间：2019-04-29 11:11:21" itemprop="dateCreated datePublished" datetime="2019-04-29T11:11:21+08:00">2019-04-29</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-10 15:17:11" itemprop="dateModified" datetime="2019-10-10T15:17:11+08:00">2019-10-10</time>
+                <time title="修改时间：2020-01-07 17:47:03" itemprop="dateModified" datetime="2020-01-07T17:47:03+08:00">2020-01-07</time>
               </span>
-            
-          
 
           
 
@@ -972,62 +353,33 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="软件"><a href="#软件" class="headerlink" title="软件"></a>软件</h2><h3 id="系统软件"><a href="#系统软件" class="headerlink" title="系统软件"></a>系统软件</h3><ul>
-<li><p>Microsoft Update Catalog, Windows Update, Windows 更新<br>  <a href="http://www.catalog.update.microsoft.com/home.aspx" target="_blank" rel="noopener">http://www.catalog.update.microsoft.com/home.aspx</a></p>
-</li>
-<li><p>清华大学软件源镜像站<br><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/</a></p>
-</li>
-<li><p>Windows 更新包 离线下载<br><a href="http://download.wsusoffline.net/" target="_blank" rel="noopener">http://download.wsusoffline.net/</a></p>
-</li>
-<li><p>GImageX 系统镜像工具GUI<br><a href="https://www.autoitconsulting.com/site/software/gimagex/" target="_blank" rel="noopener">https://www.autoitconsulting.com/site/software/gimagex/</a></p>
-</li>
-<li><p>驱动清理 DriverStore Explorer<br>  <a href="https://github.com/lostindark/DriverStoreExplorer/releases" target="_blank" rel="noopener">https://github.com/lostindark/DriverStoreExplorer/releases</a></p>
-</li>
-<li><p>GImageX<br>  <a href="https://www.autoitconsulting.com/site/software/gimagex/" target="_blank" rel="noopener">https://www.autoitconsulting.com/site/software/gimagex/</a></p>
-</li>
-</ul>
-<h3 id="专业软件"><a href="#专业软件" class="headerlink" title="专业软件"></a>专业软件</h3><ul>
-<li><p>PyCharm<br>EDU: <a href="https://www.jetbrains.com/pycharm-edu/download/" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm-edu/download/</a><br>PyCharm Community Edition: <a href="https://www.jetbrains.com/pycharm/?fromMenu" target="_blank" rel="noopener">https://www.jetbrains.com/pycharm/?fromMenu</a></p>
-</li>
-<li><p>Diffinity – 轻量级文件对比比较工具[Windows]<br>  <a href="http://www.truehumandesign.se/s_diffinity.php" target="_blank" rel="noopener">http://www.truehumandesign.se/s_diffinity.php</a></p>
-</li>
-</ul>
-<h3 id="工具软件"><a href="#工具软件" class="headerlink" title="工具软件"></a>工具软件</h3><ul>
-<li>蓝叠模拟器 <a href="https://www.bluestacks.com/download.html" target="_blank" rel="noopener">https://www.bluestacks.com/download.html</a></li>
-<li>ImageGlass 看图软件 <a href="https://imageglass.org/" target="_blank" rel="noopener">https://imageglass.org/</a></li>
-</ul>
-<h4 id="文件资源管理"><a href="#文件资源管理" class="headerlink" title="文件资源管理"></a>文件资源管理</h4><h5 id="私人网盘"><a href="#私人网盘" class="headerlink" title="私人网盘"></a>私人网盘</h5><ul>
-<li>NextCloud</li>
-<li>SeaFile</li>
-<li>KODExplorer</li>
-<li>Cloudreve</li>
-</ul>
-<h5 id="文件同步工具"><a href="#文件同步工具" class="headerlink" title="文件同步工具"></a>文件同步工具</h5><ul>
-<li>FreeFileSync <a href="https://freefilesync.org/" target="_blank" rel="noopener">https://freefilesync.org/</a></li>
-<li>dirsyncpro <a href="https://www.dirsyncpro.org/download.html" target="_blank" rel="noopener">https://www.dirsyncpro.org/download.html</a></li>
-</ul>
-<h5 id="文件统计工具"><a href="#文件统计工具" class="headerlink" title="文件统计工具"></a>文件统计工具</h5><ul>
-<li>TreeSize Free</li>
-<li>WinDirStat <a href="https://windirstat.net/" target="_blank" rel="noopener">https://windirstat.net/</a></li>
-<li>WizTree</li>
-</ul>
-<h4 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h4><ul>
-<li><p>youtube-dl</p>
-</li>
-<li><p><a href="https://github.com/soimort/you-get软件" target="_blank" rel="noopener">https://github.com/soimort/you-get软件</a></p>
-</li>
-<li><p>BaiduPCS-Web 网页版 - 搭建自己的百度网盘不限速离线远程下载服务<br>  <a href="https://www.iplaysoft.com/baidupcs-go-web.html" target="_blank" rel="noopener">https://www.iplaysoft.com/baidupcs-go-web.html</a></p>
-</li>
-</ul>
-<h2 id="Office"><a href="#Office" class="headerlink" title="Office"></a>Office</h2><ul>
-<li>Office Tool Plus 下载Office离线安装包</li>
-<li>Office 下载工具 <strong>Microsoft Windows and Office ISO Download Tool</strong>  <a href="https://hrtsea.com/27648.html" target="_blank" rel="noopener">https://hrtsea.com/27648.html</a></li>
-<li>Office 2013-2016 C2R Install 6.0.8 Lite Office 离线安装包下载 <a href="http://www.zdfans.com/feed/" target="_blank" rel="noopener">http://www.zdfans.com/feed/</a></li>
-<li>官方卸载器 <a href="https://support.office.com/en-us/article/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8" target="_blank" rel="noopener">https://support.office.com/en-us/article/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8</a></li>
-<li>官方安装工具 <a href="https://docs.microsoft.com/en-us/deployoffice/configuration-options-for-the-office-2016-deployment-tool" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/deployoffice/configuration-options-for-the-office-2016-deployment-tool</a></li>
-</ul>
+          <h2 id="chmod-为某一用户添加某个文件的读写权限"><a href="#chmod-为某一用户添加某个文件的读写权限" class="headerlink" title="chmod 为某一用户添加某个文件的读写权限"></a>chmod 为某一用户添加某个文件的读写权限</h2><ul>
+<li>为某一用户添加某个文件的读写权限<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /bin/chmod +a <span class="string">'user:[User_Name]:allow write'</span> /etc/hosts</span><br></pre></td></tr></table></figure>
 
-        
+
+</li>
+</ul>
+<h2 id="chown-修改文件所有者或者所属群组"><a href="#chown-修改文件所有者或者所属群组" class="headerlink" title="chown 修改文件所有者或者所属群组"></a>chown 修改文件所有者或者所属群组</h2><p>修改文件所有者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown root foo.txt</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>同时修改 uid 和 gid</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown UID:GID fileName</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查看某用户的 uid</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id someUsername</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="chgrp-修改文件所属群组"><a href="#chgrp-修改文件所属群组" class="headerlink" title="chgrp 修改文件所属群组"></a>chgrp 修改文件所属群组</h2><p>修改文件所属群组</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chgrp root foo.txt</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看某用户所属用户组<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gid someUsername</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="克隆权限信息"><a href="#克隆权限信息" class="headerlink" title="克隆权限信息"></a>克隆权限信息</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chown --reference=file_permission_to_get file_permission_to_set</span><br><span class="line">chmod --reference=file_permission_to_get file_permission_to_set</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -1035,57 +387,50 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/01/22/Xcode与调试-2019-01-22-Xcode-调试命令/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/23/Xcode%E4%B8%8E%E8%B0%83%E8%AF%95-2019-04-23-Xcode-xcodebuild%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/01/22/Xcode与调试-2019-01-22-Xcode-调试命令/" class="post-title-link" itemprop="url">Xcode 调试命令</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/04/23/Xcode%E4%B8%8E%E8%B0%83%E8%AF%95-2019-04-23-Xcode-xcodebuild%E7%BC%96%E8%AF%91%E6%89%93%E5%8C%85/" class="post-title-link" itemprop="url">Xcode-xcodebuild编译打包</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-01-22 10:40:58 / 修改时间：10:41:37" itemprop="dateCreated datePublished" datetime="2019-01-22T10:40:58+08:00">2019-01-22</time>
+              <time title="创建时间：2019-04-23 17:06:03" itemprop="dateCreated datePublished" datetime="2019-04-23T17:06:03+08:00">2019-04-23</time>
             </span>
-          
-            
-
-            
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-13 16:58:37" itemprop="dateModified" datetime="2019-12-13T16:58:37+08:00">2019-12-13</time>
+              </span>
 
           
 
@@ -1098,16 +443,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a href="http://blog.csdn.net/fishmai/article/details/50087645" target="_blank" rel="noopener">http://blog.csdn.net/fishmai/article/details/50087645</a></p>
-<p><a href="https://objccn.io/issue-19-2/" target="_blank" rel="noopener">https://objccn.io/issue-19-2/</a></p>
-<h2 id="调试命令"><a href="#调试命令" class="headerlink" title="调试命令"></a>调试命令</h2><ul>
-<li><p>根据对象地址执行对象方法<br><code>expr (void)[0x7fde6c484640 setBackgroundColor:[UIColor redColor]]</code></p>
+          <ul>
+<li><p>各项 Build Settings 的解释<br><a href="https://help.apple.com/xcode/mac/current/#/itcaec37c2a6" target="_blank" rel="noopener">https://help.apple.com/xcode/mac/current/#/itcaec37c2a6</a><br><a href="https://www.jianshu.com/p/770d5df137bf" target="_blank" rel="noopener">iOS自动化打包 —- xcodebuild 命令详解</a></p>
 </li>
-<li><p>Xcode lldb 命令列表</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br></pre></td><td class="code"><pre><span class="line">Debugger commands:</span><br><span class="line">  apropos           -- List debugger commands related to a word or subject.</span><br><span class="line">  breakpoint        -- Commands for operating on breakpoints (see 'help b' for</span><br><span class="line">                       shorthand.)</span><br><span class="line">  bugreport         -- Commands for creating domain-specific bug reports.</span><br><span class="line">  command           -- Commands for managing custom LLDB commands.</span><br><span class="line">  disassemble       -- Disassemble specified instructions in the current</span><br><span class="line">                       target.  Defaults to the current function for the</span><br><span class="line">                       current thread and stack frame.</span><br><span class="line">  expression        -- Evaluate an expression on the current thread.  Displays</span><br><span class="line">                       any returned value with LLDB's default formatting.</span><br><span class="line">  frame             -- Commands for selecting and examing the current thread's</span><br><span class="line">                       stack frames.</span><br><span class="line">  gdb-remote        -- Connect to a process via remote GDB server.  If no host</span><br><span class="line">                       is specifed, localhost is assumed.</span><br><span class="line">  gui               -- Switch into the curses based GUI mode.</span><br><span class="line">  help              -- Show a list of all debugger commands, or give details</span><br><span class="line">                       about a specific command.</span><br><span class="line">  kdp-remote        -- Connect to a process via remote KDP server.  If no UDP</span><br><span class="line">                       port is specified, port 41139 is assumed.</span><br><span class="line">  language          -- Commands specific to a source language.</span><br><span class="line">  log               -- Commands controlling LLDB internal logging.</span><br><span class="line">  memory            -- Commands for operating on memory in the current target</span><br><span class="line">                       process.</span><br><span class="line">  platform          -- Commands to manage and create platforms.</span><br><span class="line">  plugin            -- Commands for managing LLDB plugins.</span><br><span class="line">  process           -- Commands for interacting with processes on the current</span><br><span class="line">                       platform.</span><br><span class="line">  quit              -- Quit the LLDB debugger.</span><br><span class="line">  register          -- Commands to access registers for the current thread and</span><br><span class="line">                       stack frame.</span><br><span class="line">  script            -- Invoke the script interpreter with provided code and</span><br><span class="line">                       display any results.  Start the interactive interpreter</span><br><span class="line">                       if no code is supplied.</span><br><span class="line">  settings          -- Commands for managing LLDB settings.</span><br><span class="line">  source            -- Commands for examining source code described by debug</span><br><span class="line">                       information for the current target process.</span><br><span class="line">  target            -- Commands for operating on debugger targets.</span><br><span class="line">  thread            -- Commands for operating on one or more threads in the</span><br><span class="line">                       current process.</span><br><span class="line">  type              -- Commands for operating on the type system.</span><br><span class="line">  version           -- Show the LLDB debugger version.</span><br><span class="line">  watchpoint        -- Commands for operating on watchpoints.</span><br><span class="line">Current command abbreviations (type 'help command alias' for more info):</span><br><span class="line">  add-dsym  -- Add a debug symbol file to one of the target's current modules</span><br><span class="line">               by specifying a path to a debug symbols file, or using the</span><br><span class="line">               options to specify a module to download symbols for.</span><br><span class="line">  attach    -- Attach to process by ID or name.</span><br><span class="line">  b         -- Set a breakpoint using one of several shorthand formats.</span><br><span class="line">  bt        -- Show the current thread's call stack.  Any numeric argument</span><br><span class="line">               displays at most that many frames.  The argument 'all' displays</span><br><span class="line">               all threads.</span><br><span class="line">  c         -- Continue execution of all threads in the current process.</span><br><span class="line">  call      -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  continue  -- Continue execution of all threads in the current process.</span><br><span class="line">  detach    -- Detach from the current target process.</span><br><span class="line">  di        -- Disassemble specified instructions in the current target. </span><br><span class="line">               Defaults to the current function for the current thread and</span><br><span class="line">               stack frame.</span><br><span class="line">  dis       -- Disassemble specified instructions in the current target. </span><br><span class="line">               Defaults to the current function for the current thread and</span><br><span class="line">               stack frame.</span><br><span class="line">  display   -- Evaluate an expression at every stop (see 'help target</span><br><span class="line">               stop-hook'.)</span><br><span class="line">  down      -- Select a newer stack frame.  Defaults to moving one frame, a</span><br><span class="line">               numeric argument can specify an arbitrary number.</span><br><span class="line">  env       -- Shorthand for viewing and setting environment variables.</span><br><span class="line">  exit      -- Quit the LLDB debugger.</span><br><span class="line">  f         -- Select the current stack frame by index from within the current</span><br><span class="line">               thread (see 'thread backtrace'.)</span><br><span class="line">  file      -- Create a target using the argument as the main executable.</span><br><span class="line">  finish    -- Finish executing the current stack frame and stop after</span><br><span class="line">               returning.  Defaults to current thread unless specified.</span><br><span class="line">  image     -- Commands for accessing information for one or more target</span><br><span class="line">               modules.</span><br><span class="line">  j         -- Set the program counter to a new address.</span><br><span class="line">  jump      -- Set the program counter to a new address.</span><br><span class="line">  kill      -- Terminate the current target process.</span><br><span class="line">  l         -- List relevant source code using one of several shorthand formats.</span><br><span class="line">  list      -- List relevant source code using one of several shorthand formats.</span><br><span class="line">  n         -- Source level single step, stepping over calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  next      -- Source level single step, stepping over calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  nexti     -- Instruction level single step, stepping over calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  ni        -- Instruction level single step, stepping over calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  p         -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  parray    -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  po        -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with formatting controlled by the type's author.</span><br><span class="line">  poarray   -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  print     -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  q         -- Quit the LLDB debugger.</span><br><span class="line">  r         -- Launch the executable in the debugger.</span><br><span class="line">  rbreak    -- Sets a breakpoint or set of breakpoints in the executable.</span><br><span class="line">  repl      -- Evaluate an expression on the current thread.  Displays any</span><br><span class="line">               returned value with LLDB's default formatting.</span><br><span class="line">  run       -- Launch the executable in the debugger.</span><br><span class="line">  s         -- Source level single step, stepping into calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  si        -- Instruction level single step, stepping into calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  sif       -- Step through the current block, stopping if you step directly</span><br><span class="line">               into a function whose name matches the TargetFunctionName.</span><br><span class="line">  step      -- Source level single step, stepping into calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  stepi     -- Instruction level single step, stepping into calls.  Defaults to</span><br><span class="line">               current thread unless specified.</span><br><span class="line">  t         -- Change the currently selected thread.</span><br><span class="line">  tbreak    -- Set a one-shot breakpoint using one of several shorthand</span><br><span class="line">               formats.</span><br><span class="line">  undisplay -- Stop displaying expression at every stop (specified by stop-hook</span><br><span class="line">               index.)</span><br><span class="line">  up        -- Select an older stack frame.  Defaults to moving one frame, a</span><br><span class="line">               numeric argument can specify an arbitrary number.</span><br><span class="line">  x         -- Read from the memory of the current target process.</span><br><span class="line">For more information on any command, type 'help &lt;command-name&gt;'.</span><br></pre></td></tr></table></figure></li>
+<li><p>使用 Legacy Build System</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 添加参数</span></span><br><span class="line">-UseModernBuildSystem=NO</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>指定 xcodebuild 的编译中间文件生成的目录<br><a href="https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild" target="_blank" rel="noopener">https://stackoverflow.com/questions/4969932/separate-build-directory-using-xcodebuild</a></p>
+</li>
+<li><p>查看默认情况下的编译配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xcodebuild -showBuildSettings</span><br><span class="line">xcodebuild -showBuildSettings -target &lt;target&gt; -configuration &lt;configuration&gt; </span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看具体某一target的buildsettings，另外还可添加其他参数来查看最终buildsetting的样子</span></span><br><span class="line">xcodebuild -showBuildSettings -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=NO</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>-showsdks</code>参数<br>显示目前安装的SDK</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ xcodebuild -showsdks</span><br><span class="line">iOS SDKs:</span><br><span class="line">	iOS 13.2                      	-sdk iphoneos13.2</span><br><span class="line"></span><br><span class="line">iOS Simulator SDKs:</span><br><span class="line">	Simulator - iOS 13.2          	-sdk iphonesimulator13.2</span><br><span class="line"></span><br><span class="line">macOS SDKs:</span><br><span class="line">	DriverKit 19.0                	-sdk driverkit.macosx19.0</span><br><span class="line">	macOS 10.15                   	-sdk macosx10.15</span><br><span class="line"></span><br><span class="line">tvOS SDKs:</span><br><span class="line">	tvOS 13.2                     	-sdk appletvos13.2</span><br><span class="line"></span><br><span class="line">tvOS Simulator SDKs:</span><br><span class="line">	Simulator - tvOS 13.2         	-sdk appletvsimulator13.2</span><br><span class="line"></span><br><span class="line">watchOS SDKs:</span><br><span class="line">	watchOS 6.1                   	-sdk watchos6.1</span><br><span class="line"></span><br><span class="line">watchOS Simulator SDKs:</span><br><span class="line">	Simulator - watchOS 6.1       	-sdk watchsimulator6.1</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>-showBuildSettings</code>显示当前的编译配置</p>
+</li>
+</ul>
+<h2 id="示例编译、打包命令"><a href="#示例编译、打包命令" class="headerlink" title="示例编译、打包命令"></a>示例编译、打包命令</h2><ul>
+<li><p>示例打包命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成archive</span></span><br><span class="line">xcodebuild archive -workspace CreditCardPartner.xcworkspace -scheme CreditCardPartner -configuration Release -archivePath ~/Desktop/CreditCardpartner.xcarchive CODE_SIGN_IDENTITY=<span class="string">"iPhone Developer: Dequan Liu (S42FY95JQG)"</span> PROVISIONING_PROFILE=<span class="string">"Xiaorongbao_B_DEV"</span> | tee ~/Desktop/archive.log</span><br><span class="line"><span class="comment"># 导出成ipa</span></span><br><span class="line">xcodebuild -exportArchive -archivePath ~/Desktop/CreditCardpartner.xcarchive -exportPath ~/Desktop/CreditCardpartnerExport -exportOptionsPlist ~/Downloads/Debug.plist | tee ~/Desktop/export.log</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示例：SDK打包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Example/Pods</span><br><span class="line"><span class="comment"># AI 编译</span></span><br><span class="line"><span class="comment">## 编译真机</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=NO IPHONEOS_DEPLOYMENT_TARGET=9.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 非 AI 版本编译</span></span><br><span class="line"><span class="comment">## 编译真机 -sdk iphoneos</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode </span><br><span class="line"><span class="comment">## 编译模拟器 -sdk iphonesimulator</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release -sdk iphonesimulator ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode</span><br><span class="line">lipo -create ../build/Release-iphoneos/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK ../build/Release-iphonesimulator/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK -o RDPCrawlerSDK</span><br><span class="line"></span><br><span class="line"><span class="comment"># ------------ #</span></span><br><span class="line"><span class="comment"># 编译模拟器 完整模拟器架构：ARCHS='i386 x86_64' VALID_ARCHS='i386 x86_64'</span></span><br><span class="line">xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ARCHS=<span class="string">'x86_64'</span> VALID_ARCHS=<span class="string">'x86_64'</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>完整打包命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Documents/Project/抓取/RDPCrawlerSDK/Example/Pods &amp;&amp; rm -rf ../build &amp;&amp; xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode &amp;&amp; xcodebuild build -project Pods.xcodeproj -scheme RDPCrawlerSDK -configuration Release -sdk iphonesimulator ENABLE_BITCODE=YES IPHONEOS_DEPLOYMENT_TARGET=8.0 MACH_O_TYPE=staticlib OTHER_CFLAGS=-fembed-bitcode &amp;&amp; rm -f RDPCrawlerSDK &amp;&amp; lipo -create ../build/Release-iphoneos/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK ../build/Release-iphonesimulator/RDPCrawlerSDK/RDPCrawlerSDK.framework/RDPCrawlerSDK -o RDPCrawlerSDK &amp;&amp; open .</span><br></pre></td></tr></table></figure></li>
 </ul>
 
-        
       
     </div>
 
@@ -1115,36 +478,520 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/22/%E5%AD%A6%E4%B9%A0-ReactNative-2019-04-22-ReactNative-%E5%8E%9F%E7%94%9F%E6%A1%A5%E6%8E%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/22/%E5%AD%A6%E4%B9%A0-ReactNative-2019-04-22-ReactNative-%E5%8E%9F%E7%94%9F%E6%A1%A5%E6%8E%A5/" class="post-title-link" itemprop="url">ReactNative-原生桥接</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-22 16:35:27" itemprop="dateCreated datePublished" datetime="2019-04-22T16:35:27+08:00">2019-04-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
 
     
-  </div>
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/18/%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-04-18-Transmission-%E5%AE%89%E5%8D%93%E4%B8%8A%E4%BD%BF%E7%94%A8Transmission/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/18/%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-04-18-Transmission-%E5%AE%89%E5%8D%93%E4%B8%8A%E4%BD%BF%E7%94%A8Transmission/" class="post-title-link" itemprop="url">Transmission-安卓上使用Transmission</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-18 13:20:09" itemprop="dateCreated datePublished" datetime="2019-04-18T13:20:09+08:00">2019-04-18</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-20 17:15:59" itemprop="dateModified" datetime="2019-08-20T17:15:59+08:00">2019-08-20</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>近十几年，由于迅雷、百度云之类中心化下载工具的兴起，以及整体网络速度的提高，让传统下载黯然失色。<br>网民们不但可以使用迅雷、百度云的预先下载的内容，甚至可以直接在线观看视频。<br>相对于普通人来说，传统下载方式的确是没落了。但是，这些中心化的下载方式有一个弊端就是：提供下载服务的人可以任意控制我们的整个下载过程。想想限速、屏蔽、删资源。<br>这个时候传统的下载方式的优势就显露出来了。其中更以BT、PT这种去中心化的下载方式为甚。<br>这篇文章就是建立在这个基础之上写出来的。<br>为的是让大家的手中多一张牌，不至于被大厂绑架。不是让大家回归传统，而是让大家多个选择。<br>现在很多人手里估计都有闲置的安卓手机，这篇文章也是基于安卓手机的。步骤稍有繁琐，但是一步一步按照教程来，应该是没有问题的。<br>如果有问题，请通知我，我会第一时间回答疑问、作出修改。</p>
+<h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><h3 id="Termux-虚拟终端"><a href="#Termux-虚拟终端" class="headerlink" title="Termux 虚拟终端"></a>Termux 虚拟终端</h3><p>安卓上使用Transmission是通过借助 Termux 这个软件环境实现的。<br>Termux是安卓上一款强大的虚拟终端软件，可以安装很多Linux上的软件包。其中就包括Transmission。</p>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><ol>
+<li>👉<a href="https://f-droid.org/repo/com.termux_73.apk" target="_blank" rel="noopener">点此下载</a> Termux 安装包，像正常 APP 一样安装好就好。</li>
+<li>打开 Termux 等待软件初始化完成。有可能连着WI-FI初始化时间会很长，这个时候换到手机网络一般几分钟就初始化好了。不怎么费流量。</li>
+</ol>
+<h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><ol>
+<li><p>换一个更快的源，复制这两条命令，然后长按 Termux 的主界面，选择<code>Paste</code>粘贴之后，回车运行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux stable main@'</span> <span class="variable">$PREFIX</span>/etc/apt/sources.list</span><br><span class="line">pkg up</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获得存储权限</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 输入如下命令，并回车运行，如果提示 Termux 要访问视频照片啥啥的，一定要点击允许。</span></span><br><span class="line">termux-setup-storage</span><br></pre></td></tr></table></figure></li>
+<li><p>Termux的后台运行<br>Termux毕竟只是个安卓App，受限于系统的电源管理，有可能会在后台被系统强制结束。还好有两条命令可以缓解这个现象。<strong>注意：强烈建议先把Termux软件移出系统的限制名单，比如说权限限制、电池优化限制等等。毕竟根据我目前的使用体验，这个App非常老实。</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 打开唤醒锁，可以让 Termux 在后台悠然运行</span></span><br><span class="line">termux-wake-lock</span><br><span class="line"><span class="comment"># 关闭唤醒锁，Termux 可能会被系统强制结束</span></span><br><span class="line">termux-wake-unlock</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装 wget<br>现在我们需要安装一个完整版的<code>wget</code>。安装也很简单，执行完命令之后等待完成即可：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i wget</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<h2 id="Transmission部分"><a href="#Transmission部分" class="headerlink" title="Transmission部分"></a>Transmission部分</h2><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><p>一条命令搞定</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i transmission</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="配置-1"><a href="#配置-1" class="headerlink" title="配置"></a>配置</h2><p>我们现顺序执行下下面两条命令，这样 Transmission 就会自动生成一个配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">transmission-daemon</span><br><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="设置RPC访问权限"><a href="#设置RPC访问权限" class="headerlink" title="设置RPC访问权限"></a>设置RPC访问权限</h3><p>此步骤稍微有点复杂，请严格按照描述的去做。<font color=red><strong>或者往下翻，直接运行我提供的命令</strong></font></p>
+<h4 id="方法一：用vim-修改配置"><a href="#方法一：用vim-修改配置" class="headerlink" title="方法一：用vim 修改配置"></a>方法一：用vim 修改配置</h4><ol>
+<li><p>安装 vim 编辑器</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg i vim</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>执行下面的命令（复制-粘贴-回车）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="variable">$HOME</span>/.config/transmission-daemon/settings.json</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>此时界面应该换了一个样子，界面上应该有个白色的小方块，那就是光标，只不过它不会闪烁。<br>我们只能按虚拟键盘上的左右来移动这个白色的小方块。耐心点，我们需要找一段代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"rpc-whitelist"</span>: <span class="string">"127.0.0.1"</span></span><br></pre></td></tr></table></figure></li>
+<li><p>接着，我们继续移动小方块，让小方块把最后一个双引号框起来，就像这样：<br><img src="/images/TransmissinInTermux/TransmissionInTermux1.png" alt=""></p>
+</li>
+<li><p>然后我们按键盘上的<kbd>i</kbd>键，此时屏幕左下角应该变成这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux2.png" alt=""></p>
+</li>
+<li><p>出现了这个字样，说明我们能在屏幕上输入字符了，我们输入如下字符<code>,192.168.*.*</code>。注意，一开始应该输入一个英文状态的逗号。现在，它看起来应该是这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux3.png" alt=""></p>
+</li>
+<li><p>接着，我们按虚拟键盘上的<kbd>ESC</kbd>键，此时，左下角变成了这个样子，对，<code>--INSEERT--</code>字样消失了：<br><img src="/images/TransmissinInTermux/TransmissionInTermux4.png" alt=""></p>
+</li>
+<li><p>这个时候操作起键盘来，直接输入冒号，和英文x，就像这样：<br><img src="/images/TransmissinInTermux/TransmissionInTermux5.png" alt=""></p>
+</li>
+<li><p>然后回车，搞定！这个时候发现界面退出了。如果没有提示错误，说明修改成功了。</p>
+</li>
+</ol>
+<h4 id="方法二：运行命令"><a href="#方法二：运行命令" class="headerlink" title="方法二：运行命令"></a>方法二：运行命令</h4><p><font color=red>上面的步骤的确比较复杂，可以直接执行下面的命令。</font><br>为了安全起见，下面三条命令需要按步骤并且一个一个地执行。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> <span class="variable">$HOME</span>/.config/transmission-daemon</span><br><span class="line">rm -f settings.json</span><br><span class="line">wget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/settings.json</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行与结束运行"><a href="#运行与结束运行" class="headerlink" title="运行与结束运行"></a>运行与结束运行</h2><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-daemon</span><br></pre></td></tr></table></figure>
+
+<h3 id="结束运行"><a href="#结束运行" class="headerlink" title="结束运行"></a>结束运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="通过浏览器访问-Transmission-的界面"><a href="#通过浏览器访问-Transmission-的界面" class="headerlink" title="通过浏览器访问 Transmission 的界面"></a>通过浏览器访问 Transmission 的界面</h2><p>确保 Transmission 已经运行起来了。<br>在局域网中任何一台电脑或者手机的浏览器里面输入<code>http://[你手机的局域网IP]:9091</code>，回车。即可打开Transmission的界面。<br><img src="/images/TransmissinInTermux/TransmissionInTermux6.png" alt=""></p>
+<h2 id="更改为-web-control-皮肤"><a href="#更改为-web-control-皮肤" class="headerlink" title="更改为 web control 皮肤"></a>更改为 web control 皮肤</h2><p>Transmission自带的皮肤实在是太精简了，我们平时使用BT/PT一般需要了解更多的信息，这个时候自带的网页皮肤就不能满足我们的需求了。但是，Transmission 支持自定义网页版皮肤。</p>
+<h3 id="停止-Transmission"><a href="#停止-Transmission" class="headerlink" title="停止 Transmission"></a>停止 Transmission</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">transmission-remote --<span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="下载皮肤"><a href="#下载皮肤" class="headerlink" title="下载皮肤"></a>下载皮肤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://raw.githubusercontent.com/ronggang/transmission-web-control/master/release/install-tr-control-cn.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改脚本"><a href="#修改脚本" class="headerlink" title="修改脚本"></a>修改脚本</h3><p><strong>如果嫌修改麻烦请直接下载我修改好的。</strong></p>
+<p>受限于Android手机权限， Termux 并不是一个完全的Linux环境，所以我们需要对脚本进行稍稍修改。很简单！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">TMP_FOLDER=<span class="string">"/tmp/tr-web-control"</span></span><br><span class="line"><span class="comment"># 改为</span></span><br><span class="line">TMP_FOLDER=<span class="variable">$PREFIX</span><span class="string">"/tmp/tr-web-control"</span></span><br></pre></td></tr></table></figure>
+<p>或者直接下载我修改好的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://gitee.com/ZPSource/install-tr-control-for-termux/raw/master/install-tr-control-for-termux.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行安装"><a href="#执行安装" class="headerlink" title="执行安装"></a>执行安装</h3><p>运行安装脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash install-tr-control-cn.sh <span class="variable">$PREFIX</span>/share/transmission</span><br></pre></td></tr></table></figure>
+
+<p>如果提示<code>无法确认当前是否为 root 用户，可能无法进行安装操作。是否继续？</code>直接输入<code>y</code>然后回车，让它继续安装即可。</p>
+<p>最后安装好后再次打开浏览器应该是这个样子：<br><img src="/images/TransmissinInTermux/TransmissionInTermux7.png" alt=""></p>
+<h2 id="添加下载任务"><a href="#添加下载任务" class="headerlink" title="添加下载任务"></a>添加下载任务</h2><p>自己在浏览器界面找找，我lay了，要休息一下。</p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><ul>
+<li>用 ssh 管理<br>这部分笔者就不详细说了，有兴趣自己百度看看，摆脱安卓手机虚拟键盘的烦恼大半就靠它了。</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/16/%E5%AD%A6%E4%B9%A0-Python-2019-04-16-Python%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/16/%E5%AD%A6%E4%B9%A0-Python-2019-04-16-Python%E6%95%99%E7%A8%8B%E6%B1%87%E6%80%BB/" class="post-title-link" itemprop="url">Python教程汇总</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-04-16 20:59:04 / 修改时间：21:01:16" itemprop="dateCreated datePublished" datetime="2019-04-16T20:59:04+08:00">2019-04-16</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><a href="https://python3-cookbook.readthedocs.io/zh_CN/latest/" target="_blank" rel="noopener">https://python3-cookbook.readthedocs.io/zh_CN/latest/</a></li>
+<li><a href="https://learnku.com/python" target="_blank" rel="noopener">https://learnku.com/python</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/15/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-04-15-Homebrew-brew-macOS%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/15/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7-2019-04-15-Homebrew-brew-macOS%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" class="post-title-link" itemprop="url">Homebrew-brew-macOS包管理工具</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-15 11:20:46" itemprop="dateCreated datePublished" datetime="2019-04-15T11:20:46+08:00">2019-04-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-12-17 15:37:40" itemprop="dateModified" datetime="2019-12-17T15:37:40+08:00">2019-12-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>macOS的包管理工具<br>主页：<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">https://brew.sh/index_zh-cn</a></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span></span><br><span class="line"><span class="comment"># 同时在终端显示安装日志并且将安装日志保存在文件中</span></span><br><span class="line">/usr/bin/ruby -e <span class="string">"<span class="variable">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>"</span> | tee ~/Desktop/Homebrew安装日志.<span class="built_in">log</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="更新-amp-升级"><a href="#更新-amp-升级" class="headerlink" title="更新&amp;升级"></a>更新&amp;升级</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 列出安装的包</span></span><br><span class="line">brew list</span><br><span class="line"><span class="comment"># 更新Homebrew本身, formulae索引等, 需要先安装git</span></span><br><span class="line">brew update</span><br><span class="line"><span class="comment"># 安装应用, 例如wget, 安装到/usr/local/Cellar/wget, ln到/usr/local/bin目录下</span></span><br><span class="line">brew install wget</span><br><span class="line"><span class="comment"># 安装带UI app, 插件, 字体(fonts)及其他非开源应用</span></span><br><span class="line">brew cask install firefox</span><br><span class="line"><span class="comment"># 更新app</span></span><br><span class="line">brew upgrade git</span><br><span class="line"><span class="comment"># 诊断依赖冲突等</span></span><br><span class="line">brew doctor</span><br><span class="line"><span class="comment"># 搜索app</span></span><br><span class="line">brew search xxx</span><br><span class="line"><span class="comment"># 卸载xxx.app</span></span><br><span class="line">brew uninstall xxx</span><br></pre></td></tr></table></figure>
+
+<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看配置</span></span><br><span class="line">brew config</span><br><span class="line"><span class="comment"># 打开包主页</span></span><br><span class="line">brew home git</span><br><span class="line"><span class="comment"># 查看包信息</span></span><br><span class="line">brew ino git</span><br><span class="line"><span class="comment"># 查看包依赖</span></span><br><span class="line">brew deps wget  <span class="comment">#结果显示gettext libidn2  libunistring openssl</span></span><br><span class="line"><span class="comment"># 清理旧版本</span></span><br><span class="line">brew cleanup git</span><br><span class="line">brew cleanup</span><br><span class="line"><span class="comment"># 显示是否有新版本可用</span></span><br><span class="line">brew outdated</span><br><span class="line"><span class="comment"># 再来个卸载</span></span><br><span class="line">brew rm wget  <span class="comment"># uninstall wget</span></span><br><span class="line">brew remove -h</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/12/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-04-12-macOS-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/12/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-04-12-macOS-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E8%BD%BD%E4%BB%A5%E5%8F%8A%E5%AE%89%E8%A3%85/" class="post-title-link" itemprop="url">macOS-系统下载以及安装</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-04-12 15:01:13" itemprop="dateCreated datePublished" datetime="2019-04-12T15:01:13+08:00">2019-04-12</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-09 13:26:55" itemprop="dateModified" datetime="2019-08-09T13:26:55+08:00">2019-08-09</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>官方给出的重装 macOS 的方法<br><a href="https://support.apple.com/zh-cn/guide/mac-help/mchlp1599/mac" target="_blank" rel="noopener">https://support.apple.com/zh-cn/guide/mac-help/mchlp1599/mac</a></p>
+</li>
+<li><p>目前无法直接下载 macOS 系统，需要借助第三方工具才能下载。<br><a href="http://dosdude1.com/software.html" target="_blank" rel="noopener">http://dosdude1.com/software.html</a></p>
+</li>
+<li><p>制作安装U盘工具 Diskmaker X<br><a href="https://diskmakerx.com/whats-this/#" target="_blank" rel="noopener">https://diskmakerx.com/whats-this/#</a></p>
+</li>
+<li><p>创建安装盘<br><a href="https://support.apple.com/en-us/HT201372" target="_blank" rel="noopener">https://support.apple.com/en-us/HT201372</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取super user 权限</span></span><br><span class="line">sudo -s</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/04/12/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-2019-04-12-%E8%8E%B7%E5%8F%96%E7%94%B5%E8%84%91%E5%85%AC%E7%BD%91IP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/04/12/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-2019-04-12-%E8%8E%B7%E5%8F%96%E7%94%B5%E8%84%91%E5%85%AC%E7%BD%91IP/" class="post-title-link" itemprop="url">获取电脑公网IP</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-04-12 13:46:12 / 修改时间：13:46:50" itemprop="dateCreated datePublished" datetime="2019-04-12T13:46:12+08:00">2019-04-12</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl ip.sb</span><br><span class="line">curl ifconfig.io</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/16/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/16/">16</a><span class="page-number current">17</span><a class="page-number" href="/page/18/">18</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/18/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1169,30 +1016,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1206,17 +1046,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1227,50 +1073,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

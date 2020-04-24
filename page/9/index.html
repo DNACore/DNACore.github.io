@@ -1,85 +1,48 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="DNACore GitHub io">
 <meta property="og:url" content="https://dnacore@github.io/page/9/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DNACore GitHub io">
-  <link rel="canonical" href="https://dnacore@github.io/page/9/">
+
+<link rel="canonical" href="https://dnacore@github.io/page/9/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>DNACore GitHub io</title>
   
-
-
 
 
 
@@ -98,7 +61,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -112,99 +74,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -215,55 +167,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
+          
 
-          <div id="content" class="content">
+          <div class="content index posts-expand">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/06/03/Xcode与调试-2019-06-03-Instruments-只显示内存地址不显示方法名问题解决办法/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/26/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-09-26-macro%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%AE%9A%E4%B9%89-OC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/06/03/Xcode与调试-2019-06-03-Instruments-只显示内存地址不显示方法名问题解决办法/" class="post-title-link" itemprop="url">Instruments-只显示内存地址不显示方法名问题解决办法</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/09/26/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-09-26-macro%E5%B8%B8%E7%94%A8%E5%AE%8F%E5%AE%9A%E4%B9%89-OC/" class="post-title-link" itemprop="url">macro常用宏定义 - OC</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-06-03 15:31:54 / 修改时间：15:42:58" itemprop="dateCreated datePublished" datetime="2019-06-03T15:31:54+08:00">2019-06-03</time>
+              <time title="创建时间：2019-09-26 14:26:33 / 修改时间：14:27:55" itemprop="dateCreated datePublished" datetime="2019-09-26T14:26:33+08:00">2019-09-26</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -276,18 +217,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ol>
-<li><p>需要工程生成 dSYM 文件，Instruments 才能正常地根据内存地址找到方法名。<br>默认情况下，debug 模式是不生成 dSYM 文件的。稍作修改即可。</p>
-</li>
-<li><p>Instruments 寻找 dSYM 文件，依赖的是系统的 Spotlight，如果将 dSYM 文件所在的路径排除在了 Spotlight 索引之外，那么 Instruments 也是不能寻找到的。<br>针对这中原因引起的问题，有两个解决办法：</p>
-<ol>
-<li>手动设置 dSYM 文件的位置<br> 先运行 Instruments ，正常捕获一下程序，再点击停止。选择 File -&gt; Symbols…<br> <img src="/images/Instruments-MemAdrressMethodName1.png" alt="选择Symbols…"><br> 在对应的窗口中，手动设置 dSYM 文件的位置，重新运行即可。<br> <img src="/images/Instruments-MemAdrressMethodName2.png" alt="重新设置dSYM位置"></li>
-<li>设置Instruments 搜索 dSYM 文件的路径<br> <img src="/images/Instruments-MemAdrressMethodName3.png" alt="重新设置dSYM搜索路径"></li>
-</ol>
-</li>
-</ol>
-
-        
+          <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 设备、程序信息获取</span><br><span class="line">#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)</span><br><span class="line">#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)</span><br><span class="line">#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]</span><br><span class="line">#define CurrentSystemVersion ([[UIDevice currentDevice] systemVersion])</span><br><span class="line">#define CurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;日志打印</span><br><span class="line">#ifdef DEBUG</span><br><span class="line">#   define DLog(fmt, ...) NSLog((@&quot;%s [Line %d] &quot; fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);</span><br><span class="line">#else</span><br><span class="line">#   define DLog(...)</span><br><span class="line">#endif</span><br><span class="line"></span><br><span class="line">#pragma mark - 常用路径获取</span><br><span class="line">&#x2F;** 获取沙盒 Document 路径*&#x2F;</span><br><span class="line">#define kDocumentPath       [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]</span><br><span class="line">&#x2F;** 获取沙盒 temp 路径(注:iPhone 重启会清空)*&#x2F;</span><br><span class="line">#define kTempPath           NSTemporaryDirectory()</span><br><span class="line">&#x2F;** 获取沙盒 Cache 路径*&#x2F;</span><br><span class="line">#define kCachePath          [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]</span><br><span class="line">&#x2F;** 获取程序包中程序路径*&#x2F;</span><br><span class="line">#define kBundleResource(name, type)     [[NSBundle mainBundle] pathForResource:(name) ofType:(type)];</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;打印当前函数信息</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -295,57 +225,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit基本概念梳理/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-09-23-Windows-%E5%B0%86Windows%E5%90%AF%E5%8A%A8%E5%88%B0%E5%AE%A1%E8%AE%A1%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit基本概念梳理/" class="post-title-link" itemprop="url">iOS-ARKit基本概念梳理</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/09/23/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-09-23-Windows-%E5%B0%86Windows%E5%90%AF%E5%8A%A8%E5%88%B0%E5%AE%A1%E8%AE%A1%E6%A8%A1%E5%BC%8F/" class="post-title-link" itemprop="url">Windows-将Windows启动到审计模式</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-05-30 17:22:19 / 修改时间：17:45:51" itemprop="dateCreated datePublished" datetime="2019-05-30T17:22:19+08:00">2019-05-30</time>
+              <time title="创建时间：2019-09-23 19:45:19 / 修改时间：19:45:54" itemprop="dateCreated datePublished" datetime="2019-09-23T19:45:19+08:00">2019-09-23</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -358,259 +275,223 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="ARKit-基本概念梳理"><a href="#ARKit-基本概念梳理" class="headerlink" title="ARKit 基本概念梳理"></a>ARKit 基本概念梳理</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>这些概念没有在网上找到明确的说法，都是我自己实验得出来的。</p>
+          <p><a href="https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-windows-to-audit-mode-or-oobe" target="_blank" rel="noopener">https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-windows-to-audit-mode-or-oobe</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/%E5%AD%A6%E4%B9%A0-SQLite3-2019-09-23-SQLite-%E6%8F%90%E5%8D%87SQLite%E6%80%A7%E8%83%BD/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/23/%E5%AD%A6%E4%B9%A0-SQLite3-2019-09-23-SQLite-%E6%8F%90%E5%8D%87SQLite%E6%80%A7%E8%83%BD/" class="post-title-link" itemprop="url">SQLite-提升SQLite性能</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-09-23 17:35:03" itemprop="dateCreated datePublished" datetime="2019-09-23T17:35:03+08:00">2019-09-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-10-12 16:45:38" itemprop="dateModified" datetime="2019-10-12T16:45:38+08:00">2019-10-12</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>关于 SQLite 的 PRAGMA<br><a href="https://www.runoob.com/sqlite/sqlite-pragma.html" target="_blank" rel="noopener">https://www.runoob.com/sqlite/sqlite-pragma.html</a></p>
+</li>
+<li><p>关闭磁盘同步</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">connection.execute(<span class="string">'PRAGMA synchronous = OFF'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>db-journal</code>文件</p>
+</li>
+</ul>
+<p><a href="http://www.voidcn.com/article/p-kapmgjej-nw.html" target="_blank" rel="noopener">http://www.voidcn.com/article/p-kapmgjej-nw.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/%E5%AD%A6%E4%B9%A0-Shell-2019-09-23-Shell-%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E6%9F%90%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%98%AF%E5%90%A6%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/23/%E5%AD%A6%E4%B9%A0-Shell-2019-09-23-Shell-%E9%80%9A%E8%BF%87%E5%91%BD%E4%BB%A4%E6%9F%A5%E7%9C%8B%E6%9F%90%E4%B8%AA%E8%BF%9B%E7%A8%8B%E6%98%AF%E5%90%A6%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C/" class="post-title-link" itemprop="url">Shell-通过命令查看某个进程是否正在运行</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-09-23 15:20:06 / 修改时间：15:20:37" itemprop="dateCreated datePublished" datetime="2019-09-23T15:20:06+08:00">2019-09-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">states</span></span>() &#123;</span><br><span class="line">    process_name=transmission-daemon</span><br><span class="line">    process_id=$(ps -ef | grep <span class="variable">$process_name</span> | grep -v grep | grep -v <span class="variable">$0</span> | awk <span class="string">'&#123;print $2&#125;'</span>)</span><br><span class="line">    <span class="comment"># process_id2=$(ps -ef | grep $process_name | grep -v grep | awk '&#123;print $2&#125;')</span></span><br><span class="line">    <span class="keyword">if</span> [ <span class="string">"<span class="variable">$process_id</span>"</span> == <span class="string">""</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;process_name&#125;</span> 没有在运行"</span></span><br><span class="line">        <span class="built_in">exit</span> 0</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"<span class="variable">$&#123;process_name&#125;</span>(<span class="variable">$&#123;process_id&#125;</span>) 正在运行..."</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/23/%E5%AD%A6%E4%B9%A0-SQLite3-2019-09-23-SQLite%E4%BD%BF%E7%94%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/23/%E5%AD%A6%E4%B9%A0-SQLite3-2019-09-23-SQLite%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">SQLite使用</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-09-23 11:29:47 / 修改时间：17:44:57" itemprop="dateCreated datePublished" datetime="2019-09-23T11:29:47+08:00">2019-09-23</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ul>
+<li><p>获取数据库中所有的表</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">type</span>,<span class="keyword">name</span>,<span class="keyword">sql</span>,tbl_name,<span class="string">'0'</span> <span class="keyword">AS</span> temp <span class="keyword">FROM</span> sqlite_master <span class="keyword">UNION</span> <span class="keyword">SELECT</span> <span class="keyword">type</span>,<span class="keyword">name</span>,<span class="keyword">sql</span>,tbl_name,<span class="string">'1'</span> <span class="keyword">AS</span> temp <span class="keyword">FROM</span> sqlite_temp_master;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SQLite中的语法糖</p>
 <ul>
-<li>坐标原点</li>
-</ul>
-<p>默认坐标原点，即(0, 0, 0)的位置是屏幕中心。<br>x 轴方向向右<br>y 轴方向向上<br>z 轴方向向后</p>
-<p>设置一个node的位置，其实是设置它中心点的位置。<br>SCNText 类型的node，锚点为左下角。<br>SCNBox 锚点为中心<br>SCNNPlane 锚点为中心</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit使用指南/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/30/学习-iOS-2019-05-30-iOS-ARKit使用指南/" class="post-title-link" itemprop="url">iOS-ARKit使用指南</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-30 17:22:05 / 修改时间：17:31:04" itemprop="dateCreated datePublished" datetime="2019-05-30T17:22:05+08:00">2019-05-30</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/25/电脑技巧-macOS-2019-05-25-macOS-launchctl启动项管理工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/25/电脑技巧-macOS-2019-05-25-macOS-launchctl启动项管理工具/" class="post-title-link" itemprop="url">macOS-launchctl启动项管理工具</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-25 15:22:42" itemprop="dateCreated datePublished" datetime="2019-05-25T15:22:42+08:00">2019-05-25</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-09 15:29:17" itemprop="dateModified" datetime="2019-08-09T15:29:17+08:00">2019-08-09</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>打印当前用户禁用的启动项</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl <span class="built_in">print</span>-disabled <span class="string">"user/<span class="variable">$(id -u)</span>"</span></span><br></pre></td></tr></table></figure>
+<li><p>CREATE TABLE IF NOT EXISTS<br>  如果不存在table表则建立，否则忽略。</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">if</span> <span class="keyword">not</span> <span class="keyword">exists</span> <span class="string">"table-name"</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>启动一个启动项</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">launchctl kickstart -p <span class="string">"user/<span class="variable">$(id -u)</span>"</span>/org.whatpulse.ChmodBPF</span><br></pre></td></tr></table></figure>
+<li><p>INSERT OR REPLACE<br>  如果不存在则插入，如果存在则替换</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> <span class="keyword">table</span>-<span class="keyword">name</span> (<span class="keyword">column</span>-<span class="keyword">name</span>,...) <span class="keyword">VALUES</span> (<span class="keyword">column</span>-<span class="keyword">value</span>,...)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>INSERT OR IGNORE<br>  如果不存在则插入，如果存在则忽略</p>
+  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> <span class="keyword">table</span>-<span class="keyword">name</span> (<span class="keyword">column</span>-<span class="keyword">name</span>,...) <span class="keyword">VALUES</span> (<span class="keyword">column</span>-<span class="keyword">value</span>,...)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<p>其它： service-name service-target 区别<br><a href="https://apple.stackexchange.com/questions/166397/what-is-the-difference-between-a-service-name-and-a-service-target" target="_blank" rel="noopener">https://apple.stackexchange.com/questions/166397/what-is-the-difference-between-a-service-name-and-a-service-target</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/24/Xcode与调试-2019-05-24-Xcode-缓存清理/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/24/Xcode与调试-2019-05-24-Xcode-缓存清理/" class="post-title-link" itemprop="url">Xcode-缓存清理</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-24 16:30:08 / 修改时间：16:42:08" itemprop="dateCreated datePublished" datetime="2019-05-24T16:30:08+08:00">2019-05-24</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>DerivedData<br>路径：<code>~/Library/Developer/Xcode/DerivedData/</code><br>删除影响：工程需完全重新编译</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">'正在删除 DerivedData'</span></span><br><span class="line">rm -rf ~/Library/Developer/Xcode/DerivedData/*</span><br><span class="line"><span class="built_in">echo</span> <span class="string">'删除完成'</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>iOS DeviceSupport<br>路径：<code>~/Library/Developer/Xcode/iOS DeviceSupport</code><br>删除影响：重新连接设备后会再次生成</p>
-</li>
-<li><p>DocumentationCache<br>路径：<code>~/Library/Developer/Xcode/DocumentationCache</code></p>
-</li>
-<li><p>CoreSimulator<br>路径：<code>~/Library/Developer/CoreSimulator</code><br>删除影响：谨慎删除<br>参考：<a href="https://stackoverflow.com/questions/34910383/xcode-free-to-clear-devices-folder?answertab=active#tab-top" target="_blank" rel="noopener">https://stackoverflow.com/questions/34910383/xcode-free-to-clear-devices-folder?answertab=active#tab-top</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xcrun simctl <span class="built_in">help</span> delete</span><br><span class="line">Usage: simctl delete &lt;device&gt; [... &lt;device n&gt;] | unavailable</span><br><span class="line"><span class="comment"># 删除不可用的模拟器</span></span><br><span class="line">xcrun simctl delete unavailable</span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="SQLite3-FMDB"><a href="#SQLite3-FMDB" class="headerlink" title="SQLite3/FMDB"></a>SQLite3/FMDB</h2><h3 id="创建表"><a href="#创建表" class="headerlink" title="创建表"></a>创建表</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> <span class="keyword">IF</span> <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> members (uid <span class="built_in">INTEGER</span> PRIMARY <span class="keyword">KEY</span>,<span class="keyword">account</span> <span class="built_in">TEXT</span> <span class="keyword">UNIQUE</span>, <span class="keyword">password</span> <span class="built_in">TEXT</span>, utype <span class="built_in">TEXT</span>, nickname <span class="built_in">TEXT</span>, sjhm <span class="built_in">TEXT</span>, xbm <span class="built_in">TEXT</span>)</span><br></pre></td></tr></table></figure>
 
-        
+<h3 id="插入数据"><a href="#插入数据" class="headerlink" title="插入数据"></a>插入数据</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">OR</span> <span class="keyword">REPLACE</span> <span class="keyword">INTO</span> UserInfo (uid,<span class="keyword">account</span>,<span class="keyword">password</span>,utype,nickname,sjhm,xbm) <span class="keyword">VALUES</span> (?,?,?,?,?,?,?)<span class="string">",[Util getCurrentUserInfo].uid,[Util getCurrentUserInfo].account,[Util getCurrentUserInfo].password,[Util getCurrentUserInfo].utype,[Util getCurrentUserInfo].nickname,[Util getCurrentUserInfo].sjhm,[Util getCurrentUserInfo].xbm]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="查询数据："><a href="#查询数据：" class="headerlink" title="查询数据："></a>查询数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">-(void)readDB</span><br><span class="line">&#123;</span><br><span class="line">    NSString *readMenberTableData&#x3D;@&quot;SELECT * FROM menbers&quot;;</span><br><span class="line">    sqlite3_stmt *stmt &#x3D; NULL;&#x2F;&#x2F;stmt保存的时查询结果</span><br><span class="line">    if (sqlite3_prepare_v2(db, [readMenberTableData UTF8String], -1, &amp;stmt, nil) &#x3D;&#x3D; SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        while (sqlite3_step(stmt))&#x2F;&#x2F;循环遍历查询结果</span><br><span class="line">        &#123;</span><br><span class="line">            userName.text&#x3D;[NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];</span><br><span class="line">            password.text&#x3D;[NSString stringWithUTF8String:(char *)sqlite3_column_text(stmt, 0)];</span><br><span class="line">        &#125;</span><br><span class="line">        sqlite3_finalize(stmt);&#x2F;&#x2F;清除查询结果</span><br><span class="line">    &#125;</span><br><span class="line">    sqlite3_close(db);&#x2F;&#x2F;关闭数据库</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;聊天列表</span><br><span class="line">    NSString *CreateChatListTable&#x3D;@&quot;CREATE TABLE IF NOT EXISTS ChatListTable(id INTEGER PRIMARY KEY AUTOINCREMENT,message_id INTEGER UNIQUE,title TEXT,body TEXT,time TEXT,fromWho TEXT)”;</span><br><span class="line">[self execSql:CreateChatListTable];</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;数据库文件路径(全局的)</span><br><span class="line">-(NSString *)dbPath</span><br><span class="line">&#123;</span><br><span class="line">    NSArray *path&#x3D;NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);</span><br><span class="line">    NSString *documentsDir&#x3D;[path objectAtIndex:0];</span><br><span class="line">    [NSFileManager.defaultManager createDirectoryAtPath:documentsDir withIntermediateDirectories:YES attributes:nil error:nil];</span><br><span class="line">    NSString *pathDependOnUsername&#x3D;[NSString stringWithFormat:@&quot;%@.sqlite&quot;,userName.text];</span><br><span class="line">    paths&#x3D;[documentsDir stringByAppendingPathComponent:pathDependOnUsername];</span><br><span class="line">    NSLog(@&quot;路径是：%@&quot;,paths);</span><br><span class="line">    return paths;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;打开或创建数据库</span><br><span class="line">- (void)openDB</span><br><span class="line">&#123;</span><br><span class="line">    if (sqlite3_open([[self dbPath] UTF8String], &amp;db) !&#x3D; SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        sqlite3_close(db);</span><br><span class="line">        NSAssert(0, @&quot;数据库创建或打开失败。&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;数据库执行语句</span><br><span class="line">-(void)execSql:(NSString *)sql</span><br><span class="line">&#123;</span><br><span class="line">    char *err;</span><br><span class="line">    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &amp;err) !&#x3D; SQLITE_OK)</span><br><span class="line">    &#123;</span><br><span class="line">        sqlite3_close(db);</span><br><span class="line">        NSLog(@&quot;数据库操作数据失败!信息：%s&quot;,err);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -618,57 +499,43 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/23/学习-iOS-2019-05-23-iOS-UIScreen之截屏、录屏/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/17/%E5%86%9C%E6%B0%91%E5%BC%A0%E5%A4%A7%E4%BC%AF%E5%8E%BB%E4%B9%B0%E4%B8%80%E6%96%A4%E5%B0%8F%E7%B1%B3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/23/学习-iOS-2019-05-23-iOS-UIScreen之截屏、录屏/" class="post-title-link" itemprop="url">iOS-UIScreen之截屏、录屏</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/09/17/%E5%86%9C%E6%B0%91%E5%BC%A0%E5%A4%A7%E4%BC%AF%E5%8E%BB%E4%B9%B0%E4%B8%80%E6%96%A4%E5%B0%8F%E7%B1%B3/" class="post-title-link" itemprop="url">农民张大伯去买一斤小米</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
-              <time title="创建时间：2019-05-23 13:59:00 / 修改时间：14:00:40" itemprop="dateCreated datePublished" datetime="2019-05-23T13:59:00+08:00">2019-05-23</time>
+              <time title="创建时间：2019-09-17 17:00:47" itemprop="dateCreated datePublished" datetime="2019-09-17T17:00:47+08:00">2019-09-17</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -681,15 +548,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
-<li><p>截屏通知</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This notification is posted after the user takes a screenshot (for example by pressing both the home and lock screen buttons)</span></span><br><span class="line"><span class="built_in">UIKIT_EXTERN</span> <span class="built_in">NSNotificationName</span> <span class="keyword">const</span> <span class="built_in">UIApplicationUserDidTakeScreenshotNotification</span> <span class="built_in">NS_AVAILABLE_IOS</span>(<span class="number">7</span>_0);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>录屏状态以及录屏状态变化通知</p>
-<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//监测当前设备是否处于录屏状态</span></span><br><span class="line">  <span class="built_in">UIScreen</span> * sc = [<span class="built_in">UIScreen</span> mainScreen];</span><br><span class="line">  <span class="keyword">if</span> (@available(iOS <span class="number">11.0</span>, *)) &#123;</span><br><span class="line">    <span class="keyword">if</span> (sc.isCaptured) &#123;</span><br><span class="line">      <span class="built_in">NSLog</span>(<span class="string">@"正在录制~~~~~~~~~%d"</span>,sc.isCaptured);</span><br><span class="line">      [<span class="keyword">self</span> screenshots];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// Fallback on earlier versions</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (@available(iOS <span class="number">11.0</span>, *)) &#123;</span><br><span class="line"><span class="comment">//检测到当前设备录屏状态发生变化</span></span><br><span class="line">    [[<span class="built_in">NSNotificationCenter</span> defaultCenter]addObserver:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(screenshots) name:<span class="built_in">UIScreenCapturedDidChangeNotification</span> object:<span class="literal">nil</span>];</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// Fallback on earlier versions</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
+          <p>农民张大伯去买一斤小米<br>米店老板掏出一个秤，放在地上，随手拿起一把刀割破了一个米袋，米就哗哗哗的掉到秤上<br>等到秤的示数为一斤时的瞬间，老板堵住了米袋子的口子，把秤上的小米给了张大伯<br>张大伯心满意足的走在回家的路上，心中感慨老板真是个豪爽的人<br>突然，他觉得不太对劲：<br>按照$F=ma$，小米在落在秤盘上时应该会产生一个力……所以他买到的米其实不足一斤<br>第二天，张大伯将老板告上了官府。<br>张大伯把自己的想法说出来了<br>老板则表示这样做每次都没出过差错<br>县太爷听了，微微一笑：“这是误会，老板没有坑你”<br>说完，县太爷猛地取一根毛笔，蘸墨写到：<br>设秤距离抛出点的竖直高度为$h$<br>记小米的流速为$\lambda = m_{0} kg/s$<br>则在秤恰好显示1斤时，取此后一极短时间$\Delta t$<br>此时间内，与秤盘发生碰撞的小米质量设为$m$<br>则$m=\lambda ·\bullet \Delta t$<br>由动量定理，得<br>$F\Delta t=mv$<br>其中$v=\sqrt{2gh}$<br>联立得$F=\lambda \sqrt{2gh}$<br>也就是说此时秤的示数$N=F+m_{1}g$（$m1$为已经落在盘上小米的质量）<br>张大伯一听，愤怒的说：你看，我这不是损失了相当于$\frac{F}{g}=\lambda \sqrt{\frac{2h}{g} }$这么多的小米吗！<br>县太爷笑道：别忘了，现在空中还有小米呢。<br>老板一听，感到有些疑惑：啊？这么说难道是我亏了吗？<br>县太爷接着写到：<br>记张大伯所说的$\lambda \sqrt{\frac{2h}{g} } =m_{2}$<br>而此时在空中的小米质量为$m_{3}$<br>则$m_{3}=\lambda t$<br>其中$t=\sqrt{\frac{2h}{g} }$，代入发现$m_{2} =m_{3}$<br>这也就是说，你们俩一点都没有亏。<br>张大伯和米店老板听了，相视一笑，说道：经验+3，告辞。</p>
 
-        
       
     </div>
 
@@ -697,57 +557,44 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-    
-        <article itemscope itemtype="http://schema.org/Article">
+      
   
   
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/22/学习-iOS-2019-05-22-iOS-iOS中的三种定时器/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/11/IBM-Cloud-%E5%AE%9E%E7%94%A8%E7%AC%94%E8%AE%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/22/学习-iOS-2019-05-22-iOS-iOS中的三种定时器/" class="post-title-link" itemprop="url">iOS-iOS中的三种定时器</a>
+        <h2 class="post-title" itemprop="name headline">
           
-        </h1>
+            <a href="/2019/09/11/IBM-Cloud-%E5%AE%9E%E7%94%A8%E7%AC%94%E8%AE%B0/" class="post-title-link" itemprop="url">IBM Cloud 实用笔记</a>
+        </h2>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
-              <time title="创建时间：2019-05-22 19:04:57 / 修改时间：19:08:34" itemprop="dateCreated datePublished" datetime="2019-05-22T19:04:57+08:00">2019-05-22</time>
+              <time title="创建时间：2019-09-11 11:22:10 / 修改时间：16:17:12" itemprop="dateCreated datePublished" datetime="2019-09-11T11:22:10+08:00">2019-09-11</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -760,219 +607,453 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="iOS-中的三种定时器"><a href="#iOS-中的三种定时器" class="headerlink" title="iOS 中的三种定时器"></a>iOS 中的三种定时器</h1><p>NSTimer、CADisplayLink、GCD</p>
-<h2 id="NSTimer"><a href="#NSTimer" class="headerlink" title="NSTimer"></a>NSTimer</h2><h3 id="创建方法"><a href="#创建方法" class="headerlink" title="创建方法"></a>创建方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(action:) userInfo:nil repeats:NO];</span><br><span class="line">TimerInterval :	//执行之前等待的时间。比如设置成1.0，就代表1秒后执行方法</span><br><span class="line">target :		//需要执行方法的对象。</span><br><span class="line">selector :		//需要执行的方法</span><br><span class="line">repeats :		//是否需要循环</span><br></pre></td></tr></table></figure>
-
-<h3 id="释放方法"><a href="#释放方法" class="headerlink" title="释放方法"></a>释放方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[timer invalidate];</span><br></pre></td></tr></table></figure>
-
-<p><font color="red"><strong>注意 : 调用创建方法后，target对象的计数器会加1，直到执行完毕，自动减1。如果是循环执行的话，就必须手动关闭，否则可以不执行释放方法。</strong></font></p>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>存在延迟：不管是一次性的还是周期性的timer的实际触发事件的时间，都会与所加入的RunLoop和RunLoop Mode有关，如果此RunLoop正在执行一个连续性的运算，timer就会被延时出发。重复性的timer遇到这种情况，如果延迟超过了一个周期，则会在延时结束后立刻执行，并按照之前指定的周期继续执行。</p>
-<p>必须加入Runloop：使用上面的创建方式(直接在主线程中创建)，会自动把timer加入mainThread中MainRunloop的NSDefaultRunLoopMode中。<br>如果使用以下方式创建定时器，就必须手动加入Runloop:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">NSTimer *timer = [NSTimer timerWithTimeInterval:5 target:self selector:@selector(timerAction) userInfo:nil repeats:YES];</span><br><span class="line">[[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];</span><br></pre></td></tr></table></figure>
-
-<p>如果在其他线程创建 NSTimer 必须手动加入 此线程的 RunLoop 中，并在这之后启动这个 RunLoop.因为 RunLoop 中没有任务的时候，启动它，它会立即退出。</p>
-<p><font color="red"><strong>注意：NSTimer 在什么线程，它执行的方法就在什么线程。如果是有关刷新界面或者涉及到线程安全的操作，一定要注意线程问题。</strong></font></p>
-<h2 id="CADisplayLink"><a href="#CADisplayLink" class="headerlink" title="CADisplayLink"></a>CADisplayLink</h2><ol>
-<li><p>创建方法</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">displayLink = [CADisplayLink     displayLinkWithTarget:self     selector:@selector(handleDisplayLink:)];</span><br><span class="line">[displayLink addToRunLoop:[NSRunLoop     currentRunLoop] forMode:NSDefaultRunLoopMode];</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>停止方法</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[displayLink invalidate];</span><br><span class="line">displayLink = nil;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<p>当把<code>CADisplayLink</code>对象add到<code>runloop</code>中后，<code>selector</code>就能被周期性调用，类似于重复的<code>NSTimer</code>被启动了；执行<code>invalidate</code>操作时，<code>CADisplayLink</code>对象就会从<code>runloop</code>中移除，<code>selector</code>调用也随即停止，类似于<code>NSTimer</code>的<code>invalidate</code>方法。**</p>
-<ol start="3">
-<li><p>特点：<br>屏幕刷新时调用：<code>CADisplayLink</code>是一个能让我们以和屏幕刷新率同步的频率将特定的内容画到屏幕上的定时器类。<code>CADisplayLink</code>以特定模式注册到<code>runloop</code>后，每当屏幕显示内容刷新结束的时候，<code>runloop</code>就会向<code>CADisplayLink</code>指定的<code>target</code>发送一次指定的<code>selector</code>消息， <code>CADisplayLink</code>类对应的<code>selector</code>就会被调用一次。所以通常情况下，按照iOS设备屏幕的刷新率60次/秒<br>延迟：iOS设备的屏幕刷新频率是固定的，<code>CADisplayLink</code>在正常情况下会在每次刷新结束都被调用，精确度相当高。但如果调用的方法比较耗时，超过了屏幕刷新周期，就会导致跳过若干次回调调用机会。<br>如果CPU过于繁忙，无法保证屏幕60次/秒的刷新率，就会导致跳过若干次调用回调方法的机会，跳过次数取决CPU的忙碌程度。<br>我在实测中发现在低资源占用情况下，执行比较简单的计数方法，也不是非常精确，每秒执行误差大都在一毫秒以内。但是误差会累积，也就是说1000秒之后误差可能会有1秒。尚不知是什么原因引起的。(NSLog的打印时间？)<br>当程序繁忙时，误差会增大。<br>使用场景：从原理上可以看出，<code>CADisplayLink</code>适合做界面的不停重绘，比如视频播放的时候需要不停地获取下一帧用于界面渲染。</p>
-</li>
-<li><p>重要属性</p>
-</li>
-</ol>
+          <h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><p><a href="https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir" target="_blank" rel="noopener">https://cloud.ibm.com/docs/cli?topic=cloud-cli-install-ibmcloud-cli#install-custom-dir</a></p>
 <ul>
-<li><p>frameInterval<br><code>NSInteger</code>类型的值，用来设置间隔多少帧调用一次<code>selector</code>方法，默认值是1，即每帧都调用一次。</p>
-</li>
-<li><p>duration<br><code>readOnly</code>的<code>CFTimeInterval</code>值，表示两次屏幕刷新之间的时间间隔。需要注意的是，该属性在<code>target</code>的<code>selector</code>被首次调用以后才会被赋值。<code>selector</code>的调用间隔时间计算方式是：调用间隔时间 = duration × frameInterval。</p>
-</li>
+<li>ssh 连接<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibmcloud cf ssh MyTest</span><br></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="GCD"><a href="#GCD" class="headerlink" title="GCD"></a>GCD</h2><ol>
-<li><p>执行一次</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">double delayInSeconds = 2.0;</span><br><span class="line">dispatch_time_t popTime =     dispatch_time(DISPATCH_TIME_NOW, delayInSeconds *     NSEC_PER_SEC);</span><br><span class="line">dispatch_after(popTime, dispatch_get_main_queue(),     ^(void)&#123;</span><br><span class="line">//执行事件</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-09-10-Windows-Windows%E7%9A%84KMS%E6%BF%80%E6%B4%BB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/10/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-2019-09-10-Windows-Windows%E7%9A%84KMS%E6%BF%80%E6%B4%BB/" class="post-title-link" itemprop="url">Windows-Windows的KMS激活</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-09-10 16:30:20 / 修改时间：20:00:42" itemprop="dateCreated datePublished" datetime="2019-09-10T16:30:20+08:00">2019-09-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>[TOC]</p>
+<h1 id="KMS-服务器激活-Windows"><a href="#KMS-服务器激活-Windows" class="headerlink" title="KMS 服务器激活 Windows"></a>KMS 服务器激活 Windows</h1><h2 id="KMS-密钥"><a href="#KMS-密钥" class="headerlink" title="KMS 密钥"></a>KMS 密钥</h2><ul>
+<li>Windows Thin PC : <code>3KQTC-D9G6K-7TQG6-6MRPC-QN22C</code></li>
+</ul>
+<h2 id="KMS-激活"><a href="#KMS-激活" class="headerlink" title="KMS 激活"></a>KMS 激活</h2><p><a href="https://moeclub.org/2018/12/02/710/?spm=70.9" target="_blank" rel="noopener">https://moeclub.org/2018/12/02/710/?spm=70.9</a></p>
+<p>激活步骤请前往: <a href="http://moeclub.org/kms" target="_blank" rel="noopener">http://moeclub.org/kms</a><br>KMS激活命令: slmgr /skms kms.moeclub.org</p>
+<h3 id="安装KMS密钥"><a href="#安装KMS密钥" class="headerlink" title="安装KMS密钥:"></a>安装KMS密钥:</h3><p>以管理员身份运行命令提示符.<br>安装密钥:<code>slmgr /ipk [密钥]</code><br>设置激活:<code>slmgr /skms kms.moeclub.org</code><br>激活产品:<code>slmgr /ato</code></p>
+<h3 id="KMS-GVLK"><a href="#KMS-GVLK" class="headerlink" title="KMS GVLK:"></a>KMS GVLK:</h3><ul>
+<li>Windows Server 2019 ARM64 : GRFBW-QNDC4-6QBHG-CCK3B-2PR88</li>
+<li>Windows Server 2019 Azure Core : FDNH6-VW9RW-BXPJ7-4XTYG-239TB</li>
+<li>Windows Server 2019 Datacenter : WMDGN-G9PQG-XVVXX-R3X43-63DFG</li>
+<li>Windows Server 2019 Essentials : WVDHN-86M7X-466P6-VHXV7-YY726</li>
+<li>Windows Server 2019 Standard : N69G4-B89J2-4G8F4-WWYCC-J464C</li>
+<li>Windows Server 2019 Datacenter (Semi-Annual Channel v.1809) : 6NMRW-2C8FM-D24W7-TQWMY-CWH2D</li>
+<li>Windows Server 2019 Standard (Semi-Annual Channel v.1809) : N2KJX-J94YW-TQVFB-DG9YT-724CC</li>
+<li>Windows Server 2019 Standard [Preview] : MFY9F-XBN2F-TYFMP-CCV49-RMYVH</li>
+<li>Windows Server 2019 Datacenter [Preview] : 6XBNX-4JQGW-QX6QG-74P76-72V67</li>
+<li>Windows 10 Enterprise LTSC 2019 : M7XTQ-FN8P6-TTKYV-9D4CC-J462D</li>
+<li>Windows 10 Enterprise LTSC 2019 N : 92NFX-8DJQP-P6BBQ-THF9C-7CG2H</li>
+<li>Windows 10 Enterprise G : YYVX9-NTFWV-6MDM3-9PT4T-4M68B</li>
+<li>Windows 10 Enterprise G N : 44RPN-FTY23-9VTTB-MP9BX-T84FV</li>
+<li>Windows 10 Enterprise 2016 LTSB : DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ</li>
+<li>Windows 10 Enterprise 2016 LTSB N : QFFDN-GRT3P-VKWWX-X7T3R-8B639</li>
+<li>Windows 10 Home / Core : TX9XD-98N7V-6WMQ6-BX7FG-H8Q99</li>
+<li>Windows 10 Home / Core Country Specific : PVMJN-6DFY6-9CCP6-7BKTT-D3WVR</li>
+<li>Windows 10 Home / Core N : 3KHY7-WNT83-DGQKR-F7HPR-844BM</li>
+<li>Windows 10 Home / Core Single Language : 7HNRX-D7KGG-3K4RQ-4WPJ4-YTDFH</li>
+<li>Windows 10 Education : NW6C2-QMPVW-D7KKK-3GKT6-VCFB2</li>
+<li>Windows 10 Education N : 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ</li>
+<li>Windows 10 Enterprise : NPPR9-FWDCX-D2C8J-H872K-2YT43</li>
+<li>Windows 10 Enterprise [Preview] : QNMXX-GCD3W-TCCT4-872RV-G6P4J</li>
+<li>Windows 10 Enterprise S : H76BG-QBNM7-73XY9-V6W2T-684BJ</li>
+<li>Windows 10 Enterprise 2015 LTSB : WNMTR-4C88C-JK8YV-HQ7T2-76DF9</li>
+<li>Windows 10 Enterprise 2015 LTSB N : 2F77B-TNFGY-69QQF-B8YKP-D69TJ</li>
+<li>Windows 10 Enterprise N : DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4</li>
+<li>Windows 10 Enterprise S N : X4R4B-NV6WD-PKTVK-F98BH-4C2J8</li>
+<li>Windows 10 Professional Workstation : NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J</li>
+<li>Windows 10 Professional Workstation N : 9FNHH-K3HBT-3W4TD-6383H-6XYWF</li>
+<li>Windows 10 Professional : W269N-WFGWX-YVC9B-4J6C9-T83GX</li>
+<li>Windows 10 Professional Education : 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y</li>
+<li>Windows 10 Professional Education N : YVWGF-BXNMC-HTQYQ-CPQ99-66QFC</li>
+<li>Windows 10 Professional N : MH37W-N47XK-V7XM9-C7227-GCQG9</li>
+<li>Windows 10 Professional [Preview] : XQHPH-N4D9W-M8P96-DPDFP-TMVPY</li>
+<li>Windows 10 Professional WMC [Pre-Release] : NKPM6-TCVPT-3HRFX-Q4H9B-QJ34Y</li>
+<li>Windows 10 Enterprise for Virtual Desktops : CPWHC-NT2C7-VYW78-DHDB2-PG3GK</li>
+<li>Windows 10 Remote Server : 7NBT4-WGBQX-MP4H7-QXFF8-YP3KX</li>
+<li>Windows 10 S (Lean) : NBTWJ-3DR69-3C4V8-C26MC-GQ9M6</li>
+<li>Windows 10 IoT Core [Pre-Release] : 7NX88-X6YM3-9Q3YT-CCGBF-KBVQF</li>
+<li>Windows 10 Core Connected [Pre-Release] : DJMYQ-WN6HG-YJ2YX-82JDB-CWFCW</li>
+<li>Windows 10 Core Connected N [Pre-Release] : JQNT7-W63G4-WX4QX-RD9M9-6CPKM</li>
+<li>Windows 10 Core Connected Single Language [Pre-Release] : QQMNF-GPVQ6-BFXGG-GWRCX-7XKT7</li>
+<li>Windows 10 Core Connected Country Specific [Pre-Release] : FTNXM-J4RGP-MYQCV-RVM8R-TVH24</li>
+<li>Windows 10 Professional S [Pre-Release] : 3NF4D-GF9GY-63VKH-QRC3V-7QW8P</li>
+<li>Windows 10 Professional S N [Pre-Release] : KNDJ3-GVHWT-3TV4V-36K8Y-PR4PF</li>
+<li>Windows 10 Professional Student [Pre-Release] : YNXW3-HV3VB-Y83VG-KPBXM-6VH3Q</li>
+<li>Windows 10 Professional Student N [Pre-Release] : 8G9XJ-GN6PJ-GW787-MVV7G-GMR99</li>
+<li>Windows 7 Enterprise : 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH</li>
+<li>Windows 7 Enterprise E : C29WB-22CC8-VJ326-GHFJW-H9DH4</li>
+<li>Windows 7 Enterprise N : YDRBP-3D83W-TY26F-D46B2-XCKRJ</li>
+<li>Windows 7 Professional : FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4</li>
+<li>Windows 7 Professional E : W82YF-2Q76Y-63HXB-FGJG9-GF7QX</li>
+<li>Windows 7 Professional N : MRPKT-YTG23-K7D7T-X2JMM-QY7MG</li>
+<li>Windows 7 Embedded POSReady : YBYF6-BHCR3-JPKRB-CDW7B-F9BK4</li>
+<li>Windows 7 Embedded Standard : XGY72-BRBBT-FF8MH-2GG8H-W7KCW</li>
+<li>Windows 7 ThinPC : 73KQT-CD9G6-K7TQG-66MRP-CQ22C</li>
+<li>Windows 8 Core / Server 2012 : BN3D2-R7TKB-3YPBD-8DRP2-27GG4</li>
+<li>Windows 8 Core / Server 2012 Country Specific : 4K36P-JN4VD-GDC6V-KDT89-DYFKP</li>
+<li>Windows 8 Core / Server 2012 N : 8N2M2-HWPGY-7PGT9-HGDD8-GVGGY</li>
+<li>Windows 8 Core / Server 2012 Single Language : 2WN2H-YGCQR-KFX6K-CD6TF-84YXQ</li>
+<li>Windows 8 Professional WMC : GNBB8-YVD74-QJHX6-27H4K-8QHDG</li>
+<li>Windows 8 Embedded Industry Professional : RYXVT-BNQG7-VD29F-DBMRY-HT73M</li>
+<li>Windows 8 Embedded Industry Enterprise : NKB3R-R2F8T-3XCDP-7Q2KW-XWYQ2</li>
+<li>Windows 8 Enterprise : 32JNW-9KQ84-P47T8-D8GGY-CWCK7</li>
+<li>Windows 8 Enterprise N : JMNMF-RHW7P-DMY6X-RF3DR-X2BQT</li>
+<li>Windows 8 Professional : NG4HW-VH26C-733KW-K6F98-J8CK4</li>
+<li>Windows 8 Professional N : XCVCF-2NXM9-723PB-MHCB7-2RYQQ</li>
+<li>Windows 8.1 Core : M9Q9P-WNJJT-6PXPY-DWX8H-6XWKK</li>
+<li>Windows 8.1 Core ARM64 : XYTND-K6QKT-K2MRH-66RTM-43JKP</li>
+<li>Windows 8.1 Core Country Specific : NCTT7-2RGK8-WMHRF-RY7YQ-JTXG3</li>
+<li>Windows 8.1 Core N : 7B9N3-D94CG-YTVHR-QBPX3-RJP64</li>
+<li>Windows 8.1 Core Single Language : BB6NG-PQ82V-VRDPW-8XVD2-V8P66</li>
+<li>Windows 8.1 Professional Student : MX3RK-9HNGX-K3QKC-6PJ3F-W8D7B</li>
+<li>Windows 8.1 Professional Student N : TNFGH-2R6PB-8XM3K-QYHX2-J4296</li>
+<li>Windows 8.1 Professional WMC : 789NJ-TQK6T-6XTH8-J39CJ-J8D3P</li>
+<li>Windows 8.1 Core Connected : 3PY8R-QHNP9-W7XQD-G6DPH-3J2C9</li>
+<li>Windows 8.1 Core Connected Country Specific : R962J-37N87-9VVK2-WJ74P-XTMHR</li>
+<li>Windows 8.1 Core Connected N : Q6HTR-N24GM-PMJFP-69CD8-2GXKR</li>
+<li>Windows 8.1 Core Connected Single Language : KF37N-VDV38-GRRTV-XH8X6-6F3BB</li>
+<li>Windows 8.1 Enterprise : MHF9N-XY6XB-WVXMC-BTDCT-MKKG7</li>
+<li>Windows 8.1 Enterprise N : TT4HM-HN7YT-62K67-RGRQJ-JFFXW</li>
+<li>Windows 8.1 Professional : GCRJD-8NW9H-F2CDX-CCM8D-9D6T9</li>
+<li>Windows 8.1 Professional N : HMCNV-VVBFX-7HMBH-CTY9B-B4FXY</li>
+<li>Windows 8.1 Embedded Industry Professional : NMMPB-38DD4-R2823-62W8D-VXKJB</li>
+<li>Windows 8.1 Embedded Industry Automotive : VHXM3-NR6FT-RY6RT-CK882-KW2CJ</li>
+<li>Windows 8.1 Embedded Industry Enterprise : FNFKF-PWTVT-9RC8H-32HB2-JB34X</li>
+<li>Windows 8.1 Enterprise [Preview] : 2MP7K-98NK8-WPVF3-Q2WDG-VMD98</li>
+<li>Windows 8.1 Professional (Blue) [Preview] : MTWNQ-CKDHJ-3HXW9-Q2PFX-WB2HQ</li>
+<li>Windows 8 Professional WMC [RC] : MY4N9-TGH34-4X4VY-8FG2T-RRDPV</li>
+<li>Windows 8.x [Preview] : MPWP3-DXNP9-BRD79-W8WFP-3YFJ6</li>
+<li>Windows Server Next HI [Preview] : 7VX4N-3VDHQ-VYGHB-JXJVP-9QB26</li>
+<li>Windows Server 2008 Web : WYR28-R7TFJ-3X2YQ-YCY4H-M249D</li>
+<li>Windows Server 2008 HPC Edition : RCTX3-KWVHP-BR6TB-RB6DM-6X7HP</li>
+<li>Windows Server 2008 Standard : TM24T-X9RMF-VWXK6-X8JC9-BFGM2</li>
+<li>Windows Server 2008 Standard without Hyper-V : W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ</li>
+<li>Windows Server 2008 Enterprise : YQGMW-MPWTJ-34KDK-48M3W-X4Q6V</li>
+<li>Windows Server 2008 Enterprise without Hyper-V : 39BXF-X8Q23-P2WWT-38T2F-G3FPG</li>
+<li>Windows Server 2008 Datacenter : 7M67G-PC374-GR742-YH8V4-TCBY3</li>
+<li>Windows Server 2008 Datacenter without Hyper-V : 22XQ2-VRXRG-P8D42-K34TD-G3QQC</li>
+<li>Windows Server 2008 for Itanium Systems : 4DWFP-JF3DJ-B7DTH-78FJB-PDRHK</li>
+<li>Windows MultiPoint Server 2010 : 736RG-XDKJK-V34PF-BHK87-J6X3K</li>
+<li>Windows Server 2008 R2 Web : 6TPJF-RBVHG-WBW2R-86QPH-6RTM4</li>
+<li>Windows Server 2008 R2 HPC Edition : TT8MH-CG224-D3D7Q-498W2-9QCTX</li>
+<li>Windows Server 2008 R2 Standard : YC6KT-GKW9T-YTKYR-T4X34-R7VHC</li>
+<li>Windows Server 2008 R2 Enterprise : 489J6-VHDMP-X63PK-3K798-CPX3Y</li>
+<li>Windows Server 2008 R2 Datacenter : 74YFP-3QFB3-KQT8W-PMXWJ-7M648</li>
+<li>Windows Server 2008 R2 for Itanium Systems : GT63C-RJFQ3-4GMB6-BRFB9-CB83V</li>
+<li>Windows Server 2012 Datacenter : 48HP8-DN98B-MYWDG-T2DCC-8W83P</li>
+<li>Windows Server 2012 MultiPoint Premium : XNH6W-2V9GX-RGJ4K-Y8X6F-QGJ2G</li>
+<li>Windows Server 2012 MultiPoint Standard : HM7DN-YVMH3-46JC3-XYTG7-CYQJJ</li>
+<li>Windows Server 2012 Standard : XC9B7-NBPP2-83J2H-RHMBY-92BT4</li>
+<li>Windows Server 2012 R2 Cloud Storage : 3NPTF-33KPT-GGBPR-YX76B-39KDD</li>
+<li>Windows Server 2012 R2 Datacenter : W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</li>
+<li>Windows Server 2012 R2 Essentials : KNC87-3J2TX-XB4WP-VCPJV-M4FWM</li>
+<li>Windows Server 2012 R2 Standard : D2N9P-3P6X9-2R39C-7RTCD-MDVJX</li>
+<li>Windows Server 2016 Azure Core : VP34G-4NPPG-79JTQ-864T4-R3MQX</li>
+<li>Windows Server 2016 Cloud Storage : QN4C6-GBJD2-FB422-GHWJK-GJG2R</li>
+<li>Windows Server 2016 Datacenter : CB7KF-BWN84-R7R2Y-793K2-8XDDG</li>
+<li>Windows Server 2016 Essentials : JCKRF-N37P4-C2D82-9YXRT-4M63B</li>
+<li>Windows Server 2016 Standard : WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY</li>
+<li>Windows Server 2016 ARM64 : K9FYF-G6NCK-73M32-XMVPY-F9DRR</li>
+<li>Windows Server 2016 Datacenter (Semi-Annual Channel v.1803) : 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG</li>
+<li>Windows Server 2016 Standard (Semi-Annual Channel v.1803) : PTXN8-JFHJM-4WC78-MPCBR-9W4KR</li>
+<li>Windows Server 2016 Datacenter [Preview] : VRDD2-NVGDP-K7QG8-69BR4-TVFHB</li>
+<li>Windows Vista Business : YFKBB-PQJJV-G996G-VWGXY-2V3X8</li>
+<li>Windows Vista Business N : HMBQG-8H2RH-C77VX-27R82-VMQBT</li>
+<li>Windows Vista Enterprise : VKK3X-68KWM-X2YGT-QR4M6-4BWMV</li>
+<li>Windows Vista Enterprise N : VTC42-BM838-43QHV-84HX6-XJXKV</li>
+<li>Windows Vista Business [Preview 1] : XQYF4-QVCMY-YXQRD-9QPV8-3YP9V</li>
+<li>Windows Vista Business [Preview 2] : YVT36-YVCP2-J97GQ-7T22R-RWV8P</li>
+<li>Windows Vista Business N [Preview] : HGBJ9-RWD6M-6HDGW-6T2XD-JQ66F</li>
+<li>Windows Vista Enterprise [Preview 1] : 3JHG3-Y66GP-B7F3K-JFVX2-VBH7K</li>
+<li>Windows Vista Enterprise [Beta-2 build 5384] : MF9PG-RQK7R-26BPJ-TWFYK-RHXCM</li>
+<li>Windows Longhorn Web [Preview] : MDRCM-4WKCW-J93FF-J9Q48-M6KBB</li>
+<li>Windows Longhorn Standard : Q37JX-P3HHB-GKRH2-PDBKG-GGXPW</li>
+<li>Windows Longhorn Enterprise : 7KYMQ-R788Q-4RF69-KTWKM-92PFJ</li>
+<li>Windows Longhorn Datacenter [Preview] : HR8VD-7DHG2-48378-M9D73-28F4T</li>
+<li>Windows Longhorn for Itanium Systems [Preview] : CWV9H-PHGPW-V93WV-QBQV9-8V336</li>
+<li>Office Access 2010 : V7Y44-9T38C-R2VJK-666HK-T7DDX</li>
+<li>Office Excel 2010 : H62QG-HXVKF-PP4HP-66KMR-CW9BM</li>
+<li>Office Groove (SharePoint Workspace) 2010 : QYYW6-QP4CB-MBV6G-HYMCJ-4T3J4</li>
+<li>Office InfoPath 2010 : K96W8-67RPQ-62T9Y-J8FQJ-BT37T</li>
+<li>Office Mondo 1 2010 : YBJTT-JG6MD-V9Q7P-DBKXJ-38W9R</li>
+<li>Office Mondo 2 2010 : 7TC2V-WXF6P-TD7RT-BQRXR-B8K32</li>
+<li>Office OneNote 2010 : Q4Y4M-RHWJM-PY37F-MTKWH-D3XHX</li>
+<li>Office OutLook 2010 : 7YDC2-CWM8M-RRTJC-8MDVC-X3DWQ</li>
+<li>Office PowerPoint 2010 : RC8FX-88JRY-3PF7C-X8P67-P4VTT</li>
+<li>Office Professional Plus 2010 : VYBBJ-TRJPB-QFQRF-QFT4D-H3GVB</li>
+<li>Office Project Professional 2010 : YGX6F-PGV49-PGW3J-9BTGG-VHKC6</li>
+<li>Office Project Standard 2010 : 4HP3K-88W3F-W2K3D-6677X-F9PGB</li>
+<li>Office Publisher 2010 : BFK7F-9MYHM-V68C7-DRQ66-83YTP</li>
+<li>Office Small Business Basics 2010 : D6QFG-VBYP2-XQHM7-J97RH-VVRCK</li>
+<li>Office Standard 2010 : V7QKV-4XVVR-XYV4D-F7DFM-8R6BM</li>
+<li>Office Visio Premium 2010 : D9DWC-HPYVV-JGF4P-BTWQB-WX8BJ</li>
+<li>Office Visio Professional 2010 : 7MCW8-VRQVK-G677T-PDJCM-Q8TCP</li>
+<li>Office Visio Standard 2010 : 767HD-QGMWX-8QTDB-9G3R2-KHFGJ</li>
+<li>Office Word 2010 : HVHB3-C6FV7-KQX9W-YQG79-CRY7T</li>
+<li>Office Starter 2010 Retail : VXHHB-W7HBD-7M342-RJ7P8-CHBD6</li>
+<li>Office SharePoint Designer (Frontpage) 2010 Retail : H48K6-FB4Y6-P83GH-9J7XG-HDKKX</li>
+<li>Office Access 2013 : NG2JY-H4JBT-HQXYP-78QH9-4JM2D</li>
+<li>Office Excel 2013 : VGPNG-Y7HQW-9RHP7-TKPV3-BG7GB</li>
+<li>Office InfoPath 2013 : DKT8B-N7VXH-D963P-Q4PHY-F8894</li>
+<li>Office Lync 2013 : 2MG3G-3BNTT-3MFW9-KDQW3-TCK7R</li>
+<li>Office Mondo 2013 : 42QTK-RN8M7-J3C4G-BBGYM-88CYV</li>
+<li>Office OneNote 2013 : TGN6P-8MMBC-37P2F-XHXXK-P34VW</li>
+<li>Office OutLook 2013 : QPN8Q-BJBTJ-334K3-93TGY-2PMBT</li>
+<li>Office PowerPoint 2013 : 4NT99-8RJFH-Q2VDH-KYG2C-4RD4F</li>
+<li>Office Professional Plus 2013 : YC7DK-G2NP3-2QQC3-J6H88-GVGXT</li>
+<li>Office Project Professional 2013 : FN8TT-7WMH6-2D4X9-M337T-2342K</li>
+<li>Office Project Standard 2013 : 6NTH3-CW976-3G3Y2-JK3TX-8QHTT</li>
+<li>Office Publisher 2013 : PN2WF-29XG2-T9HJ7-JQPJR-FCXK4</li>
+<li>Office Standard 2013 : KBKQT-2NMXY-JJWGP-M62JB-92CD4</li>
+<li>Office Visio Professional 2013 : C2FG9-N6J68-H8BTJ-BW3QX-RM3B3</li>
+<li>Office Visio Standard 2013 : J484Y-4NKBF-W2HMG-DBMJC-PGWR7</li>
+<li>Office Word 2013 : 6Q7VD-NX8JD-WJ2VH-88V73-4GBJ7</li>
+<li>Office SharePoint Workspace (Groove) 2013 : H7R7V-WPNXQ-WCYYC-76BGV-VT7GH</li>
+<li>Office SharePoint Designer (Frontpage) 2013 Retail : GYJRG-NMYMF-VGBM4-T3QD4-842DW</li>
+<li>Office Access 2013 [Pre-Release] : DJBH8-RGN7Q-836KD-DMP3M-DM9MF</li>
+<li>Office Excel 2013 [Pre-Release] : Q3BNP-3WXDT-GG8HF-24KMW-HMDBK</li>
+<li>Office SharePoint Workspace (Groove) 2013 [Pre-Release] : WVCGG-NK4FG-7XKXM-BD4WF-3C624</li>
+<li>Office InfoPath 2013 [Pre-Release] : 7KPJJ-N8TT7-CK3KR-QTV98-YPVXQ</li>
+<li>Office Lync 2013 [Pre-Release] : XNVD3-RYC7T-7R6BT-WX6CF-8BYH7</li>
+<li>Office Mondo 2013 [Pre-Release] : GCGCN-6FJRM-TR9Q3-BGMWJ-78KQV</li>
+<li>Office OneNote 2013 [Pre-Release] : VYNYX-8GPBC-7FQMD-D6B7B-7MDFD</li>
+<li>Office Outlook 2013 [Pre-Release] : X2KNB-FRRG2-WXDPH-739DM-DM9RH</li>
+<li>Office PowerPoint 2013 [Pre-Release] : B8CT8-BTNFQ-XQXBK-BFWV8-HMDFQ</li>
+<li>Office Professional Plus 2013 [Pre-Release] : PGD67-JN23K-JGVWV-KTHP4-GXR9G</li>
+<li>Office Project Professional 2013 [Pre-Release] : NFKVM-DVG7F-TYWYR-3RPHY-F872K</li>
+<li>Office Project Standard 2013 [Pre-Release] : N89QF-GGB8J-BKD28-C4V28-W4XTK</li>
+<li>Office Publisher 2013 [Pre-Release] : NB67P-J8XP4-XDK9B-V73VH-M4CKR</li>
+<li>Office Visio Professional 2013 [Pre-Release] : B3C7Q-D6NH2-2VRFW-HHWDG-FVQB6</li>
+<li>Office Visio Standard 2013 [Pre-Release] : 9MKNF-J9XQ6-JV4XB-FJQPY-43F43</li>
+<li>Office Word 2013 [Pre-Release] : JBGD4-3JNG7-JWWGV-CR6TP-DC62Q</li>
+<li>Office Access 2016 : GNH9Y-D2J4T-FJHGG-QRVH7-QPFDW</li>
+<li>Office Excel 2016 : 9C2PK-NWTVB-JMPW8-BFT28-7FTBF</li>
+<li>Office Mondo 2016 : HFTND-W9MK4-8B7MJ-B6C4G-XQBR2</li>
+<li>Office Mondo Retail 2016 : DMTCJ-KNRKX-26982-JYCKT-P7KB6</li>
+<li>Office OneNote 2016 : DR92N-9HTF2-97XKM-XW2WJ-XW3J6</li>
+<li>Office Outlook 2016 : R69KK-NTPKF-7M3Q4-QYBHW-6MT9B</li>
+<li>Office Powerpoint 2016 : J7MQP-HNJ4Y-WJ7YM-PFYGF-BY6C6</li>
+<li>Office Professional Plus 2016 : XQNVK-8JYDB-WJ9W3-YJ8YR-WFG99</li>
+<li>Office Project Professional 2016 : YG9NW-3K39V-2T3HJ-93F3Q-G83KT</li>
+<li>Office Project Professional 2016 C2R [Preview] : WGT24-HCNMF-FQ7XH-6M8K7-DRTW9</li>
+<li>Office Project Standard 2016 : GNFHQ-F6YQM-KQDGJ-327XX-KQBVC</li>
+<li>Office Project Standard 2016 C2R [Preview] : D8NRQ-JTYM3-7J2DX-646CT-6836M</li>
+<li>Office Publisher 2016 : F47MM-N3XJP-TQXJ9-BP99D-8K837</li>
+<li>Office Skype for Business 2016 : 869NQ-FJ69K-466HW-QYCP2-DDBV6</li>
+<li>Office Standard 2016 : JNRGM-WHDWX-FJJG3-K47QV-DRTFM</li>
+<li>Office Visio Professional 2016 : PD3PC-RHNGV-FXJ29-8JK7D-RJRJK</li>
+<li>Office Visio Professional 2016 C2R [Preview] : 69WXN-MBYV6-22PQG-3WGHK-RM6XC</li>
+<li>Office Visio Standard 2016 : 7WHWN-4T7MP-G96JF-G33KR-W8GF4</li>
+<li>Office Visio Standard 2016 C2R [Preview] : NY48V-PPYYH-3F4PX-XJRKJ-W4423</li>
+<li>Office Word 2016 : WXY84-JN2Q9-RBCCQ-3Q3J3-3PFJ6</li>
+<li>Office Professional Plus 2019 C2R [Preview] : VQ9DP-NVHPH-T9HJC-J9PDT-KTQRG</li>
+<li>Office Project Professional 2019 C2R [Preview] : XM2V9-DN9HH-QB449-XDGKC-W2RMW</li>
+<li>Office Visio Professional 2019 C2R [Preview] : N2CG9-YD3YK-936X4-3WR82-Q3X4H</li>
+<li>Office Access 2019 : 9N9PT-27V4Y-VJ2PD-YXFMF-YTFQT</li>
+<li>Office Excel 2019 : TMJWT-YYNMB-3BKTF-644FC-RVXBD</li>
+<li>Office Outlook 2019 : 7HD7K-N4PVK-BHBCQ-YWQRW-XW4VK</li>
+<li>Office Powerpoint 2019 : RRNCX-C64HY-W2MM7-MCH9G-TJHMQ</li>
+<li>Office Professional Plus 2019 : NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP</li>
+<li>Office Project Professional 2019 : B4NPR-3FKK7-T2MBV-FRQ4W-PKD2B</li>
+<li>Office Project Standard 2019 : C4F7P-NCP8C-6CQPT-MQHV9-JXD2M</li>
+<li>Office Publisher 2019 : G2KWX-3NW6P-PY93R-JXK2T-C9Y9V</li>
+<li>Office Skype for Business 2019 : NCJ33-JHBBY-HTK98-MYCV8-HMKHJ</li>
+<li>Office Standard 2019 : 6NWWJ-YQWMR-QKGCB-6TMB3-9D9HK</li>
+<li>Office Visio Professional 2019 : 9BGNQ-K37YR-RQHF2-38RQ3-7VCBB</li>
+<li>Office Visio Standard 2019 : 7TQNQ-K3YQQ-3PFH7-CCPPM-X4VQ2</li>
+<li>Office Word 2019 : PBX3G-NWMT6-Q7XBW-PYJGG-WXD33</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/10/Xcode%E4%B8%8E%E8%B0%83%E8%AF%95-2019-09-10-Xcode-all-load-ObjC-force-load%E4%B8%89%E4%B8%AA%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/10/Xcode%E4%B8%8E%E8%B0%83%E8%AF%95-2019-09-10-Xcode-all-load-ObjC-force-load%E4%B8%89%E4%B8%AA%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9/" class="post-title-link" itemprop="url">Xcode-all_load,ObjC,force_load三个编译选项</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-09-10 15:25:36 / 修改时间：15:26:30" itemprop="dateCreated datePublished" datetime="2019-09-10T15:25:36+08:00">2019-09-10</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>-all_load</p>
+<p>The <code>-all_load</code> flag tell the linker that it should link every object file (member) of every static library that is passed to the linker. This is a rather drastic option and can cause your executable binary to dramatically increase in size. This flag should be avoided if at all possible when using many static libraries.</p>
+<p>-ObjC<br>The <code>-ObjC</code> flag controls behavior around Objective-C code. This will tell the linker that it should look through all the object files (members) of each static library to find the object files (members) that contain any additional Objective-C runtime data. This allows developers to link object files that only contain Objective-C catagories, or any other Objective-C code that the static analysis cannot resolve as being called directly (such as creating a class using NSClassFromString()). This is the flag that is typically passed when using static libraries that contain Objective-C code. Keep in mind, this flag means that ALL Objective-C code that is passed to the linker will be added to the executable binary regardless of if it gets used or not.</p>
+<p>-force_load<br>The <code>-force_load</code> flag is very similar to the <code>-all_load</code> flag, except that it takes an argument of a path to a static library. When passed to the linker, this flag says that regardless of whatever other flags are passed to the linker, that it should link all of the object files (members) of the specific static library that is specified by the passed argument. This allows for a more controlled behavior of selectively loading all the code from one static library but not having to bloat up the executable binary with unnecessary code from other libraries.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/09/05/%E5%AD%A6%E4%B9%A0-Python-2019-09-05-Python-Python%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/09/05/%E5%AD%A6%E4%B9%A0-Python-2019-09-05-Python-Python%E4%B8%AD%E5%AF%B9%E8%B1%A1%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Python-Python中对象的遍历方式</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2019-09-05 13:51:14 / 修改时间：13:55:39" itemprop="dateCreated datePublished" datetime="2019-09-05T13:51:14+08:00">2019-09-05</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="字典遍历"><a href="#字典遍历" class="headerlink" title="字典遍历"></a>字典遍历</h2><ol>
+<li><p>直接遍历字典，是对字典的key进行遍历。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for key in dict:</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>重复执行</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">NSTimeInterval period = 1.0; //设置时间间隔</span><br><span class="line">dispatch_queue_t queue =     dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_    DEFAULT, 0);</span><br><span class="line">dispatch_source_t _timer =     dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER,     0, 0, queue);</span><br><span class="line">dispatch_source_set_timer(_timer,     dispatch_walltime(NULL, 0), period * NSEC_PER_SEC,     0); //每秒执行</span><br><span class="line">dispatch_source_set_event_handler(_timer, ^&#123;</span><br><span class="line">//在这里执行事件</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">dispatch_resume(_timer);//启动计时器</span><br><span class="line">dispatch_source_cancel(_timer);//结束计时器</span><br></pre></td></tr></table></figure>
+<li><p>同时遍历字典的 key 和 value。<br>这里的括号可以省去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.items();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历字典的 key 和 value。<br>括号可省</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (key, value) in dict.iteritems():</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>同时遍历字典的 key 和 value<br>括号可省</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for k,v in zip(dict.iterkeys(),dict.itervalues()):</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
-<p><font color="red"><strong>注意：1. 如果 <code>_timer</code> 被定义为局部变量，那么这里执行完<code>dispatch_resume(_timer);</code>之后 <code>_timer</code>就被释放，block 也就不会被执行了。<br>如果将<code>dispatch_source_cancel(_timer);</code>放在 block 内，因为此句代码持有了 <code>_timer</code> ,便不会被释放。2. 程序退到后台这种计时方法会被暂停！！！</strong></font><br>此方法创建的计时器误差较小，并且误差好像不会被累积。（求证）</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/22/学习-iOS-2019-05-22-iOS-NSTimer的使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/22/学习-iOS-2019-05-22-iOS-NSTimer的使用/" class="post-title-link" itemprop="url">iOS-NSTimer的使用</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-22 19:00:23" itemprop="dateCreated datePublished" datetime="2019-05-22T19:00:23+08:00">2019-05-22</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-05-23 17:27:27" itemprop="dateModified" datetime="2019-05-23T17:27:27+08:00">2019-05-23</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="使用注意"><a href="#使用注意" class="headerlink" title="使用注意"></a>使用注意</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 每次新建timer，必须要先停止这个timer</span></span><br><span class="line">- (<span class="keyword">void</span>)startQueryStatus&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.queryStatusTimer) &#123;</span><br><span class="line">        [<span class="keyword">self</span> stopQueryStatus];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">self</span>.queryStatusTimer = [<span class="built_in">NSTimer</span> timerWithTimeInterval:<span class="number">1.0</span> target:<span class="keyword">self</span> selector:<span class="keyword">@selector</span>(queryAction) userInfo:<span class="literal">nil</span> repeats:<span class="literal">YES</span>];</span><br><span class="line">    [[<span class="built_in">NSRunLoop</span> currentRunLoop] addTimer:<span class="keyword">self</span>.queryStatusTimer forMode:<span class="built_in">NSRunLoopCommonModes</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta"># 停止 timer 需要把 timer 置为nil</span></span><br><span class="line">- (<span class="keyword">void</span>)stopQueryStatus&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.queryStatusTimer) &#123;</span><br><span class="line">        [<span class="keyword">self</span>.queryStatusTimer invalidate];</span><br><span class="line">        <span class="keyword">self</span>.queryStatusTimer = <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta"># 页面退出的时候也需要停止 timer</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><p><a href="/2019/05/22/学习-iOS-2019-05-22-iOS-iOS中的三种定时器">iOS-iOS中的三种定时器</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/学习-其他零散知识-2019-05-21-更新GitHub上fork的仓库/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/学习-其他零散知识-2019-05-21-更新GitHub上fork的仓库/" class="post-title-link" itemprop="url">更新GitHub上fork的仓库</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 18:08:40 / 修改时间：18:14:41" itemprop="dateCreated datePublished" datetime="2019-05-21T18:08:40+08:00">2019-05-21</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>点击 New pull request<br><img src="/images/Update_Forked_Repo_1.png" alt></p>
+<h2 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h2><ol>
+<li><p>普通遍历方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for item in sequence:</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>默认情况下是将 fork 的仓库和原仓库对比，所以我们需要点击<code>compare across forks</code>。将原仓库与 fork 的仓库对比。<br><img src="/images/Update_Forked_Repo_2.png" alt></p>
+<li><p>同时遍历索引和元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index in range(len(sequence)):</span><br><span class="line">       print index,sequence[index]</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>点击<code>Create pull requet</code><br><img src="/images/Update_Forked_Repo_3.png" alt></p>
-</li>
-<li><p>填入标题和内容，点击<code>CCreeate pull request</code><br><img src="/images/Update_Forked_Repo_4.png" alt></p>
-</li>
-<li><p>最后同意这个 pull request 就可以了。</p>
-</li>
+<li><p>同时遍历索引和元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">for index, item in enumerate(sequence):</span><br><span class="line">  print index, item</span><br></pre></td></tr></table></figure></li>
 </ol>
 
-        
       
     </div>
 
@@ -980,125 +1061,53 @@
     
     
       <footer class="post-footer">
-          <div class="post-eof"></div>
-        
+        <div class="post-eof"></div>
       </footer>
-  </div>
-  
-  
-  
   </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
   
   
   
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/05/21/电脑技巧-2019-05-21-CentOS-清理boot/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="DNACore">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DNACore GitHub io">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/05/21/电脑技巧-2019-05-21-CentOS-清理boot/" class="post-title-link" itemprop="url">CentOS-清理boot</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-21 15:12:29" itemprop="dateCreated datePublished" datetime="2019-05-21T15:12:29+08:00">2019-05-21</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-07-05 18:08:48" itemprop="dateModified" datetime="2019-07-05T18:08:48+08:00">2019-07-05</time>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li><p>清理过期内核文件<br>当执行<code>yum upgrage</code>更新软件包时，CentOS系统的内核文件会被一同更新。不过，旧的内核文件却没有被删除，这个时候需要主动删除这些过期的内核文件。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install yum-utils</span><br><span class="line">package-cleanup --oldkernels --count=2</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置旧内核的保留数目<br><a href="https://unix.stackexchange.com/questions/105026/boot-partition-is-almost-full-in-centos" target="_blank" rel="noopener">https://unix.stackexchange.com/questions/105026/boot-partition-is-almost-full-in-centos</a><br>Edit <code>/etc/yum.conf</code> and set the following parameter</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">installonly_limit=2</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/23/">23</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/8/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><span class="space">&hellip;</span><a class="page-number" href="/page/30/">30</a><a class="extend next" rel="next" href="/page/10/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
+
 
 
           </div>
           
 
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1123,30 +1132,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -1160,17 +1162,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -1181,50 +1189,43 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 

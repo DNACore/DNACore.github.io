@@ -1,90 +1,55 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="截取 UIView 类控件的内容 1234567891011121314151617181920212223242526272829303132333435-(void)takeScreenshotFor:(UIView *)view&amp;#123;        //获取当前屏幕缩放系数    CGFloat nativeScale = [[UIScreen mainScreen] nativeS">
-<meta name="keywords" content="iOS,截屏,UI">
+  <meta name="description" content="截取 UIView 类控件的内容 1234567891011121314151617181920212223242526272829303132333435-(void)takeScreenshotFor:(UIView *)view&amp;#123;        &#x2F;&#x2F;获取当前屏幕缩放系数    CGFloat nativeScale &#x3D; [[UIScreen mainScreen] nativeS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS 代码截取屏幕内容">
-<meta property="og:url" content="https://dnacore@github.io/2017/03/25/学习-iOS-2017-03-25-iOS-代码截取屏幕内容/index.html">
+<meta property="og:url" content="https://dnacore@github.io/2017/03/25/%E5%AD%A6%E4%B9%A0-iOS-2017-03-25-iOS-%E4%BB%A3%E7%A0%81%E6%88%AA%E5%8F%96%E5%B1%8F%E5%B9%95%E5%86%85%E5%AE%B9/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="截取 UIView 类控件的内容 1234567891011121314151617181920212223242526272829303132333435-(void)takeScreenshotFor:(UIView *)view&amp;#123;        //获取当前屏幕缩放系数    CGFloat nativeScale = [[UIScreen mainScreen] nativeS">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-05-15T03:34:14.000Z">
+<meta property="og:description" content="截取 UIView 类控件的内容 1234567891011121314151617181920212223242526272829303132333435-(void)takeScreenshotFor:(UIView *)view&amp;#123;        &#x2F;&#x2F;获取当前屏幕缩放系数    CGFloat nativeScale &#x3D; [[UIScreen mainScreen] nativeS">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-03-25T02:03:21.000Z">
+<meta property="article:modified_time" content="2017-05-15T03:34:14.000Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="iOS">
+<meta property="article:tag" content="截屏">
+<meta property="article:tag" content="UI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS 代码截取屏幕内容">
-<meta name="twitter:description" content="截取 UIView 类控件的内容 1234567891011121314151617181920212223242526272829303132333435-(void)takeScreenshotFor:(UIView *)view&amp;#123;        //获取当前屏幕缩放系数    CGFloat nativeScale = [[UIScreen mainScreen] nativeS">
-  <link rel="canonical" href="https://dnacore@github.io/2017/03/25/学习-iOS-2017-03-25-iOS-代码截取屏幕内容/">
+
+<link rel="canonical" href="https://dnacore@github.io/2017/03/25/%E5%AD%A6%E4%B9%A0-iOS-2017-03-25-iOS-%E4%BB%A3%E7%A0%81%E6%88%AA%E5%8F%96%E5%B1%8F%E5%B9%95%E5%86%85%E5%AE%B9/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>iOS 代码截取屏幕内容 | DNACore GitHub io</title>
   
-
-
 
 
 
@@ -103,7 +68,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -117,99 +81,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -220,63 +174,50 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
             
 
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
+    
   
   
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/25/学习-iOS-2017-03-25-iOS-代码截取屏幕内容/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2017/03/25/%E5%AD%A6%E4%B9%A0-iOS-2017-03-25-iOS-%E4%BB%A3%E7%A0%81%E6%88%AA%E5%8F%96%E5%B1%8F%E5%B9%95%E5%86%85%E5%AE%B9/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">iOS 代码截取屏幕内容
-
-          
+        <h1 class="post-title" itemprop="name headline">
+          iOS 代码截取屏幕内容
         </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              
-                
-              
-
               <time title="创建时间：2017-03-25 10:03:21" itemprop="dateCreated datePublished" datetime="2017-03-25T10:03:21+08:00">2017-03-25</time>
             </span>
-          
-            
-
-            
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+                  <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
                 <time title="修改时间：2017-05-15 11:34:14" itemprop="dateModified" datetime="2017-05-15T11:34:14+08:00">2017-05-15</time>
               </span>
-            
-          
 
           
 
@@ -294,8 +235,7 @@
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">-(<span class="keyword">void</span>)takeScreenshotFor:(<span class="built_in">UIView</span> *)view&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//获取当前屏幕缩放系数</span></span><br><span class="line">    <span class="built_in">CGFloat</span> nativeScale = [[<span class="built_in">UIScreen</span> mainScreen] nativeScale];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGFloat</span> viewW = view.frame.size.width * nativeScale;</span><br><span class="line">    <span class="built_in">CGFloat</span> viewH = view.frame.size.height * nativeScale;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//创建画布 图形上下文</span></span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContextWithOptions</span>(<span class="built_in">CGSizeMake</span>(viewW, viewH), <span class="literal">YES</span>, <span class="number">0</span>);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//设置截屏大小</span></span><br><span class="line">    <span class="comment">//将 view 渲染到当前画布上下文</span></span><br><span class="line">    [[view layer] renderInContext:<span class="built_in">UIGraphicsGetCurrentContext</span>()];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIImage</span> *viewImage = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRef = viewImage.CGImage;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGRect</span> rect = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, viewW, viewH);<span class="comment">//这里可以设置想要截图的区域(裁剪图片)</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGImageRef</span> imageRefRect =<span class="built_in">CGImageCreateWithImageInRect</span>(imageRef, rect);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIImage</span> *sendImage = [[<span class="built_in">UIImage</span> alloc] initWithCGImage:imageRefRect];</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGImageRelease</span>(imageRefRect);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (sendImage != <span class="literal">nil</span>) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"截图成功!"</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>截取 UIScrollView 类控件的内容<br>UIScrollView 的内容大部分情况下一屏不能显示完整，这个时候就要针对 UIScrollView 的 contentView 进行截图了。其实思想是一样的。</p>
-<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//uiscrollview 截屏</span></span><br><span class="line">- (<span class="keyword">void</span>)screenShotFor:(<span class="built_in">UIScrollView</span>*)scrollView&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIImage</span>* image = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContext</span>(scrollView.contentSize);</span><br><span class="line">    </span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGPoint</span> savedContentOffset = scrollView.contentOffset;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGRect</span> savedFrame = scrollView.frame;</span><br><span class="line">        </span><br><span class="line">        scrollView.contentOffset = <span class="built_in">CGPointZero</span>;</span><br><span class="line">        </span><br><span class="line">        scrollView.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, scrollView.contentSize.width, scrollView.contentSize.height);</span><br><span class="line">        [scrollView.layer renderInContext: <span class="built_in">UIGraphicsGetCurrentContext</span>()];</span><br><span class="line">        </span><br><span class="line">        image = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line">        </span><br><span class="line">        scrollView.contentOffset = savedContentOffset;</span><br><span class="line">        </span><br><span class="line">        scrollView.frame = savedFrame;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (image != <span class="literal">nil</span>) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"截图成功!"</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//uiscrollview 截屏</span></span><br><span class="line">- (<span class="keyword">void</span>)screenShotFor:(<span class="built_in">UIScrollView</span>*)scrollView&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIImage</span>* image = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContext</span>(scrollView.contentSize);</span><br><span class="line">    </span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGPoint</span> savedContentOffset = scrollView.contentOffset;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">CGRect</span> savedFrame = scrollView.frame;</span><br><span class="line">        </span><br><span class="line">        scrollView.contentOffset = <span class="built_in">CGPointZero</span>;</span><br><span class="line">        </span><br><span class="line">        scrollView.frame = <span class="built_in">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, scrollView.contentSize.width, scrollView.contentSize.height);</span><br><span class="line">        [scrollView.layer renderInContext: <span class="built_in">UIGraphicsGetCurrentContext</span>()];</span><br><span class="line">        </span><br><span class="line">        image = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line">        </span><br><span class="line">        scrollView.contentOffset = savedContentOffset;</span><br><span class="line">        </span><br><span class="line">        scrollView.frame = savedFrame;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (image != <span class="literal">nil</span>) &#123;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">NSLog</span>(<span class="string">@"截图成功!"</span>);</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li><p>截取整个屏幕并以 png data 返回<br>这个方法对截图大小以及画布大小做了适配处理，不会出现截图截一部分的情况。</p>
 <figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *  截取当前屏幕</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> *  @return NSData *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="built_in">NSData</span> *)dataWithScreenshotInPNGFormat</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">CGSize</span> imageSize = <span class="built_in">CGSizeZero</span>;</span><br><span class="line">    <span class="built_in">UIInterfaceOrientation</span> orientation = [<span class="built_in">UIApplication</span> sharedApplication].statusBarOrientation;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">UIInterfaceOrientationIsPortrait</span>(orientation))</span><br><span class="line">        imageSize = [<span class="built_in">UIScreen</span> mainScreen].bounds.size;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        imageSize = <span class="built_in">CGSizeMake</span>([<span class="built_in">UIScreen</span> mainScreen].bounds.size.height, [<span class="built_in">UIScreen</span> mainScreen].bounds.size.width);</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIGraphicsBeginImageContextWithOptions</span>(imageSize, <span class="literal">NO</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">CGContextRef</span> context = <span class="built_in">UIGraphicsGetCurrentContext</span>();</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">UIWindow</span> *window <span class="keyword">in</span> [[<span class="built_in">UIApplication</span> sharedApplication] windows])</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">CGContextSaveGState</span>(context);</span><br><span class="line">        <span class="built_in">CGContextTranslateCTM</span>(context, window.center.x, window.center.y);</span><br><span class="line">        <span class="built_in">CGContextConcatCTM</span>(context, window.transform);</span><br><span class="line">        <span class="built_in">CGContextTranslateCTM</span>(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y);</span><br><span class="line">        <span class="keyword">if</span> (orientation == <span class="built_in">UIInterfaceOrientationLandscapeLeft</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">CGContextRotateCTM</span>(context, M_PI_2);</span><br><span class="line">            <span class="built_in">CGContextTranslateCTM</span>(context, <span class="number">0</span>, -imageSize.width);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (orientation == <span class="built_in">UIInterfaceOrientationLandscapeRight</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">CGContextRotateCTM</span>(context, -M_PI_2);</span><br><span class="line">            <span class="built_in">CGContextTranslateCTM</span>(context, -imageSize.height, <span class="number">0</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (orientation == <span class="built_in">UIInterfaceOrientationPortraitUpsideDown</span>) &#123;</span><br><span class="line">            <span class="built_in">CGContextRotateCTM</span>(context, M_PI);</span><br><span class="line">            <span class="built_in">CGContextTranslateCTM</span>(context, -imageSize.width, -imageSize.height);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> ([window respondsToSelector:<span class="keyword">@selector</span>(drawViewHierarchyInRect:afterScreenUpdates:)])</span><br><span class="line">        &#123;</span><br><span class="line">            [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:<span class="literal">YES</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            [window.layer renderInContext:context];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">CGContextRestoreGState</span>(context);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">UIImage</span> *image = <span class="built_in">UIGraphicsGetImageFromCurrentImageContext</span>();</span><br><span class="line">    <span class="built_in">UIGraphicsEndImageContext</span>();</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">UIImagePNGRepresentation</span>(image);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
@@ -305,85 +245,78 @@
     
     
     
-        
-      
 
       <footer class="post-footer">
-          
-            
-          
           <div class="post-tags">
-            
               <a href="/tags/iOS/" rel="tag"># iOS</a>
-            
-              <a href="/tags/截屏/" rel="tag"># 截屏</a>
-            
+              <a href="/tags/%E6%88%AA%E5%B1%8F/" rel="tag"># 截屏</a>
               <a href="/tags/UI/" rel="tag"># UI</a>
-            
           </div>
-        
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2017/03/20/学习-iOS-2017-03-20-Runtime/" rel="next" title="Runtime">
-                  <i class="fa fa-chevron-left"></i> Runtime
-                </a>
-              
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2017/05/15/学习-iOS-2017-05-15-iOS-图片的简单处理/" rel="prev" title="iOS 图片的简单处理">
-                  iOS 图片的简单处理 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
         
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/03/20/%E5%AD%A6%E4%B9%A0-iOS-2017-03-20-Runtime/" rel="prev" title="Runtime">
+      <i class="fa fa-chevron-left"></i> Runtime
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2017/05/15/%E5%AD%A6%E4%B9%A0-iOS-2017-05-15-iOS-%E5%9B%BE%E7%89%87%E7%9A%84%E7%AE%80%E5%8D%95%E5%A4%84%E7%90%86/" rel="next" title="iOS 图片的简单处理">
+      iOS 图片的简单处理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-  </div>
 
 
           </div>
           
     
-    
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
   </div>
   
-  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -404,30 +337,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -441,17 +367,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -462,56 +394,50 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
 <script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
   window.livereOptions = {
     refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
@@ -523,6 +449,7 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
+});
 </script>
 
 </body>

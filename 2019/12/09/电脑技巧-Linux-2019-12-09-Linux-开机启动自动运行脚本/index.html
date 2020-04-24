@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="总的说来，根据系统的不同，有两种实现开机自启的方法：rc.local与systemd。 rc.local树莓派官方文档对rc.local的介绍。值得注意的是：运行一个常驻脚本或者需要执行时间很长的脚本的时候，需要在命令最后加上&amp;来表明这条命令需要后台运行。否则会阻塞rc.local后面的脚本执行。除此之外，不是所有的命令都支持使用rc.local的方式开机运行。https:&#x2F;&#x2F;www.ra">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux-开机启动自动运行脚本">
+<meta property="og:url" content="https://dnacore@github.io/2019/12/09/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-12-09-Linux-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/index.html">
+<meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="总的说来，根据系统的不同，有两种实现开机自启的方法：rc.local与systemd。 rc.local树莓派官方文档对rc.local的介绍。值得注意的是：运行一个常驻脚本或者需要执行时间很长的脚本的时候，需要在命令最后加上&amp;来表明这条命令需要后台运行。否则会阻塞rc.local后面的脚本执行。除此之外，不是所有的命令都支持使用rc.local的方式开机运行。https:&#x2F;&#x2F;www.ra">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-12-09T06:15:10.000Z">
+<meta property="article:modified_time" content="2020-01-02T07:21:03.037Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="树莓派">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://dnacore@github.io/2019/12/09/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-12-09-Linux-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Linux-开机启动自动运行脚本 | DNACore GitHub io</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/12/09/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-2019-12-09-Linux-%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E8%87%AA%E5%8A%A8%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="DNACore">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DNACore GitHub io">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux-开机启动自动运行脚本
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2019-12-09 14:15:10" itemprop="dateCreated datePublished" datetime="2019-12-09T14:15:10+08:00">2019-12-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-02 15:21:03" itemprop="dateModified" datetime="2020-01-02T15:21:03+08:00">2020-01-02</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>总的说来，根据系统的不同，有两种实现开机自启的方法：<code>rc.local</code>与<code>systemd</code>。</p>
+<h2 id="rc-local"><a href="#rc-local" class="headerlink" title="rc.local"></a>rc.local</h2><p>树莓派官方文档对<code>rc.local</code>的介绍。值得注意的是：运行一个常驻脚本或者需要执行时间很长的脚本的时候，需要在命令最后加上<code>&amp;</code>来表明这条命令需要后台运行。否则会阻塞<code>rc.local</code>后面的脚本执行。<br>除此之外，不是所有的命令都支持使用<code>rc.local</code>的方式开机运行。<br><a href="https://www.raspberrypi.org/documentation/linux/usage/rc-local.md" target="_blank" rel="noopener">https://www.raspberrypi.org/documentation/linux/usage/rc-local.md</a></p>
+<ol>
+<li>创建一个脚本文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano my_script.sh</span><br></pre></td></tr></table></figure>
+脚本内容：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh</span></span><br><span class="line">touch /home/pi/test.txt</span><br><span class="line">chmod 777 /home/pi/test.txt</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"Hello Pi"</span> &gt;&gt; /home/pi/test.txt</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>该shell 代码中，指定运行方式为sh，在pi 目录创建一个test.txt 文件，并添加权限<br>最后将Hello Pi 语句定向到该txt 文件中<br>保存，退出。</p>
+<ol start="2">
+<li>给<code>my_script.sh</code>文件添加执行权限：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 my_script.sh</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>在此也可先测试一下脚本运行情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./my_script.sh</span><br></pre></td></tr></table></figure>
+
+<p>然后可以发现<code>/home/pi</code>目录下多了<code>test.txt</code>文件</p>
+<ol start="3">
+<li>将该文件设置为开机自启：<br>首先打开<code>rc.local</code>文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/rc.local</span><br></pre></td></tr></table></figure>
+然后在<code>exit 0</code>前面添加如下代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su pi -c <span class="string">"exec /home/pi/my_script.sh"</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p><code>su</code>将会切换为<code>pi</code>用户执行文件，且执行完后切换为原来用户。<br>保存即可。<br>随后开机便会发现<code>/home/pi</code>目录下多了一个<code>test.txt</code>文件</p>
+<ol start="4">
+<li>若是要开机自启其他类型的文件，例如<code>/home/pi</code>下的<code>abc.py</code>文件，则先进入<code>rc.local</code>文件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo nano /etc/rc.local</span><br></pre></td></tr></table></figure>
+然后添加：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo python /home/pi/abc.py &amp;</span><br></pre></td></tr></table></figure>
+最后的<code>&amp;</code>代表在后台运行</li>
+</ol>
+<h2 id="service命令"><a href="#service命令" class="headerlink" title="service命令"></a>service命令</h2><p>service命令其实是去<code>/etc/init.d</code>目录下，去执行相关程序<br>在<code>/etc/init.d/</code>目录下新建一个服务脚本文件。<br>在终端输入并回车<code>pi@raspberry:~ $ sudo vi /etc/init.d/script_test</code><br>在空白文件中输入以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/sh </span></span><br><span class="line"><span class="comment">#/etc/init.d/script_test </span></span><br><span class="line"><span class="comment">### BEGIN INIT INFO </span></span><br><span class="line"><span class="comment"># Provides:Nick </span></span><br><span class="line"><span class="comment"># Required-Start:$remote_fs $syslog </span></span><br><span class="line"><span class="comment"># Required-Stop:$remote_fs $syslog </span></span><br><span class="line"><span class="comment"># Default-Start:2 3 4 5 </span></span><br><span class="line"><span class="comment"># Default-Stop:0 1 6 </span></span><br><span class="line"><span class="comment"># Short-Description: script_test </span></span><br><span class="line"><span class="comment"># Description: This service is used to start my applaction </span></span><br><span class="line"><span class="comment">### END INIT INFO </span></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span>      </span><br><span class="line">start)      </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"start your app here."</span>      </span><br><span class="line">    su pi -c <span class="string">"touch script_test2"</span>      </span><br><span class="line">    ;;      </span><br><span class="line">stop)      </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"stop your app here."</span>      </span><br><span class="line">    ;;      </span><br><span class="line">*)      </span><br><span class="line">    <span class="built_in">echo</span> <span class="string">"Usage: service script_test start|stop"</span>      </span><br><span class="line">    <span class="built_in">exit</span> 1      </span><br><span class="line">    ;; </span><br><span class="line"><span class="keyword">esac</span> </span><br><span class="line"><span class="built_in">exit</span> 0</span><br></pre></td></tr></table></figure>
+<p>保存退出。设置脚本可执行权限：<code>pi@raspberry:~ $ sudo chmod 777 /etc/init.d/script_test</code><br>最后将该脚本作为服务设置开机自动加载：<br><code>pi@raspberry:~ $ sudo update-rc.d script_test defaults</code><br><code>sudo reboot</code>重启测试。</p>
+<h2 id="systemd-systemctl"><a href="#systemd-systemctl" class="headerlink" title="systemd systemctl"></a>systemd systemctl</h2><p>systemd是Linux系统最新的初始化系统(init),作用是提高系统的启动速度，尽可能启动较少的进程，尽可能更多进程并发启动。<br>systemd对应的进程管理命令是systemctl<br>参看：<br>systemctl <a href="/2019/11/11/电脑技巧-Linux-2019-11-11-Linux-服务管理命令-systemctl/">Linux-服务管理命令-systemctl</a><br>service <a href="/2019/11/11/电脑技巧-Linux-2019-11-11-Linux-服务管理命令-service/">Linux-服务管理命令-service</a><br>Linux 服务管理两种方式service和systemctl <a href="https://www.cnblogs.com/shijingjing07/p/9301590.html" target="_blank" rel="noopener">https://www.cnblogs.com/shijingjing07/p/9301590.html</a></p>
+<p>这个的作用是：将需要开机启动的命令变成一个service（服务），来实现开机运行的目的。<br><a href="https://www.raspberrypi.org/documentation/linux/usage/systemd.md" target="_blank" rel="noopener">https://www.raspberrypi.org/documentation/linux/usage/systemd.md</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 禁止自启动服务</span></span><br><span class="line">systemctl <span class="built_in">disable</span> transmission-daemon.service</span><br><span class="line"><span class="comment"># 查询服务自启动状态</span></span><br><span class="line">systemctl is-enabled transmission-daemon.service</span><br><span class="line"><span class="comment"># 停止服务</span></span><br><span class="line">systemctl stop transmission-daemon.service</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>我们对service和chkconfig两个命令都不陌生，systemctl 是管制服务的主要工具， 它整合了chkconfig 与 service功能于一体。</p>
+<p>systemctl is-enabled iptables.service<br>systemctl is-enabled servicename.service #查询服务是否开机启动<br>systemctl enable <em>.service #开机运行服务<br>systemctl disable *.service #取消开机运行<br>systemctl start *.service #启动服务<br>systemctl stop *.service #停止服务<br>systemctl restart *.service #重启服务<br>systemctl reload *.service #重新加载服务配置文件<br>systemctl status *.service #查询服务运行状态<br>systemctl –failed #显示启动失败的服务<br>注：</em>代表某个服务的名字，如http的服务名为httpd</p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Linux/" rel="tag"># Linux</a>
+              <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" rel="tag"># 树莓派</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/04/%E5%AD%A6%E4%B9%A0-%E5%85%B6%E4%BB%96%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86-2019-12-04-Git-%E5%88%A0%E9%99%A4%E9%94%99%E8%AF%AF%E6%8F%90%E4%BA%A4%E7%9A%84%E6%96%87%E4%BB%B6/" rel="prev" title="Git-删除错误提交的文件">
+      <i class="fa fa-chevron-left"></i> Git-删除错误提交的文件
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/12/%E6%89%8B%E6%9C%BA%E6%8A%80%E5%B7%A7-2019-12-12-Android-Xposed%E6%8F%92%E4%BB%B6/" rel="next" title="Android-Xposed插件">
+      Android-Xposed插件 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#rc-local"><span class="nav-number">1.</span> <span class="nav-text">rc.local</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#service命令"><span class="nav-number">2.</span> <span class="nav-text">service命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#systemd-systemctl"><span class="nav-number">3.</span> <span class="nav-text">systemd systemctl</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">DNACore</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">293</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">DNACore</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+</body>
+</html>

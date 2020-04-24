@@ -1,91 +1,54 @@
 <!DOCTYPE html>
-
-
-
-
-
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: '复制',
-      copy_success: '复制成功',
-      copy_failure: '复制失败'
-    },
-    sidebarPadding: 40
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
-  <meta name="description" content="UIWebView 通过 UIWebView 的方式加载图片。将 UIWebView 的 Scaling 设置为 Scales Page To Fit可以实现双指缩放（整页缩放）。 123456NSString  *string = @&amp;quot;&amp;lt;!DOCTYPE HTML&amp;gt; &amp;lt;html lang=\&amp;quot;en\&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;me">
+  <meta name="description" content="UIWebView 通过 UIWebView 的方式加载图片。将 UIWebView 的 Scaling 设置为 Scales Page To Fit可以实现双指缩放（整页缩放）。 123456NSString  *string &#x3D; @&quot;&lt;!DOCTYPE HTML&gt; &lt;html lang&#x3D;\&quot;en\&quot;&gt; &lt;head&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS-UIWebView">
-<meta property="og:url" content="https://dnacore@github.io/2019/08/13/学习-iOS-2019-08-13-iOS-UIWebView/index.html">
+<meta property="og:url" content="https://dnacore@github.io/2019/08/13/%E5%AD%A6%E4%B9%A0-iOS-2019-08-13-iOS-UIWebView/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="UIWebView 通过 UIWebView 的方式加载图片。将 UIWebView 的 Scaling 设置为 Scales Page To Fit可以实现双指缩放（整页缩放）。 123456NSString  *string = @&amp;quot;&amp;lt;!DOCTYPE HTML&amp;gt; &amp;lt;html lang=\&amp;quot;en\&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;me">
-<meta property="og:locale" content="zh-CN">
+<meta property="og:description" content="UIWebView 通过 UIWebView 的方式加载图片。将 UIWebView 的 Scaling 设置为 Scales Page To Fit可以实现双指缩放（整页缩放）。 123456NSString  *string &#x3D; @&quot;&lt;!DOCTYPE HTML&gt; &lt;html lang&#x3D;\&quot;en\&quot;&gt; &lt;head&amp;">
+<meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://pic.yupoo.com/picpop_v/FRPwwurm/nbKKm.jpg">
-<meta property="og:updated_time" content="2019-08-13T11:11:03.462Z">
+<meta property="article:published_time" content="2019-08-13T11:08:01.000Z">
+<meta property="article:modified_time" content="2019-08-13T11:11:03.462Z">
+<meta property="article:author" content="DNACore">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS-UIWebView">
-<meta name="twitter:description" content="UIWebView 通过 UIWebView 的方式加载图片。将 UIWebView 的 Scaling 设置为 Scales Page To Fit可以实现双指缩放（整页缩放）。 123456NSString  *string = @&amp;quot;&amp;lt;!DOCTYPE HTML&amp;gt; &amp;lt;html lang=\&amp;quot;en\&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;me">
 <meta name="twitter:image" content="http://pic.yupoo.com/picpop_v/FRPwwurm/nbKKm.jpg">
-  <link rel="canonical" href="https://dnacore@github.io/2019/08/13/学习-iOS-2019-08-13-iOS-UIWebView/">
+
+<link rel="canonical" href="https://dnacore@github.io/2019/08/13/%E5%AD%A6%E4%B9%A0-iOS-2019-08-13-iOS-UIWebView/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: false,
-    isPost: true,
-    isPage: false,
-    isArchive: false
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
   };
 </script>
 
   <title>iOS-UIWebView | DNACore GitHub io</title>
   
-
-
 
 
 
@@ -104,7 +67,6 @@
   .use-motion .post-body,
   .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .logo,
   .use-motion .site-title,
   .use-motion .site-subtitle {
     opacity: initial;
@@ -118,99 +80,89 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">DNACore GitHub io</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">DNACore GitHub io</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
   </div>
 </div>
 
 
+
+
 <nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-tags">
-      
-    
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
-      
-      
-      
-        
         <li class="menu-item menu-item-archives">
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
       <li class="menu-item menu-item-search">
-        <a href="javascript:;" class="popup-trigger">
-        
-          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
       </li>
-    
   </ul>
-
 </nav>
-  <div class="site-search">
+
+
+
+  <div class="search-pop-overlay">
     <div class="popup search-popup">
-    <div class="search-header">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocapitalize="off"
            placeholder="搜索..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result"></div>
-
-</div>
-<div class="search-pop-overlay"></div>
-
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
   </div>
+</div>
+
+    </div>
+  </div>
+
 </div>
     </header>
 
@@ -221,55 +173,44 @@
   </div>
 
 
-    <main id="main" class="main">
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
             
 
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-      <article itemscope itemtype="http://schema.org/Article">
+    
   
   
-  
-  <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/13/学习-iOS-2019-08-13-iOS-UIWebView/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://dnacore@github.io/2019/08/13/%E5%AD%A6%E4%B9%A0-iOS-2019-08-13-iOS-UIWebView/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="DNACore">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DNACore GitHub io">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">iOS-UIWebView
-
-          
+        <h1 class="post-title" itemprop="name headline">
+          iOS-UIWebView
         </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-
-              
-                
               
 
               <time title="创建时间：2019-08-13 19:08:01 / 修改时间：19:11:03" itemprop="dateCreated datePublished" datetime="2019-08-13T19:08:01+08:00">2019-08-13</time>
             </span>
-          
-            
-
-            
-          
 
           
 
@@ -284,95 +225,95 @@
       
         <h1 id="UIWebView"><a href="#UIWebView" class="headerlink" title="UIWebView"></a>UIWebView</h1><ul>
 <li><p>通过 UIWebView 的方式加载图片。<br>将 UIWebView 的 Scaling 设置为 <code>Scales Page To Fit</code>可以实现双指缩放（整页缩放）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">NSString  *string = @&quot;&lt;!DOCTYPE HTML&gt; &lt;html lang=\&quot;en\&quot;&gt; &lt;head&gt; &lt;meta charset=\&quot;UTF-8\&quot;/&gt;  &lt;title&gt;test&lt;/title&gt; &lt;/head&gt; &lt;body&gt;&quot;;</span><br><span class="line">for (int i = 0; i &lt; count; i++) &#123;</span><br><span class="line">    string =  [string  stringByAppendingFormat:@&quot;&lt;div&gt; &lt;img src=\&quot;%@\&quot; style=\&quot;vertical-align:bottom;width:100%%;height:auto\&quot; /&gt; &lt;/div&gt;&quot;,[tempArr  objectAtIndex:i]];</span><br><span class="line">&#125;</span><br><span class="line">string = [string  stringByAppendingString:@&quot;&lt;/body&gt;&lt;/html&gt;&quot;];</span><br><span class="line">[self.picWebView loadHTMLString:string baseURL:nil];</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">NSString  *string &#x3D; @&quot;&lt;!DOCTYPE HTML&gt; &lt;html lang&#x3D;\&quot;en\&quot;&gt; &lt;head&gt; &lt;meta charset&#x3D;\&quot;UTF-8\&quot;&#x2F;&gt;  &lt;title&gt;test&lt;&#x2F;title&gt; &lt;&#x2F;head&gt; &lt;body&gt;&quot;;</span><br><span class="line">for (int i &#x3D; 0; i &lt; count; i++) &#123;</span><br><span class="line">    string &#x3D;  [string  stringByAppendingFormat:@&quot;&lt;div&gt; &lt;img src&#x3D;\&quot;%@\&quot; style&#x3D;\&quot;vertical-align:bottom;width:100%%;height:auto\&quot; &#x2F;&gt; &lt;&#x2F;div&gt;&quot;,[tempArr  objectAtIndex:i]];</span><br><span class="line">&#125;</span><br><span class="line">string &#x3D; [string  stringByAppendingString:@&quot;&lt;&#x2F;body&gt;&lt;&#x2F;html&gt;&quot;];</span><br><span class="line">[self.picWebView loadHTMLString:string baseURL:nil];</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>UIWebView 添加长按保存图片的功能。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">//首先给 webview 添加长按手势并且正确设置代理</span><br><span class="line">UILongPressGestureRecognizer* longPressed = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];</span><br><span class="line">longPressed.delegate = self;</span><br><span class="line">[self.webView addGestureRecognizer:longPressed];</span><br><span class="line"></span><br><span class="line">#pragma mark - 长按手势</span><br><span class="line">- (void)longPressed:(UILongPressGestureRecognizer*)recognizer</span><br><span class="line">&#123;</span><br><span class="line">    if (recognizer.state != UIGestureRecognizerStateBegan) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    CGPoint touchPoint = [recognizer locationInView:self];</span><br><span class="line">    </span><br><span class="line">    //保证长按的是图片</span><br><span class="line">    NSString *jsForTagName = [NSString stringWithFormat:@&quot;document.elementFromPoint(%f, %f).tagName&quot;, touchPoint.x, touchPoint.y];</span><br><span class="line">    NSString * tagName = [self.webView stringByEvaluatingJavaScriptFromString:jsForTagName];</span><br><span class="line">    if (![tagName isEqualToString:@&quot;img&quot;] &amp;&amp; ![tagName isEqualToString:@&quot;IMG&quot;]) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    //获取长按图片的url</span><br><span class="line">    NSString *imgURL = [NSString stringWithFormat:@&quot;document.elementFromPoint(%f, %f).src&quot;, touchPoint.x, touchPoint.y];</span><br><span class="line">    NSString *urlToSave = [self.webView stringByEvaluatingJavaScriptFromString:imgURL];</span><br><span class="line">    </span><br><span class="line">    if (urlToSave.length == 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    [self showImageOptionsWithUrl:urlToSave];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//必须要实现下面这个代理，否则长按无效果</span><br><span class="line">- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer</span><br><span class="line">&#123;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)showImageOptionsWithUrl:(NSString *)imageUrl</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:@&quot;保存图片&quot; message:nil preferredStyle:UIAlertControllerStyleActionSheet];</span><br><span class="line">    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@&quot;取消&quot;</span><br><span class="line">                                                           style:UIAlertActionStyleCancel</span><br><span class="line">                                                         handler:^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">                                                             </span><br><span class="line">                                                         &#125;];</span><br><span class="line">    UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@&quot;保存到相册&quot;</span><br><span class="line">                                                         style:UIAlertActionStyleDefault</span><br><span class="line">                                                       handler:^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">                                                           [self saveImageToDiskWithUrl:imageUrl];</span><br><span class="line">                                                       &#125;];</span><br><span class="line">    [alertVC addAction:cancelAction];</span><br><span class="line">    [alertVC addAction:saveAction];</span><br><span class="line"></span><br><span class="line">    [self presentViewController:alertVC animated:YES completion:nil];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)saveImageToDiskWithUrl:(NSString *)imageUrl</span><br><span class="line">&#123;</span><br><span class="line">    NSURL *url = [NSURL URLWithString:imageUrl];</span><br><span class="line">    </span><br><span class="line">    NSURLSessionConfiguration * configuration = [NSURLSessionConfiguration defaultSessionConfiguration];</span><br><span class="line">    </span><br><span class="line">    NSURLSession *session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue new]];</span><br><span class="line">    </span><br><span class="line">    NSURLRequest *imgRequest = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30.0];</span><br><span class="line">    </span><br><span class="line">    NSURLSessionDownloadTask  *task = [session downloadTaskWithRequest:imgRequest completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) &#123;</span><br><span class="line">        if (error) &#123;</span><br><span class="line">            return ;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        NSData * imageData = [NSData dataWithContentsOfURL:location];</span><br><span class="line">        </span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            </span><br><span class="line">            UIImage * image = [UIImage imageWithData:imageData];</span><br><span class="line">            </span><br><span class="line">            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    [task resume];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark - 保存图片代理</span><br><span class="line">- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo</span><br><span class="line">&#123;</span><br><span class="line">    if (error) &#123;</span><br><span class="line">        //@&quot;保存失败&quot;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        //@&quot;保存成功&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;首先给 webview 添加长按手势并且正确设置代理</span><br><span class="line">UILongPressGestureRecognizer* longPressed &#x3D; [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];</span><br><span class="line">longPressed.delegate &#x3D; self;</span><br><span class="line">[self.webView addGestureRecognizer:longPressed];</span><br><span class="line"></span><br><span class="line">#pragma mark - 长按手势</span><br><span class="line">- (void)longPressed:(UILongPressGestureRecognizer*)recognizer</span><br><span class="line">&#123;</span><br><span class="line">    if (recognizer.state !&#x3D; UIGestureRecognizerStateBegan) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    CGPoint touchPoint &#x3D; [recognizer locationInView:self];</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;保证长按的是图片</span><br><span class="line">    NSString *jsForTagName &#x3D; [NSString stringWithFormat:@&quot;document.elementFromPoint(%f, %f).tagName&quot;, touchPoint.x, touchPoint.y];</span><br><span class="line">    NSString * tagName &#x3D; [self.webView stringByEvaluatingJavaScriptFromString:jsForTagName];</span><br><span class="line">    if (![tagName isEqualToString:@&quot;img&quot;] &amp;&amp; ![tagName isEqualToString:@&quot;IMG&quot;]) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    &#x2F;&#x2F;获取长按图片的url</span><br><span class="line">    NSString *imgURL &#x3D; [NSString stringWithFormat:@&quot;document.elementFromPoint(%f, %f).src&quot;, touchPoint.x, touchPoint.y];</span><br><span class="line">    NSString *urlToSave &#x3D; [self.webView stringByEvaluatingJavaScriptFromString:imgURL];</span><br><span class="line">    </span><br><span class="line">    if (urlToSave.length &#x3D;&#x3D; 0) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    [self showImageOptionsWithUrl:urlToSave];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;必须要实现下面这个代理，否则长按无效果</span><br><span class="line">- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer</span><br><span class="line">&#123;</span><br><span class="line">    return YES;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)showImageOptionsWithUrl:(NSString *)imageUrl</span><br><span class="line">&#123;</span><br><span class="line">    </span><br><span class="line">    UIAlertController *alertVC &#x3D; [UIAlertController alertControllerWithTitle:@&quot;保存图片&quot; message:nil preferredStyle:UIAlertControllerStyleActionSheet];</span><br><span class="line">    UIAlertAction *cancelAction &#x3D; [UIAlertAction actionWithTitle:@&quot;取消&quot;</span><br><span class="line">                                                           style:UIAlertActionStyleCancel</span><br><span class="line">                                                         handler:^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">                                                             </span><br><span class="line">                                                         &#125;];</span><br><span class="line">    UIAlertAction *saveAction &#x3D; [UIAlertAction actionWithTitle:@&quot;保存到相册&quot;</span><br><span class="line">                                                         style:UIAlertActionStyleDefault</span><br><span class="line">                                                       handler:^(UIAlertAction * _Nonnull action) &#123;</span><br><span class="line">                                                           [self saveImageToDiskWithUrl:imageUrl];</span><br><span class="line">                                                       &#125;];</span><br><span class="line">    [alertVC addAction:cancelAction];</span><br><span class="line">    [alertVC addAction:saveAction];</span><br><span class="line"></span><br><span class="line">    [self presentViewController:alertVC animated:YES completion:nil];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (void)saveImageToDiskWithUrl:(NSString *)imageUrl</span><br><span class="line">&#123;</span><br><span class="line">    NSURL *url &#x3D; [NSURL URLWithString:imageUrl];</span><br><span class="line">    </span><br><span class="line">    NSURLSessionConfiguration * configuration &#x3D; [NSURLSessionConfiguration defaultSessionConfiguration];</span><br><span class="line">    </span><br><span class="line">    NSURLSession *session &#x3D; [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:[NSOperationQueue new]];</span><br><span class="line">    </span><br><span class="line">    NSURLRequest *imgRequest &#x3D; [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:30.0];</span><br><span class="line">    </span><br><span class="line">    NSURLSessionDownloadTask  *task &#x3D; [session downloadTaskWithRequest:imgRequest completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) &#123;</span><br><span class="line">        if (error) &#123;</span><br><span class="line">            return ;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        NSData * imageData &#x3D; [NSData dataWithContentsOfURL:location];</span><br><span class="line">        </span><br><span class="line">        dispatch_async(dispatch_get_main_queue(), ^&#123;</span><br><span class="line">            </span><br><span class="line">            UIImage * image &#x3D; [UIImage imageWithData:imageData];</span><br><span class="line">            </span><br><span class="line">            UIImageWriteToSavedPhotosAlbum(image, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;];</span><br><span class="line">    </span><br><span class="line">    [task resume];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#pragma mark - 保存图片代理</span><br><span class="line">- (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo</span><br><span class="line">&#123;</span><br><span class="line">    if (error) &#123;</span><br><span class="line">        &#x2F;&#x2F;@&quot;保存失败&quot;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        &#x2F;&#x2F;@&quot;保存成功&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="UIWebView-设置圆角四种方式对比"><a href="#UIWebView-设置圆角四种方式对比" class="headerlink" title="UIWebView 设置圆角四种方式对比"></a>UIWebView 设置圆角四种方式对比</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:self.self.sizeWebView.bounds byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(6, 6)]; // UIRectCornerBottomRight通过这个设置</span><br><span class="line">CAShapeLayer *maskLayer = [CAShapeLayer layer];</span><br><span class="line">maskLayer.frame = self.sizeWebView.bounds;</span><br><span class="line">maskLayer.path = maskPath.CGPath;</span><br><span class="line"> </span><br><span class="line">//第一种方法 依赖上面的layer</span><br><span class="line">self.sizeWebView.layer.mask = maskLayer;</span><br><span class="line"> </span><br><span class="line">//第二种方法 依赖上面的layer</span><br><span class="line">self.sizeWebView.scrollView.layer.mask = maskLayer;</span><br><span class="line"> </span><br><span class="line">//第三种方法</span><br><span class="line">self.sizeWebView.scrollView.layer.cornerRadius = 6.0;</span><br><span class="line">self.sizeWebView.scrollView.layer.masksToBounds = YES;</span><br><span class="line"> </span><br><span class="line">//第四种方法</span><br><span class="line">for (UIView  *tempView in self.picWebView.scrollView.subviews) &#123;</span><br><span class="line">    tempView.layer.cornerRadius = 6.;</span><br><span class="line">    tempView.layer.masksToBounds = YES;</span><br><span class="line">    tempView.clipsToBounds = YES;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<h4 id="UIWebView-设置圆角四种方式对比"><a href="#UIWebView-设置圆角四种方式对比" class="headerlink" title="UIWebView 设置圆角四种方式对比"></a>UIWebView 设置圆角四种方式对比</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">UIBezierPath *maskPath &#x3D; [UIBezierPath bezierPathWithRoundedRect:self.self.sizeWebView.bounds byRoundingCorners:UIRectCornerTopLeft|UIRectCornerTopRight cornerRadii:CGSizeMake(6, 6)]; &#x2F;&#x2F; UIRectCornerBottomRight通过这个设置</span><br><span class="line">CAShapeLayer *maskLayer &#x3D; [CAShapeLayer layer];</span><br><span class="line">maskLayer.frame &#x3D; self.sizeWebView.bounds;</span><br><span class="line">maskLayer.path &#x3D; maskPath.CGPath;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;第一种方法 依赖上面的layer</span><br><span class="line">self.sizeWebView.layer.mask &#x3D; maskLayer;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;第二种方法 依赖上面的layer</span><br><span class="line">self.sizeWebView.scrollView.layer.mask &#x3D; maskLayer;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;第三种方法</span><br><span class="line">self.sizeWebView.scrollView.layer.cornerRadius &#x3D; 6.0;</span><br><span class="line">self.sizeWebView.scrollView.layer.masksToBounds &#x3D; YES;</span><br><span class="line"> </span><br><span class="line">&#x2F;&#x2F;第四种方法</span><br><span class="line">for (UIView  *tempView in self.picWebView.scrollView.subviews) &#123;</span><br><span class="line">    tempView.layer.cornerRadius &#x3D; 6.;</span><br><span class="line">    tempView.layer.masksToBounds &#x3D; YES;</span><br><span class="line">    tempView.clipsToBounds &#x3D; YES;</span><br><span class="line">    break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><img src="http://pic.yupoo.com/picpop_v/FRPwwurm/nbKKm.jpg" alt="UIWebView设置圆角的四种方法对比"></p>
 <h4 id="baseURL"><a href="#baseURL" class="headerlink" title="baseURL"></a>baseURL</h4><ul>
-<li><a href="https://stackoverflow.com/questions/18604193/baseurl-not-working-for-uiwebview#" target="_blank" rel="noopener">https://stackoverflow.com/questions/18604193/baseurl-not-working-for-uiwebview#</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NSURL *baseURL = [NSURL URLWithString:@&quot;http://example.com/v1/&quot;];</span><br><span class="line">[NSURL URLWithString:@&quot;foo&quot; relativeToURL:baseURL];                  // http://example.com/v1/foo</span><br><span class="line">[NSURL URLWithString:@&quot;foo?bar=baz&quot; relativeToURL:baseURL];          // http://example.com/v1/foo?bar=baz</span><br><span class="line">[NSURL URLWithString:@&quot;/foo&quot; relativeToURL:baseURL];                 // http://example.com/foo</span><br><span class="line">[NSURL URLWithString:@&quot;foo/&quot; relativeToURL:baseURL];                 // http://example.com/v1/foo</span><br><span class="line">[NSURL URLWithString:@&quot;/foo/&quot; relativeToURL:baseURL];                // http://example.com/foo/</span><br><span class="line">[NSURL URLWithString:@&quot;http://example2.com/&quot; relativeToURL:baseURL]; // http://example2.com/</span><br></pre></td></tr></table></figure>
+<li><a href="https://stackoverflow.com/questions/18604193/baseurl-not-working-for-uiwebview#" target="_blank" rel="noopener">https://stackoverflow.com/questions/18604193/baseurl-not-working-for-uiwebview#</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">NSURL *baseURL &#x3D; [NSURL URLWithString:@&quot;http:&#x2F;&#x2F;example.com&#x2F;v1&#x2F;&quot;];</span><br><span class="line">[NSURL URLWithString:@&quot;foo&quot; relativeToURL:baseURL];                  &#x2F;&#x2F; http:&#x2F;&#x2F;example.com&#x2F;v1&#x2F;foo</span><br><span class="line">[NSURL URLWithString:@&quot;foo?bar&#x3D;baz&quot; relativeToURL:baseURL];          &#x2F;&#x2F; http:&#x2F;&#x2F;example.com&#x2F;v1&#x2F;foo?bar&#x3D;baz</span><br><span class="line">[NSURL URLWithString:@&quot;&#x2F;foo&quot; relativeToURL:baseURL];                 &#x2F;&#x2F; http:&#x2F;&#x2F;example.com&#x2F;foo</span><br><span class="line">[NSURL URLWithString:@&quot;foo&#x2F;&quot; relativeToURL:baseURL];                 &#x2F;&#x2F; http:&#x2F;&#x2F;example.com&#x2F;v1&#x2F;foo</span><br><span class="line">[NSURL URLWithString:@&quot;&#x2F;foo&#x2F;&quot; relativeToURL:baseURL];                &#x2F;&#x2F; http:&#x2F;&#x2F;example.com&#x2F;foo&#x2F;</span><br><span class="line">[NSURL URLWithString:@&quot;http:&#x2F;&#x2F;example2.com&#x2F;&quot; relativeToURL:baseURL]; &#x2F;&#x2F; http:&#x2F;&#x2F;example2.com&#x2F;</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h4 id="屏蔽-UIWebView-长按复制粘贴"><a href="#屏蔽-UIWebView-长按复制粘贴" class="headerlink" title="屏蔽 UIWebView 长按复制粘贴"></a>屏蔽 UIWebView 长按复制粘贴</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> - (void)webViewDidFinishLoad:(UIWebView *)webViews</span><br><span class="line"> &#123;</span><br><span class="line"> //去掉webView长按列表时的复制事件</span><br><span class="line"> [webView stringByEvaluatingJavaScriptFromString:@&quot;document.body.style.webkitTouchCallout=&apos;none&apos;;&quot;];</span><br><span class="line"></span><br><span class="line">//禁止选中网页中的元素</span><br><span class="line">[self.brandDiscountWebView stringByEvaluatingJavaScriptFromString:@&quot;document.documentElement.style.webkitUserSelect=&apos;none&apos;;&quot;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="屏蔽-UIWebView-长按复制粘贴"><a href="#屏蔽-UIWebView-长按复制粘贴" class="headerlink" title="屏蔽 UIWebView 长按复制粘贴"></a>屏蔽 UIWebView 长按复制粘贴</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> - (void)webViewDidFinishLoad:(UIWebView *)webViews</span><br><span class="line"> &#123;</span><br><span class="line"> &#x2F;&#x2F;去掉webView长按列表时的复制事件</span><br><span class="line"> [webView stringByEvaluatingJavaScriptFromString:@&quot;document.body.style.webkitTouchCallout&#x3D;&#39;none&#39;;&quot;];</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;禁止选中网页中的元素</span><br><span class="line">[self.brandDiscountWebView stringByEvaluatingJavaScriptFromString:@&quot;document.documentElement.style.webkitUserSelect&#x3D;&#39;none&#39;;&quot;];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="获取网页标题"><a href="#获取网页标题" class="headerlink" title="获取网页标题"></a>获取网页标题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *title = [webView stringByEvaluatingJavaScriptFromString:@&quot;document.title&quot;];</span><br></pre></td></tr></table></figure>
+<h4 id="获取网页标题"><a href="#获取网页标题" class="headerlink" title="获取网页标题"></a>获取网页标题</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NSString *title &#x3D; [webView stringByEvaluatingJavaScriptFromString:@&quot;document.title&quot;];</span><br></pre></td></tr></table></figure>
     </div>
 
     
     
     
-        
-      
 
       <footer class="post-footer">
 
         
 
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/08/13/电脑技巧-macOS-2019-08-13-macOS-macOS中文件的扩展属性/" rel="next" title="macOS-macOS中文件的扩展属性">
-                  <i class="fa fa-chevron-left"></i> macOS-macOS中文件的扩展属性
-                </a>
-              
-            </div>
 
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/08/13/学习-iOS-2019-08-13-iOS-UIWebView和JavaScriptCore/" rel="prev" title="iOS-UIWebView和JavaScriptCore">
-                  iOS-UIWebView和JavaScriptCore <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
         
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/08/13/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-08-13-macOS-macOS%E4%B8%AD%E6%96%87%E4%BB%B6%E7%9A%84%E6%89%A9%E5%B1%95%E5%B1%9E%E6%80%A7/" rel="prev" title="macOS-macOS中文件的扩展属性">
+      <i class="fa fa-chevron-left"></i> macOS-macOS中文件的扩展属性
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/08/13/%E5%AD%A6%E4%B9%A0-iOS-2019-08-13-iOS-UIWebView%E5%92%8CJavaScriptCore/" rel="next" title="iOS-UIWebView和JavaScriptCore">
+      iOS-UIWebView和JavaScriptCore <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
     
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
-  </div>
 
 
           </div>
           
     
-    
-  <div class="comments" id="comments">
+  <div class="comments">
     <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3"></div>
   </div>
   
-  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
 
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
     <div class="sidebar-inner">
-        
-        
-        
-        
-      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
@@ -386,7 +327,6 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#UIWebView"><span class="nav-number">1.</span> <span class="nav-text">UIWebView</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#UIWebView-设置圆角四种方式对比"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">UIWebView 设置圆角四种方式对比</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#baseURL"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">baseURL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏蔽-UIWebView-长按复制粘贴"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">屏蔽 UIWebView 长按复制粘贴</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#获取网页标题"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">获取网页标题</span></a></li></ol></li></ol></li></ol></li></ol></div>
-        
       </div>
       <!--/noindex-->
 
@@ -395,30 +335,23 @@
   <p class="site-author-name" itemprop="name">DNACore</p>
   <div class="site-description" itemprop="description"></div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
-        
           <a href="/archives/">
         
-          <span class="site-state-item-count">225</span>
+          <span class="site-state-item-count">293</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
-    
-      
-      
       <div class="site-state-item site-state-tags">
-        
-          
             <a href="/tags/">
           
-        
-        <span class="site-state-item-count">144</span>
-        <span class="site-state-item-name">标签</span>
-        </a>
+        <span class="site-state-item-count">169</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
-    
   </nav>
+</div>
 
 
 
@@ -432,17 +365,23 @@
       </div>
     </main>
 
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">DNACore</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
 
         
 
@@ -453,56 +392,50 @@
 
 
 
-
-
-
-
-        
       </div>
     </footer>
   </div>
 
   
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
 
 
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-<script src="/js/utils.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/schemes/pisces.js"></script>
 
 
-
-  
-
-
-
-
-
-
-
-
-  <script src="/js/local-search.js?v=7.4.0"></script>
-
-
-
-
-
-
-
-
-
-
+<script src="/js/next-boot.js"></script>
 
 
 
 
   
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 
   
 
 <script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
   window.livereOptions = {
     refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
   };
@@ -514,6 +447,7 @@
     j.async = true;
     e.parentNode.insertBefore(j, e);
   })(document, 'script');
+});
 </script>
 
 </body>
