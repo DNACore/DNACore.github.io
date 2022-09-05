@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>SIMD Demo: Mandelbrot Animation</title>
+<link href="SIMD%20Demo_%20Mandelbrot%20Animation_files/mandelbrot.css" rel="Stylesheet" type="text/css">
+<script type="text/javascript" src="SIMD%20Demo_%20Mandelbrot%20Animation_files/jquery-1.js"></script>
+<script type="text/javascript" src="SIMD%20Demo_%20Mandelbrot%20Animation_files/mandelbrot-asm-2.js"></script>
+<!-- <script type="text/javascript" src="ecmascript_simd.js"></script> -->
+</head>
+<body>
+<div class="center w600" style="position:relative">
+    <div class="elem-center">
+    <button id="start" type="button" class="btn btn-primary btn-large">Start</button>
+    <button id="stop" type="button" class="btn btn-primary btn-large">Stop</button>
+    <button id="simd" type="button" class="btn btn-primary btn-large btn-disable">Use SIMD</button>
+    </div>
+    <br>
+    <div class="elem-center"><canvas id="mandel" width="600" height="400"></canvas><div class="author">Peter Jensen, Intel Corporation</div></div>
+    <div class="elem-center fps">FPS: <span id="fps">10.9</span></div>
+    <div class="elem-center simd"><span id="info">No SIMD</span></div>
+    <br>
+    
+</div>
+
+
+</body></html>
