@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.2","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -222,6 +222,39 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-Windows-%E7%A6%81%E7%94%A8%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%88%A0%E9%99%A4%E5%B7%A5%E5%85%B7-2021-10-26-14-45-17/" target="_self">
+          Windows-禁用恶意软件删除工具
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-Windows-%E7%A6%81%E7%94%A8%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%88%A0%E9%99%A4%E5%B7%A5%E5%85%B7-2021-10-26-14-45-17/" target="_self">
+        <div>
+          定位到  HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft  在右侧新建项，命名为MRT（如果已有该项，可跳过此步骤）  在右侧新建DWORD（32位）值，命名为DontOfferThroughWUAU，数值数据为1  重启电脑后将不会再有新的MRT推送  以管理员身份运行命令提示符，执行如下命令卸载MRT： 1wusa /uninstall /kb:
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-10-26 14:45" pubdate>
+              2021-10-26
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE-RTC%E6%89%A9%E5%B1%95%E6%9D%BF-2021-10-18-15-41-48/" target="_self">
           树莓派-RTC扩展板
         </a>
@@ -296,7 +329,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-Windows-CMD%E6%89%B9%E5%A4%84%E7%90%86%E6%9B%BF%E6%8D%A2%E3%80%81%E6%88%AA%E5%8F%96%E3%80%81%E6%89%A9%E5%85%85%E5%AD%97%E7%AC%A6%E4%B8%B2-2021-09-17-16-35-03/" target="_self">
         <div>
-          批处理：替换字符串、截取字符串、扩充字符串 替换字符串，即将某一字符串中的特定字符或字符串替换为给定的字符串。举例说明其功能：  12345678　　@echo off　　set aa&#x3D;伟大的中国！我为你自豪！　　echo 替换前：%aa%　　echo 替换后：%aa:中国&#x3D;中华人民共和国%　　echo aa &#x3D; %aa%　　set &quot;aa&#x3D;%aa:中国&#x3D;中华人民共和国%&quot;
+          批处理：替换字符串、截取字符串、扩充字符串 替换字符串，即将某一字符串中的特定字符或字符串替换为给定的字符串。举例说明其功能：  12345678　　@echo off　　set aa=伟大的中国！我为你自豪！　　echo 替换前：%aa%　　echo 替换后：%aa:中国=中华人民共和国%　　echo aa = %aa%　　set &quot;aa=%aa:中国=中华人民共和国%&quot;
         </div>
       </a>
 
@@ -329,7 +362,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-Linux-df%E5%91%BD%E4%BB%A4-2021-08-04-11-22-56/" target="_self">
         <div>
-          查看磁盘信息   1df -hl   查看某一具体文件或者目录所在磁盘信息   1df -hl &#x2F;some&#x2F;dir&#x2F;or&#x2F;file&#x2F;path
+          查看磁盘信息   1df -hl   查看某一具体文件或者目录所在磁盘信息   1df -hl /some/dir/or/file/path
         </div>
       </a>
 
@@ -362,7 +395,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-Windows-Microsoft-PowerToys-2021-06-16-20-44-46/" target="_self">
         <div>
-          https:&#x2F;&#x2F;docs.microsoft.com&#x2F;zh-cn&#x2F;windows&#x2F;powertoys&#x2F;
+          https://docs.microsoft.com/zh-cn/windows/powertoys/
         </div>
       </a>
 
@@ -395,7 +428,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Windows-Windows-Windows-Sysinternals-2021-06-16-20-43-40/" target="_self">
         <div>
-          https:&#x2F;&#x2F;docs.microsoft.com&#x2F;zh-cn&#x2F;sysinternals&#x2F;  Contig 磁盘碎片整理
+          https://docs.microsoft.com/zh-cn/sysinternals/  Contig 磁盘碎片整理
         </div>
       </a>
 
@@ -428,7 +461,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-Linux-bash-profile%E4%B8%8Ebashrc-2021-03-25-20-34-39/" target="_self">
         <div>
-          https:&#x2F;&#x2F;getpocket.com&#x2F;read&#x2F;3220657235
+          https://getpocket.com/read/3220657235
         </div>
       </a>
 
@@ -494,7 +527,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-Linux-%E5%BC%80%E5%90%AFbbr%E5%8A%A0%E9%80%9F-2021-02-25-11-59-13/" target="_self">
         <div>
-          树莓派开启 bbr 加速123456789101112131415# 确保内核在4.9以上sudo rpi-update# 修改配置，开启 bbr 加速sudo bash -c &amp;#x27;echo &quot;net.core.default_qdisc&#x3D;fq&quot; &gt;&gt; &#x2F;etc&#x2F;sysctl.conf&amp;#x27;sudo bash -c &amp;#x27;echo &quot;n
+          树莓派开启 bbr 加速123456789101112131415# 确保内核在4.9以上sudo rpi-update# 修改配置，开启 bbr 加速sudo bash -c &#x27;echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf&#x27;sudo bash -c &#x27;echo &quot;n
         </div>
       </a>
 
@@ -504,39 +537,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2021-02-25 11:59" pubdate>
               2021-02-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-Linux-nginx%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B-2021-02-24-11-03-42/" target="_self">
-          Linux-nginx简明教程
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-Linux-Linux-nginx%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B-2021-02-24-11-03-42/" target="_self">
-        <div>
-          安装1yum install nginx  配置文件位置：&#x2F;etc&#x2F;nginx&#x2F;nginx.conf
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-24 11:03" pubdate>
-              2021-02-24
             </time>
           </div>
         

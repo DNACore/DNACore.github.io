@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.2","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -222,6 +222,46 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
+        <a href="/post/5ce25011-92e0-4510-8303-e9b12f9d81ae.html" target="_self">
+          树莓派-树莓派基础设置
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/5ce25011-92e0-4510-8303-e9b12f9d81ae.html" target="_self">
+        <div>
+          开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区 1sudo dpkg-reconfigure tzdata  显示时间信息 12timedatectldate  安装Transmission树莓派中使用 tansmission 安装 nodej
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-23 15:20" pubdate>
+              2019-10-23
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">#树莓派</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
         <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux-%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6/" target="_self">
           Linux-将本地文件写入远程文件
         </a>
@@ -230,7 +270,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux-%E5%B0%86%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6/" target="_self">
         <div>
-          服务器之间最好ssh免密码登录，如果不是免密码登录，每次写入都要手敲密码。  将本地的test.log文件的内容写入到远程服务器test1.log文件中。脚本内容： 12#!bin&#x2F;bashssh root@192.168.30.1 &amp;#x27;cat &#x2F;opt&#x2F;test.log &gt;&gt; &#x2F;opt&#x2F;test1.log&amp;#x27;  将远程服务器test1.log文件中的内容写入到本地的t
+          服务器之间最好ssh免密码登录，如果不是免密码登录，每次写入都要手敲密码。  将本地的test.log文件的内容写入到远程服务器test1.log文件中。脚本内容： 12#!bin/bashssh root@192.168.30.1 &#x27;cat /opt/test.log &gt;&gt; /opt/test1.log&#x27;  将远程服务器test1.log文件中的内容写入到本地的t
         </div>
       </a>
 
@@ -270,7 +310,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux%E5%B0%86%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9%E5%86%99%E5%85%A5%E5%88%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6%E4%B8%AD/" target="_self">
         <div>
-          用 cat 命令 12345# 新建&#x2F;覆盖原有文件内容car some.txt &gt; another.txt# 追加内容car some.txt &gt;&gt; another.txt  用 vim 命令   1234vim another.txt# 执行 vim 指令: r some.txt
+          用 cat 命令 12345# 新建/覆盖原有文件内容car some.txt &gt; another.txt# 追加内容car some.txt &gt;&gt; another.txt  用 vim 命令   1234vim another.txt# 执行 vim 指令: r some.txt
         </div>
       </a>
 
@@ -310,7 +350,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux-%E6%96%87%E4%BB%B6%E7%BD%AE%E7%A9%BA%E6%96%B9%E6%B3%95/" target="_self">
         <div>
-          以下几条命令可以清除原有文件内容，使文件变为一个完全空白的文件 1234: &gt; filenametrue &gt; filenamecat &#x2F;dev&#x2F;null &gt; filename&gt; filename   truncate命令
+          以下几条命令可以清除原有文件内容，使文件变为一个完全空白的文件 1234: &gt; filenametrue &gt; filenamecat /dev/null &gt; filename&gt; filename   truncate命令
         </div>
       </a>
 
@@ -350,7 +390,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/%E6%A0%91%E8%8E%93%E6%B4%BE/%E6%A0%91%E8%8E%93%E6%B4%BE-%E6%A0%91%E8%8E%93%E6%B4%BE%E8%AE%BE%E7%BD%AE%E9%9D%99%E6%80%81IP%E5%92%8CDNS/" target="_self">
         <div>
-          需要编辑&#x2F;etc&#x2F;dhcpcd.conf文件 1sudo nano &#x2F;etc&#x2F;dhcpcd.conf  修改如下 1234interface eth0static ip_address&#x3D;192.168.1.177&#x2F;24static routers&#x3D;192.168.1.1static domain_name_servers&#x3D;114.114.114.114 8.8.8.8 8.8.4.4  重启网络
+          需要编辑/etc/dhcpcd.conf文件 1sudo nano /etc/dhcpcd.conf  修改如下 1234interface eth0static ip_address=192.168.1.177/24static routers=192.168.1.1static domain_name_servers=114.114.114.114 8.8.8.8 8.8.4.4  重启网络
         </div>
       </a>
 
@@ -392,7 +432,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/96c6216c-1f23-40ce-9408-d63ca2b4ea76.html" target="_self">
         <div>
-          树莓派清华源主页：https:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;help&#x2F;raspbian&#x2F; 123sudo echo -e &quot;deb http:&#x2F;&#x2F;mirrors.tuna.tsinghua.edu.cn&#x2F;raspbian&#x2F;raspbian&#x2F; buster main non-free contrib\ndeb-src http:&#x2F;&#x2F;mirrors.tuna.
+          树莓派清华源主页：https://mirrors.tuna.tsinghua.edu.cn/help/raspbian/ 123sudo echo -e &quot;deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib\ndeb-src http://mirrors.tuna.
         </div>
       </a>
 
@@ -436,7 +476,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/24b621d8-1f05-41d6-b5d5-f599350192fa.html" target="_self">
         <div>
-          树莓派系统下载https:&#x2F;&#x2F;www.raspberrypi.com&#x2F;software&#x2F;https:&#x2F;&#x2F;www.raspberrypi.com&#x2F;software&#x2F;operating-systems&#x2F; 烧录镜像工具下载 Etcherhttps:&#x2F;&#x2F;mac.softpedia.com&#x2F;get&#x2F;Utilities&#x2F;Etcher.shtml  Raspberry Pi Imagerhttps:&#x2F;&#x2F;www.
+          树莓派系统下载https://www.raspberrypi.com/software/https://www.raspberrypi.com/software/operating-systems/ 烧录镜像工具下载 Etcherhttps://mac.softpedia.com/get/Utilities/Etcher.shtml  Raspberry Pi Imagerhttps://www.
         </div>
       </a>
 
@@ -478,7 +518,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/%E6%A0%91%E8%8E%93%E6%B4%BE/%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%AE%89%E8%A3%85Pixel%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83/" target="_self">
         <div>
-          https:&#x2F;&#x2F;diyprojects.io&#x2F;install-pixel-desktop-raspbian-stretch-lite-10-essential-software-raspberry-pi-3&#x2F;
+          https://diyprojects.io/install-pixel-desktop-raspbian-stretch-lite-10-essential-software-raspberry-pi-3/
         </div>
       </a>
 
@@ -520,7 +560,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E5%BC%80%E5%90%AFmacOS%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84NTFS%E5%86%99%E5%85%A5%E5%8A%9F%E8%83%BD/" target="_self">
         <div>
-          打开系统自带功能 需要在&#x2F;etc&#x2F;目录下建立一个名为fstab的文件 1sudo vi &#x2F;etc&#x2F;fstab  编辑fstab文件内容LABEL&#x3D;XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID&#x3D;YYYY为卷的UUID，可以通过diskutil info &#x2F;Volumes&#x2F;DRIVENAME | grep UUID命令获取这个硬盘的UUID 123LABEL&#x3D;XXXX
+          打开系统自带功能 需要在/etc/目录下建立一个名为fstab的文件 1sudo vi /etc/fstab  编辑fstab文件内容LABEL=XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID=YYYY为卷的UUID，可以通过diskutil info /Volumes/DRIVENAME | grep UUID命令获取这个硬盘的UUID 123LABEL=XXXX
         </div>
       </a>
 
@@ -553,7 +593,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Windows/Windows-%E5%B0%86Windows%E5%90%AF%E5%8A%A8%E5%88%B0%E5%AE%A1%E8%AE%A1%E6%A8%A1%E5%BC%8F/" target="_self">
         <div>
-          https:&#x2F;&#x2F;docs.microsoft.com&#x2F;zh-cn&#x2F;windows-hardware&#x2F;manufacture&#x2F;desktop&#x2F;boot-windows-to-audit-mode-or-oobe
+          https://docs.microsoft.com/zh-cn/windows-hardware/manufacture/desktop/boot-windows-to-audit-mode-or-oobe
         </div>
       </a>
 
@@ -574,50 +614,6 @@
               <a href="/tags/Windows/">#Windows</a>
             
               <a href="/tags/Windows%E9%83%A8%E7%BD%B2/">#Windows部署</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Windows/Windows-Windows%E7%9A%84KMS%E6%BF%80%E6%B4%BB/" target="_self">
-          Windows-Windows的KMS激活
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Windows/Windows-Windows%E7%9A%84KMS%E6%BF%80%E6%B4%BB/" target="_self">
-        <div>
-          [TOC] KMS 服务器激活 WindowsKMS 密钥 Windows Thin PC : 3KQTC-D9G6K-7TQG6-6MRPC-QN22C  KMS 激活https:&#x2F;&#x2F;moeclub.org&#x2F;2018&#x2F;12&#x2F;02&#x2F;710&#x2F;?spm&#x3D;70.9 激活步骤请前往: http:&#x2F;&#x2F;moeclub.org&#x2F;kmsKMS激活命令: slmgr &#x2F;skms kms.moeclub.o
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-09-10 16:30" pubdate>
-              2019-09-10
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/WES7/">#WES7</a>
-            
-              <a href="/tags/Windows/">#Windows</a>
-            
-              <a href="/tags/%E6%BF%80%E6%B4%BB/">#激活</a>
             
           </div>
         

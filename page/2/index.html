@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.2","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -215,6 +215,46 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/post/31e85c08-6aa4-4231-98bf-c3eae815f689.html" target="_self">
+          macOS-通过命令设置网络的DNS
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/31e85c08-6aa4-4231-98bf-c3eae815f689.html" target="_self">
+        <div>
+          123456# 查看WiFi信息networksetup -getinfo Wi-Fi# 查看当前的DNSnetworksetup -getdnsservers Wi-Fi# 设置DNSsudo networksetup -setdnsservers Wi-Fi &quot;8.8.8.8&quot;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-09-04 19:05" pubdate>
+              2022-09-04
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/macOS/">#macOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
 
   <div class="row mx-auto index-card">
     
@@ -432,7 +472,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/4b5a7573-cef4-4a81-854b-02d68c9f7677.html" target="_self">
         <div>
-          常用命令 列出支持的文件系统 diskutil listFilesystems  创建内存盘123# 创建一个 10GB 的虚拟内存盘# 因为FAT系列的文件系统不支持小写字母当卷标，所以这里卷标是RAMDISKdiskutil eraseDisk FAT32 RAMDISK &#96;hdiutil attach -nomount ram:&#x2F;&#x2F;20971520&#96;
+          常用命令 列出支持的文件系统 diskutil listFilesystems  创建内存盘123# 创建一个 10GB 的虚拟内存盘# 因为FAT系列的文件系统不支持小写字母当卷标，所以这里卷标是RAMDISKdiskutil eraseDisk FAT32 RAMDISK `hdiutil attach -nomount ram://20971520`
         </div>
       </a>
 
@@ -514,7 +554,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/5f7efd16-d8fd-4604-a337-25350bfa8a57.html" target="_self">
         <div>
-          TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;8hdcyy7j0b10rfrs61513zdr0000gn&#x2F;T&#x2F; 更多https:&#x2F;&#x2F;magnusviri.com&#x2F;what-is-var-folders.html
+          TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;8hdcyy7j0b10rfrs61513zdr0000gn&#x2F;T&#x2F; 更多https://magnusviri.com/what-is-var-folders.html
         </div>
       </a>
 
@@ -566,50 +606,6 @@
             <i class="iconfont icon-tags"></i>
             
               <a href="/tags/pmset/">#pmset</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/2ceae282-892a-49c6-9c45-6e659b7c2fcc.html" target="_self">
-          macOS-Entitlements
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/2ceae282-892a-49c6-9c45-6e659b7c2fcc.html" target="_self">
-        <div>
-          [Entitlements][Entitlements]是授予可执行特定能力的权利或特权。例如，应用程序需要HomeKit 授权——以及明确的用户同意——才能访问用户的家庭自动化网络。应用程序将其权利存储为嵌入其二进制可执行文件的代码签名中的键值对。 您可以通过在 Xcode 中为目标声明功能来为您的应用程序配置权利。Xcode 记录您添加到带有.entitlements扩展名的属性列表文件中的功
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-03-16 14:12" pubdate>
-              2022-03-16
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/macOS/">#macOS</a>
-            
-              <a href="/tags/iOS/">#iOS</a>
-            
-              <a href="/tags/Entitlements/">#Entitlements</a>
             
           </div>
         
