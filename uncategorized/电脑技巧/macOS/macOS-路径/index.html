@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelperTools  拼音输入法用户词库自造词位置 12~&#x2F;Library&#x2F;Container">
+    <meta name="description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelper">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS路径">
 <meta property="og:url" content="https://dnacore.github.io/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelperTools  拼音输入法用户词库自造词位置 12~&#x2F;Library&#x2F;Container">
+<meta property="og:description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelper">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-26T06:19:43.000Z">
-<meta property="article:modified_time" content="2022-01-24T10:39:05.586Z">
+<meta property="article:modified_time" content="2022-11-11T03:56:08.000Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          2.6k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          21 分钟
+          22 分钟
         
       </span>
     
@@ -280,6 +280,8 @@
 <li>系统<code>/Library/PreferencePanes</code></li>
 </ul>
 </li>
+<li><p>系统内置偏好设置路径<br><code>/System/Library/PreferencePanes</code></p>
+</li>
 <li><p>系统更新下载位置<br><code>/Library/Updates</code></p>
 </li>
 <li><p>特权文件路径，删除后可取消某些app的特权</p>
@@ -315,24 +317,32 @@
 </li>
 <li><p>语音备忘录 Voice Memo<br><code>$HOME/Library/Application Support/com.apple.voicememos/Recordings</code><br><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662">https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662</a></p>
 </li>
-<li><p>QQ 数据文件夹<br><code>~/Library/Containers/com.tencent.qq/</code><br>图片路径<code>~/Library/Containers/com.tencent.qq/Data/Library/Caches/Images</code></p>
+<li><p>QQ 数据文件夹</p>
+<ul>
+<li><code>~/Library/Containers/com.tencent.qq/</code></li>
+<li>图片路径<code>~/Library/Containers/com.tencent.qq/Data/Library/Caches/Images</code></li>
+</ul>
 </li>
 <li><p>企业微信、微信企业版升级包路径<br><code>~/Library/Containers/com.tencent.WeWorkMac/Data/Upgrade</code></p>
 </li>
 <li><p>微信路径</p>
-</li>
-</ul>
 <blockquote>
 <p>微信手机聊天记录备份路径，微信聊天记录备份是增量备份<br>~&#x2F;Library&#x2F;Containers&#x2F;com.tencent.xinWeChat&#x2F;Data&#x2F;Library&#x2F;Application Support&#x2F;com.tencent.xinWeChat&#x2F;2.0b4.0.9&#x2F;Backup</p>
 </blockquote>
-<ul>
+</li>
 <li><p>Source Tree 更新文件下载路径<br><code>~/Library/Caches/com.torusknot.SourceTreeNotMAS/org.sparkle-project.Sparkle/PersistentDownloads</code><br><a href="file://~/Library/Caches/com.torusknot.SourceTreeNotMAS/org.sparkle-project.Sparkle/">点击直达</a></p>
 </li>
 <li><p>百度网盘数据库路径<br><code>~/Library/Application Support/com.baidu.BaiduNetdisk-mac</code></p>
 </li>
-<li><p>Charlse 大文件缓存路径<br><code>/private/var/folders/f_/8hdcyy7j0b10rfrs61513zdr0000gn/T/charles8637968132878592540.tmp</code></p>
+<li><p>Charlse 大文件缓存路径<br><code>$TMPDIR/charles8637968132878592540.tmp</code></p>
 </li>
-<li><p>Mac App Store 下载软件保存路径<br><code>/private/var/folders/f_/8hdcyy7j0b10rfrs61513zdr0000gn/C/com.apple.appstoreagent/com.apple.appstore/</code></p>
+<li><p>Mac App Store 下载软件保存路径<br><code>$(getconf DARWIN_USER_TEMP_DIR)/com.apple.appstoreagent/com.apple.appstore/</code></p>
+</li>
+<li><p>macOS 备份的iOS设备文件路径<br><code>~/Library/Application Support/MobileSync/Backup</code></p>
+</li>
+<li><p>Instruments 用户模板保存位置<br><code>~/Library/Application Support/Instruments/Templates</code></p>
+</li>
+<li><p>VS Code 用户自建代码片段<br><code>~/Library/Application Support/Code/User/snippets/</code></p>
 </li>
 </ul>
 
@@ -378,7 +388,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年1月24日</div>
+          <div>2022年11月11日</div>
         </div>
       
       

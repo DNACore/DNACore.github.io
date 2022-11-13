@@ -24,7 +24,7 @@
 <meta property="og:description" content="列出当前系统打开的文件 https:&#x2F;&#x2F;www.cnblogs.com&#x2F;sparkbj&#x2F;p&#x2F;7161669.html类似的命令还有fuser -mv &#x2F;mnt&#x2F;udisk  列出所有的网络连接lsof -i 列出所有tcp网络连接信息lsof -i tcp 列出所有udp网络连接信息lsof -i udp 查看某个端口被哪个程序占用lsof -i :8080 查看某个tcp端口被哪个程序占用lso">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-11-04T06:22:36.000Z">
-<meta property="article:modified_time" content="2021-02-01T07:03:18.200Z">
+<meta property="article:modified_time" content="2022-11-07T02:55:15.000Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="Linux">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          195 字
+          2.6k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          2 分钟
+          22 分钟
         
       </span>
     
@@ -282,6 +282,45 @@
 <li>查看某个端口被哪个程序占用<code>lsof -i :8080</code></li>
 <li>查看某个tcp端口被哪个程序占用<code>lsof -i tcp:8080</code></li>
 </ul>
+<hr>
+<p><a target="_blank" rel="noopener" href="http://t.zoukankan.com/igoodful-p-11661883.html">http://t.zoukankan.com/igoodful-p-11661883.html</a></p>
+<p>lsof(list open files)是一个查看进程打开的文件的工具。</p>
+<p>在 linux 系统中，一切皆文件。通过文件不仅仅可以访问常规数据，还可以访问网络连接和硬件。所以 lsof 命令不仅可以查看进程打开的文件、目录，还可以查看进程监听的端口等 socket 相关的信息。本文将介绍 lsof 命令的基本用法，本文中 demo 的演示环境为 ubuntu 18.04。<br>常用选项</p>
+<p>-a 指示其它选项之间为与的关系<br>-c &lt;进程名&gt; 输出指定进程所打开的文件<br>-d &lt;文件描述符&gt; 列出占用该文件号的进程<br>+d &lt;目录&gt;  输出目录及目录下被打开的文件和目录(不递归)<br>+D &lt;目录&gt;  递归输出及目录下被打开的文件和目录<br>-i &lt;条件&gt;  输出符合条件与网络相关的文件<br>-n 不解析主机名<br>-p &lt;进程号&gt; 输出指定 PID 的进程所打开的文件<br>-P 不解析端口号<br>-t 只输出 PID<br>-u 输出指定用户打开的文件<br>-U 输出打开的 UNIX domain socket 文件<br>-h 显示帮助信息<br>-v 显示版本信息<br>基本输出</p>
+<p>如果不带任何选项执行 lsof 命令，会输出系统中所有 active 进程打开的所有文件，结果就是我们被输出的信息所淹没，这没有任何的意义。我们先让 lsof 命令输出当前 Bash 进程打开的文件，并截取其中的一部分结果来介绍输出内容中都包含哪些信息：</p>
+<p>COMMAND：程序的名称<br>PID：进程标识符<br>USER：进程所有者<br>FD：文件描述符，应用程序通过文件描述符识别该文件<br>TYPE：文件类型，如 DIR、REG 等<br>DEVICE：以逗号分隔设备编号<br>SIZE：文件的大小(bytes)<br>NODE：索引节点(文件在磁盘上的标识)<br>NAME：打开文件的确切名称</p>
+<p>下面简单介绍一下 FD 列和 TYPE 列中的常见内容。<br>FD 列中的常见内容有 cwd、rtd、txt、mem 和一些数字等等。其中 cwd 表示当前的工作目录；rtd 表示根目录；txt 表示程序的可执行文件；mem 表示内存映射文件：</p>
+<p>还有一部分 FD 是以数字表示的，比如标准输入输出文件：</p>
+<p>数字后面的字母表示进程对该文件的读写模式，比如上图中的 u 表示该文件被打开并处于读取&#x2F;写入模式。除了 u，还有 r 表示只读模式，w 表示只写模式，还可以同时应用 W 表示该进程拥有对文件写操作的锁。下图是截取的 docker daemon 进程打开的文件列表，其中显示了 FD 的不同模式：</p>
+<p>TYPE 列中常见的 REG 和 DIR 分别表示普通文件和目录。而 CHR 和 BLK 则分别表示字符和块设备，unix、fifo 和 IPv4&#x2F;IPv6 分别表示 UNIX domain 套接字、先进先出(FIFO)队列和 IPv4&#x2F;IPv6 套接字。</p>
+<p>下面我们来介绍一些 lsof 命令的常见用法。<br>查看哪些进程打开了某个文件</p>
+<p>直接指定文件的名称作为 lsof 的参加就可以查看哪些进程打开了这个文件，下面的命令查询打开了 &#x2F;bin&#x2F;bash 文件的进程：</p>
+<p>$ sudo lsof &#x2F;bin&#x2F;bash</p>
+<p>除了普通文件，也可以是设备等文件(下面命令的输出很长，图示只是截取的一小部分)：</p>
+<p>$ sudo lsof &#x2F;dev&#x2F;sda1</p>
+<p>查看哪些进程打开了某个目录及目录下的文件</p>
+<p>这里分两种情况，+d 选项不执行递归查询，只查找那些打开了指定目录以及指定目录下文件和目录的进程，比如：</p>
+<p>sudo lsof +d &#x2F;var&#x2F;log</p>
+<p>而 +D 选项则会对指定的目录进行递归：</p>
+<p>sudo lsof +D &#x2F;var&#x2F;log</p>
+<p>在卸载文件系统时，如果有进程打开了该文件系统中的文件或目录，卸载操作就会失败。因此最好在卸载文件系统前通过 lsof +D 检查文件系统的挂载点，杀掉相关的进程然后再执行卸载操作。<br>查看某个进程打开的所有文件</p>
+<p>通过 -p 选项并指定进程的 PID 可以输出该进程打开的所有文件。比如我们想要查看 cron 程序打开的文件，可以先用 ps -C cron 命令查出进程的 PID：</p>
+<p>然后把该 PID 传递给 lsof 命令的 -p 选项：</p>
+<p>sudo lsof -p 1152</p>
+<p>组合多个选项</p>
+<p>如果为 lsof 命令指定多个选项，这些选项间默认是或的关系。也就是说满足任何一个选项的结果都会被输出。可以添加额外的 -a 选项，它的作用就是让其它选项之间的关系变为与，比如下面的命令：</p>
+<p>sudo lsof -a -p $$ -d0,1,2</p>
+<p>其中的 -p 选项指定了当前进程的 PID，而 -d 选项则用来指定进程打开的文件描述符(可以通过逗号分隔多个文件描述符)。添加 -a 选项后，结果输出为当前进程打开的文件描述符为 0、1、2 的文件。<br>说明，-a 选项的使用有很多条件，具体请参考 lsof man page。<br>查看指定名称的程序打开的文件</p>
+<p>通过 -c 选项可以匹配进程运行的程序(可执行文件)名称。比如我们要查找以字母 cr 开头的程序打开的文件列表：</p>
+<p>sudo lsof -c cr</p>
+<p>还可以同时指定多个 -c 选项，它们之间是或的关系。<br>如果想对 -c 选项的条件取反，只要在字符串前添加符号 ^ 就可以了，比如：</p>
+<p>sudo lsof -c ^cr</p>
+<p>-c 选项也支持正则表达式，比如下面的命令可以过滤出以 cra 和 cro 开头的程序打开的文件：</p>
+<p>sudo lsof -c &#x2F;cr[ao]&#x2F;</p>
+<p>查看被打开的与网络相关的文件</p>
+<p>-i 选项用来查看被打开的和网络相关的文件，其参数的格式如下：<br>[46][protocol][@hostname|hostaddr][:service|port]<br>46 表示 IP 协议的版本<br>protocol 表示网络协议的名称，比如 TCP 或 UDP<br>hostname 或 hostaddr 表示主机地址<br>service 指 &#x2F;etc&#x2F;services 中的名称，比如 smtp 或多个服务的列表<br>port 表示端口号，可以指定一个或多个</p>
+<p>-i 选项默认会同时输出 IPv4 和 IPv6 打开的文件：</p>
+<p>sudo lsof -i</p>
 
                 
               </div>
@@ -327,7 +366,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2021年2月1日</div>
+          <div>2022年11月7日</div>
         </div>
       
       
