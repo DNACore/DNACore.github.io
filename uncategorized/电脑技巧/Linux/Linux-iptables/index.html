@@ -24,7 +24,7 @@
 <meta property="og:description" content="教程http:&#x2F;&#x2F;man.linuxde.net&#x2F;iptableshttps:&#x2F;&#x2F;www.cnblogs.com&#x2F;zclzhao&#x2F;p&#x2F;5081590.htmlhttp:&#x2F;&#x2F;blog.51cto.com&#x2F;ailixing&#x2F;38543https:&#x2F;&#x2F;www.linuxprobe.com&#x2F;chapter-08.htmlhttp:&#x2F;&#x2F;blog.51cto.com&#x2F;xiaogongju&#x2F;2087254htt">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-11T06:47:17.000Z">
-<meta property="article:modified_time" content="2022-08-27T06:45:38.897Z">
+<meta property="article:modified_time" content="2022-11-23T04:05:05.705Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Shell">
 <meta property="article:tag" content="Linux">
@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +84,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
 
 
 <body>
@@ -117,7 +117,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -129,7 +129,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -141,7 +141,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -153,7 +153,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -165,7 +165,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -173,15 +173,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -277,7 +278,7 @@
                 
                 <h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a target="_blank" rel="noopener" href="http://man.linuxde.net/iptables">http://man.linuxde.net/iptables</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zclzhao/p/5081590.html">https://www.cnblogs.com/zclzhao/p/5081590.html</a><br><a target="_blank" rel="noopener" href="http://blog.51cto.com/ailixing/38543">http://blog.51cto.com/ailixing/38543</a><br><a target="_blank" rel="noopener" href="https://www.linuxprobe.com/chapter-08.html">https://www.linuxprobe.com/chapter-08.html</a><br><a target="_blank" rel="noopener" href="http://blog.51cto.com/xiaogongju/2087254">http://blog.51cto.com/xiaogongju/2087254</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/reyleon/article/details/12976341">https://blog.csdn.net/reyleon/article/details/12976341</a><br><a target="_blank" rel="noopener" href="http://www.zsythink.net/archives/1199">http://www.zsythink.net/archives/1199</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linuxprobe/p/5643684.html">https://www.cnblogs.com/linuxprobe/p/5643684.html</a></p>
 <ul>
-<li>设置默认规则 &amp; 添加规则<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -P INPUT DROP <span class="hljs-comment"># `-P` 设置默认规则,不参与规则匹配顺序检索</span><br>iptables -A INPUT -p tcp --dport 443 -j ACCEPT <span class="hljs-comment"># 允许443端口</span><br>iptables -A INPUT -p tcp --dport 22 -j ACCEPT <span class="hljs-comment"># ssh 端口</span><br>iptables -A INPUT -p tcp --dport 21 -j ACCEPT <span class="hljs-comment"># tcp ftp 端口</span><br>iptables -A INPUT -p udp --dport 21 -j ACCEPT <span class="hljs-comment"># udp ftp 端口</span><br>iptables -A INPUT -p icmp -j ACCEPT <span class="hljs-comment"># 允许ping命令</span><br></code></pre></td></tr></table></figure></li>
+<li>设置默认规则 &amp; 添加规则<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -p tcp --dport 443 -j ACCEPT <span class="hljs-comment"># 允许443端口</span><br>iptables -A INPUT -p tcp --dport 22 -j ACCEPT <span class="hljs-comment"># ssh 端口</span><br>iptables -A INPUT -p tcp --dport 21 -j ACCEPT <span class="hljs-comment"># tcp ftp 端口</span><br>iptables -A INPUT -p udp --dport 21 -j ACCEPT <span class="hljs-comment"># udp ftp 端口</span><br>iptables -A INPUT -p icmp -j ACCEPT <span class="hljs-comment"># 允许ping命令</span><br>iptables -P INPUT DROP <span class="hljs-comment"># `-P` 设置默认规则,不参与规则匹配顺序检索</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>未开放的端口，用<code>nmap</code>扫描的话，端口状态是<code>closed</code>；</li>
@@ -357,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年8月27日</div>
+          <div>2022年11月23日</div>
         </div>
       
       
@@ -388,9 +389,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/BT-Tracker-Server/" title="BT Tracker Server">
+                      <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E9%98%B2%E6%AD%A2macOS%E4%B8%ADSpotlight%E5%9C%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E6%88%96%E8%80%85U%E7%9B%98%E4%B8%AD%E5%88%9B%E5%BB%BA%E7%B4%A2%E5%BC%95/" title="防止macOS中Spotlight在移动硬盘或者U盘中创建索引">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BT Tracker Server</span>
+                        <span class="hidden-mobile">防止macOS中Spotlight在移动硬盘或者U盘中创建索引</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -410,8 +411,10 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
     <script type="text/javascript">
       Fluid.utils.loadComments('#lv-container', function() {
@@ -422,7 +425,8 @@
   </div>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -434,7 +438,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 

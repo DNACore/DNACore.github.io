@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -74,7 +74,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
 
 
 <body>
@@ -107,7 +107,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -119,7 +119,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -131,7 +131,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -143,7 +143,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -155,7 +155,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -163,15 +163,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -222,15 +223,15 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h1 class="index-header">
         
-        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/transfer-sh%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB/" target="_self">
-          transfer.sh文件分享
+        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux-iptables/" target="_self">
+          Linux-iptables
         </a>
       </h1>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/transfer-sh%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Linux/Linux-iptables/" target="_self">
         <div>
-          transfer.sh文件分享 用命令行上传一个文件 1curl --upload-file SceneDetector_Final-1.zip https://transfer.sh/SceneDetector_Final-1.zip  用命令行上传一个文件，并且显示上传进度 1curl --progress-bar --upload-file SceneDetector_Final-1.zip
+          教程http://man.linuxde.net/iptableshttps://www.cnblogs.com/zclzhao/p/5081590.htmlhttp://blog.51cto.com/ailixing/38543https://www.linuxprobe.com/chapter-08.htmlhttp://blog.51cto.com/xiaogongju/2087254htt
         </div>
       </a>
 
@@ -238,12 +239,273 @@
         
           <div class="post-meta mr-3">
             <i class="iconfont icon-date"></i>
-            <time datetime="2018-11-15 11:03" pubdate>
-              2018-11-15
+            <time datetime="2018-12-11 14:47" pubdate>
+              2018-12-11
             </time>
           </div>
         
         
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Shell/">#Shell</a>
+            
+              <a href="/tags/Linux/">#Linux</a>
+            
+              <a href="/tags/iptables/">#iptables</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/openssl/" target="_self">
+          openssl
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/openssl/" target="_self">
+        <div>
+          验证远程证书状态 1openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443  用指定证书测试网站 123openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem# 或者openssl s_cli
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-04 13:54" pubdate>
+              2018-12-04
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Shell/">#Shell</a>
+            
+              <a href="/tags/CMD/">#CMD</a>
+            
+              <a href="/tags/openssl/">#openssl</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/gem-%E9%97%AE%E9%A2%98/" target="_self">
+          gem-问题
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/gem-%E9%97%AE%E9%A2%98/" target="_self">
+        <div>
+          Gem::FilePermissionError问题：1234567$ gem install metamodel --verboseERROR:  While executing gem ... (Gem::FilePermissionError)    You don&#x27;t have write permissions for the /Library/Ruby/Gems/2.3.0
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-03 14:40" pubdate>
+              2018-12-03
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/gem/">#gem</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/gem-Ruby%E7%A8%8B%E5%BA%8F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" target="_self">
+          gem-Ruby程序包管理工具
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/gem-Ruby%E7%A8%8B%E5%BA%8F%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" target="_self">
+        <div>
+          [TOC]  ruby 是一种语言，是某些软件包代码的执行环境。而gem是管理这些基于ruby程序的程序。  gem 命令手册https://guides.rubygems.org/command-reference/ 安装 gem Mac 自带 gem  安装源管理列出安装源gem sources -l http://gems.github.com/http://rubygems.org/htt
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-03 14:40" pubdate>
+              2018-12-03
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/gem/">#gem</a>
+            
+              <a href="/tags/Ruby/">#Ruby</a>
+            
+              <a href="/tags/RubyGems/">#RubyGems</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/" target="_self">
+          macOS-设置系统代理
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/" target="_self">
+        <div>
+          设置系统代理地址 12sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理  开关系统代理 12sudo network
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-12-03 11:51" pubdate>
+              2018-12-03
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/macOS/">#macOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%B7%AF%E5%BE%84/" target="_self">
+          macOS路径
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%B7%AF%E5%BE%84/" target="_self">
+        <div>
+          macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~/Library/PreferencePanes 系统/Library/PreferencePanes   系统内置偏好设置路径/System/Library/PreferencePanes  系统更新下载位置/Library/Updates  软件默认设置路径~/Library/Preferences
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-11-26 14:19" pubdate>
+              2018-11-26
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/macOS/">#macOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VS-Code-%E4%BD%BF%E7%94%A8/" target="_self">
+          VS Code 使用
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/VS-Code-%E4%BD%BF%E7%94%A8/" target="_self">
+        <div>
+          VS Code 使用问题 Could not create temporary directory: 权限被拒绝解决：1sudo chown $USER ~/Library/Caches/com.microsoft.VSCode.ShipIt/ 参考：http://www.zgljl2012.com/mac-vscode/  VS Code快捷键 多行编辑：alt+shift+鼠标选择 在单词间跳
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2018-11-22 14:09" pubdate>
+              2018-11-22
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/VSC/">#VSC</a>
+            
+              <a href="/tags/VSCode/">#VSCode</a>
+            
+          </div>
         
       </div>
     </article>

@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.apple.com/v/macos/ventura/a/images/router/compatible_devices__d5lgp6ypklua_large_2x.jpg">
 <meta property="article:published_time" content="2022-11-11T04:48:47.000Z">
-<meta property="article:modified_time" content="2022-11-11T06:35:35.000Z">
+<meta property="article:modified_time" content="2023-06-08T06:28:26.339Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -71,7 +71,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,7 +84,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
 
 
 <body>
@@ -117,7 +117,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -129,7 +129,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -141,7 +141,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -153,7 +153,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -165,7 +165,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -173,15 +173,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -221,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.3k 字
+          2.1k 字
         
       </span>
     
@@ -232,7 +233,7 @@
         
         
         
-          11 分钟
+          18 分钟
         
       </span>
     
@@ -286,6 +287,36 @@
 </tr>
 </thead>
 <tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-84884/F97A22EE-9B5E-4FD5-94C1-B39DCEE8D80F/UniversalMac_13.4_22F66_Restore.ipsw">UniversalMac_13.4_22F66_Restore.ipsw</a></td>
+<td>YES</td>
+<td>5&#x2F;18&#x2F;23</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-66602/418BC37A-FCD9-400A-B4FA-022A19576CD4/UniversalMac_13.3.1_22E261_Restore.ipsw">UniversalMac_13.3.1_22E261_Restore.ipsw</a></td>
+<td>YES</td>
+<td>4&#x2F;07&#x2F;23</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/002-75537/8250FA0E-0962-46D6-8A90-57A390B9FFD7/UniversalMac_13.3_22E252_Restore.ipsw">UniversalMac_13.3_22E252_Restore.ipsw</a></td>
+<td>YES</td>
+<td>3&#x2F;27&#x2F;23</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-48346/EFF99C1E-C408-4E7A-A448-12E1468AF06C/UniversalMac_13.2.1_22D68_Restore.ipsw">UniversalMac_13.2.1_22D68_Restore.ipsw</a></td>
+<td>YES</td>
+<td>2&#x2F;13&#x2F;23</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35688/0350BB21-2B4B-4850-BF77-70B830283B28/UniversalMac_13.2_22D49_Restore.ipsw">UniversalMac_13.2_22D49_Restore.ipsw</a></td>
+<td>YES</td>
+<td>1&#x2F;23&#x2F;23</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-60270/0A7F49BA-FC31-4AD9-8E45-49B1FB9128A6/UniversalMac_13.1_22C65_Restore.ipsw">UniversalMac_13.1_22C65_Restore.ipsw</a></td>
+<td>YES</td>
+<td>12&#x2F;13&#x2F;22</td>
+</tr>
+<tr>
 <td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-93802/A7270B0F-05F8-43D1-A9AD-40EF5699E82C/UniversalMac_13.0.1_22A400_Restore.ipsw">UniversalMac_13.0.1_22A400_Restore.ipsw</a></td>
 <td>YES</td>
 <td>11&#x2F;09&#x2F;22</td>
@@ -306,85 +337,133 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>UniversalMac_13.0_22A380_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-83954/6E06237C-1B56-4932-A8E1-3A07A3EE03A8/UniversalMac_13.4_22F63_Restore.ipsw">UniversalMac_13.4_22F63_Restore.ipsw</a></td>
+<td>YES</td>
+<td>5&#x2F;11&#x2F;23</td>
+<td>RC 2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023SpringFCS/fullrestores/032-44024/731F1533-53BE-4CEB-AA05-74F333CA904A/UniversalMac_13.4_22F62_Restore.ipsw">UniversalMac_13.4_22F62_Restore.ipsw</a></td>
+<td>YES</td>
+<td>5&#x2F;09&#x2F;23</td>
+<td>RC</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/032-63669/7C0F9BA8-35C0-457F-AF56-6943D58A2CDB/UniversalMac_13.3_22E5246b_Restore.ipsw">UniversalMac_13.3_22E5246b_Restore.ipsw</a></td>
+<td>YES</td>
+<td>3&#x2F;16&#x2F;23</td>
+<td>Beta 4</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/032-60411/1DDA996F-B620-4770-8FFE-87AB2043784D/UniversalMac_13.3_22E5236f_Restore.ipsw">UniversalMac_13.3_22E5236f_Restore.ipsw</a></td>
+<td>YES</td>
+<td>3&#x2F;06&#x2F;23</td>
+<td>Beta 3</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/032-54760/AE02E378-FD59-474D-93AB-C52617103C72/UniversalMac_13.3_22E5230e_Restore.ipsw">UniversalMac_13.3_22E5230e_Restore.ipsw</a></td>
+<td>YES</td>
+<td>02&#x2F;28&#x2F;23</td>
+<td>Beta 2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/032-01932/676E0981-4535-4942-A4AE-E14C604CE719/UniversalMac_13.3_22E5219e_Restore.ipsw">UniversalMac_13.3_22E5219e_Restore.ipsw</a></td>
+<td>YES</td>
+<td>02&#x2F;16&#x2F;23</td>
+<td>Beta 1</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterFCS/fullrestores/032-35688/0350BB21-2B4B-4850-BF77-70B830283B28/UniversalMac_13.2_22D49_Restore.ipsw">UniversalMac_13.2_22D49_Restore.ipsw</a></td>
+<td>YES</td>
+<td>01&#x2F;18&#x2F;23</td>
+<td>RC</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2023WinterSeed/fullrestores/032-33181/62ECE236-5806-4136-AD08-EDC026FD80A5/UniversalMac_13.2_22D5038i_Restore.ipsw">UniversalMac_13.2_22D5038i_Restore.ipsw</a></td>
+<td>YES</td>
+<td>01&#x2F;11&#x2F;23</td>
+<td>B2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022FallFCS/fullrestores/012-92188/2C38BCD1-2BFF-4A10-B358-94E8E28BE805/UniversalMac_13.0_22A380_Restore.ipsw">UniversalMac_13.0_22A380_Restore.ipsw</a></td>
 <td>YES</td>
 <td>10&#x2F;20&#x2F;22</td>
 <td>RC 2</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A379_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022FallFCS/fullrestores/071-08994/1118ADF4-1CC9-4554-9333-B1F64CF0C820/UniversalMac_13.0_22A379_Restore.ipsw">UniversalMac_13.0_22A379_Restore.ipsw</a></td>
 <td>YES</td>
 <td>10&#x2F;18&#x2F;22</td>
 <td>RC</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5373b_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-84563/2FC38C63-3213-4BB6-8E41-2B066332CBE6/UniversalMac_13.0_22A5373b_Restore.ipsw">UniversalMac_13.0_22A5373b_Restore.ipsw</a></td>
 <td>YES</td>
 <td>10&#x2F;11&#x2F;22</td>
 <td>Beta 11</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5365d_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-83054/16ECAA12-3A1B-4663-B49B-B1563ECD4314/UniversalMac_13.0_22A5365d_Restore.ipsw">UniversalMac_13.0_22A5365d_Restore.ipsw</a></td>
 <td>YES</td>
 <td>10&#x2F;4&#x2F;22</td>
 <td>Beta 10</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5358e_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-71790/AF5A04A6-FF20-44C1-9BFF-43081BDB4D8C/UniversalMac_13.0_22A5358e_Restore.ipsw">UniversalMac_13.0_22A5358e_Restore.ipsw</a></td>
 <td>YES</td>
 <td>9&#x2F;27&#x2F;22</td>
 <td>Beta 9</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5352e_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-70113/6F1F08B7-9A1B-48A9-93DB-55EE21121C87/UniversalMac_13.0_22A5352e_Restore.ipsw">UniversalMac_13.0_22A5352e_Restore.ipsw</a></td>
 <td>YES</td>
 <td>9&#x2F;20&#x2F;22</td>
 <td>Beta 8</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5342f_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-66750/108EF06D-FBEE-4910-BA83-56A5C9B54110/UniversalMac_13.0_22A5342f_Restore.ipsw">UniversalMac_13.0_22A5342f_Restore.ipsw</a></td>
 <td>YES</td>
 <td>9&#x2F;09&#x2F;22</td>
 <td>Beta 7</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5331f_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-61458/80300AD0-69E5-4429-AE3E-A936CA83B5FC/UniversalMac_13.0_22A5331f_Restore.ipsw">UniversalMac_13.0_22A5331f_Restore.ipsw</a></td>
 <td>YES</td>
 <td>8&#x2F;25&#x2F;22</td>
 <td>Beta 6</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5321d_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-51397/8EF0874D-388A-4F62-B58A-89F968DD3082/UniversalMac_13.0_22A5321d_Restore.ipsw">UniversalMac_13.0_22A5321d_Restore.ipsw</a></td>
 <td>YES</td>
 <td>8&#x2F;08&#x2F;22</td>
 <td>Beta 5</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5311f_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-43316/6CE4D83A-E44C-4DD1-B47F-DE168355662E/UniversalMac_13.0_22A5311f_Restore.ipsw">UniversalMac_13.0_22A5311f_Restore.ipsw</a></td>
 <td>YES</td>
 <td>7&#x2F;27&#x2F;22</td>
 <td>Beta 4</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5295i_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-38309/6EDC76A0-4432-4C64-83C5-F43C885A75D6/UniversalMac_13.0_22A5295i_Restore.ipsw">UniversalMac_13.0_22A5295i_Restore.ipsw</a></td>
 <td>YES</td>
 <td>7&#x2F;11&#x2F;22</td>
 <td>Public</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5295h_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-34274/130176F5-C4CB-4664-A2F0-F29CA1281694/UniversalMac_13.0_22A5295h_Restore.ipsw">UniversalMac_13.0_22A5295h_Restore.ipsw</a></td>
 <td>YES</td>
 <td>7&#x2F;06&#x2F;22</td>
 <td>Beta 3</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5286j_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-30346/9DD787A7-044B-4650-86D4-84E80B6B9C36/UniversalMac_13.0_22A5286j_Restore.ipsw">UniversalMac_13.0_22A5286j_Restore.ipsw</a></td>
 <td>YES</td>
 <td>6&#x2F;22&#x2F;22</td>
 <td>Beta 2</td>
 </tr>
 <tr>
-<td>UniversalMac_13.0_22A5266r_Restore.ipsw</td>
+<td><a target="_blank" rel="noopener" href="https://updates.cdn-apple.com/2022SummerSeed/fullrestores/012-20268/EBB26134-9822-4379-A9E8-2E788D253B88/UniversalMac_13.0_22A5266r_Restore.ipsw">UniversalMac_13.0_22A5266r_Restore.ipsw</a></td>
 <td>YES</td>
 <td>6&#x2F;06&#x2F;22</td>
 <td>Beta 1</td>
@@ -433,7 +512,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年11月11日</div>
+          <div>2023年6月8日</div>
         </div>
       
       
@@ -464,6 +543,12 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/post/8d5e2b24-b40f-4d5c-8812-04357ec4a4fd.html" title="macOS-Mac关闭开盖自动开机">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">macOS-Mac关闭开盖自动开机</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
@@ -480,8 +565,10 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
     <script type="text/javascript">
       Fluid.utils.loadComments('#lv-container', function() {
@@ -492,7 +579,8 @@
   </div>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -504,7 +592,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 

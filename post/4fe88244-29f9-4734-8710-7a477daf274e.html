@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r &amp;#x27;-FileName&lt;CreationDate&amp;#x27; -d &quot;%Y%m%d&#x2F;REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&amp;qu">
+    <meta name="description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；  修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="exiftool使用">
 <meta property="og:url" content="https://dnacore.github.io/post/4fe88244-29f9-4734-8710-7a477daf274e.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r &amp;#x27;-FileName&lt;CreationDate&amp;#x27; -d &quot;%Y%m%d&#x2F;REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&amp;qu">
+<meta property="og:description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；  修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-17T12:11:21.000Z">
-<meta property="article:modified_time" content="2022-06-14T03:21:42.214Z">
+<meta property="article:modified_time" content="2023-04-28T08:55:32.339Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="exif">
 <meta property="article:tag" content="exiftool">
@@ -70,7 +70,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -83,7 +83,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
 
 
 <body>
@@ -116,7 +116,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -128,7 +128,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -140,7 +140,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -152,7 +152,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -164,7 +164,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -172,15 +172,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -220,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          896 字
+          1k 字
         
       </span>
     
@@ -231,7 +232,7 @@
         
         
         
-          8 分钟
+          9 分钟
         
       </span>
     
@@ -274,7 +275,14 @@
             
               <div class="markdown-body">
                 
-                <h2 id="修改标签的语法"><a href="#修改标签的语法" class="headerlink" title="修改标签的语法"></a>修改标签的语法</h2><p><a target="_blank" rel="noopener" href="https://exiftool.org/#writing">https://exiftool.org/#writing</a></p>
+                <h2 id="下载安装-exiftool"><a href="#下载安装-exiftool" class="headerlink" title="下载安装 exiftool"></a>下载安装 exiftool</h2><ol>
+<li>从 <a target="_blank" rel="noopener" href="https://exiftool.org/index.html">exiftool 官网</a>下载最新的 tar.gz 包；</li>
+<li>解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；<!--
+为什么只保留 exiftool 可执行文件和 lib 文件夹：
+当删除除了exiftool的文件时，执行exiftool，提示需要lib文件夹
+--></li>
+</ol>
+<h2 id="修改标签的语法"><a href="#修改标签的语法" class="headerlink" title="修改标签的语法"></a>修改标签的语法</h2><p><a target="_blank" rel="noopener" href="https://exiftool.org/#writing">https://exiftool.org/#writing</a></p>
 <ul>
 <li><p>使用 exiftool 重命名文件<br>官方文档地址：<a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">https://exiftool.org/filename.html</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">exiftool -r &#x27;-FileName&lt;CreationDate&#x27; -d &quot;%Y%m%d/REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.MOV<br>exiftool -r &#x27;-FileName&lt;CreationDate&#x27; -d &quot;%Y%m%d/REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.m4a<br>exiftool -r &#x27;-FileName&lt;DateTimeOriginal&#x27; -d &quot;%Y%m%d/IMG_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.HEIC<br>exiftool -r &#x27;-FileName&lt;DateTimeOriginal&#x27; -d &quot;%Y%m%d/IMG_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.JPG<br></code></pre></td></tr></table></figure>
@@ -295,7 +303,10 @@
 </li>
 </ul>
 <h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><ul>
-<li><code>exiftool -g some_file</code>或者<code>exiftool -G some_file</code>以分组形式查看exif信息</li>
+<li><p><code>exiftool -g some_file</code>或者<code>exiftool -G some_file</code>以分组形式查看exif信息</p>
+</li>
+<li><p><code>exiftool -s some_file</code> 查看所有标签名称以及对应的值</p>
+</li>
 </ul>
 
                 
@@ -342,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年6月14日</div>
+          <div>2023年4月28日</div>
         </div>
       
       
@@ -395,8 +406,10 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
     <script type="text/javascript">
       Fluid.utils.loadComments('#lv-container', function() {
@@ -407,7 +420,8 @@
   </div>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -419,7 +433,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 

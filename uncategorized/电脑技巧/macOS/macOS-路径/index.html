@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelper">
+    <meta name="description" content="macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  软件默认设置路径~&#x2F;Library&#x2F;Preferences">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS路径">
 <meta property="og:url" content="https://dnacore.github.io/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%B7%AF%E5%BE%84/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="macOS 文件路径系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  特权文件路径，删除后可取消某些app的特权 1&#x2F;Library&#x2F;PrivilegedHelper">
+<meta property="og:description" content="macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  软件默认设置路径~&#x2F;Library&#x2F;Preferences">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-26T06:19:43.000Z">
-<meta property="article:modified_time" content="2022-11-11T03:56:08.000Z">
+<meta property="article:modified_time" content="2023-04-04T12:04:10.070Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -69,7 +69,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.3","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -82,7 +82,7 @@
 
 
   
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 7.0.0-rc1"></head>
 
 
 <body>
@@ -115,7 +115,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
-                首页
+                <span>首页</span>
               </a>
             </li>
           
@@ -127,7 +127,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/archives/">
                 <i class="iconfont icon-archive-fill"></i>
-                归档
+                <span>归档</span>
               </a>
             </li>
           
@@ -139,7 +139,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/categories/">
                 <i class="iconfont icon-category-fill"></i>
-                分类
+                <span>分类</span>
               </a>
             </li>
           
@@ -151,7 +151,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
-                标签
+                <span>标签</span>
               </a>
             </li>
           
@@ -163,7 +163,7 @@
             <li class="nav-item">
               <a class="nav-link" href="/about/">
                 <i class="iconfont icon-user-fill"></i>
-                关于
+                <span>关于</span>
               </a>
             </li>
           
@@ -171,15 +171,16 @@
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <i class="iconfont icon-search"></i>
             </a>
           </li>
           
         
         
           <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
           </li>
         
       </ul>
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.6k 字
+          2.9k 字
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          22 分钟
+          25 分钟
         
       </span>
     
@@ -273,7 +274,8 @@
             
               <div class="markdown-body">
                 
-                <h1 id="macOS-文件路径"><a href="#macOS-文件路径" class="headerlink" title="macOS 文件路径"></a>macOS 文件路径</h1><h2 id="系统路径"><a href="#系统路径" class="headerlink" title="系统路径"></a>系统路径</h2><ul>
+                <h1 id="macOS-文件路径"><a href="#macOS-文件路径" class="headerlink" title="macOS 文件路径"></a>macOS 文件路径</h1><h2 id="macOS-设置快捷方式"><a href="#macOS-设置快捷方式" class="headerlink" title="macOS 设置快捷方式"></a>macOS 设置快捷方式</h2><p><a href="x-help-action://openApp?bundleId=com.apple.keychainaccess">钥匙串访问</a></p>
+<h2 id="系统路径"><a href="#系统路径" class="headerlink" title="系统路径"></a>系统路径</h2><ul>
 <li><p>第三方偏好设置路径</p>
 <ul>
 <li>个人<code>~/Library/PreferencePanes</code></li>
@@ -284,8 +286,11 @@
 </li>
 <li><p>系统更新下载位置<br><code>/Library/Updates</code></p>
 </li>
+<li><p>软件默认设置路径<br><code>~/Library/Preferences</code></p>
+</li>
 <li><p>特权文件路径，删除后可取消某些app的特权</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/Library/</span>PrivilegedHelperTools<br></code></pre></td></tr></table></figure>
+<p>更多关于帮助程序的内容请看<a href="/post/3454943f-29b0-4da2-86a5-430b1b8fa7c3.html">帮助程序是什么</a></p>
 </li>
 <li><p>拼音输入法用户词库自造词位置</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">~<span class="hljs-regexp">/Library/</span>Containers<span class="hljs-regexp">/com.apple.inputmethod.SCIM/</span><br>~<span class="hljs-regexp">/Library/</span>Dictionaries/DynamicPhraseLexicon_zh_Hans.db<br></code></pre></td></tr></table></figure>
@@ -297,7 +302,7 @@
 </li>
 <li><p>桌面壁纸<br><code>/Library/Desktop Pictures/</code><br>[点击直达](file:&#x2F;&#x2F;&#x2F;Library&#x2F;Desktop Pictures&#x2F;)<br>[点击直达localhost形式](file:&#x2F;&#x2F;localhost&#x2F;Library&#x2F;Desktop Pictures&#x2F;)</p>
 </li>
-<li><p>部分系统程序 归档实用工具、文件夹操作设置、访达、聚焦等等<br><code>/System/Library/CoreServices</code><br><a href="file:///System/Library/CoreServices">点击直达</a></p>
+<li><p>部分系统程序 归档实用工具、文件夹操作设置、访达、聚焦、抹掉助理等等<br><code>/System/Library/CoreServices</code><br><a href="file:///System/Library/CoreServices">点击直达</a></p>
 </li>
 <li><p>鼠标指针<br><code>/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/</code><br><a href="file:///System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/">点击直达</a></p>
 </li>
@@ -311,8 +316,12 @@
 </li>
 <li><p>iCloud云盘 iCloud Drive<br><code>~/Library/Mobile\ Documents/com~apple~CloudDocs/</code></p>
 </li>
+<li><p>新用户目录模板<br><code>/System/Library/Templates</code></p>
+</li>
 </ul>
 <h2 id="应用软件路径"><a href="#应用软件路径" class="headerlink" title="应用软件路径"></a>应用软件路径</h2><ul>
+<li><p>预览图片查看器中自定义颜色存储路径<br><code>~/Library/Colors</code>里面的clr文件</p>
+</li>
 <li><p>Telegram 升级文件路径<br><code>~/Library/Caches/ru.keepcoder.Telegram/org.sparkle-project.Sparkle/PersistentDownloads</code></p>
 </li>
 <li><p>语音备忘录 Voice Memo<br><code>$HOME/Library/Application Support/com.apple.voicememos/Recordings</code><br><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662">https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662</a></p>
@@ -334,7 +343,9 @@
 </li>
 <li><p>百度网盘数据库路径<br><code>~/Library/Application Support/com.baidu.BaiduNetdisk-mac</code></p>
 </li>
-<li><p>Charlse 大文件缓存路径<br><code>$TMPDIR/charles8637968132878592540.tmp</code></p>
+<li><p>Charles 大文件缓存路径<br><code>$TMPDIR/charles8637968132878592540.tmp</code></p>
+</li>
+<li><p>Charles 配置文件路径<br><code>~/Library/Application Support/Charles</code><br><code>$HOME/Library/Preferences/com.xk72.charles.config</code></p>
 </li>
 <li><p>Mac App Store 下载软件保存路径<br><code>$(getconf DARWIN_USER_TEMP_DIR)/com.apple.appstoreagent/com.apple.appstore/</code></p>
 </li>
@@ -344,6 +355,9 @@
 </li>
 <li><p>VS Code 用户自建代码片段<br><code>~/Library/Application Support/Code/User/snippets/</code></p>
 </li>
+</ul>
+<h2 id="垃圾文件路径"><a href="#垃圾文件路径" class="headerlink" title="垃圾文件路径"></a>垃圾文件路径</h2><ul>
+<li>&#x2F;private&#x2F;var&#x2F;db&#x2F;diagnostics&#x2F;Signpost</li>
 </ul>
 
                 
@@ -388,7 +402,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年11月11日</div>
+          <div>2023年4月4日</div>
         </div>
       
       
@@ -419,9 +433,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Windows/Windows-WES7%E6%BF%80%E6%B4%BB/" title="WES7激活">
+                      <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/macOS/macOS-%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E4%BB%A3%E7%90%86/" title="macOS-设置系统代理">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">WES7激活</span>
+                        <span class="hidden-mobile">macOS-设置系统代理</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -441,8 +455,10 @@
             </div>
 
             
-  <article id="comments" lazyload>
-    
+  
+  
+    <article id="comments" lazyload>
+      
   <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
     <script type="text/javascript">
       Fluid.utils.loadComments('#lv-container', function() {
@@ -453,7 +469,8 @@
   </div>
 
 
-  </article>
+    </article>
+  
 
 
           </article>
@@ -465,7 +482,10 @@
       
   <aside class="sidebar" style="margin-left: -1rem">
     <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
