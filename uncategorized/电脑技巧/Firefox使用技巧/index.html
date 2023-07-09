@@ -16,17 +16,17 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="👉Firefox使用技巧">
+    <meta name="description" content="浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  参考：https:&#x2F;&#x2F;www.ivpn.net&#x2F;knowledgebase&#x2F;158&#x2F;My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html  延长自动保存会话时">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Firefox使用技巧">
-<meta property="og:url" content="https://dnacore.github.io/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/FireFox%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:url" content="https://dnacore.github.io/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Firefox%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/index.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="👉Firefox使用技巧">
+<meta property="og:description" content="浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  参考：https:&#x2F;&#x2F;www.ivpn.net&#x2F;knowledgebase&#x2F;158&#x2F;My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html  延长自动保存会话时">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-09-19T02:16:33.000Z">
-<meta property="article:modified_time" content="2022-09-19T02:33:00.000Z">
+<meta property="article:published_time" content="2019-03-26T02:51:20.000Z">
+<meta property="article:modified_time" content="2023-05-04T03:52:25.481Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+<meta property="article:tag" content="Firefox">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -137,18 +137,6 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
               <a class="nav-link" href="/tags/">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
@@ -208,8 +196,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-09-19 10:16" pubdate>
-          2022年9月19日 上午
+        <time datetime="2019-03-26 10:51" pubdate>
+          2019年3月26日 上午
         </time>
       </span>
     
@@ -220,7 +208,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          13 字
+          2.4k 字
         
       </span>
     
@@ -231,7 +219,7 @@
         
         
         
-          1 分钟
+          20 分钟
         
       </span>
     
@@ -274,7 +262,76 @@
             
               <div class="markdown-body">
                 
-                <p>👉<a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/Firefox%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/">Firefox使用技巧</a></p>
+                <h2 id="浏览器配置about-config"><a href="#浏览器配置about-config" class="headerlink" title="浏览器配置about:config"></a>浏览器配置<code>about:config</code></h2><ul>
+<li>Firefox防止WebRTC泄漏IP</li>
+</ul>
+<ol>
+<li><code>about:config</code></li>
+<li><code>media.peerconnection.enabled</code>设置为<code>false</code></li>
+</ol>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.ivpn.net/knowledgebase/158/My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html">https://www.ivpn.net/knowledgebase/158/My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html</a></p>
+<ul>
+<li><p>延长自动保存会话时间，减少磁盘写入<br>about:config -&gt; browser.sessionstore.interval -&gt; 900000<br>参考：<a target="_blank" rel="noopener" href="https://www.servethehome.com/firefox-is-eating-your-ssd-here-is-how-to-fix-it/">https://www.servethehome.com/firefox-is-eating-your-ssd-here-is-how-to-fix-it/</a></p>
+</li>
+<li><p>Firefox 证书管理<br><a target="_blank" rel="noopener" href="https://support.mozilla.org/zh-CN/kb/setting-certificate-authorities-firefox">https://support.mozilla.org/zh-CN/kb/setting-certificate-authorities-firefox</a><br>安装某些VPN软件后，有可能会修改Firefox设置<code>about:config</code>中<code>enterprise_roots</code>有关的选项<br><a target="_blank" rel="noopener" href="https://support.mozilla.org/en-US/questions/1230877">https://support.mozilla.org/en-US/questions/1230877</a></p>
+</li>
+<li><p>历史记录保存天数<br><code>browser.migrate.chrome.history.maxAgeInDays</code></p>
+</li>
+</ul>
+<h2 id="用户配置文件"><a href="#用户配置文件" class="headerlink" title="用户配置文件"></a>用户配置文件</h2><ul>
+<li><p>从旧的配置文档中恢复重要数据<br><a target="_blank" rel="noopener" href="https://support.mozilla.org/zh-CN/kb/%E4%BB%8E%E6%97%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3%E4%B8%AD%E6%81%A2%E5%A4%8D%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE">https://support.mozilla.org/zh-CN/kb/%E4%BB%8E%E6%97%A7%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E6%A1%A3%E4%B8%AD%E6%81%A2%E5%A4%8D%E9%87%8D%E8%A6%81%E6%95%B0%E6%8D%AE</a></p>
+</li>
+<li><p>用户配置文件储存了哪些信息？<br><a target="_blank" rel="noopener" href="https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka">https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka</a></p>
+</li>
+<li><p>新建一个用户配置</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -CreateProfile <span class="hljs-string">&quot;JoelUser c:\internet\joelusers-moz-profile&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>用已存在的用户配置启动Firefox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">nohup</span> /Applications/Firefox.app/Contents/MacOS/firefox -p <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/Documents/个人文档/FirefoxProfile&quot;</span> -no-remote &gt; /dev/null 2&gt;&amp;1 &amp;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>启动用户配置管理器<code>ProfileManager</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -ProfileManager<br><span class="hljs-comment"># 或者</span><br>firefox -P<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>通过用户配置名称来启动Firefox</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -P <span class="hljs-string">&quot;profile_name&quot;</span><br><span class="hljs-comment"># 或者</span><br>firefox -ProfileManager <span class="hljs-string">&quot;profile_name&quot;</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>关于<code>-no-remote</code>参数的解释<br><a target="_blank" rel="noopener" href="http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile">http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile</a></p>
+</li>
+</ul>
+<h2 id="自定义-css"><a href="#自定义-css" class="headerlink" title="自定义 css"></a>自定义 css</h2><p>css 配置文件路径 <code>[用户数据目录]/chrome/UserContent.css</code>，<br>示例自定义代码：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@-moz-document</span> domain(example.com) &#123;<br>    <span class="hljs-selector-tag">img</span> &#123; <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.05</span> <span class="hljs-meta">!important</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>参考：<br><a target="_blank" rel="noopener" href="https://superuser.com/questions/318912/how-can-i-override-the-css-of-a-site-in-firefox-with-usercontent-css">https://superuser.com/questions/318912/how-can-i-override-the-css-of-a-site-in-firefox-with-usercontent-css</a><br><a target="_blank" rel="noopener" href="https://davidwalsh.name/firefox-user-stylesheet">https://davidwalsh.name/firefox-user-stylesheet</a></p>
+<h2 id="自定义-Firefox-用户界面-UserChrome-css"><a href="#自定义-Firefox-用户界面-UserChrome-css" class="headerlink" title="自定义 Firefox 用户界面 UserChrome.css"></a>自定义 Firefox 用户界面 UserChrome.css</h2><p><code>[用户数据目录]/chrome/UserChrome.css</code></p>
+<ul>
+<li>更多关于 UserChrome.css -&gt; 解决新版 Firefox 菜单选项上下间距过大 <a target="_blank" rel="noopener" href="https://support.mozilla.org/de/questions/1337841">https://support.mozilla.org/de/questions/1337841</a></li>
+<li>生成 UserChrome.css 的网站 <a target="_blank" rel="noopener" href="https://www.userchrome.org/download-userchrome-css.html">https://www.userchrome.org/download-userchrome-css.html</a></li>
+</ul>
+<h2 id="Firefox-compact-mode-紧凑模式"><a href="#Firefox-compact-mode-紧凑模式" class="headerlink" title="Firefox compact mode 紧凑模式"></a>Firefox compact mode 紧凑模式</h2><ol>
+<li>在<code>地址栏</code>里输入<code>about:config</code>，然后按回车。</li>
+<li>有时会出现警告页面。点击<code>我接受此风险</code>，请继续！接受风险并继续，以打开 <code>about:config</code> 页面。</li>
+<li>找到首选项 <code>browser.compactmode.show</code>。</li>
+<li>将其值切换为 <code>true</code>，然后关闭该面板。</li>
+<li>点击菜单按钮Fx89menuButton打开菜单面板。</li>
+<li>点击 <code>更多工具</code>。</li>
+<li>选择 <code>定制工具栏...</code>。</li>
+<li>在面板底部，点击<code>密度</code>。</li>
+<li>在菜单选项中选择 <code>紧凑（已经不支持）</code>。</li>
+</ol>
+<!--
+参考：https://support.mozilla.org/en-US/kb/compact-mode-workaround-firefox
+-->
+
+
+<h2 id="Firefox-container"><a href="#Firefox-container" class="headerlink" title="Firefox container"></a>Firefox container</h2><ul>
+<li>当点击了【Remember my decision for this site】发现没有办法修改回去怎么办？<ol>
+<li>打开<a href="about:debugging#/runtime/this-firefox">about:debugging#&#x2F;runtime&#x2F;this-firefox</a></li>
+<li>找到<code>Firefox Multi-Account Containers</code>，点击右侧的<code>Inspect</code></li>
+<li>定位到<code>Storage/Extension Storage</code>这里就可以直接修改扩展的配置，找到对应的网址然后修改即可。</li>
+</ol>
+</li>
+</ul>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p><a href="">Firefox 终极隐私指南</a></p>
 
                 
               </div>
@@ -283,6 +340,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Firefox/">#Firefox</a>
+      
+    </div>
   
 </div>
 
@@ -293,7 +357,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>Firefox使用技巧</div>
-      <div>https://dnacore.github.io/uncategorized/电脑技巧/FireFox使用技巧/index.html</div>
+      <div>https://dnacore.github.io/uncategorized/电脑技巧/Firefox使用技巧/</div>
     </div>
     <div class="license-meta">
       
@@ -305,13 +369,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年9月19日</div>
+          <div>2019年3月26日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年9月19日</div>
+          <div>2023年5月4日</div>
         </div>
       
       
@@ -342,9 +406,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/d9b26dea-6284-4db0-a7f1-eb6af558c08d.html" title="macOS-关闭macOS的SWAP交换分区">
+                      <a href="/post/3a8192e8-5836-46d8-833f-2c33b342ed66.html" title="特殊字符">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">macOS-关闭macOS的SWAP交换分区</span>
+                        <span class="hidden-mobile">特殊字符</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -352,8 +416,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/uncategorized/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7/%E6%A0%91%E8%8E%93%E6%B4%BE/%E6%A0%91%E8%8E%93%E6%B4%BE-%E5%BC%80%E5%90%AFssh%E8%BF%9E%E6%8E%A5/index.html" title="树莓派-开启ssh连接">
-                        <span class="hidden-mobile">树莓派-开启ssh连接</span>
+                      <a href="/uncategorized/%E5%85%B6%E4%BB%96%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/CocoaPods-%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3Q-A/" title="CocoaPods-遇到的问题以及解决Q&amp;A">
+                        <span class="hidden-mobile">CocoaPods-遇到的问题以及解决Q&amp;A</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
