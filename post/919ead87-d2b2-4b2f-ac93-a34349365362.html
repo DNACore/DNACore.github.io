@@ -70,7 +70,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -114,7 +114,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -126,7 +126,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -138,7 +138,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -150,7 +150,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -257,8 +257,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">Homebrew-brew-macOS包管理工具</h1>
+            <h1 id="seo-header">Homebrew-brew-macOS包管理工具</h1>
             
             
               <div class="markdown-body">
@@ -276,9 +275,9 @@
 <h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="HomeBrew环境变量"><a href="#HomeBrew环境变量" class="headerlink" title="HomeBrew环境变量"></a>HomeBrew环境变量</h3><p><a target="_blank" rel="noopener" href="https://docs.brew.sh/Manpage#environment">https://docs.brew.sh/Manpage#environment</a></p>
 <h3 id="HomeBrew与Python"><a href="#HomeBrew与Python" class="headerlink" title="HomeBrew与Python"></a>HomeBrew与Python</h3><blockquote>
 <p>Python has been installed as<br>  &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3</p>
-<p>Unversioned symlinks <code>python</code>, <code>python-config</code>, <code>pip</code> etc. pointing to<br><code>python3</code>, <code>python3-config</code>, <code>pip3</code> etc., respectively, have been installed into<br>  &#x2F;usr&#x2F;local&#x2F;opt&#x2F;<a href="mailto:&#112;&#121;&#116;&#x68;&#111;&#110;&#64;&#51;&#x2e;&#57;">&#112;&#121;&#116;&#x68;&#111;&#110;&#64;&#51;&#x2e;&#57;</a>&#x2F;libexec&#x2F;bin</p>
+<p>Unversioned symlinks <code>python</code>, <code>python-config</code>, <code>pip</code> etc. pointing to<br><code>python3</code>, <code>python3-config</code>, <code>pip3</code> etc., respectively, have been installed into<br>  &#x2F;usr&#x2F;local&#x2F;opt&#x2F;<a href="mailto:&#112;&#x79;&#x74;&#104;&#111;&#x6e;&#x40;&#51;&#x2e;&#x39;">&#112;&#x79;&#x74;&#104;&#111;&#x6e;&#x40;&#51;&#x2e;&#x39;</a>&#x2F;libexec&#x2F;bin</p>
 <p>You can install Python packages with<br>  pip3 install <package><br>They will install into the site-package directory<br>  &#x2F;usr&#x2F;local&#x2F;lib&#x2F;python3.9&#x2F;site-packages</p>
-<p>tkinter is no longer included with this formula, but it is available separately:<br>  brew install <a href="mailto:&#112;&#121;&#x74;&#104;&#x6f;&#110;&#x2d;&#x74;&#x6b;&#x40;&#x33;&#x2e;&#57;">&#112;&#121;&#x74;&#104;&#x6f;&#110;&#x2d;&#x74;&#x6b;&#x40;&#x33;&#x2e;&#57;</a></p>
+<p>tkinter is no longer included with this formula, but it is available separately:<br>  brew install <a href="mailto:&#112;&#121;&#116;&#x68;&#x6f;&#110;&#45;&#116;&#x6b;&#x40;&#51;&#x2e;&#57;">&#112;&#121;&#116;&#x68;&#x6f;&#110;&#45;&#116;&#x6b;&#x40;&#51;&#x2e;&#57;</a></p>
 <p>See: <a target="_blank" rel="noopener" href="https://docs.brew.sh/Homebrew-and-Python">https://docs.brew.sh/Homebrew-and-Python</a></p>
 </blockquote>
 <h3 id="为-homeBrew-设置代理"><a href="#为-homeBrew-设置代理" class="headerlink" title="为 homeBrew 设置代理"></a>为 homeBrew 设置代理</h3><p><a target="_blank" rel="noopener" href="https://getpocket.com/read/3537286287">homebrew不使用代理的问题</a></p>
@@ -298,9 +297,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Homebrew/">#Homebrew</a>
+        <a href="/tags/Homebrew/" class="print-no-link">#Homebrew</a>
       
-        <a href="/tags/brew/">#brew</a>
+        <a href="/tags/brew/" class="print-no-link">#brew</a>
       
     </div>
   
@@ -341,7 +340,7 @@
             
               
               
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
                     <i class="iconfont icon-by"></i>
                   </span>

@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.4","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -105,7 +105,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
+              <a class="nav-link" href="/" target="_self">
                 <i class="iconfont icon-home-fill"></i>
                 <span>首页</span>
               </a>
@@ -117,7 +117,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
+              <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
               </a>
@@ -129,7 +129,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
+              <a class="nav-link" href="/tags/" target="_self">
                 <i class="iconfont icon-tags-fill"></i>
                 <span>标签</span>
               </a>
@@ -141,7 +141,7 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
+              <a class="nav-link" href="/about/" target="_self">
                 <i class="iconfont icon-user-fill"></i>
                 <span>关于</span>
               </a>
@@ -209,12 +209,134 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
+        
+        <a href="/post/4c481a2f-b1fc-405e-88bb-72481662d422.html" target="_self">
+          Rust
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/4c481a2f-b1fc-405e-88bb-72481662d422.html" target="_self">
+        <div>
+          安装rust安装，因为被墙的原因，在国内几乎很难安装，需要通过代理安装。但是rustup却很容易，一般在linux下，通过官方指定的下列语句，基本可以安装rustup。1curl -sSf https://sh.rustup.rs | sh
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-05-09 16:52" pubdate>
+              2019-05-09
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Rust/">#Rust</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/post/919ead87-d2b2-4b2f-ac93-a34349365362.html" target="_self">
+          Homebrew-brew-macOS包管理工具
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/919ead87-d2b2-4b2f-ac93-a34349365362.html" target="_self">
+        <div>
+          简介macOS的包管理工具主页：https://brew.sh/index_zh-cn 安装123/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;# 同时在终端显示安装日志并且将安装日志保存在文件中/usr/bin/ruby -e
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-04-15 11:20" pubdate>
+              2019-04-15
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Homebrew/">#Homebrew</a>
+            
+              <a href="/tags/brew/">#brew</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/post/9b40e169-5ab4-45f1-a907-e5b54388f025.html" target="_self">
+          macOS-系统下载以及安装
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/9b40e169-5ab4-45f1-a907-e5b54388f025.html" target="_self">
+        <div>
+          关于基于 Intel 的 Mac 电脑上的 macOS 恢复功能  在搭载 Apple 芯片的 Mac 上使用 macOS 恢复  官方给出的重装 macOS 的方法https://support.apple.com/zh-cn/guide/mac-help/mchlp1599/mac  目前无法直接下载 macOS 系统，需要借助第三方工具才能下载。http://dosdude1.com/so
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-04-12 15:01" pubdate>
+              2019-04-12
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/macOS/">#macOS</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
         
         <a href="/post/e6798eb6-3151-4467-9eab-95803fc54d0a.html" target="_self">
           获取电脑公网IP
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/e6798eb6-3151-4467-9eab-95803fc54d0a.html" target="_self">
@@ -249,12 +371,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/e151071a-df76-43fd-8e98-3f057187f383.html" target="_self">
           Transmission-BT-PT
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/e151071a-df76-43fd-8e98-3f057187f383.html" target="_self">
@@ -293,12 +415,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/68d559fa-8c36-4a58-b983-23beeea6fa6a.html" target="_self">
           macOS-通过命令获取当前WiFi的SSID
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/68d559fa-8c36-4a58-b983-23beeea6fa6a.html" target="_self">
@@ -335,17 +457,17 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/854ed6da-1428-43fa-9f5b-c653fc3a15e3.html" target="_self">
           Linux-rsync文件和目录同步工具
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/854ed6da-1428-43fa-9f5b-c653fc3a15e3.html" target="_self">
         <div>
-          The delta algorithm is not used when copying to a local filesystem.  rsyncrsync命令是一个远程数据同步工具，可通过LAN&#x2F;WAN快速同步多台主机间的文件。rsync使用所谓的“rsync算法”来使本地和远程两个主机之间的文件达到同步，这个算法只传送两个文件的不同部分，而不是每次都整份传送，因此速度相当快。 r
+          rsync The delta algorithm is not used when copying to a local filesystem.本地使用 rsync 同步、复制文件时，差分算法不会起作用。因为经过测试发现，直接复制的速度比使用差分算法再复制更快。  rsync命令是一个远程数据同步工具，可通过LAN&#x2F;WAN快速同步多台主机间的文件。rsync使用所谓的“rsync算法”
         </div>
       </a>
 
@@ -377,12 +499,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/40034f11-8d6c-4a44-b16f-c00f45dfea02.html" target="_self">
           Yarn-包管理器
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/40034f11-8d6c-4a44-b16f-c00f45dfea02.html" target="_self">
@@ -419,12 +541,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/55f59630-432e-43bc-afe5-adb00ea16f67.html" target="_self">
           macOS-列出所有已挂在的磁盘和分区信息
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/55f59630-432e-43bc-afe5-adb00ea16f67.html" target="_self">
@@ -461,12 +583,12 @@
     
     
     <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
+      <h2 class="index-header">
         
         <a href="/post/b0faf008-e47d-46a4-abfd-381ec60dda7d.html" target="_self">
           代码覆盖率检查CodeCoverage
         </a>
-      </h1>
+      </h2>
 
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/b0faf008-e47d-46a4-abfd-381ec60dda7d.html" target="_self">
@@ -499,133 +621,11 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/3a8192e8-5836-46d8-833f-2c33b342ed66.html" target="_self">
-          特殊字符
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/3a8192e8-5836-46d8-833f-2c33b342ed66.html" target="_self">
-        <div>
-          埃及字符  𓁅𓁆𓁇𓁈𓁉𓀀𓀁𓀂𓀃𓀄𓀅𓀆𓀇𓀈𓀉𓀊𓀋𓀌𓀍𓀎𓀏𓀐𓀑𓀒𓀓𓀔𓀕𓀖𓀗𓀘𓀙𓀚𓀛𓀜𓀝𓀞𓀟𓀠𓀡𓀢𓀣𓀤𓀥𓀦𓀧𓀨𓀩𓀪𓀫𓀬𓀻𓀼𓀽𓀾𓀿𓁀𓁁𓁂𓁃𓁄    𓆗𓆏𓆌𓆉𓆈𓅰𓅭𓅪𓅦𓅜𓄿𓃻𓃹𓃷𓃵𓃲𓃱𓃰𓃯𓃬𓆧𓆦𓆣𓆡𓆟   吉兹字母ጿኈቼዽ  扑克牌🂡�
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-27 11:14" pubdate>
-              2019-03-27
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E5%85%B6%E5%AE%83/">#其它</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/aa580300-ed6a-4274-9c9c-1bdb4da7dddb.html" target="_self">
-          Firefox使用技巧
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/aa580300-ed6a-4274-9c9c-1bdb4da7dddb.html" target="_self">
-        <div>
-          浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  参考：https://www.ivpn.net/knowledgebase/158/My-IP-is-being-leaked-by-WebRTC-How-do-I-disable-it.html  延长自动保存会话时
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-26 10:51" pubdate>
-              2019-03-26
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Firefox/">#Firefox</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/ae3aeca0-9e34-45ac-a6ec-1cc87d6abac8.html" target="_self">
-          CocoaPods-遇到的问题以及解决Q&amp;A
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/ae3aeca0-9e34-45ac-a6ec-1cc87d6abac8.html" target="_self">
-        <div>
-          执行pod install失败问题现象： MacBook73:~&#x2F;Documents&#x2F;ProjectPersonal&#x2F;SKeyUtils&#x2F;Example$ pod installAnalyzing dependenciesFetching podspec for SKeyUtils from ../[!] CocoaPods could not find
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-03-18 10:46" pubdate>
-              2019-03-18
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/CocoaPods/">#CocoaPods</a>
-            
-              <a href="/tags/pod/">#pod</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><a class="page-number" href="/page/17/#board">17</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
+      <a class="extend prev" rel="prev" href="/page/13/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#board">12</a><a class="page-number" href="/page/13/#board">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/#board">15</a><a class="page-number" href="/page/16/#board">16</a><span class="space">&hellip;</span><a class="page-number" href="/page/18/#board">18</a><a class="extend next" rel="next" href="/page/15/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
 
