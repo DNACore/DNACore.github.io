@@ -211,6 +211,81 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/post/c841d264-99d6-4b17-ab73-838a8a4c77c2.html" target="_self">
+          Linux-Shell-根据inode删除文件和目录
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/c841d264-99d6-4b17-ab73-838a8a4c77c2.html" target="_self">
+        <div>
+          列出文件和文件夹的 inode  1ls -i   根据 inode 删除文件或者目录  12345# 1. 用 find 的 -delete 参数删除目录(空目录)find . -inum 123456 -delete# 将 find 结果传递到 rm 命令进行删除find ./* -inum 123456 -exec rm -i &#123;&#125; \;
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-28 11:07" pubdate>
+              2019-11-28
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Shell/">#Shell</a>
+            
+              <a href="/tags/Linux/">#Linux</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
+        <a href="/post/619a346a-8d79-4b20-bebd-055c88fd1c51.html" target="_self">
+          Linux-设置时区
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/619a346a-8d79-4b20-bebd-055c88fd1c51.html" target="_self">
+        <div>
+          设置时区命令 123tzselecttimedatectl  参考https://www.cnblogs.com/xiaojianblogs/p/8949932.html
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-11-27 14:38" pubdate>
+              2019-11-27
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/post/9f0831c6-39cf-426a-8f79-1323b6952c84.html" target="_self">
           Linux-服务管理命令-service
         </a>
@@ -419,7 +494,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/post/2169df4e-0e27-4b70-ab32-3daa4a878fec.html" target="_self">
         <div>
-          功能类似的工具hdiutil diskutil hdiutil创建磁盘镜像文件1234567891011# sparse-band-size 后面值中的 32 表示 32MiB 如果需要其它大小可直接修改这个值hdiutil create -size 120g\ -type SPARSEBUNDLE\ -layout GPTSPUD\ -fs APFS\ -volname &quot;Instag
+          功能类似的工具hdiutil diskutil hdiutil创建磁盘镜像文件123456789101112131415161718192021222324# sparse-band-size 后面值中的 32 表示 32MiB 如果需要其它大小可直接修改这个值hdiutil create -size 120g\ -type SPARSEBUNDLE\ -layout GPTSPUD\ -fs A
         </div>
       </a>
 
@@ -526,90 +601,6 @@
               <a href="/tags/apt/">#apt</a>
             
               <a href="/tags/apt-get/">#apt-get</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/post/676bd013-ae0d-469b-9433-ce8f9fdd3e66.html" target="_self">
-          Linux-计划任务工具crontab与计划任务cronjob
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/676bd013-ae0d-469b-9433-ce8f9fdd3e66.html" target="_self">
-        <div>
-          参考：https://www.cnblogs.com/ftl1012/p/crontab.html 12345crontab -l # 列出任务crontab -l &gt; $HOME/crontab.bak # 备份任务/var/spool/cron/&lt;username&gt; &lt; $HOME/crontab.bak # 恢复备份crontab $HOME/crontab.bak
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-23 16:08" pubdate>
-              2019-10-23
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">#Linux</a>
-            
-              <a href="/tags/crontab/">#crontab</a>
-            
-              <a href="/tags/cronjob/">#cronjob</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/post/5ce25011-92e0-4510-8303-e9b12f9d81ae.html" target="_self">
-          树莓派-树莓派基础设置
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/5ce25011-92e0-4510-8303-e9b12f9d81ae.html" target="_self">
-        <div>
-          开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区 1sudo dpkg-reconfigure tzdata  显示时间信息 12timedatectldate  安装Transmission树莓派中使用 tansmission 安装 nodej
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2019-10-23 15:20" pubdate>
-              2019-10-23
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/">#树莓派</a>
             
           </div>
         
