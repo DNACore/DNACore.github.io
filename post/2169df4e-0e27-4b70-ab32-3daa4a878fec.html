@@ -24,7 +24,7 @@
 <meta property="og:description" content="功能类似的工具hdiutil diskutil hdiutil创建磁盘镜像文件123456789101112131415161718192021222324# sparse-band-size 后面值中的 32 表示 32MiB 如果需要其它大小可直接修改这个值hdiutil create -size 120g\ -type SPARSEBUNDLE\ -layout GPTSPUD\ -fs A">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-28T05:37:34.000Z">
-<meta property="article:modified_time" content="2023-08-24T11:49:38.151Z">
+<meta property="article:modified_time" content="2023-08-31T02:11:19.049Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="hdiutil">
@@ -263,7 +263,7 @@
               <div class="markdown-body">
                 
                 <h2 id="功能类似的工具"><a href="#功能类似的工具" class="headerlink" title="功能类似的工具"></a>功能类似的工具</h2><p>hdiutil diskutil</p>
-<h2 id="hdiutil创建磁盘镜像文件"><a href="#hdiutil创建磁盘镜像文件" class="headerlink" title="hdiutil创建磁盘镜像文件"></a>hdiutil创建磁盘镜像文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># sparse-band-size 后面值中的 32 表示 32MiB 如果需要其它大小可直接修改这个值</span><br>hdiutil create -size 120g\<br> -<span class="hljs-built_in">type</span> SPARSEBUNDLE\<br> -layout GPTSPUD\<br> -fs APFS\<br> -volname <span class="hljs-string">&quot;Ins&quot;</span>\<br> -nospotlight\<br> -verbose\<br> -anyowners\<br> -imagekey sparse-band-size=$((<span class="hljs-number">1024</span>*<span class="hljs-number">2</span>*<span class="hljs-number">32</span>))\<br> ./Ins.sparsebundle<br><br><span class="hljs-comment"># 创建加密磁盘映像</span><br>hdiutil create -size 120g\<br> -<span class="hljs-built_in">type</span> SPARSEBUNDLE\<br> -fs APFS\<br> -volname <span class="hljs-string">&quot;CacheDisk&quot;</span>\<br> -layout GPTSPUD\<br> -nospotlight\<br> -verbose\<br> -anyowners\<br> -imagekey sparse-band-size=$((<span class="hljs-number">1024</span>*<span class="hljs-number">2</span>*<span class="hljs-number">32</span>))\<br> -encryption AES-128\<br> ./Cache.sparsebundle<br></code></pre></td></tr></table></figure>
+<h2 id="hdiutil创建磁盘镜像文件"><a href="#hdiutil创建磁盘镜像文件" class="headerlink" title="hdiutil创建磁盘镜像文件"></a>hdiutil创建磁盘镜像文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># sparse-band-size 后面值中的 32 表示 32MiB 如果需要其它大小可直接修改这个值</span><br>hdiutil create -size 120g\<br> -<span class="hljs-built_in">type</span> SPARSEBUNDLE\<br> -layout GPTSPUD\<br> -fs APFS\<br> -volname <span class="hljs-string">&quot;Ins&quot;</span>\<br> -nospotlight\<br> -verbose\<br> -anyowners\<br> -imagekey sparse-band-size=$((<span class="hljs-number">1024</span>*<span class="hljs-number">2</span>*<span class="hljs-number">32</span>))\<br> ./Ins.sparsebundle<br><br><span class="hljs-comment"># 创建加密磁盘映像</span><br>hdiutil create -size 120g\<br> -<span class="hljs-built_in">type</span> SPARSEBUNDLE\<br> -fs APFS\<br> -volname <span class="hljs-string">&quot;CacheLogDisk&quot;</span>\<br> -layout GPTSPUD\<br> -nospotlight\<br> -verbose\<br> -anyowners\<br> -imagekey sparse-band-size=$((<span class="hljs-number">1024</span>*<span class="hljs-number">2</span>*<span class="hljs-number">32</span>))\<br> -encryption AES-128\<br> ./CacheLog.sparsebundle<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><p><code>-imagekey sparse-band-size</code><br>以512字节大小为单位 65536 * 521 &#x3D; 33554432 Bytes &#x3D; 32 MiB</p>
@@ -338,7 +338,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年8月24日</div>
+          <div>2023年8月31日</div>
         </div>
       
       
