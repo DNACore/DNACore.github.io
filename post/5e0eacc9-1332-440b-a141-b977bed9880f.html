@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="VS Code 使用问题 Could not create temporary directory: 权限被拒绝解决：1sudo chown $USER ~&#x2F;Library&#x2F;Caches&#x2F;com.microsoft.VSCode.ShipIt&#x2F; 参考：http:&#x2F;&#x2F;www.zgljl2012.com&#x2F;mac-vscode&#x2F;  VS Code快捷键 多行编辑：alt+shift+鼠标选择 在单词间跳">
+    <meta name="description" content="VS Code 使用VS Code 环境变量https:&#x2F;&#x2F;code.visualstudio.com&#x2F;docs&#x2F;editor&#x2F;variables-reference  ${userHome} &#x3D; ${env:HOME}  问题 Could not create temporary directory: 权限被拒绝解决： 1sudo chown $USER ~&#x2F;Library&#x2F;Cache">
 <meta property="og:type" content="article">
 <meta property="og:title" content="VS Code 使用">
 <meta property="og:url" content="https://dnacore.github.io/post/5e0eacc9-1332-440b-a141-b977bed9880f.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="VS Code 使用问题 Could not create temporary directory: 权限被拒绝解决：1sudo chown $USER ~&#x2F;Library&#x2F;Caches&#x2F;com.microsoft.VSCode.ShipIt&#x2F; 参考：http:&#x2F;&#x2F;www.zgljl2012.com&#x2F;mac-vscode&#x2F;  VS Code快捷键 多行编辑：alt+shift+鼠标选择 在单词间跳">
+<meta property="og:description" content="VS Code 使用VS Code 环境变量https:&#x2F;&#x2F;code.visualstudio.com&#x2F;docs&#x2F;editor&#x2F;variables-reference  ${userHome} &#x3D; ${env:HOME}  问题 Could not create temporary directory: 权限被拒绝解决： 1sudo chown $USER ~&#x2F;Library&#x2F;Cache">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-22T06:09:26.000Z">
-<meta property="article:modified_time" content="2023-07-14T11:23:42.039Z">
+<meta property="article:modified_time" content="2023-10-24T03:24:51.814Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="VSC">
 <meta property="article:tag" content="VSCode">
@@ -209,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          307 字
+          1.4k 字
         
       </span>
     
@@ -220,7 +220,7 @@
         
         
         
-          3 分钟
+          12 分钟
         
       </span>
     
@@ -262,10 +262,21 @@
             
               <div class="markdown-body">
                 
-                <h1 id="VS-Code-使用"><a href="#VS-Code-使用" class="headerlink" title="VS Code 使用"></a>VS Code 使用</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
-<li>Could not create temporary directory: 权限被拒绝<br>解决：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chown</span> <span class="hljs-variable">$USER</span> ~/Library/Caches/com.microsoft.VSCode.ShipIt/<br></code></pre></td></tr></table></figure>
-参考：<a target="_blank" rel="noopener" href="http://www.zgljl2012.com/mac-vscode/">http://www.zgljl2012.com/mac-vscode/</a></li>
+                <h1 id="VS-Code-使用"><a href="#VS-Code-使用" class="headerlink" title="VS Code 使用"></a>VS Code 使用</h1><h2 id="VS-Code-环境变量"><a href="#VS-Code-环境变量" class="headerlink" title="VS Code 环境变量"></a>VS Code 环境变量</h2><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/editor/variables-reference">https://code.visualstudio.com/docs/editor/variables-reference</a></p>
+<ul>
+<li>${userHome} &#x3D; ${env:HOME}</li>
 </ul>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ul>
+<li><p>Could not create temporary directory: 权限被拒绝<br>解决：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo <span class="hljs-built_in">chown</span> <span class="hljs-variable">$USER</span> ~/Library/Caches/com.microsoft.VSCode.ShipIt/<br></code></pre></td></tr></table></figure>
+<!-- 参考：http://www.zgljl2012.com/mac-vscode/ -->
+
+</li>
+<li><p>VS Code 在 <code>terminal.integrated.env.osx</code> 中设置了自定义的PATH在前，但实际上 VS Code 的终端中，自定义的PATH不在最前的问题：</p>
+</li>
+</ul>
+<p>原因是 VS Code 的启动过程，会首先执行 <code>terminal.integrated.env.osx</code> 中设置的环境变量。再执行用户的 <code>.bash_profile</code> 之类的环境配置文件。<br>而这些环境配置文件，又对 PATH 变量进行了修改。导致了如上问题的发生。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode/issues/46693#issuecomment-379358021">https://github.com/microsoft/vscode/issues/46693#issuecomment-379358021</a><br><a target="_blank" rel="noopener" href="https://github.com/microsoft/vscode/issues/46693#issuecomment-379358021">https://github.com/microsoft/vscode/issues/46693#issuecomment-379358021</a><br><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/terminal/profiles#_why-are-there-duplicate-paths-in-the-terminals-path-environment-variable-andor-why-are-they-reversed-on-macos">https://code.visualstudio.com/docs/terminal/profiles#_why-are-there-duplicate-paths-in-the-terminals-path-environment-variable-andor-why-are-they-reversed-on-macos</a></p>
 <h2 id="VS-Code快捷键"><a href="#VS-Code快捷键" class="headerlink" title="VS Code快捷键"></a>VS Code快捷键</h2><ul>
 <li>多行编辑：alt+shift+鼠标选择</li>
 <li>在单词间跳转：option+→<br>  可配合 shift 或者列编辑使用，全选单词列，在单词列前后添加符号等等</li>
@@ -273,6 +284,20 @@
 <li>参数提示：Cmd+Shift+Space</li>
 <li>Flutter代码编辑提示：Cmd + .</li>
 </ul>
+<h2 id="VS-Code-配置"><a href="#VS-Code-配置" class="headerlink" title="VS Code 配置"></a>VS Code 配置</h2><ul>
+<li>保存时文件末尾追加空行：设置 -&gt; “files.insertFinalNewline”: true</li>
+</ul>
+<h2 id="VS-Code-设置保存位置："><a href="#VS-Code-设置保存位置：" class="headerlink" title="VS Code 设置保存位置："></a>VS Code 设置保存位置：</h2><ul>
+<li>工程根目录下(又叫工作区设置)<code>.vscode/settings.json</code></li>
+<li>用户配置目录<code>~/Library/Application Support/Code/User</code></li>
+<li>用户配置文件（又叫用户设置）<code>~/Library/Application Support/Code/User/settings.json</code></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/settings">Visual Studio Code User and Workspace Settings</a></li>
+<li><code>~/Library/Application Support/Code</code></li>
+<li>插件目录<code>~/.vscode/extensions/</code></li>
+</ul>
+<h2 id="文件关联"><a href="#文件关联" class="headerlink" title="文件关联"></a>文件关联</h2><p><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/languages/identifiers">https://code.visualstudio.com/docs/languages/identifiers</a></p>
+<p><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/246745/how-to-reset-file-icons-associated-with-default-program-on-el-capitan">https://apple.stackexchange.com/questions/246745/how-to-reset-file-icons-associated-with-default-program-on-el-capitan</a></p>
+<h2 id="VS-Code-Sippets-代码片段"><a href="#VS-Code-Sippets-代码片段" class="headerlink" title="VS Code Sippets 代码片段"></a>VS Code Sippets 代码片段</h2><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018457312">https://segmentfault.com/a/1190000018457312</a></p>
 
                 
               </div>
@@ -318,7 +343,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月14日</div>
+          <div>2023年10月24日</div>
         </div>
       
       
