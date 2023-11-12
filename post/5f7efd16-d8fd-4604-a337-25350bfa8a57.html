@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;getconf DARWIN_USER_TEMP_DIR getconf DARWIN_USER_CACHE_DIR 更多https:&#x2F;&#x2F;magnusviri.com&#x2F;what-is-var-folders.html">
+    <meta name="description" content="TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;getconf DARWIN_USER_TEMP_DIRNSTemporaryDirectory(); getconf DARWIN_USER_CACHE_DIR 代码方式获取 DARWIN_USER_TEMP_DIR 与 DARWIN_USER">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-关于macOS的临时目录">
 <meta property="og:url" content="https://dnacore.github.io/post/5f7efd16-d8fd-4604-a337-25350bfa8a57.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;getconf DARWIN_USER_TEMP_DIR getconf DARWIN_USER_CACHE_DIR 更多https:&#x2F;&#x2F;magnusviri.com&#x2F;what-is-var-folders.html">
+<meta property="og:description" content="TMPDIRTMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;getconf DARWIN_USER_TEMP_DIRNSTemporaryDirectory(); getconf DARWIN_USER_CACHE_DIR 代码方式获取 DARWIN_USER_TEMP_DIR 与 DARWIN_USER">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-30T10:14:59.000Z">
-<meta property="article:modified_time" content="2023-02-17T09:01:14.654Z">
+<meta property="article:modified_time" content="2023-11-10T12:21:49.290Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -82,7 +82,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+<meta name="generator" content="Hexo 7.0.0"></head>
 
 
 <body>
@@ -208,7 +208,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          181 字
+          9 字
         
       </span>
     
@@ -219,7 +219,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -261,8 +261,11 @@
             
               <div class="markdown-body">
                 
-                <h2 id="TMPDIR"><a href="#TMPDIR" class="headerlink" title="TMPDIR"></a>TMPDIR</h2><p>TMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;<br>getconf DARWIN_USER_TEMP_DIR</p>
+                <h2 id="TMPDIR"><a href="#TMPDIR" class="headerlink" title="TMPDIR"></a>TMPDIR</h2><p>TMPDIR&#x3D;&#x2F;var&#x2F;folders&#x2F;f_&#x2F;xxxxxxxxxx&#x2F;T&#x2F;<br>getconf DARWIN_USER_TEMP_DIR<br>NSTemporaryDirectory();</p>
 <p>getconf DARWIN_USER_CACHE_DIR</p>
+<h2 id="代码方式获取-DARWIN-USER-TEMP-DIR-与-DARWIN-USER-CACHE-DIR"><a href="#代码方式获取-DARWIN-USER-TEMP-DIR-与-DARWIN-USER-CACHE-DIR" class="headerlink" title="代码方式获取 DARWIN_USER_TEMP_DIR 与 DARWIN_USER_CACHE_DIR"></a>代码方式获取 DARWIN_USER_TEMP_DIR 与 DARWIN_USER_CACHE_DIR</h2><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs objc"><span class="hljs-type">char</span> buf[PATH_MAX];<br>size_t len = PATH_MAX;<br>size_t s = confstr(_CS_DARWIN_USER_TEMP_DIR, buf, len);<br>printf(<span class="hljs-string">&quot;_CS_DARWIN_USER_TEMP_DIR(len:%d): %s\n&quot;</span>, (<span class="hljs-type">int</span>)s, buf);<br>s = confstr(_CS_DARWIN_USER_CACHE_DIR, buf, len);<br>printf(<span class="hljs-string">&quot;_CS_DARWIN_USER_CACHE_DIR(len:%d): %s\n&quot;</span>, (<span class="hljs-type">int</span>)s, buf);<br><br><span class="hljs-built_in">NSString</span> *darwinUserTempDirectory = [<span class="hljs-built_in">NSString</span> stringWithCString:buf encoding:<span class="hljs-built_in">NSUTF8StringEncoding</span>];<br><br><br><span class="hljs-built_in">NSString</span> *darwinUserCacheDirectory = [<span class="hljs-built_in">NSString</span> stringWithCString:buf encoding:<span class="hljs-built_in">NSUTF8StringEncoding</span>];<br><br><br></code></pre></td></tr></table></figure>
+
+
 <h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><p><a target="_blank" rel="noopener" href="https://magnusviri.com/what-is-var-folders.html">https://magnusviri.com/what-is-var-folders.html</a></p>
 
                 
@@ -307,7 +310,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年2月17日</div>
+          <div>2023年11月10日</div>
         </div>
       
       

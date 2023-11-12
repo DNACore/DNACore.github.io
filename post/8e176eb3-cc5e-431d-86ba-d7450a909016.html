@@ -16,15 +16,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="zsh options  https:&#x2F;&#x2F;zsh.sourceforge.io&#x2F;Doc&#x2F;Release&#x2F;Options.html  查看内置命令帮助man zshbuiltins  .zshrc文件1234setopt no_nomatch# 兼容 .bash_profilesource ~&#x2F;.bash_profile  12unsetopt INTERACTIVE_COMMENTSunseto">
+    <meta name="description" content="zsh options  https:&#x2F;&#x2F;zsh.sourceforge.io&#x2F;Doc&#x2F;Release&#x2F;Options.html  查看内置命令帮助man zshbuiltins  .zshrc文件1234567setopt no_nomatch# 兼容 .bash_profilesource ~&#x2F;.bash_profile# 如果命令是一个目录的话，自动执行 cd 命令setopt AUTO_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-zsh">
 <meta property="og:url" content="https://dnacore.github.io/post/8e176eb3-cc5e-431d-86ba-d7450a909016.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="zsh options  https:&#x2F;&#x2F;zsh.sourceforge.io&#x2F;Doc&#x2F;Release&#x2F;Options.html  查看内置命令帮助man zshbuiltins  .zshrc文件1234setopt no_nomatch# 兼容 .bash_profilesource ~&#x2F;.bash_profile  12unsetopt INTERACTIVE_COMMENTSunseto">
+<meta property="og:description" content="zsh options  https:&#x2F;&#x2F;zsh.sourceforge.io&#x2F;Doc&#x2F;Release&#x2F;Options.html  查看内置命令帮助man zshbuiltins  .zshrc文件1234567setopt no_nomatch# 兼容 .bash_profilesource ~&#x2F;.bash_profile# 如果命令是一个目录的话，自动执行 cd 命令setopt AUTO_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-01-10T04:00:54.000Z">
-<meta property="article:modified_time" content="2023-03-20T08:52:48.353Z">
+<meta property="article:modified_time" content="2023-11-07T09:14:25.489Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="zsh">
@@ -83,7 +83,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0-rc2"></head>
+<meta name="generator" content="Hexo 7.0.0"></head>
 
 
 <body>
@@ -209,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          197 字
+          36 字
         
       </span>
     
@@ -220,7 +220,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -269,9 +269,15 @@
 <ul>
 <li>查看内置命令帮助<code>man zshbuiltins</code></li>
 </ul>
-<h2 id="zshrc文件"><a href="#zshrc文件" class="headerlink" title=".zshrc文件"></a><code>.zshrc</code>文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">setopt no_nomatch<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">兼容 .bash_profile</span><br>source ~/.bash_profile<br></code></pre></td></tr></table></figure>
+<h2 id="zshrc文件"><a href="#zshrc文件" class="headerlink" title=".zshrc文件"></a><code>.zshrc</code>文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs shell">setopt no_nomatch<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">兼容 .bash_profile</span><br>source ~/.bash_profile<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">如果命令是一个目录的话，自动执行 <span class="hljs-built_in">cd</span> 命令</span><br>setopt AUTO_CD<br></code></pre></td></tr></table></figure>
 
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">unsetopt INTERACTIVE_COMMENTS<br>unsetopt BAD_PATTERN<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>设置 zsh 的历史记录</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">HISTFILE=&quot;$HOME/.zsh_history&quot;<br>HISTSIZE=0<br>SAVEHIST=0<br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -316,7 +322,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年3月20日</div>
+          <div>2023年11月7日</div>
         </div>
       
       
