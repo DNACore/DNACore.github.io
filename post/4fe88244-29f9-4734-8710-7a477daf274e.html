@@ -24,7 +24,7 @@
 <meta property="og:description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；  修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-17T12:11:21.000Z">
-<meta property="article:modified_time" content="2023-04-28T08:55:32.339Z">
+<meta property="article:modified_time" content="2023-11-17T11:32:34.214Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="exif">
 <meta property="article:tag" content="exiftool">
@@ -209,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          153 字
+          157 字
         
       </span>
     
@@ -280,14 +280,12 @@
 </li>
 <li><p><code>-d</code>设置日期类标签的格式</p>
 </li>
-<li><p><code>exiftool -r -all= some_dir</code> 递归删除目录中媒体文件所有元数据</p>
-</li>
-<li><p><code>exiftool -gps:all=&quot;&quot; photo.jpg</code> 删除媒体文件中分组为gps信息</p>
-</li>
-<li><p><code>exiftool -all=&quot;&quot; --exif:all photo.jpg</code>  删除EXIF以外的所有信息</p>
-</li>
-<li><p><code>exiftool -all=&quot;&quot; --ICC_Profile:all photo.jpg</code>  删除ICC_Profile以外的所有信息</p>
-</li>
+</ul>
+<h2 id="清除-exif-信息"><a href="#清除-exif-信息" class="headerlink" title="清除 exif 信息"></a>清除 exif 信息</h2><ul>
+<li><code>exiftool -r -all= some_dir</code> 递归删除目录中媒体文件所有元数据</li>
+<li><code>exiftool -gps:all=&quot;&quot; photo.jpg</code> 删除媒体文件中分组为gps信息</li>
+<li><code>exiftool -all=&quot;&quot; --exif:all photo.jpg</code>  删除EXIF以外的所有信息</li>
+<li><code>exiftool -all=&quot;&quot; --ICC_Profile:all photo.heic</code>  删除ICC_Profile以外的所有信息</li>
 </ul>
 <h2 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h2><ul>
 <li><p><code>exiftool -g some_file</code>或者<code>exiftool -G some_file</code>以分组形式查看exif信息</p>
@@ -340,7 +338,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年4月28日</div>
+          <div>2023年11月17日</div>
         </div>
       
       

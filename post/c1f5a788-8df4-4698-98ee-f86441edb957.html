@@ -14,17 +14,17 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="DNACore">
-  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  <meta name="keywords" content="tar">
   
-    <meta name="description" content="[TOC] http:&#x2F;&#x2F;man.linuxde.net&#x2F;tar  将归档内指定文件解压到指定目录  https:&#x2F;&#x2F;blog.csdn.net&#x2F;SunZLong&#x2F;article&#x2F;details&#x2F;84440282  常用命令 123456# 压缩：tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称# 列出内容：-t 命令等同于 --listtar -jtv -f f">
+    <meta name="description" content="tar打包解包命令[TOC]    常用选项 -c 创建 tar 文件  常用命令123456# 压缩：tar -cjv -f filename.tar.bz2 要被压缩的文件或目录名称# 列出内容：-t 命令等同于 --listtar -tjv -f filename.tar.bz2# 解压缩：tar -xjv -f filename.tar.bz2 -C 欲解压缩的目录  测试 *.tar 文">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux-tar打包解包命令">
 <meta property="og:url" content="https://dnacore.github.io/post/c1f5a788-8df4-4698-98ee-f86441edb957.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="[TOC] http:&#x2F;&#x2F;man.linuxde.net&#x2F;tar  将归档内指定文件解压到指定目录  https:&#x2F;&#x2F;blog.csdn.net&#x2F;SunZLong&#x2F;article&#x2F;details&#x2F;84440282  常用命令 123456# 压缩：tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称# 列出内容：-t 命令等同于 --listtar -jtv -f f">
+<meta property="og:description" content="tar打包解包命令[TOC]    常用选项 -c 创建 tar 文件  常用命令123456# 压缩：tar -cjv -f filename.tar.bz2 要被压缩的文件或目录名称# 列出内容：-t 命令等同于 --listtar -tjv -f filename.tar.bz2# 解压缩：tar -xjv -f filename.tar.bz2 -C 欲解压缩的目录  测试 *.tar 文">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-10-31T02:48:46.000Z">
-<meta property="article:modified_time" content="2023-07-12T09:53:30.055Z">
+<meta property="article:modified_time" content="2023-11-13T12:31:07.496Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Shell">
 <meta property="article:tag" content="tar">
@@ -209,7 +209,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          910 字
+          932 字
         
       </span>
     
@@ -262,29 +262,36 @@
             
               <div class="markdown-body">
                 
-                <p>[TOC]</p>
-<p><a target="_blank" rel="noopener" href="http://man.linuxde.net/tar">http://man.linuxde.net/tar</a></p>
-<ul>
-<li><p>将归档内指定文件解压到指定目录<br>  <a target="_blank" rel="noopener" href="https://blog.csdn.net/SunZLong/article/details/84440282">https://blog.csdn.net/SunZLong/article/details/84440282</a></p>
-</li>
-<li><p>常用命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 压缩：</span><br>tar -jcv -f filename.tar.bz2 要被压缩的文件或目录名称<br><span class="hljs-comment"># 列出内容：-t 命令等同于 --list</span><br>tar -jtv -f filename.tar.bz2<br><span class="hljs-comment"># 解压缩：</span><br>tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录<br></code></pre></td></tr></table></figure></li>
+                <h1 id="tar打包解包命令"><a href="#tar打包解包命令" class="headerlink" title="tar打包解包命令"></a>tar打包解包命令</h1><p>[TOC]</p>
+<!-- http://man.linuxde.net/tar -->
+
+
+<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><ul>
+<li>-c 创建 tar 文件</li>
 </ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 压缩：</span><br>tar -cjv -f filename.tar.bz2 要被压缩的文件或目录名称<br><span class="hljs-comment"># 列出内容：-t 命令等同于 --list</span><br>tar -tjv -f filename.tar.bz2<br><span class="hljs-comment"># 解压缩：</span><br>tar -xjv -f filename.tar.bz2 -C 欲解压缩的目录<br></code></pre></td></tr></table></figure>
+
 <h2 id="测试-tar-文件完整性"><a href="#测试-tar-文件完整性" class="headerlink" title="测试 *.tar 文件完整性"></a>测试 <code>*.tar</code> 文件完整性</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -tf /root/archive.tar<br><span class="hljs-comment"># 测试bz2格式的归档文件完整性</span><br>tar -jtv -f filename.tar.bz2<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="解压文件"><a href="#解压文件" class="headerlink" title="解压文件"></a>解压文件</h2><ul>
+<h2 id="解包文件"><a href="#解包文件" class="headerlink" title="解包文件"></a>解包文件</h2><ul>
 <li>tar解压到指定文件夹<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -xvf com.jianshu.Hugo.tar -C ./com.jianshu.Hugo<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="打包文件"><a href="#打包文件" class="headerlink" title="打包文件"></a>打包文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cvf log.tar log2012.log    <span class="hljs-comment"># 仅打包，不压缩！</span><br>tar -zcvf log.tar.gz log2012.log   <span class="hljs-comment"># 打包后，以 gzip 压缩</span><br>tar -jcvf log.tar.bz2 log2012.log  <span class="hljs-comment"># 打包后，以 bzip2 压缩</span><br></code></pre></td></tr></table></figure>
+<h2 id="打包文件"><a href="#打包文件" class="headerlink" title="打包文件"></a>打包文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cvf log.tar log2012.log    <span class="hljs-comment"># 仅打包，不压缩！</span><br>tar -czvf log.tar.gz log2012.log   <span class="hljs-comment"># 打包后，以 gzip 压缩</span><br>tar -cjvf log.tar.bz2 log2012.log  <span class="hljs-comment"># 打包后，以 bzip2 压缩</span><br></code></pre></td></tr></table></figure>
 
 <ul>
 <li><p>打包后不保存全路径<br><code>-C</code>后面跟需要打包的路径，意为指定tar工作的目录，最后的<code>.</code>表示打包当前目录。<br><code>-C /var/www/site1 .</code>意为，先把工作目录切换到<code>/var/www/site1</code>，再执行打包<code>.</code>目录的操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cjf site1.tar.bz2 -C /var/www/site1 .<br><span class="hljs-comment"># 例如打包 Xcode 的 iOS SDK</span><br>tar -zcvf iPhoneOS.sdk.tar.gz -C /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk .<br><span class="hljs-comment"># 上面一条命令也可以改为</span><br>tar -zcvf iPhoneOS.sdk.tar.gz -C /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/ iPhoneOS.sdk<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cjf site1.tar.bz2 -C /var/www/site1 .<br><span class="hljs-comment"># 例如打包 Xcode 的 iOS SDK</span><br>tar -czvf iPhoneOS.sdk.tar.gz -C /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk .<br><span class="hljs-comment"># 上面一条命令也可以改为</span><br>tar -czvf iPhoneOS.sdk.tar.gz -C /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/ iPhoneOS.sdk<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>打包 Hexo 博客文件夹并且排除node_modules文件夹<br>因为此处命令中有一个<code>-f</code>选项，这个选项要求后面必须跟着一个文件路径，所以这里<code>--exclude</code>参数被放在了最前面<br><code>-f</code>选项的参数为<code>XXX.github.io.tar.gz</code><br><code>--exclude</code>选项的参数为<code>node_modules</code><br>最后的<code>XXX.github.io</code>为位置参数<br><code>zcv</code>选项仅仅是个开关，没有参数。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar --exclude node_modules -zcvf XXX.github.io.tar.gz XXX.github.io<br><span class="hljs-comment"># 单独剥离出 -f 选项</span><br>tar -zcv --exclude node_modules -f XXX.github.io.tar.gz XXX.github.io<br>tar -zcv --exclude=<span class="hljs-string">&#x27;node_modules&#x27;</span> -f XXX.github.io.tar.gz XXX.github.io<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar --exclude node_modules -zcvf XXX.github.io.tar.gz XXX.github.io<br><span class="hljs-comment"># 单独剥离出 -f 选项</span><br>tar -czv --exclude node_modules -f XXX.github.io.tar.gz XXX.github.io<br>tar -czv --exclude=<span class="hljs-string">&#x27;node_modules&#x27;</span> -f XXX.github.io.tar.gz XXX.github.io<br></code></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="tar-xz文件"><a href="#tar-xz文件" class="headerlink" title="*.tar.xz文件"></a>*.tar.xz文件</h2><p>xz 是单独的一种压缩格式，对应的压缩命令是<code>xz</code><br>这里给出的命令是一步到位操作 *.tar.xz 文件的方式。</p>
+<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -xJf *.tar.xz<br></code></pre></td></tr></table></figure>
+
+<h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -cJvf archive.tar.xz ./filesToBeArchived<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="tar-工具的目录匹配规则"><a href="#tar-工具的目录匹配规则" class="headerlink" title="tar 工具的目录匹配规则"></a>tar 工具的目录匹配规则</h2><p>如果我们只想用tar打包某些目录或者排除打包某些目录的时候，需要给tar<code>--exclude</code>传入路径参数。那么，这些路径参数到底是怎么与目录和文件路径进行匹配的呢？<br>我们想排除<code>foo.txt</code>到底是排除了根目录的<code>foo.txt</code>文件还是排除了所有名为<code>foo.txt</code>的文件呢？</p>
 <p>根据测试，tar路径匹配规则如下：<br>每次用tar打包压缩的时候，tar命令都会输出实际添加到压缩包的文件路径，这个路径的显示和具体的打包参数有关。<br>例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cvf a.tar  -C /Users/rootuser/Desktop/未命名文件夹 .<br><span class="hljs-comment"># 显示的路径为</span><br>a .<br>a ./com.mcafee.ssm.ScanFactory.plist<br>a ./com.mcafee.virusscan.fmpd.plist<br>a ./a<br>a ./未命名文件夹<br>a ./com.mcafee.agent.macompat.plist<br>a ./com.mcafee.ssm.Eupdate.plist<br>a ./com.mcafee.agent.ma.plist<br>a ./b<br>a ./com.mcafee.ssm.ScanManager.plist<br>a ./com.mcafee.agent.macmn.plist<br>a ./b/a<br>a ./b/a.txt.bak<br>a ./b/b.txt<br>a ./a/a.txt<br></code></pre></td></tr></table></figure>
@@ -299,17 +306,17 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -cvf a.tar /Users/rootuser/Desktop/未命名文件夹 <span class="hljs-comment"># 入口点为`Users/rootuser/Desktop/未命名文件夹`</span><br>tar -cvf a.tar  -C /Users/rootuser/Desktop/ 未命名文件夹 <span class="hljs-comment"># 入口点为`未命名文件夹`</span><br>tar -cvf a.tar  -C /Users/rootuser/Desktop/未命名文件夹 . <span class="hljs-comment"># 入口点为`.`</span><br></code></pre></td></tr></table></figure>
 
 <p>通配符：<code>*</code>可以匹配0个1个或者多个字符。</p>
+<ul>
+<li><code>--exclude &#39;filename&#39;</code> 可以排除所有名为 filename 的文件和目录，无论它的路径是什么。</li>
+</ul>
 <h2 id="更多示例"><a href="#更多示例" class="headerlink" title="更多示例"></a>更多示例</h2><ul>
 <li><p>打包解包 gzip 压缩的 tar 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 打包解包 gzip 压缩的 tar 文件</span><br>tar -zcvf log.tar.gz log2012.log   <span class="hljs-comment"># 打包后，以 gzip 压缩</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 打包解包 gzip 压缩的 tar 文件</span><br>tar -czvf log.tar.gz log2012.log   <span class="hljs-comment"># 打包后，以 gzip 压缩</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>打包 com.tencent.mobileqq 目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tar.gz 压缩</span><br>tar\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_theme_810&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/QWallet&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/live_log&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/txlib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/TencentVideoKit&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_tombs&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_installed_plugin&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_.profilecard&quot;</span>\<br> -zcvf /storage/emulated/0/<span class="hljs-comment">########/com.tencent.mobileqq_&quot;`date +%Y-%m-%d_%H-%M-%S`&quot;.tar.gz\</span><br> -C /data/data/io.va.exposed/virtual/data/user/0/ com.tencent.mobileqq<br><br><span class="hljs-comment"># tar.bz2 压缩</span><br>tar\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_theme_810&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/QWallet&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/live_log&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/txlib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/TencentVideoKit&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_tombs&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_installed_plugin&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_.profilecard&quot;</span>\<br> -jcvf /storage/emulated/0/<span class="hljs-comment">########/com.tencent.mobileqq_&quot;`date +%Y-%m-%d_%H-%M-%S`&quot;.tar.bz2\</span><br> -C /data/data/io.va.exposed/virtual/data/user/0/ com.tencent.mobileqq<br></code></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># tar.gz 压缩</span><br>tar\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_theme_810&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/QWallet&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/live_log&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/txlib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/TencentVideoKit&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_tombs&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_installed_plugin&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_.profilecard&quot;</span>\<br> -czvf /storage/emulated/0/<span class="hljs-comment">########/com.tencent.mobileqq_&quot;`date +%Y-%m-%d_%H-%M-%S`&quot;.tar.gz\</span><br> -C /data/data/io.va.exposed/virtual/data/user/0/ com.tencent.mobileqq<br><br><span class="hljs-comment"># tar.bz2 压缩</span><br>tar\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_theme_810&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/QWallet&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/live_log&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/txlib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/files/TencentVideoKit&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_tombs&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_lib&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_installed_plugin&quot;</span>\<br> --exclude <span class="hljs-string">&quot;com.tencent.mobileqq/app_.profilecard&quot;</span>\<br> -cjvf /storage/emulated/0/<span class="hljs-comment">########/com.tencent.mobileqq_&quot;`date +%Y-%m-%d_%H-%M-%S`&quot;.tar.bz2\</span><br> -C /data/data/io.va.exposed/virtual/data/user/0/ com.tencent.mobileqq<br></code></pre></td></tr></table></figure></li>
 </ul>
-<h2 id="tar-xz文件"><a href="#tar-xz文件" class="headerlink" title="*.tar.xz文件"></a>*.tar.xz文件</h2><p>xz 是单独的一种压缩格式，对应的压缩命令是<code>xz</code><br>这里给出的命令是一步到位操作 *.tar.xz 文件的方式。</p>
-<h3 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -Jxf *.tar.xz<br></code></pre></td></tr></table></figure>
 
-<h3 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">tar -Jcvf archive.tar.xz ./filesToBeArchived<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -354,7 +361,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月12日</div>
+          <div>2023年11月13日</div>
         </div>
       
       
