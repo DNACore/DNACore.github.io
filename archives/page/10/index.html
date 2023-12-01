@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -120,6 +120,18 @@
               <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
               </a>
             </li>
           
@@ -205,13 +217,25 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 181 篇文章</p>
+  <p class="h4">共计 183 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2020</p>
+    
+    <a href="/post/9eb7808e-345e-498a-adb4-206915f6177d.html" class="list-group-item list-group-item-action">
+      <time>05-20</time>
+      <div class="list-group-item-title">macOS-Homebrew修改为国内镜像</div>
+    </a>
+  
+    
+    <a href="/post/93509f99-6493-4fd7-b2c6-5ae74c8b3ee4.html" class="list-group-item list-group-item-action">
+      <time>05-17</time>
+      <div class="list-group-item-title">Linux-squid代理缓存工具</div>
+    </a>
+  
     
     <a href="/post/0660f7c9-08ff-451e-b181-ef481193f5b0.html" class="list-group-item list-group-item-action">
       <time>05-16</time>
@@ -239,7 +263,7 @@
     
     <a href="/post/70044f3b-4fd7-4c8d-86dc-8eb8763ed333.html" class="list-group-item list-group-item-action">
       <time>05-14</time>
-      <div class="list-group-item-title">Linu-获取Linux系统的网络流量信息</div>
+      <div class="list-group-item-title">Linux-获取Linux系统的网络流量信息</div>
     </a>
   
     
@@ -258,18 +282,6 @@
     <a href="/post/f732fb8d-7df7-4349-a15a-8219edb1e218.html" class="list-group-item list-group-item-action">
       <time>05-07</time>
       <div class="list-group-item-title">macOS-macOS的系统信息ioregistry</div>
-    </a>
-  
-    
-    <a href="/post/2d8054b7-1138-408f-9f71-9e0e5647f05f.html" class="list-group-item list-group-item-action">
-      <time>05-05</time>
-      <div class="list-group-item-title">Linux-命令dd</div>
-    </a>
-  
-    
-    <a href="/post/4272e8cb-fcfb-4063-a577-92cef0aca888.html" class="list-group-item list-group-item-action">
-      <time>04-13</time>
-      <div class="list-group-item-title">Linux-Linux中的通配符</div>
     </a>
   
 </div>
@@ -352,7 +364,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>

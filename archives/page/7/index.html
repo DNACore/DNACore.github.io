@@ -61,7 +61,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"gtag":null},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.5","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -120,6 +120,18 @@
               <a class="nav-link" href="/archives/" target="_self">
                 <i class="iconfont icon-archive-fill"></i>
                 <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
               </a>
             </li>
           
@@ -205,13 +217,25 @@
                 
 
 <div class="list-group">
-  <p class="h4">共计 181 篇文章</p>
+  <p class="h4">共计 183 篇文章</p>
   <hr>
   
   
     
       
       <p class="h5">2021</p>
+    
+    <a href="/post/eb1e66c6-beb7-4d0b-a5b9-287e307dff41.html" class="list-group-item list-group-item-action">
+      <time>12-08</time>
+      <div class="list-group-item-title">macOS-Spotlight聚焦搜索排除路径</div>
+    </a>
+  
+    
+    <a href="/post/59bed90e-7ef0-47ba-aee8-e42e45af6f5e.html" class="list-group-item list-group-item-action">
+      <time>11-30</time>
+      <div class="list-group-item-title">macOS-禁用App Store的通知</div>
+    </a>
+  
     
     <a href="/post/b32bef5a-5bc8-4809-a766-772d157e4fe8.html" class="list-group-item list-group-item-action">
       <time>11-22</time>
@@ -258,18 +282,6 @@
     <a href="/post/fcb90bd8-9cf4-4a93-a5e8-bf0667d5ee54.html" class="list-group-item list-group-item-action">
       <time>10-18</time>
       <div class="list-group-item-title">树莓派-RTC扩展板</div>
-    </a>
-  
-    
-    <a href="/post/212bc015-1aa7-41f9-b4bf-2d1fdd376e3e.html" class="list-group-item list-group-item-action">
-      <time>09-17</time>
-      <div class="list-group-item-title">macOS-macOS软件缓存位置整理</div>
-    </a>
-  
-    
-    <a href="/post/c5ef2f70-12ea-44e5-a548-e8b7472a3ba9.html" class="list-group-item list-group-item-action">
-      <time>09-17</time>
-      <div class="list-group-item-title">Windows-CMD批处理替换、截取、扩充字符串</div>
     </a>
   
 </div>
@@ -352,7 +364,7 @@
   </script>
 
 
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
