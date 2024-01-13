@@ -223,6 +223,46 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
+        <a href="/post/56ae6a4b-19f5-41d0-9050-55413013dad8.html" target="_self">
+          Windows-禁用恶意软件删除工具
+        </a>
+      </h2>
+
+      
+      <a class="index-excerpt index-excerpt__noimg" href="/post/56ae6a4b-19f5-41d0-9050-55413013dad8.html" target="_self">
+        <div>
+          定位到  HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft  在右侧新建项，命名为MRT（如果已有该项，可跳过此步骤）  在右侧新建DWORD（32位）值，命名为DontOfferThroughWUAU，数值数据为1  重启电脑后将不会再有新的MRT推送  以管理员身份运行命令提示符，执行如下命令卸载MRT： 1wusa /uninstall /kb:
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2021-10-26 14:45" pubdate>
+              2021-10-26
+            </time>
+          </div>
+        
+        
+        
+          <div class="post-meta">
+            <i class="iconfont icon-tags"></i>
+            
+              <a href="/tags/Windows/">#Windows</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row mx-auto index-card">
+    
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h2 class="index-header">
+        
         <a href="/post/fcb90bd8-9cf4-4a93-a5e8-bf0667d5ee54.html" target="_self">
           树莓派-RTC扩展板
         </a>
@@ -582,50 +622,6 @@
               <a href="/tags/Linux/">#Linux</a>
             
               <a href="/tags/sysstat/">#sysstat</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/post/8907fb3a-4e1a-48ac-a1f2-ecda4ad9a2c5.html" target="_self">
-          Linux-开启bbr加速
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/post/8907fb3a-4e1a-48ac-a1f2-ecda4ad9a2c5.html" target="_self">
-        <div>
-          树莓派开启 bbr 加速123456789101112131415# 确保内核在4.9以上sudo rpi-update# 修改配置，开启 bbr 加速sudo bash -c &#x27;echo &quot;net.core.default_qdisc=fq&quot; &gt;&gt; /etc/sysctl.conf&#x27;sudo bash -c &#x27;echo &quot;n
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2021-02-25 11:59" pubdate>
-              2021-02-25
-            </time>
-          </div>
-        
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/Linux/">#Linux</a>
-            
-              <a href="/tags/%E7%BD%91%E7%BB%9C/">#网络</a>
-            
-              <a href="/tags/bbr/">#bbr</a>
             
           </div>
         

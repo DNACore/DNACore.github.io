@@ -14,26 +14,24 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="DNACore">
-  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  <meta name="keywords" content="Shell">
   
-    <meta name="description" content="重新创建iOS工程，需要在example目录下执行 12345678# 删除iOS工程目录rm -rf ios# 重新创建iOS swift 工程flutter create -i swift .# 重新创建iOS objc 工程flutter create -i objc .  重新创建Android工程，需要在example目录下执行 123456789# 删除android工程目录rm -">
+    <meta name="description" content="shell 多条命令的执行 ; &amp;&amp; || | &amp;每个命令之间用;隔开说明：各命令的执行给果，不会影响其它命令的执行。换句话说，各个命令都会执行，但不保证每个命令都执行成功。 每个命令之间用&amp;&amp;隔开说明：若前面的命令执行成功，才会去执行后面的命令。这样可以保证所有的命令执行完毕后，执行过程都是成功的。 每个命令之间用||隔开说明：||是或的意思，只有前面的命">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Flutter-重新创建Android或者iOS工程">
-<meta property="og:url" content="https://dnacore.github.io/post/ea0a8a3c-8fa7-4dc7-8bf5-7492732be084.html">
+<meta property="og:title" content="Shell-多个命令的执行">
+<meta property="og:url" content="https://dnacore.github.io/post/bef8bfd3-10e7-46cf-bd35-02a289ac7371.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="重新创建iOS工程，需要在example目录下执行 12345678# 删除iOS工程目录rm -rf ios# 重新创建iOS swift 工程flutter create -i swift .# 重新创建iOS objc 工程flutter create -i objc .  重新创建Android工程，需要在example目录下执行 123456789# 删除android工程目录rm -">
+<meta property="og:description" content="shell 多条命令的执行 ; &amp;&amp; || | &amp;每个命令之间用;隔开说明：各命令的执行给果，不会影响其它命令的执行。换句话说，各个命令都会执行，但不保证每个命令都执行成功。 每个命令之间用&amp;&amp;隔开说明：若前面的命令执行成功，才会去执行后面的命令。这样可以保证所有的命令执行完毕后，执行过程都是成功的。 每个命令之间用||隔开说明：||是或的意思，只有前面的命">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-01-18T08:07:08.000Z">
-<meta property="article:modified_time" content="2023-02-02T02:48:56.073Z">
+<meta property="article:published_time" content="2023-11-17T03:25:56.000Z">
+<meta property="article:modified_time" content="2023-11-17T03:31:24.651Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="Flutter">
-<meta property="article:tag" content="iOS">
-<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Shell">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Flutter-重新创建Android或者iOS工程 - DNACore GitHub io</title>
+  <title>Shell-多个命令的执行 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Flutter-重新创建Android或者iOS工程</span>
+            <span id="subtitle">Shell-多个命令的执行</span>
           
         </div>
 
@@ -210,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-01-18 16:07" pubdate>
-          2022年1月18日 下午
+        <time datetime="2023-11-17 11:25" pubdate>
+          2023年11月17日 上午
         </time>
       </span>
     
@@ -222,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          101 字
+          253 字
         
       </span>
     
@@ -233,7 +231,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -270,22 +268,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Flutter-重新创建Android或者iOS工程</h1>
+            <h1 id="seo-header">Shell-多个命令的执行</h1>
             
             
               <div class="markdown-body">
                 
-                <ul>
-<li><p>重新创建iOS工程，需要在example目录下执行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">删除iOS工程目录</span><br>rm -rf ios<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">重新创建iOS swift 工程</span><br>flutter create -i swift .<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">重新创建iOS objc 工程</span><br>flutter create -i objc .<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>重新创建Android工程，需要在example目录下执行</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除android工程目录</span><br>rm -rf android<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"> # </span><span class="language-bash">重新创建 Android java 工程</span><br>flutter create -a java .<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">重新创建Android kotlin 工程</span><br>flutter create -a kotlin .<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>重新创建macOS平台工程，需要在工程目录下执行</p>
-</li>
-</ul>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">flutter create --platforms  macos .<br></code></pre></td></tr></table></figure>
+                <h1 id="shell-多条命令的执行"><a href="#shell-多条命令的执行" class="headerlink" title="shell 多条命令的执行 ; &amp;&amp; || | &amp;"></a>shell 多条命令的执行 <code>;</code> <code>&amp;&amp;</code> <code>||</code> <code>|</code> <code>&amp;</code></h1><h2 id="每个命令之间用-隔开"><a href="#每个命令之间用-隔开" class="headerlink" title="每个命令之间用;隔开"></a>每个命令之间用<code>;</code>隔开</h2><p>说明：各命令的执行给果，不会影响其它命令的执行。换句话说，各个命令都会执行，但不保证每个命令都执行成功。</p>
+<h2 id="每个命令之间用-隔开-1"><a href="#每个命令之间用-隔开-1" class="headerlink" title="每个命令之间用&amp;&amp;隔开"></a>每个命令之间用<code>&amp;&amp;</code>隔开</h2><p>说明：若前面的命令执行成功，才会去执行后面的命令。这样可以保证所有的命令执行完毕后，执行过程都是成功的。</p>
+<h2 id="每个命令之间用-隔开-2"><a href="#每个命令之间用-隔开-2" class="headerlink" title="每个命令之间用||隔开"></a>每个命令之间用<code>||</code>隔开</h2><p>说明：<code>||</code>是或的意思，只有前面的命令执行失败后才去执行下一条命令，直到执行成功一条命令为止。</p>
+<h2 id="每个命令之间用-隔开-3"><a href="#每个命令之间用-隔开-3" class="headerlink" title="每个命令之间用|隔开"></a>每个命令之间用<code>|</code>隔开</h2><p>说明：<code>|</code>是管道符号，前一个命令的输出会作为后一个命令的输入。</p>
+<h2 id="每个命令之间用-隔开-4"><a href="#每个命令之间用-隔开-4" class="headerlink" title="每个命令之间用&amp;隔开"></a>每个命令之间用<code>&amp;</code>隔开</h2><p>说明：<code>&amp;</code>是创建 sub-shell 后台执行。<code>CommandA &amp;</code>，后台执行 CommandA 命令；<br><code>CommandA &amp; CommandB &amp; CommandC</code>，同时执行 CommandA CommandB CommandC 三条命令。</p>
+
                 
               </div>
             
@@ -297,11 +290,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Flutter/" class="print-no-link">#Flutter</a>
-      
-        <a href="/tags/iOS/" class="print-no-link">#iOS</a>
-      
-        <a href="/tags/Android/" class="print-no-link">#Android</a>
+        <a href="/tags/Shell/" class="print-no-link">#Shell</a>
       
     </div>
   
@@ -313,8 +302,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Flutter-重新创建Android或者iOS工程</div>
-      <div>https://dnacore.github.io/post/ea0a8a3c-8fa7-4dc7-8bf5-7492732be084.html</div>
+      <div>Shell-多个命令的执行</div>
+      <div>https://dnacore.github.io/post/bef8bfd3-10e7-46cf-bd35-02a289ac7371.html</div>
     </div>
     <div class="license-meta">
       
@@ -326,13 +315,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年1月18日</div>
+          <div>2023年11月17日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年2月2日</div>
+          <div>2023年11月17日</div>
         </div>
       
       
@@ -363,9 +352,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/7e5e38d8-a09a-4246-97b3-97a179f71168.html" title="macOS-Spotlight聚焦搜索">
+                      <a href="/post/aed21b74-49ee-490c-ba6a-4efc03806f02.html" title="Linux-Debian设置语言">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">macOS-Spotlight聚焦搜索</span>
+                        <span class="hidden-mobile">Linux-Debian设置语言</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -373,8 +362,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/758960e5-7ad0-4e49-8e6d-67e5bae56548.html" title="macOS-lockdown">
-                        <span class="hidden-mobile">macOS-lockdown</span>
+                      <a href="/post/86543117-e080-4447-b16b-bc3fef6611ce.html" title="Windows-连接的文件(connected files)">
+                        <span class="hidden-mobile">Windows-连接的文件(connected files)</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
