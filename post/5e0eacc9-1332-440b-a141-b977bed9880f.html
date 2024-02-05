@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
   <link rel="icon" href="/favicon.ico">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -25,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://dnacore.github.io/post/images/VS-Code-%E4%BD%BF%E7%94%A8_2018-11-22.assets/VS-Code-%E4%BD%BF%E7%94%A8_01.png">
 <meta property="article:published_time" content="2018-11-22T06:09:26.000Z">
-<meta property="article:modified_time" content="2024-01-11T08:14:00.557Z">
+<meta property="article:modified_time" content="2024-02-01T07:29:36.289Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="VSC">
 <meta property="article:tag" content="VSCode">
@@ -51,7 +54,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -72,7 +75,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"umami":{"src":null,"data_website_id":null,"data_domains":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -85,7 +88,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0"></head>
+<meta name="generator" content="Hexo 7.1.1"></head>
 
 
 <body>
@@ -223,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          409 字
+          451 字
         
       </span>
     
@@ -319,6 +322,9 @@ https://code.visualstudio.com/docs/terminal/profiles#_why-are-there-duplicate-pa
 <h2 id="VS-Code-查找和替换"><a href="#VS-Code-查找和替换" class="headerlink" title="VS Code 查找和替换"></a>VS Code 查找和替换</h2><ul>
 <li>将文本替换为换行符<br>  在替换界面，我们直接按回车是没办法输入换行符的，会直接执行查找&#x2F;替换功能。<br>  这个时候我们在替换的输入框内按 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>，就会输入换行符号了。  <img src="./images/VS-Code-使用_2018-11-22.assets/VS-Code-使用_01.png" srcset="/img/loading.gif" lazyload alt="VS-Code-使用_01" style="zoom:50%;" /></li>
 </ul>
+<h2 id="VS-Code-使用-Remote-SSH-连接远程主机"><a href="#VS-Code-使用-Remote-SSH-连接远程主机" class="headerlink" title="VS Code 使用 Remote - SSH 连接远程主机"></a>VS Code 使用 Remote - SSH 连接远程主机</h2><p>Q: 提示：<br>vscode remote ssh permission denied publickey</p>
+<p>A: 一般是 publickey 的权限设置有误，按照下面命令设置publickey的权限即可：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">chmod 400 /path/to/publickey<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -364,7 +370,7 @@ https://code.visualstudio.com/docs/terminal/profiles#_why-are-there-duplicate-pa
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年1月11日</div>
+          <div>2024年2月1日</div>
         </div>
       
       
@@ -376,7 +382,7 @@ https://code.visualstudio.com/docs/terminal/profiles#_why-are-there-duplicate-pa
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
+                    <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
               

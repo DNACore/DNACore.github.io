@@ -7,8 +7,11 @@
 
 <head>
   <meta charset="UTF-8">
+
   <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
   <link rel="icon" href="/favicon.ico">
+  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
@@ -24,7 +27,7 @@
 <meta property="og:description" content="macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径，可直接打开对应的系统设置&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  软件默认设置路径~&#x2F;Library">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-11-26T06:19:43.000Z">
-<meta property="article:modified_time" content="2024-01-10T02:34:56.622Z">
+<meta property="article:modified_time" content="2024-02-04T06:03:33.239Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +51,7 @@
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
 
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
 
 
 
@@ -69,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"umami":{"src":null,"data_website_id":null,"data_domains":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -82,7 +85,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.0.0"></head>
+<meta name="generator" content="Hexo 7.1.1"></head>
 
 
 <body>
@@ -220,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          780 字
+          805 字
         
       </span>
     
@@ -295,7 +298,7 @@
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">~<span class="hljs-regexp">/Library/</span>Containers<span class="hljs-regexp">/com.apple.inputmethod.SCIM/</span><br>~<span class="hljs-regexp">/Library/</span>Dictionaries/DynamicPhraseLexicon_zh_Hans.db<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>icns 图标位置</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>部分系统图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Resources<br><br><span class="hljs-regexp">//</span>部分iOS设备图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Library<span class="hljs-regexp">/MobileDevices.bundle/</span>Contents/Resources<br><br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/PrivateFrameworks/</span>CommerceKit.framework<span class="hljs-regexp">/Versions/</span>A<span class="hljs-regexp">/Resources/</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>部分系统图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Resources<br><br><span class="hljs-regexp">//</span>部分iOS设备图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Library<span class="hljs-regexp">/MobileDevices.bundle/</span>Contents/Resources<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/Templates/</span>Data<span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Library<span class="hljs-regexp">/MobileDevices.bundle/</span>Contents/Resources<br><br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/PrivateFrameworks/</span>CommerceKit.framework<span class="hljs-regexp">/Versions/</span>A<span class="hljs-regexp">/Resources/</span><br></code></pre></td></tr></table></figure>
 </li>
 <li><p>铃声路径<br><code>/System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/Ringtones</code><a href="file:///System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/Ringtones">点击直达</a><br>设置里面的铃声<code>/System/Library/Sounds</code><a href="file:///System/Library/Sounds">点击直达</a><br><code>/Library/Audio/Apple Loops</code>[点击直达](file:&#x2F;&#x2F;&#x2F;Library&#x2F;Audio&#x2F;Apple Loops)</p>
 </li>
@@ -303,6 +306,7 @@
 <ul>
 <li>macOS Sonoma <code>/System/Library/Desktop Pictures/</code></li>
 <li>*.madesktop 下载后存储在 <code>/System/Library/AssetsV2/com_apple_MobileAsset_DesktopPicture</code></li>
+<li>动态壁纸资源： <code>/System/Library/Desktop Pictures/.wallpapers</code></li>
 </ul>
 </li>
 <li><p>部分系统程序 归档实用工具、文件夹操作设置、访达、聚焦、抹掉助理等等<br><code>/System/Library/CoreServices</code><br><a href="file:///System/Library/CoreServices">点击直达</a></p>
@@ -407,7 +411,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年1月10日</div>
+          <div>2024年2月4日</div>
         </div>
       
       
@@ -419,7 +423,7 @@
               
                 <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
                   <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
+                    <i class="iconfont icon-cc-by"></i>
                   </span>
                 </a>
               

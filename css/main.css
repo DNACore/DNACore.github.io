@@ -309,6 +309,7 @@ sup > a::before,
 }
 .navbar .nav-item .nav-link i {
   font-size: 0.875rem;
+  line-height: inherit;
 }
 .navbar .nav-item .nav-link i:only-child {
   margin: 0 0.2rem;
