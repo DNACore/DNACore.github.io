@@ -17,25 +17,26 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="DNACore">
-  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  <meta name="keywords" content="macOS,sparseimage,dmg,sparseimagebundle">
   
-    <meta name="description" content="Linux 安装 nodejshttps:&#x2F;&#x2F;www.cnblogs.com&#x2F;klvchen&#x2F;p&#x2F;12923984.htmlTIPS:解压 xz 文件xz -d node-v8.11.1-linux-x64.tar.xz  更新现有 nodejs https:&#x2F;&#x2F;www.cnblogs.com&#x2F;aipeli&#x2F;p&#x2F;12337570.html  yarn查看yarn包管理工具 Windows 安装 n">
+    <meta name="description" content="打开磁盘映像提示“磁盘映像中没有可装载的文件系统” 很多时候，我们在 macOS 系统中打开一个磁盘映像文件，会提示“磁盘映像中没有可装载的文件系统”。即使用磁盘工具装载映像文件，也没有反应。 经过排查，这是因为磁盘映像所在的路径有非英文字符。 我们把磁盘映像移动到一个英文路径下面，就能正常打开了。 When opening a disk image, it prompts “There is n">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm和nodejs">
-<meta property="og:url" content="https://dnacore.github.io/post/7352f367-0353-44c5-b198-42e7f19e40ff.html">
+<meta property="og:title" content="macOS-打开磁盘映像提示“磁盘映像中没有可装载的文件系统”">
+<meta property="og:url" content="https://dnacore.github.io/post/f9227fea-da70-4c72-937a-98baf4f1f58a.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="Linux 安装 nodejshttps:&#x2F;&#x2F;www.cnblogs.com&#x2F;klvchen&#x2F;p&#x2F;12923984.htmlTIPS:解压 xz 文件xz -d node-v8.11.1-linux-x64.tar.xz  更新现有 nodejs https:&#x2F;&#x2F;www.cnblogs.com&#x2F;aipeli&#x2F;p&#x2F;12337570.html  yarn查看yarn包管理工具 Windows 安装 n">
+<meta property="og:description" content="打开磁盘映像提示“磁盘映像中没有可装载的文件系统” 很多时候，我们在 macOS 系统中打开一个磁盘映像文件，会提示“磁盘映像中没有可装载的文件系统”。即使用磁盘工具装载映像文件，也没有反应。 经过排查，这是因为磁盘映像所在的路径有非英文字符。 我们把磁盘映像移动到一个英文路径下面，就能正常打开了。 When opening a disk image, it prompts “There is n">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-03-05T09:02:35.000Z">
-<meta property="article:modified_time" content="2023-07-14T11:24:14.119Z">
+<meta property="og:image" content="https://dnacore.github.io/images/macOS-%E6%89%93%E5%BC%80%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F%E6%8F%90%E7%A4%BA%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_2024-02-06_15-09-15.assets/%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png">
+<meta property="article:published_time" content="2024-02-06T07:09:15.000Z">
+<meta property="article:modified_time" content="2024-02-06T07:53:16.540Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="nodejs">
-<meta property="article:tag" content="npm">
+<meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dnacore.github.io/images/macOS-%E6%89%93%E5%BC%80%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F%E6%8F%90%E7%A4%BA%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_2024-02-06_15-09-15.assets/%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png">
   
   
   
-  <title>npm和nodejs - DNACore GitHub io</title>
+  <title>macOS-打开磁盘映像提示“磁盘映像中没有可装载的文件系统” - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">npm和nodejs</span>
+            <span id="subtitle">macOS-打开磁盘映像提示“磁盘映像中没有可装载的文件系统”</span>
           
         </div>
 
@@ -212,8 +213,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2019-03-05 17:02" pubdate>
-          2019年3月5日 下午
+        <time datetime="2024-02-06 15:09" pubdate>
+          2024年2月6日 下午
         </time>
       </span>
     
@@ -224,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          364 字
+          141 字
         
       </span>
     
@@ -235,7 +236,7 @@
         
         
         
-          4 分钟
+          2 分钟
         
       </span>
     
@@ -272,72 +273,18 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">npm和nodejs</h1>
+            <h1 id="seo-header">macOS-打开磁盘映像提示“磁盘映像中没有可装载的文件系统”</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Linux-安装-nodejs"><a href="#Linux-安装-nodejs" class="headerlink" title="Linux 安装 nodejs"></a>Linux 安装 nodejs</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/klvchen/p/12923984.html">https://www.cnblogs.com/klvchen/p/12923984.html</a><br>TIPS:解压 xz 文件<code>xz -d node-v8.11.1-linux-x64.tar.xz</code></p>
-<ul>
-<li>更新现有 nodejs <a target="_blank" rel="noopener" href="https://www.cnblogs.com/aipeli/p/12337570.html">https://www.cnblogs.com/aipeli/p/12337570.html</a></li>
-</ul>
-<h2 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h2><p><a href="/post/40034f11-8d6c-4a44-b16f-c00f45dfea02.html">查看yarn包管理工具</a></p>
-<h2 id="Windows-安装-node-js-绿色版"><a href="#Windows-安装-node-js-绿色版" class="headerlink" title="Windows 安装 node.js 绿色版"></a>Windows 安装 node.js 绿色版</h2><ol>
-<li><p>下载好绿色版压缩包<br><a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">https://nodejs.org/en/download/</a></p>
-</li>
-<li><p>将压缩包所有文件解压到某个文件夹内</p>
-</li>
-<li><p>在系统属性的环境变量里填入上一步解压到的文件夹路径。</p>
-</li>
-<li><p>直接打开 cmd 输入 npm 看看是否有响应。</p>
-</li>
-</ol>
-<h3 id="与绿色版-node-js-有关的路径和文件"><a href="#与绿色版-node-js-有关的路径和文件" class="headerlink" title="与绿色版 node.js 有关的路径和文件"></a>与绿色版 node.js 有关的路径和文件</h3><ul>
-<li><p>缓存：<br><code>%APPDATA%\npm-cache\</code></p>
-</li>
-<li><p>配置文件路径<br><code>&quot;C:\Users\[用户名]\.npmrc&quot;</code></p>
-</li>
-</ul>
-<h2 id="npm使用"><a href="#npm使用" class="headerlink" title="npm使用"></a>npm使用</h2><ul>
-<li>设置下载镜像</li>
-</ul>
-<ol>
-<li><p>通过命令设置<br>npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-</li>
-<li><p>编辑 .npmrc<br>registry &#x3D; <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></p>
-</li>
-</ol>
-<ul>
-<li><p>npm 源管理工具 – nrm</p>
-</li>
-<li><p>npm 配置文件管理<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html">https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html</a></p>
-</li>
-<li><p>npm 设置网络代理<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html">https://www.cnblogs.com/huang0925/archive/2013/05/17/3083207.html</a></p>
-</li>
-</ul>
-<h2 id="npm-更新"><a href="#npm-更新" class="headerlink" title="npm 更新"></a>npm 更新</h2><ul>
-<li><p>更新 npm 到最新版本<br>npm i npm@latest -g<br>或者<br>npm install -g npm</p>
-</li>
-<li><p>更新 npm 到指定版本<br>npm -g install <a href="mailto:&#110;&#112;&#109;&#64;&#x35;&#46;&#54;&#x2e;&#48;">&#110;&#112;&#109;&#64;&#x35;&#46;&#54;&#x2e;&#48;</a></p>
-</li>
-<li><p>npm 源管理工具 nrm</p>
-</li>
-<li><p>nrm ls 列出源</p>
-</li>
-<li><p>nrm use XXX 使用源</p>
-</li>
-</ul>
-<h3 id="第三方包管理更新"><a href="#第三方包管理更新" class="headerlink" title="第三方包管理更新"></a>第三方包管理更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装 npm-check</span><br>npm i npm-check<br><br><span class="hljs-comment"># 检查更新</span><br>npm-check<br><br><span class="hljs-comment"># 交互式更新</span><br>npm-check -u<br></code></pre></td></tr></table></figure>
-
-<h2 id="npm-缓存相关"><a href="#npm-缓存相关" class="headerlink" title="npm 缓存相关"></a>npm 缓存相关</h2><ul>
-<li><code>npm cache verify</code> 校验缓存</li>
-<li><code>npm cache clean --force</code> 强制清空缓存</li>
-<li><code>npm install --cache /tmp/empty-cache</code> 指定临时缓存目录</li>
-</ul>
-<h2 id="npm-start-命令"><a href="#npm-start-命令" class="headerlink" title="npm start 命令"></a>npm start 命令</h2><p>执行此命令后会运行<code>package.json</code>脚本中的<code>scripts/start</code>代码，如下：</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-attr">&quot;scripts&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;start&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;node node_modules/react-native/local-cli/cli.js start&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;test&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;jest&quot;</span><br><span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="清空-React-Native-缓存"><a href="#清空-React-Native-缓存" class="headerlink" title="清空 React Native 缓存"></a>清空 React Native 缓存</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm start -- --reset-cache<br></code></pre></td></tr></table></figure>
+                <h1 id="打开磁盘映像提示“磁盘映像中没有可装载的文件系统”"><a href="#打开磁盘映像提示“磁盘映像中没有可装载的文件系统”" class="headerlink" title="打开磁盘映像提示“磁盘映像中没有可装载的文件系统”"></a>打开磁盘映像提示“磁盘映像中没有可装载的文件系统”</h1><p><img src="/images/macOS-%E6%89%93%E5%BC%80%E7%A3%81%E7%9B%98%E9%95%9C%E5%83%8F%E6%8F%90%E7%A4%BA%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F_2024-02-06_15-09-15.assets/%E7%A3%81%E7%9B%98%E6%98%A0%E5%83%8F%E4%B8%AD%E6%B2%A1%E6%9C%89%E5%8F%AF%E8%A3%85%E8%BD%BD%E7%9A%84%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png" srcset="/img/loading.gif" lazyload alt="磁盘映像中没有可装载的文件系统"></p>
+<p>很多时候，我们在 macOS 系统中打开一个磁盘映像文件，会提示“磁盘映像中没有可装载的文件系统”。即使用磁盘工具装载映像文件，也没有反应。</p>
+<p>经过排查，这是因为磁盘映像所在的路径有非英文字符。</p>
+<p>我们把磁盘映像移动到一个英文路径下面，就能正常打开了。</p>
+<h2 id="When-opening-a-disk-image-it-prompts-“There-is-no-mountable-file-system-in-the-disk-image-”"><a href="#When-opening-a-disk-image-it-prompts-“There-is-no-mountable-file-system-in-the-disk-image-”" class="headerlink" title="When opening a disk image, it prompts “There is no mountable file system in the disk image.”"></a>When opening a disk image, it prompts “There is no mountable file system in the disk image.”</h2><p>Many times, when we open a disk image file in macOS system, we will be prompted “There is no mountable file system in the disk image”. Even if I use Disk Utility to mount the image file, nothing happens.</p>
+<p>After investigation, this was because the path where the disk image was located contained non-English characters.</p>
+<p>We move the disk image to an English path and it can be opened normally.</p>
 
                 
               </div>
@@ -346,13 +293,32 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/macOS/" class="category-chain-item">macOS</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
   
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/nodejs/" class="print-no-link">#nodejs</a>
-      
-        <a href="/tags/npm/" class="print-no-link">#npm</a>
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
       
     </div>
   
@@ -364,8 +330,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>npm和nodejs</div>
-      <div>https://dnacore.github.io/post/7352f367-0353-44c5-b198-42e7f19e40ff.html</div>
+      <div>macOS-打开磁盘映像提示“磁盘映像中没有可装载的文件系统”</div>
+      <div>https://dnacore.github.io/post/f9227fea-da70-4c72-937a-98baf4f1f58a.html</div>
     </div>
     <div class="license-meta">
       
@@ -377,13 +343,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2019年3月5日</div>
+          <div>2024年2月6日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月14日</div>
+          <div>2024年2月6日</div>
         </div>
       
       
@@ -414,18 +380,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/b3e8e5f0-4b82-42ea-abf0-989188143bcf.html" title="Windows-常用环境变量、路径、位置">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows-常用环境变量、路径、位置</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/42fa5109-5ffd-4428-9f79-383eb44e4f10.html" title="CocoaPods-单独修改Debug或者Release模式下的Build Settings">
-                        <span class="hidden-mobile">CocoaPods-单独修改Debug或者Release模式下的Build Settings</span>
+                      <a href="/post/22c59984-0719-4baf-8b30-0b214ede1c3f.html" title="常见网络端口及其对应服务">
+                        <span class="hidden-mobile">常见网络端口及其对应服务</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
