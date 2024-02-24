@@ -27,7 +27,7 @@
 <meta property="og:description" content="管理macOS电源以及休眠命令 pmset1234567891011121314# 120 分钟后进入休眠，延长清醒时间sudo pmset -c sleep 120# 显示器休眠时间：30 分钟sudo pmset -c displaysleep 30# 硬盘休眠时间：60 分钟sudo pmset -c disksleep 60# 内存供电，内存镜像不写入硬盘sudo pmset -c hib">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-30T10:12:13.000Z">
-<meta property="article:modified_time" content="2023-11-30T06:15:48.224Z">
+<meta property="article:modified_time" content="2024-02-23T02:36:44.177Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="pmset">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          101 字
+          115 字
         
       </span>
     
@@ -279,7 +279,8 @@
                 <h2 id="管理macOS电源以及休眠命令-pmset"><a href="#管理macOS电源以及休眠命令-pmset" class="headerlink" title="管理macOS电源以及休眠命令 pmset"></a>管理macOS电源以及休眠命令 pmset</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">120 分钟后进入休眠，延长清醒时间</span><br>sudo pmset -c sleep 120<br><span class="hljs-meta prompt_"># </span><span class="language-bash">显示器休眠时间：30 分钟</span><br>sudo pmset -c displaysleep 30<br><span class="hljs-meta prompt_"># </span><span class="language-bash">硬盘休眠时间：60 分钟</span><br>sudo pmset -c disksleep 60<br><span class="hljs-meta prompt_"># </span><span class="language-bash">内存供电，内存镜像不写入硬盘</span><br>sudo pmset -c hibernatemode 0<br><span class="hljs-meta prompt_"># </span><span class="language-bash">关闭 standby 模式</span><br>sudo pmset -c standby 0<br><span class="hljs-meta prompt_"># </span><span class="language-bash">关闭 autopoweroff</span><br>sudo pmset -c autopoweroff 0<br><span class="hljs-meta prompt_"># </span><span class="language-bash">休眠时持续联网</span><br>sudo pmset -c tcpkeepalive 1<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="查看macOS的唤醒"><a href="#查看macOS的唤醒" class="headerlink" title="查看macOS的唤醒"></a>查看macOS的唤醒</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">pmset -g log | grep -e &quot;Wake from&quot; -e &quot;DarkWake&quot; -e &quot;due to&quot;<br></code></pre></td></tr></table></figure>
+<h2 id="查看macOS的唤醒"><a href="#查看macOS的唤醒" class="headerlink" title="查看macOS的唤醒"></a>查看macOS的唤醒</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">唤醒</span><br>pmset -g log | grep -e &quot;Wake from&quot; -e &quot;DarkWake&quot; -e &quot;due to&quot;<br><span class="hljs-meta prompt_"># </span><span class="language-bash">进入睡眠</span><br>pmset -g log | grep -e &quot;Entering Sleep&quot;<br></code></pre></td></tr></table></figure>
+
                 
               </div>
             
@@ -322,7 +323,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年11月30日</div>
+          <div>2024年2月23日</div>
         </div>
       
       
