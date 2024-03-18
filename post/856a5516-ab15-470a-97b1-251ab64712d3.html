@@ -19,22 +19,25 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径，可直接打开对应的系统设置&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  软件默认设置路径~&#x2F;Library">
+    <meta name="description" content="这是因为 Windows 在移动或者复制删除文件的时候，要不断更新最近使用文件这个列表。当我们取消复制删除或者移动的时候，Windows还会把已经更新过的最近使用文件列表还原回去。这就导致了我们取消复制、删除移动文件的时候有个非常漫长的等待… 解决办法也很简单，按图示步骤禁用最近使用文件功能就可以。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS路径">
-<meta property="og:url" content="https://dnacore.github.io/post/27341c55-d30b-4541-a4ff-6148fc213591.html">
+<meta property="og:title" content="Windows-取消复制、删除要很长时间">
+<meta property="og:url" content="https://dnacore.github.io/post/856a5516-ab15-470a-97b1-251ab64712d3.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="macOS 文件路径macOS 设置快捷方式钥匙串访问 系统路径 第三方偏好设置路径  个人~&#x2F;Library&#x2F;PreferencePanes 系统&#x2F;Library&#x2F;PreferencePanes   系统内置偏好设置路径，可直接打开对应的系统设置&#x2F;System&#x2F;Library&#x2F;PreferencePanes  系统更新下载位置&#x2F;Library&#x2F;Updates  软件默认设置路径~&#x2F;Library">
+<meta property="og:description" content="这是因为 Windows 在移动或者复制删除文件的时候，要不断更新最近使用文件这个列表。当我们取消复制删除或者移动的时候，Windows还会把已经更新过的最近使用文件列表还原回去。这就导致了我们取消复制、删除移动文件的时候有个非常漫长的等待… 解决办法也很简单，按图示步骤禁用最近使用文件功能就可以。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2018-11-26T06:19:43.000Z">
-<meta property="article:modified_time" content="2024-02-04T06:03:33.239Z">
+<meta property="og:image" content="https://dnacore.github.io/images/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4_2022-12-05_10-11-34.assets/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4-01.PNG">
+<meta property="og:image" content="https://dnacore.github.io/images/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4_2022-12-05_10-11-34.assets/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4-02.PNG">
+<meta property="article:published_time" content="2022-12-05T02:11:34.000Z">
+<meta property="article:modified_time" content="2024-03-12T11:26:11.737Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dnacore.github.io/images/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4_2022-12-05_10-11-34.assets/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4-01.PNG">
   
   
   
-  <title>macOS路径 - DNACore GitHub io</title>
+  <title>Windows-取消复制、删除要很长时间 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +203,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">macOS路径</span>
+            <span id="subtitle">Windows-取消复制、删除要很长时间</span>
           
         </div>
 
@@ -211,8 +214,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2018-11-26 14:19" pubdate>
-          2018年11月26日 下午
+        <time datetime="2022-12-05 10:11" pubdate>
+          2022年12月5日 上午
         </time>
       </span>
     
@@ -223,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          805 字
+          127 字
         
       </span>
     
@@ -234,7 +237,7 @@
         
         
         
-          7 分钟
+          2 分钟
         
       </span>
     
@@ -271,103 +274,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">macOS路径</h1>
+            <h1 id="seo-header">Windows-取消复制、删除要很长时间</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="macOS-文件路径"><a href="#macOS-文件路径" class="headerlink" title="macOS 文件路径"></a>macOS 文件路径</h1><h2 id="macOS-设置快捷方式"><a href="#macOS-设置快捷方式" class="headerlink" title="macOS 设置快捷方式"></a>macOS 设置快捷方式</h2><p><a href="x-help-action://openApp?bundleId=com.apple.keychainaccess">钥匙串访问</a></p>
-<h2 id="系统路径"><a href="#系统路径" class="headerlink" title="系统路径"></a>系统路径</h2><ul>
-<li><p>第三方偏好设置路径</p>
-<ul>
-<li>个人<code>~/Library/PreferencePanes</code></li>
-<li>系统<code>/Library/PreferencePanes</code></li>
-</ul>
-</li>
-<li><p>系统内置偏好设置路径，可直接打开对应的系统设置<br><code>/System/Library/PreferencePanes</code></p>
-</li>
-<li><p>系统更新下载位置<br><code>/Library/Updates</code></p>
-</li>
-<li><p>软件默认设置路径<br><code>~/Library/Preferences</code></p>
-</li>
-<li><p>特权文件路径，删除后可取消某些app的特权</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">/Library/</span>PrivilegedHelperTools<br></code></pre></td></tr></table></figure>
-<p>更多关于帮助程序的内容请看<a href="/post/3454943f-29b0-4da2-86a5-430b1b8fa7c3.html">帮助程序是什么</a></p>
-</li>
-<li><p>拼音输入法用户词库自造词位置</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs awk">~<span class="hljs-regexp">/Library/</span>Containers<span class="hljs-regexp">/com.apple.inputmethod.SCIM/</span><br>~<span class="hljs-regexp">/Library/</span>Dictionaries/DynamicPhraseLexicon_zh_Hans.db<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>icns 图标位置</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs awk"><span class="hljs-regexp">//</span>部分系统图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Resources<br><br><span class="hljs-regexp">//</span>部分iOS设备图标<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Library<span class="hljs-regexp">/MobileDevices.bundle/</span>Contents/Resources<br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/Templates/</span>Data<span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/CoreServices/</span>CoreTypes.bundle<span class="hljs-regexp">/Contents/</span>Library<span class="hljs-regexp">/MobileDevices.bundle/</span>Contents/Resources<br><br><span class="hljs-regexp">/System/</span>Library<span class="hljs-regexp">/PrivateFrameworks/</span>CommerceKit.framework<span class="hljs-regexp">/Versions/</span>A<span class="hljs-regexp">/Resources/</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>铃声路径<br><code>/System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/Ringtones</code><a href="file:///System/Library/PrivateFrameworks/ToneLibrary.framework/Versions/A/Resources/Ringtones">点击直达</a><br>设置里面的铃声<code>/System/Library/Sounds</code><a href="file:///System/Library/Sounds">点击直达</a><br><code>/Library/Audio/Apple Loops</code>[点击直达](file:&#x2F;&#x2F;&#x2F;Library&#x2F;Audio&#x2F;Apple Loops)</p>
-</li>
-<li><p>桌面壁纸<br><code>/Library/Desktop Pictures/</code><br>[点击直达](file:&#x2F;&#x2F;&#x2F;Library&#x2F;Desktop Pictures&#x2F;)<br>[点击直达localhost形式](file:&#x2F;&#x2F;localhost&#x2F;Library&#x2F;Desktop Pictures&#x2F;)</p>
-<ul>
-<li>macOS Sonoma <code>/System/Library/Desktop Pictures/</code></li>
-<li>*.madesktop 下载后存储在 <code>/System/Library/AssetsV2/com_apple_MobileAsset_DesktopPicture</code></li>
-<li>动态壁纸资源： <code>/System/Library/Desktop Pictures/.wallpapers</code></li>
-</ul>
-</li>
-<li><p>部分系统程序 归档实用工具、文件夹操作设置、访达、聚焦、抹掉助理等等<br><code>/System/Library/CoreServices</code><br><a href="file:///System/Library/CoreServices">点击直达</a></p>
-</li>
-<li><p>鼠标指针<br><code>/System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/</code><br><a href="file:///System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/HiServices.framework/Versions/A/Resources/">点击直达</a></p>
-</li>
-<li><p>自动操作素材库路径 Automator<br><code>/System/Library/Automator/</code></p>
-</li>
-<li><p>用户添加的自动操作素材库路径 Automator<br><code>~/Library/Automator</code></p>
-</li>
-<li><p>快速操作存储路径<br><code>~/Library/Services</code></p>
-</li>
-<li><p>系统快速操作存储路径 <code>/System/Library/Services</code><br>“快速操作”会被显示到右键菜单——<kbd>服务</kbd>中<br>系统设置——键盘——快捷键——服务中也可以编辑快速操作列表显示的内容</p>
-</li>
-<li><p>iCloud云盘 iCloud Drive<br><code>~/Library/Mobile\ Documents/com~apple~CloudDocs/</code></p>
-</li>
-<li><p>新用户目录模板<br><code>/System/Library/Templates</code></p>
-</li>
-</ul>
-<h2 id="应用软件路径"><a href="#应用软件路径" class="headerlink" title="应用软件路径"></a>应用软件路径</h2><ul>
-<li><p>预览图片查看器中自定义颜色存储路径<br><code>~/Library/Colors</code>里面的clr文件</p>
-</li>
-<li><p>Telegram 升级文件路径<br><code>~/Library/Caches/ru.keepcoder.Telegram/org.sparkle-project.Sparkle/PersistentDownloads</code></p>
-</li>
-<li><p>语音备忘录 Voice Memo<br><code>$HOME/Library/Application Support/com.apple.voicememos/Recordings</code><br><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662">https://apple.stackexchange.com/questions/340647/where-are-the-audio-files-of-voice-memos-stored-on-macos-mojave/340662</a></p>
-</li>
-<li><p>QQ 数据文件夹</p>
-<ul>
-<li><code>~/Library/Containers/com.tencent.qq/</code></li>
-<li>图片路径<code>~/Library/Containers/com.tencent.qq/Data/Library/Caches/Images</code></li>
-</ul>
-</li>
-<li><p>企业微信、微信企业版升级包路径<br><code>~/Library/Containers/com.tencent.WeWorkMac/Data/Upgrade</code></p>
-</li>
-<li><p>微信路径</p>
-<blockquote>
-<p>微信手机聊天记录备份路径，微信聊天记录备份是增量备份<br>~&#x2F;Library&#x2F;Containers&#x2F;com.tencent.xinWeChat&#x2F;Data&#x2F;Library&#x2F;Application Support&#x2F;com.tencent.xinWeChat&#x2F;2.0b4.0.9&#x2F;Backup</p>
-</blockquote>
-</li>
-<li><p>Source Tree 更新文件下载路径<br><code>~/Library/Caches/com.torusknot.SourceTreeNotMAS/org.sparkle-project.Sparkle/PersistentDownloads</code><br><a href="file://~/Library/Caches/com.torusknot.SourceTreeNotMAS/org.sparkle-project.Sparkle/">点击直达</a></p>
-</li>
-<li><p>百度网盘数据库路径<br><code>~/Library/Application Support/com.baidu.BaiduNetdisk-mac</code></p>
-</li>
-<li><p>Charles 大文件缓存路径<br><code>$TMPDIR/charles8637968132878592540.tmp</code></p>
-</li>
-<li><p>Charles 配置文件路径<br><code>~/Library/Application Support/Charles</code><br><code>$HOME/Library/Preferences/com.xk72.charles.config</code></p>
-</li>
-<li><p>Mac App Store 下载软件保存路径<br><code>$(getconf DARWIN_USER_TEMP_DIR)/com.apple.appstoreagent/com.apple.appstore/</code></p>
-</li>
-<li><p>macOS 备份的iOS设备文件路径<br><code>~/Library/Application Support/MobileSync/Backup</code></p>
-</li>
-<li><p>Instruments 用户模板保存位置<br><code>~/Library/Application Support/Instruments/Templates</code></p>
-</li>
-<li><p>VS Code 用户自建代码片段<br><code>~/Library/Application Support/Code/User/snippets/</code></p>
-</li>
-<li><p>Kim 更新包下载路径<br><code>~/Library/Application Support/Caches/kim-electron-updater/pending</code></p>
-</li>
-</ul>
-<h2 id="垃圾文件路径"><a href="#垃圾文件路径" class="headerlink" title="垃圾文件路径"></a>垃圾文件路径</h2><ul>
-<li>&#x2F;private&#x2F;var&#x2F;db&#x2F;diagnostics&#x2F;Signpost</li>
-</ul>
+                <p>这是因为 Windows 在移动或者复制删除文件的时候，要不断更新<code>最近使用文件</code>这个列表。<br>当我们取消复制删除或者移动的时候，Windows还会把已经更新过的<code>最近使用文件</code>列表还原回去。<br>这就导致了我们取消复制、删除移动文件的时候有个非常漫长的等待…</p>
+<p>解决办法也很简单，按图示步骤禁用<code>最近使用文件</code>功能就可以。</p>
+<p><img src="/images/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4_2022-12-05_10-11-34.assets/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4-01.PNG" srcset="/img/loading.gif" lazyload alt="Windows-取消复制、删除要很长时间-01"></p>
+<p><img src="/images/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4_2022-12-05_10-11-34.assets/Windows-%E5%8F%96%E6%B6%88%E5%A4%8D%E5%88%B6%E3%80%81%E5%88%A0%E9%99%A4%E8%A6%81%E5%BE%88%E9%95%BF%E6%97%B6%E9%97%B4-02.PNG" srcset="/img/loading.gif" lazyload alt="Windows-取消复制、删除要很长时间-02"></p>
 
                 
               </div>
@@ -380,7 +295,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
+        <a href="/tags/Windows/" class="print-no-link">#Windows</a>
       
     </div>
   
@@ -392,8 +307,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>macOS路径</div>
-      <div>https://dnacore.github.io/post/27341c55-d30b-4541-a4ff-6148fc213591.html</div>
+      <div>Windows-取消复制、删除要很长时间</div>
+      <div>https://dnacore.github.io/post/856a5516-ab15-470a-97b1-251ab64712d3.html</div>
     </div>
     <div class="license-meta">
       
@@ -405,13 +320,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2018年11月26日</div>
+          <div>2022年12月5日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年2月4日</div>
+          <div>2024年3月12日</div>
         </div>
       
       
@@ -442,9 +357,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/1ee60a3f-e622-4750-8f89-f29d194b558a.html" title="macOS-设置系统代理">
+                      <a href="/post/d84d10e9-7508-49c7-af38-c3ca95eb62ea.html" title="Yarn-yarnrc配置文件">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">macOS-设置系统代理</span>
+                        <span class="hidden-mobile">Yarn-yarnrc配置文件</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -452,8 +367,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/5e0eacc9-1332-440b-a141-b977bed9880f.html" title="VS Code 使用">
-                        <span class="hidden-mobile">VS Code 使用</span>
+                      <a href="/post/43bb1c27-5ace-4ea5-97ba-4ef3ad8954ed.html" title="Windows-PowerShell“无法加载文件，因为在此系统上禁止运行脚本”解决办法">
+                        <span class="hidden-mobile">Windows-PowerShell“无法加载文件，因为在此系统上禁止运行脚本”解决办法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
