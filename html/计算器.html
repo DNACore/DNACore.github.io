@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计算器</title>
+  <style>
+    input, button {
+      padding: 5px;
+      margin: 5px;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input" placeholder="输入公式，例如 1/(2+3)" onkeypress="handleKeyPress(event)">
+  <button onclick="calculate()">计算</button>
+  <div id="result"></div>
+  <div id="history"></div>
+
+  <script>
+    function handleKeyPress(event) {
+      if (event.key === 'Enter' || event.key === '=') {
+        calculate();
+      }
+    }
+
+    function calculate() {
+      const input = document.getElementById('input').value;
+      try {
+        const result = eval(input);
+        if (isNaN(result)) {
+          throw new Error('计算结果不是一个有效的数值');
+        }
+        const formattedResult = Number.isInteger(result) ? result : result.toFixed(2);
+        document.getElementById('result').innerHTML = `结果为: ${formattedResult}`;
+        document.getElementById('input').classList.remove('error');
+
+        // 保存历史记录到 localStorage
+        const history = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : [];
+        history.push({ input, result: formattedResult });
+        localStorage.setItem('history', JSON.stringify(history.reverse()));
+
+        // 更新历史记录显示
+        updateHistoryDisplay(history);
+      } catch (error) {
+        document.getElementById('result').innerHTML = '输入的公式有误，请重新输入';
+        document.getElementById('input').classList.add('error');
+      }
+    }
+
+    function updateHistoryDisplay(history) {
+      const historyElement = document.getElementById('history');
+      historyElement.innerHTML = '<h2>历史记录</h2>';
+      history.forEach((item, index) => {
+        historyElement.innerHTML += `<div>${index + 1}. ${item.input} = ${item.result} <button onclick="deleteHistory(${index})">删除</button></div>`;
+      });
+    }
+
+    function deleteHistory(index) {
+      const history = JSON.parse(localStorage.getItem('history'));
+      history.splice(index, 1);
+      localStorage.setItem('history', JSON.stringify(history.reverse()));
+      updateHistoryDisplay(history);
+    }
+
+    // 页面加载时显示历史记录
+    window.onload = function() {
+      const history = localStorage.getItem('history') ? JSON.parse(localStorage.getItem('history')) : [];
+      updateHistoryDisplay(history);
+    };
+  </script>
+</body>
+</html>
