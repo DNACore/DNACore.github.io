@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -86,7 +86,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.2.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -280,7 +280,7 @@
                 <p>总的说来，根据系统的不同，有两种实现开机自启的方法：<code>rc.local</code>与<code>systemd</code>。</p>
 <h2 id="rc-local"><a href="#rc-local" class="headerlink" title="rc.local"></a>rc.local</h2><p>树莓派官方文档对<code>rc.local</code>的介绍。值得注意的是：运行一个常驻脚本或者需要执行时间很长的脚本的时候，需要在命令最后加上<code>&amp;</code>来表明这条命令需要后台运行。否则会阻塞<code>rc.local</code>后面的脚本执行。<br>除此之外，不是所有的命令都支持使用<code>rc.local</code>的方式开机运行。<br><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/linux/usage/rc-local.md">https://www.raspberrypi.org/documentation/linux/usage/rc-local.md</a></p>
 <ol>
-<li>创建一个脚本文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano my_script.sh<br></code></pre></td></tr></table></figure>
+<li>创建一个脚本文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano my_script.sh<br></code></pre></td></tr></table></figure>
 脚本内容：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-built_in">touch</span> /home/pi/test.txt<br><span class="hljs-built_in">chmod</span> 777 /home/pi/test.txt<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hello Pi&quot;</span> &gt;&gt; /home/pi/test.txt<br></code></pre></td></tr></table></figure></li>
 </ol>
 <p>该shell 代码中，指定运行方式为sh，在pi 目录创建一个test.txt 文件，并添加权限<br>最后将Hello Pi 语句定向到该txt 文件中<br>保存，退出。</p>
@@ -292,13 +292,13 @@
 
 <p>然后可以发现<code>/home/pi</code>目录下多了<code>test.txt</code>文件</p>
 <ol start="3">
-<li>将该文件设置为开机自启：<br>首先打开<code>rc.local</code>文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/rc.local<br></code></pre></td></tr></table></figure>
+<li>将该文件设置为开机自启：<br>首先打开<code>rc.local</code>文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
 然后在<code>exit 0</code>前面添加如下代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">su pi -c <span class="hljs-string">&quot;exec /home/pi/my_script.sh&quot;</span><br></code></pre></td></tr></table></figure></li>
 </ol>
 <p><code>su</code>将会切换为<code>pi</code>用户执行文件，且执行完后切换为原来用户。<br>保存即可。<br>随后开机便会发现<code>/home/pi</code>目录下多了一个<code>test.txt</code>文件</p>
 <ol start="4">
-<li>若是要开机自启其他类型的文件，例如<code>/home/pi</code>下的<code>abc.py</code>文件，则先进入<code>rc.local</code>文件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo nano /etc/rc.local<br></code></pre></td></tr></table></figure>
-然后添加：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo python /home/pi/abc.py &amp;<br></code></pre></td></tr></table></figure>
+<li>若是要开机自启其他类型的文件，例如<code>/home/pi</code>下的<code>abc.py</code>文件，则先进入<code>rc.local</code>文件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
+然后添加：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> python /home/pi/abc.py &amp;<br></code></pre></td></tr></table></figure>
 最后的<code>&amp;</code>代表在后台运行</li>
 </ol>
 <h2 id="service命令"><a href="#service命令" class="headerlink" title="service命令"></a>service命令</h2><p>service命令其实是去<code>/etc/init.d</code>目录下，去执行相关程序<br>在<code>/etc/init.d/</code>目录下新建一个服务脚本文件。<br>在终端输入并回车<code>pi@raspberry:~ $ sudo vi /etc/init.d/script_test</code><br>在空白文件中输入以下内容：</p>
@@ -523,7 +523,6 @@
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  
   
   
   

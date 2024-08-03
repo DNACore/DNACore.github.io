@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成网址链接</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* 防止页面滚动 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fafafa; /* 轻柔的背景色 */
+            color: #333; /* 文本颜色 */
+        }
+        .container {
+            padding: 30px;
+            margin: auto;
+            max-width: 800px; /* 最大宽度 */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        h1 {
+            font-size: 1.5em;
+            color: #444;
+            margin-bottom: 20px; /* 标题下边距 */
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px; /* 轻微的圆角 */
+            resize: vertical; /* 只允许垂直方向调整大小 */
+            min-height: 100px; /* 初始最小高度 */
+        }
+        .controls {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .controls button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 8px; /* 按钮之间的右边距 */
+            transition: background-color 0.3s; /* 平滑背景色过渡 */
+        }
+        .controls button:active {
+            transform: scale(0.98); /* 点击时轻微向内缩放 */
+        }
+        .controls button:nth-child(1) {
+            background-color: #007bff; /* 蓝色按钮 */
+        }
+        .controls button:nth-child(1):hover {
+            background-color: #0056b3;
+        }
+        .controls button:nth-child(2) {
+            background-color: #dc3545; /* 红色按钮 */
+        }
+        .controls button:nth-child(2):hover {
+            background-color: #bd2130;
+        }
+        #resultContainer {
+            flex-grow: 1;
+            overflow: hidden;
+            padding: 10px 0; /* 结果容器上下间距 */
+        }
+        #result {
+            height: 100%; /* 将结果容器填满父容器 */
+            overflow-y: auto; /* 允许垂直滚动 */
+            padding: 10px;
+            border-top: 1px solid #ddd; /* 上边框 */
+            border-bottom: 1px solid #ddd; /* 下边框 */
+            background-color: #f0f0f0; /* 背景颜色 */
+        }
+        .link {
+            display: block;
+            padding: 8px;
+            margin: 5px 0;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px; /* 圆角 */
+            text-decoration: none;
+            color: #007bff; /* 链接颜色 */
+            transition: all 0.3s; /* 平滑过渡效果 */
+        }
+        .link:hover {
+            background-color: #f8f9fa; /* 鼠标悬浮背景色 */
+            border-color: #bbcfea;
+        }
+        .link:visited {
+            color: gray; /* 已访问链接的颜色 */
+        }
+        .link:visited:hover {
+            background-color: #f8f9fa;
+            border-color: #bbcfea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>生成网址链接</h1>
+        <textarea id="templateInput" placeholder="请输入链接模板，例如： https://www.example.com/post/id-{数字}.html "></textarea>
+        <textarea id="inputArea" placeholder="请输入多组数字，每组数字以换行分隔"></textarea>
+        <div class="controls">
+            <button onclick="generateLinks()">生成链接</button>
+            <button onclick="clearTemplate()">清除模板</button>
+        </div>
+        <div id="resultContainer">
+            <div id="result"></div>
+        </div>
+    </div>
+
+    <script>
+        // 保存模板到本地存储
+        function saveTemplate() {
+            const template = document.getElementById('templateInput').value;
+            localStorage.setItem('linkTemplate', template);
+        }
+
+        // 从本地存储加载模板
+        function loadTemplate() {
+            const savedTemplate = localStorage.getItem('linkTemplate');
+            if (savedTemplate) {
+                document.getElementById('templateInput').value = savedTemplate;
+            }
+        }
+
+        // 清除本地存储中的模板并清空输入框
+        function clearTemplate() {
+            localStorage.removeItem('linkTemplate');
+            document.getElementById('templateInput').value = '';
+        }
+
+        // 页面加载时初始化
+        window.onload = loadTemplate;
+
+        function generateLinks() {
+            const template = document.getElementById('templateInput').value;
+
+            // 在生成链接前保存模板
+            saveTemplate();
+
+            if (!template.includes('{数字}')) {
+                alert('模板格式不正确，请确保包含 "{数字}" 占位符');
+                return;
+            }
+
+            const input = document.getElementById('inputArea').value;
+            const numbers = input.split('\n').filter(num => num.trim() !== '');
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // 清空之前的内容
+
+            const fragment = document.createDocumentFragment(); // 创建文档片段
+
+            numbers.forEach(number => {
+                const link = template.replace('{数字}', number.trim());
+                const linkElement = document.createElement('a');
+                linkElement.href = link;
+                linkElement.textContent = link;
+                linkElement.target = '_blank'; // 在新窗口打开链接
+                linkElement.className = 'link';
+                fragment.appendChild(linkElement);
+            });
+
+            resultDiv.appendChild(fragment); // 一次性添加所有链接
+        }
+    </script>
+</body>
+</html>

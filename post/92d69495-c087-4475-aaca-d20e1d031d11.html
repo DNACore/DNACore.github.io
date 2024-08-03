@@ -73,7 +73,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.7","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -86,7 +86,7 @@
 
 
   
-<meta name="generator" content="Hexo 7.2.0"></head>
+<meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -283,7 +283,7 @@
 <h2 id="下载和安装"><a href="#下载和安装" class="headerlink" title="下载和安装"></a>下载和安装</h2><h3 id="下载包-sudo-gem-install-cocoapods"><a href="#下载包-sudo-gem-install-cocoapods" class="headerlink" title="下载包 sudo gem install cocoapods"></a>下载包 <code>sudo gem install cocoapods</code></h3><blockquote>
 <p>提示<br>查看 gem 使用的安装源 <code>gem sources -l</code><br>移除一个 gem 安装源 <code>gem sources --remove https://rubygems.org/</code><br>新增一个 gem 安装源 <code>gem sources -a http://ruby.taobao.org/</code></p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装</span><br>sudo gem install cocoapods -n /usr/local/bin<br><span class="hljs-comment"># 安装指定版本</span><br>sudo gem install cocoapods -n /usr/local/bin --version 1.5.3<br><span class="hljs-comment"># 卸载</span><br>sudo gem uninstall cocoapods -n /usr/local/bin<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 安装</span><br><span class="hljs-built_in">sudo</span> gem install cocoapods -n /usr/local/bin<br><span class="hljs-comment"># 安装指定版本</span><br><span class="hljs-built_in">sudo</span> gem install cocoapods -n /usr/local/bin --version 1.5.3<br><span class="hljs-comment"># 卸载</span><br><span class="hljs-built_in">sudo</span> gem uninstall cocoapods -n /usr/local/bin<br></code></pre></td></tr></table></figure>
 <h3 id="编译安装安装："><a href="#编译安装安装：" class="headerlink" title="编译安装安装："></a>编译安装安装：</h3><p><code>pod setup</code> (根据测试，此步骤可以省略)<br>执行安装命令后会向<code>~/.cocoapods/repos</code>这里拉取git内容，大概有341MB。等待一段时间之后，如果没有错误的话 CocoaPods 就安装成功了。</p>
 <blockquote>
 <p>为什么要执行<code>pod setup</code>？<br>所有的项目的 <code>Podspec</code> 文件都托管在 <a target="_blank" rel="noopener" href="https://github.com/CocoaPods/Specs">https://github.com/CocoaPods/Specs</a> 第一次执行 <code>pod setup</code> 时，CocoaPods 会将这些podspec索引文件更新到本地的<code>~/.cocoapods/</code>目录下，这个索引文件比较大，有 300多M 左右，在执行一次<code>pod install</code>之后会增加到700多M。所以第一次更新时非常慢。</p>
@@ -558,7 +558,6 @@
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
-  
   
   
   

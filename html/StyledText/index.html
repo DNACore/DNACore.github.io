@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花漾字生成器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="input-section">
+            <textarea id="inputText" placeholder="请输入文字"></textarea>
+        </div>
+        <div class="output-section">
+            <div class="previews">
+                <h3>效果预览</h3>
+                <button class="effect uppercase" data-effect="uppercase">大写</button>
+                <button class="effect lowercase" data-effect="lowercase">小写</button>
+                <button class="effect bold" data-effect="bold">加粗</button>
+                <!-- 可以添加更多效果按钮 -->
+            </div>
+            <div class="output">
+                <h3>处理后的花漾字</h3>
+                <div id="outputText"></div>
+                <button id="copyButton">复制</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
