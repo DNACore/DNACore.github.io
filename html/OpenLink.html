@@ -63,9 +63,15 @@
             background-color: #0056b3;
         }
         .controls button:nth-child(2) {
-            background-color: #dc3545; /* 红色按钮 */
+            background-color: #28a745; /* 绿色按钮 */
         }
         .controls button:nth-child(2):hover {
+            background-color: #218838;
+        }
+        .controls button:nth-child(3) {
+            background-color: #dc3545; /* 红色按钮 */
+        }
+        .controls button:nth-child(3):hover {
             background-color: #bd2130;
         }
         #resultContainer {
@@ -112,6 +118,7 @@
         <textarea id="inputArea" placeholder="请输入多组数字，每组数字以换行分隔"></textarea>
         <div class="controls">
             <button onclick="generateLinks()">生成链接</button>
+            <button onclick="batchOpenLinks()">批量打开链接</button>
             <button onclick="clearTemplate()">清除模板</button>
         </div>
         <div id="resultContainer">
@@ -120,6 +127,8 @@
     </div>
 
     <script>
+        let lastOpenedIndex = 0; // 将上次打开的索引初始化为0
+
         // 保存模板到本地存储
         function saveTemplate() {
             const template = document.getElementById('templateInput').value;
@@ -172,6 +181,25 @@
             });
 
             resultDiv.appendChild(fragment); // 一次性添加所有链接
+            lastOpenedIndex = 0; // 重置索引
+        }
+
+        function batchOpenLinks() {
+            const links = document.querySelectorAll('#result .link');
+            const totalLinks = links.length;
+            const batchSize = 10; // 每次打开的链接数量
+
+            // 检查是否还有未打开的链接
+            if (lastOpenedIndex >= totalLinks) {
+                alert('所有链接已全部打开');
+                return;
+            }
+
+            for (let i = lastOpenedIndex; i < Math.min(lastOpenedIndex + batchSize, totalLinks); i++) {
+                window.open(links[i].href, '_blank');
+            }
+
+            lastOpenedIndex += batchSize; // 更新索引
         }
     </script>
 </body>
