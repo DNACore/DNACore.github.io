@@ -27,7 +27,7 @@
 <meta property="og:description" content="批处理：替换字符串、截取字符串、扩充字符串 替换字符串，即将某一字符串中的特定字符或字符串替换为给定的字符串。举例说明其功能：  12345678@echo offset aa&#x3D;你好！是我！echo 替换前：%aa%echo 替换后：%aa:你&#x3D;你们%echo aa &#x3D; %aa%set &quot;aa&#x3D;%aa:你&#x3D;你们%&quot;echo aa &#x3D; %aa%pause  对于上面的例子有一点说">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-09-17T08:35:03.000Z">
-<meta property="article:modified_time" content="2023-07-12T09:57:09.401Z">
+<meta property="article:modified_time" content="2024-09-12T07:52:21.725Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Windows">
 <meta property="article:tag" content="cmd">
@@ -277,7 +277,7 @@
             
               <div class="markdown-body">
                 
-                <h1 id="批处理：替换字符串、截取字符串、扩充字符串"><a href="#批处理：替换字符串、截取字符串、扩充字符串" class="headerlink" title="批处理：替换字符串、截取字符串、扩充字符串"></a>批处理：替换字符串、截取字符串、扩充字符串</h1><ol>
+                <h2 id="批处理：替换字符串、截取字符串、扩充字符串"><a href="#批处理：替换字符串、截取字符串、扩充字符串" class="headerlink" title="批处理：替换字符串、截取字符串、扩充字符串"></a>批处理：替换字符串、截取字符串、扩充字符串</h2><ol>
 <li>替换字符串，即将某一字符串中的特定字符或字符串替换为给定的字符串。举例说明其功能：</li>
 </ol>
 <figure class="highlight vbscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs vbscript">@echo off<br><span class="hljs-keyword">set</span> aa=你好！是我！<br>echo 替换前：%aa%<br>echo 替换后：%aa:你=你们%<br>echo aa = %aa%<br><span class="hljs-keyword">set</span> <span class="hljs-string">&quot;aa=%aa:你=你们%&quot;</span><br>echo aa = %aa%<br>pause<br></code></pre></td></tr></table></figure>
@@ -351,7 +351,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月12日</div>
+          <div>2024年9月12日</div>
         </div>
       
       

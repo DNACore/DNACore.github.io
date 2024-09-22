@@ -27,7 +27,7 @@
 <meta property="og:description" content="浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  测试页面：https:&#x2F;&#x2F;browserleaks.com&#x2F;webrtc 参考：https:&#x2F;&#x2F;www.ivpn.net&#x2F;knowledgebase&#x2F;158&#x2F;My-IP-is-being-leaked-by-WebRT">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-26T02:51:20.000Z">
-<meta property="article:modified_time" content="2024-08-24T12:03:22.553Z">
+<meta property="article:modified_time" content="2024-09-19T03:26:48.490Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Firefox">
 <meta name="twitter:card" content="summary_large_image">
@@ -314,11 +314,11 @@
 </li>
 </ul>
 <h2 id="修改-Firefox-缓存位置"><a href="#修改-Firefox-缓存位置" class="headerlink" title="修改 Firefox 缓存位置"></a>修改 Firefox 缓存位置</h2><ol>
-<li>打开火狐浏览器主界面，在地址栏中输入about:config打开火狐的配置选项</li>
+<li>打开火狐浏览器主界面，在地址栏中输入<code>about:config</code>打开火狐的配置选项</li>
 <li>进入配置界面后，随便在一项上右键，选择“新建”下的“字符串”这一项</li>
-<li>弹出一个新建字符串框，在框中输入browser.cache.disk.parent_directory名称（即浏览器缓存磁盘目录设置），按确定</li>
-<li>当确定后，弹出下一个框，输入新的缓存目录位置，磁盘可以自选，目录可以自定义，我要把缓存放到虚拟磁盘R上，即R:firefoxcache</li>
-<li>可以马上在配置中看到新建项目，一个是这个缓存占用的空间，一个是缓存路径，这再个都可以自由修改<br>新建一个字符串项目，方法与上面一样<br>在弹出的框中输入browser.cache.offline.parent_directory名称，确定<br>在下一个框中，输入同样的缓存路径R:firefoxcache，保存缓存文件在同一个文件夹中，确定<br>在上端的搜索框中，输入browser.cache.disk.enable，检查一下，缓存磁盘是否已经启用，如果值为true（真），即为启用。如果值为flase（假），则没有启用，要改成true<br>在搜索框中输入browser.cache.offline.enable，检查一下这一个是否启用，如果值为true，则表明启用了<br>关闭火狐浏览器，重新启动一次，再在地址栏中输入about:cache，看看火狐的缓存文件夹是否修改成功了，如果显示的路径为新修改的路径，则表明成功</li>
+<li>弹出一个新建字符串框，在框中输入<code>browser.cache.disk.parent_directory</code>名称（即浏览器缓存磁盘目录设置），按确定</li>
+<li>当确定后，弹出下一个框，输入新的缓存目录位置，磁盘可以自选，目录可以自定义，我要把缓存放到虚拟磁盘R上，即<code>R:firefoxcache</code></li>
+<li>可以马上在配置中看到新建项目，一个是这个缓存占用的空间，一个是缓存路径，这再个都可以自由修改<br>新建一个字符串项目，方法与上面一样<br>在弹出的框中输入<code>browser.cache.offline.parent_directory</code>名称，确定<br>在下一个框中，输入同样的缓存路径<code>R:firefoxcache</code>，保存缓存文件在同一个文件夹中，确定<br>在上端的搜索框中，输入<code>browser.cache.disk.enable</code>，检查一下，缓存磁盘是否已经启用，如果值为true（真），即为启用。如果值为flase（假），则没有启用，要改成true<br>在搜索框中输入<code>browser.cache.offline.enable</code>，检查一下这一个是否启用，如果值为true，则表明启用了<br>关闭火狐浏览器，重新启动一次，再在地址栏中输入<code>about:cache</code>，看看火狐的缓存文件夹是否修改成功了，如果显示的路径为新修改的路径，则表明成功</li>
 </ol>
 <!-- https://center.zzuit.edu.cn/info/1084/7206.htm -->
 
@@ -350,16 +350,18 @@
 
 <h2 id="Firefox-container"><a href="#Firefox-container" class="headerlink" title="Firefox container"></a>Firefox container</h2><ul>
 <li>当点击了【Remember my decision for this site】发现没有办法修改回去怎么办？<ol>
-<li>打开<a href="about:debugging#/runtime/this-firefox">about:debugging#&#x2F;runtime&#x2F;this-firefox</a>；或者在插件管理页面，点击齿轮图标，选择Debug addOn</li>
+<li>打开<a href="about:debugging#/runtime/this-firefox">about:debugging#&#x2F;runtime&#x2F;this-firefox</a>；或者在插件管理页面，点击齿轮图标，选择<code>Debug addOn</code></li>
 <li>找到<code>Firefox Multi-Account Containers</code>，点击右侧的<code>Inspect</code></li>
 <li>定位到<code>Storage/Extension Storage</code>这里就可以直接修改扩展的配置，找到对应的网址然后修改即可。</li>
 </ol>
 </li>
 </ul>
 <h2 id="Firefox-Extension-扩展"><a href="#Firefox-Extension-扩展" class="headerlink" title="Firefox Extension 扩展"></a>Firefox Extension 扩展</h2><ul>
-<li>扩展如何签名？<br><a target="_blank" rel="noopener" href="https://wiki.mozilla.org/Add-ons/Extension_Signing#Signing_of_special_add-ons">https://wiki.mozilla.org/Add-ons/Extension_Signing#Signing_of_special_add-ons</a></li>
+<li>扩展如何签名？</li>
 </ul>
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><p><a href="">Firefox 终极隐私指南</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.mozilla.org/Add-ons/Extension_Signing#Signing_of_special_add-ons">https://wiki.mozilla.org/Add-ons/Extension_Signing#Signing_of_special_add-ons</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.mozilla.org/Add-ons/Extension_Signing#FAQ">https://wiki.mozilla.org/Add-ons/Extension_Signing#FAQ</a></p>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><!-- [Firefox 终极隐私指南]() -->
 
                 
               </div>
@@ -403,7 +405,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年8月24日</div>
+          <div>2024年9月19日</div>
         </div>
       
       
