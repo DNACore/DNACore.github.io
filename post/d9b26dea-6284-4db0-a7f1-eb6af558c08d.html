@@ -27,7 +27,7 @@
 <meta property="og:description" content="关闭macOS的SWAP交换分区查看macOS SWAP交换分区占用情况以下几种方式都可以查看SWAP的使用情况。  sysctl vm.swapusage 可以查看正在使用中的SWAP大小，与活动监视器里面“已使用的交换”显示的一致。  sysctl -a vm.compressor_mode 查看当前SWAP分区的运行模式：4为默认模式。  diskutil apfs list 查看包含&#x2F;Sy">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-20T02:28:10.000Z">
-<meta property="article:modified_time" content="2024-09-12T07:50:57.915Z">
+<meta property="article:modified_time" content="2024-09-23T12:37:55.121Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta name="twitter:card" content="summary_large_image">
@@ -276,7 +276,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="关闭macOS的SWAP交换分区"><a href="#关闭macOS的SWAP交换分区" class="headerlink" title="关闭macOS的SWAP交换分区"></a>关闭macOS的SWAP交换分区</h2><h2 id="查看macOS-SWAP交换分区占用情况"><a href="#查看macOS-SWAP交换分区占用情况" class="headerlink" title="查看macOS SWAP交换分区占用情况"></a>查看macOS SWAP交换分区占用情况</h2><p>以下几种方式都可以查看SWAP的使用情况。</p>
+                <h2 id="关闭macOS的SWAP交换分区"><a href="#关闭macOS的SWAP交换分区" class="headerlink" title="关闭macOS的SWAP交换分区"></a>关闭macOS的SWAP交换分区</h2><h3 id="查看macOS-SWAP交换分区占用情况"><a href="#查看macOS-SWAP交换分区占用情况" class="headerlink" title="查看macOS SWAP交换分区占用情况"></a>查看macOS SWAP交换分区占用情况</h3><p>以下几种方式都可以查看SWAP的使用情况。</p>
 <ol>
 <li><p>sysctl vm.swapusage<br> 可以查看正在使用中的SWAP大小，与活动监视器里面“已使用的交换”显示的一致。</p>
 </li>
@@ -287,7 +287,7 @@
 <li><p>memory_pressure | grep Swap<br> 这个是查看SWAP分区的换入换出情况，不为0就说明系统有使用SWAP交换分区。</p>
 </li>
 </ol>
-<h2 id="如何关闭macOS的交换分区？"><a href="#如何关闭macOS的交换分区？" class="headerlink" title="如何关闭macOS的交换分区？"></a>如何关闭macOS的交换分区？</h2><p>如何关闭macOS的交换分区来减少SSD的写入呢？</p>
+<h3 id="如何关闭macOS的交换分区？"><a href="#如何关闭macOS的交换分区？" class="headerlink" title="如何关闭macOS的交换分区？"></a>如何关闭macOS的交换分区？</h3><p>如何关闭macOS的交换分区来减少SSD的写入呢？</p>
 <ol>
 <li>完全关闭Mac；</li>
 <li>在关闭状态，按住电源按钮，直到屏幕上显示<code>正在加载或恢复</code>或者类似的内容；</li>
@@ -346,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年9月12日</div>
+          <div>2024年9月23日</div>
         </div>
       
       
