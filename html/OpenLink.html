@@ -41,6 +41,7 @@
         }
         .controls {
             display: flex;
+            align-items: center; /* 垂直居中对齐 */
             margin-bottom: 10px;
         }
         .controls button {
@@ -73,6 +74,19 @@
         }
         .controls button:nth-child(3):hover {
             background-color: #bd2130;
+        }
+        #delayOptions {
+            display: flex;
+            align-items: center;
+            margin-left: auto; /* 将延迟设置区域推到右边 */
+        }
+        #delayOptions input[type="number"] {
+            width: 60px;
+            margin-left: 5px;
+            margin-right: 10px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px; /* 轻微的圆角 */
         }
         #resultContainer {
             flex-grow: 1;
@@ -114,49 +128,71 @@
 <body>
     <div class="container">
         <h1>生成网址链接</h1>
-        <textarea id="templateInput" placeholder="请输入链接模板，例如： https://www.example.com/post/id-{数字}.html "></textarea>
+        <textarea id="templateInput" placeholder="请输入链接模板，例如：  https://www.example.com/post/id-{数字}.html  "></textarea>
         <textarea id="inputArea" placeholder="请输入多组数字，每组数字以换行分隔"></textarea>
         <div class="controls">
             <button onclick="generateLinks()">生成链接</button>
             <button onclick="batchOpenLinks()">批量打开链接</button>
             <button onclick="clearTemplate()">清除模板</button>
+            <div id="delayOptions">
+                <label for="delayTime">延迟时间（毫秒）：</label>
+                <input type="number" id="delayTime" value="1000" min="0">
+                <label for="enableDelay">
+                    <input type="checkbox" id="enableDelay" checked> 启用延迟
+                </label>
+            </div>
         </div>
         <div id="resultContainer">
             <div id="result"></div>
         </div>
     </div>
-
     <script>
         let lastOpenedIndex = 0; // 将上次打开的索引初始化为0
 
-        // 保存模板到本地存储
-        function saveTemplate() {
+        // 保存设置到本地存储
+        function saveSettings() {
             const template = document.getElementById('templateInput').value;
+            const delayTime = document.getElementById('delayTime').value;
+            const enableDelay = document.getElementById('enableDelay').checked;
             localStorage.setItem('linkTemplate', template);
+            localStorage.setItem('delayTime', delayTime);
+            localStorage.setItem('enableDelay', enableDelay);
         }
 
-        // 从本地存储加载模板
-        function loadTemplate() {
+        // 从本地存储加载设置
+        function loadSettings() {
             const savedTemplate = localStorage.getItem('linkTemplate');
+            const savedDelayTime = localStorage.getItem('delayTime');
+            const savedEnableDelay = localStorage.getItem('enableDelay');
             if (savedTemplate) {
                 document.getElementById('templateInput').value = savedTemplate;
             }
+            if (savedDelayTime) {
+                document.getElementById('delayTime').value = savedDelayTime;
+            }
+            if (savedEnableDelay !== null) {
+                document.getElementById('enableDelay').checked = (savedEnableDelay === 'true');
+            }
         }
 
-        // 清除本地存储中的模板并清空输入框
+        // 清除本地存储中的模板和延迟时间，并清空输入框
         function clearTemplate() {
             localStorage.removeItem('linkTemplate');
+            localStorage.removeItem('delayTime');
+            localStorage.removeItem('enableDelay');
             document.getElementById('templateInput').value = '';
+            document.getElementById('delayTime').value = '1000'; // 设为默认值
+            document.getElementById('enableDelay').checked = true; // 设为默认值
         }
 
         // 页面加载时初始化
-        window.onload = loadTemplate;
+        window.onload = loadSettings;
 
+        // 生成链接函数
         function generateLinks() {
             const template = document.getElementById('templateInput').value;
-
-            // 在生成链接前保存模板
-            saveTemplate();
+            // 在生成链接前保存模板和延迟时间
+            saveSettings();
 
             if (!template.includes('{数字}')) {
                 alert('模板格式不正确，请确保包含 "{数字}" 占位符');
@@ -165,6 +201,12 @@
 
             const input = document.getElementById('inputArea').value;
             const numbers = input.split('\n').filter(num => num.trim() !== '');
+
+            if (numbers.length === 0) {
+                alert('请输入至少一组数字');
+                return;
+            }
+
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = ''; // 清空之前的内容
 
@@ -184,22 +226,32 @@
             lastOpenedIndex = 0; // 重置索引
         }
 
+        // 批量打开链接函数
         function batchOpenLinks() {
             const links = document.querySelectorAll('#result .link');
             const totalLinks = links.length;
-            const batchSize = 10; // 每次打开的链接数量
+            const delayEnabled = document.getElementById('enableDelay').checked;
+            const delayTime = delayEnabled ? parseInt(document.getElementById('delayTime').value, 10) : 0;
 
-            // 检查是否还有未打开的链接
             if (lastOpenedIndex >= totalLinks) {
                 alert('所有链接已全部打开');
                 return;
             }
 
-            for (let i = lastOpenedIndex; i < Math.min(lastOpenedIndex + batchSize, totalLinks); i++) {
-                window.open(links[i].href, '_blank');
+            const batchSize = 10; // 每次打开的链接数量
+
+            function openLinkWithDelay(index, count) {
+                if (index < totalLinks && count < batchSize) {
+                    window.open(links[index].href, '_blank');
+                    setTimeout(() => openLinkWithDelay(index + 1, count + 1), delayTime);
+                } else if (index < totalLinks) {
+                    lastOpenedIndex = index;
+                } else {
+                    alert('所有链接已全部打开');
+                }
             }
 
-            lastOpenedIndex += batchSize; // 更新索引
+            openLinkWithDelay(lastOpenedIndex, 0);
         }
     </script>
 </body>
