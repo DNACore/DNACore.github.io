@@ -27,7 +27,7 @@
 <meta property="og:description" content="APFS 苹果官方文档About Apple File System Apple File System Reference.pdf  diskutil apfs 命令集 gpt命令集 newfs_apfs 工具 &#x2F;System&#x2F;Library&#x2F;Filesystems&#x2F;apfs.fs&#x2F;Contents&#x2F;Resources&#x2F;apf">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-16T06:45:36.000Z">
-<meta property="article:modified_time" content="2024-10-17T11:27:14.390Z">
+<meta property="article:modified_time" content="2024-10-31T09:16:29.774Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="APFS">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          355 字
+          410 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -286,30 +286,42 @@
 <li>gpt命令集</li>
 <li>newfs_apfs 工具</li>
 <li>&#x2F;System&#x2F;Library&#x2F;Filesystems&#x2F;apfs.fs&#x2F;Contents&#x2F;Resources&#x2F;apfs.util 工具</li>
+<li>apfs_hfs_convert hfs 分区转换为 apfs 分区</li>
+<li>newfs_apfs<!--
+https://eclecticlight.co/2017/04/08/how-to-make-your-own-apfs-volume/
+--></li>
 </ul>
 <h2 id="将磁盘格式化为APFS"><a href="#将磁盘格式化为APFS" class="headerlink" title="将磁盘格式化为APFS"></a>将磁盘格式化为APFS</h2><ol>
 <li>查看所有接入的 disk<br><code>diskutil list</code></li>
 </ol>
 <p>列出所有的apfs分区 <code>diskutil apfs list</code></p>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs console">/dev/disk4 (disk image):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:      GUID_partition_scheme                        +10.0 GB    disk4<br>   1:                        EFI EFI                     209.7 MB   disk4s1<br>   2:                 Apple_APFS Container disk5         9.8 GB     disk4s2<br><br>/dev/disk5 (synthesized):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:      APFS Container Scheme -                      +9.8 GB     disk5<br>                                 Physical Store disk4s2<br>   1:                APFS Volume NodeModules             24.6 KB    disk5s1<br></code></pre></td></tr></table></figure>
+
 <ol start="2">
-<li><p>卸载磁盘<br><code>diskutil unmountDisk disk2</code></p>
+<li><p>卸载磁盘<br><code>diskutil unmountDisk disk5</code></p>
 </li>
-<li><p>gpt命令删除所有分区。从后向前删除，空白磁盘可不需要这个步骤<br><code>gpt remove -i 2 disk2</code><br><code>gpt remove -i 1 disk2</code></p>
+<li><p>gpt命令删除所有分区。从后向前删除，空白磁盘可不需要这个步骤<br><code>gpt remove -i 2 disk4</code><br><code>gpt remove -i 1 disk4</code></p>
 </li>
 <li><p>清空原有分区表<br><code>sudo dd if=/dev/zero of=/dev/rdisk4 bs=512k count=1</code></p>
 </li>
-<li><p>创建新gpt分区表<br><code>sudo gpt create disk2</code></p>
+<li><p>创建新gpt分区表<br><code>sudo gpt create disk4</code></p>
 </li>
-<li><p>使用 diskutil 添加 apfs container(可直接在空磁盘上执行这一步，分区是否对齐待定)<br><code>diskutil apfs createContainer disk2</code></p>
+<li><p>使用 diskutil 添加 APFS Container (可直接在空磁盘上执行这一步，分区是否对齐待定)<br><code>diskutil apfs createContainer disk4</code></p>
 </li>
-<li><p>diskutil list 查看新container对应的disk编号，这里是disk3</p>
-</li>
-<li><p>向disk3添加 apfs Volume<br><code>diskutil apfs addVolume disk3 APFS TheAPFSName</code></p>
-</li>
-<li><p>禁用 Volume 上的 OwnerShip，这里以添加后的 Volume disk3s1 为例：<br><code>sudo diskutil disableOwnership disk3s1</code></p>
+<li><p>diskutil list 查看新 APFS Container 对应的disk编号，这里是disk5</p>
 </li>
 </ol>
-<h2 id="擦除-apfs-volume"><a href="#擦除-apfs-volume" class="headerlink" title="擦除 apfs volume"></a>擦除 apfs volume</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">diskutil apfs eraseVolume disk2s1 -name ErasedApfsVolume<br></code></pre></td></tr></table></figure>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs console">/dev/disk4 (disk image):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:                                                   +10.0 GB    disk4<br><br>/dev/disk5 (synthesized):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:      APFS Container Scheme -                      +10.0 GB    disk5<br>                                 Physical Store disk4<br></code></pre></td></tr></table></figure>
+
+<ol start="8">
+<li>向 disk5 添加 APFS Volume<br><code>diskutil apfs addVolume disk5 APFS TheAPFSName</code></li>
+</ol>
+<figure class="highlight console"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs console">/dev/disk4 (disk image):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:                                                   +10.0 GB    disk4<br><br>/dev/disk5 (synthesized):<br><span class="hljs-meta prompt_">   #</span><span class="language-bash">:                       TYPE NAME                    SIZE       IDENTIFIER</span><br>   0:      APFS Container Scheme -                      +10.0 GB    disk5<br>                                 Physical Store disk4<br>   1:                APFS Volume TheAPFSName             24.6 KB    disk5s1<br></code></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>禁用 Volume 上的 OwnerShip，这里以添加后的 Volume disk5s1 为例：<br><code>sudo diskutil disableOwnership disk5s1</code></li>
+</ol>
+<h2 id="擦除-apfs-volume"><a href="#擦除-apfs-volume" class="headerlink" title="擦除 apfs volume"></a>擦除 apfs volume</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">diskutil apfs eraseVolume disk5s1 -name ErasedApfsVolume<br></code></pre></td></tr></table></figure>
 
 
 <h2 id="apfs-util-工具"><a href="#apfs-util-工具" class="headerlink" title="apfs.util 工具"></a>apfs.util 工具</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ /System/Library/Filesystems/apfs.fs/Contents/Resources/apfs.util<br><br>APFS Utility tool<br>Usage: apfs.util &lt;option&gt; [&lt;verb&gt;] path|<span class="hljs-built_in">dir</span>|device [&lt;optional parameter&gt;], as follows:<br><br>apfs.util &lt;option&gt; [&lt;verb&gt;] /dev/diskXsY<br>   -a path        : Get the absolute volume uuid <span class="hljs-keyword">for</span> the volume at path.<br>   -D get         : Get defragmentation setting <span class="hljs-keyword">for</span> volume or container.<br>   -D <span class="hljs-built_in">set</span>=<span class="hljs-built_in">yes</span>/no  : <span class="hljs-built_in">enable</span> / <span class="hljs-built_in">disable</span> defragmentation <span class="hljs-keyword">for</span> volume or container.<br>   -k             : get volume UUID.<br>   -p             : probe <span class="hljs-keyword">for</span> volume name.<br>   -R SNAPSHOT    : <span class="hljs-built_in">set</span> the volume to revert to the snapshot named by SNAPSHOT on next mount.<br>   -s             : <span class="hljs-built_in">set</span> container UUID and its volume(s) UUID(s) to new random values.<br><br>apfs.util &lt;option&gt; [&lt;verb&gt;] path|<span class="hljs-built_in">dir</span> [&lt;optional parameter&gt;]<br>   -A get                    : get atime update setting <span class="hljs-keyword">for</span> volume.<br>   -A <span class="hljs-built_in">set</span>=<span class="hljs-built_in">yes</span>/no             : <span class="hljs-built_in">enable</span> / <span class="hljs-built_in">disable</span> atime update <span class="hljs-keyword">for</span> volume.<br>   -C -<span class="hljs-built_in">type</span> <span class="hljs-built_in">type</span> volume_path : clear the purgeability of files of the specified <span class="hljs-string">&#x27;type&#x27;</span> on the volume referred to by <span class="hljs-string">&#x27;path&#x27;</span>.<br>   -E path                   : drop the extents <span class="hljs-keyword">for</span> <span class="hljs-string">&#x27;path&#x27;</span> from the first snapshot.<br>   -G path                   : get stats on the purgeable files on the volume specified by <span class="hljs-string">&#x27;path&#x27;</span>.<br>   -m &lt;verb&gt; path            : mark the file at path as purgeable with the various options specified.<br>                               <span class="hljs-string">&#x27;verb&#x27;</span> could be one of: -low -med -high -su -photo -music -mail -document -data<br>                                                     -podcast -video -movie -message -book -sucontent -fault -pdir<br>                                                     -clear.<br>   -M <span class="hljs-built_in">dir</span>                    : flag the named directory as <span class="hljs-string">&quot;maintain-dir-stats&quot;</span>.<br>   -O path [fs name]         : override the fstypename <span class="hljs-keyword">for</span> apfs to be <span class="hljs-string">&quot;hfs&quot;</span> (or the optional name given).<br>   -P &lt;criteria&gt; path        : purge files meeting the criteria specified on the volume referred to by <span class="hljs-string">&#x27;path&#x27;</span>.<br>   -K path                   : purge(<span class="hljs-built_in">kill</span>) the single file at <span class="hljs-string">&#x27;path&#x27;</span><br>   -r <span class="hljs-built_in">dir</span>                    : <span class="hljs-built_in">set</span> the sync-root flag on the specified directory.<br>   -S <span class="hljs-built_in">dir</span>                    : get the directory stats from <span class="hljs-built_in">dir</span>.<br>   -Y <span class="hljs-built_in">dir</span>                    : get the sync-root flag from the specified directory.<br>   -y path                   : get the sync-root flag from the first parent that has one <span class="hljs-keyword">for</span> the item identified by <span class="hljs-string">&#x27;path&#x27;</span>.<br>   -z path                   : make the file at path exempt from copy-on-write semantics <span class="hljs-keyword">for</span> snapshots.<br>   -Z path                   : get the purgeable file flags <span class="hljs-keyword">for</span> the specific file at <span class="hljs-string">&#x27;path&#x27;</span>.<br><br>apfs.util &lt;option&gt;<br>   -t  : stitches and creates synthetic objects on root volume group.<br>   -h  : show this <span class="hljs-built_in">help</span> menu.<br></code></pre></td></tr></table></figure>
@@ -362,7 +374,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月17日</div>
+          <div>2024年10月31日</div>
         </div>
       
       
@@ -392,6 +404,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/post/c11d72e1-3e9b-428e-aecd-a0de0272e821.html" title="Firefox-自定义 Firefox 的展示效果">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Firefox-自定义 Firefox 的展示效果</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

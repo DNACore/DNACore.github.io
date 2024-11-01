@@ -21,20 +21,20 @@
   
     <meta name="description" content="浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  测试页面：https:&#x2F;&#x2F;browserleaks.com&#x2F;webrtc 参考：https:&#x2F;&#x2F;www.ivpn.net&#x2F;knowledgebase&#x2F;158&#x2F;My-IP-is-being-leaked-by-WebRT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Firefox使用技巧">
+<meta property="og:title" content="Firefox火狐浏览器使用技巧">
 <meta property="og:url" content="https://dnacore.github.io/post/aa580300-ed6a-4274-9c9c-1bdb4da7dddb.html">
 <meta property="og:site_name" content="DNACore GitHub io">
 <meta property="og:description" content="浏览器配置about:config Firefox防止WebRTC泄漏IP   about:config media.peerconnection.enabled设置为false  测试页面：https:&#x2F;&#x2F;browserleaks.com&#x2F;webrtc 参考：https:&#x2F;&#x2F;www.ivpn.net&#x2F;knowledgebase&#x2F;158&#x2F;My-IP-is-being-leaked-by-WebRT">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-03-26T02:51:20.000Z">
-<meta property="article:modified_time" content="2024-10-15T06:18:18.854Z">
+<meta property="article:modified_time" content="2024-11-01T02:34:20.472Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Firefox">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Firefox使用技巧 - DNACore GitHub io</title>
+  <title>Firefox火狐浏览器使用技巧 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Firefox使用技巧</span>
+            <span id="subtitle">Firefox火狐浏览器使用技巧</span>
           
         </div>
 
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          1k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          10 分钟
+          9 分钟
         
       </span>
     
@@ -271,7 +271,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Firefox使用技巧</h1>
+            <h1 id="seo-header">Firefox火狐浏览器使用技巧</h1>
             
             
               <div class="markdown-body">
@@ -323,16 +323,9 @@
 <!-- https://center.zzuit.edu.cn/info/1084/7206.htm -->
 
 
-<h2 id="自定义-Firefox-网页内容样式-UserContent-css"><a href="#自定义-Firefox-网页内容样式-UserContent-css" class="headerlink" title="自定义 Firefox 网页内容样式 UserContent.css"></a>自定义 Firefox 网页内容样式 UserContent.css</h2><p>css 配置文件路径 <code>[用户数据目录]/chrome/UserContent.css</code>，<br>示例自定义代码：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-keyword">@-moz-document</span> domain(example.com) &#123;<br>    <span class="hljs-selector-tag">img</span> &#123; <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0.05</span> <span class="hljs-meta">!important</span>; &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h2 id="自定义-Firefox-的展示效果"><a href="#自定义-Firefox-的展示效果" class="headerlink" title="自定义 Firefox 的展示效果"></a>自定义 Firefox 的展示效果</h2><a href="/post/c11d72e1-3e9b-428e-aecd-a0de0272e821.html" title="Firefox-自定义 Firefox 的展示效果">Firefox-自定义 Firefox 的展示效果</a>
 
-<p>参考：<br><a target="_blank" rel="noopener" href="https://superuser.com/questions/318912/how-can-i-override-the-css-of-a-site-in-firefox-with-usercontent-css">https://superuser.com/questions/318912/how-can-i-override-the-css-of-a-site-in-firefox-with-usercontent-css</a><br><a target="_blank" rel="noopener" href="https://davidwalsh.name/firefox-user-stylesheet">https://davidwalsh.name/firefox-user-stylesheet</a></p>
-<h2 id="自定义-Firefox-用户界面-UserChrome-css"><a href="#自定义-Firefox-用户界面-UserChrome-css" class="headerlink" title="自定义 Firefox 用户界面 UserChrome.css"></a>自定义 Firefox 用户界面 UserChrome.css</h2><p><code>[用户数据目录]/chrome/UserChrome.css</code></p>
-<ul>
-<li>更多关于 UserChrome.css -&gt; 解决新版 Firefox 菜单选项上下间距过大 <a target="_blank" rel="noopener" href="https://support.mozilla.org/de/questions/1337841">https://support.mozilla.org/de/questions/1337841</a></li>
-<li>生成 UserChrome.css 的网站 <a target="_blank" rel="noopener" href="https://www.userchrome.org/download-userchrome-css.html">https://www.userchrome.org/download-userchrome-css.html</a></li>
-</ul>
-<h2 id="自定义-Firefox-功能-userChrome-js"><a href="#自定义-Firefox-功能-userChrome-js" class="headerlink" title="自定义 Firefox 功能 userChrome.js"></a>自定义 Firefox 功能 userChrome.js</h2><p>介绍：<a target="_blank" rel="noopener" href="https://www.userchrome.org/what-is-userchrome-js.html">https://www.userchrome.org/what-is-userchrome-js.html</a></p>
+
 <h2 id="Firefox-compact-mode-紧凑模式"><a href="#Firefox-compact-mode-紧凑模式" class="headerlink" title="Firefox compact mode 紧凑模式"></a>Firefox compact mode 紧凑模式</h2><ol>
 <li>在<code>地址栏</code>里输入<code>about:config</code>，然后按回车。</li>
 <li>有时会出现警告页面。点击<code>我接受此风险</code>，请继续！接受风险并继续，以打开 <code>about:config</code> 页面。</li>
@@ -388,7 +381,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Firefox使用技巧</div>
+      <div>Firefox火狐浏览器使用技巧</div>
       <div>https://dnacore.github.io/post/aa580300-ed6a-4274-9c9c-1bdb4da7dddb.html</div>
     </div>
     <div class="license-meta">
@@ -407,7 +400,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年10月15日</div>
+          <div>2024年11月1日</div>
         </div>
       
       

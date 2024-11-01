@@ -19,17 +19,18 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="介绍defaults 命令其实修改的是~&#x2F;Library&#x2F;Preferences&#x2F;目录下面的plist文件 所有可能用到的 domain 和 key https:&#x2F;&#x2F;www.defaults-write.com&#x2F;">
+    <meta name="description" content="defaults 命令介绍在 macOS 中，defaults 命令用于读写用户的偏好设置（preferences）。这些偏好设置通常存储在用户的 ~&#x2F;Library&#x2F;Preferences 目录下的 .plist（Property List）文件中。 所有可能用到的 domain 和 key https:&#x2F;&#x2F;www.defaults-write.com&#x2F; defaults 命令读写的配置文件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-defaults命令">
 <meta property="og:url" content="https://dnacore.github.io/post/1cfc3eaf-a7bf-49fe-85ec-85100ec40385.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="介绍defaults 命令其实修改的是~&#x2F;Library&#x2F;Preferences&#x2F;目录下面的plist文件 所有可能用到的 domain 和 key https:&#x2F;&#x2F;www.defaults-write.com&#x2F;">
+<meta property="og:description" content="defaults 命令介绍在 macOS 中，defaults 命令用于读写用户的偏好设置（preferences）。这些偏好设置通常存储在用户的 ~&#x2F;Library&#x2F;Preferences 目录下的 .plist（Property List）文件中。 所有可能用到的 domain 和 key https:&#x2F;&#x2F;www.defaults-write.com&#x2F; defaults 命令读写的配置文件">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-01-28T11:04:35.000Z">
-<meta property="article:modified_time" content="2023-11-30T06:15:48.209Z">
+<meta property="article:modified_time" content="2024-10-31T08:12:35.107Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
+<meta property="article:tag" content="defaults">
 <meta name="twitter:card" content="summary_large_image">
   
   
@@ -223,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          33 字
+          496 字
         
       </span>
     
@@ -234,7 +235,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -276,8 +277,55 @@
             
               <div class="markdown-body">
                 
-                <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>defaults 命令其实修改的是<code>~/Library/Preferences/</code>目录下面的plist文件</p>
+                <!--
+to GPT-4o:
+macos 中 defaults 命令读写的是哪些配置文件？
+-->
+
+<h2 id="defaults-命令介绍"><a href="#defaults-命令介绍" class="headerlink" title="defaults 命令介绍"></a><code>defaults</code> 命令介绍</h2><p>在 macOS 中，<code>defaults</code> 命令用于读写用户的偏好设置（preferences）。这些偏好设置通常存储在用户的 <code>~/Library/Preferences</code> 目录下的 <code>.plist</code>（Property List）文件中。</p>
 <p>所有可能用到的 domain 和 key <a target="_blank" rel="noopener" href="https://www.defaults-write.com/">https://www.defaults-write.com/</a></p>
+<h2 id="defaults-命令读写的配置文件"><a href="#defaults-命令读写的配置文件" class="headerlink" title="defaults 命令读写的配置文件"></a><code>defaults</code> 命令读写的配置文件</h2><ol>
+<li><p><strong>用户偏好设置文件</strong>：</p>
+<ul>
+<li>这些文件位于 <code>~/Library/Preferences</code> 目录下，文件名通常以应用程序的 Bundle Identifier 命名。例如，Safari 浏览器的偏好设置文件是 <code>com.apple.Safari.plist</code>。</li>
+</ul>
+</li>
+<li><p><strong>全局偏好设置文件</strong>：</p>
+<ul>
+<li>这些文件位于 <code>/Library/Preferences</code> 目录下，适用于所有用户。例如，系统级别的网络设置可能存储在 <code>/Library/Preferences/SystemConfiguration</code> 目录下。</li>
+</ul>
+</li>
+</ol>
+<h2 id="defaults-命令的常见用法"><a href="#defaults-命令的常见用法" class="headerlink" title="defaults 命令的常见用法"></a><code>defaults</code> 命令的常见用法</h2><h3 id="读取偏好设置"><a href="#读取偏好设置" class="headerlink" title="读取偏好设置"></a>读取偏好设置</h3><p>读取某个应用程序的偏好设置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults <span class="hljs-built_in">read</span> com.apple.Safari<br></code></pre></td></tr></table></figure>
+
+<p>读取全局偏好设置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults <span class="hljs-built_in">read</span> -g<br></code></pre></td></tr></table></figure>
+
+<p>读取特定键的值：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults <span class="hljs-built_in">read</span> com.apple.Safari HomePage<br></code></pre></td></tr></table></figure>
+
+<h3 id="写入偏好设置"><a href="#写入偏好设置" class="headerlink" title="写入偏好设置"></a>写入偏好设置</h3><p>写入某个应用程序的偏好设置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults write com.apple.Safari HomePage -string <span class="hljs-string">&quot;https://www.example.com&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>写入全局偏好设置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults write -g AppleInterfaceStyle -string <span class="hljs-string">&quot;Dark&quot;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="删除偏好设置"><a href="#删除偏好设置" class="headerlink" title="删除偏好设置"></a>删除偏好设置</h3><p>删除某个应用程序的偏好设置：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults delete com.apple.Safari<br></code></pre></td></tr></table></figure>
+
+<p>删除特定键的值：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sh">defaults delete com.apple.Safari HomePage<br></code></pre></td></tr></table></figure>
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p>假设你想更改 Finder 的显示隐藏文件的设置，可以使用以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs sh"><span class="hljs-comment"># 显示隐藏文件</span><br>defaults write com.apple.finder AppleShowAllFiles -bool <span class="hljs-literal">true</span><br><br><span class="hljs-comment"># 隐藏隐藏文件</span><br>defaults write com.apple.finder AppleShowAllFiles -bool <span class="hljs-literal">false</span><br><br><span class="hljs-comment"># 重启 Finder 以应用更改</span><br>killall Finder<br></code></pre></td></tr></table></figure>
+
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>使用 <code>defaults</code> 命令时要小心，因为错误的操作可能会导致应用程序或系统行为异常。</li>
+<li>某些偏好设置的更改可能需要重启相关应用程序或系统才能生效。</li>
+<li><code>defaults</code> 命令主要用于用户级别的偏好设置，对于系统级别的配置文件，可能需要使用其他工具或手动编辑配置文件。</li>
+</ul>
+<p>通过 <code>defaults</code> 命令，你可以方便地读取和修改 macOS 应用程序和系统的偏好设置，从而定制你的使用体验。</p>
 
                 
               </div>
@@ -291,6 +339,8 @@
       <i class="iconfont icon-tags"></i>
       
         <a href="/tags/macOS/" class="print-no-link">#macOS</a>
+      
+        <a href="/tags/defaults/" class="print-no-link">#defaults</a>
       
     </div>
   
@@ -321,7 +371,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年11月30日</div>
+          <div>2024年10月31日</div>
         </div>
       
       
