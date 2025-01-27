@@ -19,15 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="验证远程证书状态 1openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443  用指定证书测试网站 123openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem# 或者openssl s_cli">
+    <meta name="description" content="验证远程证书状态  1openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443   用指定证书测试网站  123openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem# 或者openssl s_">
 <meta property="og:type" content="article">
 <meta property="og:title" content="openssl">
 <meta property="og:url" content="https://dnacore.github.io/post/cc1ddf15-6224-4cda-be33-814d9994acd1.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="验证远程证书状态 1openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443  用指定证书测试网站 123openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem# 或者openssl s_cli">
+<meta property="og:description" content="验证远程证书状态  1openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443   用指定证书测试网站  123openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem# 或者openssl s_">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-04T05:54:25.000Z">
-<meta property="article:modified_time" content="2023-07-12T09:54:14.848Z">
+<meta property="article:modified_time" content="2024-12-22T09:01:28.836Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Shell">
 <meta property="article:tag" content="CMD">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          47 字
+          255 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -279,12 +279,52 @@
               <div class="markdown-body">
                 
                 <ul>
-<li><p>验证远程证书状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>用指定证书测试网站</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem<br><span class="hljs-comment"># 或者</span><br>openssl s_client -connect api.development.push.apple.com:443 -cert public.pem<br></code></pre></td></tr></table></figure></li>
+<li>验证远程证书状态</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl s_client -proxy 127.0.0.1:2123 -connect youtube.com:443<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>用指定证书测试网站</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl s_client -connect api.development.push.apple.com:443 -cert public.pem -key private.pem<br><span class="hljs-comment"># 或者</span><br>openssl s_client -connect api.development.push.apple.com:443 -cert public.pem<br></code></pre></td></tr></table></figure>
+
+<h3 id="检查密钥的信息"><a href="#检查密钥的信息" class="headerlink" title="检查密钥的信息"></a>检查密钥的信息</h3><ul>
+<li>检查私钥</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl ec -in ecdsa_private_key.pem -text -noout<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>检查公钥</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl x509 -in certificate.pem -text -noout<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查看证书有效期</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl x509 -noout -in certificate.crt -dates<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>验证私钥是否有效</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl rsa -check -in domain.key<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>验证私钥与证书和CSR是否匹配</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl rsa -in privateKey.key -check<br></code></pre></td></tr></table></figure>
+
+<h3 id="验证证书和密钥的匹配关系"><a href="#验证证书和密钥的匹配关系" class="headerlink" title="验证证书和密钥的匹配关系"></a>验证证书和密钥的匹配关系</h3><p>要验证公钥和私钥是否匹配，可以通过以下步骤</p>
+<ol>
+<li>从每个文件中提取公钥</li>
+<li>为其生成哈希输出</li>
+<li>比较哈希值是否相同</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs shell">openssl pkey -pubout -in privateKey.key | openssl sha256<br>openssl x509 -pubkey -in certificate.crt -noout | openssl sha256<br></code></pre></td></tr></table></figure>
+
+<p>如果输出的哈希值相同，则表明证书和私钥是匹配的。</p>
+<h3 id="查看PKCS-12格式证书"><a href="#查看PKCS-12格式证书" class="headerlink" title="查看PKCS#12格式证书"></a>查看PKCS#12格式证书</h3><p>对于PKCS#12格式(.p12或.pfx)的证书：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openssl pkcs12 -info -<span class="hljs-keyword">in</span> cert.p12<br></code></pre></td></tr></table></figure>
+<p>这将输出证书和密钥信息，可以在这个阶段发现证书问题，比如过期或者不完整等。</p>
 
                 
               </div>
@@ -332,7 +372,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月12日</div>
+          <div>2024年12月22日</div>
         </div>
       
       

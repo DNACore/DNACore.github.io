@@ -280,27 +280,37 @@
                 <p>总的说来，根据系统的不同，有两种实现开机自启的方法：<code>rc.local</code>与<code>systemd</code>。</p>
 <h2 id="rc-local"><a href="#rc-local" class="headerlink" title="rc.local"></a>rc.local</h2><p>树莓派官方文档对<code>rc.local</code>的介绍。值得注意的是：运行一个常驻脚本或者需要执行时间很长的脚本的时候，需要在命令最后加上<code>&amp;</code>来表明这条命令需要后台运行。否则会阻塞<code>rc.local</code>后面的脚本执行。<br>除此之外，不是所有的命令都支持使用<code>rc.local</code>的方式开机运行。<br><a target="_blank" rel="noopener" href="https://www.raspberrypi.org/documentation/linux/usage/rc-local.md">https://www.raspberrypi.org/documentation/linux/usage/rc-local.md</a></p>
 <ol>
-<li>创建一个脚本文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano my_script.sh<br></code></pre></td></tr></table></figure>
-脚本内容：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-built_in">touch</span> /home/pi/test.txt<br><span class="hljs-built_in">chmod</span> 777 /home/pi/test.txt<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hello Pi&quot;</span> &gt;&gt; /home/pi/test.txt<br></code></pre></td></tr></table></figure></li>
+<li>创建一个脚本文件</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano my_script.sh<br></code></pre></td></tr></table></figure>
+<p>脚本内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-built_in">touch</span> /home/pi/test.txt<br><span class="hljs-built_in">chmod</span> 777 /home/pi/test.txt<br><span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Hello Pi&quot;</span> &gt;&gt; /home/pi/test.txt<br></code></pre></td></tr></table></figure>
+
 <p>该shell 代码中，指定运行方式为sh，在pi 目录创建一个test.txt 文件，并添加权限<br>最后将Hello Pi 语句定向到该txt 文件中<br>保存，退出。</p>
 <ol start="2">
-<li>给<code>my_script.sh</code>文件添加执行权限：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> 777 my_script.sh<br></code></pre></td></tr></table></figure></li>
+<li>给<code>my_script.sh</code>文件添加执行权限：</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">chmod</span> 777 my_script.sh<br></code></pre></td></tr></table></figure>
+
 <p>在此也可先测试一下脚本运行情况：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./my_script.sh<br></code></pre></td></tr></table></figure>
 
 <p>然后可以发现<code>/home/pi</code>目录下多了<code>test.txt</code>文件</p>
 <ol start="3">
-<li>将该文件设置为开机自启：<br>首先打开<code>rc.local</code>文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
-然后在<code>exit 0</code>前面添加如下代码：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">su pi -c <span class="hljs-string">&quot;exec /home/pi/my_script.sh&quot;</span><br></code></pre></td></tr></table></figure></li>
+<li>将该文件设置为开机自启：<br>首先打开<code>rc.local</code>文件</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
+<p>然后在<code>exit 0</code>前面添加如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">su pi -c <span class="hljs-string">&quot;exec /home/pi/my_script.sh&quot;</span><br></code></pre></td></tr></table></figure>
+
 <p><code>su</code>将会切换为<code>pi</code>用户执行文件，且执行完后切换为原来用户。<br>保存即可。<br>随后开机便会发现<code>/home/pi</code>目录下多了一个<code>test.txt</code>文件</p>
 <ol start="4">
-<li>若是要开机自启其他类型的文件，例如<code>/home/pi</code>下的<code>abc.py</code>文件，则先进入<code>rc.local</code>文件：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
-然后添加：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> python /home/pi/abc.py &amp;<br></code></pre></td></tr></table></figure>
-最后的<code>&amp;</code>代表在后台运行</li>
+<li>若是要开机自启其他类型的文件，例如<code>/home/pi</code>下的<code>abc.py</code>文件，则先进入<code>rc.local</code>文件：</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/rc.local<br></code></pre></td></tr></table></figure>
+<p>然后添加：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> python /home/pi/abc.py &amp;<br></code></pre></td></tr></table></figure>
+<p>最后的<code>&amp;</code>代表在后台运行</p>
 <h2 id="service命令"><a href="#service命令" class="headerlink" title="service命令"></a>service命令</h2><p>service命令其实是去<code>/etc/init.d</code>目录下，去执行相关程序<br>在<code>/etc/init.d/</code>目录下新建一个服务脚本文件。<br>在终端输入并回车<code>pi@raspberry:~ $ sudo vi /etc/init.d/script_test</code><br>在空白文件中输入以下内容：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/sh</span><br><span class="hljs-comment">#/etc/init.d/script_test</span><br><span class="hljs-comment">### BEGIN INIT INFO</span><br><span class="hljs-comment"># Provides:Nick</span><br><span class="hljs-comment"># Required-Start:$remote_fs $syslog</span><br><span class="hljs-comment"># Required-Stop:$remote_fs $syslog</span><br><span class="hljs-comment"># Default-Start:2 3 4 5</span><br><span class="hljs-comment"># Default-Stop:0 1 6</span><br><span class="hljs-comment"># Short-Description: script_test</span><br><span class="hljs-comment"># Description: This service is used to start my applaction</span><br><span class="hljs-comment">### END INIT INFO</span><br><span class="hljs-keyword">case</span> <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> <span class="hljs-keyword">in</span><br>start)<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;start your app here.&quot;</span><br>    su pi -c <span class="hljs-string">&quot;touch script_test2&quot;</span><br>    ;;<br>stop)<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;stop your app here.&quot;</span><br>    ;;<br>*)<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Usage: service script_test start|stop&quot;</span><br>    <span class="hljs-built_in">exit</span> 1<br>    ;;<br><span class="hljs-keyword">esac</span><br><span class="hljs-built_in">exit</span> 0<br></code></pre></td></tr></table></figure>
 <p>保存退出。设置脚本可执行权限：<code>pi@raspberry:~ $ sudo chmod 777 /etc/init.d/script_test</code><br>最后将该脚本作为服务设置开机自动加载：<br><code>pi@raspberry:~ $ sudo update-rc.d script_test defaults</code><br><code>sudo reboot</code>重启测试。</p>
@@ -311,7 +321,7 @@
 
 <blockquote>
 <p>我们对service和chkconfig两个命令都不陌生，systemctl 是管制服务的主要工具， 它整合了chkconfig 与 service功能于一体。</p>
-<p>systemctl is-enabled iptables.service<br>systemctl is-enabled servicename.service #查询服务是否开机启动<br>systemctl enable *.service #开机运行服务<br>systemctl disable *.service #取消开机运行<br>systemctl start *.service #启动服务<br>systemctl stop *.service #停止服务<br>systemctl restart *.service #重启服务<br>systemctl reload *.service #重新加载服务配置文件<br>systemctl status <em>.service #查询服务运行状态<br>systemctl –failed #显示启动失败的服务<br>注：</em>代表某个服务的名字，如http的服务名为httpd</p>
+<p>systemctl is-enabled iptables.service<br>systemctl is-enabled servicename.service #查询服务是否开机启动<br>systemctl enable *.service #开机运行服务<br>systemctl disable *.service #取消开机运行<br>systemctl start *.service #启动服务<br>systemctl stop *.service #停止服务<br>systemctl restart *.service #重启服务<br>systemctl reload *.service #重新加载服务配置文件<br>systemctl status *.service #查询服务运行状态<br>systemctl –failed #显示启动失败的服务<br>注：*代表某个服务的名字，如http的服务名为httpd</p>
 </blockquote>
 
                 

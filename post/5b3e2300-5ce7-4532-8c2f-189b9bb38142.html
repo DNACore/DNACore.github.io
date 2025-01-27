@@ -285,8 +285,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> reboot <span class="hljs-comment"># 重启</span><br>shutdown -r now <span class="hljs-comment"># 重启</span><br><br><span class="hljs-built_in">sudo</span> poweroff <span class="hljs-comment"># 关机</span><br><span class="hljs-built_in">sudo</span> init 0<br><span class="hljs-built_in">sudo</span> halt<br><span class="hljs-built_in">sudo</span> shutdown -h now<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>查看树莓派CPU信息 cpuinfo<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /proc/cpuinfo<br></code></pre></td></tr></table></figure></li>
+<li>查看树莓派CPU信息 cpuinfo</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cat</span> /proc/cpuinfo<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="vcgencmd-命令"><a href="#vcgencmd-命令" class="headerlink" title="vcgencmd 命令"></a>vcgencmd 命令</h2><ul>
 <li><code>vcgencmd get_throttled</code> 查看树莓派电压信息，电压低这么查</li>
 <li><code>vcgencmd measure_temp</code>查看树莓派温度信息</li>
@@ -297,9 +300,9 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs shell">/opt/vc/bin/vcgencmd get_throttled<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">https://github.com/raspberrypi/documentation/blob/JamesH65-patch-vcgencmd-vcdbg-docs/raspbian/applications/vcgencmd.md</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">https://harlemsquirrel.github.io/shell/2019/01/05/monitoring-raspberry-pi-power-and-thermal-issues.html</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">0: under-voltage</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">1: arm frequency capped (ARM frequency capped is referring to the soft temperature <span class="hljs-built_in">limit</span> but that is supposedly only <span class="hljs-keyword">for</span> a 3B+.)</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">2: currently throttled</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">16: under-voltage has occurred</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">17: arm frequency capped has occurred</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">18: throttling has occurred</span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">19: Soft temperature <span class="hljs-built_in">limit</span> has occurred</span><br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>查看树莓派温度<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">watch -n 1 <span class="hljs-built_in">cat</span> /sys/class/thermal/thermal_zone0/temp<br>watch -n 1 <span class="hljs-string">&quot;vcgencmd measure_temp&quot;</span><br></code></pre></td></tr></table></figure></li>
+<li>查看树莓派温度</li>
 </ul>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">watch -n 1 <span class="hljs-built_in">cat</span> /sys/class/thermal/thermal_zone0/temp<br>watch -n 1 <span class="hljs-string">&quot;vcgencmd measure_temp&quot;</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             

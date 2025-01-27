@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="创建 symbol link创建替身，软链接，symbol linkln(link)命令示例： 1ln -s ~&#x2F;Library&#x2F;Developer&#x2F;Xcode&#x2F;DerivedData ~&#x2F;Desktop&#x2F;Xcode_DerivedData  修改文件创建时间 1touch -t [[CC]YY]MMDDhhmm[.SS] 将YYYYMMDDhhmm 要替换成期望的时间，比如 201209160">
+    <meta name="description" content="创建 symbol link创建替身，软链接，symbol linkln(link)命令示例：  1ln -s ~&#x2F;Library&#x2F;Developer&#x2F;Xcode&#x2F;DerivedData ~&#x2F;Desktop&#x2F;Xcode_DerivedData   修改文件创建时间  1touch -t [[CC]YY]MMDDhhmm[.SS] 将YYYYMMDDhhmm 要替换成期望的时间，比如 201209">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-shell常用命令">
 <meta property="og:url" content="https://dnacore.github.io/post/169f965e-8443-4c84-b846-772ff9c8bd86.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="创建 symbol link创建替身，软链接，symbol linkln(link)命令示例： 1ln -s ~&#x2F;Library&#x2F;Developer&#x2F;Xcode&#x2F;DerivedData ~&#x2F;Desktop&#x2F;Xcode_DerivedData  修改文件创建时间 1touch -t [[CC]YY]MMDDhhmm[.SS] 将YYYYMMDDhhmm 要替换成期望的时间，比如 201209160">
+<meta property="og:description" content="创建 symbol link创建替身，软链接，symbol linkln(link)命令示例：  1ln -s ~&#x2F;Library&#x2F;Developer&#x2F;Xcode&#x2F;DerivedData ~&#x2F;Desktop&#x2F;Xcode_DerivedData   修改文件创建时间  1touch -t [[CC]YY]MMDDhhmm[.SS] 将YYYYMMDDhhmm 要替换成期望的时间，比如 201209">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-06-26T03:11:29.000Z">
 <meta property="article:modified_time" content="2023-11-30T06:15:48.225Z">
@@ -278,20 +278,28 @@
               <div class="markdown-body">
                 
                 <ul>
-<li><p>创建 symbol link<br>创建替身，软链接，symbol link<br><code>ln(link)</code>命令<br>示例：</p>
+<li>创建 symbol link<br>创建替身，软链接，symbol link<br><code>ln(link)</code>命令<br>示例：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ln</span> -s ~/Library/Developer/Xcode/DerivedData ~/Desktop/Xcode_DerivedData<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件创建时间</p>
+
+<ul>
+<li>修改文件创建时间</li>
+</ul>
 <figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs inform7">touch -t <span class="hljs-comment">[<span class="hljs-comment">[CC]</span>YY]</span>MMDDhhmm<span class="hljs-comment">[.SS]</span><br></code></pre></td></tr></table></figure>
 <p>将YYYYMMDDhhmm 要替换成期望的时间，比如 201209160330.00 &#x2F;&#x2F;即为2012年9月16日凌晨3点30分0秒。 其中[CC]YY可以缺省前两位“世纪”<em>，只输入后两位年份，并且秒钟[.SS]也可缺省</em>。把需要修改的文件拖到 Terminal 窗口，这时文件的路径会自动补全，当然你也可以自己手动输入文件路径。<br>例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">touch</span> -t 201209160330.00 /Users/name/Desktop/somefile.jpg<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>修改文件修改时间<br>步骤和上面修改“创建时间”基本相同，只是把参数 -t 改成 -mt<br>&#x2F;&#x2F; time 和 modify time</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">touch</span> -mt 201209160330.00 /Users/name/Desktop/somefile.jpg<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>显示系统详细信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ioreg -w 0 -l<br></code></pre></td></tr></table></figure></li>
+
+<ul>
+<li>修改文件修改时间<br>步骤和上面修改“创建时间”基本相同，只是把参数 -t 改成 -mt<br>&#x2F;&#x2F; time 和 modify time</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">touch</span> -mt 201209160330.00 /Users/name/Desktop/somefile.jpg<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>显示系统详细信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ioreg -w 0 -l<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="快速查看命令-manual"><a href="#快速查看命令-manual" class="headerlink" title="快速查看命令 manual"></a>快速查看命令 manual</h2><p><a href="x-man-page://netstat">Netstat 的 man 页面</a></p>
 
                 

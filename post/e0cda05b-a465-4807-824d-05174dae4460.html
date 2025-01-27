@@ -285,12 +285,16 @@
 </li>
 </ul>
 <h3 id="PiShrink"><a href="#PiShrink" class="headerlink" title="PiShrink"></a>PiShrink</h3><ol>
-<li><p>查找SD卡</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo fdisk -l<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>备份SD卡</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">dd bs=4M if=/dev/sde of=/home/username/MyImage.img<br></code></pre></td></tr></table></figure></li>
+<li>查找SD卡</li>
 </ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo fdisk -l<br></code></pre></td></tr></table></figure>
+
+<ol>
+<li>备份SD卡</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">dd bs=4M if=/dev/sde of=/home/username/MyImage.img<br></code></pre></td></tr></table></figure>
+
+
 <h3 id="piclone-工具"><a href="#piclone-工具" class="headerlink" title="piclone 工具"></a>piclone 工具</h3><p><a target="_blank" rel="noopener" href="https://github.com/raspberrypi-ui/piclone">https://github.com/raspberrypi-ui/piclone</a></p>
 <!--
 ## 数据备份

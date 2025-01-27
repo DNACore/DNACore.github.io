@@ -282,10 +282,12 @@
 <li><p>删除<code>ZoomAudioDevice.driver</code>驱动<br>打开<code>/Library/Audio/Plug-Ins/HAL/</code>这个文件夹，然后把里面的<code>ZoomAudioDevice.driver</code>删除。</p>
 </li>
 <li><p>卸载<code>ZoomAudioDevice.kext</code><br>这一步不是必须的，有<code>ZoomAudioDevice.kext</code>这个驱动就卸载，没有可以忽略掉。</p>
+</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">先卸载已经加载的驱动</span><br>sudo kextunload -b zoom.us.ZoomAudioDevice<br><span class="hljs-meta prompt_"># </span><span class="language-bash">删除残留的驱动文件</span><br>sudo rm /System/Library/Extensions/ZoomAudioDevice.kext<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>上面两步做好后，需要重启一下电脑。</p>
-</li>
+
+<ol start="3">
+<li>上面两步做好后，需要重启一下电脑。</li>
 </ol>
 <blockquote>
 <p>参考：apple.stackexchange.com&#x2F;questions&#x2F;278520&#x2F;remove-zoomaudiodevice-from-audio-devices</p>

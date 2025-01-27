@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="定位到如下注册表位置1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub 在usbhub里面新建一个键值项hubg Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty righ">
+    <meta name="description" content="定位到如下注册表位置  1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub  在usbhub里面新建一个键值项hubg Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty r">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows7在安全移除USB设备后自动切断其电源">
 <meta property="og:url" content="https://dnacore.github.io/post/2b880a03-56cc-4554-8478-c1439a30722c.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="定位到如下注册表位置1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub 在usbhub里面新建一个键值项hubg Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty righ">
+<meta property="og:description" content="定位到如下注册表位置  1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub  在usbhub里面新建一个键值项hubg Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty r">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-02-25T06:30:40.000Z">
 <meta property="article:modified_time" content="2023-07-12T08:50:36.654Z">
@@ -278,7 +278,10 @@
               <div class="markdown-body">
                 
                 <ol>
-<li>定位到如下注册表位置<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub<br></code></pre></td></tr></table></figure></li>
+<li>定位到如下注册表位置</li>
+</ol>
+<figure class="highlight moonscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs moonscript">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\usbhub<br></code></pre></td></tr></table></figure>
+<ol start="2">
 <li>在<code>usbhub</code>里面新建一个键值项<code>hubg</code></li>
 <li>Now within hubg make a new DWORD (32-bit) called DisableOnSoftRemove. To do this right click the empty right pane and select New &gt;&gt; DWORD (32-bit) Value.</li>
 <li>Now open up the new DWORD and change the value data to 1 – Hexadecimal. You can do this by double-clicking the DWORD or right-click it and selecting Modify. Click OK to save and exit.</li>

@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；  修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r">
+    <meta name="description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；    修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html  1234exiftool">
 <meta property="og:type" content="article">
 <meta property="og:title" content="exiftool使用">
 <meta property="og:url" content="https://dnacore.github.io/post/4fe88244-29f9-4734-8710-7a477daf274e.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；  修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html 1234exiftool -r">
+<meta property="og:description" content="下载安装 exiftool 从 exiftool 官网下载最新的 tar.gz 包； 解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；    修改标签的语法https:&#x2F;&#x2F;exiftool.org&#x2F;#writing  使用 exiftool 重命名文件官方文档地址：https:&#x2F;&#x2F;exiftool.org&#x2F;filename.html  1234exiftool">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-02-17T12:11:21.000Z">
 <meta property="article:modified_time" content="2023-11-17T11:32:34.214Z">
@@ -279,22 +279,23 @@
                 
                 <h2 id="下载安装-exiftool"><a href="#下载安装-exiftool" class="headerlink" title="下载安装 exiftool"></a>下载安装 exiftool</h2><ol>
 <li>从 <a target="_blank" rel="noopener" href="https://exiftool.org/index.html">exiftool 官网</a>下载最新的 tar.gz 包；</li>
-<li>解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；<!--
+<li>解压下载的 tar.gz 包，只保留 exiftool 可执行文件和 lib 文件夹；</li>
+</ol>
+<!--
 为什么只保留 exiftool 可执行文件和 lib 文件夹：
 当删除除了exiftool的文件时，执行exiftool，提示需要lib文件夹
---></li>
-</ol>
+-->
+
 <h2 id="修改标签的语法"><a href="#修改标签的语法" class="headerlink" title="修改标签的语法"></a>修改标签的语法</h2><p><a target="_blank" rel="noopener" href="https://exiftool.org/#writing">https://exiftool.org/#writing</a></p>
 <ul>
-<li><p>使用 exiftool 重命名文件<br>官方文档地址：<a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">https://exiftool.org/filename.html</a></p>
+<li>使用 exiftool 重命名文件<br>官方文档地址：<a target="_blank" rel="noopener" href="https://exiftool.org/filename.html">https://exiftool.org/filename.html</a></li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">exiftool -r &#x27;-FileName&lt;CreationDate&#x27; -d &quot;%Y%m%d/REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.MOV<br>exiftool -r &#x27;-FileName&lt;CreationDate&#x27; -d &quot;%Y%m%d/REC_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.m4a<br>exiftool -r &#x27;-FileName&lt;DateTimeOriginal&#x27; -d &quot;%Y%m%d/IMG_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.HEIC<br>exiftool -r &#x27;-FileName&lt;DateTimeOriginal&#x27; -d &quot;%Y%m%d/IMG_%Y-%m-%d_%H-%M-%S%%-c_.%%e&quot; ./*.JPG<br></code></pre></td></tr></table></figure>
-</li>
-<li><p><code>-TagName&lt;AnOtherTag</code> 将<code>AnOtherTag</code>标签的值写入<code>-TagName</code>中</p>
-</li>
-<li><p><code>exiftool -artist=标签名称 photo.jpg</code> 写入艺术家标签</p>
-</li>
-<li><p><code>-d</code>设置日期类标签的格式</p>
-</li>
+
+<ul>
+<li><code>-TagName&lt;AnOtherTag</code> 将<code>AnOtherTag</code>标签的值写入<code>-TagName</code>中</li>
+<li><code>exiftool -artist=标签名称 photo.jpg</code> 写入艺术家标签</li>
+<li><code>-d</code>设置日期类标签的格式</li>
 </ul>
 <h2 id="清除-exif-信息"><a href="#清除-exif-信息" class="headerlink" title="清除 exif 信息"></a>清除 exif 信息</h2><ul>
 <li><code>exiftool -r -all= some_dir</code> 递归删除目录中媒体文件所有元数据</li>

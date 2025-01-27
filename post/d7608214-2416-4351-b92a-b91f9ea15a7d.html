@@ -283,15 +283,19 @@
 <p>Usage:  diskutil apfs defragment|defrag <apfsContainerDisk>|<apfsVolumeDisk><br>        status|enable|disable<br>        where <apfsContainerDisk> &#x3D; APFS Container DiskIdentifier<br>              <apfsVolumeDisk> &#x3D; APFS Volume DiskIdentifier<br>Manage defragmentation of the specified APFS Container or Volume. You can see<br>whether automatic defragmentation is enabled by specifying “status”. You can<br>set automatic defragmentation behavior by specifying “enable” or “disable”.<br>Ownership of the affected disks is required.<br>Example:  diskutil apfs defragment disk5 enable<br>          diskutil apfs defragment disk5s1 status</p>
 </blockquote>
 <ul>
-<li><p>查看自动碎片整理功能状态</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5s1 status<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>启用自动碎片整理功能</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5 <span class="hljs-built_in">enable</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>禁用自动碎片整理功能</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5 <span class="hljs-built_in">disable</span><br></code></pre></td></tr></table></figure></li>
+<li>查看自动碎片整理功能状态</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5s1 status<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>启用自动碎片整理功能</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5 <span class="hljs-built_in">enable</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>禁用自动碎片整理功能</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">diskutil apfs defragment disk5 <span class="hljs-built_in">disable</span><br></code></pre></td></tr></table></figure>
 
                 
               </div>

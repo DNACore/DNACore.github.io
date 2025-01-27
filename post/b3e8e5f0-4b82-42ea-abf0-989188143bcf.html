@@ -281,9 +281,11 @@
 </ul>
 <h2 id="Windows-错误报告文件夹位置"><a href="#Windows-错误报告文件夹位置" class="headerlink" title="Windows 错误报告文件夹位置"></a>Windows 错误报告文件夹位置</h2><p><strong>也可以在注册表<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\ VolumeCaches</code>查询到。</strong><br>用系统自带的磁盘清理工具清理C盘的时候可以看到一堆Windows错误报告文件，这些文件的具体位置是：</p>
 <ul>
-<li><p>系统错误内存转储文件</p>
+<li>系统错误内存转储文件</li>
+</ul>
 <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs avrasm"><span class="hljs-symbol">C:</span>\Windows\LiveKernelReports\WATCHDOG<br>或<br><span class="hljs-symbol">C:</span>\Windows<br></code></pre></td></tr></table></figure>
-</li>
+
+<ul>
 <li><p>Windows Error Reporting Archive Files</p>
 <!-- **DISM++里面的垃圾清理功能有错误报告路径** -->
 <p>用户存档的Windows错误报告文件<br><code>%USERPROFILE%\AppData\Local\Microsoft\Windows\WER\ReportArchive</code></p>

@@ -289,18 +289,20 @@
 </li>
 </ul>
 <h2 id="hdiutil-挂载映像文件"><a href="#hdiutil-挂载映像文件" class="headerlink" title="hdiutil 挂载映像文件"></a>hdiutil 挂载映像文件</h2><ul>
-<li><p>方法1:</p>
+<li>方法1:</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">hdiutil attach &quot;$HOME/Documents/OF.sparseimage&quot; -mountpoint &quot;$HOME/OpenFOAM&quot;<br></code></pre></td></tr></table></figure>
 <p>参考：<a target="_blank" rel="noopener" href="https://apple.stackexchange.com/a/136689">https://apple.stackexchange.com/a/136689</a></p>
-</li>
-<li><p>方法2:直接使用 open 命令</p>
+<ul>
+<li>方法2:直接使用 open 命令</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">/usr/bin/open /full/path/to/OF.sparseimage<br></code></pre></td></tr></table></figure>
 <p>参考：<a target="_blank" rel="noopener" href="https://apple.stackexchange.com/a/107115">https://apple.stackexchange.com/a/107115</a></p>
-</li>
-</ul>
 <h2 id="hdiutil-压缩-sparseimage-映像"><a href="#hdiutil-压缩-sparseimage-映像" class="headerlink" title="hdiutil 压缩 sparseimage 映像"></a>hdiutil 压缩 sparseimage 映像</h2><ul>
-<li>运行命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hdiutil compact ～/Desktop/a.spraseimage<br></code></pre></td></tr></table></figure></li>
+<li>运行命令</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hdiutil compact ～/Desktop/a.spraseimage<br></code></pre></td></tr></table></figure>
+
 <p>如果提示<code>hdiutil: compact failed - 功能未实现</code>或者<code>hdiutil: compact failed - 功能未实现</code>可能是当前正在使用电池供电，此时需要执行</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hdiutil compact -batteryallowed ～/Desktop/some.spraseimage<br></code></pre></td></tr></table></figure>
 <p>参考：<br><a target="_blank" rel="noopener" href="https://superuser.com/questions/275148/shrink-a-sparseimage">https://superuser.com/questions/275148/shrink-a-sparseimage</a><br><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/132147/hdiutil-compact-failed-function-not-implemented">https://apple.stackexchange.com/questions/132147/hdiutil-compact-failed-function-not-implemented</a></p>

@@ -299,19 +299,27 @@
 <li><p>用户配置文件储存了哪些信息？<br><a target="_blank" rel="noopener" href="https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka">https://support.mozilla.org/zh-CN/kb/%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6#w_eenieulgiikiaegojieejulaagka</a></p>
 </li>
 <li><p>新建一个用户配置</p>
+</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -CreateProfile <span class="hljs-string">&quot;JoelUser c:\internet\joelusers-moz-profile&quot;</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>用已存在的用户配置启动Firefox</p>
+
+<ul>
+<li>用已存在的用户配置启动Firefox</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">nohup</span> /Applications/Firefox.app/Contents/MacOS/firefox -p <span class="hljs-string">&quot;<span class="hljs-variable">$HOME</span>/Documents/个人文档/FirefoxProfile&quot;</span> -no-remote &gt; /dev/null 2&gt;&amp;1 &amp;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>启动用户配置管理器<code>ProfileManager</code></p>
+
+<ul>
+<li>启动用户配置管理器<code>ProfileManager</code></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -ProfileManager<br><span class="hljs-comment"># 或者</span><br>firefox -P<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>通过用户配置名称来启动Firefox</p>
+
+<ul>
+<li>通过用户配置名称来启动Firefox</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">firefox -P <span class="hljs-string">&quot;profile_name&quot;</span><br><span class="hljs-comment"># 或者</span><br>firefox -ProfileManager <span class="hljs-string">&quot;profile_name&quot;</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>关于<code>-no-remote</code>参数的解释<br><a target="_blank" rel="noopener" href="http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile">http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile</a></p>
-</li>
+
+<ul>
+<li>关于<code>-no-remote</code>参数的解释<br><a target="_blank" rel="noopener" href="http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile">http://kb.mozillazine.org/Opening_a_new_instance_of_Firefox_with_another_profile</a></li>
 </ul>
 <h2 id="修改-Firefox-缓存位置"><a href="#修改-Firefox-缓存位置" class="headerlink" title="修改 Firefox 缓存位置"></a>修改 Firefox 缓存位置</h2><ol>
 <li>打开火狐浏览器主界面，在地址栏中输入<code>about:config</code>打开火狐的配置选项</li>

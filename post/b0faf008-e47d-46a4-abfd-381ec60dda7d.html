@@ -279,13 +279,15 @@
                 
                 <p>代码覆盖率检查主要用到的工具是<code>gcov</code>。这个工具会随着 Xcode 一起安装。<br>具体的安装位置为：<code>/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin</code>。<br>这个位置还包括了gcc编译器之类的工具。</p>
 <ul>
-<li><p>使用<code>gcov</code>命令生成代码覆盖率。<br>将<code>gcda</code> <code>gcno</code> <code>.m</code> 文件放在同一个文件夹下，运行</p>
+<li>使用<code>gcov</code>命令生成代码覆盖率。<br>将<code>gcda</code> <code>gcno</code> <code>.m</code> 文件放在同一个文件夹下，运行</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">gcov sample.m<br></code></pre></td></tr></table></figure>
 <p>即可生成gcov文件，此文件是文本文件，可以直接用文本编辑器打开查看。</p>
-</li>
-<li><p>关于<code>@property</code>的覆盖率<br>有如下代码：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs objective-c">@property (nonatomic, strong) NSString *testStr;<br></code></pre></td></tr></table></figure></li>
+<ul>
+<li>关于<code>@property</code>的覆盖率<br>有如下代码：</li>
 </ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs objective-c">@property (nonatomic, strong) NSString *testStr;<br></code></pre></td></tr></table></figure>
+
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs objective-c">// 如果不对属性进行任何操作，覆盖率结果文件会显示@property那一行没有执行到<br><br>// 对属性赋值操作可以覆盖到<br>self.testStr = @&quot;abc&quot;;<br><br>// 直接对属性进行赋值不会走到<br>_testStr = @&quot;abc&quot;;<br><br>// 读取属性会走到<br>NSLog(@&quot;%@&quot;, self.testStr);<br><br>// 同时读取属性和覆盖 get 方法不会走到<br>NSLog(@&quot;%@&quot;, self.testStr);<br>- (NSString *)testStr&#123;<br>    return @&quot;1&quot;;<br>&#125;<br><br>//像这样重写 set 方法也不会走到。<br>self.testStr = @&quot;1&quot;;<br>NSLog(@&quot;%@&quot;, _testStr);<br>- (void)setTestStr:(NSString *)testStr&#123;<br>    _testStr = testStr;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>总结：关于@property，编译器自动生成的 get set 方法必须要能走到一个，不然@property覆盖不到。</p>

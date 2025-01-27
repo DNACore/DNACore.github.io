@@ -288,8 +288,10 @@
 <li><p>crontab 任务执行异常会向<code>/var/spool/mail/&lt;username&gt;</code>发送邮件<br><code>&lt;username&gt;</code>可以通过<code>whoami</code>命令获得。</p>
 </li>
 <li><p>修改 crontab 的编辑器</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> EDITOR=<span class="hljs-string">&quot;/usr/bin/nano&quot;</span> ; crontab -e<br><br><span class="hljs-comment"># 直接设置默认编辑器</span><br>select-editor<br></code></pre></td></tr></table></figure></li>
+</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">export</span> EDITOR=<span class="hljs-string">&quot;/usr/bin/nano&quot;</span> ; crontab -e<br><br><span class="hljs-comment"># 直接设置默认编辑器</span><br>select-editor<br></code></pre></td></tr></table></figure>
+
 <!--
 - 在线计算任务执行时间
 https://www.bejson.com/othertools/cron/

@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="禁止用做时间机器备份1touch .com.apple.timemachine.donotpresent  .fseventsd 文件夹：文件系统日志记录可在.fseventsd文件夹下面建立no_log文件来取消这个功能 .ds_store 文件 防止在 USB 存储设备中创建.ds_store 文件 1defaults write com.apple.desktopservices DSDon">
+    <meta name="description" content="禁止用做时间机器备份1touch .com.apple.timemachine.donotpresent  .fseventsd 文件夹：文件系统日志记录可在.fseventsd文件夹下面建立no_log文件来取消这个功能 .ds_store 文件 防止在 USB 存储设备中创建.ds_store 文件  1defaults write com.apple.desktopservices DSDo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="防止macOS中Spotlight在移动硬盘或者U盘中创建索引">
 <meta property="og:url" content="https://dnacore.github.io/post/0f54aaf5-f299-4282-9990-c137b4adf288.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="禁止用做时间机器备份1touch .com.apple.timemachine.donotpresent  .fseventsd 文件夹：文件系统日志记录可在.fseventsd文件夹下面建立no_log文件来取消这个功能 .ds_store 文件 防止在 USB 存储设备中创建.ds_store 文件 1defaults write com.apple.desktopservices DSDon">
+<meta property="og:description" content="禁止用做时间机器备份1touch .com.apple.timemachine.donotpresent  .fseventsd 文件夹：文件系统日志记录可在.fseventsd文件夹下面建立no_log文件来取消这个功能 .ds_store 文件 防止在 USB 存储设备中创建.ds_store 文件  1defaults write com.apple.desktopservices DSDo">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-29T08:42:16.000Z">
 <meta property="article:modified_time" content="2023-11-30T06:15:48.250Z">
@@ -281,16 +281,21 @@
 
 <h2 id="fseventsd-文件夹：文件系统日志记录"><a href="#fseventsd-文件夹：文件系统日志记录" class="headerlink" title=".fseventsd 文件夹：文件系统日志记录"></a><code>.fseventsd</code> 文件夹：文件系统日志记录</h2><p>可在<code>.fseventsd</code>文件夹下面建立<code>no_log</code>文件来取消这个功能</p>
 <h2 id="ds-store-文件"><a href="#ds-store-文件" class="headerlink" title=".ds_store 文件"></a><code>.ds_store</code> 文件</h2><ul>
-<li><p>防止在 USB 存储设备中创建<code>.ds_store</code> 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.desktopservices DSDontWriteUSBStores -bool <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>防止在网络驱动器中创建<code>.ds_store</code> 文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure></li>
+<li>防止在 USB 存储设备中创建<code>.ds_store</code> 文件</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.desktopservices DSDontWriteUSBStores -bool <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>防止在网络驱动器中创建<code>.ds_store</code> 文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure>
+
 <h2 id="以-开头的文件"><a href="#以-开头的文件" class="headerlink" title="以._开头的文件"></a>以<code>._</code>开头的文件</h2><p><a target="_blank" rel="noopener" href="https://apple.stackexchange.com/questions/136248/disable-storage-of-invisible-files-on-my-cfs-or-smb-network-storage">https://apple.stackexchange.com/questions/136248/disable-storage-of-invisible-files-on-my-cfs-or-smb-network-storage</a></p>
 <ul>
-<li>删除已存在的文件<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dot_clean /path/<br></code></pre></td></tr></table></figure></li>
+<li>删除已存在的文件</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dot_clean /path/<br></code></pre></td></tr></table></figure>
+
 <h2 id="DocumentRevisions-V100-Spotlight-索引文件"><a href="#DocumentRevisions-V100-Spotlight-索引文件" class="headerlink" title=".DocumentRevisions-V100 Spotlight 索引文件"></a><code>.DocumentRevisions-V100</code> Spotlight 索引文件</h2><p>在移动硬盘或者U盘根目录创建<code>.metadata_never_index</code>文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># macOS</span><br><span class="hljs-built_in">touch</span> .metadata_never_index<br><span class="hljs-comment"># Windows</span><br><span class="hljs-built_in">type</span> nul&gt;.metadata_never_index<br></code></pre></td></tr></table></figure>
 

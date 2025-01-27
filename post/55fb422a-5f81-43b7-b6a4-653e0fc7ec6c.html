@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="查看扩展属性 查看文件是否具有扩展属性 1ls -lart  查看文件具体扩展属性信息 1234ls -laeO@# 或者xattr some.file  xattr 编辑扩展属性命令12# 递归删除目录下所有文件的扩展属性xattr -r -d com.apple.quarantine [Path]   移除所有扩展属性1xattr -r -c some.file  其他人平台类似的命令1234">
+    <meta name="description" content="查看扩展属性 查看文件是否具有扩展属性  1ls -lart   查看文件具体扩展属性信息  1234ls -laeO@# 或者xattr some.file  xattr 编辑扩展属性命令12# 递归删除目录下所有文件的扩展属性xattr -r -d com.apple.quarantine [Path]   移除所有扩展属性  1xattr -r -c some.file  其他人平台类似的命">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-macOS中文件的扩展属性">
 <meta property="og:url" content="https://dnacore.github.io/post/55fb422a-5f81-43b7-b6a4-653e0fc7ec6c.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="查看扩展属性 查看文件是否具有扩展属性 1ls -lart  查看文件具体扩展属性信息 1234ls -laeO@# 或者xattr some.file  xattr 编辑扩展属性命令12# 递归删除目录下所有文件的扩展属性xattr -r -d com.apple.quarantine [Path]   移除所有扩展属性1xattr -r -c some.file  其他人平台类似的命令1234">
+<meta property="og:description" content="查看扩展属性 查看文件是否具有扩展属性  1ls -lart   查看文件具体扩展属性信息  1234ls -laeO@# 或者xattr some.file  xattr 编辑扩展属性命令12# 递归删除目录下所有文件的扩展属性xattr -r -d com.apple.quarantine [Path]   移除所有扩展属性  1xattr -r -c some.file  其他人平台类似的命">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-08-13T03:08:31.000Z">
 <meta property="article:modified_time" content="2023-11-30T06:15:48.219Z">
@@ -278,17 +278,22 @@
               <div class="markdown-body">
                 
                 <h2 id="查看扩展属性"><a href="#查看扩展属性" class="headerlink" title="查看扩展属性"></a>查看扩展属性</h2><ul>
-<li><p>查看文件是否具有扩展属性</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -lart<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>查看文件具体扩展属性信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -laeO@<br><br><span class="hljs-comment"># 或者</span><br>xattr some.file<br></code></pre></td></tr></table></figure></li>
+<li>查看文件是否具有扩展属性</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -lart<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查看文件具体扩展属性信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -laeO@<br><br><span class="hljs-comment"># 或者</span><br>xattr some.file<br></code></pre></td></tr></table></figure>
+
 <h2 id="xattr-编辑扩展属性命令"><a href="#xattr-编辑扩展属性命令" class="headerlink" title="xattr 编辑扩展属性命令"></a>xattr 编辑扩展属性命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 递归删除目录下所有文件的扩展属性</span><br>xattr -r -d com.apple.quarantine [Path]<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li>移除所有扩展属性<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">xattr -r -c some.file<br></code></pre></td></tr></table></figure></li>
+<li>移除所有扩展属性</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">xattr -r -c some.file<br></code></pre></td></tr></table></figure>
+
 <h2 id="其他人平台类似的命令"><a href="#其他人平台类似的命令" class="headerlink" title="其他人平台类似的命令"></a>其他人平台类似的命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">windows:<br>Set-Content -Path &#x27;C:\Users\yourname\Dropbox(Personal)\YourFileName.pdf&#x27; -Stream com.dropbox.ignored -Value 1<br><br>Mac<br>xattr -w com.dropbox.ignored 1 /Users/yourname/Dropbox\ \(Personal\)/YourFileName.pdf<br><br>Linux<br>attr -s com.dropbox.ignored -V 1 /Users/yourname/Dropbox\ \(Personal\)/YourFileName.pdf<br></code></pre></td></tr></table></figure>
                 
               </div>

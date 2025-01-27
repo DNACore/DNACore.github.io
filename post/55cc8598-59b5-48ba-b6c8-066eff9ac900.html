@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="Gem::FilePermissionError问题：1234567$ gem install metamodel --verboseERROR:  While executing gem ... (Gem::FilePermissionError)    You don&#x27;t have write permissions for the &#x2F;Library&#x2F;Ruby&#x2F;Gems&#x2F;2.3.0">
+    <meta name="description" content="Gem::FilePermissionError问题：  1234567$ gem install metamodel --verboseERROR:  While executing gem ... (Gem::FilePermissionError)    You don&#x27;t have write permissions for the &#x2F;Library&#x2F;Ruby&#x2F;Gems&#x2F;2.3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="gem-问题">
 <meta property="og:url" content="https://dnacore.github.io/post/55cc8598-59b5-48ba-b6c8-066eff9ac900.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="Gem::FilePermissionError问题：1234567$ gem install metamodel --verboseERROR:  While executing gem ... (Gem::FilePermissionError)    You don&#x27;t have write permissions for the &#x2F;Library&#x2F;Ruby&#x2F;Gems&#x2F;2.3.0">
+<meta property="og:description" content="Gem::FilePermissionError问题：  1234567$ gem install metamodel --verboseERROR:  While executing gem ... (Gem::FilePermissionError)    You don&#x27;t have write permissions for the &#x2F;Library&#x2F;Ruby&#x2F;Gems&#x2F;2.3">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-03T06:40:20.000Z">
 <meta property="article:modified_time" content="2023-07-14T11:24:01.492Z">
@@ -277,9 +277,10 @@
               <div class="markdown-body">
                 
                 <ul>
-<li>Gem::FilePermissionError<br>问题：<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">$ gem install metamodel --verbose<br><span class="hljs-keyword">ERROR:  </span>While executing gem ... (Gem::FilePermissionError)<br>    You don&#x27;t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.<br>或者<br>$ sudo gem install metamodel --verbose<br><span class="hljs-keyword">ERROR:  </span>While executing gem ... (Gem::FilePermissionError)<br>    You don&#x27;t have write permissions for the /usr/bin directory.<br></code></pre></td></tr></table></figure>
-原因：没有权限。<br>解决：</li>
+<li>Gem::FilePermissionError<br>问题：</li>
 </ul>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs subunit">$ gem install metamodel --verbose<br><span class="hljs-keyword">ERROR:  </span>While executing gem ... (Gem::FilePermissionError)<br>    You don&#x27;t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.<br>或者<br>$ sudo gem install metamodel --verbose<br><span class="hljs-keyword">ERROR:  </span>While executing gem ... (Gem::FilePermissionError)<br>    You don&#x27;t have write permissions for the /usr/bin directory.<br></code></pre></td></tr></table></figure>
+<p>原因：没有权限。<br>解决：</p>
 <ol>
 <li><p>方案1:<br><code>export GEM_HOME=&quot;$HOME/.gem&quot;</code></p>
 </li>

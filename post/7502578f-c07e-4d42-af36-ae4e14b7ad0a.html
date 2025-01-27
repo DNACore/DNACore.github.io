@@ -19,13 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="hosts.allow 和 hosts.deny 的使用方式hosts.allow 和 hosts.deny 是Linux系统中用于控制远程访问的两个文件，位于 &#x2F;etc&#x2F; 目录下。它们通过TCP Wrappers机制来实现对特定服务的访问控制。以下是它们的具体使用方式和规则： 基本原理 TCP Wrappers：hosts.allow 和 hosts.deny 依赖于TCP Wrappers">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Linux-host.allow和host.deny">
 <meta property="og:url" content="https://dnacore.github.io/post/7502578f-c07e-4d42-af36-ae4e14b7ad0a.html">
 <meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="hosts.allow 和 hosts.deny 的使用方式hosts.allow 和 hosts.deny 是Linux系统中用于控制远程访问的两个文件，位于 &#x2F;etc&#x2F; 目录下。它们通过TCP Wrappers机制来实现对特定服务的访问控制。以下是它们的具体使用方式和规则： 基本原理 TCP Wrappers：hosts.allow 和 hosts.deny 依赖于TCP Wrappers">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-16T07:17:54.000Z">
-<meta property="article:modified_time" content="2023-02-16T07:19:00.934Z">
+<meta property="article:modified_time" content="2024-12-25T08:08:22.997Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="host.allow">
@@ -223,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          584 字
         
       </span>
     
@@ -234,7 +236,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -282,6 +284,43 @@ https://www.cnblogs.com/EasonJim/p/8338931.html
 
 https://superuser.com/questions/1091698/how-to-block-ip-in-ssh
 -->
+
+<h3 id="hosts-allow-和-hosts-deny-的使用方式"><a href="#hosts-allow-和-hosts-deny-的使用方式" class="headerlink" title="hosts.allow 和 hosts.deny 的使用方式"></a><code>hosts.allow</code> 和 <code>hosts.deny</code> 的使用方式</h3><p><code>hosts.allow</code> 和 <code>hosts.deny</code> 是Linux系统中用于控制远程访问的两个文件，位于 <code>/etc/</code> 目录下。它们通过TCP Wrappers机制来实现对特定服务的访问控制。以下是它们的具体使用方式和规则：</p>
+<h4 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h4><ul>
+<li><strong>TCP Wrappers</strong>：<code>hosts.allow</code> 和 <code>hosts.deny</code> 依赖于TCP Wrappers机制，只支持使用了libwrap库的服务。TCP Wrappers通过限制某些服务的访问权限来保护系统安全。</li>
+<li><strong>优先级</strong>：当有远程请求到达时，系统首先检查 <code>hosts.allow</code> 文件。如果匹配，则允许访问并跳过 <code>hosts.deny</code> 文件的检查。如果 <code>hosts.allow</code> 中没有匹配项，则检查 <code>hosts.deny</code> 文件。如果匹配，则拒绝访问。如果两个文件中都没有匹配项，则默认允许访问。</li>
+</ul>
+<h4 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h4><ul>
+<li><strong>基本格式</strong>：每行规则的格式为：<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ada">daemon_list : <span class="hljs-type">client_list</span> : <span class="hljs-type">option</span><br></code></pre></td></tr></table></figure>
+其中：<ul>
+<li><code>daemon_list</code>：要监控的服务列表，如 <code>sshd</code>、<code>telnetd</code> 等。</li>
+<li><code>client_list</code>：主机名、IP地址&#x2F;IP范围，或域名。</li>
+<li><code>option</code>：具体选项，如 <code>allow</code>（允许访问）、<code>deny</code>（拒绝访问）、<code>except</code>（排除特定项）。</li>
+</ul>
+</li>
+</ul>
+<h4 id="示例配置"><a href="#示例配置" class="headerlink" title="示例配置"></a>示例配置</h4><ul>
+<li><p><strong>允许特定IP段访问SSH服务</strong>：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sshd</span>:<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">18</span>.*:<span class="hljs-literal">allow</span><br><span class="hljs-attribute">sshd</span>:<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">224</span>.*:<span class="hljs-literal">allow</span><br></code></pre></td></tr></table></figure>
+<p>这表示允许来自 <code>192.168.18.*</code> 和 <code>192.168.224.*</code> IP段的主机访问SSH服务。</p>
+</li>
+<li><p><strong>允许和拒绝规则结合使用</strong>：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">telnetd</span>,sshd:.myweb.com :<span class="hljs-literal">allow</span><br><span class="hljs-attribute">ftpd</span>:.myweb.com except user1.myweb.com, user2.myweb.com : <span class="hljs-literal">allow</span><br><span class="hljs-attribute">telnetd</span>,sshd:<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">6</span>. , <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">7</span>.: <span class="hljs-literal">allow</span><br><span class="hljs-attribute">telnetd</span> :<span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">8</span>., <span class="hljs-number">192</span>.<span class="hljs-number">168</span>.<span class="hljs-number">9</span>.: <span class="hljs-literal">deny</span><br></code></pre></td></tr></table></figure>
+<p>这表示：</p>
+<ul>
+<li>允许 <code>myweb.com</code> 域的主机访问 <code>telnet</code> 和 <code>ssh</code> 服务。</li>
+<li>允许 <code>myweb.com</code> 域的所有主机访问 <code>ftp</code> 服务，除了 <code>user1.myweb.com</code> 和 <code>user2.myweb.com</code>。</li>
+<li>允许 <code>192.168.6.*</code> 和 <code>192.168.7.*</code> IP段的主机访问 <code>telnet</code> 和 <code>ssh</code> 服务。</li>
+<li>拒绝 <code>192.168.8.*</code> 和 <code>192.168.9.*</code> IP段的主机访问 <code>telnet</code> 服务。</li>
+</ul>
+</li>
+</ul>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li><strong>规则灵活性</strong>：可以只使用一个文件（通常是 <code>hosts.allow</code>）来包含所有规则，在需要拒绝的IP后面跟上 <code>deny</code> 选项即可。如果暂时不需要这些规则，可以将文件名临时改掉，之后再改回来。</li>
+<li><strong>宏定义</strong>：支持一些宏定义，如 <code>ALL</code>（指代所有主机）、<code>LOCAL</code>（指代本地主机）、<code>KNOWN</code>（能够解析的主机）、<code>UNKNOWN</code>（不能解析的主机）。</li>
+</ul>
+<p>通过合理配置 <code>hosts.allow</code> 和 <code>hosts.deny</code> 文件，可以有效地控制和管理系统的远程访问权限，提升系统的安全性。</p>
+
                 
               </div>
             
@@ -328,7 +367,7 @@ https://superuser.com/questions/1091698/how-to-block-ip-in-ssh
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年2月16日</div>
+          <div>2024年12月25日</div>
         </div>
       
       

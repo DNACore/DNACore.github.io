@@ -19,15 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区 1sudo dpkg-reconfigure tzdata  显示时间信息 12timedatectldate  安装Transmission树莓派中使用 tansmission 安装 nodej">
+    <meta name="description" content="开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区   1sudo dpkg-reconfigure tzdata   显示时间信息  12timedatectldate   树莓派-优化内存卡读写  安装Transmission树莓派中使用 ta">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派-树莓派基础设置">
 <meta property="og:url" content="https://dnacore.github.io/post/5ce25011-92e0-4510-8303-e9b12f9d81ae.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区 1sudo dpkg-reconfigure tzdata  显示时间信息 12timedatectldate  安装Transmission树莓派中使用 tansmission 安装 nodej">
+<meta property="og:description" content="开启 ssh 树莓派开启ssh  设置软件源 apt 更换软件源树莓派替换清华源     其它设置 扩展存储sudo raspi-config -&gt; Expand Filesystem  设置时区   1sudo dpkg-reconfigure tzdata   显示时间信息  12timedatectldate   树莓派-优化内存卡读写  安装Transmission树莓派中使用 ta">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-23T07:20:34.000Z">
-<meta property="article:modified_time" content="2022-08-30T11:43:37.000Z">
+<meta property="article:modified_time" content="2025-01-20T07:24:55.545Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          62 字
+          89 字
         
       </span>
     
@@ -285,7 +285,7 @@
 <!--
 
 - pip 更换软件源
-[Python-pip使用](/post/9b70d59d-8934-4883-b307-7a29ff523681.html) 
+[Python-pip使用](/post/9b70d59d-8934-4883-b307-7a29ff523681.html)
 
 -->
 
@@ -294,15 +294,26 @@
 <li><p>扩展存储<br><code>sudo raspi-config</code> -&gt; <code>Expand Filesystem</code></p>
 </li>
 <li><p>设置时区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dpkg-reconfigure tzdata<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>显示时间信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl<br><span class="hljs-built_in">date</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dpkg-reconfigure tzdata<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>显示时间信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">timedatectl<br><span class="hljs-built_in">date</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><a href="/post/4ef52d69-5417-4667-aac9-4b40f3f66c55.html" title="树莓派-优化内存卡读写">树莓派-优化内存卡读写</a></li>
 </ul>
 <h3 id="安装Transmission"><a href="#安装Transmission" class="headerlink" title="安装Transmission"></a>安装Transmission</h3><p><a href="/post/e151071a-df76-43fd-8e98-3f057187f383.html#%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%AD%E4%BD%BF%E7%94%A8-tansmission">树莓派中使用 tansmission</a></p>
 <h3 id="安装-nodejs"><a href="#安装-nodejs" class="headerlink" title="安装 nodejs"></a>安装 nodejs</h3><ul>
 <li>安装 yarn</li>
 <li>安装 hexo</li>
+<li>安装 vnstat 流量统计工具<ul>
+<li>查看实时网速 vnstat -l -ru 0</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -347,7 +358,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年8月30日</div>
+          <div>2025年1月20日</div>
         </div>
       
       

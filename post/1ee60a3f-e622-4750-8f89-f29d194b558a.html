@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="设置系统代理地址 12sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理  开关系统代理 12sudo network">
+    <meta name="description" content="设置系统代理地址  12sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理   开关系统代理  12sudo netw">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-设置系统代理">
 <meta property="og:url" content="https://dnacore.github.io/post/1ee60a3f-e622-4750-8f89-f29d194b558a.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="设置系统代理地址 12sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理  开关系统代理 12sudo network">
+<meta property="og:description" content="设置系统代理地址  12sudo networksetup -setwebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTP代理sudo networksetup -setsecurewebproxy &quot;Wi-Fi&quot; 127.0.0.1 8081   #设置Web HTTPS代理   开关系统代理  12sudo netw">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-12-03T03:51:23.000Z">
 <meta property="article:modified_time" content="2024-03-12T11:34:22.161Z">
@@ -278,12 +278,15 @@
               <div class="markdown-body">
                 
                 <ul>
-<li><p>设置系统代理地址</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sudo</span> networksetup -setwebproxy <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-number">127.0.0.1</span> <span class="hljs-number">8081</span>   <span class="hljs-comment">#设置Web HTTP代理</span><br>sudo networksetup -setsecurewebproxy <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-number">127.0.0.1</span> <span class="hljs-number">8081</span>   <span class="hljs-comment">#设置Web HTTPS代理</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>开关系统代理</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sudo</span> networksetup -setwebproxystate <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-literal">on</span> <span class="hljs-comment">#打开Web HTTP代理</span><br>sudo networksetup -setsecurewebproxystate <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-literal">on</span> <span class="hljs-comment">#打开Web HTTPS代理</span><br></code></pre></td></tr></table></figure></li>
+<li>设置系统代理地址</li>
 </ul>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sudo</span> networksetup -setwebproxy <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-number">127.0.0.1</span> <span class="hljs-number">8081</span>   <span class="hljs-comment">#设置Web HTTP代理</span><br>sudo networksetup -setsecurewebproxy <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-number">127.0.0.1</span> <span class="hljs-number">8081</span>   <span class="hljs-comment">#设置Web HTTPS代理</span><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>开关系统代理</li>
+</ul>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">sudo</span> networksetup -setwebproxystate <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-literal">on</span> <span class="hljs-comment">#打开Web HTTP代理</span><br>sudo networksetup -setsecurewebproxystate <span class="hljs-string">&quot;Wi-Fi&quot;</span> <span class="hljs-literal">on</span> <span class="hljs-comment">#打开Web HTTPS代理</span><br></code></pre></td></tr></table></figure>
+
 <!--
 - 忽略的代理
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stylus">*.local、<span class="hljs-number">169.254</span>/<span class="hljs-number">16</span>、<span class="hljs-number">10</span>.*、<span class="hljs-number">127.0</span>.<span class="hljs-number">0.1</span>、localhost、*<span class="hljs-selector-class">.apple</span>.cn、*<span class="hljs-selector-class">.apple</span>.com、*<span class="hljs-selector-class">.icloud</span>.com、*<span class="hljs-selector-class">.googleapis</span>.com、*<span class="hljs-selector-class">.whatpulse</span>.org、api<span class="hljs-selector-class">.map</span><span class="hljs-selector-class">.baidu</span>.com、*<span class="hljs-selector-class">.qq</span>.com、*<span class="hljs-selector-class">.digicert</span>.com、*<span class="hljs-selector-class">.office</span>.net、*<span class="hljs-selector-class">.office</span>.com、*<span class="hljs-selector-class">.live</span>.com、*<span class="hljs-selector-class">.visualstudio</span>.com、*<span class="hljs-selector-class">.google-analytics</span>.com、loc<span class="hljs-selector-class">.map</span><span class="hljs-selector-class">.baidu</span>.com、*<span class="hljs-selector-class">.github</span>.com、*<span class="hljs-selector-class">.atlassian</span>.com、*<span class="hljs-selector-class">.taobao</span>.com、*<span class="hljs-selector-class">.azure</span>.cn、*<span class="hljs-selector-class">.cdn-apple</span>.com、*<span class="hljs-selector-class">.qpic</span>.cn、*<span class="hljs-selector-class">.parallels</span>.com<br></code></pre></td></tr></table></figure>

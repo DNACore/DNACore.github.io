@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="打开系统自带功能 需要在&#x2F;etc&#x2F;目录下建立一个名为fstab的文件 1sudo vi &#x2F;etc&#x2F;fstab  编辑fstab文件内容LABEL&#x3D;XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID&#x3D;YYYY为卷的UUID，可以通过diskutil info &#x2F;Volumes&#x2F;DRIVENAME | grep UUID命令获取这个硬盘的UUID 123LABEL&#x3D;XXXX">
+    <meta name="description" content="打开系统自带功能 需要在&#x2F;etc&#x2F;目录下建立一个名为fstab的文件  1sudo vi &#x2F;etc&#x2F;fstab   编辑fstab文件内容LABEL&#x3D;XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID&#x3D;YYYY为卷的UUID，可以通过diskutil info &#x2F;Volumes&#x2F;DRIVENAME | grep UUID命令获取这个硬盘的UUID  123LABEL&#x3D;XX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-开启macOS系统自带的NTFS写入功能">
 <meta property="og:url" content="https://dnacore.github.io/post/2e604ed7-eb46-40d8-8d04-b92b64c943bf.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="打开系统自带功能 需要在&#x2F;etc&#x2F;目录下建立一个名为fstab的文件 1sudo vi &#x2F;etc&#x2F;fstab  编辑fstab文件内容LABEL&#x3D;XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID&#x3D;YYYY为卷的UUID，可以通过diskutil info &#x2F;Volumes&#x2F;DRIVENAME | grep UUID命令获取这个硬盘的UUID 123LABEL&#x3D;XXXX">
+<meta property="og:description" content="打开系统自带功能 需要在&#x2F;etc&#x2F;目录下建立一个名为fstab的文件  1sudo vi &#x2F;etc&#x2F;fstab   编辑fstab文件内容LABEL&#x3D;XXXX为卷显示出来的名称，如果名称中含有空格要用 \040 替换。UUID&#x3D;YYYY为卷的UUID，可以通过diskutil info &#x2F;Volumes&#x2F;DRIVENAME | grep UUID命令获取这个硬盘的UUID  123LABEL&#x3D;XX">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-12T01:59:23.000Z">
 <meta property="article:modified_time" content="2023-11-30T06:15:48.233Z">
@@ -278,12 +278,16 @@
               <div class="markdown-body">
                 
                 <h2 id="打开系统自带功能"><a href="#打开系统自带功能" class="headerlink" title="打开系统自带功能"></a>打开系统自带功能</h2><ol>
-<li><p>需要在<code>/etc/</code>目录下建立一个名为<code>fstab</code>的文件</p>
+<li>需要在<code>/etc/</code>目录下建立一个名为<code>fstab</code>的文件</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vi /etc/fstab<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>编辑<code>fstab</code>文件内容<br><code>LABEL=XXXX</code>为卷显示出来的名称，如果名称中含有空格要用 <code>\040</code> 替换。<br><code>UUID=YYYY</code>为卷的UUID，可以通过<code>diskutil info /Volumes/DRIVENAME | grep UUID</code>命令获取这个硬盘的UUID</p>
+
+<ol start="2">
+<li>编辑<code>fstab</code>文件内容<br><code>LABEL=XXXX</code>为卷显示出来的名称，如果名称中含有空格要用 <code>\040</code> 替换。<br><code>UUID=YYYY</code>为卷的UUID，可以通过<code>diskutil info /Volumes/DRIVENAME | grep UUID</code>命令获取这个硬盘的UUID</li>
+</ol>
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">LABEL</span>=XXXX none ntfs rw,auto,nobrowse<br><span class="hljs-attr">LABEL</span>=My\<span class="hljs-number">040</span>External\<span class="hljs-number">040</span>Drive none ntfs rw,auto,nobrowse<br><span class="hljs-attr">UUID</span>=YYYY none ntfs rw,auto,nobrowse<br></code></pre></td></tr></table></figure>
-</li>
+
+<ol start="3">
 <li><p>打开硬盘分区<br>如果现在还插着移动硬盘，需要先安全弹出，再插到电脑上让系统重新识别。<br>这个时候系统不会再自动地把硬盘挂载点显示在Finder中和桌面上了，这个时候我们有两个途径打开移动硬盘：</p>
 <ol>
 <li>在<code>/Volumes/</code>中找到移动硬盘然后打开；</li>

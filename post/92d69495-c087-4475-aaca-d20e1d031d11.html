@@ -307,17 +307,18 @@
 </blockquote>
 <h3 id="配置文件的书写"><a href="#配置文件的书写" class="headerlink" title="配置文件的书写"></a>配置文件的书写</h3><ol>
 <li>在 *.xcodeproj 所在的文件夹下建立 Podfile 为名，的无扩展名文本文件，文件需要的编码是 UTF-8 换行符为 UNIX 格式。<br>这里根据文档，也可以执行 <code>pod init</code> 就会在当前目录生成一个 Podfile 文件。</li>
-<li>Podfile 的文件内容<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs delphi"><span class="hljs-keyword">platform</span> :ios, <span class="hljs-string">&#x27;7.0&#x27;</span><br>target <span class="hljs-string">&#x27;CloudStorageHelper&#x27;</span> <span class="hljs-keyword">do</span><br>    pod <span class="hljs-string">&#x27;AFNetworking&#x27;</span>, <span class="hljs-string">&#x27;~&gt; 3.1.0&#x27;</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
-<ul>
-<li><code>platform :ios, &#39;7.0&#39;</code> 最低支持的 iOS 版本。</li>
-<li><code>target &#39;CloudStorageHelper&#39;</code> 这里是将要向哪个 Target 添加库文件。</li>
-<li><code>pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;</code> 需要添加的第三方依赖库和版本。</li>
-</ul>
-</li>
+<li>Podfile 的文件内容</li>
 </ol>
+<figure class="highlight delphi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs delphi"><span class="hljs-keyword">platform</span> :ios, <span class="hljs-string">&#x27;7.0&#x27;</span><br>target <span class="hljs-string">&#x27;CloudStorageHelper&#x27;</span> <span class="hljs-keyword">do</span><br>    pod <span class="hljs-string">&#x27;AFNetworking&#x27;</span>, <span class="hljs-string">&#x27;~&gt; 3.1.0&#x27;</span><br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></figure>
+<pre><code class="hljs">- `platform :ios, &#39;7.0&#39;` 最低支持的 iOS 版本。
+- `target &#39;CloudStorageHelper&#39;` 这里是将要向哪个 Target 添加库文件。
+- `pod &#39;AFNetworking&#39;, &#39;~&gt; 3.1.0&#39;` 需要添加的第三方依赖库和版本。
+</code></pre>
 <ul>
-<li>只在Debug模式下加入pod库<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby">pod <span class="hljs-string">&#x27;SomePod&#x27;</span>, <span class="hljs-string">&#x27;~&gt; 2.0&#x27;</span>, <span class="hljs-symbol">:configurations</span> =&gt; [<span class="hljs-string">&#x27;Debug&#x27;</span>]<br></code></pre></td></tr></table></figure></li>
+<li>只在Debug模式下加入pod库</li>
 </ul>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ruby">pod <span class="hljs-string">&#x27;SomePod&#x27;</span>, <span class="hljs-string">&#x27;~&gt; 2.0&#x27;</span>, <span class="hljs-symbol">:configurations</span> =&gt; [<span class="hljs-string">&#x27;Debug&#x27;</span>]<br></code></pre></td></tr></table></figure>
+
 <h3 id="安装依赖库"><a href="#安装依赖库" class="headerlink" title="安装依赖库"></a>安装依赖库</h3><p><code>pod install</code> 命令需要切换到 Podfile 所在的目录执行<br><code>pod install --clean-install</code> 忽略本地缓存，强制远程pod库完整安装<br><code>pod install --repo-update</code> 安装前，强制更新索引库(pod repo)<br><code>pod install --no-repo-update</code> 安装前，忽略更新索引库(pod repo)</p>
 <h3 id="更新依赖库"><a href="#更新依赖库" class="headerlink" title="更新依赖库"></a>更新依赖库</h3><p><code>pod update</code> 命令需要切换到 Podfile 所在的目录执行</p>
 <h3 id="降级依赖库步骤"><a href="#降级依赖库步骤" class="headerlink" title="降级依赖库步骤"></a>降级依赖库步骤</h3><ol>
@@ -348,7 +349,10 @@
 </ul>
 <h3 id="CocoaPods-repo-换源"><a href="#CocoaPods-repo-换源" class="headerlink" title="CocoaPods repo 换源"></a>CocoaPods repo 换源</h3><p>当执行与官方源相关的命令时(比如使用包含在官方源中的pod库)，会自动初始化官方源。<code>pod repo init</code>会主动初始化官方源。<br>官方源其实就是个git库，有自己的git更新源</p>
 <ul>
-<li>已经初始化好了官方源<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">//默认的是trunk源是CDN &quot;https://cdn.cocoapods.org/&quot;<br>//删除 trunk<br>pod repo remove trunk<br>//添加其它 trunk<br>pod repo add master https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git<br>pod clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git<br>pod repo update --verbose<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">如果不廉价其它trunk库，可以把原来trunk库的git地址换掉</span><br></code></pre></td></tr></table></figure></li>
+<li>已经初始化好了官方源</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">//默认的是trunk源是CDN &quot;https://cdn.cocoapods.org/&quot;<br>//删除 trunk<br>pod repo remove trunk<br>//添加其它 trunk<br>pod repo add master https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git<br>pod clone https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git<br>pod repo update --verbose<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">如果不廉价其它trunk库，可以把原来trunk库的git地址换掉</span><br></code></pre></td></tr></table></figure>
+<ul>
 <li>未初始化官方源时</li>
 </ul>
 <h2 id="所有支持的命令"><a href="#所有支持的命令" class="headerlink" title="所有支持的命令"></a>所有支持的命令</h2><ul>

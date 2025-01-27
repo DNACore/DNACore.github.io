@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="需要编辑&#x2F;etc&#x2F;dhcpcd.conf文件 1sudo nano &#x2F;etc&#x2F;dhcpcd.conf  修改如下 1234interface eth0static ip_address&#x3D;192.168.1.177&#x2F;24static routers&#x3D;192.168.1.1static domain_name_servers&#x3D;114.114.114.114 8.8.8.8 8.8.4.4  重启网络">
+    <meta name="description" content="需要编辑&#x2F;etc&#x2F;dhcpcd.conf文件  1sudo nano &#x2F;etc&#x2F;dhcpcd.conf   修改如下  1234interface eth0static ip_address&#x3D;192.168.1.177&#x2F;24static routers&#x3D;192.168.1.1static domain_name_servers&#x3D;114.114.114.114 8.8.8.8 8.8.4.4">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派-树莓派设置静态IP和DNS">
 <meta property="og:url" content="https://dnacore.github.io/post/59a43f15-c49b-404a-80a2-0a04e3819dc7.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="需要编辑&#x2F;etc&#x2F;dhcpcd.conf文件 1sudo nano &#x2F;etc&#x2F;dhcpcd.conf  修改如下 1234interface eth0static ip_address&#x3D;192.168.1.177&#x2F;24static routers&#x3D;192.168.1.1static domain_name_servers&#x3D;114.114.114.114 8.8.8.8 8.8.4.4  重启网络">
+<meta property="og:description" content="需要编辑&#x2F;etc&#x2F;dhcpcd.conf文件  1sudo nano &#x2F;etc&#x2F;dhcpcd.conf   修改如下  1234interface eth0static ip_address&#x3D;192.168.1.177&#x2F;24static routers&#x3D;192.168.1.1static domain_name_servers&#x3D;114.114.114.114 8.8.8.8 8.8.4.4">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-17T03:23:49.000Z">
 <meta property="article:modified_time" content="2023-07-04T11:27:30.229Z">
@@ -278,19 +278,24 @@
               <div class="markdown-body">
                 
                 <ul>
-<li><p>需要编辑<code>/etc/dhcpcd.conf</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/dhcpcd.conf<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>修改如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">interface eth0<br>static ip_address=192.168.1.177/24<br>static routers=192.168.1.1<br>static domain_name_servers=114.114.114.114 8.8.8.8 8.8.4.4<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>重启网络服务</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 重启所有网络接口</span><br><span class="hljs-built_in">sudo</span> service networking restart<br><br><span class="hljs-comment">#</span><br><span class="hljs-built_in">sudo</span> ifconfig eth0 down &amp;&amp; <span class="hljs-built_in">sudo</span> ifconfig eth0 up<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>查看当前网络信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ifconfig -a<br></code></pre></td></tr></table></figure></li>
+<li>需要编辑<code>/etc/dhcpcd.conf</code>文件</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> nano /etc/dhcpcd.conf<br></code></pre></td></tr></table></figure>
 
+<ul>
+<li>修改如下</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">interface eth0<br>static ip_address=192.168.1.177/24<br>static routers=192.168.1.1<br>static domain_name_servers=114.114.114.114 8.8.8.8 8.8.4.4<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>重启网络服务</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 重启所有网络接口</span><br><span class="hljs-built_in">sudo</span> service networking restart<br><br><span class="hljs-comment">#</span><br><span class="hljs-built_in">sudo</span> ifconfig eth0 down &amp;&amp; <span class="hljs-built_in">sudo</span> ifconfig eth0 up<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>查看当前网络信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ifconfig -a<br></code></pre></td></tr></table></figure>
                 
               </div>
             

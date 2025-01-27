@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="Debian 版本https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;index.zh-cn.html  https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;stable&#x2F;amd64&#x2F;apbs02.zh-cn.html  设置 Debian 源 1  精简 12345apt-get update &amp;&amp; apt-get upgradeapt-get -y p">
+    <meta name="description" content="Debian 版本https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;index.zh-cn.html  https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;stable&#x2F;amd64&#x2F;apbs02.zh-cn.html  设置 Debian 源  1   精简  12345apt-get update &amp;&amp; apt-get upgradeapt-get -">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux-Debian的安装">
 <meta property="og:url" content="https://dnacore.github.io/post/0660f7c9-08ff-451e-b181-ef481193f5b0.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="Debian 版本https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;index.zh-cn.html  https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;stable&#x2F;amd64&#x2F;apbs02.zh-cn.html  设置 Debian 源 1  精简 12345apt-get update &amp;&amp; apt-get upgradeapt-get -y p">
+<meta property="og:description" content="Debian 版本https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;index.zh-cn.html  https:&#x2F;&#x2F;www.debian.org&#x2F;releases&#x2F;stable&#x2F;amd64&#x2F;apbs02.zh-cn.html  设置 Debian 源  1   精简  12345apt-get update &amp;&amp; apt-get upgradeapt-get -">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-16T13:54:48.000Z">
 <meta property="article:modified_time" content="2023-07-13T11:20:30.164Z">
@@ -281,12 +281,15 @@
 </ul>
 <p><a target="_blank" rel="noopener" href="https://www.debian.org/releases/stable/amd64/apbs02.zh-cn.html">https://www.debian.org/releases/stable/amd64/apbs02.zh-cn.html</a></p>
 <ul>
-<li><p>设置 Debian 源</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>精简</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get update &amp;&amp; apt-get upgrade<br>apt-get -y purge aria2<br>apt-get -y purge libreoffice*<br>apt-get -y purge gcc<br>apt-get autoremove &amp;&amp; apt-get clean<br></code></pre></td></tr></table></figure></li>
+<li>设置 Debian 源</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>精简</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">apt-get update &amp;&amp; apt-get upgrade<br>apt-get -y purge aria2<br>apt-get -y purge libreoffice*<br>apt-get -y purge gcc<br>apt-get autoremove &amp;&amp; apt-get clean<br></code></pre></td></tr></table></figure>
+
 <p>Parallels tools debian无法安装<br><a target="_blank" rel="noopener" href="https://segmentfault.com/q/1010000002627479/a-1020000005640694#">https://segmentfault.com/q/1010000002627479/a-1020000005640694#</a></p>
 
                 

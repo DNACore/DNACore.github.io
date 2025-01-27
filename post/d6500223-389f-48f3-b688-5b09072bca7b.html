@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="查看系统自动挂载的分区 1cat &#x2F;etc&#x2F;fstab  挂载ExFAT分区 1sudo apt-get install fuse-exfat  分区管理命令https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiangsikai&#x2F;p&#x2F;10683209.html 123fdiskpartprobe  格式化分区命令https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;F2FS_(">
+    <meta name="description" content="查看系统自动挂载的分区  1cat &#x2F;etc&#x2F;fstab   挂载ExFAT分区  1sudo apt-get install fuse-exfat  分区管理命令https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiangsikai&#x2F;p&#x2F;10683209.html 123fdiskpartprobe  格式化分区命令https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;F2F">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux-挂载卸载U盘">
 <meta property="og:url" content="https://dnacore.github.io/post/d6500223-389f-48f3-b688-5b09072bca7b.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="查看系统自动挂载的分区 1cat &#x2F;etc&#x2F;fstab  挂载ExFAT分区 1sudo apt-get install fuse-exfat  分区管理命令https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiangsikai&#x2F;p&#x2F;10683209.html 123fdiskpartprobe  格式化分区命令https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;F2FS_(">
+<meta property="og:description" content="查看系统自动挂载的分区  1cat &#x2F;etc&#x2F;fstab   挂载ExFAT分区  1sudo apt-get install fuse-exfat  分区管理命令https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xiangsikai&#x2F;p&#x2F;10683209.html 123fdiskpartprobe  格式化分区命令https:&#x2F;&#x2F;wiki.archlinux.org&#x2F;index.php&#x2F;F2F">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-11-30T03:42:39.000Z">
 <meta property="article:modified_time" content="2023-07-04T11:28:37.077Z">
@@ -280,12 +280,15 @@
               <div class="markdown-body">
                 
                 <ul>
-<li><p>查看系统自动挂载的分区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cat /etc/fstab<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>挂载ExFAT分区</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get install fuse-exfat<br></code></pre></td></tr></table></figure></li>
+<li>查看系统自动挂载的分区</li>
 </ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">cat /etc/fstab<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>挂载ExFAT分区</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo apt-get install fuse-exfat<br></code></pre></td></tr></table></figure>
+
 <p>分区管理命令<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xiangsikai/p/10683209.html">https://www.cnblogs.com/xiangsikai/p/10683209.html</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs shell">fdisk<br><br>partprobe<br></code></pre></td></tr></table></figure>
 
@@ -293,21 +296,28 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">mkfs.f2fs -l &#x27;Label&#x27; /dev/sda1<br></code></pre></td></tr></table></figure>
 
 <ol>
-<li><p>首先查看连接的磁盘信息</p>
+<li>首先查看连接的磁盘信息</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">fdisk -l<br><br><span class="hljs-comment"># 或者</span><br>lsblk<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>创建挂载目录</p>
+
+<ol start="2">
+<li>创建挂载目录</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mkdir</span> /mnt/udisk<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>根据<code>fdisk -l</code>中的信息挂载磁盘</p>
+
+<ol start="3">
+<li>根据<code>fdisk -l</code>中的信息挂载磁盘</li>
+</ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> mount -o uid=pi,gid=pi /dev/sda1 /mnt/udisk<br><br><span class="hljs-comment"># 挂载 ext4分区</span><br><span class="hljs-built_in">sudo</span> mount /dev/sda1 /mnt/udisk<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>必要时修改挂载目录的权限</p>
+
+<ol start="4">
+<li>必要时修改挂载目录的权限</li>
+</ol>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">sudo chown $USER /mnt/udisk<br></code></pre></td></tr></table></figure>
 
-</li>
-<li><p>卸载</p>
-</li>
+
+<ol start="4">
+<li>卸载</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">umount -v /mnt/udisk<br>umount -v /dev/sda1<br></code></pre></td></tr></table></figure>
 
@@ -318,8 +328,11 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_"># </span><span class="language-bash">查看占用目录的进程</span><br>fuser -mv /mnt/udisk<br><span class="hljs-meta prompt_"># </span><span class="language-bash">查看占用目录的进程并杀死</span><br>fuser -mv -k /mnt/udisk<br></code></pre></td></tr></table></figure>
 
 <ol start="5">
-<li>弹出<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install eject<br>udisks --unmount /dev/sda<br>udisks --eject /dev/sda<br></code></pre></td></tr></table></figure></li>
+<li>弹出</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install eject<br>udisks --unmount /dev/sda<br>udisks --eject /dev/sda<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="使用-udisksctl-弹出移动硬盘"><a href="#使用-udisksctl-弹出移动硬盘" class="headerlink" title="使用 udisksctl 弹出移动硬盘"></a>使用 udisksctl 弹出移动硬盘</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37227125/article/details/94882056">https://blog.csdn.net/qq_37227125/article/details/94882056</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">udisksctl unmount -b /dev/sda &amp;&amp; udisksctl power-off -b /dev/sda<br></code></pre></td></tr></table></figure>
                 

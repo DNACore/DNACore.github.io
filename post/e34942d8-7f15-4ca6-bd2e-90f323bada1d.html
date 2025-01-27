@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="修改podspec文件，更新好对应的s.version版本号。  将库文件上传到对应的代码仓库，打好tag。  进入项目目录，清缓存，校验podspec文件 12345678# 清除 pod 缓存pod cache clean --all# 校验pod lib lint XXXXX.podspec# 提交到官方索引仓库pod trunk push XXXXX.podspec  如果提示You n">
+    <meta name="description" content="修改podspec文件，更新好对应的s.version版本号。 将库文件上传到对应的代码仓库，打好tag。 进入项目目录，清缓存，校验podspec文件  12345678# 清除 pod 缓存pod cache clean --all# 校验pod lib lint XXXXX.podspec# 提交到官方索引仓库pod trunk push XXXXX.podspec   如果提示You n">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CocoaPods-更新官方pod库版本">
 <meta property="og:url" content="https://dnacore.github.io/post/e34942d8-7f15-4ca6-bd2e-90f323bada1d.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="修改podspec文件，更新好对应的s.version版本号。  将库文件上传到对应的代码仓库，打好tag。  进入项目目录，清缓存，校验podspec文件 12345678# 清除 pod 缓存pod cache clean --all# 校验pod lib lint XXXXX.podspec# 提交到官方索引仓库pod trunk push XXXXX.podspec  如果提示You n">
+<meta property="og:description" content="修改podspec文件，更新好对应的s.version版本号。 将库文件上传到对应的代码仓库，打好tag。 进入项目目录，清缓存，校验podspec文件  12345678# 清除 pod 缓存pod cache clean --all# 校验pod lib lint XXXXX.podspec# 提交到官方索引仓库pod trunk push XXXXX.podspec   如果提示You n">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-08-29T10:09:52.000Z">
 <meta property="article:modified_time" content="2023-07-12T09:54:27.252Z">
@@ -278,23 +278,24 @@
               <div class="markdown-body">
                 
                 <ol>
-<li><p>修改<code>podspec</code>文件，更新好对应的<code>s.version</code>版本号。</p>
-</li>
-<li><p>将库文件上传到对应的代码仓库，打好tag。</p>
-</li>
-<li><p>进入项目目录，清缓存，校验<code>podspec</code>文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除 pod 缓存</span><br>pod cache clean --all<br><br><span class="hljs-comment"># 校验</span><br>pod lib lint XXXXX.podspec<br><br><span class="hljs-comment"># 提交到官方索引仓库</span><br>pod trunk push XXXXX.podspec<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>如果提示<code>You need to register a session first.</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 报错<br>[!] You need to register a session first.<br><br>// 重新注册一下，然后CocoaPods会发送一封邮件到你的邮箱，按照提示打开一个连接激活就ok拉，最后再重复前面步骤，提交到CocoaPods官方仓库<br>pod trunk register 邮箱 <span class="hljs-string">&#x27;名字&#x27;</span> --description=<span class="hljs-string">&#x27;description&#x27;</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>发布成功后执行<code>pod repo update</code>更新本地索引库。</p>
-</li>
-<li><p>执行<code>pod search XXXX</code>，看看是否已经是最新版本。</p>
-</li>
-<li><p>撤回版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 撤回 XXXXX 库的 1.2.2 版本</span><br>pod trunk delete XXXXX(pod库名字) 1.2.2<br></code></pre></td></tr></table></figure></li>
+<li>修改<code>podspec</code>文件，更新好对应的<code>s.version</code>版本号。</li>
+<li>将库文件上传到对应的代码仓库，打好tag。</li>
+<li>进入项目目录，清缓存，校验<code>podspec</code>文件</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 清除 pod 缓存</span><br>pod cache clean --all<br><br><span class="hljs-comment"># 校验</span><br>pod lib lint XXXXX.podspec<br><br><span class="hljs-comment"># 提交到官方索引仓库</span><br>pod trunk push XXXXX.podspec<br></code></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>如果提示<code>You need to register a session first.</code></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">// 报错<br>[!] You need to register a session first.<br><br>// 重新注册一下，然后CocoaPods会发送一封邮件到你的邮箱，按照提示打开一个连接激活就ok拉，最后再重复前面步骤，提交到CocoaPods官方仓库<br>pod trunk register 邮箱 <span class="hljs-string">&#x27;名字&#x27;</span> --description=<span class="hljs-string">&#x27;description&#x27;</span><br></code></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>发布成功后执行<code>pod repo update</code>更新本地索引库。</li>
+<li>执行<code>pod search XXXX</code>，看看是否已经是最新版本。</li>
+<li>撤回版本</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 撤回 XXXXX 库的 1.2.2 版本</span><br>pod trunk delete XXXXX(pod库名字) 1.2.2<br></code></pre></td></tr></table></figure>
+
 <p>附录：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs bash">pod tunk session <span class="hljs-comment"># 操作相关命令</span><br>Usage:<br><br>    $ pod trunk COMMAND<br><br>      Interact with the CocoaPods API (e.g. publishing new specs)<br><br>Commands:<br><br>    + add-owner      Add an owner to a pod<br>    + delete         Deletes a version of a pod.<br>    + deprecate      Deprecates a pod.<br>    + info           Returns information about a Pod.<br>    + me             Display information about your sessions<br>    + push           Publish a podspec<br>    + register       Manage sessions<br>    + remove-owner   Remove an owner from a pod<br><br>Options:<br><br>    --silent         Show nothing<br>    --verbose        Show more debugging information<br>    --no-ansi        Show output without ANSI codes<br>    --<span class="hljs-built_in">help</span>           Show <span class="hljs-built_in">help</span> banner of specified <span class="hljs-built_in">command</span><br></code></pre></td></tr></table></figure>
                 

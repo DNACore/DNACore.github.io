@@ -19,12 +19,12 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="下载 Windows  使用 扫描所有设备 1smartctl --scan  APM参数管理    读取APM参数 1smartctl -g apm disk0  设置APM 1smartctl -s apm off disk0   更新数据库123# 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数# 安装 gpg 命令： brew install gpgupd">
+    <meta name="description" content="下载 Windows  使用 扫描所有设备  1smartctl --scan   APM参数管理   读取APM参数  1smartctl -g apm disk0   设置APM  1smartctl -s apm off disk0   更新数据库  123# 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数# 安装 gpg 命令： brew install">
 <meta property="og:type" content="article">
 <meta property="og:title" content="smartmontools-硬盘S.M.A.R.T信息工具">
 <meta property="og:url" content="https://dnacore.github.io/post/a85ea227-a241-4355-80cb-9f1e5a8f579f.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="下载 Windows  使用 扫描所有设备 1smartctl --scan  APM参数管理    读取APM参数 1smartctl -g apm disk0  设置APM 1smartctl -s apm off disk0   更新数据库123# 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数# 安装 gpg 命令： brew install gpgupd">
+<meta property="og:description" content="下载 Windows  使用 扫描所有设备  1smartctl --scan   APM参数管理   读取APM参数  1smartctl -g apm disk0   设置APM  1smartctl -s apm off disk0   更新数据库  123# 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数# 安装 gpg 命令： brew install">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-02-25T03:28:16.000Z">
 <meta property="article:modified_time" content="2023-07-14T11:24:47.333Z">
@@ -282,29 +282,36 @@
 <li>Windows</li>
 </ul>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><ul>
-<li><p>扫描所有设备</p>
+<li>扫描所有设备</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl --scan<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>APM参数管理</p>
-</li>
+
+<ul>
+<li>APM参数管理</li>
 </ul>
 <ol>
-<li><p>读取APM参数</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -g apm disk0<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>设置APM</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -s apm off disk0<br></code></pre></td></tr></table></figure></li>
+<li>读取APM参数</li>
 </ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -g apm disk0<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>设置APM</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -s apm off disk0<br></code></pre></td></tr></table></figure>
+
 <ul>
-<li>更新数据库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数</span><br><span class="hljs-comment"># 安装 gpg 命令： brew install gpg</span><br>update-smart-drivedb --no-verify<br></code></pre></td></tr></table></figure></li>
+<li>更新数据库</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 此命令依赖 gpg 命令，如果忽略gpg校验，加上 --no-verify 参数</span><br><span class="hljs-comment"># 安装 gpg 命令： brew install gpg</span><br>update-smart-drivedb --no-verify<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="查看硬盘SMART信息"><a href="#查看硬盘SMART信息" class="headerlink" title="查看硬盘SMART信息"></a>查看硬盘SMART信息</h2><ol>
 <li><p>找出电脑中都有哪些磁盘设备<br>参考：<a href="/2019/04/04/%E7%94%B5%E8%84%91%E6%8A%80%E5%B7%A7-macOS-2019-04-04-macOS-%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%B7%B2%E6%8C%82%E5%9C%A8%E7%9A%84%E7%A3%81%E7%9B%98%E5%92%8C%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF">macOS磁盘设备列表</a></p>
 </li>
 <li><p>列出 disk0 的磁盘信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -a disk0<br></code></pre></td></tr></table></figure></li>
+</li>
 </ol>
-
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">smartctl -a disk0<br></code></pre></td></tr></table></figure>
                 
               </div>
             

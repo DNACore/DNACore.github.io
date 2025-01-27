@@ -280,8 +280,10 @@
                 
                 <h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p><a target="_blank" rel="noopener" href="http://man.linuxde.net/iptables">http://man.linuxde.net/iptables</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zclzhao/p/5081590.html">https://www.cnblogs.com/zclzhao/p/5081590.html</a><br><a target="_blank" rel="noopener" href="http://blog.51cto.com/ailixing/38543">http://blog.51cto.com/ailixing/38543</a><br><a target="_blank" rel="noopener" href="https://www.linuxprobe.com/chapter-08.html">https://www.linuxprobe.com/chapter-08.html</a><br><a target="_blank" rel="noopener" href="http://blog.51cto.com/xiaogongju/2087254">http://blog.51cto.com/xiaogongju/2087254</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/reyleon/article/details/12976341">https://blog.csdn.net/reyleon/article/details/12976341</a><br><a target="_blank" rel="noopener" href="http://www.zsythink.net/archives/1199">http://www.zsythink.net/archives/1199</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/linuxprobe/p/5643684.html">https://www.cnblogs.com/linuxprobe/p/5643684.html</a></p>
 <ul>
-<li>设置默认规则 &amp; 添加规则<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -p tcp --dport 443 -j ACCEPT <span class="hljs-comment"># 允许443端口</span><br>iptables -A INPUT -p tcp --dport 22 -j ACCEPT <span class="hljs-comment"># ssh 端口</span><br>iptables -A INPUT -p tcp --dport 21 -j ACCEPT <span class="hljs-comment"># tcp ftp 端口</span><br>iptables -A INPUT -p udp --dport 21 -j ACCEPT <span class="hljs-comment"># udp ftp 端口</span><br>iptables -A INPUT -p icmp -j ACCEPT <span class="hljs-comment"># 允许ping命令</span><br>iptables -P INPUT DROP <span class="hljs-comment"># `-P` 设置默认规则,不参与规则匹配顺序检索</span><br></code></pre></td></tr></table></figure></li>
+<li>设置默认规则 &amp; 添加规则</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -p tcp --dport 443 -j ACCEPT <span class="hljs-comment"># 允许443端口</span><br>iptables -A INPUT -p tcp --dport 22 -j ACCEPT <span class="hljs-comment"># ssh 端口</span><br>iptables -A INPUT -p tcp --dport 21 -j ACCEPT <span class="hljs-comment"># tcp ftp 端口</span><br>iptables -A INPUT -p udp --dport 21 -j ACCEPT <span class="hljs-comment"># udp ftp 端口</span><br>iptables -A INPUT -p icmp -j ACCEPT <span class="hljs-comment"># 允许ping命令</span><br>iptables -P INPUT DROP <span class="hljs-comment"># `-P` 设置默认规则,不参与规则匹配顺序检索</span><br></code></pre></td></tr></table></figure>
+
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>未开放的端口，用<code>nmap</code>扫描的话，端口状态是<code>closed</code>；</li>
 </ul>
@@ -292,27 +294,41 @@
 <h3 id="列出规则，主要开关-L"><a href="#列出规则，主要开关-L" class="headerlink" title="列出规则，主要开关-L"></a>列出规则，主要开关<code>-L</code></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -L -n -v<br><br><span class="hljs-comment"># `--line-numbers` 显示规则列表的时候加上规则序号，</span><br><span class="hljs-comment"># `-n` IP地址用数字形式表示</span><br>iptables -L -n --line-numbers<br>iptables -nvL --line-n<br></code></pre></td></tr></table></figure>
 
 <ul>
-<li><p>删除规则，编号从1开始</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -D INPUT 1<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>清空规则</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -F<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>备份&#x2F;还原规则</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables-save &gt; ~/iptables.rules<br>iptables-restore &lt; ~/iptables.rules<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>重启 iptables</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">service iptables restart<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>允许已建立的或相关连的通行</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT<br>iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>允许所有本机向外的访问</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A OUTPUT -j ACCEPT<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>??</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT<br></code></pre></td></tr></table></figure></li>
+<li>删除规则，编号从1开始</li>
 </ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -D INPUT 1<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>清空规则</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -F<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>备份&#x2F;还原规则</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables-save &gt; ~/iptables.rules<br>iptables-restore &lt; ~/iptables.rules<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>重启 iptables</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">service iptables restart<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>允许已建立的或相关连的通行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT<br>iptables -A OUTPUT -m state --state ESTABLISHED,RELATED -j ACCEPT<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>允许所有本机向外的访问</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A OUTPUT -j ACCEPT<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li>??</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iptables -A INPUT -s 127.0.0.1 -d 127.0.0.1 -j ACCEPT<br></code></pre></td></tr></table></figure>
+
+
 <h2 id="Debian-上的-iptables"><a href="#Debian-上的-iptables" class="headerlink" title="Debian 上的 iptables"></a>Debian 上的 iptables</h2><p><a target="_blank" rel="noopener" href="https://wiki.debian.org/iptables">https://wiki.debian.org/iptables</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.linuxquestions.org/questions/linux-networking-3/iptables-if-pre-up-blocking-my-network-interfaces-debian-4175545524/">Iptables if-pre-up blocking my network interfaces - Debian</a></p>
 
