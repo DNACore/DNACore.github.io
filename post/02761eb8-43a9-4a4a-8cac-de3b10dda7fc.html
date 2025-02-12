@@ -19,23 +19,22 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="简介macOS的包管理工具主页：https:&#x2F;&#x2F;brew.sh&#x2F;index_zh-cn 安装123&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;# 同时在终端显示安装日志并且将安装日志保存在文件中&#x2F;usr&#x2F;bin&#x2F;ruby -e">
+    <meta name="description" content="有几种方法可以查看 transmission-daemon 的环境信息：  使用 transmission-daemon 的 -d 或 –dump-settings 参数：  123transmission-daemon -d# 或transmission-daemon --dump-settings  这会显示当前加载的所有配置信息。  查看进程信息：  1ps aux | grep trans">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Homebrew-brew-macOS包管理工具">
-<meta property="og:url" content="https://dnacore.github.io/post/919ead87-d2b2-4b2f-ac93-a34349365362.html">
+<meta property="og:title" content="查看transmission-daemon的运行环境信息">
+<meta property="og:url" content="https://dnacore.github.io/post/02761eb8-43a9-4a4a-8cac-de3b10dda7fc.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="简介macOS的包管理工具主页：https:&#x2F;&#x2F;brew.sh&#x2F;index_zh-cn 安装123&#x2F;usr&#x2F;bin&#x2F;ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;# 同时在终端显示安装日志并且将安装日志保存在文件中&#x2F;usr&#x2F;bin&#x2F;ruby -e">
+<meta property="og:description" content="有几种方法可以查看 transmission-daemon 的环境信息：  使用 transmission-daemon 的 -d 或 –dump-settings 参数：  123transmission-daemon -d# 或transmission-daemon --dump-settings  这会显示当前加载的所有配置信息。  查看进程信息：  1ps aux | grep trans">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-04-15T03:20:46.000Z">
-<meta property="article:modified_time" content="2023-07-14T11:23:52.802Z">
+<meta property="article:published_time" content="2025-02-10T06:09:12.000Z">
+<meta property="article:modified_time" content="2025-02-10T06:09:43.194Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="Homebrew">
-<meta property="article:tag" content="brew">
+<meta property="article:tag" content="transmission">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Homebrew-brew-macOS包管理工具 - DNACore GitHub io</title>
+  <title>查看transmission-daemon的运行环境信息 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Homebrew-brew-macOS包管理工具</span>
+            <span id="subtitle">查看transmission-daemon的运行环境信息</span>
           
         </div>
 
@@ -212,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2019-04-15 11:20" pubdate>
-          2019年4月15日 上午
+        <time datetime="2025-02-10 14:09" pubdate>
+          2025年2月10日 下午
         </time>
       </span>
     
@@ -224,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          636 字
+          254 字
         
       </span>
     
@@ -235,7 +234,7 @@
         
         
         
-          6 分钟
+          3 分钟
         
       </span>
     
@@ -272,34 +271,47 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Homebrew-brew-macOS包管理工具</h1>
+            <h1 id="seo-header">查看transmission-daemon的运行环境信息</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>macOS的包管理工具<br>主页：<a target="_blank" rel="noopener" href="https://brew.sh/index_zh-cn">https://brew.sh/index_zh-cn</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">/usr/bin/ruby -e <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span><br><span class="hljs-comment"># 同时在终端显示安装日志并且将安装日志保存在文件中</span><br>/usr/bin/ruby -e <span class="hljs-string">&quot;<span class="hljs-subst">$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)</span>&quot;</span> | <span class="hljs-built_in">tee</span> ~/Desktop/Homebrew安装日志.<span class="hljs-built_in">log</span><br></code></pre></td></tr></table></figure>
+                <p>有几种方法可以查看 transmission-daemon 的环境信息：</p>
+<ol>
+<li>使用 transmission-daemon 的 -d 或 –dump-settings 参数：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">transmission-daemon -d<br><span class="hljs-comment"># 或</span><br>transmission-daemon --dump-settings<br></code></pre></td></tr></table></figure>
 
-<blockquote>
-<p>&#x3D;&gt; This script will install:<br>&#x2F;usr&#x2F;local&#x2F;bin&#x2F;brew<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;doc&#x2F;homebrew<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man1&#x2F;brew.1<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;zsh&#x2F;site-functions&#x2F;_brew<br>&#x2F;usr&#x2F;local&#x2F;etc&#x2F;bash_completion.d&#x2F;brew<br>&#x2F;usr&#x2F;local&#x2F;Homebrew<br>get_owner:1: command not found: stat -f<br>get_group:1: command not found: stat -f<br>get_owner:1: command not found: stat -f<br>get_group:1: command not found: stat -f<br>get_owner:1: command not found: stat -f<br>get_group:1: command not found: stat -f<br>get_owner:1: command not found: stat -f<br>get_group:1: command not found: stat -f<br>&#x3D;&#x3D;&gt; The following existing directories will be made group writable:<br>&#x2F;usr&#x2F;local&#x2F;bin<br>&#x2F;usr&#x2F;local&#x2F;share<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man8<br>&#x3D;&#x3D;&gt; The following existing directories will have their owner set to username:<br>&#x2F;usr&#x2F;local&#x2F;bin<br>&#x2F;usr&#x2F;local&#x2F;share<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man8<br>&#x3D;&#x3D;&gt; The following existing directories will have their group set to admin:<br>&#x2F;usr&#x2F;local&#x2F;bin<br>&#x2F;usr&#x2F;local&#x2F;share<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;man&#x2F;man8<br>&#x3D;&#x3D;&gt; The following new directories will be created:<br>&#x2F;usr&#x2F;local&#x2F;etc<br>&#x2F;usr&#x2F;local&#x2F;include<br>&#x2F;usr&#x2F;local&#x2F;lib<br>&#x2F;usr&#x2F;local&#x2F;sbin<br>&#x2F;usr&#x2F;local&#x2F;var<br>&#x2F;usr&#x2F;local&#x2F;opt<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;zsh<br>&#x2F;usr&#x2F;local&#x2F;share&#x2F;zsh&#x2F;site-functions<br>&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew<br>&#x2F;usr&#x2F;local&#x2F;var&#x2F;homebrew&#x2F;linked<br>&#x2F;usr&#x2F;local&#x2F;Cellar<br>&#x2F;usr&#x2F;local&#x2F;Caskroom<br>&#x2F;usr&#x2F;local&#x2F;Homebrew<br>&#x2F;usr&#x2F;local&#x2F;Frameworks</p>
-</blockquote>
-<h2 id="更新-升级"><a href="#更新-升级" class="headerlink" title="更新&amp;升级"></a>更新&amp;升级</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 列出安装的包</span><br>brew list<br><span class="hljs-comment"># 更新Homebrew本身, formulae索引等, 需要先安装git</span><br>brew update<br><span class="hljs-comment"># 安装应用, 例如wget, 安装到/usr/local/Cellar/wget, ln到/usr/local/bin目录下</span><br>brew install wget<br><span class="hljs-comment"># 安装带UI app, 插件, 字体(fonts)及其他非开源应用</span><br>brew cask install firefox<br><span class="hljs-comment"># 更新app</span><br>brew upgrade git<br><span class="hljs-comment"># 诊断依赖冲突等</span><br>brew doctor<br><span class="hljs-comment"># 搜索app</span><br>brew search xxx<br><span class="hljs-comment"># 卸载xxx.app</span><br>brew uninstall xxx<br></code></pre></td></tr></table></figure>
+<p>这会显示当前加载的所有配置信息。</p>
+<ol start="2">
+<li>查看进程信息：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ps aux | grep transmission-daemon<br></code></pre></td></tr></table></figure>
 
-<h2 id="其它命令"><a href="#其它命令" class="headerlink" title="其它命令"></a>其它命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 查看配置</span><br>brew config<br><span class="hljs-comment"># 打开包主页</span><br>brew home git<br><span class="hljs-comment"># 查看包信息</span><br>brew ino git<br><span class="hljs-comment"># 查看包依赖</span><br>brew deps wget  <span class="hljs-comment">#结果显示gettext libidn2  libunistring openssl</span><br><span class="hljs-comment"># 清理旧版本</span><br>brew cleanup git<br>brew cleanup<br><span class="hljs-comment"># 显示可更新的包列表</span><br>brew outdated<br><span class="hljs-comment"># 再来个卸载</span><br>brew <span class="hljs-built_in">rm</span> wget  <span class="hljs-comment"># uninstall wget</span><br>brew remove -h<br></code></pre></td></tr></table></figure>
+<p>这可以看到 transmission-daemon 的启动参数。</p>
+<ol start="3">
+<li>配置文件的默认位置：</li>
+</ol>
+<ul>
+<li>Linux 系统通常在：<code>/var/lib/transmission-daemon/info/settings.json</code></li>
+<li>或用户目录下：<code>~/.config/transmission-daemon/settings.json</code></li>
+</ul>
+<ol start="4">
+<li>查看系统日志：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">journalctl -u transmission-daemon<br><span class="hljs-comment"># 或</span><br><span class="hljs-built_in">tail</span> -f /var/log/syslog | grep transmission<br></code></pre></td></tr></table></figure>
 
-<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="HomeBrew环境变量"><a href="#HomeBrew环境变量" class="headerlink" title="HomeBrew环境变量"></a>HomeBrew环境变量</h3><p><a target="_blank" rel="noopener" href="https://docs.brew.sh/Manpage#environment">https://docs.brew.sh/Manpage#environment</a></p>
-<h3 id="HomeBrew与Python"><a href="#HomeBrew与Python" class="headerlink" title="HomeBrew与Python"></a>HomeBrew与Python</h3><blockquote>
-<p>Python has been installed as<br>  &#x2F;usr&#x2F;local&#x2F;bin&#x2F;python3</p>
-<p>Unversioned symlinks <code>python</code>, <code>python-config</code>, <code>pip</code> etc. pointing to<br><code>python3</code>, <code>python3-config</code>, <code>pip3</code> etc., respectively, have been installed into<br>  &#x2F;usr&#x2F;local&#x2F;opt&#x2F;<a href="mailto:&#x70;&#x79;&#116;&#x68;&#111;&#x6e;&#x40;&#51;&#x2e;&#57;">python@3.9</a>&#x2F;libexec&#x2F;bin</p>
-<p>You can install Python packages with<br>  pip3 install <package><br>They will install into the site-package directory<br>  &#x2F;usr&#x2F;local&#x2F;lib&#x2F;python3.9&#x2F;site-packages</p>
-<p>tkinter is no longer included with this formula, but it is available separately:<br>  brew install <a href="mailto:&#112;&#x79;&#116;&#x68;&#x6f;&#110;&#45;&#116;&#x6b;&#64;&#51;&#46;&#x39;">python-tk@3.9</a></p>
-<p>See: <a target="_blank" rel="noopener" href="https://docs.brew.sh/Homebrew-and-Python">https://docs.brew.sh/Homebrew-and-Python</a></p>
-</blockquote>
-<h3 id="为-homeBrew-设置代理"><a href="#为-homeBrew-设置代理" class="headerlink" title="为 homeBrew 设置代理"></a>为 homeBrew 设置代理</h3><p><a target="_blank" rel="noopener" href="https://getpocket.com/read/3537286287">homebrew不使用代理的问题</a></p>
-<h2 id="查看-homebrew-默认安装的组件版本"><a href="#查看-homebrew-默认安装的组件版本" class="headerlink" title="查看 homebrew 默认安装的组件版本"></a>查看 homebrew 默认安装的组件版本</h2><p>以python为例，<code>brew install</code>使用的配置文件在这里<br><a target="_blank" rel="noopener" href="https://github.com/Homebrew/homebrew-core/blob/master/Aliases/python">https://github.com/Homebrew/homebrew-core/blob/master/Aliases/python</a></p>
-<!--
-参考：https://stackoverflow.com/a/70589077
--->
+<p>这可以看到 daemon 启动时加载配置文件的信息。</p>
+<ol start="5">
+<li>使用 transmission-remote 查看部分设置：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">transmission-remote -si    <span class="hljs-comment"># 显示会话信息</span><br>transmission-remote -st    <span class="hljs-comment"># 显示统计信息</span><br></code></pre></td></tr></table></figure>
+
+<p>如果想要确认具体使用的配置文件位置，可以：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 停止服务</span><br><span class="hljs-built_in">sudo</span> service transmission-daemon stop<br><br><span class="hljs-comment"># 使用调试模式启动，会显示详细信息</span><br><span class="hljs-built_in">sudo</span> transmission-daemon -f -g /path/to/config/dir --debug<br></code></pre></td></tr></table></figure>
+
+<p>注意：修改配置文件时，需要先停止 transmission-daemon 服务，否则退出时会覆盖你的修改：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> service transmission-daemon stop<br><span class="hljs-comment"># 修改配置文件</span><br><span class="hljs-built_in">sudo</span> service transmission-daemon start<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -312,9 +324,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Homebrew/" class="print-no-link">#Homebrew</a>
-      
-        <a href="/tags/brew/" class="print-no-link">#brew</a>
+        <a href="/tags/transmission/" class="print-no-link">#transmission</a>
       
     </div>
   
@@ -326,8 +336,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Homebrew-brew-macOS包管理工具</div>
-      <div>https://dnacore.github.io/post/919ead87-d2b2-4b2f-ac93-a34349365362.html</div>
+      <div>查看transmission-daemon的运行环境信息</div>
+      <div>https://dnacore.github.io/post/02761eb8-43a9-4a4a-8cac-de3b10dda7fc.html</div>
     </div>
     <div class="license-meta">
       
@@ -339,13 +349,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2019年4月15日</div>
+          <div>2025年2月10日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年7月14日</div>
+          <div>2025年2月10日</div>
         </div>
       
       
@@ -376,18 +386,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/4c481a2f-b1fc-405e-88bb-72481662d422.html" title="Rust">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Rust</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/9b40e169-5ab4-45f1-a907-e5b54388f025.html" title="macOS-系统下载以及安装">
-                        <span class="hidden-mobile">macOS-系统下载以及安装</span>
+                      <a href="/post/c8b6e8bc-ffb1-400f-ab85-5b28ae43e478.html" title="在 Mac、Windows、Linux 上免费本地部署 DeepSeek-R1">
+                        <span class="hidden-mobile">在 Mac、Windows、Linux 上免费本地部署 DeepSeek-R1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
