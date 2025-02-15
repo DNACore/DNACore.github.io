@@ -19,15 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="iOS Developer iOS开发 macOS开发 macOS Developer Android 安卓开发 Windows">
+    <meta name="description" content="什么是sysstat工具？sysstat是一组用于Linux系统性能监控的工具集。它包含多个命令行工具，可以帮助系统管理员收集和分析系统性能数据，包括CPU、内存、磁盘I&#x2F;O和网络等方面的信息。 sysstat工具的组成sysstat工具集包括以下主要工具：  sar：系统活动报告工具，用于收集和报告系统活动信息。 iostat：用于监控系统输入&#x2F;输出设备和CPU的使用情况，可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-工具sysstat">
+<meta property="og:title" content="Linux-sysstat工具">
 <meta property="og:url" content="https://dnacore.github.io/post/c951c216-073e-4bcf-9380-73360e23cd70.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="iOS Developer iOS开发 macOS开发 macOS Developer Android 安卓开发 Windows">
+<meta property="og:description" content="什么是sysstat工具？sysstat是一组用于Linux系统性能监控的工具集。它包含多个命令行工具，可以帮助系统管理员收集和分析系统性能数据，包括CPU、内存、磁盘I&#x2F;O和网络等方面的信息。 sysstat工具的组成sysstat工具集包括以下主要工具：  sar：系统活动报告工具，用于收集和报告系统活动信息。 iostat：用于监控系统输入&#x2F;输出设备和CPU的使用情况，可">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-20T07:48:36.000Z">
-<meta property="article:modified_time" content="2023-11-29T09:23:23.621Z">
+<meta property="article:modified_time" content="2025-02-12T13:18:23.857Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="sysstat">
@@ -35,7 +35,7 @@
   
   
   
-  <title>Linux-工具sysstat - DNACore GitHub io</title>
+  <title>Linux-sysstat工具 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Linux-工具sysstat</span>
+            <span id="subtitle">Linux-sysstat工具</span>
           
         </div>
 
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          748 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -272,12 +272,45 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux-工具sysstat</h1>
+            <h1 id="seo-header">Linux-sysstat工具</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h3 id="什么是sysstat工具？"><a href="#什么是sysstat工具？" class="headerlink" title="什么是sysstat工具？"></a>什么是sysstat工具？</h3><p>sysstat是一组用于Linux系统性能监控的工具集。它包含多个命令行工具，可以帮助系统管理员收集和分析系统性能数据，包括CPU、内存、磁盘I&#x2F;O和网络等方面的信息。</p>
+<h3 id="sysstat工具的组成"><a href="#sysstat工具的组成" class="headerlink" title="sysstat工具的组成"></a>sysstat工具的组成</h3><p>sysstat工具集包括以下主要工具：</p>
+<ol>
+<li><strong>sar</strong>：系统活动报告工具，用于收集和报告系统活动信息。</li>
+<li><strong>iostat</strong>：用于监控系统输入&#x2F;输出设备和CPU的使用情况，可以帮助确定系统性能瓶颈。</li>
+<li><strong>mpstat</strong>：用于报告CPU的统计数据，包括每个CPU的使用情况。</li>
+<li><strong>pidstat</strong>：用于监控特定进程的性能数据。</li>
+<li><strong>nfsiostat</strong>：用于监控NFS客户端的I&#x2F;O操作。</li>
+<li><strong>cifsiostat</strong>：用于监控CIFS文件系统的I&#x2F;O操作。</li>
+</ol>
+<h3 id="安装和配置"><a href="#安装和配置" class="headerlink" title="安装和配置"></a>安装和配置</h3><p>在大多数Linux发行版中，sysstat工具可以通过包管理器安装。例如，在Debian&#x2F;Ubuntu系统中，可以使用以下命令安装sysstat：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt-get install sysstat<br></code></pre></td></tr></table></figure>
+
+<p>安装完成后，可以通过编辑<code>/etc/default/sysstat</code>文件来配置sysstat的行为，例如启用或禁用数据收集。</p>
+<h3 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h3><h4 id="sar命令"><a href="#sar命令" class="headerlink" title="sar命令"></a>sar命令</h4><p><code>sar</code>命令用于收集和报告系统活动信息。以下是一个示例，显示过去一天的CPU使用情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sar -u -f /var/log/sysstat/sa$(<span class="hljs-built_in">date</span> +%d)<br></code></pre></td></tr></table></figure>
+
+<h4 id="iostat命令"><a href="#iostat命令" class="headerlink" title="iostat命令"></a>iostat命令</h4><p><code>iostat</code>命令用于监控系统输入&#x2F;输出设备和CPU的使用情况。以下是一个示例，显示每秒的磁盘I&#x2F;O统计信息，总共显示5次：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">iostat -mx 1 5<br></code></pre></td></tr></table></figure>
+
+<h4 id="mpstat命令"><a href="#mpstat命令" class="headerlink" title="mpstat命令"></a>mpstat命令</h4><p><code>mpstat</code>命令用于报告每个CPU的统计数据。以下是一个示例，显示每秒的CPU统计信息，总共显示5次：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mpstat 1 5<br></code></pre></td></tr></table></figure>
+
+<h3 id="集成监控与报警"><a href="#集成监控与报警" class="headerlink" title="集成监控与报警"></a>集成监控与报警</h3><p>sysstat工具可以与其他监控和报警工具集成，以实现更全面的系统监控。例如，可以使用循环命令定期执行sysstat命令，并在检测到异常时触发报警机制。以下是一个简单的示例脚本，定期检查CPU使用率并在超过阈值时发送报警：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-meta">#!/bin/bash</span><br><br>CPU_THRESHOLD=80<br><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>; <span class="hljs-keyword">do</span><br>    cpu_usage=$(mpstat 1 1 | awk <span class="hljs-string">&#x27;/all/ &#123;print 100 - $12&#125;&#x27;</span>)<br>    <span class="hljs-keyword">if</span> (( $(echo &quot;<span class="hljs-variable">$cpu_usage</span> &gt; <span class="hljs-variable">$CPU_THRESHOLD</span>&quot; | bc -l) )); <span class="hljs-keyword">then</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Warning: CPU usage is above the threshold at <span class="hljs-variable">$&#123;cpu_usage&#125;</span>%&quot;</span><br>        <span class="hljs-comment"># 发送报警邮件</span><br>        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Subject: System Alert - CPU Usage High&quot;</span> | sendmail -v admin@example.com<br>    <span class="hljs-keyword">fi</span><br>    <span class="hljs-built_in">sleep</span> 60<br><span class="hljs-keyword">done</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h3><p>为了确保sysstat工具的高效使用，以下是一些最佳实践：</p>
+<ol>
+<li><strong>保持脚本简洁</strong>：监控脚本应当尽量保持简洁，专注于完成特定的监控任务。</li>
+<li><strong>使用合适的工具</strong>：选择合适的工具来完成监控任务，例如使用<code>iostat</code>来监控磁盘I&#x2F;O，使用<code>mpstat</code>来监控CPU使用情况。</li>
+<li><strong>代码模块化</strong>：将监控脚本分解成模块或函数，每个模块或函数负责一个特定的监控任务。</li>
+<li><strong>适当的日志记录</strong>：在监控脚本中添加适当的日志记录，可以帮助管理员在问题发生时回溯和调试。</li>
+</ol>
+
                 
               </div>
             
@@ -303,7 +336,7 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux-工具sysstat</div>
+      <div>Linux-sysstat工具</div>
       <div>https://dnacore.github.io/post/c951c216-073e-4bcf-9380-73360e23cd70.html</div>
     </div>
     <div class="license-meta">
@@ -322,7 +355,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年11月29日</div>
+          <div>2025年2月12日</div>
         </div>
       
       

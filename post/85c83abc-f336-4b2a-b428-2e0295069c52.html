@@ -19,22 +19,23 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="在Linux系统中，.bash_profile和.bashrc是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍： .bash_profile.bash_profile是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。  位置：通常位于用户的主目录下（~&#x2F;.b">
+    <meta name="description" content="要查看systemd的启动日志，可以使用journalctl命令，这是systemd内置的日志管理工具。以下是如何使用journalctl查看启动日志的步骤和相关信息： 使用journalctl查看日志 基本用法：  journalctl命令可以用来查看systemd的所有日志，包括内核日志和应用日志。默认情况下，journalctl会显示从最早记录开始的所有日志内容。   查看特定服务的日志：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-bash_profile与bashrc">
-<meta property="og:url" content="https://dnacore.github.io/post/affe5443-17d5-4c26-a65c-cd16fd314e71.html">
+<meta property="og:title" content="Linux-使用journalctl查看systemd日志">
+<meta property="og:url" content="https://dnacore.github.io/post/85c83abc-f336-4b2a-b428-2e0295069c52.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="在Linux系统中，.bash_profile和.bashrc是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍： .bash_profile.bash_profile是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。  位置：通常位于用户的主目录下（~&#x2F;.b">
+<meta property="og:description" content="要查看systemd的启动日志，可以使用journalctl命令，这是systemd内置的日志管理工具。以下是如何使用journalctl查看启动日志的步骤和相关信息： 使用journalctl查看日志 基本用法：  journalctl命令可以用来查看systemd的所有日志，包括内核日志和应用日志。默认情况下，journalctl会显示从最早记录开始的所有日志内容。   查看特定服务的日志：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-25T12:34:39.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:15:07.638Z">
+<meta property="article:published_time" content="2025-01-24T06:58:44.000Z">
+<meta property="article:modified_time" content="2025-02-12T13:19:52.467Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="journalctl">
+<meta property="article:tag" content="systemd">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Linux-bash_profile与bashrc - DNACore GitHub io</title>
+  <title>Linux-使用journalctl查看systemd日志 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Linux-bash_profile与bashrc</span>
+            <span id="subtitle">Linux-使用journalctl查看systemd日志</span>
           
         </div>
 
@@ -211,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-03-25 20:34" pubdate>
-          2021年3月25日 晚上
+        <time datetime="2025-01-24 14:58" pubdate>
+          2025年1月24日 下午
         </time>
       </span>
     
@@ -223,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          520 字
+          537 字
         
       </span>
     
@@ -271,46 +272,47 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux-bash_profile与bashrc</h1>
+            <h1 id="seo-header">Linux-使用journalctl查看systemd日志</h1>
             
             
               <div class="markdown-body">
                 
-                <!-- https://getpocket.com/read/3220657235 -->
-
-<p>在Linux系统中，<code>.bash_profile</code>和<code>.bashrc</code>是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍：</p>
-<h3 id="bash-profile"><a href="#bash-profile" class="headerlink" title=".bash_profile"></a><code>.bash_profile</code></h3><p><code>.bash_profile</code>是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。</p>
+                <p>要查看systemd的启动日志，可以使用<code>journalctl</code>命令，这是systemd内置的日志管理工具。以下是如何使用<code>journalctl</code>查看启动日志的步骤和相关信息：</p>
+<h3 id="使用journalctl查看日志"><a href="#使用journalctl查看日志" class="headerlink" title="使用journalctl查看日志"></a>使用<code>journalctl</code>查看日志</h3><ol>
+<li><p><strong>基本用法</strong>：</p>
 <ul>
-<li><strong>位置</strong>：通常位于用户的主目录下（<code>~/.bash_profile</code>）。</li>
-<li><strong>用途</strong>：主要用于设置环境变量和执行在登录时需要运行的命令。</li>
-<li><strong>执行时机</strong>：仅在用户登录时执行一次。</li>
-</ul>
-<h4 id="示例内容："><a href="#示例内容：" class="headerlink" title="示例内容："></a>示例内容：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:/usr/local/bin<br><br><span class="hljs-comment"># 设置别名</span><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -la&#x27;</span><br><br><span class="hljs-comment"># 运行其他配置文件</span><br><span class="hljs-keyword">if</span> [ -f ~/.bashrc ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">source</span> ~/.bashrc<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h3><p><code>.bashrc</code>是一个用于非登录Shell的配置文件。当用户打开一个新的终端窗口或启动一个新的Shell会话时，Bash会读取并执行这个文件中的命令。它通常用于设置别名、函数和其他Shell特性。</p>
-<ul>
-<li><strong>位置</strong>：通常位于用户的主目录下（<code>~/.bashrc</code>）。</li>
-<li><strong>用途</strong>：主要用于设置别名、函数和其他Shell特性。</li>
-<li><strong>执行时机</strong>：每次启动一个新的非登录Shell时执行。</li>
-</ul>
-<h4 id="示例内容：-1"><a href="#示例内容：-1" class="headerlink" title="示例内容："></a>示例内容：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置别名</span><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -la&#x27;</span><br><span class="hljs-built_in">alias</span> grep=<span class="hljs-string">&#x27;grep --color=auto&#x27;</span><br><br><span class="hljs-comment"># 设置命令提示符</span><br>PS1=<span class="hljs-string">&#x27;\u@\h:\w\$ &#x27;</span><br><br><span class="hljs-comment"># 自定义函数</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">myfunc</span></span>() &#123;<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;This is a custom function&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h3><ul>
-<li><p><strong>区别</strong>：</p>
-<ul>
-<li><code>.bash_profile</code>用于登录Shell，通常在用户登录时执行一次。</li>
-<li><code>.bashrc</code>用于非登录Shell，每次启动一个新的Shell会话时执行。</li>
+<li><code>journalctl</code>命令可以用来查看systemd的所有日志，包括内核日志和应用日志。默认情况下，<code>journalctl</code>会显示从最早记录开始的所有日志内容。</li>
 </ul>
 </li>
-<li><p><strong>联系</strong>：</p>
+<li><p><strong>查看特定服务的日志</strong>：</p>
 <ul>
-<li>通常在<code>.bash_profile</code>中会包含一行命令来执行<code>.bashrc</code>，以确保登录Shell也能执行<code>.bashrc</code>中的配置。这是因为<code>.bashrc</code>中的配置通常对所有Shell会话都适用。</li>
+<li>如果你想查看某个特定服务的日志，可以使用<code>-u</code>选项。例如，要查看<code>nginx.service</code>的日志，可以运行以下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">journalctl -u nginx.service<br></code></pre></td></tr></table></figure>
+这将显示与<code>nginx.service</code>相关的所有日志信息。</li>
 </ul>
 </li>
+<li><p><strong>查看当前启动周期的日志</strong>：</p>
+<ul>
+<li>使用<code>-b</code>选项可以查看当前启动周期的日志。这对于排查系统启动时的问题特别有用：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">journalctl -b<br></code></pre></td></tr></table></figure>
+这个命令会过滤出当前启动周期的日志，帮助你更快地找到相关信息。</li>
 </ul>
-<h4 id="结合使用示例："><a href="#结合使用示例：" class="headerlink" title="结合使用示例："></a>结合使用示例：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># .bash_profile</span><br><span class="hljs-keyword">if</span> [ -f ~/.bashrc ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">source</span> ~/.bashrc<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
-
-<p>通过这种方式，用户在登录时不仅会执行<code>.bash_profile</code>中的命令，还会执行<code>.bashrc</code>中的命令，从而确保所有配置都能生效。</p>
+</li>
+<li><p><strong>查看最新日志</strong>：</p>
+<ul>
+<li>使用<code>-xe</code>选项可以查看最新的日志条目，并附加详细的错误信息和可能的解决方案：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">journalctl -xe<br></code></pre></td></tr></table></figure>
+这个选项通常用于排查实时问题，因为它会从日志的末尾开始显示，并提供额外的上下文信息。</li>
+</ul>
+</li>
+<li><p><strong>日志的权限</strong>：</p>
+<ul>
+<li>默认情况下，只有root用户和属于特定组（如<code>systemd-journal</code>, <code>adm</code>, <code>wheel</code>）的用户可以查看系统日志。普通用户只能查看属于他们自己的日志。</li>
+</ul>
+</li>
+</ol>
+<h3 id="日志管理的优势"><a href="#日志管理的优势" class="headerlink" title="日志管理的优势"></a>日志管理的优势</h3><ul>
+<li><strong>集中管理</strong>：systemd统一管理所有Unit的启动日志，这意味着你可以通过一个命令查看所有日志，简化了日志管理的复杂性。</li>
+<li><strong>高效查询</strong>：<code>journalctl</code>支持结构化日志和高性能查询功能，允许用户根据不同的条件（如时间、服务名等）过滤日志，提高了日志查询的效率。</li>
+</ul>
+<p>通过这些方法，你可以有效地查看和管理systemd的启动日志，帮助你更好地诊断和解决系统启动过程中的问题。</p>
 
                 
               </div>
@@ -323,7 +325,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/journalctl/" class="print-no-link">#journalctl</a>
+      
+        <a href="/tags/systemd/" class="print-no-link">#systemd</a>
       
     </div>
   
@@ -335,8 +339,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux-bash_profile与bashrc</div>
-      <div>https://dnacore.github.io/post/affe5443-17d5-4c26-a65c-cd16fd314e71.html</div>
+      <div>Linux-使用journalctl查看systemd日志</div>
+      <div>https://dnacore.github.io/post/85c83abc-f336-4b2a-b428-2e0295069c52.html</div>
     </div>
     <div class="license-meta">
       
@@ -348,7 +352,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年3月25日</div>
+          <div>2025年1月24日</div>
         </div>
       
       
@@ -385,9 +389,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/c56f2baa-3df1-4d37-8e29-ca897ebef876.html" title="Windows-Windows Sysinternals">
+                      <a href="/post/ee5d7735-158a-4e6e-b435-4f5fa89756fd.html" title="手把手教你压住硬盘的C1、E1值-APM控制">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows-Windows Sysinternals</span>
+                        <span class="hidden-mobile">手把手教你压住硬盘的C1、E1值-APM控制</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -395,8 +399,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/c951c216-073e-4bcf-9380-73360e23cd70.html" title="Linux-sysstat工具">
-                        <span class="hidden-mobile">Linux-sysstat工具</span>
+                      <a href="/post/dc910fcd-34dd-4ad0-b56e-cfc62fb5e334.html" title="Windows-禁止创建与 DOS 兼容的 8.3 文件名">
+                        <span class="hidden-mobile">Windows-禁止创建与 DOS 兼容的 8.3 文件名</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

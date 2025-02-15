@@ -17,24 +17,24 @@
   
   <meta name="theme-color" content="#2f4154">
   <meta name="author" content="DNACore">
-  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  <meta name="keywords" content="量化,剪枝,蒸馏,二值化,混合专家模型,MoE">
   
-    <meta name="description" content="在Linux系统中，.bash_profile和.bashrc是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍： .bash_profile.bash_profile是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。  位置：通常位于用户的主目录下（~&#x2F;.b">
+    <meta name="description" content="量化量化是将模型中的浮点运算转换为整数运算，以降低计算复杂度和内存占用。通过量化，模型的计算速度可以显著提高，同时减少了对硬件资源的需求。例如，阿里云在其机器学习平台PAI中引入了量化技术，成功地将模型体积减少了近一半，同时保持了较高的预测准确率。 剪枝剪枝是通过移除神经网络中不重要的连接或节点来减小模型体积，从而减少计算量和存储需求。剪枝可以分为非结构化剪枝和结构化剪枝。非结构化剪枝在单个权重级">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux-bash_profile与bashrc">
-<meta property="og:url" content="https://dnacore.github.io/post/affe5443-17d5-4c26-a65c-cd16fd314e71.html">
+<meta property="og:title" content="AI相关的概念简介">
+<meta property="og:url" content="https://dnacore.github.io/post/d760961f-3753-441b-a181-6daa09b52b33.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="在Linux系统中，.bash_profile和.bashrc是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍： .bash_profile.bash_profile是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。  位置：通常位于用户的主目录下（~&#x2F;.b">
+<meta property="og:description" content="量化量化是将模型中的浮点运算转换为整数运算，以降低计算复杂度和内存占用。通过量化，模型的计算速度可以显著提高，同时减少了对硬件资源的需求。例如，阿里云在其机器学习平台PAI中引入了量化技术，成功地将模型体积减少了近一半，同时保持了较高的预测准确率。 剪枝剪枝是通过移除神经网络中不重要的连接或节点来减小模型体积，从而减少计算量和存储需求。剪枝可以分为非结构化剪枝和结构化剪枝。非结构化剪枝在单个权重级">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-25T12:34:39.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:15:07.638Z">
+<meta property="article:published_time" content="2025-02-13T03:51:41.000Z">
+<meta property="article:modified_time" content="2025-02-13T07:28:17.624Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="AI">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Linux-bash_profile与bashrc - DNACore GitHub io</title>
+  <title>AI相关的概念简介 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">Linux-bash_profile与bashrc</span>
+            <span id="subtitle">AI相关的概念简介</span>
           
         </div>
 
@@ -211,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-03-25 20:34" pubdate>
-          2021年3月25日 晚上
+        <time datetime="2025-02-13 11:51" pubdate>
+          2025年2月13日 中午
         </time>
       </span>
     
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          520 字
+          1.1k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          5 分钟
+          10 分钟
         
       </span>
     
@@ -271,46 +271,36 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Linux-bash_profile与bashrc</h1>
+            <h1 id="seo-header">AI相关的概念简介</h1>
             
             
               <div class="markdown-body">
                 
-                <!-- https://getpocket.com/read/3220657235 -->
+                <h3 id="量化"><a href="#量化" class="headerlink" title="量化"></a>量化</h3><p>量化是将模型中的浮点运算转换为整数运算，以降低计算复杂度和内存占用。通过量化，模型的计算速度可以显著提高，同时减少了对硬件资源的需求。例如，阿里云在其机器学习平台PAI中引入了量化技术，成功地将模型体积减少了近一半，同时保持了较高的预测准确率。</p>
+<h3 id="剪枝"><a href="#剪枝" class="headerlink" title="剪枝"></a>剪枝</h3><p>剪枝是通过移除神经网络中不重要的连接或节点来减小模型体积，从而减少计算量和存储需求。剪枝可以分为非结构化剪枝和结构化剪枝。非结构化剪枝在单个权重级别上进行，而结构化剪枝则在更高的结构级别（如卷积核、神经元、层或通道）上进行。剪枝技术在移动设备、边缘计算和实时推理等场景中有广泛应用。</p>
+<h3 id="蒸馏"><a href="#蒸馏" class="headerlink" title="蒸馏"></a>蒸馏</h3><p>模型蒸馏是一种知识迁移技术，通过将一个复杂的大模型（教师模型）的知识传递给一个较小的模型（学生模型），以减少模型的复杂性和计算资源需求。蒸馏过程包括训练教师模型、生成软标签和训练学生模型。尽管学生模型较小，但通过学习教师模型的软标签，可以在保持高预测性能的同时显著降低计算成本。蒸馏技术在移动设备和自然语言处理等领域取得了显著成功。</p>
+<h3 id="二值化"><a href="#二值化" class="headerlink" title="二值化"></a>二值化</h3><p>二值化是将模型中的权重和激活值限制为二进制值（如-1和1），以进一步减少计算复杂度和内存占用。二值化技术可以显著提高模型的推理速度，特别适用于资源受限的设备。然而，二值化可能会导致模型性能的下降，因此需要在精度和效率之间进行权衡。</p>
+<h3 id="混合专家模型-MoE-简介"><a href="#混合专家模型-MoE-简介" class="headerlink" title="混合专家模型 (MoE) 简介"></a>混合专家模型 (MoE) 简介</h3><!--
+https://huggingface.co/blog/zh/moe
+-->
 
-<p>在Linux系统中，<code>.bash_profile</code>和<code>.bashrc</code>是两个非常重要的配置文件，它们用于配置用户的Shell环境。下面是对这两个文件的详细介绍：</p>
-<h3 id="bash-profile"><a href="#bash-profile" class="headerlink" title=".bash_profile"></a><code>.bash_profile</code></h3><p><code>.bash_profile</code>是一个用于登录Shell的配置文件。当用户登录到系统时，Bash会读取并执行这个文件中的命令。它通常用于设置环境变量、启动程序和执行其他初始化任务。</p>
-<ul>
-<li><strong>位置</strong>：通常位于用户的主目录下（<code>~/.bash_profile</code>）。</li>
-<li><strong>用途</strong>：主要用于设置环境变量和执行在登录时需要运行的命令。</li>
-<li><strong>执行时机</strong>：仅在用户登录时执行一次。</li>
-</ul>
-<h4 id="示例内容："><a href="#示例内容：" class="headerlink" title="示例内容："></a>示例内容：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置环境变量</span><br><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:/usr/local/bin<br><br><span class="hljs-comment"># 设置别名</span><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -la&#x27;</span><br><br><span class="hljs-comment"># 运行其他配置文件</span><br><span class="hljs-keyword">if</span> [ -f ~/.bashrc ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">source</span> ~/.bashrc<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
-
-<h3 id="bashrc"><a href="#bashrc" class="headerlink" title=".bashrc"></a><code>.bashrc</code></h3><p><code>.bashrc</code>是一个用于非登录Shell的配置文件。当用户打开一个新的终端窗口或启动一个新的Shell会话时，Bash会读取并执行这个文件中的命令。它通常用于设置别名、函数和其他Shell特性。</p>
-<ul>
-<li><strong>位置</strong>：通常位于用户的主目录下（<code>~/.bashrc</code>）。</li>
-<li><strong>用途</strong>：主要用于设置别名、函数和其他Shell特性。</li>
-<li><strong>执行时机</strong>：每次启动一个新的非登录Shell时执行。</li>
-</ul>
-<h4 id="示例内容：-1"><a href="#示例内容：-1" class="headerlink" title="示例内容："></a>示例内容：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 设置别名</span><br><span class="hljs-built_in">alias</span> ll=<span class="hljs-string">&#x27;ls -la&#x27;</span><br><span class="hljs-built_in">alias</span> grep=<span class="hljs-string">&#x27;grep --color=auto&#x27;</span><br><br><span class="hljs-comment"># 设置命令提示符</span><br>PS1=<span class="hljs-string">&#x27;\u@\h:\w\$ &#x27;</span><br><br><span class="hljs-comment"># 自定义函数</span><br><span class="hljs-keyword">function</span> <span class="hljs-function"><span class="hljs-title">myfunc</span></span>() &#123;<br>    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;This is a custom function&quot;</span><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<h3 id="区别与联系"><a href="#区别与联系" class="headerlink" title="区别与联系"></a>区别与联系</h3><ul>
-<li><p><strong>区别</strong>：</p>
-<ul>
-<li><code>.bash_profile</code>用于登录Shell，通常在用户登录时执行一次。</li>
-<li><code>.bashrc</code>用于非登录Shell，每次启动一个新的Shell会话时执行。</li>
-</ul>
+<p>混合专家模型（Mixture of Experts，简称 MoE）是一种基于稀疏门控的深度学习模型，旨在通过将任务分配给多个专门的子模型（即“专家”）来提高整体性能。MoE 模型主要由两个核心组件组成：门控网络（GateNet）和专家模型（Experts）。</p>
+<h4 id="核心组件"><a href="#核心组件" class="headerlink" title="核心组件"></a>核心组件</h4><ol>
+<li><p><strong>稀疏 MoE 层</strong>：这些层代替了传统 Transformer 模型中的前馈网络（FFN）层。MoE 层包含若干“专家”，每个专家本身是一个独立的神经网络。在实际应用中，这些专家通常是前馈网络（FFN），但它们也可以是更复杂的网络结构，甚至可以是 MoE 层本身，从而形成层级式的 MoE 结构。</p>
 </li>
-<li><p><strong>联系</strong>：</p>
-<ul>
-<li>通常在<code>.bash_profile</code>中会包含一行命令来执行<code>.bashrc</code>，以确保登录Shell也能执行<code>.bashrc</code>中的配置。这是因为<code>.bashrc</code>中的配置通常对所有Shell会话都适用。</li>
-</ul>
+<li><p><strong>门控网络或路由</strong>：这个部分用于决定哪些令牌（token）被发送到哪个专家。门控网络通过学习的参数来决定分配给每个专家的权重，并与网络的其他部分一同进行预训练。</p>
 </li>
+</ol>
+<h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><ul>
+<li><strong>预训练速度更快</strong>：与稠密模型相比，MoE 模型能够在远少于稠密模型所需的计算资源下进行有效的预训练。这意味着在相同的计算预算条件下，可以显著扩大模型或数据集的规模。</li>
+<li><strong>推理速度更快</strong>：尽管 MoE 模型可能拥有大量参数，但在推理过程中只使用其中的一部分，这使得它们的推理速度快于具有相同数量参数的稠密模型。</li>
 </ul>
-<h4 id="结合使用示例："><a href="#结合使用示例：" class="headerlink" title="结合使用示例："></a>结合使用示例：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># .bash_profile</span><br><span class="hljs-keyword">if</span> [ -f ~/.bashrc ]; <span class="hljs-keyword">then</span><br>    <span class="hljs-built_in">source</span> ~/.bashrc<br><span class="hljs-keyword">fi</span><br></code></pre></td></tr></table></figure>
-
-<p>通过这种方式，用户在登录时不仅会执行<code>.bash_profile</code>中的命令，还会执行<code>.bashrc</code>中的命令，从而确保所有配置都能生效。</p>
+<h4 id="挑战"><a href="#挑战" class="headerlink" title="挑战"></a>挑战</h4><ul>
+<li><strong>显存需求高</strong>：由于所有专家系统都需要加载到内存中，MoE 模型需要大量显存来容纳所有参数。</li>
+<li><strong>微调和泛化能力</strong>：在微调阶段，MoE 模型往往面临泛化能力不足的问题，容易引发过拟合现象。</li>
+</ul>
+<h4 id="应用与发展"><a href="#应用与发展" class="headerlink" title="应用与发展"></a>应用与发展</h4><p>混合专家模型的理念起源于1991年的论文《Adaptive Mixture of Local Experts》，并在2017年由Shazeer等人应用于137B的LSTM模型中，推动了其在自然语言处理（NLP）领域的广泛应用。近年来，MoE 模型在开源人工智能社区中引起了广泛关注，并被用于解决复杂的多领域问题。</p>
+<p>总结来说，混合专家模型通过将任务分配给多个专门的子模型来提高整体性能，具有预训练速度快和推理速度快的优势，但也面临显存需求高和微调挑战等问题。</p>
 
                 
               </div>
@@ -323,7 +313,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Linux/" class="print-no-link">#Linux</a>
+        <a href="/tags/AI/" class="print-no-link">#AI</a>
       
     </div>
   
@@ -335,8 +325,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Linux-bash_profile与bashrc</div>
-      <div>https://dnacore.github.io/post/affe5443-17d5-4c26-a65c-cd16fd314e71.html</div>
+      <div>AI相关的概念简介</div>
+      <div>https://dnacore.github.io/post/d760961f-3753-441b-a181-6daa09b52b33.html</div>
     </div>
     <div class="license-meta">
       
@@ -348,13 +338,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2021年3月25日</div>
+          <div>2025年2月13日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年2月12日</div>
+          <div>2025年2月13日</div>
         </div>
       
       
@@ -385,18 +375,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/c56f2baa-3df1-4d37-8e29-ca897ebef876.html" title="Windows-Windows Sysinternals">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows-Windows Sysinternals</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/c951c216-073e-4bcf-9380-73360e23cd70.html" title="Linux-sysstat工具">
-                        <span class="hidden-mobile">Linux-sysstat工具</span>
+                      <a href="/post/02761eb8-43a9-4a4a-8cac-de3b10dda7fc.html" title="查看transmission-daemon的运行环境信息">
+                        <span class="hidden-mobile">查看transmission-daemon的运行环境信息</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
