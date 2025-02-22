@@ -19,15 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="方式一：执行下面的命令： 1234echo 0 | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;brightness # led0 绿灯 状态灯echo none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;triggerecho none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led1&#x2F;trigger # led1 红灯 电源灯echo">
+    <meta name="description" content="方式一：执行下面的命令，可以立即更改led灯的设置，但是重启或关机后需要重新设置： 123456789echo 0 | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;brightness # led0 绿灯 状态灯echo none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;triggerecho none | sudo tee  &#x2F;sys&#x2F;class&#x2F;le">
 <meta property="og:type" content="article">
 <meta property="og:title" content="树莓派-关闭树莓派指示灯">
 <meta property="og:url" content="https://dnacore.github.io/post/b6df2f16-ff67-49a7-9b0b-7e252733f9e9.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="方式一：执行下面的命令： 1234echo 0 | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;brightness # led0 绿灯 状态灯echo none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;triggerecho none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led1&#x2F;trigger # led1 红灯 电源灯echo">
+<meta property="og:description" content="方式一：执行下面的命令，可以立即更改led灯的设置，但是重启或关机后需要重新设置： 123456789echo 0 | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;brightness # led0 绿灯 状态灯echo none | sudo tee  &#x2F;sys&#x2F;class&#x2F;leds&#x2F;led0&#x2F;triggerecho none | sudo tee  &#x2F;sys&#x2F;class&#x2F;le">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-29T06:09:54.000Z">
-<meta property="article:modified_time" content="2025-02-12T08:17:33.187Z">
+<meta property="article:modified_time" content="2025-02-18T03:57:41.268Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="树莓派">
 <meta name="twitter:card" content="summary_large_image">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          298 字
+          421 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          3 分钟
+          4 分钟
         
       </span>
     
@@ -276,8 +276,8 @@
             
               <div class="markdown-body">
                 
-                <h2 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h2><p>执行下面的命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs shell">echo 0 | sudo tee  /sys/class/leds/led0/brightness # led0 绿灯 状态灯<br>echo none | sudo tee  /sys/class/leds/led0/trigger<br>echo none | sudo tee  /sys/class/leds/led1/trigger # led1 红灯 电源灯<br>echo 0 | sudo tee /sys/class/leds/led1/brightness<br></code></pre></td></tr></table></figure>
+                <h2 id="方式一："><a href="#方式一：" class="headerlink" title="方式一："></a>方式一：</h2><p>执行下面的命令，可以立即更改led灯的设置，但是重启或关机后需要重新设置：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs shell">echo 0 | sudo tee  /sys/class/leds/led0/brightness # led0 绿灯 状态灯<br>echo none | sudo tee  /sys/class/leds/led0/trigger<br>echo none | sudo tee  /sys/class/leds/led1/trigger # led1 红灯 电源灯<br>echo 0 | sudo tee /sys/class/leds/led1/brightness<br><span class="hljs-meta prompt_"></span><br><span class="hljs-meta prompt_"># </span><span class="language-bash">raspbian 12 及 以上</span><br>echo heartbeat | sudo tee /sys/class/leds/ACT/trigger # 将 act 灯设置为心跳闪烁<br><br>echo heartbeat | sudo tee /sys/class/leds/PWR/trigger # 将 pwr 灯设置为心跳闪烁<br></code></pre></td></tr></table></figure>
 
 <p>如果想树莓派启动的时候就自动关闭，可以将这些命令放入<code>/etc/rc.local</code>。</p>
 <h2 id="方式二：使用systemd"><a href="#方式二：使用systemd" class="headerlink" title="方式二：使用systemd"></a>方式二：使用<code>systemd</code></h2><p>在以下位置创建文件<code>/etc/systemd/system/disable-led.service</code>，文件内容：</p>
@@ -289,10 +289,15 @@
 <li>关闭禁用功能<code>sudo systemctl stop disable-led.service</code></li>
 </ul>
 <p>参考：<a target="_blank" rel="noopener" href="https://n.ethz.ch/~dbernhard/disable-led-on-a-raspberry-pi.html">https://n.ethz.ch/~dbernhard/disable-led-on-a-raspberry-pi.html</a></p>
-<h2 id="方式三：配置config-txt"><a href="#方式三：配置config-txt" class="headerlink" title="方式三：配置config.txt"></a>方式三：配置<code>config.txt</code></h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[pi4]</span><br><span class="hljs-comment"># Disable the PWR LED</span><br><span class="hljs-attr">dtparam</span>=pwr_led_trigger=none<br><span class="hljs-attr">dtparam</span>=pwr_led_activelow=<span class="hljs-literal">off</span><br><span class="hljs-comment"># Disable the Activity LED</span><br><span class="hljs-attr">dtparam</span>=act_led_trigger=none<br><span class="hljs-attr">dtparam</span>=act_led_activelow=<span class="hljs-literal">off</span><br><span class="hljs-comment"># Disable ethernet port LEDs</span><br><span class="hljs-attr">dtparam</span>=eth_led0=<span class="hljs-number">4</span><br><span class="hljs-attr">dtparam</span>=eth_led1=<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+<h2 id="方式三：配置config-txt"><a href="#方式三：配置config-txt" class="headerlink" title="方式三：配置config.txt"></a>方式三：配置<code>config.txt</code></h2><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[pi4]</span><br><span class="hljs-comment"># 新版配置</span><br><span class="hljs-comment"># Disable the PWR LED</span><br><span class="hljs-attr">dtparam</span>=pwr_led_trigger=none<br><span class="hljs-comment"># 设置pwr灯输出到 gpio15，activelow=on，按需设置</span><br><span class="hljs-comment">#dtoverlay=act-led,gpio=25,activelow=on</span><br><span class="hljs-comment"># Disable the Activity LED</span><br><span class="hljs-attr">dtparam</span>=act_led_trigger=none<br><span class="hljs-comment"># 设置act灯输出到 gpio16，activelow=on，按需设置</span><br><span class="hljs-comment">#dtoverlay=act-led,gpio=16,activelow=on</span><br><span class="hljs-comment"># Disable ethernet port LEDs</span><br><span class="hljs-attr">dtparam</span>=eth_led0=<span class="hljs-number">4</span><br><span class="hljs-attr">dtparam</span>=eth_led1=<span class="hljs-number">4</span><br><span class="hljs-comment"># Disable wifi</span><br><span class="hljs-attr">dtoverlay</span>=disable-wifi<br><span class="hljs-comment"># Disable Buletooth</span><br><span class="hljs-attr">dtoverlay</span>=disable-bt<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[pi4]</span><br><span class="hljs-comment"># Disable the PWR LED</span><br><span class="hljs-attr">dtparam</span>=pwr_led_trigger=none<br><span class="hljs-attr">dtparam</span>=pwr_led_activelow=<span class="hljs-literal">off</span><br><span class="hljs-comment"># Disable the Activity LED</span><br><span class="hljs-attr">dtparam</span>=act_led_trigger=none<br><span class="hljs-attr">dtparam</span>=act_led_activelow=<span class="hljs-literal">off</span><br><span class="hljs-comment"># Disable ethernet port LEDs</span><br><span class="hljs-attr">dtparam</span>=eth_led0=<span class="hljs-number">4</span><br><span class="hljs-attr">dtparam</span>=eth_led1=<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
+
+
 
 <!--
 参考：https://forums.raspberrypi.com/viewtopic.php?t=252049
+https://raspberrypi.stackexchange.com/a/136611
 -->
 
 <p>附：<br><code>/sys/class/leds/**</code>目录的作用：控制各个LED的行为<br>如果在 config.txt 中设置了：</p>
@@ -344,7 +349,7 @@ https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README:1591
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2025年2月12日</div>
+          <div>2025年2月18日</div>
         </div>
       
       
