@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>中国传统色卡</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .color-card {
+            height: 150px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+        .color-card:hover {
+            transform: translateY(-5px);
+        }
+        .color-info {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 8px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; color: #333;">中国传统色卡</h1>
+    <div class="container">
+        <div class="color-card" style="background-color: rgb(158,46,36)">
+            <div class="color-info">覆盆子红<br>RGB 158/46/36</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(226,175,66)">
+            <div class="color-info">虎皮黄<br>RGB 226/175/66</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(64,125,82)">
+            <div class="color-info">薄荷绿<br>RGB 64/125/82</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(207,182,74)">
+            <div class="color-info">草黄<br>RGB 207/182/74</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(154,180,205)">
+            <div class="color-info">星蓝<br>RGB 154/180/205</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(65,138,180)">
+            <div class="color-info">鸢尾蓝<br>RGB 65/138/180</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(142,41,97)">
+            <div class="color-info">苋菜紫<br>RGB 142/41/97</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(16,20,32)">
+            <div class="color-info">钢蓝<br>RGB 16/20/32</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(218,227,230)">
+            <div class="color-info">云峰白<br>RGB 218/227/230</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(140,80,44)">
+            <div class="color-info">岩石棕<br>RGB 140/80/44</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(184,206,142)">
+            <div class="color-info">橄榄石绿<br>RGB 184/206/142</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(79,164,133)">
+            <div class="color-info">竹绿<br>RGB 79/164/133</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(70,146,185)">
+            <div class="color-info">钴蓝<br>RGB 70/146/185</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(194,196,195)">
+            <div class="color-info">月影白<br>RGB 194/196/195</div>
+        </div>
+        <div class="color-card" style="background-color: rgb(107,51,26)">
+            <div class="color-info">笋皮棕<br>RGB 107/51/26</div>
+        </div>
+    </div>
+</body>
+
+</html>
