@@ -1,0 +1,744 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="DNACore">
+  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  
+    <meta name="description" content="dtparam 是树莓派（Raspberry Pi）系统中一个用于动态配置设备树（Device Tree）参数的命令行工具。它允许用户在启动时或运行时修改硬件接口的配置参数，例如启用&#x2F;禁用特定硬件模块（如摄像头、I2C、SPI 等）或调整其工作模式。设备树是 Linux 内核用来描述硬件配置的一种机制，而 dtparam 提供了一种简洁的方式来调整这些配置。  基本语法1dtparam">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派dtparam命令的使用">
+<meta property="og:url" content="https://dnacore.github.io/post/f0e009d8-cfef-4e46-8ede-9a3b348b86f4.html">
+<meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="dtparam 是树莓派（Raspberry Pi）系统中一个用于动态配置设备树（Device Tree）参数的命令行工具。它允许用户在启动时或运行时修改硬件接口的配置参数，例如启用&#x2F;禁用特定硬件模块（如摄像头、I2C、SPI 等）或调整其工作模式。设备树是 Linux 内核用来描述硬件配置的一种机制，而 dtparam 提供了一种简洁的方式来调整这些配置。  基本语法1dtparam">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-02-25T03:26:28.000Z">
+<meta property="article:modified_time" content="2025-02-25T03:34:21.491Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="树莓派">
+<meta property="article:tag" content="dtparam">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>树莓派dtparam命令的使用 - DNACore GitHub io</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DNACore GitHub io</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">树莓派dtparam命令的使用</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-02-25 11:26" pubdate>
+          2025年2月25日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          845 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">树莓派dtparam命令的使用</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p><code>dtparam</code> 是树莓派（Raspberry Pi）系统中一个用于动态配置<strong>设备树（Device Tree）参数</strong>的命令行工具。它允许用户在启动时或运行时修改硬件接口的配置参数，例如启用&#x2F;禁用特定硬件模块（如摄像头、I2C、SPI 等）或调整其工作模式。设备树是 Linux 内核用来描述硬件配置的一种机制，而 <code>dtparam</code> 提供了一种简洁的方式来调整这些配置。</p>
+<hr>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a><strong>基本语法</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dtparam [选项] &lt;参数&gt;=&lt;值&gt; ...<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="主要用途"><a href="#主要用途" class="headerlink" title="主要用途"></a><strong>主要用途</strong></h3><ol>
+<li><strong>动态修改设备树参数</strong>：无需重新编译设备树文件（<code>.dtb</code>），直接通过命令行或配置文件调整硬件设置。</li>
+<li><strong>硬件接口管理</strong>：启用或禁用树莓派的硬件外设接口（如 UART、I2C、SPI 等）。</li>
+<li><strong>调试与开发</strong>：快速测试不同硬件配置，无需重启设备（部分参数可能需要重启生效）。</li>
+</ol>
+<hr>
+<h3 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a><strong>常用选项</strong></h3><table>
+<thead>
+<tr>
+<th>选项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>-l</code></td>
+<td>列出当前已启用的设备树参数。</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>显示帮助信息。</td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>详细输出模式（显示调试信息）。</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="常见用例"><a href="#常见用例" class="headerlink" title="常见用例"></a><strong>常见用例</strong></h3><h4 id="1-显示对应参数的帮助信息"><a href="#1-显示对应参数的帮助信息" class="headerlink" title="1. 显示对应参数的帮助信息"></a><strong>1. 显示对应参数的帮助信息</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">dtparam -h eth_led0 eth_led1  <span class="hljs-comment"># 显示 eth_led0 eth_led1 帮助信息</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-启用硬件接口"><a href="#2-启用硬件接口" class="headerlink" title="2. 启用硬件接口"></a><strong>2. 启用硬件接口</strong></h4><p>在终端中直接运行以下命令（需 root 权限）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dtparam i2c_arm=on    <span class="hljs-comment"># 启用 ARM 端的 I2C</span><br><span class="hljs-built_in">sudo</span> dtparam spi=on        <span class="hljs-comment"># 启用 SPI</span><br><span class="hljs-built_in">sudo</span> dtparam audio=on      <span class="hljs-comment"># 启用音频接口</span><br><span class="hljs-built_in">sudo</span> dtparam camera=on     <span class="hljs-comment"># 启用摄像头接口（旧版系统）</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="3-禁用硬件接口"><a href="#3-禁用硬件接口" class="headerlink" title="3. 禁用硬件接口"></a><strong>3. 禁用硬件接口</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dtparam i2c_arm=off   <span class="hljs-comment"># 禁用 I2C</span><br><span class="hljs-built_in">sudo</span> dtparam spi=off       <span class="hljs-comment"># 禁用 SPI</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="4-调整参数值"><a href="#4-调整参数值" class="headerlink" title="4. 调整参数值"></a><strong>4. 调整参数值</strong></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> dtparam i2c_arm_baudrate=400000  <span class="hljs-comment"># 设置 I2C 波特率为 400kHz</span><br><span class="hljs-built_in">sudo</span> dtparam audio=on,pwm_irq=off     <span class="hljs-comment"># 启用音频并禁用 PWM IRQ</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="5-在-boot-config-txt-中永久配置"><a href="#5-在-boot-config-txt-中永久配置" class="headerlink" title="5. 在 /boot/config.txt 中永久配置"></a><strong>5. 在 <code>/boot/config.txt</code> 中永久配置</strong></h4><p>大多数情况下，用户会在 <code>/boot/config.txt</code> 文件中添加 <code>dtparam</code> 配置，使参数在系统启动时自动生效：</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 启用 I2C 和 SPI，并设置 I2C 波特率</span><br><span class="hljs-attr">dtparam</span>=i2c_arm=<span class="hljs-literal">on</span>,i2c_arm_baudrate=<span class="hljs-number">400000</span><br><span class="hljs-attr">dtparam</span>=spi=<span class="hljs-literal">on</span><br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="常用参数列表"><a href="#常用参数列表" class="headerlink" title="常用参数列表"></a><strong>常用参数列表</strong></h3><p>以下是一些常用的 <code>dtparam</code> 参数（具体支持情况可能因树莓派型号和系统版本而异）：</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>i2c_arm=on/off</code></td>
+<td>ARM 端的 I2C 接口（GPIO 2&#x2F;3）</td>
+</tr>
+<tr>
+<td><code>i2c_vc=on/off</code></td>
+<td>VC（VideoCore）端的 I2C 接口（通常用于 HAT EEPROM）</td>
+</tr>
+<tr>
+<td><code>spi=on/off</code></td>
+<td>SPI 主接口（GPIO 7-11）</td>
+</tr>
+<tr>
+<td><code>audio=on/off</code></td>
+<td>音频接口（3.5mm 耳机孔或 HDMI 音频）</td>
+</tr>
+<tr>
+<td><code>camera=on/off</code></td>
+<td>CSI 摄像头接口（旧版系统使用 <code>start_x=1</code>）</td>
+</tr>
+<tr>
+<td><code>uart0=on/off</code></td>
+<td>主 UART（PL011，默认用于蓝牙）</td>
+</tr>
+<tr>
+<td><code>uart1=on/off</code></td>
+<td>迷你 UART（默认用于 GPIO 14&#x2F;15）</td>
+</tr>
+<tr>
+<td><code>watchdog=on/off</code></td>
+<td>硬件看门狗</td>
+</tr>
+<tr>
+<td><code>pwm=on/off</code></td>
+<td>PWM 输出（GPIO 12&#x2F;13&#x2F;18&#x2F;19）</td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h3><ol>
+<li><strong>参数冲突</strong>：某些参数可能与 <code>dtoverlay</code> 加载的叠加层（overlay）冲突，需检查 <code>/boot/config.txt</code> 避免重复配置。</li>
+<li><strong>重启生效</strong>：部分参数修改需要重启系统（如摄像头、音频接口）。</li>
+<li><strong>兼容性</strong>：不同树莓派型号支持的参数可能不同（如树莓派 Zero 与树莓派 4B 的硬件差异）。</li>
+<li><strong>持久化配置</strong>：临时通过命令行修改的参数在重启后会失效，需将配置写入 <code>/boot/config.txt</code> 以永久生效。</li>
+</ol>
+<hr>
+<h3 id="查看已启用的设备树参数"><a href="#查看已启用的设备树参数" class="headerlink" title="查看已启用的设备树参数"></a><strong>查看已启用的设备树参数</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">dtparam -l<br><span class="hljs-comment"># 或使用 vcgencmd 查看</span><br>vcgencmd get_config dtparam<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="示例：启用-I2C-和-SPI"><a href="#示例：启用-I2C-和-SPI" class="headerlink" title="示例：启用 I2C 和 SPI"></a><strong>示例：启用 I2C 和 SPI</strong></h3><ol>
+<li>编辑 <code>/boot/config.txt</code>：<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-attr">dtparam</span>=i2c_arm=<span class="hljs-literal">on</span><br><span class="hljs-attr">dtparam</span>=spi=<span class="hljs-literal">on</span><br></code></pre></td></tr></table></figure></li>
+<li>重启树莓派：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> reboot<br></code></pre></td></tr></table></figure></li>
+<li>验证接口是否启用：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> /dev/i2c-* /dev/spi*<br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>通过 <code>dtparam</code>，可以灵活配置树莓派的硬件资源，满足不同项目的需求。如果需要更复杂的硬件配置（如自定义设备树叠加层），可结合 <code>dtoverlay</code> 命令使用。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/" class="print-no-link">#树莓派</a>
+      
+        <a href="/tags/dtparam/" class="print-no-link">#dtparam</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>树莓派dtparam命令的使用</div>
+      <div>https://dnacore.github.io/post/f0e009d8-cfef-4e46-8ede-9a3b348b86f4.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>DNACore</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年2月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年2月25日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/post/0ca0101c-4b45-406d-bfdb-757288df135e.html" title="解决 Apple ID 由于访问限制，无法退出登录。">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">解决 Apple ID 由于访问限制，无法退出登录。</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/270f7680-d1a0-4983-a0db-b101c378e4da.html" title="中国传统色卡">
+                        <span class="hidden-mobile">中国传统色卡</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#lv-container', function() {
+        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

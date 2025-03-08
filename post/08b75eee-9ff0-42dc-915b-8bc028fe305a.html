@@ -19,15 +19,15 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="https:&#x2F;&#x2F;krypted.com&#x2F;mac-os-x&#x2F;using-apples-built-malware-removal-tool-mrt&#x2F;">
+    <meta name="description" content="苹果设备的用户可能较少直接接触到Malware Removal Tool (MRT)，因为它是系统内置的后台安全工具，主要用于自动检测和移除已知恶意软件。然而，当设备疑似感染恶意软件或需深度清理时，了解其使用方式仍至关重要。以下是结合苹果官方指南与安全实践撰写的MRT工具使用教程。  一、MRT工具的基本原理与定位 自动运行机制MRT工具通常随系统更新自动安装并运行，无需用户手动操作。当系统检测到">
 <meta property="og:type" content="article">
 <meta property="og:title" content="macOS-macOS中的MRT反恶意软件程序">
 <meta property="og:url" content="https://dnacore.github.io/post/08b75eee-9ff0-42dc-915b-8bc028fe305a.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="https:&#x2F;&#x2F;krypted.com&#x2F;mac-os-x&#x2F;using-apples-built-malware-removal-tool-mrt&#x2F;">
+<meta property="og:description" content="苹果设备的用户可能较少直接接触到Malware Removal Tool (MRT)，因为它是系统内置的后台安全工具，主要用于自动检测和移除已知恶意软件。然而，当设备疑似感染恶意软件或需深度清理时，了解其使用方式仍至关重要。以下是结合苹果官方指南与安全实践撰写的MRT工具使用教程。  一、MRT工具的基本原理与定位 自动运行机制MRT工具通常随系统更新自动安装并运行，无需用户手动操作。当系统检测到">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-10-26T06:20:02.000Z">
-<meta property="article:modified_time" content="2023-11-30T06:15:48.219Z">
+<meta property="article:published_time" content="2025-03-03T06:20:02.000Z">
+<meta property="article:modified_time" content="2025-03-03T11:18:23.245Z">
 <meta property="article:author" content="DNACore">
 <meta property="article:tag" content="macOS">
 <meta property="article:tag" content="MRT">
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2020-10-26 14:20" pubdate>
-          2020年10月26日 下午
+        <time datetime="2025-03-03 14:20" pubdate>
+          2025年3月3日 下午
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          13 字
+          808 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -277,7 +277,50 @@
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="https://krypted.com/mac-os-x/using-apples-built-malware-removal-tool-mrt/">https://krypted.com/mac-os-x/using-apples-built-malware-removal-tool-mrt/</a></p>
+                <p>苹果设备的用户可能较少直接接触到<strong>Malware Removal Tool (MRT)</strong>，因为它是系统内置的后台安全工具，主要用于自动检测和移除已知恶意软件。然而，当设备疑似感染恶意软件或需深度清理时，了解其使用方式仍至关重要。以下是结合苹果官方指南与安全实践撰写的MRT工具使用教程。</p>
+<hr>
+<h3 id="一、MRT工具的基本原理与定位"><a href="#一、MRT工具的基本原理与定位" class="headerlink" title="一、MRT工具的基本原理与定位"></a>一、MRT工具的基本原理与定位</h3><ol>
+<li><p><strong>自动运行机制</strong><br>MRT工具通常随系统更新自动安装并运行，无需用户手动操作。当系统检测到已知恶意软件时，MRT会尝试在后台静默清除威胁。</p>
+<ul>
+<li>适用于处理<strong>已签名或常见恶意程序</strong>，如广告插件、间谍软件等。</li>
+<li>无法处理未记录的零日漏洞攻击或高级持续性威胁（APT）。</li>
+</ul>
+</li>
+<li><p><strong>手动触发检测</strong><br>若怀疑设备存在未被自动清除的恶意软件，可通过终端命令强制运行扫描：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> /usr/libexec/MRTd --scan<br></code></pre></td></tr></table></figure>
+<p>扫描结果会输出至系统日志，需通过<code>Console</code>应用查看（路径：&#x2F;var&#x2F;log&#x2F;DiagnosticMessages）。</p>
+</li>
+</ol>
+<hr>
+<h3 id="二、MRT的局限性及补充方案"><a href="#二、MRT的局限性及补充方案" class="headerlink" title="二、MRT的局限性及补充方案"></a>二、MRT的局限性及补充方案</h3><p>若MRT无法解决问题，或设备已被深度篡改（如安装跟踪软件、后门程序），则需更彻底的解决方案——<strong>恢复出厂设置</strong>，。</p>
+<h4 id="步骤1：运行安全检查"><a href="#步骤1：运行安全检查" class="headerlink" title="步骤1：运行安全检查"></a>步骤1：运行安全检查</h4><ul>
+<li>进入<strong>设置 → 隐私与安全性 → 安全检查</strong>，管理共享权限与非信任应用的访问控制。某些恶意行为可能源于用户无意授权的设置。</li>
+</ul>
+<h4 id="步骤2：备份与恢复出厂设置"><a href="#步骤2：备份与恢复出厂设置" class="headerlink" title="步骤2：备份与恢复出厂设置"></a>步骤2：备份与恢复出厂设置</h4><ul>
+<li><strong>注意事项</strong>：<ul>
+<li>恢复出厂会清除所有数据，包括面容ID、密码、照片等。</li>
+<li><strong>切勿从备份恢复</strong>，避免重新植入恶意软件。</li>
+</ul>
+</li>
+<li><strong>操作流程</strong>：<ol>
+<li><strong>iPhone&#x2F;iPad</strong>：设置 → 通用 → 传输或还原 → 抹掉所有内容和设置。</li>
+<li><strong>Mac</strong>：需确保系统为macOS 12.0.1或更高版本，通过“系统设置 → 通用 → 传输或还原 → 抹掉所有内容和设置”完成。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="三、预防恶意软件的关键措施"><a href="#三、预防恶意软件的关键措施" class="headerlink" title="三、预防恶意软件的关键措施"></a>三、预防恶意软件的关键措施</h3><ol>
+<li><strong>系统更新</strong><br>定期检查并安装系统更新，MRT的恶意软件库会随安全补丁升级。</li>
+<li><strong>限制安装来源</strong><br>仅从App Store或可信开发者处安装应用，避免侧载未知应用。</li>
+<li><strong>监控异常行为</strong><br>如设备发热、电池消耗过快、弹出广告增多等，可能提示恶意活动，需立即扫描。</li>
+</ol>
+<hr>
+<h3 id="四、高级用户建议：终端日志分析与深度清理"><a href="#四、高级用户建议：终端日志分析与深度清理" class="headerlink" title="四、高级用户建议：终端日志分析与深度清理"></a>四、高级用户建议：终端日志分析与深度清理</h3><ol>
+<li><strong>查看MRT日志</strong><br>通过终端输入<code>log show --predicate &#39;subsystem == &quot;com.apple.MRT&quot;&#39;</code>，可追踪MRT的运行记录。</li>
+<li><strong>结合第三方工具</strong><br>使用<strong>Malwarebytes</strong>等专业工具进行二次扫描，弥补MRT的检测盲区。</li>
+</ol>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>MRT作为苹果生态的“隐形卫士”，虽无需频繁手动干预，但了解其运行逻辑与配套安全措施能显著提升设备防护能力。若遭遇复杂恶意软件，恢复出厂设置仍是终极解决方案，。建议定期备份关键数据至加密云盘，并启用“锁定模式”应对定向攻击。</p>
 
                 
               </div>
@@ -317,13 +360,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2020年10月26日</div>
+          <div>2025年3月3日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2023年11月30日</div>
+          <div>2025年3月3日</div>
         </div>
       
       
@@ -354,18 +397,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/9b4f4266-b0e3-487a-8050-23d882f1b818.html" title="Windows-dism工具的使用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Windows-dism工具的使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/0a9e92b0-a967-44b4-8601-1467dc00fed1.html" title="Linux-CentOS安装教程">
-                        <span class="hidden-mobile">Linux-CentOS安装教程</span>
+                      <a href="/post/0ca0101c-4b45-406d-bfdb-757288df135e.html" title="解决 Apple ID 由于访问限制，无法退出登录。">
+                        <span class="hidden-mobile">解决 Apple ID 由于访问限制，无法退出登录。</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
