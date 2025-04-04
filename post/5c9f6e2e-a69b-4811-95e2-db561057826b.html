@@ -1,0 +1,713 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon.ico">
+  <link rel="icon" href="/favicon.ico">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="DNACore">
+  <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
+  
+    <meta name="description" content="在 macOS 中，可以通过终端命令快速统计文件夹下的文件和子文件夹数量。以下是具体方法：  方法 1：使用 find 命令（推荐）统计文件数量（不递归子目录）：1find . -maxdepth 1 -type f | wc -l  -maxdepth 1：仅统计当前目录（不包括子目录）。 -type f：仅匹配文件。 wc -l：统计行数（即文件数量）。  统计文件夹数量（不递归子目录）：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="macOS中分别统计文件夹下文件数量和文件夹数量">
+<meta property="og:url" content="https://dnacore.github.io/post/5c9f6e2e-a69b-4811-95e2-db561057826b.html">
+<meta property="og:site_name" content="DNACore GitHub io">
+<meta property="og:description" content="在 macOS 中，可以通过终端命令快速统计文件夹下的文件和子文件夹数量。以下是具体方法：  方法 1：使用 find 命令（推荐）统计文件数量（不递归子目录）：1find . -maxdepth 1 -type f | wc -l  -maxdepth 1：仅统计当前目录（不包括子目录）。 -type f：仅匹配文件。 wc -l：统计行数（即文件数量）。  统计文件夹数量（不递归子目录）：">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-04-04T10:48:15.000Z">
+<meta property="article:modified_time" content="2025-04-04T10:49:10.124Z">
+<meta property="article:author" content="DNACore">
+<meta property="article:tag" content="macOS">
+<meta property="article:tag" content="find">
+<meta property="article:tag" content="wc">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>macOS中分别统计文件夹下文件数量和文件夹数量 - DNACore GitHub io</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"dnacore.github.io","root":"/","version":"1.9.8","typing":{"enable":false,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null},"woyaola":null,"cnzz":null},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 50vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>DNACore GitHub io</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/images/background.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">macOS中分别统计文件夹下文件数量和文件夹数量</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-04-04 18:48" pubdate>
+          2025年4月4日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          380 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          4 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">macOS中分别统计文件夹下文件数量和文件夹数量</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <!--
+> 💭 嗯，用户问的是如何在macOS下分别统计文件夹下的文件数量和文件夹数量。首先，我需要回忆一下macOS终端常用的命令。通常，ls和find命令可以用来处理文件和目录的统计问题。
+> 首先，统计文件数量。用户可能需要排除目录，只计算文件的数量。使用find命令可能比较合适，因为可以指定类型。比如，find命令的-type f选项可以查找文件，-type d则用于目录。然后通过管道传给wc -l统计行数。不过要注意，可能需要处理隐藏文件，用户可能需要包括或排除它们，但问题里没特别说明，所以默认可能不考虑隐藏文件，但最好还是提到。
+> 然后是统计文件夹数量。同样用find命令，但用-type d。但要注意，find默认会递归子目录，如果用户只想统计当前目录下的文件夹，而不包括子目录里的，可能需要加上-maxdepth 1。不过原问题中的“文件夹下”可能包括子文件夹，或者只是直接子级？这里可能需要进一步确认，但用户没有说明，所以可能需要两种情况都说明。
+> 比如，统计当前目录下的文件和文件夹（不包括子目录）：find . -maxdepth 1 -type f | wc -l 和 find . -maxdepth 1 -type d | wc -l。但这样统计文件夹的时候，会包括当前目录自身（即.），所以结果需要减一。比如，统计文件夹数量时，用find . -maxdepth 1 -type d | wc -l，然后减一。
+> 或者，使用ls -l命令，然后筛选。比如，ls -l | grep "^d" | wc -l 统计文件夹数量，因为ls -l中目录会以d开头。而文件则是以-开头。但这种方法可能不够准确，因为文件名中如果有特殊字符可能会有影响，但一般情况下可用。
+> 不过用户可能更倾向于使用find命令，因为更可靠，尤其是在处理大量文件或需要递归的时候。不过用户的问题没有明确是否需要递归，所以可能需要给出两种情况的答案：统计当前目录下的，或者包括子目录的。
+> 另外，用户可能对终端命令不太熟悉，所以需要给出具体的命令示例，并解释每个参数的作用。比如，解释find命令的用法，-type参数，-maxdepth控制递归深度，wc -l统计行数等。
+> 可能还需要提醒用户，如果路径中有空格或特殊字符，可能需要处理，但一般情况下默认命令可以工作。此外，如果用户想统计隐藏文件，需要加上-iname参数，比如find . -maxdepth 1 -type f -name ".*"，但用户的问题没提到，可能不需要，但可以作为一个备注。
+> 总结下来，可能的解决方案是：
+> 1. 统计文件数量：
+>    - 当前目录（不包括子目录）：find . -maxdepth 1 -type f | wc -l
+>    - 包括子目录：find . -type f | wc -l
+> 2. 统计文件夹数量：
+>    - 当前目录：find . -maxdepth 1 -type d | wc -l，然后结果减一（因为包括.目录）
+>    - 或者用ls -l | grep "^d" | wc -l，这样不包括.和..，但可能需要处理总数。比如ls -l | grep "^d" | wc -l会统计当前目录下的所有文件夹（包括隐藏的），但需要排除.和..？不过ls -l默认不会显示..，所以可能不需要。
+> 或者，另一种方法是用ls -l的输出来统计，比如：
+> 文件数：ls -l | grep -v "^d" | wc -l，但这样会把文件和符号链接等都算进去，可能需要更精确的过滤。或者，使用ls -l的输出来筛选以-开头的行（普通文件），但可能会有其他类型，如符号链接。
+> 所以可能更准确的是用find命令，因为-type f明确指文件，-type d明确指目录。
+> 不过，当用户需要分别统计当前目录下的文件和目录数量时，最准确的应该是：
+> 对于当前目录下的文件（不包括子目录）：
+> find . -maxdepth 1 -type f | wc -l
+> 对于当前目录下的目录（不包括子目录），并排除当前目录自身：
+> find . -maxdepth 1 -type d | tail -n +2 | wc -l 或者使用expr $(find ...) -1
+> 或者，使用ls -l，然后统计以d开头的行数，并减去2（因为包括.和..），但ls -a会显示隐藏文件，但默认不包括。例如：
+> 统计文件夹数量：ls -l | grep "^d" | wc -l，这会包括.和..吗？实际上，ls -l默认不会显示.和..，所以可能不需要减。不过需要验证一下。
+> 测试一下：在终端里，创建一个目录，进入后，mkdir testdir，然后ls -l，会显示testdir，行首是d，所以统计正确。所以ls -l | grep "^d" | wc -l 是正确的。
+> 所以对于当前目录下的文件夹数量，可以用ls -l | grep "^d" | wc -l，这样得到的数量是正确的，不包括.和..。
+> 而文件的数量可以用ls -l | grep -v "^d" | grep -v "^total" | wc -l，因为ls -l的第一行是total块数，需要排除。但这样会把符号链接和其他类型的文件也算进去，比如l开头的链接文件。因此，这可能不准确。
+> 所以，可能还是find更准确。
+> 总结，给用户的回答应该是：
+> 使用find命令，分别统计文件和文件夹数量。如果不需要递归子目录，使用-maxdepth 1参数。对于文件夹数量，需要排除当前目录自身（即.），所以结果减一或者用tail过滤。
+> 例如：
+> 统计当前目录下的文件数量（不包括子目录）：
+> find . -maxdepth 1 -type f | wc -l
+> 统计当前目录下的文件夹数量（不包括子目录）：
+> find . -maxdepth 1 -type d | tail -n +2 | wc -l
+> 或者：
+> folder_count=$(find . -maxdepth 1 -type d | wc -l); echo $((folder_count - 1))
+> 而如果包括子目录的话，去掉-maxdepth 1参数即可。
+> 另外，可以给出另一种方法，使用ls -l和grep来统计，但需要注意准确性。
+> 所以，综合来看，正确的回答应该包含两种方法：find和ls，并说明它们的区别，比如是否递归，是否包括隐藏文件等。用户可能需要简单直接的方法，所以可能需要优先推荐find命令，并解释参数的含义。
+>
+-->
+
+<p>在 macOS 中，可以通过终端命令快速统计文件夹下的文件和子文件夹数量。以下是具体方法：</p>
+<hr>
+<h3 id="方法-1：使用-find-命令（推荐）"><a href="#方法-1：使用-find-命令（推荐）" class="headerlink" title="方法 1：使用 find 命令（推荐）"></a>方法 1：使用 <code>find</code> 命令（推荐）</h3><h4 id="统计文件数量（不递归子目录）："><a href="#统计文件数量（不递归子目录）：" class="headerlink" title="统计文件数量（不递归子目录）："></a>统计文件数量（不递归子目录）：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">find . -maxdepth 1 -<span class="hljs-built_in">type</span> f | <span class="hljs-built_in">wc</span> -l<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>-maxdepth 1</code>：仅统计当前目录（不包括子目录）。</li>
+<li><code>-type f</code>：仅匹配文件。</li>
+<li><code>wc -l</code>：统计行数（即文件数量）。</li>
+</ul>
+<h4 id="统计文件夹数量（不递归子目录）："><a href="#统计文件夹数量（不递归子目录）：" class="headerlink" title="统计文件夹数量（不递归子目录）："></a>统计文件夹数量（不递归子目录）：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">find . -maxdepth 1 -<span class="hljs-built_in">type</span> d | <span class="hljs-built_in">tail</span> -n +2 | <span class="hljs-built_in">wc</span> -l<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>-type d</code>：仅匹配文件夹。</li>
+<li><code>tail -n +2</code>：跳过第一行（当前目录<code>.</code>），避免计数自身。</li>
+<li>或直接计算后减一：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">echo</span> $(($(find . -maxdepth <span class="hljs-number">1</span> -type d | wc -l) - <span class="hljs-number">1</span>))<br></code></pre></td></tr></table></figure></li>
+</ul>
+<hr>
+<h3 id="方法-2：使用-ls-命令"><a href="#方法-2：使用-ls-命令" class="headerlink" title="方法 2：使用 ls 命令"></a>方法 2：使用 <code>ls</code> 命令</h3><h4 id="统计文件数量："><a href="#统计文件数量：" class="headerlink" title="统计文件数量："></a>统计文件数量：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -l | grep -v <span class="hljs-string">&quot;^d&quot;</span> | grep -v <span class="hljs-string">&quot;^total&quot;</span> | <span class="hljs-built_in">wc</span> -l<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>grep -v &quot;^d&quot;</code>：排除文件夹（行首为 <code>d</code> 的行）。</li>
+<li><code>grep -v &quot;^total&quot;</code>：排除 <code>ls -l</code> 输出的首行统计信息。</li>
+</ul>
+<h4 id="统计文件夹数量："><a href="#统计文件夹数量：" class="headerlink" title="统计文件夹数量："></a>统计文件夹数量：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">ls</span> -l | grep <span class="hljs-string">&quot;^d&quot;</span> | <span class="hljs-built_in">wc</span> -l<br></code></pre></td></tr></table></figure>
+<ul>
+<li><code>grep &quot;^d&quot;</code>：仅匹配文件夹（行首为 <code>d</code> 的行）。</li>
+</ul>
+<hr>
+<h3 id="递归统计（包含子目录）"><a href="#递归统计（包含子目录）" class="headerlink" title="递归统计（包含子目录）"></a>递归统计（包含子目录）</h3><p>若需递归统计所有子目录中的文件和文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 统计所有文件</span><br>find . -<span class="hljs-built_in">type</span> f | <span class="hljs-built_in">wc</span> -l<br><br><span class="hljs-comment"># 统计所有文件夹（包括当前目录）</span><br>find . -<span class="hljs-built_in">type</span> d | <span class="hljs-built_in">wc</span> -l<br></code></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ol>
+<li>以上命令默认不包含隐藏文件（以 <code>.</code> 开头的文件）。若需包含，在 <code>find</code> 中加 <code>-name &quot;.*&quot;</code>，或在 <code>ls</code> 中加 <code>-a</code> 参数。</li>
+<li>路径中有空格或特殊字符时，建议用引号包裹路径。</li>
+</ol>
+<p>选择适合需求的方法即可快速统计！</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/macOS/" class="print-no-link">#macOS</a>
+      
+        <a href="/tags/find/" class="print-no-link">#find</a>
+      
+        <a href="/tags/wc/" class="print-no-link">#wc</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>macOS中分别统计文件夹下文件数量和文件夹数量</div>
+      <div>https://dnacore.github.io/post/5c9f6e2e-a69b-4811-95e2-db561057826b.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>DNACore</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2025年4月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2025年4月4日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/post/08517579-e1e7-497e-aedc-cc6820be4d13.html" title="数学中的比较符号">
+                        <span class="hidden-mobile">数学中的比较符号</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="lv-container" data-id="city" data-uid="MTAyMC8yODU3Ni81MTQ3">
+    <script type="text/javascript">
+      Fluid.utils.loadComments('#lv-container', function() {
+        Fluid.utils.createScript('https://cdn-city.livere.com/js/embed.dist.js');
+      });
+    </script>
+    <noscript>Please enable JavaScript to view the comments</noscript>
+  </div>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
