@@ -19,23 +19,22 @@
   <meta name="author" content="DNACore">
   <meta name="keywords" content="iOS Developer,iOS,iOS开发,macOS,macOS开发,macOS Developer,Android,安卓开发,Windows">
   
-    <meta name="description" content="http:&#x2F;&#x2F;teczd.com&#x2F;2015&#x2F;09&#x2F;23&#x2F;osx-get-system-info-from-command-line&#x2F; ioreg系统信息获取工具 system_profiler将系统信息保存为可以被系统信息APP读取的格式 system_profiler -xml &gt; &quot;MacBook Pro (Apple M3 Pro, 16英寸，2023年11月)_$(date">
+    <meta name="description" content="Python 按行遍历文件的两种写法 1234567891011121314151617def readline_1():    with open(expanduser(&#x27;some.txt&#x27;), &#x27;r&#x27;) as file:        line: str &#x3D; file.readline()        print(&#x27;readline_1:&amp;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="macOS-通过Shell查看系统信息">
-<meta property="og:url" content="https://dnacore.github.io/post/701a033b-4d2e-42ce-bd53-b86fa2fc09f2.html">
+<meta property="og:title" content="Python-按行遍历文件">
+<meta property="og:url" content="https://dnacore.github.io/post/1d2464cf-e212-4b68-9b9c-0efce5b555ac.html">
 <meta property="og:site_name" content="DNACore GitHub io">
-<meta property="og:description" content="http:&#x2F;&#x2F;teczd.com&#x2F;2015&#x2F;09&#x2F;23&#x2F;osx-get-system-info-from-command-line&#x2F; ioreg系统信息获取工具 system_profiler将系统信息保存为可以被系统信息APP读取的格式 system_profiler -xml &gt; &quot;MacBook Pro (Apple M3 Pro, 16英寸，2023年11月)_$(date">
+<meta property="og:description" content="Python 按行遍历文件的两种写法 1234567891011121314151617def readline_1():    with open(expanduser(&#x27;some.txt&#x27;), &#x27;r&#x27;) as file:        line: str &#x3D; file.readline()        print(&#x27;readline_1:&amp;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2019-08-15T06:09:09.000Z">
-<meta property="article:modified_time" content="2024-02-17T15:06:26.376Z">
+<meta property="article:published_time" content="2025-04-26T02:30:29.000Z">
+<meta property="article:modified_time" content="2025-04-26T03:06:55.039Z">
 <meta property="article:author" content="DNACore">
-<meta property="article:tag" content="ioreg">
-<meta property="article:tag" content="system_profiler">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>macOS-通过Shell查看系统信息 - DNACore GitHub io</title>
+  <title>Python-按行遍历文件 - DNACore GitHub io</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">macOS-通过Shell查看系统信息</span>
+            <span id="subtitle">Python-按行遍历文件</span>
           
         </div>
 
@@ -212,8 +211,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2019-08-15 14:09" pubdate>
-          2019年8月15日 下午
+        <time datetime="2025-04-26 10:30" pubdate>
+          2025年4月26日 上午
         </time>
       </span>
     
@@ -224,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          66 字
+          75 字
         
       </span>
     
@@ -272,13 +271,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">macOS-通过Shell查看系统信息</h1>
+            <h1 id="seo-header">Python-按行遍历文件</h1>
             
             
               <div class="markdown-body">
                 
-                <p><a target="_blank" rel="noopener" href="http://teczd.com/2015/09/23/osx-get-system-info-from-command-line/">http://teczd.com/2015/09/23/osx-get-system-info-from-command-line/</a></p>
-<h2 id="ioreg"><a href="#ioreg" class="headerlink" title="ioreg"></a>ioreg</h2><h2 id="系统信息获取工具-system-profiler"><a href="#系统信息获取工具-system-profiler" class="headerlink" title="系统信息获取工具 system_profiler"></a>系统信息获取工具 system_profiler</h2><p>将系统信息保存为可以被系统信息APP读取的格式 <code>system_profiler -xml &gt; &quot;MacBook Pro (Apple M3 Pro, 16英寸，2023年11月)_$(date +%Y-%m-%d&quot;_&quot;%H-%M-%S).spx&quot;</code></p>
+                <p>Python 按行遍历文件的两种写法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">def</span> <span class="hljs-title function_">readline_1</span>():<br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(expanduser(<span class="hljs-string">&#x27;some.txt&#x27;</span>), <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> file:<br>        line: <span class="hljs-built_in">str</span> = file.readline()<br>        <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;readline_1:&#x27;</span>, <span class="hljs-built_in">type</span>(line))<br>        <span class="hljs-keyword">while</span> line:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;readline_1:&#x27;</span>, <span class="hljs-built_in">type</span>(line))<br>            line = file.readline()<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">readline_2</span>():<br>    <span class="hljs-comment"># https://www.guru99.com/python-file-readline.html</span><br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(expanduser(<span class="hljs-string">&#x27;some.txt&#x27;</span>), <span class="hljs-string">&#x27;r&#x27;</span>) <span class="hljs-keyword">as</span> logfile:<br>        <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>            line: <span class="hljs-built_in">str</span> = logfile.readline()<br>            <span class="hljs-keyword">if</span> line == <span class="hljs-string">&#x27;&#x27;</span>:<br>                <span class="hljs-keyword">break</span><br>            <span class="hljs-keyword">elif</span> line:<br>                <span class="hljs-built_in">print</span>(<span class="hljs-string">&#x27;readline_2:&#x27;</span>, <span class="hljs-built_in">type</span>(line))<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -291,9 +290,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/ioreg/" class="print-no-link">#ioreg</a>
-      
-        <a href="/tags/system-profiler/" class="print-no-link">#system_profiler</a>
+        <a href="/tags/Python/" class="print-no-link">#Python</a>
       
     </div>
   
@@ -305,8 +302,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>macOS-通过Shell查看系统信息</div>
-      <div>https://dnacore.github.io/post/701a033b-4d2e-42ce-bd53-b86fa2fc09f2.html</div>
+      <div>Python-按行遍历文件</div>
+      <div>https://dnacore.github.io/post/1d2464cf-e212-4b68-9b9c-0efce5b555ac.html</div>
     </div>
     <div class="license-meta">
       
@@ -318,13 +315,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2019年8月15日</div>
+          <div>2025年4月26日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2024年2月17日</div>
+          <div>2025年4月26日</div>
         </div>
       
       
@@ -355,18 +352,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/post/e34942d8-7f15-4ca6-bd2e-90f323bada1d.html" title="CocoaPods-更新官方pod库版本">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CocoaPods-更新官方pod库版本</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/post/9317dc03-1f30-4aeb-a2f4-3c7e0bc00805.html" title="macOS-通过defaults命令来设置macOS">
-                        <span class="hidden-mobile">macOS-通过defaults命令来设置macOS</span>
+                      <a href="/post/5c9f6e2e-a69b-4811-95e2-db561057826b.html" title="macOS中分别统计文件夹下文件数量和文件夹数量">
+                        <span class="hidden-mobile">macOS中分别统计文件夹下文件数量和文件夹数量</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
