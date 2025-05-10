@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>零宽字符插入工具</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .output {
+            width: 100%;
+            min-height: 100px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .copy-button {
+            background-color: #2196F3;
+        }
+        .copy-button:hover {
+            background-color: #0b7dda;
+        }
+        .info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .success-message {
+            color: green;
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>零宽字符插入工具</h1>
+    <div class="container">
+        <div>
+            <label for="input-text">输入文本：</label>
+            <textarea id="input-text" placeholder="请在此输入要处理的文本..."></textarea>
+        </div>
+
+        <div class="buttons">
+            <button id="insert-button">插入零宽字符</button>
+            <button id="copy-button" class="copy-button">复制结果</button>
+            <span id="copy-success" class="success-message">复制成功！</span>
+        </div>
+
+        <div>
+            <label for="output-text">处理结果：</label>
+            <div id="output-text" class="output"></div>
+        </div>
+
+        <div class="info">
+            <h3>关于零宽字符</h3>
+            <p>零宽字符是一种在显示时不占用空间的Unicode字符。本工具使用以下零宽字符：</p>
+            <ul>
+                <li>零宽空格 (U+200B)</li>
+                <li>零宽非连接符 (U+200C)</li>
+                <li>零宽连接符 (U+200D)</li>
+                <li>零宽不间断空格 (U+FEFF)</li>
+            </ul>
+            <p>这些字符在视觉上不可见，但在复制后的文本中确实存在。</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const inputText = document.getElementById('input-text');
+            const outputText = document.getElementById('output-text');
+            const insertButton = document.getElementById('insert-button');
+            const copyButton = document.getElementById('copy-button');
+            const copySuccess = document.getElementById('copy-success');
+
+            // 零宽字符数组
+            const zeroWidthChars = [
+                '\u200B', // 零宽空格
+                '\u200C', // 零宽非连接符
+                '\u200D', // 零宽连接符
+                '\uFEFF'  // 零宽不间断空格
+            ];
+
+            // 插入零宽字符
+            insertButton.addEventListener('click', function() {
+                const text = inputText.value;
+                let result = '';
+
+                for (let i = 0; i < text.length; i++) {
+                    // 获取随机零宽字符
+                    const randomChar = zeroWidthChars[Math.floor(Math.random() * zeroWidthChars.length)];
+                    result += text[i] + randomChar;
+                }
+
+                outputText.textContent = result;
+            });
+
+            // 复制结果
+            copyButton.addEventListener('click', function() {
+                const result = outputText.textContent;
+                if (!result) return;
+
+                // 创建临时文本区域
+                const tempTextArea = document.createElement('textarea');
+                tempTextArea.value = result;
+                document.body.appendChild(tempTextArea);
+
+                // 选择并复制
+                tempTextArea.select();
+                document.execCommand('copy');
+
+                // 移除临时文本区域
+                document.body.removeChild(tempTextArea);
+
+                // 显示复制成功消息
+                copySuccess.classList.add('visible');
+                setTimeout(() => {
+                    copySuccess.classList.remove('visible');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>
